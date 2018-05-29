@@ -24,25 +24,6 @@
 		return result;
 	}
 	
-	char* SwigStringToString( PyObject *o ){
-		return PyString_AsString( o );
-	}
-	
-	int SwigStringSize( PyObject *o ){
-		return PyString_Size( o ); 
-	}
-	
-	PyObject* StringToSwigString( const char* p ){
-		return PyString_FromString(p);
-	}
-	
-	PyObject* LongToSwigLong( long int l ){
-		return PyLong_FromLong( l );
-	}
-	
-	long SwigLongToLong( PyObject* o ){
-		return PyLong_AsLong( o );
-	}
 	
 	
 %}

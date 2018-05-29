@@ -11,8 +11,14 @@ typedef struct{
 
 /*GoString in typemap*/
 %typemap(in) GoString {
-	$1.p = SwigStringToString( $input );
-	$1.n = SwigStringSize( $input ); 
+	char* buffer = 0;
+	size_t size = 0;
+	int res = SWIG_AsCharPtrAndSize( $input, &buffer, &size, 0 );
+	if (!SWIG_IsOK(res)) {
+		%argument_fail(res, "(TYPEMAP, SIZE)", $symname, $argnum);
+	}
+	$1.p = buffer;					      
+	$1.n = size - 1;
 }
 
 /*GoString_* parameter as reference */
@@ -24,6 +30,6 @@ typedef struct{
 
 /*GoString_* as function return typemap*/
 %typemap(argout) GoString_* {
-	$result = __add_to_result_list( $result, StringToSwigString( $1->p ) );
+	%append_output( SWIG_FromCharPtrAndSize( $1->p, $1->n  ) );
 	free( (void*)$1->p );
 }

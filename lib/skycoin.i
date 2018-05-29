@@ -5,9 +5,11 @@
 	#include "../include/libskycoin.h"
 %}
 
-%include "pyutils.i"
+%include "simpletypes.i"
 %include "handletypemaps.i"
 %include "gostrings.i"
+%include "goslices.i"
+%include "structs.i"
 
 %include "include/libskycoin.h"
 
