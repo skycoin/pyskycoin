@@ -3054,16 +3054,15 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_wallet__BalancePair swig_types[72]
 #define SWIGTYPE_p_wallet__Entry swig_types[73]
 #define SWIGTYPE_p_wallet__Note swig_types[74]
-#define SWIGTYPE_p_wallet__Options swig_types[75]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[76]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[77]
-#define SWIGTYPE_p_webrpc__ClientError swig_types[78]
-#define SWIGTYPE_p_webrpc__OutputsResult swig_types[79]
-#define SWIGTYPE_p_webrpc__RPCError swig_types[80]
-#define SWIGTYPE_p_webrpc__StatusResult swig_types[81]
-#define SWIGTYPE_p_webrpc__TxnResult swig_types[82]
-static swig_type_info *swig_types[84];
-static swig_module_info swig_module = {swig_types, 83, 0, 0, 0, 0};
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[75]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[76]
+#define SWIGTYPE_p_webrpc__ClientError swig_types[77]
+#define SWIGTYPE_p_webrpc__OutputsResult swig_types[78]
+#define SWIGTYPE_p_webrpc__RPCError swig_types[79]
+#define SWIGTYPE_p_webrpc__StatusResult swig_types[80]
+#define SWIGTYPE_p_webrpc__TxnResult swig_types[81]
+static swig_type_info *swig_types[83];
+static swig_module_info swig_module = {swig_types, 82, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3728,12 +3727,11 @@ SWIGINTERN PyObject *_wrap_SKY_cli_LoadConfig__SWIG_0(PyObject *SWIGUNUSEDPARM(s
   if (!PyArg_ParseTuple(args,(char *)":SKY_cli_LoadConfig")) SWIG_fail;
   result = wrap_SKY_cli_LoadConfig2();
   {
-    PyObject *o;
     int error = result != 0 ? 0 : -1;
-    o = LongToSwigLong(error);   //Add the error return parameter to be like the other functions
-    resultobj = __add_to_result_list( resultobj, o );
-    o = LongToSwigLong(result);     //Add handle to return parameters list, it prepended to error parameter
-    resultobj = __add_to_result_list( resultobj, o );
+    //Add the error return parameter to be like the other functions
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(error) );
+    //Add handle to return parameters list, it prepended to error parameter
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(result) );
   }
   return resultobj;
 fail:
@@ -4730,10 +4728,8 @@ SWIGINTERN PyObject *_wrap_SKY_base58_Int2Base58(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_base58_Int2Base58(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -4771,10 +4767,8 @@ SWIGINTERN PyObject *_wrap_SKY_base58_Hex2Base58(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_base58_Hex2Base58(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -4812,10 +4806,8 @@ SWIGINTERN PyObject *_wrap_SKY_base58_Hex2Base58String(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_base58_Hex2Base58String(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -4853,10 +4845,8 @@ SWIGINTERN PyObject *_wrap_SKY_base58_Hex2Base58Str(PyObject *SWIGUNUSEDPARM(sel
   result = (GoUint32)SKY_base58_Hex2Base58Str(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -4886,9 +4876,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_NewReadableEntry(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_wallet_NewReadableEntry(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -4915,9 +4903,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_LoadReadableEntry(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_wallet_LoadReadableEntry(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -4944,9 +4930,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_NewReadableEntryFromPubkey(PyObject *SWIGU
   result = (GoUint32)SKY_wallet_NewReadableEntryFromPubkey(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -4975,9 +4959,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableEntry_Save(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_wallet_ReadableEntry_Save(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -5004,9 +4986,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_LoadReadableWallet(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_wallet_LoadReadableWallet(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -5035,9 +5015,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableWallet_Save(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_wallet_ReadableWallet_Save(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -5066,9 +5044,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableWallet_Load(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_wallet_ReadableWallet_Load(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -5091,9 +5067,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableWallet_Erase(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_wallet_ReadableWallet_Erase(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -5131,9 +5105,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_cli_GetWalletOutputsFromFile(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -5172,14 +5144,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputs(PyObject *SWIGUNUSEDPARM(sel
   result = (GoUint32)SKY_cli_GetWalletOutputs(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -5211,10 +5179,8 @@ SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_String(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_secp256k1go_Field_String(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -5830,14 +5796,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_NewWalletResponse(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_api_NewWalletResponse(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -6186,10 +6148,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKey_Hex(PyObject *SWIGUNUSEDPARM(self),
   SKY_cipher_PubKey_Hex(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -6365,10 +6325,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_SecKey_Hex(PyObject *SWIGUNUSEDPARM(self),
   SKY_cipher_SecKey_Hex(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -6531,10 +6489,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_Sig_Hex(PyObject *SWIGUNUSEDPARM(self), Py
   SKY_cipher_Sig_Hex(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -7370,10 +7326,8 @@ SWIGINTERN PyObject *_wrap_SKY_file_InitDataDir(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_file_InitDataDir(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -7396,10 +7350,8 @@ SWIGINTERN PyObject *_wrap_SKY_file_UserHome(PyObject *SWIGUNUSEDPARM(self), PyO
   result = (GoUint32)SKY_file_UserHome(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg1->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg1->p ) );
     free( (void*)arg1->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -7428,10 +7380,8 @@ SWIGINTERN PyObject *_wrap_SKY_file_ResolveResourceDirectory(PyObject *SWIGUNUSE
   result = (GoUint32)SKY_file_ResolveResourceDirectory(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -7472,10 +7422,8 @@ SWIGINTERN PyObject *_wrap_SKY_file_DetermineResourcePath(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_file_DetermineResourcePath(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg4->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg4->p ) );
     free( (void*)arg4->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8155,10 +8103,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_Address_String(PyObject *SWIGUNUSEDPARM(se
   SKY_cipher_Address_String(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8189,10 +8135,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_Address_BitcoinString(PyObject *SWIGUNUSED
   SKY_cipher_Address_BitcoinString(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8283,10 +8227,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_BitcoinAddressFromPubkey(PyObject *SWIGUNU
   SKY_cipher_BitcoinAddressFromPubkey(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8317,10 +8259,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey(PyObje
   SKY_cipher_BitcoinWalletImportFormatFromSeckey(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8445,10 +8385,8 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_RPCError_Error(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_webrpc_RPCError_Error(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -8535,9 +8473,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_CreateRawTxFromWallet(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_cli_CreateRawTxFromWallet(arg1,arg2,arg3,arg4,arg5,arg6);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -8608,9 +8544,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_CreateRawTxFromAddress(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_cli_CreateRawTxFromAddress(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -8700,14 +8634,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_CreateRawTx(PyObject *SWIGUNUSEDPARM(self), P
   result = (GoUint32)SKY_cli_CreateRawTx(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9139,9 +9069,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_CheckWalletBalance(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_cli_CheckWalletBalance(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -9188,9 +9116,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetBalanceOfAddresses(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_cli_GetBalanceOfAddresses(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -9277,10 +9203,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_ClientError_Error(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_api_ClientError_Error(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -9307,9 +9231,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_NewClient(PyObject *SWIGUNUSEDPARM(self), PyO
   result = (GoUint32)SKY_api_NewClient(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9339,15 +9261,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_CSRF(PyObject *SWIGUNUSEDPARM(self), P
   result = (GoUint32)SKY_api_Client_CSRF(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -9375,14 +9293,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Version(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_api_Client_Version(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9410,14 +9324,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Outputs(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_api_Client_Outputs(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9460,14 +9370,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_OutputsForAddresses(PyObject *SWIGUNUS
   result = (GoUint32)SKY_api_Client_OutputsForAddresses(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9510,14 +9416,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_OutputsForHashes(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_api_Client_OutputsForHashes(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9545,14 +9447,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_CoinSupply(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_api_Client_CoinSupply(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9586,14 +9484,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_BlockByHash(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_api_Client_BlockByHash(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9630,14 +9524,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_BlockBySeq(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_api_Client_BlockBySeq(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9683,14 +9573,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Blocks(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_api_Client_Blocks(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg4);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg4) );
   }
   return resultobj;
 fail:
@@ -9727,14 +9613,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_LastBlocks(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_api_Client_LastBlocks(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9762,14 +9644,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_BlockchainMetadata(PyObject *SWIGUNUSE
   result = (GoUint32)SKY_api_Client_BlockchainMetadata(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9797,14 +9675,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_BlockchainProgress(PyObject *SWIGUNUSE
   result = (GoUint32)SKY_api_Client_BlockchainProgress(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -9851,9 +9725,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Balance(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_api_Client_Balance(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -9887,14 +9759,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_UxOut(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_api_Client_UxOut(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9928,14 +9796,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_AddressUxOuts(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Client_AddressUxOuts(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -9969,14 +9833,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Wallet(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_api_Client_Wallet(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10004,14 +9864,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Wallets(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_api_Client_Wallets(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10060,14 +9916,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_CreateUnencryptedWallet(PyObject *SWIG
   result = (GoUint32)SKY_api_Client_CreateUnencryptedWallet(arg1,arg2,arg3,arg4,arg5);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg5);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg5) );
   }
   return resultobj;
 fail:
@@ -10122,14 +9974,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_CreateEncryptedWallet(PyObject *SWIGUN
   result = (GoUint32)SKY_api_Client_CreateEncryptedWallet(arg1,arg2,arg3,arg4,arg5,arg6);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg6);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg6) );
   }
   return resultobj;
 fail:
@@ -10178,14 +10026,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NewWalletAddress(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_api_Client_NewWalletAddress(arg1,arg2,arg3,arg4,arg5);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg5);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg5) );
   }
   return resultobj;
 fail:
@@ -10223,9 +10067,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_WalletBalance(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Client_WalletBalance(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -10284,9 +10126,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Spend(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_api_Client_Spend(arg1,arg2,arg3,arg4,arg5,arg6);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -10323,14 +10163,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_CreateTransaction(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_api_Client_CreateTransaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10364,14 +10200,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_WalletTransactions(PyObject *SWIGUNUSE
   result = (GoUint32)SKY_api_Client_WalletTransactions(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10406,9 +10238,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_UpdateWallet(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_api_Client_UpdateWallet(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -10436,14 +10266,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_WalletFolderName(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_api_Client_WalletFolderName(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10482,15 +10308,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NewSeed(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_api_Client_NewSeed(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -10532,15 +10354,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_GetWalletSeed(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Client_GetWalletSeed(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg4->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg4->p ) );
     free( (void*)arg4->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -10574,14 +10392,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkConnection(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_api_Client_NetworkConnection(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10609,14 +10423,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkConnections(PyObject *SWIGUNUSE
   result = (GoUint32)SKY_api_Client_NetworkConnections(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10644,14 +10454,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkDefaultConnections(PyObject *SW
   result = (GoUint32)SKY_api_Client_NetworkDefaultConnections(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10679,14 +10485,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkTrustedConnections(PyObject *SW
   result = (GoUint32)SKY_api_Client_NetworkTrustedConnections(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10714,14 +10516,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkExchangeableConnections(PyObjec
   result = (GoUint32)SKY_api_Client_NetworkExchangeableConnections(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10749,14 +10547,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_PendingTransactions(PyObject *SWIGUNUS
   result = (GoUint32)SKY_api_Client_PendingTransactions(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -10790,14 +10584,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Transaction(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_api_Client_Transaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10840,14 +10630,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Transactions(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_api_Client_Transactions(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10890,14 +10676,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_ConfirmedTransactions(PyObject *SWIGUN
   result = (GoUint32)SKY_api_Client_ConfirmedTransactions(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10940,14 +10722,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_UnconfirmedTransactions(PyObject *SWIG
   result = (GoUint32)SKY_api_Client_UnconfirmedTransactions(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -10983,15 +10761,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_InjectTransaction(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_api_Client_InjectTransaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11019,14 +10793,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_ResendUnconfirmedTransactions(PyObject
   result = (GoUint32)SKY_api_Client_ResendUnconfirmedTransactions(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -11062,15 +10832,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_RawTransaction(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_api_Client_RawTransaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11104,14 +10870,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_AddressTransactions(PyObject *SWIGUNUS
   result = (GoUint32)SKY_api_Client_AddressTransactions(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -11148,14 +10910,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Richlist(PyObject *SWIGUNUSEDPARM(self
   result = (GoUint32)SKY_api_Client_Richlist(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -11187,9 +10945,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_AddressCount(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_api_Client_AddressCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -11218,9 +10974,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_UnloadWallet(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_api_Client_UnloadWallet(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -11248,14 +11002,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Health(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_api_Client_Health(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -11295,14 +11045,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_EncryptWallet(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Client_EncryptWallet(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg4);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg4) );
   }
   return resultobj;
 fail:
@@ -11342,14 +11088,10 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_DecryptWallet(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Client_DecryptWallet(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg4);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg4) );
   }
   return resultobj;
 fail:
@@ -11377,10 +11119,8 @@ SWIGINTERN PyObject *_wrap_SKY_JsonEncode_Handle(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_JsonEncode_Handle(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11462,10 +11202,8 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Block_GetHeadHash(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_Handle_Block_GetHeadHash(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11493,10 +11231,8 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Block_GetPreviousBlockHash(PyObject *SWIGU
   result = (GoUint32)SKY_Handle_Block_GetPreviousBlockHash(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11531,9 +11267,7 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Blocks_GetAt(PyObject *SWIGUNUSEDPARM(self
   result = (GoUint32)SKY_Handle_Blocks_GetAt(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -11669,10 +11403,8 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Strings_GetAt(PyObject *SWIGUNUSEDPARM(sel
   result = (GoUint32)SKY_Handle_Strings_GetAt(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11700,10 +11432,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_Client_GetWalletDir(PyObject *SWIGUNUS
   result = (GoUint32)SKY_api_Handle_Client_GetWalletDir(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11731,10 +11461,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_Client_GetWalletFileName(PyObject *SWI
   result = (GoUint32)SKY_api_Handle_Client_GetWalletFileName(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11762,10 +11490,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_Client_GetWalletLabel(PyObject *SWIGUN
   result = (GoUint32)SKY_api_Handle_Client_GetWalletLabel(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11798,10 +11524,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_Client_GetWalletFullPath(PyObject *SWI
   result = (GoUint32)SKY_api_Handle_Client_GetWalletFullPath(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -11813,23 +11537,22 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_GetWalletMeta(PyObject *SWIGUNUSEDPARM
   PyObject *resultobj = 0;
   Wallet__Handle arg1 ;
   GoStringMap_ *arg2 = (GoStringMap_ *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
+  GoStringMap_ temp2 ;
   PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_api_Handle_GetWalletMeta",&obj0,&obj1)) SWIG_fail;
+  {
+    arg2 = &temp2;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Handle_GetWalletMeta",&obj0)) SWIG_fail;
   {
     arg1 = SwigLongToLong(obj0);
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_GoStringMap_, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_api_Handle_GetWalletMeta" "', argument " "2"" of type '" "GoStringMap_ *""'"); 
-  }
-  arg2 = (GoStringMap_ *)(argp2);
   result = (GoUint32)SKY_api_Handle_GetWalletMeta(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
+  }
   return resultobj;
 fail:
   return NULL;
@@ -11971,16 +11694,12 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_WalletResponseGetEntry(PyObject *SWIGU
   result = (GoUint32)SKY_api_Handle_WalletResponseGetEntry(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg4->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg4->p ) );
     free( (void*)arg4->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -12035,10 +11754,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_WalletResponseGetCryptoType(PyObject *
   result = (GoUint32)SKY_api_Handle_WalletResponseGetCryptoType(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -12100,9 +11817,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_WalletsResponseGetAt(PyObject *SWIGUNU
   result = (GoUint32)SKY_api_Handle_WalletsResponseGetAt(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -12130,10 +11845,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_GetWalletFolderAddress(PyObject *SWIGU
   result = (GoUint32)SKY_api_Handle_GetWalletFolderAddress(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -12161,10 +11874,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_GetWalletSeed(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_api_Handle_GetWalletSeed(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -12192,10 +11903,8 @@ SWIGINTERN PyObject *_wrap_SKY_api_Handle_GetWalletLastSeed(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_api_Handle_GetWalletLastSeed(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -12840,10 +12549,8 @@ SWIGINTERN PyObject *_wrap_SKY_secp256k1_SignatureErrorString(PyObject *SWIGUNUS
   result = (GoUint32)SKY_secp256k1_SignatureErrorString(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg4->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg4->p ) );
     free( (void*)arg4->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -13180,10 +12887,8 @@ SWIGINTERN PyObject *_wrap_SKY_iputil_LocalhostIP(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_iputil_LocalhostIP(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg1->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg1->p ) );
     free( (void*)arg1->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -13249,10 +12954,8 @@ SWIGINTERN PyObject *_wrap_SKY_iputil_SplitAddr(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_iputil_SplitAddr(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -13393,10 +13096,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_SHA256_Hex(PyObject *SWIGUNUSEDPARM(self),
   SKY_cipher_SHA256_Hex(arg1,arg2);
   resultobj = SWIG_Py_Void();
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14035,10 +13736,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_TxIDHex(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_coin_Transaction_TxIDHex(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14745,10 +14444,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_FormatAddressesAsJSON(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_cli_FormatAddressesAsJSON(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14786,10 +14483,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_FormatAddressesAsJoinedArray(PyObject *SWIGUN
   result = (GoUint32)SKY_cli_FormatAddressesAsJoinedArray(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14916,10 +14611,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Config_FullWalletPath(PyObject *SWIGUNUSEDPAR
     
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14952,10 +14645,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Config_FullDBPath(PyObject *SWIGUNUSEDPARM(se
     
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -14986,9 +14677,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_NewApp(PyObject *SWIGUNUSEDPARM(self), PyObje
     
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -15016,14 +14705,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_RPCClientFromContext(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_cli_RPCClientFromContext(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -15051,14 +14736,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_ConfigFromContext(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_cli_ConfigFromContext(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -15169,10 +14850,8 @@ SWIGINTERN PyObject *_wrap_SKY_encoder_StructField_String(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_encoder_StructField_String(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -15189,14 +14868,15 @@ SWIGINTERN PyObject *_wrap_SKY_encoder_ParseFields(PyObject *SWIGUNUSEDPARM(self
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
+  GoStringMap_ temp3 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_encoder_ParseFields",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    arg3 = &temp3;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_encoder_ParseFields",&obj0,&obj1)) SWIG_fail;
   {
     res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_GoSlice,  0 );
     if (!SWIG_IsOK(res1)) {
@@ -15219,13 +14899,11 @@ SWIGINTERN PyObject *_wrap_SKY_encoder_ParseFields(PyObject *SWIGUNUSEDPARM(self
       arg2 = *((GoSlice *)(argp2));
     }
   }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_GoStringMap_, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_encoder_ParseFields" "', argument " "3"" of type '" "GoStringMap_ *""'"); 
-  }
-  arg3 = (GoStringMap_ *)(argp3);
   result = (GoUint32)SKY_encoder_ParseFields(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
+  }
   return resultobj;
 fail:
   return NULL;
@@ -15862,14 +15540,10 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_NewWallet(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_wallet_NewWallet(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -15913,9 +15587,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Lock(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_wallet_Wallet_Lock(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -15958,14 +15630,10 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Unlock(PyObject *SWIGUNUSEDPARM(sel
   result = (GoUint32)SKY_wallet_Wallet_Unlock(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -15990,9 +15658,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Load(PyObject *SWIGUNUSEDPARM(self), PyObj
   result = (GoUint32)SKY_wallet_Load(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -16021,9 +15687,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Save(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_wallet_Wallet_Save(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16046,9 +15710,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Validate(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_wallet_Wallet_Validate(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16078,15 +15740,11 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Type(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_wallet_Wallet_Type(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16116,15 +15774,11 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Version(PyObject *SWIGUNUSEDPARM(se
   result = (GoUint32)SKY_wallet_Wallet_Version(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16154,15 +15808,11 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Filename(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_wallet_Wallet_Filename(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16192,15 +15842,11 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_Label(PyObject *SWIGUNUSEDPARM(self
   result = (GoUint32)SKY_wallet_Wallet_Label(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16232,9 +15878,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_IsEncrypted(PyObject *SWIGUNUSEDPAR
   result = (GoUint32)SKY_wallet_Wallet_IsEncrypted(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16275,9 +15919,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_GenerateAddresses(PyObject *SWIGUNU
   result = (GoUint32)SKY_wallet_Wallet_GenerateAddresses(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16309,9 +15951,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_GetAddresses(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_wallet_Wallet_GetAddresses(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16361,9 +16001,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_GetEntry(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_wallet_Wallet_GetEntry(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16395,9 +16033,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Wallet_AddEntry(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_wallet_Wallet_AddEntry(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16729,9 +16365,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_AddPrivateKey(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_cli_AddPrivateKey(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16791,9 +16425,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_App_Run(PyObject *SWIGUNUSEDPARM(self), PyObj
   result = (GoUint32)SKY_cli_App_Run(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -16826,10 +16458,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Config_GetCoin(PyObject *SWIGUNUSEDPARM(self)
     
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16862,10 +16492,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Config_GetRPCAddress(PyObject *SWIGUNUSEDPARM
     
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16893,14 +16521,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_RPCClientFromApp(PyObject *SWIGUNUSEDPARM(sel
   result = (GoUint32)SKY_cli_RPCClientFromApp(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -16929,10 +16553,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Getenv(PyObject *SWIGUNUSEDPARM(self), PyObje
   result = (GoUint32)SKY_cli_Getenv(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -16989,10 +16611,8 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_ClientError_Error(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_webrpc_ClientError_Error(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17019,9 +16639,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_NewClient(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_webrpc_NewClient(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg2);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
   }
   return resultobj;
 fail:
@@ -17051,15 +16669,11 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_CSRF(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_webrpc_Client_CSRF(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17106,9 +16720,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetUnspentOutputs(PyObject *SWIGUNU
   result = (GoUint32)SKY_webrpc_Client_GetUnspentOutputs(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17144,15 +16756,11 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_InjectTransactionString(PyObject *S
   result = (GoUint32)SKY_webrpc_Client_InjectTransactionString(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17191,15 +16799,11 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_InjectTransaction(PyObject *SWIGUNU
   result = (GoUint32)SKY_webrpc_Client_InjectTransaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17231,9 +16835,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetStatus(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_webrpc_Client_GetStatus(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17271,9 +16873,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetTransactionByID(PyObject *SWIGUN
   result = (GoUint32)SKY_webrpc_Client_GetTransactionByID(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17320,9 +16920,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetAddressUxOuts(PyObject *SWIGUNUS
   result = (GoUint32)SKY_webrpc_Client_GetAddressUxOuts(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17372,9 +16970,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetBlocks(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_webrpc_Client_GetBlocks(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17421,9 +17017,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetBlocksBySeq(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_webrpc_Client_GetBlocksBySeq(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17464,9 +17058,7 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetLastBlocks(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_webrpc_Client_GetLastBlocks(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg1);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
   }
   return resultobj;
 fail:
@@ -17526,10 +17118,8 @@ SWIGINTERN PyObject *_wrap_SKY_droplet_ToString(PyObject *SWIGUNUSEDPARM(self), 
   result = (GoUint32)SKY_droplet_ToString(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17552,10 +17142,8 @@ SWIGINTERN PyObject *_wrap_SKY_bip39_NewDefaultMnemomic(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_bip39_NewDefaultMnemomic(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg1->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg1->p ) );
     free( (void*)arg1->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -17624,10 +17212,8 @@ SWIGINTERN PyObject *_wrap_SKY_bip39_NewMnemonic(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_bip39_NewMnemonic(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -18111,10 +17697,8 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_NewNotesFilename(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_wallet_NewNotesFilename(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg1->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg1->p ) );
     free( (void*)arg1->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -19221,10 +18805,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Block_String(PyObject *SWIGUNUSEDPARM(self),
   result = (GoUint32)SKY_coin_Block_String(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -19434,10 +19016,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_BlockHeader_String(PyObject *SWIGUNUSEDPARM(
   result = (GoUint32)SKY_coin_BlockHeader_String(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -19670,9 +19250,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_CreateAddresses(PyObject *SWIGUNUSEDPARM(s
   result = (GoUint32)SKY_wallet_CreateAddresses(arg1,arg2,arg3,arg4,arg5);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg5);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg5) );
   }
   return resultobj;
 fail:
@@ -19711,9 +19289,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_GetSkycoinWalletEntry(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_wallet_GetSkycoinWalletEntry(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -19752,9 +19328,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_GetBitcoinWalletEntry(PyObject *SWIGUNUSED
   result = (GoUint32)SKY_wallet_GetBitcoinWalletEntry(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg3);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg3) );
   }
   return resultobj;
 fail:
@@ -19767,8 +19341,7 @@ SWIGINTERN PyObject *_wrap_SKY_map_get(PyObject *SWIGUNUSEDPARM(self), PyObject 
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  GoStringMap_ temp1 ;
   GoString_ temp3 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
@@ -19780,11 +19353,10 @@ SWIGINTERN PyObject *_wrap_SKY_map_get(PyObject *SWIGUNUSEDPARM(self), PyObject 
     arg3 = &temp3;
   }
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_map_get",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoStringMap_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_map_get" "', argument " "1"" of type '" "GoStringMap_ *""'"); 
+  {
+    temp1 = SwigLongToLong(obj0);
+    arg1 = &temp1;
   }
-  arg1 = (GoStringMap_ *)(argp1);
   {
     (&arg2)->p = SwigStringToString( obj1 );
     (&arg2)->n = SwigStringSize( obj1 ); 
@@ -19792,10 +19364,11 @@ SWIGINTERN PyObject *_wrap_SKY_map_get(PyObject *SWIGUNUSEDPARM(self), PyObject 
   result = (GoUint32)SKY_map_get(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg3->p );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
+  }
+  {
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg3->p ) );
     free( (void*)arg3->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -19807,24 +19380,25 @@ SWIGINTERN PyObject *_wrap_SKY_map_has_key(PyObject *SWIGUNUSEDPARM(self), PyObj
   PyObject *resultobj = 0;
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  GoStringMap_ temp1 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   GoUint8 result;
   
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_map_has_key",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoStringMap_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_map_has_key" "', argument " "1"" of type '" "GoStringMap_ *""'"); 
+  {
+    temp1 = SwigLongToLong(obj0);
+    arg1 = &temp1;
   }
-  arg1 = (GoStringMap_ *)(argp1);
   {
     (&arg2)->p = SwigStringToString( obj1 );
     (&arg2)->n = SwigStringSize( obj1 ); 
   }
   result = (GoUint8)SKY_map_has_key(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_char((unsigned char)(result));
+  {
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
+  }
   return resultobj;
 fail:
   return NULL;
@@ -19834,19 +19408,20 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_map_close(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
+  GoStringMap_ temp1 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_map_close",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoStringMap_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_map_close" "', argument " "1"" of type '" "GoStringMap_ *""'"); 
+  {
+    temp1 = SwigLongToLong(obj0);
+    arg1 = &temp1;
   }
-  arg1 = (GoStringMap_ *)(argp1);
   result = (GoUint32)SKY_map_close(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg1) );
+  }
   return resultobj;
 fail:
   return NULL;
@@ -19895,11 +19470,10 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_cli_GenerateWallet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
-  wallet__Options *arg2 = (wallet__Options *) 0 ;
+  Options__Handle *arg2 = (Options__Handle *) 0 ;
   GoUint64 arg3 ;
   Wallet__Handle *arg4 = (Wallet__Handle *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
+  Options__Handle temp2 ;
   unsigned long long val3 ;
   int ecode3 = 0 ;
   Wallet__Handle temp4 ;
@@ -19916,11 +19490,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GenerateWallet(PyObject *SWIGUNUSEDPARM(self)
     (&arg1)->p = SwigStringToString( obj0 );
     (&arg1)->n = SwigStringSize( obj0 ); 
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_wallet__Options, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_cli_GenerateWallet" "', argument " "2"" of type '" "wallet__Options *""'"); 
+  {
+    temp2 = SwigLongToLong(obj1);
+    arg2 = &temp2;
   }
-  arg2 = (wallet__Options *)(argp2);
   ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_cli_GenerateWallet" "', argument " "3"" of type '" "GoUint64""'");
@@ -19929,9 +19502,10 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GenerateWallet(PyObject *SWIGUNUSEDPARM(self)
   result = (GoUint32)SKY_cli_GenerateWallet(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg4);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg2) );
+  }
+  {
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg4) );
   }
   return resultobj;
 fail:
@@ -19954,10 +19528,8 @@ SWIGINTERN PyObject *_wrap_SKY_cli_MakeAlphanumericSeed(PyObject *SWIGUNUSEDPARM
   result = (GoUint32)SKY_cli_MakeAlphanumericSeed(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg1->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg1->p ) );
     free( (void*)arg1->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -20383,9 +19955,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_CreateOptionsHandle(PyObject *SWIGUNUSEDPA
   result = (GoUint32)SKY_wallet_CreateOptionsHandle(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = LongToSwigLong(*arg8);
-    resultobj = __add_to_result_list( resultobj, o );
+    resultobj = __add_to_result_list( resultobj, LongToSwigLong(*arg8) );
   }
   return resultobj;
 fail:
@@ -20829,10 +20399,8 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_CryptoTypeFromString(PyObject *SWIGUNUSEDP
   result = (GoUint32)SKY_wallet_CryptoTypeFromString(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    PyObject *o;
-    o = StringToSwigString( arg2->p );
+    resultobj = __add_to_result_list( resultobj, StringToSwigString( arg2->p ) );
     free( (void*)arg2->p );
-    resultobj = __add_to_result_list( resultobj, o );
   }
   return resultobj;
 fail:
@@ -21405,7 +20973,6 @@ static swig_type_info _swigt__p_wallet__Balance = {"_p_wallet__Balance", "wallet
 static swig_type_info _swigt__p_wallet__BalancePair = {"_p_wallet__BalancePair", "wallet__BalancePair *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__Entry = {"_p_wallet__Entry", "wallet__Entry *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__Note = {"_p_wallet__Note", "wallet__Note *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_wallet__Options = {"_p_wallet__Options", "wallet__Options *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__ReadableNote = {"_p_wallet__ReadableNote", "wallet__ReadableNote *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__UxBalance = {"_p_wallet__UxBalance", "wallet__UxBalance *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_webrpc__ClientError = {"_p_webrpc__ClientError", "webrpc__ClientError *", 0, 0, (void*)0, 0};
@@ -21490,7 +21057,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_wallet__BalancePair,
   &_swigt__p_wallet__Entry,
   &_swigt__p_wallet__Note,
-  &_swigt__p_wallet__Options,
   &_swigt__p_wallet__ReadableNote,
   &_swigt__p_wallet__UxBalance,
   &_swigt__p_webrpc__ClientError,
@@ -21575,7 +21141,6 @@ static swig_cast_info _swigc__p_wallet__Balance[] = {  {&_swigt__p_wallet__Balan
 static swig_cast_info _swigc__p_wallet__BalancePair[] = {  {&_swigt__p_wallet__BalancePair, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__Entry[] = {  {&_swigt__p_wallet__Entry, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__Note[] = {  {&_swigt__p_wallet__Note, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_wallet__Options[] = {  {&_swigt__p_wallet__Options, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__ReadableNote[] = {  {&_swigt__p_wallet__ReadableNote, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__UxBalance[] = {  {&_swigt__p_wallet__UxBalance, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_webrpc__ClientError[] = {  {&_swigt__p_webrpc__ClientError, 0, 0, 0},{0, 0, 0, 0}};
@@ -21660,7 +21225,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_wallet__BalancePair,
   _swigc__p_wallet__Entry,
   _swigc__p_wallet__Note,
-  _swigc__p_wallet__Options,
   _swigc__p_wallet__ReadableNote,
   _swigc__p_wallet__UxBalance,
   _swigc__p_webrpc__ClientError,

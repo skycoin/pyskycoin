@@ -520,7 +520,7 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 
 #line 1 "cgo-generated-wrapper"
 
-#line 10 "/go/src/github.com/skycoin/skycoin/lib/cgo/cli.generate_wallet.go"
+#line 7 "/go/src/github.com/skycoin/skycoin/lib/cgo/cli.generate_wallet.go"
 
 
   #include <string.h>
@@ -1473,7 +1473,7 @@ extern GoUint32 SKY_logging_DisableColors();
 
 extern GoUint32 SKY_logging_Disable();
 
-extern GoUint32 SKY_cli_GenerateWallet(GoString p0, wallet__Options* p1, GoUint64 p2, Wallet__Handle* p3);
+extern GoUint32 SKY_cli_GenerateWallet(GoString p0, Options__Handle* p1, GoUint64 p2, Wallet__Handle* p3);
 
 extern GoUint32 SKY_cli_MakeAlphanumericSeed(GoString_* p0);
 

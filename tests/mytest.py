@@ -11,4 +11,6 @@ def test_success():
 	print new_coin
 	error = skycoin.SKY_cli_Setenv("COIN", old_coin)
 	assert error == 0
+	r, error = skycoin.SKY_file_UserHome()
+	print r
 test_success()

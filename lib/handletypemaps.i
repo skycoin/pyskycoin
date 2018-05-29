@@ -17,9 +17,7 @@
 
 /* Add Wallet Handle to result */
 %typemap(argout) (GoString p0, Wallet__Handle* p1) {
-	PyObject *o;
-	o = LongToSwigLong(*$2);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$2) );
 }
 
 /* Wallet__Handle input typemap. p0 and p1 assume input*/
@@ -40,9 +38,7 @@
 
 /* Wallet__Handle input typemap. From p2 to p7 assume output*/
 %typemap(argout) Wallet__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 
@@ -65,9 +61,7 @@
 
 /* Options__Handle input typemap. From 2 to 7 assume output*/
 %typemap(argout) Options__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Options__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -95,9 +89,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -124,9 +116,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) ReadableEntry__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* ReadableEntry__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -153,9 +143,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) ReadableWallet__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* ReadableWallet__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -182,9 +170,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) WebRpcClient__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* WebRpcClient__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -211,9 +197,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) WalletResponse__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* WalletResponse__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -241,9 +225,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Client__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Client__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -270,9 +252,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Strings__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Strings__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -299,9 +279,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Wallets__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Wallets__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -331,21 +309,18 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Config__Handle* p1, Config__Handle* p2 {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 
 
 /* Handle for Config__Handle return parameter for  custom wrapper for SKY_cli_LoadConfig*/
 %typemap(out) Config__Handle {
-	PyObject *o;
 	int error = $1 != 0 ? 0 : -1;
-	o = LongToSwigLong(error);   //Add the error return parameter to be like the other functions
-	$result = __add_to_result_list( $result, o );
-	o = LongToSwigLong($1);     //Add handle to return parameters list, it prepended to error parameter
-	$result = __add_to_result_list( $result, o );
+	//Add the error return parameter to be like the other functions
+	$result = __add_to_result_list( $result, LongToSwigLong(error) );
+	//Add handle to return parameters list, it prepended to error parameter
+	$result = __add_to_result_list( $result, LongToSwigLong($1) );
 }
 
 /* Config__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -373,9 +348,7 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) App__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* App__Handle not as pointer is input. All input handles should be like this, no pointers */
@@ -402,13 +375,38 @@
 
 /* Handle input typemap. From 1 to 7 assume output*/
 %typemap(argout) Context__Handle* {
-	PyObject *o;
-	o = LongToSwigLong(*$1);
-	$result = __add_to_result_list( $result, o );
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
 }
 
 /* Context__Handle not as pointer is input. All input handles should be like this, no pointers */
 %typemap(in) Context__Handle {
+	$1 = SwigLongToLong($input);
+}
+
+/**
+*
+* typemaps for Context__Handle. p0 input, from p1 to p7 output
+* This should be type mapped as a string map in the target language
+**/
+
+/* GoStringMap_ input typemap. From p0 assume input*/
+%typemap(in) GoStringMap_* p0 (GoStringMap_ temp) {
+	temp = SwigLongToLong($input);
+	$1 = &temp;
+}
+
+/* GoStringMap_ input typemap. From p1 to p7 assume output*/
+%typemap(in, numinputs=0) GoStringMap_* (GoStringMap_ temp) {
+	$1 = &temp;
+}
+
+/* GoStringMap_ input typemap. From 1 to 7 assume output*/
+%typemap(argout) GoStringMap_* {
+	$result = __add_to_result_list( $result, LongToSwigLong(*$1) );
+}
+
+/* GoStringMap_ not as pointer is input. All input handles should be like this, no pointers */
+%typemap(in) GoStringMap_ {
 	$1 = SwigLongToLong($input);
 }
 

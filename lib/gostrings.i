@@ -24,8 +24,6 @@ typedef struct{
 
 /*GoString_* as function return typemap*/
 %typemap(argout) GoString_* {
-	PyObject *o;
-	o = StringToSwigString( $1->p );
+	$result = __add_to_result_list( $result, StringToSwigString( $1->p ) );
 	free( (void*)$1->p );
-	$result = __add_to_result_list( $result, o );
 }

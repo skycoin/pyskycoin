@@ -1030,8 +1030,8 @@ def SKY_api_Handle_Client_GetWalletFullPath(p0, p1):
     return _skycoin.SKY_api_Handle_Client_GetWalletFullPath(p0, p1)
 SKY_api_Handle_Client_GetWalletFullPath = _skycoin.SKY_api_Handle_Client_GetWalletFullPath
 
-def SKY_api_Handle_GetWalletMeta(p0, p1):
-    return _skycoin.SKY_api_Handle_GetWalletMeta(p0, p1)
+def SKY_api_Handle_GetWalletMeta(p0):
+    return _skycoin.SKY_api_Handle_GetWalletMeta(p0)
 SKY_api_Handle_GetWalletMeta = _skycoin.SKY_api_Handle_GetWalletMeta
 
 def SKY_api_Handle_GetWalletEntriesCount(p0, p1):
@@ -1390,8 +1390,8 @@ def SKY_encoder_StructField_String(p0):
     return _skycoin.SKY_encoder_StructField_String(p0)
 SKY_encoder_StructField_String = _skycoin.SKY_encoder_StructField_String
 
-def SKY_encoder_ParseFields(p0, p1, p2):
-    return _skycoin.SKY_encoder_ParseFields(p0, p1, p2)
+def SKY_encoder_ParseFields(p0, p1):
+    return _skycoin.SKY_encoder_ParseFields(p0, p1)
 SKY_encoder_ParseFields = _skycoin.SKY_encoder_ParseFields
 
 def SKY_coin_UxOut_Hash(p0, p1):
