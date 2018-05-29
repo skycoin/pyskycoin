@@ -13,13 +13,13 @@
 			o3 = PyTuple_New(1);
 			PyTuple_SetItem(o3, 0, o);
 			o2 = result;
-			result = PySequence_Concat(o2, o3);
-			size = PyTuple_Size(result);
-			o4 = PyTuple_GetItem( result, size - 2 );
-			PyTuple_SetItem( result, size - 1, o4 );
-			PyTuple_SetItem( result, size - 2, o );
-			//Py_DECREF(o2);
-			//Py_DECREF(o3); //TODO: Check why this is failing
+			result = PySequence_Concat(o3, o2);
+			//size = PyTuple_Size(result);
+			//o4 = PyTuple_GetItem( result, size - 2 );
+			//PyTuple_SetItem( result, size - 1, o4 );
+			//PyTuple_SetItem( result, size - 2, o );
+			Py_DECREF(o2);
+			Py_DECREF(o3); //TODO: Check why this is failing when swaping items
 		}
 		return result;
 	}

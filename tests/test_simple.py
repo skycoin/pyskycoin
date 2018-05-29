@@ -4,6 +4,24 @@
 import skycoin
 
 def test_success():
+	'''
+	error, old_coin = skycoin.SKY_cli_Getenv("COIN")
+	assert error == 0
+	print old_coin
+	error = skycoin.SKY_cli_Setenv("COIN", "foocoin")
+	assert error == 0
+	error, new_coin = skycoin.SKY_cli_Getenv("COIN")
+	assert error == 0
+	print new_coin
+	error, configHandle = skycoin.SKY_cli_LoadConfig()
+	assert error == 0
+	error, new_coin = skycoin.SKY_cli_Config_GetCoin( configHandle )
+	assert error == 0
+	assert new_coin == "foocoin"
+	print new_coin
+	error = skycoin.SKY_cli_Setenv("COIN", old_coin )
+	'''
+	
 	old_coin, error = skycoin.SKY_cli_Getenv("COIN")
 	assert error == 0
 	error = skycoin.SKY_cli_Setenv("COIN", "foocoin")
@@ -17,7 +35,7 @@ def test_success():
 	assert True
 	error = skycoin.SKY_cli_Setenv("COIN", old_coin)
 	assert error == 0
-
+	
 '''
 def test_success():
 	result = skycoin.SKY_file_InitDataDir("test")
