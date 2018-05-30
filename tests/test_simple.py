@@ -29,7 +29,22 @@ def test_Sha256XorEncrypt():
 	error, decrypted = skycoin.SKY_encrypt_Sha256Xor_Decrypt( encrypt, encrypted, pwd )
 	assert error == 0
 	assert data == decrypted
-
+	
+def test_encrypt_ScryptChacha20poly1305Encrypt():
+	encrypt_settings = skycoin.encrypt__ScryptChacha20poly1305()
+	encrypt_settings.N = 2
+	encrypt_settings.R = 8
+	encrypt_settings.P = 1
+	encrypt_settings.KeyLen = 32
+	
+	error, data = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	assert len( data ) == 32
+	error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(encrypt_settings, data, "password")
+	assert error == 0
+	error, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(encrypt_settings, encrypted, "password")
+	assert error == 0
+	assert data == decrypted
 
 def test_base58hex2base58():
 	error, result = skycoin.SKY_base58_Hex2Base58("123X")
