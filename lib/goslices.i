@@ -28,10 +28,10 @@ typedef struct {
 
 /*GoSlice_* as function return typemap*/
 %typemap(argout) GoSlice_* {
-	//$result = __add_to_result_list( $result, SWIG_FromCharPtrAndSize( $1->data, $1->len ) );
 	%append_output( SWIG_FromCharPtrAndSize( $1->data, $1->len  ) );
 	free( (void*)$1->data );
 }
+
 
 %apply GoSlice_* {coin__UxArray*} 
 

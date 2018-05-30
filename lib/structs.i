@@ -12,6 +12,7 @@ typedef struct{
     GoUint32_  n[10];
 } secp256k1go__Field;
 
+
 typedef GoUint8_ cipher__PubKey[33];
 
 typedef GoUint8_ cipher__Ripemd160[20];
@@ -22,6 +23,39 @@ typedef GoUint8_ cipher__Sig[65];
 
 typedef GoUint8_ cipher__SHA256[32];
 
+typedef GoUint8_  cipher__Checksum[4];
+
+typedef struct{
+	GoUint8 data[33];
+} cipher_PubKey;
+
+typedef struct{
+	GoUint8 data[32];
+} cipher_SecKey;
+
+typedef struct{
+	GoUint8 data[20];
+} cipher_Ripemd160;
+
+typedef struct{
+	GoUint8 data[65];
+} cipher_Sig;
+
+typedef struct{
+	GoUint8 data[32];
+} cipher_SHA256;
+
+typedef struct{
+	GoUint8 data[4];
+} cipher_Checksum;
+
+typedef struct {
+	cipher__Address Address;    ///< Wallet address.
+	cipher__PubKey  Public;     ///< Public key used to generate address.
+	cipher__SecKey  Secret;     ///< Secret key used to generate address.
+} wallet__Entry;
+
+
 typedef struct{
     GoUint8_ Version;      ///< Address version identifier.
 						   ///< Used to differentiate testnet
@@ -29,7 +63,7 @@ typedef struct{
     cipher__Ripemd160 Key; ///< Address hash identifier.
 } cipher__Address;
 
-typedef GoUint8_  cipher__Checksum[4];
+
 
 typedef struct{
     GoUint64_ Coins;
