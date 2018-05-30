@@ -6,7 +6,12 @@ dist/
 *.py[cod]
 __pycache__/
 *.so
+*.o
+wrappers/*.c
 *~
+lib/include/libskycoin.h
+#Just for testing outside tox
+tests/mytest.py
 
 # due to using tox and pytest
 .tox

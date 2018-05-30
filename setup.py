@@ -32,7 +32,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='pyskycoin',  # Required
+	name='Pyskycoin',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -45,7 +45,7 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='Skycoin python library',  # Required
+	description='Skycoin Python Library',  # Required
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -77,11 +77,11 @@ setup(
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='Skycoin',  # Optional
+    author='stdevEclipse',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    author_email='eclipse@mysimplenetwork.com',  # Optional
+    author_email='dev0003@simelo.tech',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     #
