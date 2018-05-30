@@ -23,9 +23,10 @@ build-libc: configure-build $(BUILDLIB_DIR)/libskycoin.a ## Build libskycoin C c
 
 tests/_skycoin.so: $(SWIG_FILES)
 	echo "Building Pyskycoin"
+	mkdir -p lib/wrappers
+	mkdir -p lib/include
 	rm -Rf lib/include/libskycoin.h
 	grep -v _Complex skycoin/include/libskycoin.h >> lib/include/libskycoin.h
-	mkdir -p lib/wrappers
 	swig -python -outdir tests -o lib/wrappers/pyskycoin_wrap.c lib/skycoin.i
 	$(CC) -O2 -fPIC -c lib/wrappers/pyskycoin_wrap.c -I/usr/include  -I/usr/include/python2.7 -Iskycoin/include/ -o lib/wrappers/pyskycoin_wrap.o
 	$(CC) -shared lib/wrappers/pyskycoin_wrap.o -o tests/_skycoin.so $(BUILDLIB_DIR)/libskycoin.a

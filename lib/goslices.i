@@ -1,9 +1,3 @@
-typedef struct{
-  void 	*data;   
-  int 	len; 
-  int 	cap; 
-} GoSlice;
-
 typedef struct {
   void 	*data;   
   int 	len; 

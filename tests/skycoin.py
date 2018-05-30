@@ -147,36 +147,6 @@ class GoString_(_object):
 GoString__swigregister = _skycoin.GoString__swigregister
 GoString__swigregister(GoString_)
 
-class GoSlice(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, GoSlice, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, GoSlice, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["data"] = _skycoin.GoSlice_data_set
-    __swig_getmethods__["data"] = _skycoin.GoSlice_data_get
-    if _newclass:
-        data = _swig_property(_skycoin.GoSlice_data_get, _skycoin.GoSlice_data_set)
-    __swig_setmethods__["len"] = _skycoin.GoSlice_len_set
-    __swig_getmethods__["len"] = _skycoin.GoSlice_len_get
-    if _newclass:
-        len = _swig_property(_skycoin.GoSlice_len_get, _skycoin.GoSlice_len_set)
-    __swig_setmethods__["cap"] = _skycoin.GoSlice_cap_set
-    __swig_getmethods__["cap"] = _skycoin.GoSlice_cap_get
-    if _newclass:
-        cap = _swig_property(_skycoin.GoSlice_cap_get, _skycoin.GoSlice_cap_set)
-
-    def __init__(self):
-        this = _skycoin.new_GoSlice()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_GoSlice
-    __del__ = lambda self: None
-GoSlice_swigregister = _skycoin.GoSlice_swigregister
-GoSlice_swigregister(GoSlice)
-
 class GoSlice_(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, GoSlice_, name, value)
@@ -276,6 +246,36 @@ class GoInterface(_object):
     __del__ = lambda self: None
 GoInterface_swigregister = _skycoin.GoInterface_swigregister
 GoInterface_swigregister(GoInterface)
+
+class GoSlice(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoSlice, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoSlice, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.GoSlice_data_set
+    __swig_getmethods__["data"] = _skycoin.GoSlice_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.GoSlice_data_get, _skycoin.GoSlice_data_set)
+    __swig_setmethods__["len"] = _skycoin.GoSlice_len_set
+    __swig_getmethods__["len"] = _skycoin.GoSlice_len_get
+    if _newclass:
+        len = _swig_property(_skycoin.GoSlice_len_get, _skycoin.GoSlice_len_set)
+    __swig_setmethods__["cap"] = _skycoin.GoSlice_cap_set
+    __swig_getmethods__["cap"] = _skycoin.GoSlice_cap_get
+    if _newclass:
+        cap = _swig_property(_skycoin.GoSlice_cap_get, _skycoin.GoSlice_cap_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoSlice()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoSlice
+    __del__ = lambda self: None
+GoSlice_swigregister = _skycoin.GoSlice_swigregister
+GoSlice_swigregister(GoSlice)
 
 
 def SKY_base58_String2Hex(p0):
