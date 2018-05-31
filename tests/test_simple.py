@@ -82,6 +82,33 @@ def test_GenerateKeyPairs():
 	error = skycoin.SKY_cipher_DecodeBase58Address( address_string, address2 )
 	assert error == 0
 	assert address.isEqual(address2)
-
+	
+def test_GenerateDeterministicKeyPairs():
+	error, seed = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	secKeys = skycoin.cipher_SecKeys()
+	error = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2, secKeys)
+	assert error == 0
+	length = secKeys.count
+	assert length == 2
+	secKey = secKeys.getAt(0)
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
+	assert error == 0
+	secKey = secKeys.getAt(1)
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
+	assert error == 0
+	
+def test_GenerateDeterministicKeyPairsSeed():
+	error, seed = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	secKeys = skycoin.cipher_SecKeys()
+	error, newseed = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2, secKeys)
+	assert error == 0
+	assert secKeys.count == 2
+	
+	
+	
 
 

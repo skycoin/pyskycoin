@@ -10,6 +10,7 @@
 %include "handletypemaps.i"
 %include "gostrings.i"
 %include "goslices.i"
+%include "goslices2.i"
 %include "structs.i"
 %include "extend.i"
 %include "structs_typemaps.i"

@@ -18,6 +18,13 @@ typedef struct {
 	$1.cap = size;
 }
 
+%typecheck(SWIG_TYPECHECK_STRING) GoSlice {
+  	char* buffer = 0;
+	size_t size = 0;
+	int res = SWIG_AsCharPtrAndSize( $input, &buffer, &size, 0 );
+	$1 = SWIG_IsOK(res) ? 1 : 0;
+}
+
 /*GoSlice_* parameter as reference */
 %typemap(in, numinputs=0) GoSlice_* (GoSlice_ temp) {
 	temp.data = NULL;

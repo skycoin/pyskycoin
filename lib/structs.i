@@ -49,6 +49,16 @@ typedef struct{
 	GoUint8 data[4];
 } cipher_Checksum;
 
+typedef struct{
+	cipher_SecKey data[MAX_ARRAY_LENGTH_WRAP];
+	int count;
+} cipher_SecKeys;
+
+typedef struct{
+	cipher_PubKey data[MAX_ARRAY_LENGTH_WRAP];
+	int count;
+} cipher_PubKeys;
+
 typedef struct {
 	cipher__Address Address;    ///< Wallet address.
 	cipher__PubKey  Public;     ///< Public key used to generate address.

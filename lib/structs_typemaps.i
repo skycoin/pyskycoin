@@ -1,3 +1,6 @@
+/*
+cipher__PubKey* input typemap
+*/
 %typemap(in) cipher__PubKey* {
 	void *argp = 0;
 	int res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_cipher_PubKey, 0 | 0);
@@ -7,7 +10,11 @@
 	$1 = &p->data;
 }
 
-%typemap(in) cipher__SecKey* {
+
+/*
+cipher__SecKey* input typemap
+*/
+%typemap(in) cipher__SecKey*{
 	void *argp = 0;
 	int res = SWIG_ConvertPtr($input, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
 	if (!SWIG_IsOK(res))
@@ -33,6 +40,8 @@
 	cipher_Sig* p = (cipher_Sig*)argp;
 	$1 = &p->data;
 }
+
+
 
 %typemap(in) cipher__SHA256* {
 	void *argp = 0;
