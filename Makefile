@@ -33,3 +33,5 @@ pyskycoin: build-libc tests/_skycoin.so
 	
 test: pyskycoin
 	tox
+	
+
