@@ -4,7 +4,7 @@ BUILDLIB_DIR = $(BUILD_DIR)/libskycoin
 LIB_DIR = lib
 LIB_FILES = $(shell find ./skycoin/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find ./skycoin/src -type f -name "*.go")
-SWIG_FILES = $(shell find ./lib -type f -name "*.i")
+SWIG_FILES = $(shell find ./skycoin/lib/swig -type f -name "*.i")
 BIN_DIR = skycoin/bin
 INCLUDE_DIR = skycoin/include
 LIBSRC_DIR = skycoin/lib/cgo
@@ -23,13 +23,11 @@ build-libc: configure-build $(BUILDLIB_DIR)/libskycoin.a ## Build libskycoin C c
 
 tests/_skycoin.so: $(SWIG_FILES)
 	echo "Building Pyskycoin"
-	mkdir -p lib/wrappers
-	mkdir -p lib/include
-	rm -Rf lib/include/libskycoin.h
-	grep -v _Complex skycoin/include/libskycoin.h >> lib/include/libskycoin.h
-	swig -python -outdir tests -o lib/wrappers/pyskycoin_wrap.c lib/skycoin.i
-	$(CC) -O2 -fPIC -c lib/wrappers/pyskycoin_wrap.c -I/usr/include  -I/usr/include/python2.7 -Iskycoin/include/ -o lib/wrappers/pyskycoin_wrap.o
-	$(CC) -shared lib/wrappers/pyskycoin_wrap.o -o tests/_skycoin.so $(BUILDLIB_DIR)/libskycoin.a
+	rm -Rf swig/include/libskycoin.h
+	grep -v _Complex skycoin/include/libskycoin.h >> swig/include/libskycoin.h
+	swig -python -outdir tests -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
+	$(CC) -O2 -fPIC -c swig/pyskycoin_wrap.c -I/usr/include  -I/usr/include/python2.7 -Iskycoin/include/ -o swig/pyskycoin_wrap.o
+	$(CC) -shared swig/pyskycoin_wrap.o -o tests/_skycoin.so $(BUILDLIB_DIR)/libskycoin.a
 
 pyskycoin: build-libc tests/_skycoin.so
 	
