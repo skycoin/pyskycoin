@@ -21,15 +21,18 @@ typedef struct{
 	$1.n = size - 1;
 }
 
-/*GoString_* parameter as reference */
-%typemap(in, numinputs=0) GoString_* (GoString_ temp) {
+/*GoString* parameter as reference */
+%typemap(in, numinputs=0) GoString* (GoString temp) {
 	temp.p = NULL;
 	temp.n = 0;
-	$1 = &temp;
+	$1 = ($1_type)&temp;
 }
 
-/*GoString_* as function return typemap*/
-%typemap(argout) GoString_* {
+/*GoString* as function return typemap*/
+%typemap(argout) GoString* {
 	%append_output( SWIG_FromCharPtrAndSize( $1->p, $1->n  ) );
 	free( (void*)$1->p );
 }
+
+%apply GoString {GoString_}
+%apply GoString* {GoString_*}

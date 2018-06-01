@@ -5,12 +5,12 @@
 **/
 
 
-/* Handle input typemap. */
+/* Handle reference typemap. */
 %typemap(in, numinputs=0) Handle* (Handle temp) {
 	$1 = &temp;
 }
 
-/* Handle input typemap. */
+/* Handle out typemap. */
 %typemap(argout) Handle* {
 	%append_output( SWIG_From_long(*$1) );
 }

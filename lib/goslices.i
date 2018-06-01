@@ -18,6 +18,7 @@ typedef struct {
 	$1.cap = size;
 }
 
+
 %typecheck(SWIG_TYPECHECK_STRING) GoSlice {
   	char* buffer = 0;
 	size_t size = 0;
@@ -25,12 +26,13 @@ typedef struct {
 	$1 = SWIG_IsOK(res) ? 1 : 0;
 }
 
+
 /*GoSlice_* parameter as reference */
 %typemap(in, numinputs=0) GoSlice_* (GoSlice_ temp) {
 	temp.data = NULL;
 	temp.len = 0;
 	temp.cap = 0;
-	$1 = &temp;
+	$1 = ($1_type)&temp;
 }
 
 /*GoSlice_* as function return typemap*/
@@ -38,7 +40,6 @@ typedef struct {
 	%append_output( SWIG_FromCharPtrAndSize( $1->data, $1->len  ) );
 	free( (void*)$1->data );
 }
-
 
 %apply GoSlice_* {coin__UxArray*} 
 
