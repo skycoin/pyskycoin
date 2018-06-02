@@ -7,4 +7,4 @@ include LICENSE.txt
 recursive-include swig/include *
 recursive-include skycoin/include *
 include skycoin/build/libskycoin/libskycoin.a
-include swig/skycoin.py
+include skycoin.py

@@ -38,7 +38,7 @@ build/lib.linux-x86_64-2.7/_skycoin.so:
 	$(CC) -O2 -fPIC -c swig/pyskycoin_wrap.c -I/usr/include  -I/usr/include/python2.7 -Iskycoin/include/ -o swig/pyskycoin_wrap.o
 	$(CC) -shared swig/pyskycoin_wrap.o -o build/lib.linux-x86_64-2.7/_skycoin.so $(BUILDLIB_DIR)/libskycoin.a
 wrapper:
-	swig -python -outdir swig -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
+	swig -python -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
 develop:
 	python setup.py develop
 
