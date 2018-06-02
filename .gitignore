@@ -10,10 +10,6 @@ __pycache__/
 
 *~
 
-#Swig generated files
-lib/wrappers/*.c
-lib/include/libskycoin.h
-tests/skycoin.py
 #Just for testing outside tox
 tests/mytest.py
 
