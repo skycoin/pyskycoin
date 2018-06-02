@@ -10,6 +10,9 @@ __pycache__/
 
 *~
 
+#Copy of libskycoin.h in pyskycoin
+swig/include/libskycoin.h
+
 #Just for testing outside tox
 tests/mytest.py
 
