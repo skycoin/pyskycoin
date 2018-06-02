@@ -276,7 +276,7 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
   #include <stdlib.h>
 
   #include "skytypes.h"
-
+/*
 #line 1 "cgo-generated-wrapper"
 
 #line 10 "/go/src/github.com/skycoin/skycoin/lib/cgo/cipher.hash.go"
@@ -286,7 +286,7 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
   #include <stdlib.h>
 
   #include "skytypes.h"
-
+*/
 #line 1 "cgo-generated-wrapper"
 
 #line 11 "/go/src/github.com/skycoin/skycoin/lib/cgo/coin.transactions.go"

@@ -18,7 +18,7 @@ def test_loadconfig():
 	assert True
 	error = skycoin.SKY_cli_Setenv("COIN", old_coin)
 	assert error == 0
-	
+
 #Test with slices as []byte
 def test_Sha256XorEncrypt():
 	encrypt = skycoin.encrypt__Sha256Xor()
@@ -31,7 +31,7 @@ def test_Sha256XorEncrypt():
 	error, decrypted = skycoin.SKY_encrypt_Sha256Xor_Decrypt( encrypt, encrypted, pwd )
 	assert error == 0
 	assert data == decrypted
-	
+
 #Test with struct and slices
 def test_encrypt_ScryptChacha20poly1305Encrypt():
 	encrypt_settings = skycoin.encrypt__ScryptChacha20poly1305()
@@ -39,7 +39,7 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
 	encrypt_settings.R = 8
 	encrypt_settings.P = 1
 	encrypt_settings.KeyLen = 32
-	
+
 	error, data = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
 	assert len( data ) == 32
@@ -82,7 +82,7 @@ def test_GenerateKeyPairs():
 	error = skycoin.SKY_cipher_DecodeBase58Address( address_string, address2 )
 	assert error == 0
 	assert address.isEqual(address2)
-	
+
 def test_GenerateDeterministicKeyPairs():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
@@ -99,7 +99,7 @@ def test_GenerateDeterministicKeyPairs():
 	address = skycoin.cipher__Address()
 	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
 	assert error == 0
-	
+
 def test_GenerateDeterministicKeyPairsSeed():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
@@ -107,8 +107,3 @@ def test_GenerateDeterministicKeyPairsSeed():
 	error, newseed = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2, secKeys)
 	assert error == 0
 	assert secKeys.count == 2
-	
-	
-	
-
-
