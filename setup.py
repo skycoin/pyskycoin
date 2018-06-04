@@ -87,7 +87,7 @@ setup(
     ],
     keywords='skycoin crypto coin currency blockchain',  # Optional
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
-    install_requires=['peppercorn'],
+    install_requires=[],
     extras_require={  # Optional
         'dev': ['check-manifest'],
         'test': ['coverage'],
