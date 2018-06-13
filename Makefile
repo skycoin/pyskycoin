@@ -7,6 +7,7 @@ SRC_FILES = $(shell find ./skycoin/src -type f -name "*.go")
 SWIG_FILES = $(shell find ./skycoin/lib/swig -type f -name "*.i")
 BIN_DIR = skycoin/bin
 INCLUDE_DIR = skycoin/include
+SWIG_DIR = skycoin/lib/swig
 LIBSRC_DIR = skycoin/lib/cgo
 
 
@@ -24,6 +25,9 @@ $(BUILDLIB_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 build-libc: configure-build $(BUILDLIB_DIR)/libskycoin.a ## Build libskycoin C client library
 
 wrapper:
+	rm -Rf $(SWIG_DIR)/structs.i
+	cp $(INCLUDE_DIR)/skytypes.gen.h $(SWIG_DIR)/structs.i
+	sed -i 's/#include "/%include "..\/..\/include\//g' $(SWIG_DIR)/structs.i
 	swig -python  -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
 develop:
 	python setup.py develop
