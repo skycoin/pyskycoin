@@ -95,58 +95,14 @@ except __builtin__.Exception:
         pass
     _newclass = 0
 
-class GoString(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, GoString, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, GoString, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["p"] = _skycoin.GoString_p_set
-    __swig_getmethods__["p"] = _skycoin.GoString_p_get
-    if _newclass:
-        p = _swig_property(_skycoin.GoString_p_get, _skycoin.GoString_p_set)
-    __swig_setmethods__["n"] = _skycoin.GoString_n_set
-    __swig_getmethods__["n"] = _skycoin.GoString_n_get
-    if _newclass:
-        n = _swig_property(_skycoin.GoString_n_get, _skycoin.GoString_n_set)
 
-    def __init__(self):
-        this = _skycoin.new_GoString()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_GoString
-    __del__ = lambda self: None
-GoString_swigregister = _skycoin.GoString_swigregister
-GoString_swigregister(GoString)
+def destroy_cipher_SecKeys(p):
+    return _skycoin.destroy_cipher_SecKeys(p)
+destroy_cipher_SecKeys = _skycoin.destroy_cipher_SecKeys
 
-class GoString_(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, GoString_, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, GoString_, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["p"] = _skycoin.GoString__p_set
-    __swig_getmethods__["p"] = _skycoin.GoString__p_get
-    if _newclass:
-        p = _swig_property(_skycoin.GoString__p_get, _skycoin.GoString__p_set)
-    __swig_setmethods__["n"] = _skycoin.GoString__n_set
-    __swig_getmethods__["n"] = _skycoin.GoString__n_get
-    if _newclass:
-        n = _swig_property(_skycoin.GoString__n_get, _skycoin.GoString__n_set)
-
-    def __init__(self):
-        this = _skycoin.new_GoString_()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_GoString_
-    __del__ = lambda self: None
-GoString__swigregister = _skycoin.GoString__swigregister
-GoString__swigregister(GoString_)
-
+def destroy_cipher_PubKeys(p):
+    return _skycoin.destroy_cipher_PubKeys(p)
+destroy_cipher_PubKeys = _skycoin.destroy_cipher_PubKeys
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -285,6 +241,18 @@ class cipher_SecKeys(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_SecKeys, name)
     __repr__ = _swig_repr
+
+    def getAt(self, i):
+        return _skycoin.cipher_SecKeys_getAt(self, i)
+
+    def setAt(self, i, seckey):
+        return _skycoin.cipher_SecKeys_setAt(self, i, seckey)
+
+    def allocate(self, n):
+        return _skycoin.cipher_SecKeys_allocate(self, n)
+
+    def release(self):
+        return _skycoin.cipher_SecKeys_release(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKeys_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKeys_data_get
     if _newclass:
@@ -293,9 +261,6 @@ class cipher_SecKeys(_object):
     __swig_getmethods__["count"] = _skycoin.cipher_SecKeys_count_get
     if _newclass:
         count = _swig_property(_skycoin.cipher_SecKeys_count_get, _skycoin.cipher_SecKeys_count_set)
-
-    def getAt(self, i):
-        return _skycoin.cipher_SecKeys_getAt(self, i)
 
     def __init__(self):
         this = _skycoin.new_cipher_SecKeys()
@@ -314,6 +279,18 @@ class cipher_PubKeys(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_PubKeys, name)
     __repr__ = _swig_repr
+
+    def getAt(self, i):
+        return _skycoin.cipher_PubKeys_getAt(self, i)
+
+    def setAt(self, i, pubkey):
+        return _skycoin.cipher_PubKeys_setAt(self, i, pubkey)
+
+    def allocate(self, n):
+        return _skycoin.cipher_PubKeys_allocate(self, n)
+
+    def release(self):
+        return _skycoin.cipher_PubKeys_release(self)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKeys_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKeys_data_get
     if _newclass:

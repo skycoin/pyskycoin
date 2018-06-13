@@ -87,6 +87,7 @@ def test_GenerateDeterministicKeyPairs():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
 	secKeys = skycoin.cipher_SecKeys()
+	secKeys.allocate(2)
 	error = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2, secKeys)
 	assert error == 0
 	length = secKeys.count
@@ -99,12 +100,16 @@ def test_GenerateDeterministicKeyPairs():
 	address = skycoin.cipher__Address()
 	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
 	assert error == 0
+	secKeys.release()
+
 
 def test_GenerateDeterministicKeyPairsSeed():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
 	secKeys = skycoin.cipher_SecKeys()
+	secKeys.allocate(2)
 	error, newseed = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2, secKeys)
 	assert error == 0
 	assert secKeys.count == 2
+	secKeys.release()
 

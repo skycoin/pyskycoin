@@ -16,7 +16,7 @@ matrix:
 
 install: pip install tox
 
-script: make test
+script: tox
 
 notifications:
   email: false

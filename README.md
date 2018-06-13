@@ -1,3 +1,3 @@
-# Skycoin Python Library
+#PySkycoin
 
 Python extension for Skycoin API.

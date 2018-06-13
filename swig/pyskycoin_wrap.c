@@ -2994,192 +2994,191 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_GoMap_ swig_types[12]
 #define SWIGTYPE_p_GoSlice swig_types[13]
 #define SWIGTYPE_p_GoSlice_ swig_types[14]
-#define SWIGTYPE_p_GoString swig_types[15]
-#define SWIGTYPE_p_GoStringMap_ swig_types[16]
-#define SWIGTYPE_p_GoString_ swig_types[17]
-#define SWIGTYPE_p_Handle swig_types[18]
-#define SWIGTYPE_p_Number swig_types[19]
-#define SWIGTYPE_p_Options__Handle swig_types[20]
-#define SWIGTYPE_p_PasswordReader__Handle swig_types[21]
-#define SWIGTYPE_p_ReadableEntry__Handle swig_types[22]
-#define SWIGTYPE_p_ReadableWallet__Handle swig_types[23]
-#define SWIGTYPE_p_Signature swig_types[24]
-#define SWIGTYPE_p_Strings__Handle swig_types[25]
-#define SWIGTYPE_p_Transaction__Handle swig_types[26]
-#define SWIGTYPE_p_Transactions__Handle swig_types[27]
-#define SWIGTYPE_p_WalletResponse__Handle swig_types[28]
-#define SWIGTYPE_p_Wallet__Handle swig_types[29]
-#define SWIGTYPE_p_Wallets__Handle swig_types[30]
-#define SWIGTYPE_p_WebRpcClient__Handle swig_types[31]
-#define SWIGTYPE_p__GoString_ swig_types[32]
-#define SWIGTYPE_p___SIZE_TYPE__ swig_types[33]
-#define SWIGTYPE_p_a_20__unsigned_char swig_types[34]
-#define SWIGTYPE_p_a_32__unsigned_char swig_types[35]
-#define SWIGTYPE_p_a_33__unsigned_char swig_types[36]
-#define SWIGTYPE_p_a_4__unsigned_char swig_types[37]
-#define SWIGTYPE_p_a_65__unsigned_char swig_types[38]
-#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[39]
-#define SWIGTYPE_p_api__CreateTransactionRequest swig_types[40]
-#define SWIGTYPE_p_api__CreateTransactionRequestWallet swig_types[41]
-#define SWIGTYPE_p_api__CreateTransactionResponse swig_types[42]
-#define SWIGTYPE_p_api__CreatedTransaction swig_types[43]
-#define SWIGTYPE_p_api__CreatedTransactionInput swig_types[44]
-#define SWIGTYPE_p_api__CreatedTransactionOutput swig_types[45]
-#define SWIGTYPE_p_api__HoursSelection swig_types[46]
-#define SWIGTYPE_p_api__ReadableTransaction swig_types[47]
-#define SWIGTYPE_p_api__Receiver swig_types[48]
-#define SWIGTYPE_p_api__Richlist swig_types[49]
-#define SWIGTYPE_p_api__RichlistParams swig_types[50]
-#define SWIGTYPE_p_api__SpendResult swig_types[51]
-#define SWIGTYPE_p_api__UnconfirmedTxnsResponse swig_types[52]
-#define SWIGTYPE_p_api__WalletEntry swig_types[53]
-#define SWIGTYPE_p_api__WalletFolder swig_types[54]
-#define SWIGTYPE_p_api__WalletMeta swig_types[55]
-#define SWIGTYPE_p_api__WalletResponse swig_types[56]
-#define SWIGTYPE_p_api__createTransactionRequestWallet swig_types[57]
-#define SWIGTYPE_p_api__receiver swig_types[58]
-#define SWIGTYPE_p_blockdb__ErrMissingSignature swig_types[59]
-#define SWIGTYPE_p_blockdb__ErrUnspentNotExist swig_types[60]
-#define SWIGTYPE_p_blockdb__blockSigs swig_types[61]
-#define SWIGTYPE_p_blockdb__blockTree swig_types[62]
-#define SWIGTYPE_p_blockdb__pool swig_types[63]
-#define SWIGTYPE_p_blockdb__poolAddrIndex swig_types[64]
-#define SWIGTYPE_p_blockdb__unspentMeta swig_types[65]
-#define SWIGTYPE_p_chacha20poly1305__chacha20poly1305 swig_types[66]
-#define SWIGTYPE_p_char swig_types[67]
-#define SWIGTYPE_p_cipher_Checksum swig_types[68]
-#define SWIGTYPE_p_cipher_PubKey swig_types[69]
-#define SWIGTYPE_p_cipher_PubKeys swig_types[70]
-#define SWIGTYPE_p_cipher_Ripemd160 swig_types[71]
-#define SWIGTYPE_p_cipher_SHA256 swig_types[72]
-#define SWIGTYPE_p_cipher_SecKey swig_types[73]
-#define SWIGTYPE_p_cipher_SecKeys swig_types[74]
-#define SWIGTYPE_p_cipher_Sig swig_types[75]
-#define SWIGTYPE_p_cipher__Address swig_types[76]
-#define SWIGTYPE_p_cli__AddressBalance swig_types[77]
-#define SWIGTYPE_p_cli__Balance swig_types[78]
-#define SWIGTYPE_p_cli__BalanceResult swig_types[79]
-#define SWIGTYPE_p_cli__Config swig_types[80]
-#define SWIGTYPE_p_cli__PasswordFromTerm swig_types[81]
-#define SWIGTYPE_p_cli__SendAmount swig_types[82]
-#define SWIGTYPE_p_cli__WalletLoadError swig_types[83]
-#define SWIGTYPE_p_cli__WalletSaveError swig_types[84]
-#define SWIGTYPE_p_coin__Block swig_types[85]
-#define SWIGTYPE_p_coin__BlockBody swig_types[86]
-#define SWIGTYPE_p_coin__BlockHeader swig_types[87]
-#define SWIGTYPE_p_coin__HashPair swig_types[88]
-#define SWIGTYPE_p_coin__SignedBlock swig_types[89]
-#define SWIGTYPE_p_coin__SortableTransactions swig_types[90]
-#define SWIGTYPE_p_coin__Transaction swig_types[91]
-#define SWIGTYPE_p_coin__TransactionOutput swig_types[92]
-#define SWIGTYPE_p_coin__UxBody swig_types[93]
-#define SWIGTYPE_p_coin__UxHead swig_types[94]
-#define SWIGTYPE_p_coin__UxOut swig_types[95]
-#define SWIGTYPE_p_consensus__BlockBase swig_types[96]
-#define SWIGTYPE_p_consensus__BlockStatQueue swig_types[97]
-#define SWIGTYPE_p_daemon__AnnounceBlocksMessage swig_types[98]
-#define SWIGTYPE_p_daemon__AnnounceTxnsMessage swig_types[99]
-#define SWIGTYPE_p_daemon__BlockchainProgress swig_types[100]
-#define SWIGTYPE_p_daemon__ConnectEvent swig_types[101]
-#define SWIGTYPE_p_daemon__Connection swig_types[102]
-#define SWIGTYPE_p_daemon__ConnectionError swig_types[103]
-#define SWIGTYPE_p_daemon__Connections swig_types[104]
-#define SWIGTYPE_p_daemon__DisconnectEvent swig_types[105]
-#define SWIGTYPE_p_daemon__GatewayConfig swig_types[106]
-#define SWIGTYPE_p_daemon__GetBlocksMessage swig_types[107]
-#define SWIGTYPE_p_daemon__GetPeersMessage swig_types[108]
-#define SWIGTYPE_p_daemon__GetTxnsMessage swig_types[109]
-#define SWIGTYPE_p_daemon__GiveBlocksMessage swig_types[110]
-#define SWIGTYPE_p_daemon__GivePeersMessage swig_types[111]
-#define SWIGTYPE_p_daemon__GiveTxnsMessage swig_types[112]
-#define SWIGTYPE_p_daemon__IPAddr swig_types[113]
-#define SWIGTYPE_p_daemon__IntroductionMessage swig_types[114]
-#define SWIGTYPE_p_daemon__Messages swig_types[115]
-#define SWIGTYPE_p_daemon__MessagesConfig swig_types[116]
-#define SWIGTYPE_p_daemon__PeerBlockchainHeight swig_types[117]
-#define SWIGTYPE_p_daemon__PingMessage swig_types[118]
-#define SWIGTYPE_p_daemon__PongMessage swig_types[119]
-#define SWIGTYPE_p_daemon__RPC swig_types[120]
-#define SWIGTYPE_p_daemon__ResendResult swig_types[121]
-#define SWIGTYPE_p_daemon__TransactionResult swig_types[122]
-#define SWIGTYPE_p_daemon__TransactionResults swig_types[123]
-#define SWIGTYPE_p_double swig_types[124]
-#define SWIGTYPE_p_encoder__StructField swig_types[125]
-#define SWIGTYPE_p_encoder__coder swig_types[126]
-#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[127]
-#define SWIGTYPE_p_encrypt__Sha256Xor swig_types[128]
-#define SWIGTYPE_p_encrypt__meta swig_types[129]
-#define SWIGTYPE_p_float swig_types[130]
-#define SWIGTYPE_p_gnet__MessageContext swig_types[131]
-#define SWIGTYPE_p_historydb__Transaction swig_types[132]
-#define SWIGTYPE_p_historydb__UxOut swig_types[133]
-#define SWIGTYPE_p_historydb__UxOutJSON swig_types[134]
-#define SWIGTYPE_p_historydb__UxOuts swig_types[135]
-#define SWIGTYPE_p_historydb__addressTxns swig_types[136]
-#define SWIGTYPE_p_historydb__addressUx swig_types[137]
-#define SWIGTYPE_p_historydb__historyMeta swig_types[138]
-#define SWIGTYPE_p_historydb__transactions swig_types[139]
-#define SWIGTYPE_p_httphelper__Address swig_types[140]
-#define SWIGTYPE_p_int swig_types[141]
-#define SWIGTYPE_p_logging__ColorScheme swig_types[142]
-#define SWIGTYPE_p_long_long swig_types[143]
-#define SWIGTYPE_p_p_GoSlice_ swig_types[144]
-#define SWIGTYPE_p_p_coin__Block swig_types[145]
-#define SWIGTYPE_p_p_coin__Transaction swig_types[146]
-#define SWIGTYPE_p_pex__Peer swig_types[147]
-#define SWIGTYPE_p_secp256k1go__Field swig_types[148]
-#define SWIGTYPE_p_secp256k1go__XY swig_types[149]
-#define SWIGTYPE_p_secp256k1go__XYZ swig_types[150]
-#define SWIGTYPE_p_short swig_types[151]
-#define SWIGTYPE_p_signed_char swig_types[152]
-#define SWIGTYPE_p_unsigned_char swig_types[153]
-#define SWIGTYPE_p_unsigned_int swig_types[154]
-#define SWIGTYPE_p_unsigned_long_long swig_types[155]
-#define SWIGTYPE_p_unsigned_short swig_types[156]
-#define SWIGTYPE_p_visor__BlockchainConfig swig_types[157]
-#define SWIGTYPE_p_visor__BlockchainMetadata swig_types[158]
-#define SWIGTYPE_p_visor__BuildInfo swig_types[159]
-#define SWIGTYPE_p_visor__ErrCorruptDB swig_types[160]
-#define SWIGTYPE_p_visor__ErrTxnViolatesHardConstraint swig_types[161]
-#define SWIGTYPE_p_visor__ErrTxnViolatesSoftConstraint swig_types[162]
-#define SWIGTYPE_p_visor__ReadableBlock swig_types[163]
-#define SWIGTYPE_p_visor__ReadableBlockBody swig_types[164]
-#define SWIGTYPE_p_visor__ReadableBlockHeader swig_types[165]
-#define SWIGTYPE_p_visor__ReadableBlocks swig_types[166]
-#define SWIGTYPE_p_visor__ReadableOutput swig_types[167]
-#define SWIGTYPE_p_visor__ReadableOutputSet swig_types[168]
-#define SWIGTYPE_p_visor__ReadableTransaction swig_types[169]
-#define SWIGTYPE_p_visor__ReadableTransactionInput swig_types[170]
-#define SWIGTYPE_p_visor__ReadableTransactionOutput swig_types[171]
-#define SWIGTYPE_p_visor__RichlistBalance swig_types[172]
-#define SWIGTYPE_p_visor__Transaction swig_types[173]
-#define SWIGTYPE_p_visor__TransactionJSON swig_types[174]
-#define SWIGTYPE_p_visor__TransactionOutputJSON swig_types[175]
-#define SWIGTYPE_p_visor__TransactionStatus swig_types[176]
-#define SWIGTYPE_p_visor__UnconfirmedTxn swig_types[177]
-#define SWIGTYPE_p_visor__addrsFilter swig_types[178]
-#define SWIGTYPE_p_visor__sigHash swig_types[179]
-#define SWIGTYPE_p_visor__txUnspents swig_types[180]
-#define SWIGTYPE_p_visor__unconfirmedTxns swig_types[181]
-#define SWIGTYPE_p_void swig_types[182]
-#define SWIGTYPE_p_wallet__Balance swig_types[183]
-#define SWIGTYPE_p_wallet__BalancePair swig_types[184]
-#define SWIGTYPE_p_wallet__Config swig_types[185]
-#define SWIGTYPE_p_wallet__Entry swig_types[186]
-#define SWIGTYPE_p_wallet__Note swig_types[187]
-#define SWIGTYPE_p_wallet__Options swig_types[188]
-#define SWIGTYPE_p_wallet__ReadableEntry swig_types[189]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[190]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[191]
-#define SWIGTYPE_p_wallet__Wallet swig_types[192]
-#define SWIGTYPE_p_webrpc__AddrUxoutResult swig_types[193]
-#define SWIGTYPE_p_webrpc__OutputsResult swig_types[194]
-#define SWIGTYPE_p_webrpc__RPCError swig_types[195]
-#define SWIGTYPE_p_webrpc__StatusResult swig_types[196]
-#define SWIGTYPE_p_webrpc__TxIDJson swig_types[197]
-#define SWIGTYPE_p_webrpc__TxnResult swig_types[198]
-static swig_type_info *swig_types[200];
-static swig_module_info swig_module = {swig_types, 199, 0, 0, 0, 0};
+#define SWIGTYPE_p_GoStringMap_ swig_types[15]
+#define SWIGTYPE_p_GoString_ swig_types[16]
+#define SWIGTYPE_p_Handle swig_types[17]
+#define SWIGTYPE_p_Number swig_types[18]
+#define SWIGTYPE_p_Options__Handle swig_types[19]
+#define SWIGTYPE_p_PasswordReader__Handle swig_types[20]
+#define SWIGTYPE_p_ReadableEntry__Handle swig_types[21]
+#define SWIGTYPE_p_ReadableWallet__Handle swig_types[22]
+#define SWIGTYPE_p_Signature swig_types[23]
+#define SWIGTYPE_p_Strings__Handle swig_types[24]
+#define SWIGTYPE_p_Transaction__Handle swig_types[25]
+#define SWIGTYPE_p_Transactions__Handle swig_types[26]
+#define SWIGTYPE_p_WalletResponse__Handle swig_types[27]
+#define SWIGTYPE_p_Wallet__Handle swig_types[28]
+#define SWIGTYPE_p_Wallets__Handle swig_types[29]
+#define SWIGTYPE_p_WebRpcClient__Handle swig_types[30]
+#define SWIGTYPE_p__GoString_ swig_types[31]
+#define SWIGTYPE_p___SIZE_TYPE__ swig_types[32]
+#define SWIGTYPE_p_a_20__unsigned_char swig_types[33]
+#define SWIGTYPE_p_a_32__unsigned_char swig_types[34]
+#define SWIGTYPE_p_a_33__unsigned_char swig_types[35]
+#define SWIGTYPE_p_a_4__unsigned_char swig_types[36]
+#define SWIGTYPE_p_a_65__unsigned_char swig_types[37]
+#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[38]
+#define SWIGTYPE_p_api__CreateTransactionRequest swig_types[39]
+#define SWIGTYPE_p_api__CreateTransactionRequestWallet swig_types[40]
+#define SWIGTYPE_p_api__CreateTransactionResponse swig_types[41]
+#define SWIGTYPE_p_api__CreatedTransaction swig_types[42]
+#define SWIGTYPE_p_api__CreatedTransactionInput swig_types[43]
+#define SWIGTYPE_p_api__CreatedTransactionOutput swig_types[44]
+#define SWIGTYPE_p_api__HoursSelection swig_types[45]
+#define SWIGTYPE_p_api__ReadableTransaction swig_types[46]
+#define SWIGTYPE_p_api__Receiver swig_types[47]
+#define SWIGTYPE_p_api__Richlist swig_types[48]
+#define SWIGTYPE_p_api__RichlistParams swig_types[49]
+#define SWIGTYPE_p_api__SpendResult swig_types[50]
+#define SWIGTYPE_p_api__UnconfirmedTxnsResponse swig_types[51]
+#define SWIGTYPE_p_api__WalletEntry swig_types[52]
+#define SWIGTYPE_p_api__WalletFolder swig_types[53]
+#define SWIGTYPE_p_api__WalletMeta swig_types[54]
+#define SWIGTYPE_p_api__WalletResponse swig_types[55]
+#define SWIGTYPE_p_api__createTransactionRequestWallet swig_types[56]
+#define SWIGTYPE_p_api__receiver swig_types[57]
+#define SWIGTYPE_p_blockdb__ErrMissingSignature swig_types[58]
+#define SWIGTYPE_p_blockdb__ErrUnspentNotExist swig_types[59]
+#define SWIGTYPE_p_blockdb__blockSigs swig_types[60]
+#define SWIGTYPE_p_blockdb__blockTree swig_types[61]
+#define SWIGTYPE_p_blockdb__pool swig_types[62]
+#define SWIGTYPE_p_blockdb__poolAddrIndex swig_types[63]
+#define SWIGTYPE_p_blockdb__unspentMeta swig_types[64]
+#define SWIGTYPE_p_chacha20poly1305__chacha20poly1305 swig_types[65]
+#define SWIGTYPE_p_char swig_types[66]
+#define SWIGTYPE_p_cipher_Checksum swig_types[67]
+#define SWIGTYPE_p_cipher_PubKey swig_types[68]
+#define SWIGTYPE_p_cipher_PubKeys swig_types[69]
+#define SWIGTYPE_p_cipher_Ripemd160 swig_types[70]
+#define SWIGTYPE_p_cipher_SHA256 swig_types[71]
+#define SWIGTYPE_p_cipher_SecKey swig_types[72]
+#define SWIGTYPE_p_cipher_SecKeys swig_types[73]
+#define SWIGTYPE_p_cipher_Sig swig_types[74]
+#define SWIGTYPE_p_cipher__Address swig_types[75]
+#define SWIGTYPE_p_cli__AddressBalance swig_types[76]
+#define SWIGTYPE_p_cli__Balance swig_types[77]
+#define SWIGTYPE_p_cli__BalanceResult swig_types[78]
+#define SWIGTYPE_p_cli__Config swig_types[79]
+#define SWIGTYPE_p_cli__PasswordFromTerm swig_types[80]
+#define SWIGTYPE_p_cli__SendAmount swig_types[81]
+#define SWIGTYPE_p_cli__WalletLoadError swig_types[82]
+#define SWIGTYPE_p_cli__WalletSaveError swig_types[83]
+#define SWIGTYPE_p_coin__Block swig_types[84]
+#define SWIGTYPE_p_coin__BlockBody swig_types[85]
+#define SWIGTYPE_p_coin__BlockHeader swig_types[86]
+#define SWIGTYPE_p_coin__HashPair swig_types[87]
+#define SWIGTYPE_p_coin__SignedBlock swig_types[88]
+#define SWIGTYPE_p_coin__SortableTransactions swig_types[89]
+#define SWIGTYPE_p_coin__Transaction swig_types[90]
+#define SWIGTYPE_p_coin__TransactionOutput swig_types[91]
+#define SWIGTYPE_p_coin__UxBody swig_types[92]
+#define SWIGTYPE_p_coin__UxHead swig_types[93]
+#define SWIGTYPE_p_coin__UxOut swig_types[94]
+#define SWIGTYPE_p_consensus__BlockBase swig_types[95]
+#define SWIGTYPE_p_consensus__BlockStatQueue swig_types[96]
+#define SWIGTYPE_p_daemon__AnnounceBlocksMessage swig_types[97]
+#define SWIGTYPE_p_daemon__AnnounceTxnsMessage swig_types[98]
+#define SWIGTYPE_p_daemon__BlockchainProgress swig_types[99]
+#define SWIGTYPE_p_daemon__ConnectEvent swig_types[100]
+#define SWIGTYPE_p_daemon__Connection swig_types[101]
+#define SWIGTYPE_p_daemon__ConnectionError swig_types[102]
+#define SWIGTYPE_p_daemon__Connections swig_types[103]
+#define SWIGTYPE_p_daemon__DisconnectEvent swig_types[104]
+#define SWIGTYPE_p_daemon__GatewayConfig swig_types[105]
+#define SWIGTYPE_p_daemon__GetBlocksMessage swig_types[106]
+#define SWIGTYPE_p_daemon__GetPeersMessage swig_types[107]
+#define SWIGTYPE_p_daemon__GetTxnsMessage swig_types[108]
+#define SWIGTYPE_p_daemon__GiveBlocksMessage swig_types[109]
+#define SWIGTYPE_p_daemon__GivePeersMessage swig_types[110]
+#define SWIGTYPE_p_daemon__GiveTxnsMessage swig_types[111]
+#define SWIGTYPE_p_daemon__IPAddr swig_types[112]
+#define SWIGTYPE_p_daemon__IntroductionMessage swig_types[113]
+#define SWIGTYPE_p_daemon__Messages swig_types[114]
+#define SWIGTYPE_p_daemon__MessagesConfig swig_types[115]
+#define SWIGTYPE_p_daemon__PeerBlockchainHeight swig_types[116]
+#define SWIGTYPE_p_daemon__PingMessage swig_types[117]
+#define SWIGTYPE_p_daemon__PongMessage swig_types[118]
+#define SWIGTYPE_p_daemon__RPC swig_types[119]
+#define SWIGTYPE_p_daemon__ResendResult swig_types[120]
+#define SWIGTYPE_p_daemon__TransactionResult swig_types[121]
+#define SWIGTYPE_p_daemon__TransactionResults swig_types[122]
+#define SWIGTYPE_p_double swig_types[123]
+#define SWIGTYPE_p_encoder__StructField swig_types[124]
+#define SWIGTYPE_p_encoder__coder swig_types[125]
+#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[126]
+#define SWIGTYPE_p_encrypt__Sha256Xor swig_types[127]
+#define SWIGTYPE_p_encrypt__meta swig_types[128]
+#define SWIGTYPE_p_float swig_types[129]
+#define SWIGTYPE_p_gnet__MessageContext swig_types[130]
+#define SWIGTYPE_p_historydb__Transaction swig_types[131]
+#define SWIGTYPE_p_historydb__UxOut swig_types[132]
+#define SWIGTYPE_p_historydb__UxOutJSON swig_types[133]
+#define SWIGTYPE_p_historydb__UxOuts swig_types[134]
+#define SWIGTYPE_p_historydb__addressTxns swig_types[135]
+#define SWIGTYPE_p_historydb__addressUx swig_types[136]
+#define SWIGTYPE_p_historydb__historyMeta swig_types[137]
+#define SWIGTYPE_p_historydb__transactions swig_types[138]
+#define SWIGTYPE_p_httphelper__Address swig_types[139]
+#define SWIGTYPE_p_int swig_types[140]
+#define SWIGTYPE_p_logging__ColorScheme swig_types[141]
+#define SWIGTYPE_p_long_long swig_types[142]
+#define SWIGTYPE_p_p_GoSlice_ swig_types[143]
+#define SWIGTYPE_p_p_coin__Block swig_types[144]
+#define SWIGTYPE_p_p_coin__Transaction swig_types[145]
+#define SWIGTYPE_p_pex__Peer swig_types[146]
+#define SWIGTYPE_p_secp256k1go__Field swig_types[147]
+#define SWIGTYPE_p_secp256k1go__XY swig_types[148]
+#define SWIGTYPE_p_secp256k1go__XYZ swig_types[149]
+#define SWIGTYPE_p_short swig_types[150]
+#define SWIGTYPE_p_signed_char swig_types[151]
+#define SWIGTYPE_p_unsigned_char swig_types[152]
+#define SWIGTYPE_p_unsigned_int swig_types[153]
+#define SWIGTYPE_p_unsigned_long_long swig_types[154]
+#define SWIGTYPE_p_unsigned_short swig_types[155]
+#define SWIGTYPE_p_visor__BlockchainConfig swig_types[156]
+#define SWIGTYPE_p_visor__BlockchainMetadata swig_types[157]
+#define SWIGTYPE_p_visor__BuildInfo swig_types[158]
+#define SWIGTYPE_p_visor__ErrCorruptDB swig_types[159]
+#define SWIGTYPE_p_visor__ErrTxnViolatesHardConstraint swig_types[160]
+#define SWIGTYPE_p_visor__ErrTxnViolatesSoftConstraint swig_types[161]
+#define SWIGTYPE_p_visor__ReadableBlock swig_types[162]
+#define SWIGTYPE_p_visor__ReadableBlockBody swig_types[163]
+#define SWIGTYPE_p_visor__ReadableBlockHeader swig_types[164]
+#define SWIGTYPE_p_visor__ReadableBlocks swig_types[165]
+#define SWIGTYPE_p_visor__ReadableOutput swig_types[166]
+#define SWIGTYPE_p_visor__ReadableOutputSet swig_types[167]
+#define SWIGTYPE_p_visor__ReadableTransaction swig_types[168]
+#define SWIGTYPE_p_visor__ReadableTransactionInput swig_types[169]
+#define SWIGTYPE_p_visor__ReadableTransactionOutput swig_types[170]
+#define SWIGTYPE_p_visor__RichlistBalance swig_types[171]
+#define SWIGTYPE_p_visor__Transaction swig_types[172]
+#define SWIGTYPE_p_visor__TransactionJSON swig_types[173]
+#define SWIGTYPE_p_visor__TransactionOutputJSON swig_types[174]
+#define SWIGTYPE_p_visor__TransactionStatus swig_types[175]
+#define SWIGTYPE_p_visor__UnconfirmedTxn swig_types[176]
+#define SWIGTYPE_p_visor__addrsFilter swig_types[177]
+#define SWIGTYPE_p_visor__sigHash swig_types[178]
+#define SWIGTYPE_p_visor__txUnspents swig_types[179]
+#define SWIGTYPE_p_visor__unconfirmedTxns swig_types[180]
+#define SWIGTYPE_p_void swig_types[181]
+#define SWIGTYPE_p_wallet__Balance swig_types[182]
+#define SWIGTYPE_p_wallet__BalancePair swig_types[183]
+#define SWIGTYPE_p_wallet__Config swig_types[184]
+#define SWIGTYPE_p_wallet__Entry swig_types[185]
+#define SWIGTYPE_p_wallet__Note swig_types[186]
+#define SWIGTYPE_p_wallet__Options swig_types[187]
+#define SWIGTYPE_p_wallet__ReadableEntry swig_types[188]
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[189]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[190]
+#define SWIGTYPE_p_wallet__Wallet swig_types[191]
+#define SWIGTYPE_p_webrpc__AddrUxoutResult swig_types[192]
+#define SWIGTYPE_p_webrpc__OutputsResult swig_types[193]
+#define SWIGTYPE_p_webrpc__RPCError swig_types[194]
+#define SWIGTYPE_p_webrpc__StatusResult swig_types[195]
+#define SWIGTYPE_p_webrpc__TxIDJson swig_types[196]
+#define SWIGTYPE_p_webrpc__TxnResult swig_types[197]
+static swig_type_info *swig_types[199];
+static swig_module_info swig_module = {swig_types, 198, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3215,6 +3214,330 @@ static swig_module_info swig_module = {swig_types, 199, 0, 0, 0, 0};
 	#include "libskycoin.h"
 	#include "swig.h"
 
+
+	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairs(GoSlice seed, GoInt n, cipher_SecKeys* secKeys){
+		GoSlice_ data;
+		data.data = secKeys->data;
+		data.len = secKeys->count;
+		data.cap = secKeys->count;
+		GoUint32 result = SKY_cipher_GenerateDeterministicKeyPairs(seed, n, &data);
+		return result;
+	}
+
+
+SWIGINTERN int
+SWIG_AsVal_double (PyObject *obj, double *val)
+{
+  int res = SWIG_TypeError;
+  if (PyFloat_Check(obj)) {
+    if (val) *val = PyFloat_AsDouble(obj);
+    return SWIG_OK;
+#if PY_VERSION_HEX < 0x03000000
+  } else if (PyInt_Check(obj)) {
+    if (val) *val = (double) PyInt_AsLong(obj);
+    return SWIG_OK;
+#endif
+  } else if (PyLong_Check(obj)) {
+    double v = PyLong_AsDouble(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      PyErr_Clear();
+    }
+  }
+#ifdef SWIG_PYTHON_CAST_MODE
+  {
+    int dispatch = 0;
+    double d = PyFloat_AsDouble(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = d;
+      return SWIG_AddCast(SWIG_OK);
+    } else {
+      PyErr_Clear();
+    }
+    if (!dispatch) {
+      long v = PyLong_AsLong(obj);
+      if (!PyErr_Occurred()) {
+	if (val) *val = v;
+	return SWIG_AddCast(SWIG_AddCast(SWIG_OK));
+      } else {
+	PyErr_Clear();
+      }
+    }
+  }
+#endif
+  return res;
+}
+
+
+#include <float.h>
+
+
+#include <math.h>
+
+
+SWIGINTERNINLINE int
+SWIG_CanCastAsInteger(double *d, double min, double max) {
+  double x = *d;
+  if ((min <= x && x <= max)) {
+   double fx = floor(x);
+   double cx = ceil(x);
+   double rd =  ((x - fx) < 0.5) ? fx : cx; /* simple rint */
+   if ((errno == EDOM) || (errno == ERANGE)) {
+     errno = 0;
+   } else {
+     double summ, reps, diff;
+     if (rd < x) {
+       diff = x - rd;
+     } else if (rd > x) {
+       diff = rd - x;
+     } else {
+       return 1;
+     }
+     summ = rd + x;
+     reps = diff/summ;
+     if (reps < 8*DBL_EPSILON) {
+       *d = rd;
+       return 1;
+     }
+   }
+  }
+  return 0;
+}
+
+
+SWIGINTERN int
+SWIG_AsVal_long (PyObject *obj, long* val)
+{
+#if PY_VERSION_HEX < 0x03000000
+  if (PyInt_Check(obj)) {
+    if (val) *val = PyInt_AsLong(obj);
+    return SWIG_OK;
+  } else
+#endif
+  if (PyLong_Check(obj)) {
+    long v = PyLong_AsLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      PyErr_Clear();
+      return SWIG_OverflowError;
+    }
+  }
+#ifdef SWIG_PYTHON_CAST_MODE
+  {
+    int dispatch = 0;
+    long v = PyInt_AsLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_AddCast(SWIG_OK);
+    } else {
+      PyErr_Clear();
+    }
+    if (!dispatch) {
+      double d;
+      int res = SWIG_AddCast(SWIG_AsVal_double (obj,&d));
+      if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, LONG_MIN, LONG_MAX)) {
+	if (val) *val = (long)(d);
+	return res;
+      }
+    }
+  }
+#endif
+  return SWIG_TypeError;
+}
+
+
+#include <limits.h>
+#if !defined(SWIG_NO_LLONG_MAX)
+# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
+#   define LLONG_MAX __LONG_LONG_MAX__
+#   define LLONG_MIN (-LLONG_MAX - 1LL)
+#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
+# endif
+#endif
+
+
+#if defined(LLONG_MAX) && !defined(SWIG_LONG_LONG_AVAILABLE)
+#  define SWIG_LONG_LONG_AVAILABLE
+#endif
+
+
+#ifdef SWIG_LONG_LONG_AVAILABLE
+SWIGINTERN int
+SWIG_AsVal_long_SS_long (PyObject *obj, long long *val)
+{
+  int res = SWIG_TypeError;
+  if (PyLong_Check(obj)) {
+    long long v = PyLong_AsLongLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      PyErr_Clear();
+      res = SWIG_OverflowError;
+    }
+  } else {
+    long v;
+    res = SWIG_AsVal_long (obj,&v);
+    if (SWIG_IsOK(res)) {
+      if (val) *val = v;
+      return res;
+    }
+  }
+#ifdef SWIG_PYTHON_CAST_MODE
+  {
+    const double mant_max = 1LL << DBL_MANT_DIG;
+    const double mant_min = -mant_max;
+    double d;
+    res = SWIG_AsVal_double (obj,&d);
+    if (SWIG_IsOK(res) && !SWIG_CanCastAsInteger(&d, mant_min, mant_max))
+      return SWIG_OverflowError;
+    if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, mant_min, mant_max)) {
+      if (val) *val = (long long)(d);
+      return SWIG_AddCast(res);
+    }
+    res = SWIG_TypeError;
+  }
+#endif
+  return res;
+}
+#endif
+
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_unsigned_SS_int  (unsigned int value)
+{
+  return PyInt_FromSize_t((size_t) value);
+}
+
+
+	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(GoSlice seed, GoInt n, coin__UxArray* newSeed, cipher_SecKeys* secKeys){
+		GoSlice_ data;
+		data.data = secKeys->data;
+		data.len = secKeys->count;
+		data.cap = secKeys->count;
+		GoUint32 result = SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n, newSeed, &data);
+		return result;
+	}
+
+
+	GoUint32 wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys* pubKeys){
+		GoSlice_ data;
+		data.data = pubKeys->data;
+		data.len = pubKeys->count;
+		data.cap = pubKeys->count;
+		GoUint32 result = SKY_cipher_PubKeySlice_Len(&data);
+		return result;
+	}
+
+
+	GoUint32 wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys* pubKeys, GoInt p1, GoInt p2){
+		GoSlice_ data;
+		data.data = pubKeys->data;
+		data.len = pubKeys->count;
+		data.cap = pubKeys->count;
+		GoUint32 result = SKY_cipher_PubKeySlice_Less(&data, p1, p2);
+		return result;
+	}
+
+
+	GoUint32 wrap_SKY_cipher_PubKeySlice_Swap(cipher_PubKeys* pubKeys, GoInt p1, GoInt p2){
+		GoSlice_ data;
+		data.data = pubKeys->data;
+		data.len = pubKeys->count;
+		data.cap = pubKeys->count;
+		GoUint32 result = SKY_cipher_PubKeySlice_Swap(&data, p1, p2);
+		return result;
+	}
+
+
+	void destroy_cipher_SecKeys(cipher_SecKeys* p){
+		if( p != NULL ){
+			if( p->data != NULL ){
+				free( p->data );
+			}
+		}
+	}
+
+
+	void destroy_cipher_PubKeys(cipher_PubKeys* p){
+		if( p != NULL ){
+			if( p->data != NULL ){
+				free( p->data );
+			}
+		}
+	}
+
+
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = (int)(v);
+    }
+  }  
+  return res;
+}
+
+SWIGINTERN cipher_SecKey *cipher_SecKeys_getAt(cipher_SecKeys *self,int i){
+		if( i < self->count ){
+			return &self->data[i];
+		}
+		else
+			return NULL;
+	}
+SWIGINTERN int cipher_SecKeys_setAt(cipher_SecKeys *self,int i,cipher_SecKey *seckey){
+		if( i < self->count){
+			memcpy(&self->data[i], seckey, sizeof(*seckey));
+			return i;
+		} else {
+			return -1;
+		}
+	}
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_int  (int value)
+{
+  return PyInt_FromLong((long) value);
+}
+
+SWIGINTERN void cipher_SecKeys_allocate(cipher_SecKeys *self,int n){
+		self->data = malloc(n * sizeof(*(self->data)));
+		self->count = n;
+	}
+SWIGINTERN void cipher_SecKeys_release(cipher_SecKeys *self){
+		destroy_cipher_SecKeys(self);
+	}
+SWIGINTERN cipher_PubKey *cipher_PubKeys_getAt(cipher_PubKeys *self,int i){
+		if( i < self->count ){
+			return &self->data[i];
+		}
+		else
+			return NULL;
+	}
+SWIGINTERN int cipher_PubKeys_setAt(cipher_PubKeys *self,int i,cipher_PubKey *pubkey){
+		if( i < self->count){
+			memcpy(&self->data[i], pubkey, sizeof(*pubkey));
+			return i;
+		} else {
+			return -1;
+		}
+	}
+SWIGINTERN void cipher_PubKeys_allocate(cipher_PubKeys *self,int n){
+		self->data = malloc(n * sizeof(*(self->data)));
+		self->count = n;
+	}
+SWIGINTERN void cipher_PubKeys_release(cipher_PubKeys *self){
+		destroy_cipher_PubKeys(self);
+	}
 
 SWIGINTERN swig_type_info*
 SWIG_pchar_descriptor(void)
@@ -3380,284 +3703,6 @@ SWIG_FromCharPtr(const char *cptr)
   return SWIG_FromCharPtrAndSize(cptr, (cptr ? strlen(cptr) : 0));
 }
 
-
-#include <limits.h>
-#if !defined(SWIG_NO_LLONG_MAX)
-# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
-#   define LLONG_MAX __LONG_LONG_MAX__
-#   define LLONG_MIN (-LLONG_MAX - 1LL)
-#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
-# endif
-#endif
-
-
-SWIGINTERN int
-SWIG_AsVal_double (PyObject *obj, double *val)
-{
-  int res = SWIG_TypeError;
-  if (PyFloat_Check(obj)) {
-    if (val) *val = PyFloat_AsDouble(obj);
-    return SWIG_OK;
-#if PY_VERSION_HEX < 0x03000000
-  } else if (PyInt_Check(obj)) {
-    if (val) *val = (double) PyInt_AsLong(obj);
-    return SWIG_OK;
-#endif
-  } else if (PyLong_Check(obj)) {
-    double v = PyLong_AsDouble(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      PyErr_Clear();
-    }
-  }
-#ifdef SWIG_PYTHON_CAST_MODE
-  {
-    int dispatch = 0;
-    double d = PyFloat_AsDouble(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = d;
-      return SWIG_AddCast(SWIG_OK);
-    } else {
-      PyErr_Clear();
-    }
-    if (!dispatch) {
-      long v = PyLong_AsLong(obj);
-      if (!PyErr_Occurred()) {
-	if (val) *val = v;
-	return SWIG_AddCast(SWIG_AddCast(SWIG_OK));
-      } else {
-	PyErr_Clear();
-      }
-    }
-  }
-#endif
-  return res;
-}
-
-
-#include <float.h>
-
-
-#include <math.h>
-
-
-SWIGINTERNINLINE int
-SWIG_CanCastAsInteger(double *d, double min, double max) {
-  double x = *d;
-  if ((min <= x && x <= max)) {
-   double fx = floor(x);
-   double cx = ceil(x);
-   double rd =  ((x - fx) < 0.5) ? fx : cx; /* simple rint */
-   if ((errno == EDOM) || (errno == ERANGE)) {
-     errno = 0;
-   } else {
-     double summ, reps, diff;
-     if (rd < x) {
-       diff = x - rd;
-     } else if (rd > x) {
-       diff = rd - x;
-     } else {
-       return 1;
-     }
-     summ = rd + x;
-     reps = diff/summ;
-     if (reps < 8*DBL_EPSILON) {
-       *d = rd;
-       return 1;
-     }
-   }
-  }
-  return 0;
-}
-
-
-SWIGINTERN int
-SWIG_AsVal_long (PyObject *obj, long* val)
-{
-#if PY_VERSION_HEX < 0x03000000
-  if (PyInt_Check(obj)) {
-    if (val) *val = PyInt_AsLong(obj);
-    return SWIG_OK;
-  } else
-#endif
-  if (PyLong_Check(obj)) {
-    long v = PyLong_AsLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      PyErr_Clear();
-      return SWIG_OverflowError;
-    }
-  }
-#ifdef SWIG_PYTHON_CAST_MODE
-  {
-    int dispatch = 0;
-    long v = PyInt_AsLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_AddCast(SWIG_OK);
-    } else {
-      PyErr_Clear();
-    }
-    if (!dispatch) {
-      double d;
-      int res = SWIG_AddCast(SWIG_AsVal_double (obj,&d));
-      if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, LONG_MIN, LONG_MAX)) {
-	if (val) *val = (long)(d);
-	return res;
-      }
-    }
-  }
-#endif
-  return SWIG_TypeError;
-}
-
-
-SWIGINTERN int
-SWIG_AsVal_int (PyObject * obj, int *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < INT_MIN || v > INT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = (int)(v);
-    }
-  }  
-  return res;
-}
-
-
-SWIGINTERNINLINE PyObject*
-  SWIG_From_int  (int value)
-{
-  return PyInt_FromLong((long) value);
-}
-
-
-	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairs(GoSlice seed, GoInt n, cipher_SecKeys* secKeys){
-		if( n > MAX_ARRAY_LENGTH_WRAP )
-			return -1;
-		GoSlice_ data;
-		data.data = secKeys->data;
-		data.len = 0;
-		data.cap = MAX_ARRAY_LENGTH_WRAP;
-		GoUint32 result = SKY_cipher_GenerateDeterministicKeyPairs(seed, n, &data);
-		if( result == 0 )
-			secKeys->count = data.len;
-		return result;
-	}
-
-
-#if defined(LLONG_MAX) && !defined(SWIG_LONG_LONG_AVAILABLE)
-#  define SWIG_LONG_LONG_AVAILABLE
-#endif
-
-
-#ifdef SWIG_LONG_LONG_AVAILABLE
-SWIGINTERN int
-SWIG_AsVal_long_SS_long (PyObject *obj, long long *val)
-{
-  int res = SWIG_TypeError;
-  if (PyLong_Check(obj)) {
-    long long v = PyLong_AsLongLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      PyErr_Clear();
-      res = SWIG_OverflowError;
-    }
-  } else {
-    long v;
-    res = SWIG_AsVal_long (obj,&v);
-    if (SWIG_IsOK(res)) {
-      if (val) *val = v;
-      return res;
-    }
-  }
-#ifdef SWIG_PYTHON_CAST_MODE
-  {
-    const double mant_max = 1LL << DBL_MANT_DIG;
-    const double mant_min = -mant_max;
-    double d;
-    res = SWIG_AsVal_double (obj,&d);
-    if (SWIG_IsOK(res) && !SWIG_CanCastAsInteger(&d, mant_min, mant_max))
-      return SWIG_OverflowError;
-    if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, mant_min, mant_max)) {
-      if (val) *val = (long long)(d);
-      return SWIG_AddCast(res);
-    }
-    res = SWIG_TypeError;
-  }
-#endif
-  return res;
-}
-#endif
-
-
-SWIGINTERNINLINE PyObject*
-  SWIG_From_unsigned_SS_int  (unsigned int value)
-{
-  return PyInt_FromSize_t((size_t) value);
-}
-
-
-	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(GoSlice seed, GoInt n, coin__UxArray* newSeed, cipher_SecKeys* secKeys){
-		if( n > MAX_ARRAY_LENGTH_WRAP )
-			return -1;
-		GoSlice_ data;
-		data.data = secKeys->data;
-		data.len = 0;
-		data.cap = MAX_ARRAY_LENGTH_WRAP;
-		GoUint32 result = SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n, newSeed, &data);
-		if( result == 0 )
-			secKeys->count = data.len;
-		return result;
-	}
-
-
-	//[]PubKey
-	GoUint32 wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys* pubKeys){
-		GoSlice_ data;
-		data.data = pubKeys->data;
-		data.len = pubKeys->count;
-		data.cap = MAX_ARRAY_LENGTH_WRAP;
-		GoUint32 result = SKY_cipher_PubKeySlice_Len(&data);
-		return result;
-	}
-
-
-	GoUint32 wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys* pubKeys, GoInt p1, GoInt p2){
-		GoSlice_ data;
-		data.data = pubKeys->data;
-		data.len = pubKeys->count;
-		data.cap = MAX_ARRAY_LENGTH_WRAP;
-		GoUint32 result = SKY_cipher_PubKeySlice_Less(&data, p1, p2);
-		return result;
-	}
-
-
-	GoUint32 wrap_SKY_cipher_PubKeySlice_Swap(cipher_PubKeys* pubKeys, GoInt p1, GoInt p2){
-		GoSlice_ data;
-		data.data = pubKeys->data;
-		data.len = pubKeys->count;
-		data.cap = MAX_ARRAY_LENGTH_WRAP;
-		GoUint32 result = SKY_cipher_PubKeySlice_Swap(&data, p1, p2);
-		return result;
-	}
-
-SWIGINTERN cipher_SecKey *cipher_SecKeys_getAt(cipher_SecKeys *self,int i){
-		if( i < self->count ){
-			return &self->data[i];
-		}
-		else
-			return NULL;
-	}
 
 SWIGINTERNINLINE int
 SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
@@ -3909,314 +3954,6 @@ SWIG_From_unsigned_SS_short  (unsigned short value)
 #ifdef __cplusplus
 extern "C" {
 #endif
-SWIGINTERN PyObject *_wrap_GoString_p_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *arg1 = (GoString *) 0 ;
-  char *arg2 = (char *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 ;
-  char *buf2 = 0 ;
-  int alloc2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:GoString_p_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString_p_set" "', argument " "1"" of type '" "GoString *""'"); 
-  }
-  arg1 = (GoString *)(argp1);
-  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GoString_p_set" "', argument " "2"" of type '" "char *""'");
-  }
-  arg2 = (char *)(buf2);
-  if (arg1->p) free((char*)arg1->p);
-  if (arg2) {
-    size_t size = strlen((const char *)(arg2)) + 1;
-    arg1->p = (char *)(char *)memcpy(malloc((size)*sizeof(char)), (const char *)(arg2), sizeof(char)*(size));
-  } else {
-    arg1->p = 0;
-  }
-  resultobj = SWIG_Py_Void();
-  if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
-  return resultobj;
-fail:
-  if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString_p_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *arg1 = (GoString *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  char *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:GoString_p_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString_p_get" "', argument " "1"" of type '" "GoString *""'"); 
-  }
-  arg1 = (GoString *)(argp1);
-  result = (char *) ((arg1)->p);
-  resultobj = SWIG_FromCharPtr((const char *)result);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString_n_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *arg1 = (GoString *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:GoString_n_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString_n_set" "', argument " "1"" of type '" "GoString *""'"); 
-  }
-  arg1 = (GoString *)(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GoString_n_set" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (arg1) (arg1)->n = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString_n_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *arg1 = (GoString *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:GoString_n_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString_n_get" "', argument " "1"" of type '" "GoString *""'"); 
-  }
-  arg1 = (GoString *)(argp1);
-  result = (int) ((arg1)->n);
-  resultobj = SWIG_From_int((int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_GoString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_GoString")) SWIG_fail;
-  result = (GoString *)calloc(1, sizeof(GoString));
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_GoString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString *arg1 = (GoString *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_GoString",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_GoString" "', argument " "1"" of type '" "GoString *""'"); 
-  }
-  arg1 = (GoString *)(argp1);
-  free((char *) arg1);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *GoString_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_GoString, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_GoString__p_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  char *arg2 = (char *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int res2 ;
-  char *buf2 = 0 ;
-  int alloc2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:GoString__p_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString__p_set" "', argument " "1"" of type '" "GoString_ *""'"); 
-  }
-  arg1 = (GoString_ *)(argp1);
-  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GoString__p_set" "', argument " "2"" of type '" "char *""'");
-  }
-  arg2 = (char *)(buf2);
-  if (arg1->p) free((char*)arg1->p);
-  if (arg2) {
-    size_t size = strlen((const char *)(arg2)) + 1;
-    arg1->p = (char *)(char *)memcpy(malloc((size)*sizeof(char)), (const char *)(arg2), sizeof(char)*(size));
-  } else {
-    arg1->p = 0;
-  }
-  resultobj = SWIG_Py_Void();
-  if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
-  return resultobj;
-fail:
-  if (alloc2 == SWIG_NEWOBJ) free((char*)buf2);
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString__p_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  char *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:GoString__p_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString__p_get" "', argument " "1"" of type '" "GoString_ *""'"); 
-  }
-  arg1 = (GoString_ *)(argp1);
-  result = (char *) ((arg1)->p);
-  resultobj = SWIG_FromCharPtr((const char *)result);
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString__n_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:GoString__n_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString__n_set" "', argument " "1"" of type '" "GoString_ *""'"); 
-  }
-  arg1 = (GoString_ *)(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "GoString__n_set" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  if (arg1) (arg1)->n = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_GoString__n_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:GoString__n_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString_, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GoString__n_get" "', argument " "1"" of type '" "GoString_ *""'"); 
-  }
-  arg1 = (GoString_ *)(argp1);
-  result = (int) ((arg1)->n);
-  resultobj = SWIG_From_int((int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_GoString_(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_GoString_")) SWIG_fail;
-  result = (GoString_ *)calloc(1, sizeof(GoString_));
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_GoString_(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_GoString_",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_GoString_, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_GoString_" "', argument " "1"" of type '" "GoString_ *""'"); 
-  }
-  arg1 = (GoString_ *)(argp1);
-  free((char *) arg1);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *GoString__swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_GoString_, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_GenerateDeterministicKeyPairs__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoSlice arg1 ;
@@ -4413,6 +4150,48 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Swap__SWIG_0(PyObject *SWIGUNU
   arg3 = (GoInt)(val3);
   result = (GoUint32)wrap_SKY_cipher_PubKeySlice_Swap(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_destroy_cipher_SecKeys(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:destroy_cipher_SecKeys",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "destroy_cipher_SecKeys" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
+  }
+  arg1 = (cipher_SecKeys *)(argp1);
+  destroy_cipher_SecKeys(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_destroy_cipher_PubKeys(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:destroy_cipher_PubKeys",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_PubKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "destroy_cipher_PubKeys" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
+  }
+  arg1 = (cipher_PubKeys *)(argp1);
+  destroy_cipher_PubKeys(arg1);
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -5019,10 +4798,132 @@ SWIGINTERN PyObject *cipher_Checksum_swigregister(PyObject *SWIGUNUSEDPARM(self)
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_cipher_SecKeys_getAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  cipher_SecKey *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:cipher_SecKeys_getAt",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_getAt" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
+  }
+  arg1 = (cipher_SecKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_SecKeys_getAt" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  result = (cipher_SecKey *)cipher_SecKeys_getAt(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_cipher_SecKey, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_SecKeys_setAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
+  int arg2 ;
+  cipher_SecKey *arg3 = (cipher_SecKey *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:cipher_SecKeys_setAt",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_setAt" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
+  }
+  arg1 = (cipher_SecKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_SecKeys_setAt" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_cipher_SecKey, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "cipher_SecKeys_setAt" "', argument " "3"" of type '" "cipher_SecKey *""'"); 
+  }
+  arg3 = (cipher_SecKey *)(argp3);
+  result = (int)cipher_SecKeys_setAt(arg1,arg2,arg3);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_SecKeys_allocate(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:cipher_SecKeys_allocate",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_allocate" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
+  }
+  arg1 = (cipher_SecKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_SecKeys_allocate" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  cipher_SecKeys_allocate(arg1,arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_SecKeys_release(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:cipher_SecKeys_release",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_release" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
+  }
+  arg1 = (cipher_SecKeys *)(argp1);
+  cipher_SecKeys_release(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_cipher_SecKeys_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
-  cipher_SecKey *arg2 ;
+  cipher_SecKey *arg2 = (cipher_SecKey *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 = 0 ;
@@ -5036,19 +4937,12 @@ SWIGINTERN PyObject *_wrap_cipher_SecKeys_data_set(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_data_set" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
   }
   arg1 = (cipher_SecKeys *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher_SecKey, 0 |  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher_SecKey, SWIG_POINTER_DISOWN |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "cipher_SecKeys_data_set" "', argument " "2"" of type '" "cipher_SecKey [MAX_ARRAY_LENGTH_WRAP]""'"); 
-  } 
-  arg2 = (cipher_SecKey *)(argp2);
-  {
-    if (arg2) {
-      size_t ii = 0;
-      for (; ii < (size_t)MAX_ARRAY_LENGTH_WRAP; ++ii) *(cipher_SecKey *)&arg1->data[ii] = *((cipher_SecKey *)arg2 + ii);
-    } else {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""data""' of type '""cipher_SecKey [MAX_ARRAY_LENGTH_WRAP]""'");
-    }
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "cipher_SecKeys_data_set" "', argument " "2"" of type '" "cipher_SecKey *""'"); 
   }
+  arg2 = (cipher_SecKey *)(argp2);
+  if (arg1) (arg1)->data = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -5070,7 +4964,7 @@ SWIGINTERN PyObject *_wrap_cipher_SecKeys_data_get(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_data_get" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
   }
   arg1 = (cipher_SecKeys *)(argp1);
-  result = (cipher_SecKey *)(cipher_SecKey *) ((arg1)->data);
+  result = (cipher_SecKey *) ((arg1)->data);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_cipher_SecKey, 0 |  0 );
   return resultobj;
 fail:
@@ -5130,37 +5024,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_cipher_SecKeys_getAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
-  int arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  cipher_SecKey *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:cipher_SecKeys_getAt",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_SecKeys, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_SecKeys_getAt" "', argument " "1"" of type '" "cipher_SecKeys *""'"); 
-  }
-  arg1 = (cipher_SecKeys *)(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_SecKeys_getAt" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = (int)(val2);
-  result = (cipher_SecKey *)cipher_SecKeys_getAt(arg1,arg2);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_cipher_SecKey, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_new_cipher_SecKeys(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher_SecKeys *result = 0 ;
@@ -5202,10 +5065,132 @@ SWIGINTERN PyObject *cipher_SecKeys_swigregister(PyObject *SWIGUNUSEDPARM(self),
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_cipher_PubKeys_getAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  cipher_PubKey *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:cipher_PubKeys_getAt",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_PubKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_getAt" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
+  }
+  arg1 = (cipher_PubKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_PubKeys_getAt" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  result = (cipher_PubKey *)cipher_PubKeys_getAt(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_cipher_PubKey, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_PubKeys_setAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  int arg2 ;
+  cipher_PubKey *arg3 = (cipher_PubKey *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:cipher_PubKeys_setAt",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_PubKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_setAt" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
+  }
+  arg1 = (cipher_PubKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_PubKeys_setAt" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_cipher_PubKey, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "cipher_PubKeys_setAt" "', argument " "3"" of type '" "cipher_PubKey *""'"); 
+  }
+  arg3 = (cipher_PubKey *)(argp3);
+  result = (int)cipher_PubKeys_setAt(arg1,arg2,arg3);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_PubKeys_allocate(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:cipher_PubKeys_allocate",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_PubKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_allocate" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
+  }
+  arg1 = (cipher_PubKeys *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher_PubKeys_allocate" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  cipher_PubKeys_allocate(arg1,arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher_PubKeys_release(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:cipher_PubKeys_release",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher_PubKeys, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_release" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
+  }
+  arg1 = (cipher_PubKeys *)(argp1);
+  cipher_PubKeys_release(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_cipher_PubKeys_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
-  cipher_PubKey *arg2 ;
+  cipher_PubKey *arg2 = (cipher_PubKey *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   void *argp2 = 0 ;
@@ -5219,19 +5204,12 @@ SWIGINTERN PyObject *_wrap_cipher_PubKeys_data_set(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_data_set" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
   }
   arg1 = (cipher_PubKeys *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher_PubKey, 0 |  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher_PubKey, SWIG_POINTER_DISOWN |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "cipher_PubKeys_data_set" "', argument " "2"" of type '" "cipher_PubKey [MAX_ARRAY_LENGTH_WRAP]""'"); 
-  } 
-  arg2 = (cipher_PubKey *)(argp2);
-  {
-    if (arg2) {
-      size_t ii = 0;
-      for (; ii < (size_t)MAX_ARRAY_LENGTH_WRAP; ++ii) *(cipher_PubKey *)&arg1->data[ii] = *((cipher_PubKey *)arg2 + ii);
-    } else {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in variable '""data""' of type '""cipher_PubKey [MAX_ARRAY_LENGTH_WRAP]""'");
-    }
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "cipher_PubKeys_data_set" "', argument " "2"" of type '" "cipher_PubKey *""'"); 
   }
+  arg2 = (cipher_PubKey *)(argp2);
+  if (arg1) (arg1)->data = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -5253,7 +5231,7 @@ SWIGINTERN PyObject *_wrap_cipher_PubKeys_data_get(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher_PubKeys_data_get" "', argument " "1"" of type '" "cipher_PubKeys *""'"); 
   }
   arg1 = (cipher_PubKeys *)(argp1);
-  result = (cipher_PubKey *)(cipher_PubKey *) ((arg1)->data);
+  result = (cipher_PubKey *) ((arg1)->data);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_cipher_PubKey, 0 |  0 );
   return resultobj;
 fail:
@@ -23117,29 +23095,30 @@ SWIGINTERN PyObject *encoder__coder_swigregister(PyObject *SWIGUNUSEDPARM(self),
 SWIGINTERN PyObject *_wrap_encoder__StructField_Name_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   encoder__StructField *arg1 = (encoder__StructField *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Name_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:encoder__StructField_Name_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Name_set" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  if (arg1) (arg1)->Name = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "encoder__StructField_Name_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Name = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -23152,7 +23131,7 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Name_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Name_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
@@ -23160,8 +23139,8 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Name_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Name_get" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  result = (GoString_ *)& ((arg1)->Name);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Name);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -23223,29 +23202,30 @@ fail:
 SWIGINTERN PyObject *_wrap_encoder__StructField_Type_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   encoder__StructField *arg1 = (encoder__StructField *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Type_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:encoder__StructField_Type_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Type_set" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  if (arg1) (arg1)->Type = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "encoder__StructField_Type_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Type = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -23258,7 +23238,7 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Type_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Type_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
@@ -23266,8 +23246,8 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Type_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Type_get" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  result = (GoString_ *)& ((arg1)->Type);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Type);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -23277,29 +23257,30 @@ fail:
 SWIGINTERN PyObject *_wrap_encoder__StructField_Tag_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   encoder__StructField *arg1 = (encoder__StructField *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Tag_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:encoder__StructField_Tag_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Tag_set" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  if (arg1) (arg1)->Tag = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "encoder__StructField_Tag_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Tag = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -23312,7 +23293,7 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Tag_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:encoder__StructField_Tag_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
@@ -23320,8 +23301,8 @@ SWIGINTERN PyObject *_wrap_encoder__StructField_Tag_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "encoder__StructField_Tag_get" "', argument " "1"" of type '" "encoder__StructField *""'"); 
   }
   arg1 = (encoder__StructField *)(argp1);
-  result = (GoString_ *)& ((arg1)->Tag);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Tag);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27305,29 +27286,30 @@ SWIGINTERN PyObject *httphelper__Address_swigregister(PyObject *SWIGUNUSEDPARM(s
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_InfoLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_InfoLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_InfoLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_InfoLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->InfoLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_InfoLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->InfoLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27340,7 +27322,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_InfoLevelStyle_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_InfoLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27348,8 +27330,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_InfoLevelStyle_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_InfoLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->InfoLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->InfoLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27359,29 +27341,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_WarnLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_WarnLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_WarnLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_WarnLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->WarnLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_WarnLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->WarnLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27394,7 +27377,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_WarnLevelStyle_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_WarnLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27402,8 +27385,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_WarnLevelStyle_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_WarnLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->WarnLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->WarnLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27413,29 +27396,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_ErrorLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_ErrorLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_ErrorLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_ErrorLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->ErrorLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_ErrorLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ErrorLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27448,7 +27432,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_ErrorLevelStyle_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_ErrorLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27456,8 +27440,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_ErrorLevelStyle_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_ErrorLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->ErrorLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ErrorLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27467,29 +27451,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_FatalLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_FatalLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_FatalLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_FatalLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->FatalLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_FatalLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->FatalLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27502,7 +27487,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_FatalLevelStyle_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_FatalLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27510,8 +27495,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_FatalLevelStyle_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_FatalLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->FatalLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->FatalLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27521,29 +27506,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_PanicLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_PanicLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_PanicLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_PanicLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->PanicLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_PanicLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->PanicLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27556,7 +27542,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_PanicLevelStyle_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_PanicLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27564,8 +27550,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_PanicLevelStyle_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_PanicLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->PanicLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->PanicLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27575,29 +27561,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_DebugLevelStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_DebugLevelStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_DebugLevelStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_DebugLevelStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->DebugLevelStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_DebugLevelStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->DebugLevelStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27610,7 +27597,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_DebugLevelStyle_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_DebugLevelStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27618,8 +27605,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_DebugLevelStyle_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_DebugLevelStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->DebugLevelStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->DebugLevelStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27629,29 +27616,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_PrefixStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_PrefixStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_PrefixStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_PrefixStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->PrefixStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_PrefixStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->PrefixStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27664,7 +27652,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_PrefixStyle_get(PyObject *SWIGUN
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_PrefixStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27672,8 +27660,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_PrefixStyle_get(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_PrefixStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->PrefixStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->PrefixStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27683,29 +27671,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_TimestampStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_TimestampStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_TimestampStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_TimestampStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->TimestampStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_TimestampStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TimestampStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27718,7 +27707,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_TimestampStyle_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_TimestampStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27726,8 +27715,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_TimestampStyle_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_TimestampStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->TimestampStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TimestampStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27737,29 +27726,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_CallContextStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_CallContextStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_CallContextStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_CallContextStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->CallContextStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_CallContextStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CallContextStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27772,7 +27762,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_CallContextStyle_get(PyObject *S
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_CallContextStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27780,8 +27770,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_CallContextStyle_get(PyObject *S
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_CallContextStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->CallContextStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CallContextStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -27791,29 +27781,30 @@ fail:
 SWIGINTERN PyObject *_wrap_logging__ColorScheme_CriticalStyle_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   logging__ColorScheme *arg1 = (logging__ColorScheme *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_CriticalStyle_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:logging__ColorScheme_CriticalStyle_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_CriticalStyle_set" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  if (arg1) (arg1)->CriticalStyle = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "logging__ColorScheme_CriticalStyle_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CriticalStyle = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -27826,7 +27817,7 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_CriticalStyle_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:logging__ColorScheme_CriticalStyle_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_logging__ColorScheme, 0 |  0 );
@@ -27834,8 +27825,8 @@ SWIGINTERN PyObject *_wrap_logging__ColorScheme_CriticalStyle_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "logging__ColorScheme_CriticalStyle_get" "', argument " "1"" of type '" "logging__ColorScheme *""'"); 
   }
   arg1 = (logging__ColorScheme *)(argp1);
-  result = (GoString_ *)& ((arg1)->CriticalStyle);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CriticalStyle);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -28203,29 +28194,30 @@ SWIGINTERN PyObject *visor__sigHash_swigregister(PyObject *SWIGUNUSEDPARM(self),
 SWIGINTERN PyObject *_wrap_visor__BuildInfo_Version_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__BuildInfo *arg1 = (visor__BuildInfo *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Version_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__BuildInfo_Version_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Version_set" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  if (arg1) (arg1)->Version = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__BuildInfo_Version_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Version = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -28238,7 +28230,7 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Version_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Version_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
@@ -28246,8 +28238,8 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Version_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Version_get" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  result = (GoString_ *)& ((arg1)->Version);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Version);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -28257,29 +28249,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__BuildInfo_Commit_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__BuildInfo *arg1 = (visor__BuildInfo *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Commit_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__BuildInfo_Commit_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Commit_set" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  if (arg1) (arg1)->Commit = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__BuildInfo_Commit_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Commit = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -28292,7 +28285,7 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Commit_get(PyObject *SWIGUNUSEDPARM(
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Commit_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
@@ -28300,8 +28293,8 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Commit_get(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Commit_get" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  result = (GoString_ *)& ((arg1)->Commit);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Commit);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -28311,29 +28304,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__BuildInfo_Branch_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__BuildInfo *arg1 = (visor__BuildInfo *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Branch_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__BuildInfo_Branch_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Branch_set" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  if (arg1) (arg1)->Branch = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__BuildInfo_Branch_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Branch = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -28346,7 +28340,7 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Branch_get(PyObject *SWIGUNUSEDPARM(
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__BuildInfo_Branch_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__BuildInfo, 0 |  0 );
@@ -28354,8 +28348,8 @@ SWIGINTERN PyObject *_wrap_visor__BuildInfo_Branch_get(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__BuildInfo_Branch_get" "', argument " "1"" of type '" "visor__BuildInfo *""'"); 
   }
   arg1 = (visor__BuildInfo *)(argp1);
-  result = (GoString_ *)& ((arg1)->Branch);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Branch);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -28680,29 +28674,30 @@ SWIGINTERN PyObject *blockdb__blockTree_swigregister(PyObject *SWIGUNUSEDPARM(se
 SWIGINTERN PyObject *_wrap_blockdb__ErrUnspentNotExist_UxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   blockdb__ErrUnspentNotExist *arg1 = (blockdb__ErrUnspentNotExist *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:blockdb__ErrUnspentNotExist_UxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:blockdb__ErrUnspentNotExist_UxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_blockdb__ErrUnspentNotExist, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "blockdb__ErrUnspentNotExist_UxID_set" "', argument " "1"" of type '" "blockdb__ErrUnspentNotExist *""'"); 
   }
   arg1 = (blockdb__ErrUnspentNotExist *)(argp1);
-  if (arg1) (arg1)->UxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "blockdb__ErrUnspentNotExist_UxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->UxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -28715,7 +28710,7 @@ SWIGINTERN PyObject *_wrap_blockdb__ErrUnspentNotExist_UxID_get(PyObject *SWIGUN
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:blockdb__ErrUnspentNotExist_UxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_blockdb__ErrUnspentNotExist, 0 |  0 );
@@ -28723,8 +28718,8 @@ SWIGINTERN PyObject *_wrap_blockdb__ErrUnspentNotExist_UxID_get(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "blockdb__ErrUnspentNotExist_UxID_get" "', argument " "1"" of type '" "blockdb__ErrUnspentNotExist *""'"); 
   }
   arg1 = (blockdb__ErrUnspentNotExist *)(argp1);
-  result = (GoString_ *)& ((arg1)->UxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->UxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -29114,29 +29109,30 @@ SWIGINTERN PyObject *historydb__historyMeta_swigregister(PyObject *SWIGUNUSEDPAR
 SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_Uxid_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   historydb__UxOutJSON *arg1 = (historydb__UxOutJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_Uxid_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:historydb__UxOutJSON_Uxid_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_Uxid_set" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  if (arg1) (arg1)->Uxid = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "historydb__UxOutJSON_Uxid_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Uxid = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -29149,7 +29145,7 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_Uxid_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_Uxid_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
@@ -29157,8 +29153,8 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_Uxid_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_Uxid_get" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->Uxid);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Uxid);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -29272,29 +29268,30 @@ fail:
 SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SrcTx_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   historydb__UxOutJSON *arg1 = (historydb__UxOutJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_SrcTx_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:historydb__UxOutJSON_SrcTx_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_SrcTx_set" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  if (arg1) (arg1)->SrcTx = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "historydb__UxOutJSON_SrcTx_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->SrcTx = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -29307,7 +29304,7 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SrcTx_get(PyObject *SWIGUNUSEDPA
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_SrcTx_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
@@ -29315,8 +29312,8 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SrcTx_get(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_SrcTx_get" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->SrcTx);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->SrcTx);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -29326,29 +29323,30 @@ fail:
 SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_OwnerAddress_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   historydb__UxOutJSON *arg1 = (historydb__UxOutJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_OwnerAddress_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:historydb__UxOutJSON_OwnerAddress_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_OwnerAddress_set" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  if (arg1) (arg1)->OwnerAddress = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "historydb__UxOutJSON_OwnerAddress_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->OwnerAddress = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -29361,7 +29359,7 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_OwnerAddress_get(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_OwnerAddress_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
@@ -29369,8 +29367,8 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_OwnerAddress_get(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_OwnerAddress_get" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->OwnerAddress);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->OwnerAddress);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -29536,29 +29534,30 @@ fail:
 SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SpentTxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   historydb__UxOutJSON *arg1 = (historydb__UxOutJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_SpentTxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:historydb__UxOutJSON_SpentTxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_SpentTxID_set" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  if (arg1) (arg1)->SpentTxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "historydb__UxOutJSON_SpentTxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->SpentTxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -29571,7 +29570,7 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SpentTxID_get(PyObject *SWIGUNUS
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:historydb__UxOutJSON_SpentTxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_historydb__UxOutJSON, 0 |  0 );
@@ -29579,8 +29578,8 @@ SWIGINTERN PyObject *_wrap_historydb__UxOutJSON_SpentTxID_get(PyObject *SWIGUNUS
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "historydb__UxOutJSON_SpentTxID_get" "', argument " "1"" of type '" "historydb__UxOutJSON *""'"); 
   }
   arg1 = (historydb__UxOutJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->SpentTxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->SpentTxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30381,29 +30380,30 @@ SWIGINTERN PyObject *visor__TransactionStatus_swigregister(PyObject *SWIGUNUSEDP
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionOutput *arg1 = (visor__ReadableTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionOutput_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Hash_set" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionOutput_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30416,7 +30416,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Hash_get(PyObject *S
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
@@ -30424,8 +30424,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Hash_get(PyObject *S
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Hash_get" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30435,29 +30435,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionOutput *arg1 = (visor__ReadableTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionOutput_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Address_set" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionOutput_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30470,7 +30471,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Address_get(PyObject
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
@@ -30478,8 +30479,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Address_get(PyObject
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Address_get" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30489,29 +30490,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionOutput *arg1 = (visor__ReadableTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionOutput_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Coins_set" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionOutput_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30524,7 +30526,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Coins_get(PyObject *
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionOutput_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionOutput, 0 |  0 );
@@ -30532,8 +30534,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionOutput_Coins_get(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionOutput_Coins_get" "', argument " "1"" of type '" "visor__ReadableTransactionOutput *""'"); 
   }
   arg1 = (visor__ReadableTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30636,29 +30638,30 @@ SWIGINTERN PyObject *visor__ReadableTransactionOutput_swigregister(PyObject *SWI
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionInput *arg1 = (visor__ReadableTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionInput_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Hash_set" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionInput_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30671,7 +30674,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Hash_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
@@ -30679,8 +30682,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Hash_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Hash_get" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30690,29 +30693,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionInput *arg1 = (visor__ReadableTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionInput_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Address_set" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionInput_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30725,7 +30729,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Address_get(PyObject 
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
@@ -30733,8 +30737,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Address_get(PyObject 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Address_get" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30744,29 +30748,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransactionInput *arg1 = (visor__ReadableTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransactionInput_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Coins_set" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransactionInput_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30779,7 +30784,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Coins_get(PyObject *S
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransactionInput_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransactionInput, 0 |  0 );
@@ -30787,8 +30792,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransactionInput_Coins_get(PyObject *S
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransactionInput_Coins_get" "', argument " "1"" of type '" "visor__ReadableTransactionInput *""'"); 
   }
   arg1 = (visor__ReadableTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -30891,29 +30896,30 @@ SWIGINTERN PyObject *visor__ReadableTransactionInput_swigregister(PyObject *SWIG
 SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableOutput *arg1 = (visor__ReadableOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableOutput_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Hash_set" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableOutput_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -30926,7 +30932,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Hash_get(PyObject *SWIGUNUSEDPA
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
@@ -30934,8 +30940,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Hash_get(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Hash_get" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31049,29 +31055,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableOutput_SourceTransaction_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableOutput *arg1 = (visor__ReadableOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_SourceTransaction_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableOutput_SourceTransaction_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_SourceTransaction_set" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  if (arg1) (arg1)->SourceTransaction = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableOutput_SourceTransaction_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->SourceTransaction = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31084,7 +31091,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_SourceTransaction_get(PyObject 
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_SourceTransaction_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
@@ -31092,8 +31099,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_SourceTransaction_get(PyObject 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_SourceTransaction_get" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->SourceTransaction);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->SourceTransaction);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31103,29 +31110,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableOutput *arg1 = (visor__ReadableOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableOutput_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Address_set" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableOutput_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31138,7 +31146,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Address_get(PyObject *SWIGUNUSE
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
@@ -31146,8 +31154,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Address_get(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Address_get" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31157,29 +31165,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableOutput *arg1 = (visor__ReadableOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableOutput_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Coins_set" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableOutput_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31192,7 +31201,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Coins_get(PyObject *SWIGUNUSEDP
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableOutput_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableOutput, 0 |  0 );
@@ -31200,8 +31209,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableOutput_Coins_get(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableOutput_Coins_get" "', argument " "1"" of type '" "visor__ReadableOutput *""'"); 
   }
   arg1 = (visor__ReadableOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31460,29 +31469,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransaction *arg1 = (visor__ReadableTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransaction_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransaction_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransaction_Hash_set" "', argument " "1"" of type '" "visor__ReadableTransaction *""'"); 
   }
   arg1 = (visor__ReadableTransaction *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransaction_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31495,7 +31505,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_Hash_get(PyObject *SWIGUNU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransaction_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransaction, 0 |  0 );
@@ -31503,8 +31513,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_Hash_get(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransaction_Hash_get" "', argument " "1"" of type '" "visor__ReadableTransaction *""'"); 
   }
   arg1 = (visor__ReadableTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31514,29 +31524,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_InnerHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableTransaction *arg1 = (visor__ReadableTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransaction_InnerHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableTransaction_InnerHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransaction_InnerHash_set" "', argument " "1"" of type '" "visor__ReadableTransaction *""'"); 
   }
   arg1 = (visor__ReadableTransaction *)(argp1);
-  if (arg1) (arg1)->InnerHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableTransaction_InnerHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->InnerHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31549,7 +31560,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_InnerHash_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableTransaction_InnerHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableTransaction, 0 |  0 );
@@ -31557,8 +31568,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableTransaction_InnerHash_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableTransaction_InnerHash_get" "', argument " "1"" of type '" "visor__ReadableTransaction *""'"); 
   }
   arg1 = (visor__ReadableTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->InnerHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->InnerHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31887,29 +31898,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BlockHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableBlockHeader *arg1 = (visor__ReadableBlockHeader *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_BlockHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableBlockHeader_BlockHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_BlockHash_set" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  if (arg1) (arg1)->BlockHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableBlockHeader_BlockHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->BlockHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31922,7 +31934,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BlockHash_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_BlockHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
@@ -31930,8 +31942,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BlockHash_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_BlockHash_get" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  result = (GoString_ *)& ((arg1)->BlockHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->BlockHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31941,29 +31953,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_PreviousBlockHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableBlockHeader *arg1 = (visor__ReadableBlockHeader *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_PreviousBlockHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableBlockHeader_PreviousBlockHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_PreviousBlockHash_set" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  if (arg1) (arg1)->PreviousBlockHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableBlockHeader_PreviousBlockHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->PreviousBlockHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -31976,7 +31989,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_PreviousBlockHash_get(PyOb
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_PreviousBlockHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
@@ -31984,8 +31997,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_PreviousBlockHash_get(PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_PreviousBlockHash_get" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  result = (GoString_ *)& ((arg1)->PreviousBlockHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->PreviousBlockHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32151,29 +32164,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BodyHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__ReadableBlockHeader *arg1 = (visor__ReadableBlockHeader *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_BodyHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__ReadableBlockHeader_BodyHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_BodyHash_set" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  if (arg1) (arg1)->BodyHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__ReadableBlockHeader_BodyHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->BodyHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32186,7 +32200,7 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BodyHash_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__ReadableBlockHeader_BodyHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__ReadableBlockHeader, 0 |  0 );
@@ -32194,8 +32208,8 @@ SWIGINTERN PyObject *_wrap_visor__ReadableBlockHeader_BodyHash_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__ReadableBlockHeader_BodyHash_get" "', argument " "1"" of type '" "visor__ReadableBlockHeader *""'"); 
   }
   arg1 = (visor__ReadableBlockHeader *)(argp1);
-  result = (GoString_ *)& ((arg1)->BodyHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->BodyHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32641,29 +32655,30 @@ SWIGINTERN PyObject *visor__ReadableBlocks_swigregister(PyObject *SWIGUNUSEDPARM
 SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionOutputJSON *arg1 = (visor__TransactionOutputJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionOutputJSON_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Hash_set" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionOutputJSON_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32676,7 +32691,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Hash_get(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
@@ -32684,8 +32699,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Hash_get(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Hash_get" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32695,29 +32710,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_SourceTransaction_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionOutputJSON *arg1 = (visor__TransactionOutputJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_SourceTransaction_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionOutputJSON_SourceTransaction_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_SourceTransaction_set" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  if (arg1) (arg1)->SourceTransaction = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionOutputJSON_SourceTransaction_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->SourceTransaction = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32730,7 +32746,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_SourceTransaction_get(Py
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_SourceTransaction_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
@@ -32738,8 +32754,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_SourceTransaction_get(Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_SourceTransaction_get" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->SourceTransaction);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->SourceTransaction);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32749,29 +32765,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionOutputJSON *arg1 = (visor__TransactionOutputJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionOutputJSON_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Address_set" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionOutputJSON_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32784,7 +32801,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Address_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
@@ -32792,8 +32809,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Address_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Address_get" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32803,29 +32820,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionOutputJSON *arg1 = (visor__TransactionOutputJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionOutputJSON_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Coins_set" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionOutputJSON_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32838,7 +32856,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Coins_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionOutputJSON_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionOutputJSON, 0 |  0 );
@@ -32846,8 +32864,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionOutputJSON_Coins_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionOutputJSON_Coins_get" "', argument " "1"" of type '" "visor__TransactionOutputJSON *""'"); 
   }
   arg1 = (visor__TransactionOutputJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -32950,29 +32968,30 @@ SWIGINTERN PyObject *visor__TransactionOutputJSON_swigregister(PyObject *SWIGUNU
 SWIGINTERN PyObject *_wrap_visor__TransactionJSON_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionJSON *arg1 = (visor__TransactionJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionJSON_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionJSON_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionJSON_Hash_set" "', argument " "1"" of type '" "visor__TransactionJSON *""'"); 
   }
   arg1 = (visor__TransactionJSON *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionJSON_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -32985,7 +33004,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionJSON_Hash_get(PyObject *SWIGUNUSEDP
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionJSON_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionJSON, 0 |  0 );
@@ -32993,8 +33012,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionJSON_Hash_get(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionJSON_Hash_get" "', argument " "1"" of type '" "visor__TransactionJSON *""'"); 
   }
   arg1 = (visor__TransactionJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -33004,29 +33023,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__TransactionJSON_InnerHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__TransactionJSON *arg1 = (visor__TransactionJSON *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionJSON_InnerHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__TransactionJSON_InnerHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionJSON, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionJSON_InnerHash_set" "', argument " "1"" of type '" "visor__TransactionJSON *""'"); 
   }
   arg1 = (visor__TransactionJSON *)(argp1);
-  if (arg1) (arg1)->InnerHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__TransactionJSON_InnerHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->InnerHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -33039,7 +33059,7 @@ SWIGINTERN PyObject *_wrap_visor__TransactionJSON_InnerHash_get(PyObject *SWIGUN
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__TransactionJSON_InnerHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__TransactionJSON, 0 |  0 );
@@ -33047,8 +33067,8 @@ SWIGINTERN PyObject *_wrap_visor__TransactionJSON_InnerHash_get(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__TransactionJSON_InnerHash_get" "', argument " "1"" of type '" "visor__TransactionJSON *""'"); 
   }
   arg1 = (visor__TransactionJSON *)(argp1);
-  result = (GoString_ *)& ((arg1)->InnerHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->InnerHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -33934,29 +33954,30 @@ SWIGINTERN PyObject *visor__Transaction_swigregister(PyObject *SWIGUNUSEDPARM(se
 SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__RichlistBalance *arg1 = (visor__RichlistBalance *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__RichlistBalance_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__RichlistBalance_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__RichlistBalance, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__RichlistBalance_Address_set" "', argument " "1"" of type '" "visor__RichlistBalance *""'"); 
   }
   arg1 = (visor__RichlistBalance *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__RichlistBalance_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -33969,7 +33990,7 @@ SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Address_get(PyObject *SWIGUNUS
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__RichlistBalance_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__RichlistBalance, 0 |  0 );
@@ -33977,8 +33998,8 @@ SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Address_get(PyObject *SWIGUNUS
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__RichlistBalance_Address_get" "', argument " "1"" of type '" "visor__RichlistBalance *""'"); 
   }
   arg1 = (visor__RichlistBalance *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -33988,29 +34009,30 @@ fail:
 SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   visor__RichlistBalance *arg1 = (visor__RichlistBalance *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:visor__RichlistBalance_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:visor__RichlistBalance_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__RichlistBalance, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__RichlistBalance_Coins_set" "', argument " "1"" of type '" "visor__RichlistBalance *""'"); 
   }
   arg1 = (visor__RichlistBalance *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "visor__RichlistBalance_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -34023,7 +34045,7 @@ SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Coins_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:visor__RichlistBalance_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_visor__RichlistBalance, 0 |  0 );
@@ -34031,8 +34053,8 @@ SWIGINTERN PyObject *_wrap_visor__RichlistBalance_Coins_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "visor__RichlistBalance_Coins_get" "', argument " "1"" of type '" "visor__RichlistBalance *""'"); 
   }
   arg1 = (visor__RichlistBalance *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -34814,29 +34836,30 @@ fail:
 SWIGINTERN PyObject *_wrap_gnet__MessageContext_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   gnet__MessageContext *arg1 = (gnet__MessageContext *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:gnet__MessageContext_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:gnet__MessageContext_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gnet__MessageContext, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gnet__MessageContext_Addr_set" "', argument " "1"" of type '" "gnet__MessageContext *""'"); 
   }
   arg1 = (gnet__MessageContext *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "gnet__MessageContext_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -34849,7 +34872,7 @@ SWIGINTERN PyObject *_wrap_gnet__MessageContext_Addr_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:gnet__MessageContext_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gnet__MessageContext, 0 |  0 );
@@ -34857,8 +34880,8 @@ SWIGINTERN PyObject *_wrap_gnet__MessageContext_Addr_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gnet__MessageContext_Addr_get" "', argument " "1"" of type '" "gnet__MessageContext *""'"); 
   }
   arg1 = (gnet__MessageContext *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -35298,29 +35321,30 @@ SWIGINTERN PyObject *daemon__IPAddr_swigregister(PyObject *SWIGUNUSEDPARM(self),
 SWIGINTERN PyObject *_wrap_daemon__GetPeersMessage_addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__GetPeersMessage *arg1 = (daemon__GetPeersMessage *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__GetPeersMessage_addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__GetPeersMessage_addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__GetPeersMessage, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__GetPeersMessage_addr_set" "', argument " "1"" of type '" "daemon__GetPeersMessage *""'"); 
   }
   arg1 = (daemon__GetPeersMessage *)(argp1);
-  if (arg1) (arg1)->addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__GetPeersMessage_addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -35333,7 +35357,7 @@ SWIGINTERN PyObject *_wrap_daemon__GetPeersMessage_addr_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__GetPeersMessage_addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__GetPeersMessage, 0 |  0 );
@@ -35341,8 +35365,8 @@ SWIGINTERN PyObject *_wrap_daemon__GetPeersMessage_addr_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__GetPeersMessage_addr_get" "', argument " "1"" of type '" "daemon__GetPeersMessage *""'"); 
   }
   arg1 = (daemon__GetPeersMessage *)(argp1);
-  result = (GoString_ *)& ((arg1)->addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -35985,29 +36009,30 @@ SWIGINTERN PyObject *daemon__PingMessage_swigregister(PyObject *SWIGUNUSEDPARM(s
 SWIGINTERN PyObject *_wrap_daemon__ConnectEvent_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__ConnectEvent *arg1 = (daemon__ConnectEvent *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__ConnectEvent_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__ConnectEvent_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__ConnectEvent, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__ConnectEvent_Addr_set" "', argument " "1"" of type '" "daemon__ConnectEvent *""'"); 
   }
   arg1 = (daemon__ConnectEvent *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__ConnectEvent_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -36020,7 +36045,7 @@ SWIGINTERN PyObject *_wrap_daemon__ConnectEvent_Addr_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__ConnectEvent_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__ConnectEvent, 0 |  0 );
@@ -36028,8 +36053,8 @@ SWIGINTERN PyObject *_wrap_daemon__ConnectEvent_Addr_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__ConnectEvent_Addr_get" "', argument " "1"" of type '" "daemon__ConnectEvent *""'"); 
   }
   arg1 = (daemon__ConnectEvent *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -36138,29 +36163,30 @@ SWIGINTERN PyObject *daemon__ConnectEvent_swigregister(PyObject *SWIGUNUSEDPARM(
 SWIGINTERN PyObject *_wrap_daemon__ConnectionError_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__ConnectionError *arg1 = (daemon__ConnectionError *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__ConnectionError_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__ConnectionError_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__ConnectionError, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__ConnectionError_Addr_set" "', argument " "1"" of type '" "daemon__ConnectionError *""'"); 
   }
   arg1 = (daemon__ConnectionError *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__ConnectionError_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -36173,7 +36199,7 @@ SWIGINTERN PyObject *_wrap_daemon__ConnectionError_Addr_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__ConnectionError_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__ConnectionError, 0 |  0 );
@@ -36181,8 +36207,8 @@ SWIGINTERN PyObject *_wrap_daemon__ConnectionError_Addr_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__ConnectionError_Addr_get" "', argument " "1"" of type '" "daemon__ConnectionError *""'"); 
   }
   arg1 = (daemon__ConnectionError *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -36285,29 +36311,30 @@ SWIGINTERN PyObject *daemon__ConnectionError_swigregister(PyObject *SWIGUNUSEDPA
 SWIGINTERN PyObject *_wrap_daemon__DisconnectEvent_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__DisconnectEvent *arg1 = (daemon__DisconnectEvent *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__DisconnectEvent_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__DisconnectEvent_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__DisconnectEvent, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__DisconnectEvent_Addr_set" "', argument " "1"" of type '" "daemon__DisconnectEvent *""'"); 
   }
   arg1 = (daemon__DisconnectEvent *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__DisconnectEvent_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -36320,7 +36347,7 @@ SWIGINTERN PyObject *_wrap_daemon__DisconnectEvent_Addr_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__DisconnectEvent_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__DisconnectEvent, 0 |  0 );
@@ -36328,8 +36355,8 @@ SWIGINTERN PyObject *_wrap_daemon__DisconnectEvent_Addr_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__DisconnectEvent_Addr_get" "', argument " "1"" of type '" "daemon__DisconnectEvent *""'"); 
   }
   arg1 = (daemon__DisconnectEvent *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -36937,29 +36964,30 @@ SWIGINTERN PyObject *daemon__TransactionResult_swigregister(PyObject *SWIGUNUSED
 SWIGINTERN PyObject *_wrap_pex__Peer_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   pex__Peer *arg1 = (pex__Peer *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:pex__Peer_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:pex__Peer_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_pex__Peer, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "pex__Peer_Addr_set" "', argument " "1"" of type '" "pex__Peer *""'"); 
   }
   arg1 = (pex__Peer *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "pex__Peer_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -36972,7 +37000,7 @@ SWIGINTERN PyObject *_wrap_pex__Peer_Addr_get(PyObject *SWIGUNUSEDPARM(self), Py
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:pex__Peer_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_pex__Peer, 0 |  0 );
@@ -36980,8 +37008,8 @@ SWIGINTERN PyObject *_wrap_pex__Peer_Addr_get(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "pex__Peer_Addr_get" "', argument " "1"" of type '" "pex__Peer *""'"); 
   }
   arg1 = (pex__Peer *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -37362,29 +37390,30 @@ fail:
 SWIGINTERN PyObject *_wrap_daemon__Connection_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__Connection *arg1 = (daemon__Connection *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__Connection_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__Connection_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__Connection, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__Connection_Addr_set" "', argument " "1"" of type '" "daemon__Connection *""'"); 
   }
   arg1 = (daemon__Connection *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__Connection_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -37397,7 +37426,7 @@ SWIGINTERN PyObject *_wrap_daemon__Connection_Addr_get(PyObject *SWIGUNUSEDPARM(
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__Connection_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__Connection, 0 |  0 );
@@ -37405,8 +37434,8 @@ SWIGINTERN PyObject *_wrap_daemon__Connection_Addr_get(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__Connection_Addr_get" "', argument " "1"" of type '" "daemon__Connection *""'"); 
   }
   arg1 = (daemon__Connection *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -38223,29 +38252,30 @@ SWIGINTERN PyObject *daemon__RPC_swigregister(PyObject *SWIGUNUSEDPARM(self), Py
 SWIGINTERN PyObject *_wrap_daemon__PeerBlockchainHeight_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   daemon__PeerBlockchainHeight *arg1 = (daemon__PeerBlockchainHeight *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:daemon__PeerBlockchainHeight_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:daemon__PeerBlockchainHeight_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__PeerBlockchainHeight, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__PeerBlockchainHeight_Address_set" "', argument " "1"" of type '" "daemon__PeerBlockchainHeight *""'"); 
   }
   arg1 = (daemon__PeerBlockchainHeight *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "daemon__PeerBlockchainHeight_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -38258,7 +38288,7 @@ SWIGINTERN PyObject *_wrap_daemon__PeerBlockchainHeight_Address_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:daemon__PeerBlockchainHeight_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_daemon__PeerBlockchainHeight, 0 |  0 );
@@ -38266,8 +38296,8 @@ SWIGINTERN PyObject *_wrap_daemon__PeerBlockchainHeight_Address_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "daemon__PeerBlockchainHeight_Address_get" "', argument " "1"" of type '" "daemon__PeerBlockchainHeight *""'"); 
   }
   arg1 = (daemon__PeerBlockchainHeight *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -39519,29 +39549,30 @@ fail:
 SWIGINTERN PyObject *_wrap_webrpc__StatusResult_LastBlockHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__StatusResult *arg1 = (webrpc__StatusResult *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__StatusResult_LastBlockHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__StatusResult_LastBlockHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__StatusResult, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__StatusResult_LastBlockHash_set" "', argument " "1"" of type '" "webrpc__StatusResult *""'"); 
   }
   arg1 = (webrpc__StatusResult *)(argp1);
-  if (arg1) (arg1)->LastBlockHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__StatusResult_LastBlockHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->LastBlockHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -39554,7 +39585,7 @@ SWIGINTERN PyObject *_wrap_webrpc__StatusResult_LastBlockHash_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__StatusResult_LastBlockHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__StatusResult, 0 |  0 );
@@ -39562,8 +39593,8 @@ SWIGINTERN PyObject *_wrap_webrpc__StatusResult_LastBlockHash_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__StatusResult_LastBlockHash_get" "', argument " "1"" of type '" "webrpc__StatusResult *""'"); 
   }
   arg1 = (webrpc__StatusResult *)(argp1);
-  result = (GoString_ *)& ((arg1)->LastBlockHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->LastBlockHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -39573,29 +39604,30 @@ fail:
 SWIGINTERN PyObject *_wrap_webrpc__StatusResult_TimeSinceLastBlock_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__StatusResult *arg1 = (webrpc__StatusResult *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__StatusResult_TimeSinceLastBlock_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__StatusResult_TimeSinceLastBlock_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__StatusResult, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__StatusResult_TimeSinceLastBlock_set" "', argument " "1"" of type '" "webrpc__StatusResult *""'"); 
   }
   arg1 = (webrpc__StatusResult *)(argp1);
-  if (arg1) (arg1)->TimeSinceLastBlock = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__StatusResult_TimeSinceLastBlock_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TimeSinceLastBlock = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -39608,7 +39640,7 @@ SWIGINTERN PyObject *_wrap_webrpc__StatusResult_TimeSinceLastBlock_get(PyObject 
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__StatusResult_TimeSinceLastBlock_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__StatusResult, 0 |  0 );
@@ -39616,8 +39648,8 @@ SWIGINTERN PyObject *_wrap_webrpc__StatusResult_TimeSinceLastBlock_get(PyObject 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__StatusResult_TimeSinceLastBlock_get" "', argument " "1"" of type '" "webrpc__StatusResult *""'"); 
   }
   arg1 = (webrpc__StatusResult *)(argp1);
-  result = (GoString_ *)& ((arg1)->TimeSinceLastBlock);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TimeSinceLastBlock);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -39668,29 +39700,30 @@ SWIGINTERN PyObject *webrpc__StatusResult_swigregister(PyObject *SWIGUNUSEDPARM(
 SWIGINTERN PyObject *_wrap_webrpc__TxIDJson_Txid_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__TxIDJson *arg1 = (webrpc__TxIDJson *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__TxIDJson_Txid_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__TxIDJson_Txid_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__TxIDJson, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__TxIDJson_Txid_set" "', argument " "1"" of type '" "webrpc__TxIDJson *""'"); 
   }
   arg1 = (webrpc__TxIDJson *)(argp1);
-  if (arg1) (arg1)->Txid = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__TxIDJson_Txid_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Txid = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -39703,7 +39736,7 @@ SWIGINTERN PyObject *_wrap_webrpc__TxIDJson_Txid_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__TxIDJson_Txid_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__TxIDJson, 0 |  0 );
@@ -39711,8 +39744,8 @@ SWIGINTERN PyObject *_wrap_webrpc__TxIDJson_Txid_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__TxIDJson_Txid_get" "', argument " "1"" of type '" "webrpc__TxIDJson *""'"); 
   }
   arg1 = (webrpc__TxIDJson *)(argp1);
-  result = (GoString_ *)& ((arg1)->Txid);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Txid);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -39856,29 +39889,30 @@ SWIGINTERN PyObject *webrpc__TxnResult_swigregister(PyObject *SWIGUNUSEDPARM(sel
 SWIGINTERN PyObject *_wrap_webrpc__AddrUxoutResult_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__AddrUxoutResult *arg1 = (webrpc__AddrUxoutResult *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__AddrUxoutResult_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__AddrUxoutResult_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__AddrUxoutResult, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__AddrUxoutResult_Address_set" "', argument " "1"" of type '" "webrpc__AddrUxoutResult *""'"); 
   }
   arg1 = (webrpc__AddrUxoutResult *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__AddrUxoutResult_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -39891,7 +39925,7 @@ SWIGINTERN PyObject *_wrap_webrpc__AddrUxoutResult_Address_get(PyObject *SWIGUNU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__AddrUxoutResult_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__AddrUxoutResult, 0 |  0 );
@@ -39899,8 +39933,8 @@ SWIGINTERN PyObject *_wrap_webrpc__AddrUxoutResult_Address_get(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__AddrUxoutResult_Address_get" "', argument " "1"" of type '" "webrpc__AddrUxoutResult *""'"); 
   }
   arg1 = (webrpc__AddrUxoutResult *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40061,29 +40095,30 @@ fail:
 SWIGINTERN PyObject *_wrap_webrpc__RPCError_Message_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__RPCError *arg1 = (webrpc__RPCError *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__RPCError_Message_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__RPCError_Message_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__RPCError, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__RPCError_Message_set" "', argument " "1"" of type '" "webrpc__RPCError *""'"); 
   }
   arg1 = (webrpc__RPCError *)(argp1);
-  if (arg1) (arg1)->Message = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__RPCError_Message_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Message = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40096,7 +40131,7 @@ SWIGINTERN PyObject *_wrap_webrpc__RPCError_Message_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__RPCError_Message_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__RPCError, 0 |  0 );
@@ -40104,8 +40139,8 @@ SWIGINTERN PyObject *_wrap_webrpc__RPCError_Message_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__RPCError_Message_get" "', argument " "1"" of type '" "webrpc__RPCError *""'"); 
   }
   arg1 = (webrpc__RPCError *)(argp1);
-  result = (GoString_ *)& ((arg1)->Message);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Message);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40115,29 +40150,30 @@ fail:
 SWIGINTERN PyObject *_wrap_webrpc__RPCError_Data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   webrpc__RPCError *arg1 = (webrpc__RPCError *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:webrpc__RPCError_Data_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:webrpc__RPCError_Data_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__RPCError, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__RPCError_Data_set" "', argument " "1"" of type '" "webrpc__RPCError *""'"); 
   }
   arg1 = (webrpc__RPCError *)(argp1);
-  if (arg1) (arg1)->Data = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "webrpc__RPCError_Data_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Data = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40150,7 +40186,7 @@ SWIGINTERN PyObject *_wrap_webrpc__RPCError_Data_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:webrpc__RPCError_Data_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_webrpc__RPCError, 0 |  0 );
@@ -40158,8 +40194,8 @@ SWIGINTERN PyObject *_wrap_webrpc__RPCError_Data_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "webrpc__RPCError_Data_get" "', argument " "1"" of type '" "webrpc__RPCError *""'"); 
   }
   arg1 = (webrpc__RPCError *)(argp1);
-  result = (GoString_ *)& ((arg1)->Data);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Data);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40711,29 +40747,30 @@ SWIGINTERN PyObject *wallet__Entry_swigregister(PyObject *SWIGUNUSEDPARM(self), 
 SWIGINTERN PyObject *_wrap_wallet__Note_TxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Note *arg1 = (wallet__Note *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Note_TxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Note_TxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Note, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Note_TxID_set" "', argument " "1"" of type '" "wallet__Note *""'"); 
   }
   arg1 = (wallet__Note *)(argp1);
-  if (arg1) (arg1)->TxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Note_TxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40746,7 +40783,7 @@ SWIGINTERN PyObject *_wrap_wallet__Note_TxID_get(PyObject *SWIGUNUSEDPARM(self),
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Note_TxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Note, 0 |  0 );
@@ -40754,8 +40791,8 @@ SWIGINTERN PyObject *_wrap_wallet__Note_TxID_get(PyObject *SWIGUNUSEDPARM(self),
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Note_TxID_get" "', argument " "1"" of type '" "wallet__Note *""'"); 
   }
   arg1 = (wallet__Note *)(argp1);
-  result = (GoString_ *)& ((arg1)->TxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40765,29 +40802,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__Note_Value_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Note *arg1 = (wallet__Note *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Note_Value_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Note_Value_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Note, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Note_Value_set" "', argument " "1"" of type '" "wallet__Note *""'"); 
   }
   arg1 = (wallet__Note *)(argp1);
-  if (arg1) (arg1)->Value = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Note_Value_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Value = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40800,7 +40838,7 @@ SWIGINTERN PyObject *_wrap_wallet__Note_Value_get(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Note_Value_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Note, 0 |  0 );
@@ -40808,8 +40846,8 @@ SWIGINTERN PyObject *_wrap_wallet__Note_Value_get(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Note_Value_get" "', argument " "1"" of type '" "wallet__Note *""'"); 
   }
   arg1 = (wallet__Note *)(argp1);
-  result = (GoString_ *)& ((arg1)->Value);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Value);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40860,29 +40898,30 @@ SWIGINTERN PyObject *wallet__Note_swigregister(PyObject *SWIGUNUSEDPARM(self), P
 SWIGINTERN PyObject *_wrap_wallet__ReadableNote_TransactionID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableNote_TransactionID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__ReadableNote_TransactionID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableNote, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableNote_TransactionID_set" "', argument " "1"" of type '" "wallet__ReadableNote *""'"); 
   }
   arg1 = (wallet__ReadableNote *)(argp1);
-  if (arg1) (arg1)->TransactionID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__ReadableNote_TransactionID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TransactionID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40895,7 +40934,7 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableNote_TransactionID_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableNote_TransactionID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableNote, 0 |  0 );
@@ -40903,8 +40942,8 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableNote_TransactionID_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableNote_TransactionID_get" "', argument " "1"" of type '" "wallet__ReadableNote *""'"); 
   }
   arg1 = (wallet__ReadableNote *)(argp1);
-  result = (GoString_ *)& ((arg1)->TransactionID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TransactionID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -40914,29 +40953,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__ReadableNote_ActualNote_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableNote_ActualNote_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__ReadableNote_ActualNote_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableNote, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableNote_ActualNote_set" "', argument " "1"" of type '" "wallet__ReadableNote *""'"); 
   }
   arg1 = (wallet__ReadableNote *)(argp1);
-  if (arg1) (arg1)->ActualNote = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__ReadableNote_ActualNote_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ActualNote = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -40949,7 +40989,7 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableNote_ActualNote_get(PyObject *SWIGUNU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableNote_ActualNote_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableNote, 0 |  0 );
@@ -40957,8 +40997,8 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableNote_ActualNote_get(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableNote_ActualNote_get" "', argument " "1"" of type '" "wallet__ReadableNote *""'"); 
   }
   arg1 = (wallet__ReadableNote *)(argp1);
-  result = (GoString_ *)& ((arg1)->ActualNote);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ActualNote);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41009,29 +41049,30 @@ SWIGINTERN PyObject *wallet__ReadableNote_swigregister(PyObject *SWIGUNUSEDPARM(
 SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__ReadableEntry *arg1 = (wallet__ReadableEntry *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__ReadableEntry_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Address_set" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__ReadableEntry_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41044,7 +41085,7 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Address_get(PyObject *SWIGUNUSE
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
@@ -41052,8 +41093,8 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Address_get(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Address_get" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41063,29 +41104,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Public_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__ReadableEntry *arg1 = (wallet__ReadableEntry *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Public_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__ReadableEntry_Public_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Public_set" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  if (arg1) (arg1)->Public = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__ReadableEntry_Public_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Public = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41098,7 +41140,7 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Public_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Public_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
@@ -41106,8 +41148,8 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Public_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Public_get" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  result = (GoString_ *)& ((arg1)->Public);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Public);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41117,29 +41159,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Secret_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__ReadableEntry *arg1 = (wallet__ReadableEntry *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Secret_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__ReadableEntry_Secret_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Secret_set" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  if (arg1) (arg1)->Secret = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__ReadableEntry_Secret_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Secret = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41152,7 +41195,7 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Secret_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__ReadableEntry_Secret_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__ReadableEntry, 0 |  0 );
@@ -41160,8 +41203,8 @@ SWIGINTERN PyObject *_wrap_wallet__ReadableEntry_Secret_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__ReadableEntry_Secret_get" "', argument " "1"" of type '" "wallet__ReadableEntry *""'"); 
   }
   arg1 = (wallet__ReadableEntry *)(argp1);
-  result = (GoString_ *)& ((arg1)->Secret);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Secret);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41212,29 +41255,30 @@ SWIGINTERN PyObject *wallet__ReadableEntry_swigregister(PyObject *SWIGUNUSEDPARM
 SWIGINTERN PyObject *_wrap_wallet__Config_WalletDir_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Config *arg1 = (wallet__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Config_WalletDir_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Config_WalletDir_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Config_WalletDir_set" "', argument " "1"" of type '" "wallet__Config *""'"); 
   }
   arg1 = (wallet__Config *)(argp1);
-  if (arg1) (arg1)->WalletDir = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Config_WalletDir_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->WalletDir = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41247,7 +41291,7 @@ SWIGINTERN PyObject *_wrap_wallet__Config_WalletDir_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Config_WalletDir_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Config, 0 |  0 );
@@ -41255,8 +41299,8 @@ SWIGINTERN PyObject *_wrap_wallet__Config_WalletDir_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Config_WalletDir_get" "', argument " "1"" of type '" "wallet__Config *""'"); 
   }
   arg1 = (wallet__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->WalletDir);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->WalletDir);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41266,29 +41310,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__Config_CryptoType_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Config *arg1 = (wallet__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Config_CryptoType_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Config_CryptoType_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Config_CryptoType_set" "', argument " "1"" of type '" "wallet__Config *""'"); 
   }
   arg1 = (wallet__Config *)(argp1);
-  if (arg1) (arg1)->CryptoType = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Config_CryptoType_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CryptoType = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41301,7 +41346,7 @@ SWIGINTERN PyObject *_wrap_wallet__Config_CryptoType_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Config_CryptoType_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Config, 0 |  0 );
@@ -41309,8 +41354,8 @@ SWIGINTERN PyObject *_wrap_wallet__Config_CryptoType_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Config_CryptoType_get" "', argument " "1"" of type '" "wallet__Config *""'"); 
   }
   arg1 = (wallet__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->CryptoType);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CryptoType);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41634,29 +41679,30 @@ SWIGINTERN PyObject *wallet__Wallet_swigregister(PyObject *SWIGUNUSEDPARM(self),
 SWIGINTERN PyObject *_wrap_wallet__Options_Coin_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Options *arg1 = (wallet__Options *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Coin_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Options_Coin_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Coin_set" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  if (arg1) (arg1)->Coin = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Options_Coin_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coin = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41669,7 +41715,7 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Coin_get(PyObject *SWIGUNUSEDPARM(sel
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Coin_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
@@ -41677,8 +41723,8 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Coin_get(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Coin_get" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coin);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coin);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41688,29 +41734,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__Options_Label_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Options *arg1 = (wallet__Options *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Label_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Options_Label_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Label_set" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  if (arg1) (arg1)->Label = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Options_Label_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Label = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41723,7 +41770,7 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Label_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Label_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
@@ -41731,8 +41778,8 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Label_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Label_get" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  result = (GoString_ *)& ((arg1)->Label);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Label);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41742,29 +41789,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__Options_Seed_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Options *arg1 = (wallet__Options *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Seed_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Options_Seed_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Seed_set" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  if (arg1) (arg1)->Seed = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Options_Seed_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Seed = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41777,7 +41825,7 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Seed_get(PyObject *SWIGUNUSEDPARM(sel
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_Seed_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
@@ -41785,8 +41833,8 @@ SWIGINTERN PyObject *_wrap_wallet__Options_Seed_get(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_Seed_get" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  result = (GoString_ *)& ((arg1)->Seed);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Seed);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -41912,29 +41960,30 @@ fail:
 SWIGINTERN PyObject *_wrap_wallet__Options_CryptoType_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Options *arg1 = (wallet__Options *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_CryptoType_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Options_CryptoType_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_CryptoType_set" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  if (arg1) (arg1)->CryptoType = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "wallet__Options_CryptoType_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CryptoType = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -41947,7 +41996,7 @@ SWIGINTERN PyObject *_wrap_wallet__Options_CryptoType_get(PyObject *SWIGUNUSEDPA
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:wallet__Options_CryptoType_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Options, 0 |  0 );
@@ -41955,8 +42004,8 @@ SWIGINTERN PyObject *_wrap_wallet__Options_CryptoType_get(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Options_CryptoType_get" "', argument " "1"" of type '" "wallet__Options *""'"); 
   }
   arg1 = (wallet__Options *)(argp1);
-  result = (GoString_ *)& ((arg1)->CryptoType);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CryptoType);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42315,29 +42364,30 @@ SWIGINTERN PyObject *wallet__UxBalance_swigregister(PyObject *SWIGUNUSEDPARM(sel
 SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_ID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreateTransactionRequestWallet *arg1 = (api__CreateTransactionRequestWallet *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequestWallet_ID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreateTransactionRequestWallet_ID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequestWallet, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequestWallet_ID_set" "', argument " "1"" of type '" "api__CreateTransactionRequestWallet *""'"); 
   }
   arg1 = (api__CreateTransactionRequestWallet *)(argp1);
-  if (arg1) (arg1)->ID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreateTransactionRequestWallet_ID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42350,7 +42400,7 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_ID_get(PyObject *
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequestWallet_ID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequestWallet, 0 |  0 );
@@ -42358,8 +42408,8 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_ID_get(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequestWallet_ID_get" "', argument " "1"" of type '" "api__CreateTransactionRequestWallet *""'"); 
   }
   arg1 = (api__CreateTransactionRequestWallet *)(argp1);
-  result = (GoString_ *)& ((arg1)->ID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42427,29 +42477,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_Password_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreateTransactionRequestWallet *arg1 = (api__CreateTransactionRequestWallet *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequestWallet_Password_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreateTransactionRequestWallet_Password_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequestWallet, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequestWallet_Password_set" "', argument " "1"" of type '" "api__CreateTransactionRequestWallet *""'"); 
   }
   arg1 = (api__CreateTransactionRequestWallet *)(argp1);
-  if (arg1) (arg1)->Password = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreateTransactionRequestWallet_Password_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Password = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42462,7 +42513,7 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_Password_get(PyOb
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequestWallet_Password_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequestWallet, 0 |  0 );
@@ -42470,8 +42521,8 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequestWallet_Password_get(PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequestWallet_Password_get" "', argument " "1"" of type '" "api__CreateTransactionRequestWallet *""'"); 
   }
   arg1 = (api__CreateTransactionRequestWallet *)(argp1);
-  result = (GoString_ *)& ((arg1)->Password);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Password);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42522,29 +42573,30 @@ SWIGINTERN PyObject *api__CreateTransactionRequestWallet_swigregister(PyObject *
 SWIGINTERN PyObject *_wrap_api__HoursSelection_Type_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__HoursSelection *arg1 = (api__HoursSelection *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_Type_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__HoursSelection_Type_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_Type_set" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  if (arg1) (arg1)->Type = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__HoursSelection_Type_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Type = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42557,7 +42609,7 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_Type_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_Type_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
@@ -42565,8 +42617,8 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_Type_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_Type_get" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  result = (GoString_ *)& ((arg1)->Type);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Type);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42576,29 +42628,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__HoursSelection_Mode_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__HoursSelection *arg1 = (api__HoursSelection *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_Mode_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__HoursSelection_Mode_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_Mode_set" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  if (arg1) (arg1)->Mode = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__HoursSelection_Mode_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Mode = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42611,7 +42664,7 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_Mode_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_Mode_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
@@ -42619,8 +42672,8 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_Mode_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_Mode_get" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  result = (GoString_ *)& ((arg1)->Mode);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Mode);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42630,29 +42683,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__HoursSelection_ShareFactor_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__HoursSelection *arg1 = (api__HoursSelection *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_ShareFactor_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__HoursSelection_ShareFactor_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_ShareFactor_set" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  if (arg1) (arg1)->ShareFactor = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__HoursSelection_ShareFactor_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ShareFactor = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42665,7 +42719,7 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_ShareFactor_get(PyObject *SWIGUNU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__HoursSelection_ShareFactor_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__HoursSelection, 0 |  0 );
@@ -42673,8 +42727,8 @@ SWIGINTERN PyObject *_wrap_api__HoursSelection_ShareFactor_get(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__HoursSelection_ShareFactor_get" "', argument " "1"" of type '" "api__HoursSelection *""'"); 
   }
   arg1 = (api__HoursSelection *)(argp1);
-  result = (GoString_ *)& ((arg1)->ShareFactor);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ShareFactor);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42725,29 +42779,30 @@ SWIGINTERN PyObject *api__HoursSelection_swigregister(PyObject *SWIGUNUSEDPARM(s
 SWIGINTERN PyObject *_wrap_api__Receiver_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__Receiver *arg1 = (api__Receiver *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__Receiver_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Address_set" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__Receiver_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42760,7 +42815,7 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Address_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
@@ -42768,8 +42823,8 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Address_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Address_get" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42779,29 +42834,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__Receiver_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__Receiver *arg1 = (api__Receiver *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__Receiver_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Coins_set" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__Receiver_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42814,7 +42870,7 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Coins_get(PyObject *SWIGUNUSEDPARM(self
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
@@ -42822,8 +42878,8 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Coins_get(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Coins_get" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -42833,29 +42889,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__Receiver_Hours_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__Receiver *arg1 = (api__Receiver *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Hours_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__Receiver_Hours_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Hours_set" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  if (arg1) (arg1)->Hours = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__Receiver_Hours_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hours = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -42868,7 +42925,7 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Hours_get(PyObject *SWIGUNUSEDPARM(self
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__Receiver_Hours_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__Receiver, 0 |  0 );
@@ -42876,8 +42933,8 @@ SWIGINTERN PyObject *_wrap_api__Receiver_Hours_get(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__Receiver_Hours_get" "', argument " "1"" of type '" "api__Receiver *""'"); 
   }
   arg1 = (api__Receiver *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hours);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hours);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -43183,29 +43240,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreateTransactionRequest_ChangeAddress_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreateTransactionRequest *arg1 = (api__CreateTransactionRequest *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequest_ChangeAddress_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreateTransactionRequest_ChangeAddress_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequest, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequest_ChangeAddress_set" "', argument " "1"" of type '" "api__CreateTransactionRequest *""'"); 
   }
   arg1 = (api__CreateTransactionRequest *)(argp1);
-  if (arg1) (arg1)->ChangeAddress = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreateTransactionRequest_ChangeAddress_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ChangeAddress = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -43218,7 +43276,7 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequest_ChangeAddress_get(PyObj
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionRequest_ChangeAddress_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionRequest, 0 |  0 );
@@ -43226,8 +43284,8 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionRequest_ChangeAddress_get(PyObj
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionRequest_ChangeAddress_get" "', argument " "1"" of type '" "api__CreateTransactionRequest *""'"); 
   }
   arg1 = (api__CreateTransactionRequest *)(argp1);
-  result = (GoString_ *)& ((arg1)->ChangeAddress);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ChangeAddress);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -43591,29 +43649,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__ReadableTransaction_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__ReadableTransaction *arg1 = (api__ReadableTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__ReadableTransaction_Hash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__ReadableTransaction_Hash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__ReadableTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__ReadableTransaction_Hash_set" "', argument " "1"" of type '" "api__ReadableTransaction *""'"); 
   }
   arg1 = (api__ReadableTransaction *)(argp1);
-  if (arg1) (arg1)->Hash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__ReadableTransaction_Hash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -43626,7 +43685,7 @@ SWIGINTERN PyObject *_wrap_api__ReadableTransaction_Hash_get(PyObject *SWIGUNUSE
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__ReadableTransaction_Hash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__ReadableTransaction, 0 |  0 );
@@ -43634,8 +43693,8 @@ SWIGINTERN PyObject *_wrap_api__ReadableTransaction_Hash_get(PyObject *SWIGUNUSE
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__ReadableTransaction_Hash_get" "', argument " "1"" of type '" "api__ReadableTransaction *""'"); 
   }
   arg1 = (api__ReadableTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -43645,29 +43704,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__ReadableTransaction_InnerHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__ReadableTransaction *arg1 = (api__ReadableTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__ReadableTransaction_InnerHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__ReadableTransaction_InnerHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__ReadableTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__ReadableTransaction_InnerHash_set" "', argument " "1"" of type '" "api__ReadableTransaction *""'"); 
   }
   arg1 = (api__ReadableTransaction *)(argp1);
-  if (arg1) (arg1)->InnerHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__ReadableTransaction_InnerHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->InnerHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -43680,7 +43740,7 @@ SWIGINTERN PyObject *_wrap_api__ReadableTransaction_InnerHash_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__ReadableTransaction_InnerHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__ReadableTransaction, 0 |  0 );
@@ -43688,8 +43748,8 @@ SWIGINTERN PyObject *_wrap_api__ReadableTransaction_InnerHash_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__ReadableTransaction_InnerHash_get" "', argument " "1"" of type '" "api__ReadableTransaction *""'"); 
   }
   arg1 = (api__ReadableTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->InnerHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->InnerHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44070,29 +44130,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransaction_TxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransaction *arg1 = (api__CreatedTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_TxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransaction_TxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_TxID_set" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  if (arg1) (arg1)->TxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransaction_TxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44105,7 +44166,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_TxID_get(PyObject *SWIGUNUSED
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_TxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
@@ -44113,8 +44174,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_TxID_get(PyObject *SWIGUNUSED
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_TxID_get" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->TxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44124,29 +44185,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransaction_InnerHash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransaction *arg1 = (api__CreatedTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_InnerHash_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransaction_InnerHash_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_InnerHash_set" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  if (arg1) (arg1)->InnerHash = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransaction_InnerHash_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->InnerHash = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44159,7 +44221,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_InnerHash_get(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_InnerHash_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
@@ -44167,8 +44229,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_InnerHash_get(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_InnerHash_get" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->InnerHash);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->InnerHash);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44178,29 +44240,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransaction_Fee_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransaction *arg1 = (api__CreatedTransaction *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_Fee_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransaction_Fee_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_Fee_set" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  if (arg1) (arg1)->Fee = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransaction_Fee_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Fee = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44213,7 +44276,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_Fee_get(PyObject *SWIGUNUSEDP
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransaction_Fee_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransaction, 0 |  0 );
@@ -44221,8 +44284,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransaction_Fee_get(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransaction_Fee_get" "', argument " "1"" of type '" "api__CreatedTransaction *""'"); 
   }
   arg1 = (api__CreatedTransaction *)(argp1);
-  result = (GoString_ *)& ((arg1)->Fee);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Fee);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44447,29 +44510,30 @@ SWIGINTERN PyObject *api__CreatedTransaction_swigregister(PyObject *SWIGUNUSEDPA
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_UxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionOutput *arg1 = (api__CreatedTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_UxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionOutput_UxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_UxID_set" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  if (arg1) (arg1)->UxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionOutput_UxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->UxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44482,7 +44546,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_UxID_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_UxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
@@ -44490,8 +44554,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_UxID_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_UxID_get" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->UxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->UxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44501,29 +44565,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionOutput *arg1 = (api__CreatedTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionOutput_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Address_set" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionOutput_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44536,7 +44601,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Address_get(PyObject *S
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
@@ -44544,8 +44609,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Address_get(PyObject *S
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Address_get" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44555,29 +44620,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionOutput *arg1 = (api__CreatedTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionOutput_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Coins_set" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionOutput_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44590,7 +44656,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Coins_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
@@ -44598,8 +44664,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Coins_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Coins_get" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44609,29 +44675,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Hours_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionOutput *arg1 = (api__CreatedTransactionOutput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Hours_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionOutput_Hours_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Hours_set" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  if (arg1) (arg1)->Hours = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionOutput_Hours_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hours = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44644,7 +44711,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Hours_get(PyObject *SWI
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionOutput_Hours_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionOutput, 0 |  0 );
@@ -44652,8 +44719,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionOutput_Hours_get(PyObject *SWI
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionOutput_Hours_get" "', argument " "1"" of type '" "api__CreatedTransactionOutput *""'"); 
   }
   arg1 = (api__CreatedTransactionOutput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hours);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hours);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44704,29 +44771,30 @@ SWIGINTERN PyObject *api__CreatedTransactionOutput_swigregister(PyObject *SWIGUN
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_UxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_UxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_UxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_UxID_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->UxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_UxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->UxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44739,7 +44807,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_UxID_get(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_UxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -44747,8 +44815,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_UxID_get(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_UxID_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->UxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->UxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44758,29 +44826,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Address_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44793,7 +44862,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Address_get(PyObject *SW
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -44801,8 +44870,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Address_get(PyObject *SW
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Address_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44812,29 +44881,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Coins_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44847,7 +44917,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Coins_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -44855,8 +44925,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Coins_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Coins_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44866,29 +44936,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Hours_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Hours_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_Hours_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Hours_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->Hours = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_Hours_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hours = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44901,7 +44972,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Hours_get(PyObject *SWIG
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_Hours_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -44909,8 +44980,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_Hours_get(PyObject *SWIG
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_Hours_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hours);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hours);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -44920,29 +44991,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_CalculatedHours_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_CalculatedHours_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_CalculatedHours_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_CalculatedHours_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->CalculatedHours = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_CalculatedHours_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CalculatedHours = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -44955,7 +45027,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_CalculatedHours_get(PyOb
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_CalculatedHours_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -44963,8 +45035,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_CalculatedHours_get(PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_CalculatedHours_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->CalculatedHours);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CalculatedHours);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45078,29 +45150,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_TxID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreatedTransactionInput *arg1 = (api__CreatedTransactionInput *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_TxID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreatedTransactionInput_TxID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_TxID_set" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  if (arg1) (arg1)->TxID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreatedTransactionInput_TxID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->TxID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45113,7 +45186,7 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_TxID_get(PyObject *SWIGU
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreatedTransactionInput_TxID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreatedTransactionInput, 0 |  0 );
@@ -45121,8 +45194,8 @@ SWIGINTERN PyObject *_wrap_api__CreatedTransactionInput_TxID_get(PyObject *SWIGU
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreatedTransactionInput_TxID_get" "', argument " "1"" of type '" "api__CreatedTransactionInput *""'"); 
   }
   arg1 = (api__CreatedTransactionInput *)(argp1);
-  result = (GoString_ *)& ((arg1)->TxID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->TxID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45173,29 +45246,30 @@ SWIGINTERN PyObject *api__CreatedTransactionInput_swigregister(PyObject *SWIGUNU
 SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_ID_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__createTransactionRequestWallet *arg1 = (api__createTransactionRequestWallet *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__createTransactionRequestWallet_ID_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__createTransactionRequestWallet_ID_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__createTransactionRequestWallet, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__createTransactionRequestWallet_ID_set" "', argument " "1"" of type '" "api__createTransactionRequestWallet *""'"); 
   }
   arg1 = (api__createTransactionRequestWallet *)(argp1);
-  if (arg1) (arg1)->ID = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__createTransactionRequestWallet_ID_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->ID = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45208,7 +45282,7 @@ SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_ID_get(PyObject *
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__createTransactionRequestWallet_ID_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__createTransactionRequestWallet, 0 |  0 );
@@ -45216,8 +45290,8 @@ SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_ID_get(PyObject *
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__createTransactionRequestWallet_ID_get" "', argument " "1"" of type '" "api__createTransactionRequestWallet *""'"); 
   }
   arg1 = (api__createTransactionRequestWallet *)(argp1);
-  result = (GoString_ *)& ((arg1)->ID);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->ID);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45285,29 +45359,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_Password_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__createTransactionRequestWallet *arg1 = (api__createTransactionRequestWallet *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__createTransactionRequestWallet_Password_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__createTransactionRequestWallet_Password_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__createTransactionRequestWallet, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__createTransactionRequestWallet_Password_set" "', argument " "1"" of type '" "api__createTransactionRequestWallet *""'"); 
   }
   arg1 = (api__createTransactionRequestWallet *)(argp1);
-  if (arg1) (arg1)->Password = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__createTransactionRequestWallet_Password_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Password = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45320,7 +45395,7 @@ SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_Password_get(PyOb
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__createTransactionRequestWallet_Password_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__createTransactionRequestWallet, 0 |  0 );
@@ -45328,8 +45403,8 @@ SWIGINTERN PyObject *_wrap_api__createTransactionRequestWallet_Password_get(PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__createTransactionRequestWallet_Password_get" "', argument " "1"" of type '" "api__createTransactionRequestWallet *""'"); 
   }
   arg1 = (api__createTransactionRequestWallet *)(argp1);
-  result = (GoString_ *)& ((arg1)->Password);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Password);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45432,29 +45507,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__CreateTransactionResponse_EncodedTransaction_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__CreateTransactionResponse *arg1 = (api__CreateTransactionResponse *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionResponse_EncodedTransaction_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__CreateTransactionResponse_EncodedTransaction_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionResponse, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionResponse_EncodedTransaction_set" "', argument " "1"" of type '" "api__CreateTransactionResponse *""'"); 
   }
   arg1 = (api__CreateTransactionResponse *)(argp1);
-  if (arg1) (arg1)->EncodedTransaction = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__CreateTransactionResponse_EncodedTransaction_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->EncodedTransaction = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45467,7 +45543,7 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionResponse_EncodedTransaction_get
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__CreateTransactionResponse_EncodedTransaction_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__CreateTransactionResponse, 0 |  0 );
@@ -45475,8 +45551,8 @@ SWIGINTERN PyObject *_wrap_api__CreateTransactionResponse_EncodedTransaction_get
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__CreateTransactionResponse_EncodedTransaction_get" "', argument " "1"" of type '" "api__CreateTransactionResponse *""'"); 
   }
   arg1 = (api__CreateTransactionResponse *)(argp1);
-  result = (GoString_ *)& ((arg1)->EncodedTransaction);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->EncodedTransaction);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45824,29 +45900,30 @@ SWIGINTERN PyObject *api__UnconfirmedTxnsResponse_swigregister(PyObject *SWIGUNU
 SWIGINTERN PyObject *_wrap_api__WalletEntry_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletEntry *arg1 = (api__WalletEntry *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletEntry_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletEntry_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletEntry, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletEntry_Address_set" "', argument " "1"" of type '" "api__WalletEntry *""'"); 
   }
   arg1 = (api__WalletEntry *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletEntry_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45859,7 +45936,7 @@ SWIGINTERN PyObject *_wrap_api__WalletEntry_Address_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletEntry_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletEntry, 0 |  0 );
@@ -45867,8 +45944,8 @@ SWIGINTERN PyObject *_wrap_api__WalletEntry_Address_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletEntry_Address_get" "', argument " "1"" of type '" "api__WalletEntry *""'"); 
   }
   arg1 = (api__WalletEntry *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45878,29 +45955,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletEntry_Public_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletEntry *arg1 = (api__WalletEntry *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletEntry_Public_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletEntry_Public_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletEntry, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletEntry_Public_set" "', argument " "1"" of type '" "api__WalletEntry *""'"); 
   }
   arg1 = (api__WalletEntry *)(argp1);
-  if (arg1) (arg1)->Public = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletEntry_Public_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Public = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -45913,7 +45991,7 @@ SWIGINTERN PyObject *_wrap_api__WalletEntry_Public_get(PyObject *SWIGUNUSEDPARM(
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletEntry_Public_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletEntry, 0 |  0 );
@@ -45921,8 +45999,8 @@ SWIGINTERN PyObject *_wrap_api__WalletEntry_Public_get(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletEntry_Public_get" "', argument " "1"" of type '" "api__WalletEntry *""'"); 
   }
   arg1 = (api__WalletEntry *)(argp1);
-  result = (GoString_ *)& ((arg1)->Public);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Public);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -45973,29 +46051,30 @@ SWIGINTERN PyObject *api__WalletEntry_swigregister(PyObject *SWIGUNUSEDPARM(self
 SWIGINTERN PyObject *_wrap_api__WalletMeta_Coin_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Coin_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_Coin_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Coin_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->Coin = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_Coin_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coin = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46008,7 +46087,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Coin_get(PyObject *SWIGUNUSEDPARM(sel
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Coin_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46016,8 +46095,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Coin_get(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Coin_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coin);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coin);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46027,29 +46106,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletMeta_Filename_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Filename_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_Filename_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Filename_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->Filename = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_Filename_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Filename = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46062,7 +46142,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Filename_get(PyObject *SWIGUNUSEDPARM
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Filename_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46070,8 +46150,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Filename_get(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Filename_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->Filename);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Filename);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46081,29 +46161,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletMeta_Label_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Label_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_Label_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Label_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->Label = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_Label_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Label = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46116,7 +46197,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Label_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Label_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46124,8 +46205,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Label_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Label_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->Label);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Label);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46135,29 +46216,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletMeta_Type_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Type_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_Type_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Type_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->Type = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_Type_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Type = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46170,7 +46252,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Type_get(PyObject *SWIGUNUSEDPARM(sel
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Type_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46178,8 +46260,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Type_get(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Type_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->Type);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Type);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46189,29 +46271,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletMeta_Version_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Version_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_Version_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Version_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->Version = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_Version_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Version = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46224,7 +46307,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Version_get(PyObject *SWIGUNUSEDPARM(
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_Version_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46232,8 +46315,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_Version_get(PyObject *SWIGUNUSEDPARM(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_Version_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->Version);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Version);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46243,29 +46326,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__WalletMeta_CryptoType_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletMeta *arg1 = (api__WalletMeta *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_CryptoType_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletMeta_CryptoType_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_CryptoType_set" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  if (arg1) (arg1)->CryptoType = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletMeta_CryptoType_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->CryptoType = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46278,7 +46362,7 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_CryptoType_get(PyObject *SWIGUNUSEDPA
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletMeta_CryptoType_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletMeta, 0 |  0 );
@@ -46286,8 +46370,8 @@ SWIGINTERN PyObject *_wrap_api__WalletMeta_CryptoType_get(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletMeta_CryptoType_get" "', argument " "1"" of type '" "api__WalletMeta *""'"); 
   }
   arg1 = (api__WalletMeta *)(argp1);
-  result = (GoString_ *)& ((arg1)->CryptoType);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->CryptoType);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46599,29 +46683,30 @@ SWIGINTERN PyObject *api__WalletResponse_swigregister(PyObject *SWIGUNUSEDPARM(s
 SWIGINTERN PyObject *_wrap_api__WalletFolder_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__WalletFolder *arg1 = (api__WalletFolder *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__WalletFolder_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__WalletFolder_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletFolder, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletFolder_Address_set" "', argument " "1"" of type '" "api__WalletFolder *""'"); 
   }
   arg1 = (api__WalletFolder *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__WalletFolder_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46634,7 +46719,7 @@ SWIGINTERN PyObject *_wrap_api__WalletFolder_Address_get(PyObject *SWIGUNUSEDPAR
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__WalletFolder_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__WalletFolder, 0 |  0 );
@@ -46642,8 +46727,8 @@ SWIGINTERN PyObject *_wrap_api__WalletFolder_Address_get(PyObject *SWIGUNUSEDPAR
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__WalletFolder_Address_get" "', argument " "1"" of type '" "api__WalletFolder *""'"); 
   }
   arg1 = (api__WalletFolder *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46798,29 +46883,30 @@ fail:
 SWIGINTERN PyObject *_wrap_api__SpendResult_Error_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   api__SpendResult *arg1 = (api__SpendResult *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:api__SpendResult_Error_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__SpendResult_Error_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__SpendResult, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__SpendResult_Error_set" "', argument " "1"" of type '" "api__SpendResult *""'"); 
   }
   arg1 = (api__SpendResult *)(argp1);
-  if (arg1) (arg1)->Error = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "api__SpendResult_Error_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Error = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46833,7 +46919,7 @@ SWIGINTERN PyObject *_wrap_api__SpendResult_Error_get(PyObject *SWIGUNUSEDPARM(s
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:api__SpendResult_Error_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__SpendResult, 0 |  0 );
@@ -46841,8 +46927,8 @@ SWIGINTERN PyObject *_wrap_api__SpendResult_Error_get(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__SpendResult_Error_get" "', argument " "1"" of type '" "api__SpendResult *""'"); 
   }
   arg1 = (api__SpendResult *)(argp1);
-  result = (GoString_ *)& ((arg1)->Error);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Error);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46893,29 +46979,30 @@ SWIGINTERN PyObject *api__SpendResult_swigregister(PyObject *SWIGUNUSEDPARM(self
 SWIGINTERN PyObject *_wrap_cli__Balance_Coins_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Balance *arg1 = (cli__Balance *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Balance_Coins_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Balance_Coins_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Balance, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Balance_Coins_set" "', argument " "1"" of type '" "cli__Balance *""'"); 
   }
   arg1 = (cli__Balance *)(argp1);
-  if (arg1) (arg1)->Coins = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Balance_Coins_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coins = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46928,7 +47015,7 @@ SWIGINTERN PyObject *_wrap_cli__Balance_Coins_get(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Balance_Coins_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Balance, 0 |  0 );
@@ -46936,8 +47023,8 @@ SWIGINTERN PyObject *_wrap_cli__Balance_Coins_get(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Balance_Coins_get" "', argument " "1"" of type '" "cli__Balance *""'"); 
   }
   arg1 = (cli__Balance *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coins);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coins);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -46947,29 +47034,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__Balance_Hours_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Balance *arg1 = (cli__Balance *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Balance_Hours_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Balance_Hours_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Balance, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Balance_Hours_set" "', argument " "1"" of type '" "cli__Balance *""'"); 
   }
   arg1 = (cli__Balance *)(argp1);
-  if (arg1) (arg1)->Hours = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Balance_Hours_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Hours = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -46982,7 +47070,7 @@ SWIGINTERN PyObject *_wrap_cli__Balance_Hours_get(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Balance_Hours_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Balance, 0 |  0 );
@@ -46990,8 +47078,8 @@ SWIGINTERN PyObject *_wrap_cli__Balance_Hours_get(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Balance_Hours_get" "', argument " "1"" of type '" "cli__Balance *""'"); 
   }
   arg1 = (cli__Balance *)(argp1);
-  result = (GoString_ *)& ((arg1)->Hours);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Hours);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47198,29 +47286,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__AddressBalance_Address_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__AddressBalance *arg1 = (cli__AddressBalance *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__AddressBalance_Address_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__AddressBalance_Address_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__AddressBalance, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__AddressBalance_Address_set" "', argument " "1"" of type '" "cli__AddressBalance *""'"); 
   }
   arg1 = (cli__AddressBalance *)(argp1);
-  if (arg1) (arg1)->Address = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__AddressBalance_Address_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Address = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47233,7 +47322,7 @@ SWIGINTERN PyObject *_wrap_cli__AddressBalance_Address_get(PyObject *SWIGUNUSEDP
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__AddressBalance_Address_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__AddressBalance, 0 |  0 );
@@ -47241,8 +47330,8 @@ SWIGINTERN PyObject *_wrap_cli__AddressBalance_Address_get(PyObject *SWIGUNUSEDP
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__AddressBalance_Address_get" "', argument " "1"" of type '" "cli__AddressBalance *""'"); 
   }
   arg1 = (cli__AddressBalance *)(argp1);
-  result = (GoString_ *)& ((arg1)->Address);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Address);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47548,29 +47637,30 @@ SWIGINTERN PyObject *cli__BalanceResult_swigregister(PyObject *SWIGUNUSEDPARM(se
 SWIGINTERN PyObject *_wrap_cli__Config_WalletDir_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Config *arg1 = (cli__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_WalletDir_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Config_WalletDir_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_WalletDir_set" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  if (arg1) (arg1)->WalletDir = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Config_WalletDir_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->WalletDir = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47583,7 +47673,7 @@ SWIGINTERN PyObject *_wrap_cli__Config_WalletDir_get(PyObject *SWIGUNUSEDPARM(se
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_WalletDir_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
@@ -47591,8 +47681,8 @@ SWIGINTERN PyObject *_wrap_cli__Config_WalletDir_get(PyObject *SWIGUNUSEDPARM(se
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_WalletDir_get" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->WalletDir);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->WalletDir);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47602,29 +47692,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__Config_WalletName_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Config *arg1 = (cli__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_WalletName_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Config_WalletName_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_WalletName_set" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  if (arg1) (arg1)->WalletName = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Config_WalletName_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->WalletName = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47637,7 +47728,7 @@ SWIGINTERN PyObject *_wrap_cli__Config_WalletName_get(PyObject *SWIGUNUSEDPARM(s
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_WalletName_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
@@ -47645,8 +47736,8 @@ SWIGINTERN PyObject *_wrap_cli__Config_WalletName_get(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_WalletName_get" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->WalletName);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->WalletName);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47656,29 +47747,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__Config_DataDir_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Config *arg1 = (cli__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_DataDir_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Config_DataDir_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_DataDir_set" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  if (arg1) (arg1)->DataDir = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Config_DataDir_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->DataDir = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47691,7 +47783,7 @@ SWIGINTERN PyObject *_wrap_cli__Config_DataDir_get(PyObject *SWIGUNUSEDPARM(self
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_DataDir_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
@@ -47699,8 +47791,8 @@ SWIGINTERN PyObject *_wrap_cli__Config_DataDir_get(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_DataDir_get" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->DataDir);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->DataDir);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47710,29 +47802,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__Config_Coin_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Config *arg1 = (cli__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_Coin_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Config_Coin_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_Coin_set" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  if (arg1) (arg1)->Coin = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Config_Coin_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Coin = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47745,7 +47838,7 @@ SWIGINTERN PyObject *_wrap_cli__Config_Coin_get(PyObject *SWIGUNUSEDPARM(self), 
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_Coin_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
@@ -47753,8 +47846,8 @@ SWIGINTERN PyObject *_wrap_cli__Config_Coin_get(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_Coin_get" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->Coin);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Coin);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -47764,29 +47857,30 @@ fail:
 SWIGINTERN PyObject *_wrap_cli__Config_RPCAddress_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__Config *arg1 = (cli__Config *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_RPCAddress_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__Config_RPCAddress_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_RPCAddress_set" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  if (arg1) (arg1)->RPCAddress = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__Config_RPCAddress_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->RPCAddress = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -47799,7 +47893,7 @@ SWIGINTERN PyObject *_wrap_cli__Config_RPCAddress_get(PyObject *SWIGUNUSEDPARM(s
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__Config_RPCAddress_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__Config, 0 |  0 );
@@ -47807,8 +47901,8 @@ SWIGINTERN PyObject *_wrap_cli__Config_RPCAddress_get(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__Config_RPCAddress_get" "', argument " "1"" of type '" "cli__Config *""'"); 
   }
   arg1 = (cli__Config *)(argp1);
-  result = (GoString_ *)& ((arg1)->RPCAddress);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->RPCAddress);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -48144,29 +48238,30 @@ SWIGINTERN PyObject *cli__PasswordFromTerm_swigregister(PyObject *SWIGUNUSEDPARM
 SWIGINTERN PyObject *_wrap_cli__SendAmount_Addr_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cli__SendAmount *arg1 = (cli__SendAmount *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
+  GoString_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  GoString temp2 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:cli__SendAmount_Addr_set",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:cli__SendAmount_Addr_set",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__SendAmount, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__SendAmount_Addr_set" "', argument " "1"" of type '" "cli__SendAmount *""'"); 
   }
   arg1 = (cli__SendAmount *)(argp1);
-  if (arg1) (arg1)->Addr = *arg2;
-  resultobj = SWIG_Py_Void();
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_ArgError(res), "in method '" "cli__SendAmount_Addr_set" "', argument " "2"" of type '" "(TYPEMAP, SIZE)""'");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
   }
+  if (arg1) (arg1)->Addr = arg2;
+  resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
   return NULL;
@@ -48179,7 +48274,7 @@ SWIGINTERN PyObject *_wrap_cli__SendAmount_Addr_get(PyObject *SWIGUNUSEDPARM(sel
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  GoString_ *result = 0 ;
+  GoString_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cli__SendAmount_Addr_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cli__SendAmount, 0 |  0 );
@@ -48187,8 +48282,8 @@ SWIGINTERN PyObject *_wrap_cli__SendAmount_Addr_get(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cli__SendAmount_Addr_get" "', argument " "1"" of type '" "cli__SendAmount *""'"); 
   }
   arg1 = (cli__SendAmount *)(argp1);
-  result = (GoString_ *)& ((arg1)->Addr);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_GoString_, 0 |  0 );
+  result =  ((arg1)->Addr);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -48290,20 +48385,8 @@ SWIGINTERN PyObject *cli__SendAmount_swigregister(PyObject *SWIGUNUSEDPARM(self)
 
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
-	 { (char *)"GoString_p_set", _wrap_GoString_p_set, METH_VARARGS, NULL},
-	 { (char *)"GoString_p_get", _wrap_GoString_p_get, METH_VARARGS, NULL},
-	 { (char *)"GoString_n_set", _wrap_GoString_n_set, METH_VARARGS, NULL},
-	 { (char *)"GoString_n_get", _wrap_GoString_n_get, METH_VARARGS, NULL},
-	 { (char *)"new_GoString", _wrap_new_GoString, METH_VARARGS, NULL},
-	 { (char *)"delete_GoString", _wrap_delete_GoString, METH_VARARGS, NULL},
-	 { (char *)"GoString_swigregister", GoString_swigregister, METH_VARARGS, NULL},
-	 { (char *)"GoString__p_set", _wrap_GoString__p_set, METH_VARARGS, NULL},
-	 { (char *)"GoString__p_get", _wrap_GoString__p_get, METH_VARARGS, NULL},
-	 { (char *)"GoString__n_set", _wrap_GoString__n_set, METH_VARARGS, NULL},
-	 { (char *)"GoString__n_get", _wrap_GoString__n_get, METH_VARARGS, NULL},
-	 { (char *)"new_GoString_", _wrap_new_GoString_, METH_VARARGS, NULL},
-	 { (char *)"delete_GoString_", _wrap_delete_GoString_, METH_VARARGS, NULL},
-	 { (char *)"GoString__swigregister", GoString__swigregister, METH_VARARGS, NULL},
+	 { (char *)"destroy_cipher_SecKeys", _wrap_destroy_cipher_SecKeys, METH_VARARGS, NULL},
+	 { (char *)"destroy_cipher_PubKeys", _wrap_destroy_cipher_PubKeys, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKey_data_set", _wrap_cipher_PubKey_data_set, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKey_data_get", _wrap_cipher_PubKey_data_get, METH_VARARGS, NULL},
 	 { (char *)"new_cipher_PubKey", _wrap_new_cipher_PubKey, METH_VARARGS, NULL},
@@ -48334,14 +48417,21 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_cipher_Checksum", _wrap_new_cipher_Checksum, METH_VARARGS, NULL},
 	 { (char *)"delete_cipher_Checksum", _wrap_delete_cipher_Checksum, METH_VARARGS, NULL},
 	 { (char *)"cipher_Checksum_swigregister", cipher_Checksum_swigregister, METH_VARARGS, NULL},
+	 { (char *)"cipher_SecKeys_getAt", _wrap_cipher_SecKeys_getAt, METH_VARARGS, NULL},
+	 { (char *)"cipher_SecKeys_setAt", _wrap_cipher_SecKeys_setAt, METH_VARARGS, NULL},
+	 { (char *)"cipher_SecKeys_allocate", _wrap_cipher_SecKeys_allocate, METH_VARARGS, NULL},
+	 { (char *)"cipher_SecKeys_release", _wrap_cipher_SecKeys_release, METH_VARARGS, NULL},
 	 { (char *)"cipher_SecKeys_data_set", _wrap_cipher_SecKeys_data_set, METH_VARARGS, NULL},
 	 { (char *)"cipher_SecKeys_data_get", _wrap_cipher_SecKeys_data_get, METH_VARARGS, NULL},
 	 { (char *)"cipher_SecKeys_count_set", _wrap_cipher_SecKeys_count_set, METH_VARARGS, NULL},
 	 { (char *)"cipher_SecKeys_count_get", _wrap_cipher_SecKeys_count_get, METH_VARARGS, NULL},
-	 { (char *)"cipher_SecKeys_getAt", _wrap_cipher_SecKeys_getAt, METH_VARARGS, NULL},
 	 { (char *)"new_cipher_SecKeys", _wrap_new_cipher_SecKeys, METH_VARARGS, NULL},
 	 { (char *)"delete_cipher_SecKeys", _wrap_delete_cipher_SecKeys, METH_VARARGS, NULL},
 	 { (char *)"cipher_SecKeys_swigregister", cipher_SecKeys_swigregister, METH_VARARGS, NULL},
+	 { (char *)"cipher_PubKeys_getAt", _wrap_cipher_PubKeys_getAt, METH_VARARGS, NULL},
+	 { (char *)"cipher_PubKeys_setAt", _wrap_cipher_PubKeys_setAt, METH_VARARGS, NULL},
+	 { (char *)"cipher_PubKeys_allocate", _wrap_cipher_PubKeys_allocate, METH_VARARGS, NULL},
+	 { (char *)"cipher_PubKeys_release", _wrap_cipher_PubKeys_release, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKeys_data_set", _wrap_cipher_PubKeys_data_set, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKeys_data_get", _wrap_cipher_PubKeys_data_get, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKeys_count_set", _wrap_cipher_PubKeys_count_set, METH_VARARGS, NULL},
@@ -49996,7 +50086,6 @@ static swig_type_info _swigt__p_GoInterface_ = {"_p_GoInterface_", "wallet__Vali
 static swig_type_info _swigt__p_GoMap_ = {"_p_GoMap_", "GoMap_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoSlice = {"_p_GoSlice", "GoSlice *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoSlice_ = {"_p_GoSlice_", "coin__Transactions *|coin__UxArray *|GoSlice_ *|cli__PasswordFromBytes *|wallet__ReadableNotes *|visor__ReadableOutputs *|wallet__Notes *|visor__Richlist *|consensus__PriorityQueue *|cipher__PubKeySlice *|pex__Peers *|wallet__ReadableEntries *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GoString = {"_p_GoString", "GoString *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoStringMap_ = {"_p_GoStringMap_", "GoStringMap_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoString_ = {"_p_GoString_", "GoString_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle = {"_p_Handle", "Handle *", 0, 0, (void*)0, 0};
@@ -50013,7 +50102,7 @@ static swig_type_info _swigt__p_WalletResponse__Handle = {"_p_WalletResponse__Ha
 static swig_type_info _swigt__p_Wallet__Handle = {"_p_Wallet__Handle", "Wallet__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Wallets__Handle = {"_p_Wallets__Handle", "Wallets__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_WebRpcClient__Handle = {"_p_WebRpcClient__Handle", "WebRpcClient__Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p__GoString_ = {"_p__GoString_", "_GoString_ *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p__GoString_ = {"_p__GoString_", "_GoString_ *|GoString *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p___SIZE_TYPE__ = {"_p___SIZE_TYPE__", "__SIZE_TYPE__ *|GoUintptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_20__unsigned_char = {"_p_a_20__unsigned_char", "unsigned char (*)[20]|cipher__Ripemd160 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_32__unsigned_char = {"_p_a_32__unsigned_char", "cipher__SecKey *|cipher__SHA256 *|unsigned char (*)[32]", 0, 0, (void*)0, 0};
@@ -50197,7 +50286,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GoMap_,
   &_swigt__p_GoSlice,
   &_swigt__p_GoSlice_,
-  &_swigt__p_GoString,
   &_swigt__p_GoStringMap_,
   &_swigt__p_GoString_,
   &_swigt__p_Handle,
@@ -50398,7 +50486,6 @@ static swig_cast_info _swigc__p_GoInterface_[] = {  {&_swigt__p_GoInterface_, 0,
 static swig_cast_info _swigc__p_GoMap_[] = {  {&_swigt__p_GoMap_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoSlice[] = {  {&_swigt__p_GoSlice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoSlice_[] = {  {&_swigt__p_GoSlice_, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_GoString[] = {  {&_swigt__p_GoString, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoStringMap_[] = {  {&_swigt__p_GoStringMap_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoString_[] = {  {&_swigt__p_GoString_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle[] = {  {&_swigt__p_Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -50599,7 +50686,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_GoMap_,
   _swigc__p_GoSlice,
   _swigc__p_GoSlice_,
-  _swigc__p_GoString,
   _swigc__p_GoStringMap_,
   _swigc__p_GoString_,
   _swigc__p_Handle,

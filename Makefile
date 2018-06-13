@@ -35,5 +35,5 @@ develop:
 
 pyskycoin: build-libc tests/_skycoin.so
 
-test: build-libc wrapper
+test: build-libc wrapper develop
 	tox
