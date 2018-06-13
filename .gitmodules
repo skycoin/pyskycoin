@@ -1,0 +1,3 @@
+[submodule "skycoin"]
+	path = skycoin
+	url = https://github.com/simelo/skycoin.git
