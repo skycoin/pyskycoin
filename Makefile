@@ -25,10 +25,11 @@ $(BUILDLIB_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 build-libc: configure-build $(BUILDLIB_DIR)/libskycoin.a ## Build libskycoin C client library
 
 wrapper:
+	#Generate structs.i from skytypes.gen.h
 	rm -Rf $(SWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(SWIG_DIR)/structs.i
-	sed -i 's/#include "/%include "..\/..\/include\//g' $(SWIG_DIR)/structs.i
-	swig -python  -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
+	sed -i 's/#/%/g' $(SWIG_DIR)/structs.i
+	swig -python -Iswig/include -Iskycoin/include -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
 develop:
 	python setup.py develop
 
