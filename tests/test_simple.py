@@ -107,3 +107,4 @@ def test_GenerateDeterministicKeyPairsSeed():
 	error, newseed = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2, secKeys)
 	assert error == 0
 	assert secKeys.count == 2
+
