@@ -96,6 +96,10 @@ except __builtin__.Exception:
     _newclass = 0
 
 
+def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
+    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
+wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
+
 def destroy_cipher_SecKeys(p):
     return _skycoin.destroy_cipher_SecKeys(p)
 destroy_cipher_SecKeys = _skycoin.destroy_cipher_SecKeys
@@ -674,8 +678,8 @@ def SKY_cipher_GenerateDeterministicKeyPairs(*args):
     return _skycoin.SKY_cipher_GenerateDeterministicKeyPairs(*args)
 SKY_cipher_GenerateDeterministicKeyPairs = _skycoin.SKY_cipher_GenerateDeterministicKeyPairs
 
-def SKY_cipher_GenerateDeterministicKeyPairsSeed(*args):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(*args)
+def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1)
 SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed
 
 def SKY_cipher_TestSecKey(p0):
