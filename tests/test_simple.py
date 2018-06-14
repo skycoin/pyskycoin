@@ -93,6 +93,11 @@ def test_GenerateDeterministicKeyPairs():
 		address = skycoin.cipher__Address()
 		error = skycoin.SKY_cipher_AddressFromSecKey(seckey, address)
 		assert error == 0
+		pubkey = skycoin.cipher_PubKey()
+		error = skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
+		assert error == 0
+		error = skycoin.SKY_cipher_PubKey_Verify(pubkey)
+		assert error == 0
 
 def test_GenerateDeterministicKeyPairsSeed():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
