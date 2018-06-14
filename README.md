@@ -15,6 +15,7 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 		-[Structures](#structures)
 		-[Fixed Size Arrays](#fixed-size-array)
 		-[Other Slices](#other-slices)
+	-[Memory Managemanet](#memory-management)
 <!-- /MarkdownTOC -->
 
 ## Installation
@@ -118,6 +119,19 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 	address = skycoin.cipher__Address()
 	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
 	assert error == 0
+	#release the memory allocated
+	secKeys.release()
+	
+### Memory Management
+	Users of Pyskycoin should not worry about memory management, except for types cipher_SecKeys and cipher_Pubkeys. When using these types calls to allocate and release must me made.
+	Like in the example above:
+	secKeys = skycoin.cipher_SecKeys()
+	#allocate memory to store 2 secret keys
+	secKeys.allocate(2)
+	#Get the first sec key
+	secKey = secKeys.getAt(0)
+	#get the second sec key
+	secKey = secKeys.getAt(1)
 	#release the memory allocated
 	secKeys.release()
 	
