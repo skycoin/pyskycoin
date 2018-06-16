@@ -16,10 +16,11 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 		-[Fixed Size Arrays](#fixed-size-array)
 		-[Other Slices](#other-slices)
 	-[Memory Managemanet](#memory-management)
+- [Make rules](#make-rules)
 <!-- /MarkdownTOC -->
 
 ## Installation
-....
+	Download the repository from http://github.com/simelo/pyskycoin.git
 ## Usage
 ### Naming
 	The exported function in PySkycoin have the following naming format:
@@ -108,4 +109,16 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 		error = skycoin.SKY_cipher_PubKey_Verify(pubkey)
 		assert error == 0
 
-	
+### Memory Management
+	Memory management is transparent to the user. Any object allocated inside the library is left to be managed by Python garbage collector.
+
+## Make Rules
+	All these make rules require skycoin to be a git submodule of pyskycoin
+	- build-libc
+		Compiles skycoin C language library.
+	- wrapper
+		Creates the wrapper C code to generate the Python library.
+	- develop
+		Install a developer version of the module.	
+	- test
+		Compiles skycoin C language library, creates the wrapper and execute Tox. Tox installs compiles the Python library and executes the tests.	
