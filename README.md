@@ -20,7 +20,8 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 <!-- /MarkdownTOC -->
 
 ## Installation
-	Download the repository from http://github.com/simelo/pyskycoin.git
+	Download the repository from http://github.com/simelo/pyskycoin.git. 
+	Execute make install
 ## Usage
 ### Naming
 	The exported function in PySkycoin have the following naming format:
