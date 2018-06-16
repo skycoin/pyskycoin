@@ -32,6 +32,8 @@ wrapper:
 	swig -python -Iswig/include -Iskycoin/include -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
 develop:
 	python setup.py develop
+install: build-libc wrapper 
+	python setup.py install
 
 pyskycoin: build-libc tests/_skycoin.so
 
