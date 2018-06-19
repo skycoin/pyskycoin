@@ -162,10 +162,10 @@ Memory management is transparent to the user. Any object allocated inside the li
 All these make rules require skycoin to be a git submodule of pyskycoin
 
 - build-libc
-	Compiles skycoin C language library.
+  * Compiles skycoin C language library.
 - wrapper
-	Creates the wrapper C code to generate the Python library.
+  * Creates the wrapper C code to generate the Python library.
 - develop
-	Install a developer version of the module.	
+  * Install a developer version of the module.	
 - test
-	Compiles skycoin C language library, creates the wrapper and execute Tox. Tox installs compiles the Python library and executes the tests.	
+  * Compiles skycoin C language library, creates the wrapper and execute Tox. Tox installs compiles the Python library and executes the tests.	
