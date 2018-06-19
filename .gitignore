@@ -19,3 +19,7 @@ tests/mytest.py
 # due to using tox and pytest
 .tox
 .cache
+
+*.swp
+*.swo
+
