@@ -31,13 +31,13 @@ build-swig:
 	rm -Rf $(SWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(SWIG_DIR)/structs.i
 	sed -i 's/#/%/g' $(SWIG_DIR)/structs.i
-	swig -python -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
+	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 develop:
 	python setup.py develop
-install: build-libc wrapper 
+install: build-libc build-swig 
 	python setup.py install
 
 pyskycoin: build-libc tests/_skycoin.so
 
-test: build-libc build-swig
+test: build-libc build-swig develop
 	tox

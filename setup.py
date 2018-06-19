@@ -56,10 +56,10 @@ setup(
     },
     #cmdclass = {'build_ext': skycoin_build_ext},
     ext_modules = [Extension("_skycoin", ["swig/pyskycoin_wrap.c"],
-                         include_dirs=["skycoin/lib/swig", "skycoin/include"],
-                         depends=["swig/include/libskycoin.h"],
+                         include_dirs=['gopath/src/github.com/skycoin/skycoin/lib/swig', 'gopath/src/github.com/skycoin/skycoin/include/'],
+                         depends=[],
                          libraries = [':libskycoin.a'],
-                         library_dirs = ['skycoin/build/libskycoin/'],
+                         library_dirs = ['gopath/src/github.com/skycoin/skycoin/build/libskycoin/'],
                          )],
 
 )
