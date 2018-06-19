@@ -8,14 +8,14 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 <!-- MarkdownTOC levels="1,2,3,4,5" autolink="true" bracket="round" -->
 - [Installation](#installation)
 - [Using the API](#usage)
-	-[Naming](#naming)
-	-[Parameters](#parameters)
-		-[Handles](#handles)
-		-[Byte Slices](#byte-slices)
-		-[Structures](#structures)
-		-[Fixed Size Arrays](#fixed-size-array)
-		-[Other Slices](#other-slices)
-	-[Memory Managemanet](#memory-management)
+  - [Naming](#naming)
+  - [Parameters](#parameters)
+    - [Handles](#handles)
+    - [Byte Slices](#byte-slices)
+    - [Structures](#structures)
+    - [Fixed Size Arrays](#fixed-size-array)
+    - [Other Slices](#other-slices)
+    - [Memory Managemanet](#memory-management)
 - [Make rules](#make-rules)
 <!-- /MarkdownTOC -->
 
