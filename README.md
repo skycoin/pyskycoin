@@ -163,7 +163,7 @@ All these make rules require skycoin to be a git submodule of pyskycoin
 
 - build-libc
   * Compiles skycoin C language library.
-- wrapper
+- build-swig
   * Creates the wrapper C code to generate the Python library.
 - develop
   * Install a developer version of the module.	
