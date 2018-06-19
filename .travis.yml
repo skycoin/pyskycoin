@@ -5,6 +5,8 @@ language: python
 
 matrix:
   include:
+    - language: go
+      go
     - python: 2.7
       env: TOXENV=py27
     - python: 3.4
@@ -14,7 +16,13 @@ matrix:
     - python: 3.6
       env: TOXENV=py36
 
-install: pip install tox
+before_install:
+    - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+    - chmod +x ~/bin/gimme
+
+install:
+    - pip install tox
+    - eval "$(gimme 1.10)"
 
 script: make test
 
