@@ -1,16 +1,5 @@
 # Compilation output
-<<<<<<< HEAD
-BUILD_DIR = skycoin/build
-BUILDLIB_DIR = $(BUILD_DIR)/libskycoin
-LIB_DIR = lib
-LIB_FILES = $(shell find ./skycoin/lib/cgo -type f -name "*.go")
-SRC_FILES = $(shell find ./skycoin/src -type f -name "*.go")
-SWIG_FILES = $(shell find ./skycoin/lib/swig -type f -name "*.i")
-BIN_DIR = skycoin/bin
-INCLUDE_DIR = skycoin/include
-SWIG_DIR = skycoin/lib/swig
-LIBSRC_DIR = skycoin/lib/cgo
-=======
+
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
 SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
@@ -21,7 +10,6 @@ LIBSWIG_DIR = $(SKYCOIN_DIR)/lib/swig
 BUILD_DIR = build
 BIN_DIR = $(SKYCOIN_DIR)/bin
 INCLUDE_DIR = $(SKYCOIN_DIR)/include
->>>>>>> remotes/origin/stdevStark_t4_make_buildswig
 
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
@@ -51,6 +39,5 @@ install: build-libc wrapper
 
 pyskycoin: build-libc tests/_skycoin.so
 
-test: build-libc wrapper develop
 test: build-libc build-swig
 	tox
