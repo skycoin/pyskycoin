@@ -5,6 +5,7 @@ include *.md
 include LICENSE.txt
 
 recursive-include swig/include *
-recursive-include skycoin/include *
-include skycoin/build/libskycoin/libskycoin.a
+recursive-include gopath/src/github.com/skycoin/skycoin/include *
+include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
+
