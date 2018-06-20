@@ -32,12 +32,12 @@ build-swig:
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(SWIG_DIR)/structs.i
 	sed -i 's/#/%/g' $(SWIG_DIR)/structs.i
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
+	
 develop:
 	python setup.py develop
-install: build-libc build-swig 
+	
+build-libpy: build-libc build-swig
 	python setup.py install
-
-pyskycoin: build-libc tests/_skycoin.so
-
-test: build-libc build-swig develop
+	
+test: build-libc build-swig
 	tox
