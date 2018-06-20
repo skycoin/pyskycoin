@@ -82,28 +82,27 @@ def test_GenerateKeyPairs():
 	error = skycoin.SKY_cipher_DecodeBase58Address( address_string, address2 )
 	assert error == 0
 	assert address.isEqual(address2)
-
+	
 def test_GenerateDeterministicKeyPairs():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
+	error, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
 	assert error == 0
-	secKeys = skycoin.cipher_SecKeys()
-	error = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2, secKeys)
-	assert error == 0
-	length = secKeys.count
+	length = len(seckeys)
 	assert length == 2
-	secKey = secKeys.getAt(0)
-	address = skycoin.cipher__Address()
-	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
-	assert error == 0
-	secKey = secKeys.getAt(1)
-	address = skycoin.cipher__Address()
-	error = skycoin.SKY_cipher_AddressFromSecKey(secKey, address)
-	assert error == 0
+	for seckey in seckeys:
+		address = skycoin.cipher__Address()
+		error = skycoin.SKY_cipher_AddressFromSecKey(seckey, address)
+		assert error == 0
+		pubkey = skycoin.cipher_PubKey()
+		error = skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
+		assert error == 0
+		error = skycoin.SKY_cipher_PubKey_Verify(pubkey)
+		assert error == 0
 
 def test_GenerateDeterministicKeyPairsSeed():
 	error, seed = skycoin.SKY_cipher_RandByte(32)
 	assert error == 0
-	secKeys = skycoin.cipher_SecKeys()
-	error, newseed = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2, secKeys)
-	assert error == 0
-	assert secKeys.count == 2
+	error, newseed, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2)
+	length = len(seckeys)
+	assert length == 2
+
