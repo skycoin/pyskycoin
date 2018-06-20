@@ -22,7 +22,7 @@ before_install:
 
 install:
     - pip install tox
-    - eval "$(gimme  1.10)"
+    - eval "$(gimme 1.10)"
 
 script: make test
 
