@@ -21,7 +21,7 @@ before_install:
 install:
     - pip install tox
     - eval "$(gimme 1.10)"
-    - apt-get update && apt-get install swig
+    - sudo apt-get update && sudo apt-get install swig
 
 script: make test
 
