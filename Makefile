@@ -26,7 +26,7 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
 build-swig:
-	swig -python -outdir . -o swig/pyskycoin_wrap.c $(SKYCOIN_DIR)/lib/swig/skycoin.i
+	swig -Iswig/include/ -I$(SKYCOIN_DIR)/include/ -python -outdir . -o swig/pyskycoin_wrap.c $(SKYCOIN_DIR)/lib/swig/skycoin.i
 develop:
 	python setup.py develop
 
