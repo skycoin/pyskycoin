@@ -6,12 +6,13 @@ include LICENSE.txt
 
 include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
-include .gitmodules
-include Makefile
 
 recursive-include swig/include *
-recursive-include gopath *
+recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
+prune gopath
+prune .gitmodules
+prune Makefile
 prune gopath/src/github.com/skycoin/skycoin/build
 prune gopath/src/github.com/skycoin/skycoin/include/libskycoin.h
 prune swig/include/libskycoin.h
