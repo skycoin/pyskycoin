@@ -4,8 +4,15 @@ include *.md
 # Include the license file
 include LICENSE.txt
 
-recursive-include swig/include *
-recursive-include gopath/src/github.com/skycoin/skycoin/include *
 include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
+include .gitmodules
+include Makefile
+
+recursive-include swig/include *
+recursive-include gopath *
+
+prune gopath/src/github.com/skycoin/skycoin/build
+prune gopath/src/github.com/skycoin/skycoin/include/libskycoin.h
+prune swig/include/libskycoin.h
 
