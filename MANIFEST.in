@@ -10,36 +10,3 @@ include skycoin.py
 recursive-include swig/include *
 recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
-prune gopath/src/github.com/skycoin/skycoin/CHANGELOG.md
-prune gopath/src/github.com/skycoin/skycoin/Gopkg.lock
-prune gopath/src/github.com/skycoin/skycoin/Gopkg.toml
-prune gopath/src/github.com/skycoin/skycoin/INSTALLATION.md
-prune gopath/src/github.com/skycoin/skycoin/INTEGRATION.md
-prune gopath/src/github.com/skycoin/skycoin/Makefile
-prune gopath/src/github.com/skycoin/skycoin/Makefile.orig
-prune gopath/src/github.com/skycoin/skycoin/README.md
-prune gopath/src/github.com/skycoin/skycoin/bin
-prune gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.so
-prune gopath/src/github.com/skycoin/skycoin/build/usr
-prune gopath/src/github.com/skycoin/skycoin/ci-scripts
-prune gopath/src/github.com/skycoin/skycoin/cmd
-prune gopath/src/github.com/skycoin/skycoin/docker
-prune gopath/src/github.com/skycoin/skycoin/docker_launcher.sh
-prune gopath/src/github.com/skycoin/skycoin/docs
-prune gopath/src/github.com/skycoin/skycoin/electron
-prune gopath/src/github.com/skycoin/skycoin/fiber.toml
-prune gopath/src/github.com/skycoin/skycoin/gz-c.asc
-prune gopath/src/github.com/skycoin/skycoin/lib
-prune gopath/src/github.com/skycoin/skycoin/peers.txt
-prune gopath/src/github.com/skycoin/skycoin/run-live-integration-test-node.sh
-prune gopath/src/github.com/skycoin/skycoin/run-with-rpc.sh
-prune gopath/src/github.com/skycoin/skycoin/run.sh
-prune gopath/src/github.com/skycoin/skycoin/src
-prune gopath/src/github.com/skycoin/skycoin/template
-prune gopath/src/github.com/skycoin/skycoin/vendor
-prune .gitmodules
-prune Makefile
-prune gopath/src/github.com/skycoin/skycoin/build
-prune gopath/src/github.com/skycoin/skycoin/include/libskycoin.h
-prune swig/include/libskycoin.h
-
