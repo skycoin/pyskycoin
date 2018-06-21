@@ -19,7 +19,8 @@ prune gopath/src/github.com/skycoin/skycoin/Makefile
 prune gopath/src/github.com/skycoin/skycoin/Makefile.orig
 prune gopath/src/github.com/skycoin/skycoin/README.md
 prune gopath/src/github.com/skycoin/skycoin/bin
-prune gopath/src/github.com/skycoin/skycoin/build
+prune gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.so
+prune gopath/src/github.com/skycoin/skycoin/build/usr
 prune gopath/src/github.com/skycoin/skycoin/ci-scripts
 prune gopath/src/github.com/skycoin/skycoin/cmd
 prune gopath/src/github.com/skycoin/skycoin/docker
