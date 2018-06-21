@@ -1,5 +1,7 @@
 # Skycoin Python Library
 
+[![Build Status](https://travis-ci.org/simelo/pyskycoin.svg?branch=develop)](https://travis-ci.org/simelo/pyskycoin)
+
 Python extension for Skycoin API.
 A Python extension generated with SWIG to access Skycoin API from Python.
 
