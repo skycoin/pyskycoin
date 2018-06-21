@@ -5,13 +5,13 @@
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages, Extension
-from setuptools.command.build_ext import build_ext
+#from setuptools.command.build_ext import build_ext
 # To use a consistent encoding
 from codecs import open
 from os import path
-import os, subprocess
-from distutils.errors import DistutilsSetupError
-from distutils import log as distutils_logger
+#import os, subprocess
+#from distutils.errors import DistutilsSetupError
+#from distutils import log as distutils_logger
 
 here = path.abspath(path.dirname(__file__))
 
@@ -45,7 +45,8 @@ class skycoin_build_ext(build_ext, object):
             if not sources_path.endswith(os.path.sep):
                 sources_path+= os.path.sep
 
-            if not os.path.exists(sources_path) or not os.path.isdir(sources_path):
+            if (not os.path.exists(sources_path) or
+                    not os.path.isdir(sources_path):
                 raise DistutilsSetupError(
                        "in 'extensions' option (extension '%s'), "
                        "the supplied 'sources' base dir "
@@ -60,9 +61,13 @@ class skycoin_build_ext(build_ext, object):
                                             shell=True)
             stdout, stderr = make_process.communicate()
             distutils_logger.debug(stdout)
-            # After making the library build the c library's python interface with the parent build_extension method
-            #super(specialized_build_ext, self).build_extension(ext)
+            # After making the library build the c library's
+            # python interface with the parent build_extension method
+            # super(specialized_build_ext, self).build_extension(ext)
 '''
+
+skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
+
 setup(
 	name='Pyskycoin',  # Required
     version='0.24',  # Required
@@ -100,10 +105,15 @@ setup(
     },
     #cmdclass = {'build_ext': skycoin_build_ext},
     ext_modules = [Extension("_skycoin", ["swig/pyskycoin_wrap.c"],
-                         include_dirs=["swig/include", "gopath/src/github.com/skycoin/skycoin/include/"],
+                         include_dirs=[
+                             "swig/include",
+                             path.join(skypath, "include")
+                         ],
                          depends=[],
                          libraries = [':libskycoin.a'],
-                         library_dirs = ['gopath/src/github.com/skycoin/skycoin/build/libskycoin/'],
-                         )],
+                         library_dirs = [
+                             path.join(skypath, 'build', 'libskycoin')
+                         ],
+                   )],
 
 )
