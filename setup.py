@@ -5,13 +5,13 @@
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages, Extension
-#from setuptools.command.build_ext import build_ext
+from setuptools.command.build_ext import build_ext
 # To use a consistent encoding
 from codecs import open
 from os import path
-#import os, subprocess
-#from distutils.errors import DistutilsSetupError
-#from distutils import log as distutils_logger
+import os, subprocess
+from distutils.errors import DistutilsSetupError
+from distutils import log as distutils_logger
 
 here = path.abspath(path.dirname(__file__))
 
@@ -19,7 +19,7 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-'''
+
 class skycoin_build_ext(build_ext, object):
 
     def build_extension(self, ext):
@@ -45,8 +45,7 @@ class skycoin_build_ext(build_ext, object):
             if not sources_path.endswith(os.path.sep):
                 sources_path+= os.path.sep
 
-            if (not os.path.exists(sources_path) or
-                    not os.path.isdir(sources_path):
+            if not os.path.exists(sources_path) or not os.path.isdir(sources_path):
                 raise DistutilsSetupError(
                        "in 'extensions' option (extension '%s'), "
                        "the supplied 'sources' base dir "
@@ -54,7 +53,7 @@ class skycoin_build_ext(build_ext, object):
 
             make_path = os.path.realpath(os.path.join(sources_path,'..'))
 
-            make_process = subprocess.Popen('make pyskycoin',
+            make_process = subprocess.Popen('make build-libc',
                                             cwd=make_path,
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE,
@@ -64,7 +63,7 @@ class skycoin_build_ext(build_ext, object):
             # After making the library build the c library's
             # python interface with the parent build_extension method
             # super(specialized_build_ext, self).build_extension(ext)
-'''
+
 
 skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 
@@ -103,7 +102,7 @@ setup(
         'console_scripts': [
         ],
     },
-    #cmdclass = {'build_ext': skycoin_build_ext},
+    cmdclass = {'build_ext': skycoin_build_ext},
     ext_modules = [Extension("_skycoin", ["swig/pyskycoin_wrap.c"],
                          include_dirs=[
                              "swig/include",
