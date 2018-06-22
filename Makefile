@@ -13,7 +13,7 @@ INCLUDE_DIR = $(SKYCOIN_DIR)/include
 
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
-SWIG_FILES = $(shell find $(SKYCOIN_DIR)/lib/swig -type f -name "*.i")
+SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 
 configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
