@@ -20,6 +20,7 @@ configure:
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
+	rm -Rf	swig/include/libskycoin.h
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
 ## Build libskycoin C client library
@@ -30,7 +31,7 @@ build-swig:
 develop:
 	python setup.py develop
 
-pyskycoin: build-libc tests/_skycoin.so
+build-libc-swig: build-libc build-swig
 
-test: build-libc build-swig
+test: 
 	tox
