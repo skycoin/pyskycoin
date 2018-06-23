@@ -1,34 +1,36 @@
 # Compilation output
-BUILD_DIR = skycoin/build
-BUILDLIB_DIR = $(BUILD_DIR)/libskycoin
-LIB_DIR = lib
-LIB_FILES = $(shell find ./skycoin/lib/cgo -type f -name "*.go")
-SRC_FILES = $(shell find ./skycoin/src -type f -name "*.go")
-SWIG_FILES = $(shell find ./skycoin/lib/swig -type f -name "*.i")
-BIN_DIR = skycoin/bin
-INCLUDE_DIR = skycoin/include
-LIBSRC_DIR = skycoin/lib/cgo
+PWD = $(shell pwd)
+GOPATH_DIR = $(PWD)/gopath
+SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
+SKYBUILD_DIR = $(SKYCOIN_DIR)/build
+BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
+LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
+LIBSWIG_DIR = $(SKYCOIN_DIR)/lib/swig
+BUILD_DIR = build
+BIN_DIR = $(SKYCOIN_DIR)/bin
+INCLUDE_DIR = $(SKYCOIN_DIR)/include
 
+LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
+SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
+SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 
-configure-build:
+configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
-	mkdir -p $(BUILDLIB_DIR) $(BIN_DIR) $(INCLUDE_DIR)
+	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
-$(BUILDLIB_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
-	rm -Rf $(BUILDLIB_DIR)/*
-	go build -buildmode=c-archive -o $(BUILDLIB_DIR)/libskycoin.a  $(LIB_FILES)
-	mv $(BUILDLIB_DIR)/libskycoin.h $(INCLUDE_DIR)/
-	rm -Rf swig/include/libskycoin.h
-	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h >> swig/include/libskycoin.h
+$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
+	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
+	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
-build-libc: configure-build $(BUILDLIB_DIR)/libskycoin.a ## Build libskycoin C client library
+## Build libskycoin C client library
+build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
-wrapper:
-	swig -python -outdir . -o swig/pyskycoin_wrap.c skycoin/lib/swig/skycoin.i
+build-swig:
+	swig -Iswig/include/ -I$(SKYCOIN_DIR)/include/ -python -outdir . -o swig/pyskycoin_wrap.c $(SKYCOIN_DIR)/lib/swig/skycoin.i
 develop:
 	python setup.py develop
 
 pyskycoin: build-libc tests/_skycoin.so
 
-test: build-libc wrapper
+test: build-libc build-swig
 	tox
