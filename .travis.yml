@@ -5,7 +5,12 @@ language: python
 
 matrix:
   include:
-    - python: 2.7
+    - os: linux
+      python: 2.7
+      env: TOXENV=py27
+
+    - os: osx
+      languague: generic
       env: TOXENV=py27
 #    - python: 3.4
 #      env: TOXENV=py34
@@ -15,13 +20,11 @@ matrix:
 #      env: TOXENV=py36
 
 before_install:
-    - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
-    - chmod +x ~/bin/gimme
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod +x ~/bin/gimme; fi
 
 install:
-    - pip install tox-travis
-    - eval "$(gimme 1.10)"
-    - sudo apt-get update && sudo apt-get install swig
+    - .travis/install.sh
 
 script: make test
 
