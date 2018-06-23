@@ -5,6 +5,7 @@ dist/
 *.egg
 *.py[cod]
 __pycache__/
+.pytest_cache
 *.so
 *.o
 
@@ -19,3 +20,7 @@ tests/mytest.py
 # due to using tox and pytest
 .tox
 .cache
+
+*.swp
+*.swo
+
