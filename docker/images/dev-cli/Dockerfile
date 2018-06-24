@@ -17,6 +17,7 @@ RUN set -ex; \
     libsqlite3-0 \
     libssl1.1 \
     netbase \
+    wget \
     python-pip; \
     pip install tox ;\
     pip install --upgrade pip
@@ -32,7 +33,6 @@ RUN set -ex \
 		libexpat1-dev \
 		tcl-dev \
 		tk-dev \
-		wget \
     # as of Stretch, "gpg" is no longer included by default
 		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') \
 	" \
