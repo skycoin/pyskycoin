@@ -9,24 +9,21 @@ RUN set -ex; \
     python2.7-dev \
     python3.5 \
     python3.5-dev \
+    ca-certificates \
+    libexpat1 \
+    libffi6 \
+    libgdbm3 \
+    libreadline7 \
+    libsqlite3-0 \
+    libssl1.1 \
+    netbase \
     python-pip; \
     pip install tox ;\
-   # apt-get clean; \
     pip install --upgrade pip
 
 # Install Python 3.6
 
 # runtime dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-		ca-certificates \
-		libexpat1 \
-		libffi6 \
-		libgdbm3 \
-		libreadline7 \
-		libsqlite3-0 \
-		libssl1.1 \
-		netbase
-
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.6.5
 
@@ -137,6 +134,8 @@ RUN set -ex \
 	&& ldconfig \
 	\
 	&& apt-get purge -y --auto-remove $buildDeps \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
 	\
 	&& find /usr/local -depth \
 		\( \
