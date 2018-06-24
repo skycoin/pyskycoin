@@ -24,7 +24,7 @@ before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod +x ~/bin/gimme; fi
 
 install:
-    - .travis/install.sh
+    - ./.travis/install.sh
 
 script: make test
 
