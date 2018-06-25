@@ -3,6 +3,11 @@
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     brew update;
     brew install swig;
+    pyenv install 3.4.0;
+    pyenv global 3.4.0;
+    brew install pyenv-virtualenv;
+    pyenv virtualenv venv34
+    sudo easy_install pip
 
     case "${TOXENV}" in
         py27)
