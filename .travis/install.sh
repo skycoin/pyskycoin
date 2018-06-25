@@ -2,7 +2,6 @@
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     brew update;
-    brew install openssl readline;
     brew outdated pyenv || brew upgrade pyenv;
     brew install pyenv-virtualenv
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile;
