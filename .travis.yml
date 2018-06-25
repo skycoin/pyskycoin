@@ -6,6 +6,7 @@ language: python
 matrix:
   include:
     - os: linux
+      sudo: required
       python: 2.7
       env: TOXENV=py27
 
@@ -24,7 +25,7 @@ before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod +x ~/bin/gimme; fi
 
 install:
-    - ./.travis/install.sh
+    - bash ./.travis/install.sh
 
 script: make test
 
