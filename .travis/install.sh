@@ -2,12 +2,16 @@
 
 if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     brew update;
+    brew install openssl readline;
+    brew outdated pyenv || brew upgrade pyenv;
+    brew install pyenv-virtualenv
+    pyenv install $PYTHON
+    export PYENV_VERSION=$PYTHON
+    export PATH="/Users/travis/.pyenv/shims:${PATH}"
     brew install swig;
-    pyenv install 3.4.0;
-    pyenv global 3.4.0;
-    brew install pyenv-virtualenv;
-    pyenv virtualenv venv34
-    sudo easy_install pip
+    pyenv virtualenv venv;
+    source venv/bin/activate;
+    python --version;
 
     case "${TOXENV}" in
         py27)

@@ -5,11 +5,15 @@ matrix:
   include:
       - os: osx
         languague: generic
+        env: PYTHON=3.4.0
 
 before_install:
     - bash ./.travis/install.sh
 
-install: true
+install:
+    - python -m pip install -U pip
+    - python -m easy_install -U setuptools
+    - pip install -e .[test]
 
 script: make test
 
