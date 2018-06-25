@@ -22,9 +22,9 @@ matrix:
 before_install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then chmod +x ~/bin/gimme; fi
-
-install:
     - ./.travis/install.sh
+
+install: true
 
 script: make test
 
