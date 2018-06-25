@@ -1,7 +1,6 @@
-set -e
-set -x
+#!/bin/bash
 
-if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     brew update;
     brew install swig;
 
