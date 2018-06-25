@@ -12,7 +12,6 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
             ;;
         py35)
             # Install some custom Python 3.5 requeriments
-            brew install python3;
             pip3 install tox-travis;
             ;;
     esac
