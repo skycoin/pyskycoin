@@ -11,7 +11,6 @@ before_install:
     - bash ./.travis/install.sh
 
 install:
-    - yarn
     - pyt-hon -m pip install -U pip
     - python -m easy_install -U setuptools
     - pip install -e .[test]
