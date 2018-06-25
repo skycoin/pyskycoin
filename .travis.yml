@@ -11,7 +11,7 @@ before_install:
     - bash ./.travis/install.sh
 
 install:
-    - python -m pip install -U pip
+    - sudo easy_install pip
     - python -m easy_install -U setuptools
     - pip install -e .[test]
 
