@@ -11,8 +11,7 @@ matrix:
 before_install:
     - bash ./.travis/install.sh
 
-install:
-    - python -m easy_install -U setuptools
+install: true
 
 script: make test
 
