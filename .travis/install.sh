@@ -10,6 +10,7 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     export PYENV_VERSION=$PYTHON
     export PATH="/Users/travis/.pyenv/shims:${PATH}"
     brew install swig;
+    eval "$(pyenv virtualenv-init -)"
     pyenv virtualenv $PYTHON venv;
     pyenv activate venv;
     python --version;
