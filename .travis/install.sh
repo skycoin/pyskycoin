@@ -8,21 +8,21 @@ if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
     brew install pyenv-virtualenv
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile;
     exec $SHELL;
+    pyenv install $PYTHON
+    export PYENV_VERSION=$PYTHON
+    export PATH="/Users/travis/.pyenv/shims:${PATH}"
     brew install swig;
+    pyenv virtualenv $PYTHON venv;
+    pyenv activate venv;
+    python --version;
+    pip install tox;
 
     case "${TOXENV}" in
         py27)
-            pyenv install $PYTHON
-            export PYENV_VERSION=$PYTHON
-            export PATH="/Users/travis/.pyenv/shims:${PATH}"
-            pyenv virtualenv $PYTHON venv;
-            pyenv activate venv;
-            python --version;
-            pip install tox;
             # pip install tox-travis;
             ;;
         py35)
-            pip3 install tox-travis;
+            #pip3 install tox-travis;
             ;;
     esac
 

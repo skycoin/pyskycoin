@@ -9,7 +9,6 @@ matrix:
             - PYTHON=3.4.0
             - PYTHON=3.5.0
             - PYTHON=3.6.0
-
 before_install:
     - bash ./.travis/install.sh
 
