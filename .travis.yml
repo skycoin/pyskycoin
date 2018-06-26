@@ -7,14 +7,21 @@ matrix:
   include:
     - python: 2.7
       env: TOXENV=py27
-    - python: 3.4
-      env: TOXENV=py34
-    - python: 3.5
-      env: TOXENV=py35
-    - python: 3.6
-      env: TOXENV=py36
+#    - python: 3.4
+#      env: TOXENV=py34
+#    - python: 3.5
+#      env: TOXENV=py35
+#    - python: 3.6
+#      env: TOXENV=py36
 
-install: pip install tox
+before_install:
+    - curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+    - chmod +x ~/bin/gimme
+
+install:
+    - pip install tox-travis
+    - eval "$(gimme 1.10)"
+    - sudo apt-get update && sudo apt-get install swig
 
 script: make test
 

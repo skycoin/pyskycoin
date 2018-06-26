@@ -5,19 +5,21 @@
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages, Extension
-from setuptools.command.build_ext import build_ext
+#from setuptools.command.build_ext import build_ext
 # To use a consistent encoding
 from codecs import open
 from os import path
-import os, subprocess
-from distutils.errors import DistutilsSetupError
-from distutils import log as distutils_logger
+#import os, subprocess
+#from distutils.errors import DistutilsSetupError
+#from distutils import log as distutils_logger
 
-here = path.abspath(path.dirname(__file__))
+script_dirname = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(script_dirname, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+
+skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 
 setup(
 	name='Pyskycoin',  # Required
@@ -56,10 +58,15 @@ setup(
     },
     #cmdclass = {'build_ext': skycoin_build_ext},
     ext_modules = [Extension("_skycoin", ["swig/pyskycoin_wrap.c"],
-                         include_dirs=['gopath/src/github.com/skycoin/skycoin/include/'],
+                         include_dirs=[
+                             "swig/include",
+                             path.join(skypath, "include")
+                         ],
                          depends=[],
                          libraries = [':libskycoin.a'],
-                         library_dirs = ['gopath/src/github.com/skycoin/skycoin/build/libskycoin/'],
-                         )],
+                         library_dirs = [
+                             path.join(skypath, 'build', 'libskycoin')
+                         ],
+                   )],
 
 )
