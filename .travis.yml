@@ -5,7 +5,7 @@ matrix:
   include:
       - os: osx
         languague: generic
-        env:
+            env:
             - PYTHON=3.4.0
             - PYTHON=3.5.0
             - PYTHON=3.6.0
