@@ -1,6 +1,5 @@
 # this file is *not* meant to cover or endorse the use of travis, but rather to
 # help confirm pull requests to this project.
-
 matrix:
   include:
       - os: osx
@@ -9,15 +8,11 @@ matrix:
             - PYTHON=3.4.0
             - PYTHON=3.5.0
             - PYTHON=3.6.0
-
 before_install:
     - bash ./.travis/install.sh
-
 install:
     - python -m easy_install -U setuptools
-
 script: make test
-
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
