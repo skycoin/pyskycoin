@@ -5,14 +5,18 @@ matrix:
       - os: osx
         languague: generic
             env:
-            - PYTHON=3.4.0
-            - PYTHON=3.5.0
-            - PYTHON=3.6.0
+                - PYTHON=3.4.0
+                - PYTHON=3.5.0
+                - PYTHON=3.6.0
+
 before_install:
     - bash ./.travis/install.sh
+
 install:
     - python -m easy_install -U setuptools
+
 script: make test
+
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
