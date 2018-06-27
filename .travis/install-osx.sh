@@ -9,6 +9,9 @@ brew install pyenv-virtualenv
 brew install swig;
 brew install gimme;
 
+# Install Go version 1.10
+eval "$(gimme 1.10)"
+
 # Install Python
 pyenv install $PYTHON
 
