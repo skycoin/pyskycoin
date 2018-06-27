@@ -1,17 +1,28 @@
 # this file is *not* meant to cover or endorse the use of travis, but rather to
 # help confirm pull requests to this project.
+
 matrix:
   include:
       - os: osx
         languague: generic
         env:
-            - PYTHON=3.5.0
-            - PYTHON=3.6.0
+            - PYTHON=2.7
+            - TOXENV=py27
+      - os: linux
+        languague: python
+        python: 2.7
+        env:
+            - TOXENV=py27
 
 before_install:
-    - bash ./.travis/install.sh
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install.sh; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 
-install: true
+install:
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then pip install tox-travis; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then eval "$(gimme 1.10)"; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install swig; fi
 
 script: make test
 
