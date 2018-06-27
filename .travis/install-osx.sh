@@ -8,7 +8,7 @@ brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
 brew install swig;
 brew install gimme;
-brew install tox;
+brew link --overwrite tox;
 
 # Install Python
 pyenv install $PYTHON
