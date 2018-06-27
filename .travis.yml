@@ -15,12 +15,12 @@ matrix:
             - TOXENV=py27
 
 before_install:
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install.sh; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 
 install:
-    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then pip install tox-travis; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo pip install tox-travis; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then eval "$(gimme 1.10)"; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install swig; fi
 
