@@ -1,4 +1,5 @@
 # Compilation output
+
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
 SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
@@ -20,14 +21,20 @@ configure:
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
-	rm -Rf	swig/include/libskycoin.h
+	rm -Rf swig/include/libskycoin.h
+	mkdir -p swig/include
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
 ## Build libskycoin C client library
 build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
 build-swig:
-	swig -Iswig/include/ -I$(SKYCOIN_DIR)/include/ -python -outdir . -o swig/pyskycoin_wrap.c $(SKYCOIN_DIR)/lib/swig/skycoin.i
+	#Generate structs.i from skytypes.gen.h
+	rm -Rf $(LIBSWIG_DIR)/structs.i
+	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
+	sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
+	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
+	
 develop:
 	python setup.py develop
 

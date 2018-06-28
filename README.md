@@ -1,4 +1,4 @@
-# Skycoin Python Library
+#PySkycoin
 
 [![Build Status](https://travis-ci.org/simelo/pyskycoin.svg?branch=develop)](https://travis-ci.org/simelo/pyskycoin)
 

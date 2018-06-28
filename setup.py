@@ -13,12 +13,11 @@ import os, subprocess
 from distutils.errors import DistutilsSetupError
 from distutils import log as distutils_logger
 
-here = path.abspath(path.dirname(__file__))
+script_dirname = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(script_dirname, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-
 
 class skycoin_build_ext(build_ext, object):
 
@@ -69,6 +68,7 @@ class skycoin_build_ext(build_ext, object):
             super(skycoin_build_ext, self).build_extension(ext)
 
 
+
 skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 
 setup(
@@ -95,7 +95,7 @@ setup(
     ],
     keywords='skycoin crypto coin currency blockchain',  # Optional
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
-    install_requires=['peppercorn'],
+    install_requires=[],
     extras_require={  # Optional
         'dev': ['check-manifest'],
         'test': ['coverage'],
