@@ -35,11 +35,11 @@ build-swig:
 	rm -Rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
-	ifeq ($(shell uname -s),Darwin)
+	if [ "$(uname -s)" == 'Darwin' ];then
 		sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	else
 		sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
-	endif
+	fi
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
