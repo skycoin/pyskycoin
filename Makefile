@@ -19,6 +19,7 @@ ifeq ($(shell uname -s),Darwin)
 	SED_COMMAND="sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
 else
 	SED_COMMAND="sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
+endif
 
 configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
