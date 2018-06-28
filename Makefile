@@ -15,11 +15,7 @@ LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 
-ifeq ($(shell uname -s),Darwin)
-COMMAND_SED="sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
-else
-COMMAND_SED="sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
-endif
+
 
 configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
@@ -39,7 +35,11 @@ build-swig:
 	rm -Rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
-	eval "$COMMAND_SED"
+	ifeq ($(shell uname -s),Darwin)
+		sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i
+	else
+		sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
+	endif
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
