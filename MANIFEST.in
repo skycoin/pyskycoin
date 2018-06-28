@@ -5,6 +5,7 @@ include *.md
 include LICENSE.txt
 
 include Makefile
+include gopath/src/github.com/skycoin/skycoin/Makefile
 #include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
 
