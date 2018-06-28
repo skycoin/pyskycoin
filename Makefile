@@ -38,7 +38,7 @@ build-swig:
 	#Generate structs.i from skytypes.gen.h
 	rm -Rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
-	eval "$SED_COMMAND"
+	eval "$(eval $SED_COMMAND)"
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
