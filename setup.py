@@ -59,8 +59,10 @@ class skycoin_build_ext(build_ext, object):
                                             stderr=subprocess.PIPE,
                                             shell=True)
             stdout, stderr = make_process.communicate()
+            print("stdout:")
             print(stdout)
             if len(stderr) > 0:
+            	print("stderr:")
             	print(stderr)
             # After making the library build the c library's
             # python interface with the parent build_extension method
