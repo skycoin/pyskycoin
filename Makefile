@@ -16,9 +16,9 @@ SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 
 ifeq ($(shell uname -s),Darwin)
-	SED_COMMAND="sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
+SED_COMMAND="sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
 else
-	SED_COMMAND="sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
+SED_COMMAND="sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i"
 endif
 
 configure:
