@@ -22,17 +22,6 @@ RUN set -ex; \
     pip install tox ;\
     pip install --upgrade pip
 
-# Install GPG KEYS
-RUN set -ex \
-  && keys(0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D \
-          97FC712E4C024BBEA48A61ED3A5CA953F73C700D)
-  && for key in keys\
-  ; do \
-    gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "$key" || \
-    gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys "$key" || \
-    gpg --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ; \
-  done \
-
 # Install Python 3.6
 
 # runtime dependencies
@@ -51,6 +40,12 @@ RUN set -ex \
 	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
+	&& for server in ha.pool.sks-keyservers.net \
+              hkp://p80.pool.sks-keyservers.net:80 \
+              keyserver.ubuntu.com \
+              hkp://keyserver.ubuntu.com:80 \
+              pgp.mit.edu; do \
+	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -121,6 +116,12 @@ RUN set -ex \
 	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
+	&& for server in ha.pool.sks-keyservers.net \
+              hkp://p80.pool.sks-keyservers.net:80 \
+              keyserver.ubuntu.com \
+              hkp://keyserver.ubuntu.com:80 \
+              pgp.mit.edu; do \
+	      gpg --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
