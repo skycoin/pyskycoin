@@ -35,7 +35,6 @@ build-swig:
 	rm -Rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
-
 	{ \
 		if [[ "$$(uname -s)" == "Darwin" ]]; then \
 			sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\

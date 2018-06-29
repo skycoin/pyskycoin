@@ -18,6 +18,8 @@ export PATH="/Users/travis/.pyenv/shims:${PATH}"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 
+pip install tox-travis;
+
 # Create and activate python virtual environment
 pyenv virtualenv $PYTHON venv;
 pyenv activate venv;
