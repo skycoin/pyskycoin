@@ -47,7 +47,7 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
     install_requires=[],
     extras_require={  # Optional
-        #'dev': ['check-manifest'],
+        'dev': ['check-manifest'],
         'test': ['coverage'],
     },
     package_data={
