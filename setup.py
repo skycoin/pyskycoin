@@ -36,6 +36,7 @@ setup(
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional
     author_email='dev0003@simelo.tech',
+    extra_link_args = extra_link_args,
     classifiers=[
         #   3 - Alpha
         #   4 - Beta
