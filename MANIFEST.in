@@ -9,7 +9,7 @@ include gopath/src/github.com/skycoin/skycoin/Makefile
 #include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
 
-
+recursive-include . *.s
 recursive-include . *.go
 recursive-include swig/include *.h
 recursive-include gopath/src/github.com/skycoin/skycoin/include *.h
