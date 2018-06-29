@@ -12,6 +12,7 @@ from os import path
 #import os, subprocess
 #from distutils.errors import DistutilsSetupError
 #from distutils import log as distutils_logger
+import platform
 
 script_dirname = path.abspath(path.dirname(__file__))
 
@@ -20,6 +21,12 @@ with open(path.join(script_dirname, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
+
+lib_path = path.join(skypath, 'build', 'libskycoin')
+extra_link_args = []
+
+if platform.system() == 'Darwin':
+    extra_link_args.append('-Wl,-rpath,' + lib_path)
 
 setup(
 	name='Pyskycoin',  # Required
@@ -65,7 +72,7 @@ setup(
                          depends=[],
                          libraries = [':libskycoin.a'],
                          library_dirs = [
-                             path.join(skypath, 'build', 'libskycoin')
+                             lib_path
                          ],
                    )],
 
