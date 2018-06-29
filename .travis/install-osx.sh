@@ -11,12 +11,14 @@ brew install gimme;
 
 # Install Python
 pyenv install $PYTHON
+pyenv local 2.7
 
 # Prepare and initialize pyenv environment
 export PYENV_VERSION=$PYTHON
 export PATH="/Users/travis/.pyenv/shims:${PATH}"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
+pyenv rehash
 
 # Create and activate python virtual environment
 #pyenv virtualenv $PYTHON venv;
