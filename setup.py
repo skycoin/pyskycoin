@@ -24,7 +24,7 @@ skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 
 lib_path = path.join(skypath, 'build', 'libskycoin')
 extra_link_args = []
-print platform.system()
+
 if platform.system() == 'Darwin':
     extra_link_args.append('-Wl,-rpath,' + lib_path)
 
