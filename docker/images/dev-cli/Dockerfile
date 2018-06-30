@@ -151,3 +151,7 @@ RUN set -ex \
 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
 		\) -exec rm -rf '{}' + \
 	&& rm -rf /usr/src/python
+
+WORKDIR /usr/local/src
+
+VOLUME ["/usr/local/src"]

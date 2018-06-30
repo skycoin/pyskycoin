@@ -17,18 +17,14 @@ to ease go development and version control with git.
 ```sh
 $ mkdir src
 $ docker run --rm \
-    -v src:/go/src skycoin/skycoindev-python:develop \
+    -v src:/usr/local/src skycoin/skycoindev-python:develop \
     git clone https://github.com/simelo/pyskycoin.git \
 $ sudo chown -R `whoami` src
 ```
 
-This downloads the skycoin source to src/skycoin/skycoin and changes the owner
+This downloads the pyskycoin source to src/pyskycoin and changes the owner
 to your user. This is necessary, because all processes inside the container run
 as root and the files created by it are therefore owned by root.
-
-If you already have a Go development environment installed, you just need to
-mount the src directory from your $GOPATH in the /go/src volume of the
-container.
 
 ## Running commands inside the container
 
@@ -39,7 +35,7 @@ in a container and deleted when finished.
 
 ```sh
 $ docker run --rm \
-    -v src:/go/src skycoin/skycoindev-python:develop \
+    -v src:/usr/local/src skycoin/skycoindev-python:develop \
     sh -c "cd pyskycoin; make test"
 ```
 
@@ -47,6 +43,7 @@ $ docker run --rm \
 
 ```sh
 $ docker run --rm \
-    -v src:/go/src skycoin/skycoindev-python:develop \
+    -v src:/usr/local/src skycoin/skycoindev-python:develop \
     vim
 ```
+
