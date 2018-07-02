@@ -17,7 +17,7 @@ to ease go development and version control with git.
 ```sh
 $ mkdir src
 $ docker run --rm \
-    -v src:/usr/local/src skycoin/skycoindev-python:develop \
+    -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop \
     git clone https://github.com/simelo/pyskycoin.git \
 $ sudo chown -R `whoami` src
 ```
@@ -35,7 +35,7 @@ in a container and deleted when finished.
 
 ```sh
 $ docker run --rm \
-    -v src:/usr/local/src skycoin/skycoindev-python:develop \
+    -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop \
     sh -c "cd pyskycoin; make test"
 ```
 
@@ -43,7 +43,7 @@ $ docker run --rm \
 
 ```sh
 $ docker run --rm \
-    -v src:/usr/local/src skycoin/skycoindev-python:develop \
+    -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop \
     vim
 ```
 
