@@ -69,6 +69,7 @@ setup(
                              "swig/include",
                              path.join(skypath, "include")
                          ],
+                         extra_link_args = extra_link_args,
                          depends=[],
                          libraries = [':libskycoin.a'],
                          library_dirs = [
