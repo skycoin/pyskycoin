@@ -33,7 +33,7 @@ build-swig:
 	rm -Rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
-	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
+	swig -python -py3 -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
 	python setup.py develop
