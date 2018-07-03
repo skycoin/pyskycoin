@@ -19,7 +19,6 @@ RUN set -ex; \
     netbase \
     wget \
     python-pip; \
-    pip install tox ;\
     pip install --upgrade pip
 
 # Install Python 3.6
@@ -150,6 +149,8 @@ RUN set -ex \
 			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
 		\) -exec rm -rf '{}' + \
 	&& rm -rf /usr/src/python
+
+RUN pip install tox;
 
 WORKDIR /usr/local/src
 
