@@ -21,8 +21,8 @@ configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
-$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
-	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
+$(BUILDLIBC_DIR)/libskycoin.so: $(LIB_FILES) $(SRC_FILES)
+	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-shared
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
 	rm -Rf swig/include/libskycoin.h
@@ -30,7 +30,7 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
 ## Build libskycoin C client library
-build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
+build-libc: configure $(BUILDLIBC_DIR)/libskycoin.so
 
 build-swig:
 	#Generate structs.i from skytypes.gen.h
