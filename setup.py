@@ -23,11 +23,7 @@ with open(path.join(script_dirname, 'README.md'), encoding='utf-8') as f:
 skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 
 lib_path = path.join(skypath, 'build', 'libskycoin')
-extra_link_args = []
-
-if platform.system() == 'Darwin':
-    extra_link_args.append('-Wl,-rpath,' + lib_path)
-    extra_link_args.append('--library-directory='+lib_path)
+lib_path = os.path.realpath(lib_path)
 
 setup(
 	name='Pyskycoin',  # Required
@@ -72,9 +68,9 @@ setup(
                          ],
                          extra_link_args = extra_link_args,
                          depends=[],
-                         libraries = [':skycoin'],
+                         libraries = [':libskycoin.a'],
                          library_dirs = [
-                             #lib_path
+                             lib_path
                          ],
                    )],
 
