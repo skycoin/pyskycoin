@@ -68,7 +68,7 @@ setup(
                              path.join(skypath, "include")
                          ],
                          depends=[],
-                         libraries = ['libskycoin.a'],
+                         libraries = [':libskycoin.a'],
                          library_dirs = [
                              lib_path
                          ],

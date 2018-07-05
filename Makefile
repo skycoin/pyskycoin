@@ -12,6 +12,7 @@ LIBSWIG_DIR = $(SKYCOIN_DIR)/lib/swig
 BUILD_DIR = build
 BIN_DIR = $(SKYCOIN_DIR)/bin
 INCLUDE_DIR = $(SKYCOIN_DIR)/include
+FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
@@ -25,6 +26,7 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
+	ls $(FULL_PATH_LIB)
 	rm -Rf swig/include/libskycoin.h
 	mkdir -p swig/include
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
