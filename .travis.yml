@@ -26,9 +26,6 @@ install:
 
 script: make test
 
-after_script:
-    - cat /Users/travis/build/simelo/pyskycoin/.tox/py27/log/py27-*.log
-
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
