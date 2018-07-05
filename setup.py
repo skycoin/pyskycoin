@@ -9,6 +9,7 @@ from setuptools import setup, find_packages, Extension
 # To use a consistent encoding
 from codecs import open
 from os import path
+import os
 #import os, subprocess
 #from distutils.errors import DistutilsSetupError
 #from distutils import log as distutils_logger
@@ -66,7 +67,6 @@ setup(
                              "swig/include",
                              path.join(skypath, "include")
                          ],
-                         extra_link_args = extra_link_args,
                          depends=[],
                          libraries = [':libskycoin.a'],
                          library_dirs = [
