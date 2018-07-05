@@ -30,11 +30,8 @@ configure:
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
 	cd $(SKYCOIN_DIR) && GOPATH="$(GOPATH_DIR)" make build-libc-static
-	rm -Rf $(TEMP_DIR)/libskycoin.a
-	cp $(BUILDLIBC_DIR)/libskycoin.a $(TEMP_DIR)
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
-	ls $(TEMP_DIR)
 	rm -Rf swig/include/libskycoin.h
 	mkdir -p swig/include
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
