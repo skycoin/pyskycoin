@@ -27,7 +27,7 @@ extra_link_args = []
 
 if platform.system() == 'Darwin':
     extra_link_args.append('-Wl,-rpath,' + lib_path)
-    extra_link_args.append('--include-dir='+lib_path)
+    extra_link_args.append('--library-directory='+lib_path)
 
 setup(
 	name='Pyskycoin',  # Required
@@ -74,7 +74,7 @@ setup(
                          depends=[],
                          libraries = [':skycoin'],
                          library_dirs = [
-                             lib_path
+                             #lib_path
                          ],
                    )],
 
