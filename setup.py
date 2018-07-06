@@ -13,6 +13,7 @@ from codecs import open
 from os import path
 import os, subprocess
 import platform
+import sys
 
 script_dirname = path.abspath(path.dirname(__file__))
 
