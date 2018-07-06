@@ -19,6 +19,7 @@ A Python extension generated with SWIG to access Skycoin API from Python.
     - [Other Slices](#other-slices)
     - [Memory Managemanet](#memory-management)
 - [Make rules](#make-rules)
+- [Development setup](#development-setup)
 <!-- /MarkdownTOC -->
 
 ## Installation
@@ -171,3 +172,11 @@ All these make rules require skycoin to be a git submodule of pyskycoin
   * Install a developer version of the module.	
 - test
   * Compiles skycoin C language library, creates the wrapper and execute Tox. Tox installs compiles the Python library and executes the tests.	
+
+## Development setup
+
+It is highly recommended for developers to setup their environment using
+the available Docker images.
+Read the [PySkycoin Docker docs](docker/images/dev-cli/README.md) for further
+details.
+
