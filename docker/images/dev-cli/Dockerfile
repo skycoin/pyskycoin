@@ -9,6 +9,8 @@ RUN set -ex; \
     python2.7-dev \
     python3.5 \
     python3.5-dev \
+    python-dev \
+    python3-dev \
     ca-certificates \
     libexpat1 \
     libffi6 \
@@ -19,13 +21,11 @@ RUN set -ex; \
     netbase \
     wget \
     python-pip; \
-    pip install tox ;\
     pip install --upgrade pip
 
 # Install Python 3.6
 
 # runtime dependencies
-ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.6.5
 
 RUN set -ex \
@@ -41,7 +41,11 @@ RUN set -ex \
 	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
 	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
-	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" \
+	&& for server in ha.pool.sks-keyservers.net \
+              hkp://p80.pool.sks-keyservers.net:80 \
+              keyserver.ubuntu.com \
+              hkp://keyserver.ubuntu.com:80 ;do\
+	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -51,6 +55,7 @@ RUN set -ex \
 	&& cd /usr/src/python \
 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
 	&& ./configure \
+        --prefix=/usr \
 		--build="$gnuArch" \
 		--enable-loadable-sqlite-extensions \
 		--enable-shared \
@@ -61,7 +66,57 @@ RUN set -ex \
 	&& make altinstall \
 	&& ldconfig \
 	\
-	&& apt-get purge -y --auto-remove $buildDeps \
+	&& find /usr/local -depth \
+		\( \
+			\( -type d -a \( -name test -o -name tests \) \) \
+			-o \
+			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
+		\) -exec rm -rf '{}' + \
+	&& rm -rf /usr/src/python
+
+# Install Python 3.4
+
+# runtime dependencies
+ENV PYTHON_VERSION 3.4.8
+
+RUN set -ex \
+	&& buildDeps=" \
+# as of Stretch, "gpg" is no longer included by default
+		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') \
+	" \
+	&& apt-get install -y libssl1.0-dev $buildDeps --no-install-recommends \
+	\
+	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+	&& export GNUPGHOME="$(mktemp -d)" \
+	&& for server in ha.pool.sks-keyservers.net \
+              hkp://p80.pool.sks-keyservers.net:80 \
+              keyserver.ubuntu.com \
+              hkp://keyserver.ubuntu.com:80 ;do\
+	      gpg --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
+	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
+	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
+	&& mkdir -p /usr/src/python \
+	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz \
+	&& rm python.tar.xz \
+	\
+	&& cd /usr/src/python \
+	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
+	&& ./configure \
+        --prefix=/usr \
+		--build="$gnuArch" \
+		--enable-loadable-sqlite-extensions \
+		--enable-shared \
+		--with-system-expat \
+		--with-system-ffi \
+		--without-ensurepip \
+	&& make -j "$(nproc)" \
+	&& make altinstall \
+	&& ldconfig \
+	\
+    && apt-get install -y libssl-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
 	\
 	&& find /usr/local -depth \
 		\( \
@@ -88,7 +143,11 @@ RUN set -ex; \
 		--no-cache-dir \
 		"pip==$PYTHON_PIP_VERSION" \
 	; \
-	\
+    python3.4 get-pip.py \
+		--disable-pip-version-check \
+		--no-cache-dir \
+		"pip==$PYTHON_PIP_VERSION" \
+	; \
 	find /usr/local -depth \
 		\( \
 			\( -type d -a \( -name test -o -name tests \) \) \
@@ -97,50 +156,8 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-# Install Python 3.4
+RUN pip install tox;
 
-# runtime dependencies
-ENV GPG_KEY 97FC712E4C024BBEA48A61ED3A5CA953F73C700D
-ENV PYTHON_VERSION 3.4.8
+WORKDIR $GOPATH/src/github.com/skycoin
 
-RUN set -ex \
-	&& buildDeps=" \
-# as of Stretch, "gpg" is no longer included by default
-		$(command -v gpg > /dev/null || echo 'gnupg dirmngr') \
-	" \
-	&& apt-get install -y $buildDeps --no-install-recommends \
-	\
-	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
-	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
-	&& export GNUPGHOME="$(mktemp -d)" \
-	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" \
-	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
-	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
-	&& mkdir -p /usr/src/python \
-	&& tar -xJC /usr/src/python --strip-components=1 -f python.tar.xz \
-	&& rm python.tar.xz \
-	\
-	&& cd /usr/src/python \
-	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
-	&& ./configure \
-		--build="$gnuArch" \
-		--enable-loadable-sqlite-extensions \
-		--enable-shared \
-		--with-system-expat \
-		--with-system-ffi \
-		--without-ensurepip \
-	&& make -j "$(nproc)" \
-	&& make altinstall \
-	&& ldconfig \
-	\
-	&& apt-get purge -y --auto-remove $buildDeps \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-	\
-	&& find /usr/local -depth \
-		\( \
-			\( -type d -a \( -name test -o -name tests \) \) \
-			-o \
-			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
-		\) -exec rm -rf '{}' + \
-	&& rm -rf /usr/src/python
+VOLUME $GOPATH/src/
