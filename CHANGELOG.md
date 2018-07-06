@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Add versions of Python3.4, 3.5 and 3.6 in skycoindev-cli:py3 image.
-- Add README.md file to docker folder.
 
 ### Fixed
 
