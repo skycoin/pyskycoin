@@ -5,18 +5,18 @@ import skycoin
 
 # Test with handles and strings
 def test_loadconfig():
-    error, old_coin = skycoin.SKY_cli_Getenv("COIN")
+    error, old_coin = skycoin.SKY_cli_Getenv(b"COIN")
     assert error == 0
-    error = skycoin.SKY_cli_Setenv("COIN", "foocoin")
+    error = skycoin.SKY_cli_Setenv(b"COIN", b"foocoin")
     assert error == 0
     error, configHandle = skycoin.SKY_cli_LoadConfig()
     assert error == 0
     error, new_coin = skycoin.SKY_cli_Config_GetCoin(configHandle)
     assert error == 0
-    assert new_coin == "foocoin"
+    assert new_coin == b"foocoin"
     skycoin.SKY_handle_close(configHandle)
     assert True
-    error = skycoin.SKY_cli_Setenv("COIN", old_coin)
+    error = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
     assert error == 0
 
 
@@ -26,7 +26,7 @@ def test_Sha256XorEncrypt():
     error, data = skycoin.SKY_cipher_RandByte(32)
     assert error == 0
     assert len(data) == 32
-    pwd = "pwd"
+    pwd = b"pwd"
     error, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
             encrypt, data, pwd)
     assert error == 0
@@ -48,10 +48,10 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     assert error == 0
     assert len(data) == 32
     error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(
-            encrypt_settings, data, "password")
+            encrypt_settings, data, b"password")
     assert error == 0
     error, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(
-            encrypt_settings, encrypted, "password")
+            encrypt_settings, encrypted, b"password")
     assert error == 0
     assert data == decrypted
 
@@ -60,7 +60,7 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
 def test_cipherAddress():
     address = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_DecodeBase58Address(
-            "2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+            b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
     assert error == 0
     error, bytes = skycoin.SKY_cipher_Address_BitcoinBytes(address)
     assert error == 0
