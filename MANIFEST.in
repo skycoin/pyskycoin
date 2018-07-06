@@ -1,5 +1,5 @@
-# Include the README
-include *.md
+# Include all README
+recursive-include . *.md
 
 # Include the license file
 include LICENSE.txt
@@ -11,6 +11,7 @@ include skycoin.py
 
 recursive-include . *.s
 recursive-include . *.go
+recursive-include . *.i
 recursive-include swig/include *.h
 recursive-include gopath/src/github.com/skycoin/skycoin/include *.h
 
