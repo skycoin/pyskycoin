@@ -13,7 +13,9 @@ recursive-include swig/include *
 recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
 recursive-exclude . *.orig
-recursive-exclude .github *
 
 exclude .github
+exclude .travis
+recursive-exclude .github *
+recursive-exclude .travis *
 
