@@ -3,19 +3,10 @@
 
 matrix:
   include:
-      - os: osx
-        languague: generic
-        env:
-            - PYTHON=2.7
-            - TOXENV=py27
-      - os: linux
-        languague: python
-        python: 
-        	- 2.7
-        	- 3.4
-        env:
-            - TOXENV=py27
-            - TOXENV=py34
+    - python: 2.7
+      env: TOXENV=py27
+    - python: 3.4
+      env: TOXENV=py34
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
