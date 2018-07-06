@@ -83,6 +83,8 @@ setup(
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional
     author_email='dev0003@simelo.tech',
+    setup_requires=["pytest-runner"],
+    tests_require=["pytest"],
     classifiers=[
         #   3 - Alpha
         #   4 - Beta

@@ -60,3 +60,7 @@ build-libc-swig: build-libc build-swig
 
 test: 
 	tox
+	
+test34: build-swig develop
+	python3.4 setup.py test
+	
