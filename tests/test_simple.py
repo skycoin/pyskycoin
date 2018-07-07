@@ -79,9 +79,10 @@ def test_GenerateKeyPairs():
     #error, data = skycoin.SKY_cipher_RandByte(32)
     #assert error == 0
     data = "12345678901234567890123456789012"
+    '''
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
-    '''
+    
     error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
             data, pubkey, seckey)
     assert error == 0
