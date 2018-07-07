@@ -19,14 +19,14 @@ def test_loadconfig():
     error = skycoin.SKY_cli_Setenv("COIN", old_coin)
     assert error == 0
 
-'''
+
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     encrypt = skycoin.encrypt__Sha256Xor()
     error, data = skycoin.SKY_cipher_RandByte(32)
     assert error == 0
     assert len(data) == 32
-    pwd = b"pwd"
+    pwd = "pwd"
     error, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
             encrypt, data, pwd)
     assert error == 0
@@ -48,10 +48,10 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     assert error == 0
     assert len(data) == 32
     error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(
-            encrypt_settings, data, b"password")
+            encrypt_settings, data, "password")
     assert error == 0
     error, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(
-            encrypt_settings, encrypted, b"password")
+            encrypt_settings, encrypted, "password")
     assert error == 0
     assert data == decrypted
 
@@ -60,7 +60,7 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
 def test_cipherAddress():
     address = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_DecodeBase58Address(
-            b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+            "2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
     assert error == 0
     error, bytes = skycoin.SKY_cipher_Address_BitcoinBytes(address)
     assert error == 0
@@ -76,7 +76,7 @@ def test_cipherAddress():
 def test_GenerateKeyPairs():
     error, data = skycoin.SKY_cipher_RandByte(32)
     assert error == 0
-    data = b"12345678901234567890123456789012"
+    data = "12345678901234567890123456789012"
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
@@ -97,7 +97,7 @@ def test_GenerateKeyPairs():
 
 def test_GenerateDeterministicKeyPairs():
     error, seed = skycoin.SKY_cipher_RandByte(32)
-    data = b"12345678901234567890123456789012"
+    data = "12345678901234567890123456789012"
     error, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
     assert error == 0
     length = len(seckeys)
@@ -115,10 +115,10 @@ def test_GenerateDeterministicKeyPairs():
 
 def test_GenerateDeterministicKeyPairsSeed():
     error, seed = skycoin.SKY_cipher_RandByte(32)
-    data = b"12345678901234567890123456789012"
+    data = "12345678901234567890123456789012"
     assert error == 0
     error, newseed, seckeys = \
             skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2)
     length = len(seckeys)
     assert length == 2
-'''
+
