@@ -23,9 +23,8 @@ def test_loadconfig():
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     encrypt = skycoin.encrypt__Sha256Xor()
-    #error, data = skycoin.SKY_cipher_RandByte(32)
-    #assert error == 0
-    data = "12345678901234567890123456789012"
+    error, data = skycoin.SKY_cipher_RandByte(32)
+    assert error == 0
     assert len(data) == 32
     pwd = "pwd"
     error, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
@@ -45,9 +44,8 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     encrypt_settings.P = 1
     encrypt_settings.KeyLen = 32
 
-    #error, data = skycoin.SKY_cipher_RandByte(32)
-    #assert error == 0
-    data = "12345678901234567890123456789012"
+    error, data = skycoin.SKY_cipher_RandByte(32)
+    assert error == 0
     assert len(data) == 32
     error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(
             encrypt_settings, data, "password")
@@ -68,14 +66,13 @@ def test_cipherAddress():
     error, bytes = skycoin.SKY_cipher_Address_BitcoinBytes(address)
     assert error == 0
     assert len(bytes) > 0
-    '''
     address2 = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_BitcoinAddressFromBytes(bytes, address2)
     assert error == 0
     assert address.isEqual(address2)
-    '''
 
-'''
+
+
 # Test with array typedefs. Array typedefs were wrapped inside a struct
 # Notice that the type used is cipher_PubKey instead of cipher__PubKey
 def test_GenerateKeyPairs():
@@ -130,4 +127,4 @@ def test_GenerateDeterministicKeyPairsSeed():
             skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2)
     length = len(seckeys)
     assert length == 2
-'''
+
