@@ -64,10 +64,11 @@ def test_cipherAddress():
     error = skycoin.SKY_cipher_DecodeBase58Address(
             "2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
     assert error == 0
-    '''
+    
     error, bytes = skycoin.SKY_cipher_Address_BitcoinBytes(address)
     assert error == 0
     assert len(bytes) > 0
+    '''
     address2 = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_BitcoinAddressFromBytes(bytes, address2)
     assert error == 0
