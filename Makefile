@@ -62,11 +62,11 @@ test:
 	tox
 
 test27: build-swig develop
-	python2.7 setup.py tests	
+	python2.7 setup.py test	
 	
 test34: build-swig develop
-	python3.4 setup.py tests
+	python3.4 setup.py test
 	
 test35: build-swig develop
-	python3.5 setup.py tests
+	python3.5 setup.py test
 	
