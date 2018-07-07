@@ -57,7 +57,7 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     assert error == 0
     assert data == decrypted
 
-'''
+
 # Test with struct containing array
 def test_cipherAddress():
     address = skycoin.cipher__Address()
@@ -96,7 +96,7 @@ def test_GenerateKeyPairs():
     assert error == 0
     assert address.isEqual(address2)
 
-
+'''
 def test_GenerateDeterministicKeyPairs():
     error, seed = skycoin.SKY_cipher_RandByte(32)
     data = "12345678901234567890123456789012"
