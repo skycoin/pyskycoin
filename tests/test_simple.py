@@ -89,13 +89,14 @@ def test_GenerateKeyPairs():
     assert error == 0
     error = skycoin.SKY_cipher_Address_Verify(address, pubkey)
     assert error == 0
+    '''
     error, address_string = skycoin.SKY_cipher_Address_String(address)
     assert error == 0
     address2 = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_DecodeBase58Address(address_string, address2)
     assert error == 0
     assert address.isEqual(address2)
-
+	'''
 '''
 def test_GenerateDeterministicKeyPairs():
     error, seed = skycoin.SKY_cipher_RandByte(32)
