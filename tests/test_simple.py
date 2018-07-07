@@ -19,7 +19,7 @@ def test_loadconfig():
     error = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
     assert error == 0
 
-'''
+
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     encrypt = skycoin.encrypt__Sha256Xor()
@@ -121,4 +121,4 @@ def test_GenerateDeterministicKeyPairsSeed():
             skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2)
     length = len(seckeys)
     assert length == 2
-'''
+
