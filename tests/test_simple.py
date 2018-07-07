@@ -23,8 +23,9 @@ def test_loadconfig():
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     encrypt = skycoin.encrypt__Sha256Xor()
-    error, data = skycoin.SKY_cipher_RandByte(32)
-    assert error == 0
+    #error, data = skycoin.SKY_cipher_RandByte(32)
+    #assert error == 0
+    data = "12345678901234567890123456789012"
     assert len(data) == 32
     pwd = "pwd"
     error, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
