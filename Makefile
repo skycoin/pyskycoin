@@ -59,7 +59,7 @@ develop:
 build-libc-swig: build-libc build-swig
 
 test: 
-	tox
+	py.test tests
 
 test27: build-swig develop
 	python2.7 setup.py test	
