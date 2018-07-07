@@ -64,6 +64,7 @@ def test_cipherAddress():
     error = skycoin.SKY_cipher_DecodeBase58Address(
             "2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
     assert error == 0
+    '''
     error, bytes = skycoin.SKY_cipher_Address_BitcoinBytes(address)
     assert error == 0
     assert len(bytes) > 0
@@ -71,15 +72,16 @@ def test_cipherAddress():
     error = skycoin.SKY_cipher_BitcoinAddressFromBytes(bytes, address2)
     assert error == 0
     assert address.isEqual(address2)
+    '''
 
-
+'''
 # Test with array typedefs. Array typedefs were wrapped inside a struct
 # Notice that the type used is cipher_PubKey instead of cipher__PubKey
 def test_GenerateKeyPairs():
     #error, data = skycoin.SKY_cipher_RandByte(32)
     #assert error == 0
     data = "12345678901234567890123456789012"
-    '''
+    
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     
@@ -99,9 +101,8 @@ def test_GenerateKeyPairs():
     error = skycoin.SKY_cipher_DecodeBase58Address(address_string, address2)
     assert error == 0
     assert address.isEqual(address2)
-    '''
-	
-'''
+    
+
 def test_GenerateDeterministicKeyPairs():
     error, seed = skycoin.SKY_cipher_RandByte(32)
     data = "12345678901234567890123456789012"
