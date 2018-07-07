@@ -19,6 +19,9 @@ install:
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo pip install tox-travis; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install swig python3.5 python3.5-dev; fi
     - eval "$(gimme 1.10)"
+    
+after_failure:
+  - cat ./.tox/py34/log/py34-*.log
 
 script: make test
 
