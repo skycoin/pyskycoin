@@ -36,7 +36,7 @@ def test_Sha256XorEncrypt():
     assert error == 0
     assert data == decrypted
 
-'''
+
 # Test with struct and slices
 def test_encrypt_ScryptChacha20poly1305Encrypt():
     encrypt_settings = skycoin.encrypt__ScryptChacha20poly1305()
@@ -45,8 +45,9 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     encrypt_settings.P = 1
     encrypt_settings.KeyLen = 32
 
-    error, data = skycoin.SKY_cipher_RandByte(32)
-    assert error == 0
+    #error, data = skycoin.SKY_cipher_RandByte(32)
+    #assert error == 0
+    data = "12345678901234567890123456789012"
     assert len(data) == 32
     error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(
             encrypt_settings, data, "password")
@@ -56,7 +57,7 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     assert error == 0
     assert data == decrypted
 
-
+'''
 # Test with struct containing array
 def test_cipherAddress():
     address = skycoin.cipher__Address()
