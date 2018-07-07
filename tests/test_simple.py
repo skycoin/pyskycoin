@@ -16,7 +16,6 @@ def test_loadconfig():
     assert error == 0
     assert new_coin == b"foocoin"
     skycoin.SKY_handle_close(configHandle)
-    assert True
     error = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
     assert error == 0
 
@@ -24,9 +23,7 @@ def test_loadconfig():
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     encrypt = skycoin.encrypt__Sha256Xor()
-   	sys.stderr.write("before randbyte")
     error, data = skycoin.SKY_cipher_RandByte(32)
-    sys.stderr.write("after randbyte")
     assert error == 0
     assert len(data) == 32
     pwd = b"pwd"
