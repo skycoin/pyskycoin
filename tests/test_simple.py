@@ -5,18 +5,18 @@ import skycoin
 
 # Test with handles and strings
 def test_loadconfig():
-    error, old_coin = skycoin.SKY_cli_Getenv("COIN")
+    error, old_coin = skycoin.SKY_cli_Getenv(b"COIN")
     assert error == 0
-    error = skycoin.SKY_cli_Setenv("COIN", "foocoin")
+    error = skycoin.SKY_cli_Setenv(b"COIN", b"foocoin")
     assert error == 0
     error, configHandle = skycoin.SKY_cli_LoadConfig()
     assert error == 0
     error, new_coin = skycoin.SKY_cli_Config_GetCoin(configHandle)
     assert error == 0
-    assert new_coin == "foocoin"
+    assert new_coin == b"foocoin"
     skycoin.SKY_handle_close(configHandle)
     assert True
-    error = skycoin.SKY_cli_Setenv("COIN", old_coin)
+    error = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
     assert error == 0
 
 '''
