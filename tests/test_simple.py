@@ -5,18 +5,18 @@ import skycoin
 
 # Test with handles and strings
 def test_loadconfig():
-    error, old_coin = skycoin.SKY_cli_Getenv("COIN")
+    error, old_coin = skycoin.SKY_cli_Getenv(b"COIN")
     assert error == 0
-    error = skycoin.SKY_cli_Setenv("COIN", "foocoin")
+    error = skycoin.SKY_cli_Setenv(b"COIN", b"foocoin")
     assert error == 0
     error, configHandle = skycoin.SKY_cli_LoadConfig()
     assert error == 0
     error, new_coin = skycoin.SKY_cli_Config_GetCoin(configHandle)
     assert error == 0
-    assert new_coin == "foocoin"
+    assert new_coin == b"foocoin"
     skycoin.SKY_handle_close(configHandle)
     assert True
-    error = skycoin.SKY_cli_Setenv("COIN", old_coin)
+    error = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
     assert error == 0
 
 
@@ -76,6 +76,7 @@ def test_cipherAddress():
 def test_GenerateKeyPairs():
     error, data = skycoin.SKY_cipher_RandByte(32)
     assert error == 0
+    data = b"12345678901234567890123456789012"
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
@@ -96,6 +97,7 @@ def test_GenerateKeyPairs():
 
 def test_GenerateDeterministicKeyPairs():
     error, seed = skycoin.SKY_cipher_RandByte(32)
+    data = b"12345678901234567890123456789012"
     error, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
     assert error == 0
     length = len(seckeys)
@@ -113,6 +115,7 @@ def test_GenerateDeterministicKeyPairs():
 
 def test_GenerateDeterministicKeyPairsSeed():
     error, seed = skycoin.SKY_cipher_RandByte(32)
+    data = b"12345678901234567890123456789012"
     assert error == 0
     error, newseed, seckeys = \
             skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 2)
