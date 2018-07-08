@@ -26,6 +26,8 @@ matrix:
           sources: [deadsnakes]
           packages: [python3.6, python3.6-dev]
     - language: generic
+      sudo: required
+      dist: xenial
       env:
         - TOXENV=py37
         - PYTHON=3.7
