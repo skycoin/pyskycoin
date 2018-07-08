@@ -33,7 +33,8 @@ matrix:
         - PYTHON=3.7
       addons:
         apt:
-          sources: [deadsnakes]
+          sources:
+            - sourceline: 'ppa:deadsnakes/ppa'
           packages: [python3.7, python3.7-dev]
 
 before_install:
