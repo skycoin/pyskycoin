@@ -33,24 +33,24 @@ matrix:
           packages: [python3.6, python3.6-dev]
     - os: osx
       languague: generic
-        env:
-          - PYTHON=2.7
-          - TOXENV=py27
+      env:
+        - PYTHON=2.7
+        - TOXENV=py27
     - os: osx
       languague: generic
-        env:
-          - PYTHON=3.4
-          - TOXENV=py34
+      env:
+        - PYTHON=3.4
+        - TOXENV=py34
     - os: osx
       languague: generic
-        env:
-          - PYTHON=3.5
-          - TOXENV=py35
+      env:
+        - PYTHON=3.5
+        - TOXENV=py35
     - os: osx
       languague: generic
-        env:
-          - PYTHON=3.6
-          - TOXENV=py36
+      env:
+        - PYTHON=3.6
+        - TOXENV=py36
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
