@@ -39,17 +39,17 @@ matrix:
     - os: osx
       languague: generic
       env:
-        - PYTHON=3.4
+        - PYTHON=3.4.8
         - TOXENV=py34
     - os: osx
       languague: generic
       env:
-        - PYTHON=3.5
+        - PYTHON=3.5.5
         - TOXENV=py35
     - os: osx
       languague: generic
       env:
-        - PYTHON=3.6
+        - PYTHON=3.6.5
         - TOXENV=py36
 
 before_install:
