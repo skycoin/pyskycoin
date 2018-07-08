@@ -8,19 +8,23 @@ matrix:
     - python: 2.7
       env:
         - TOXENV=py27
-        - PYVERSION=2.7
+        - PYTHON=2.7
     - python: 3.4
       env:
         - TOXENV=py34
-        - PYVERSION=3.4
+        - PYTHON=3.4
     - python: 3.5
       env:
         - TOXENV=py35
-        - PYVERSION=3.5
+        - PYTHON=3.5
     - python: 3.6
       env:
         - TOXENV=py36
-        - PYVERSION=3.6
+        - PYTHON=3.6
+      addons:
+        apt:
+          sources: [deadsnakes]
+          packages: [python3.6, python3.6-dev]
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -29,7 +33,7 @@ before_install:
 
 install:
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo pip install tox-travis; fi
-    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install python${PYVERSION}-dev; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install python${PYTHON}-dev; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then mkdir swig_build && cd swig_build && wget http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && tar -zxf swig-3.0.12.tar.gz && cd swig-3.0.12 && sudo ./configure --prefix=/usr && sudo make && sudo make install && cd ../../ && sudo rm -rf swig_build ; fi
     - eval "$(gimme 1.10)"
     
