@@ -24,7 +24,7 @@ export PATH="/Users/travis/.pyenv/shims:${PATH}"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
-python -m pip install --upgrade pip setuptools wheel
+python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
 
 # Create and activate python virtual environment
 #pyenv virtualenv $PYTHON venv;
