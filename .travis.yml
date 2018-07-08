@@ -1,26 +1,28 @@
 # this file is *not* meant to cover or endorse the use of travis, but rather to
 # help confirm pull requests to this project.
 
-language: python
-
 matrix:
   include:
     - os: linux
+      language: python
       python: 2.7
       env:
         - TOXENV=py27
         - PYTHON=2.7
     - os: linux
+      language: python
       python: 3.4
       env:
         - TOXENV=py34
         - PYTHON=3.4
     - os: linux
+      language: python
       python: 3.5
       env:
         - TOXENV=py35
         - PYTHON=3.5
     - os: linux
+      language: python
       python: 3.6
       env:
         - TOXENV=py36
