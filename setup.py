@@ -78,7 +78,7 @@ library_file = path.join(lib_path, 'libskycoin.a')
 
 setup(
 	name='Pyskycoin',  # Required
-    version='0.24',  # Required
+    version='0.24.1',  # Required
 	description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
