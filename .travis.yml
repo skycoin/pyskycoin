@@ -25,7 +25,7 @@ matrix:
         apt:
           sources: [deadsnakes]
           packages: [python3.6, python3.6-dev]
-    - python: 3.7
+    - language: generic
       env:
         - TOXENV=py37
         - PYTHON=3.7
