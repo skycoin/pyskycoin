@@ -10,8 +10,8 @@ brew install swig;
 brew install gimme;
 
 # Install Python
-pyenv install $PYTHON
-pyenv global $PYTHON 2.7
+pyenv install $PYTHON 2.7.14
+pyenv global $PYTHON 2.7.14
 
 # Prepare and initialize pyenv environment
 export PYENV_VERSION=$PYTHON
