@@ -11,7 +11,7 @@ brew install gimme;
 
 # Install Python
 pyenv install $PYTHON
-pyenv local 2.7
+pyenv local $PYTHON
 
 # Prepare and initialize pyenv environment
 export PYENV_VERSION=$PYTHON
