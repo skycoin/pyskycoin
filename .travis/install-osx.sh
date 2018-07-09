@@ -19,9 +19,9 @@ pyenv which python${PYTHOB}
 eval 'alias python$(echo $PYTHON | cut -d . -f 1,2)=$(pyenv which python3)'
 eval 'alias python2.7=$(pyenv which python2.7)'
 
-python3.4 --help
 # Prepare and initialize pyenv environment
-PYENVPATH="$(dirname "$(pyrenv which python${PYTHON})")" export PATH="$(dirname "$PYENVPATH"):/Users/travis/.pyenv/shims:${PATH}"
+export PYENVBINPATH="$(pyenv which python${PYTHON})"
+export PATH="$(dirname ${PYENVBINPATH}):/Users/travis/.pyenv/shims:${PATH}"
 echo "PATH=$PATH"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
