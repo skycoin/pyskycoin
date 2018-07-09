@@ -41,7 +41,7 @@ build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
 build-swig:
 	#Generate structs.i from skytypes.gen.h
-	rm -Rf $(LIBSWIG_DIR)/structs.i
+	rm -rf $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	{ \
