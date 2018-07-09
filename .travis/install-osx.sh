@@ -15,8 +15,12 @@ pyenv install 2.7.14
 pyenv global $PYTHON 2.7.14
 pyenv versions
 
+pyenv which python3
+
 eval 'alias python$(echo $PYTHON | cut -d . -f 1,2)=$(pyenv which python3)'
 eval 'alias python2.7=$(pyenv which python2.7)'
+
+pyenv which python3
 
 # Prepare and initialize pyenv environment
 export PYENV_VERSION=$PYTHON
