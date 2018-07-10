@@ -76,7 +76,7 @@ install:
     - eval "$(gimme 1.10)"
     
 after_failure:
-  - cat ./.tox/py34/log/py34-*.log
+  - cat ./.tox/py34/log/py35-*.log
 
 script: make test
 
