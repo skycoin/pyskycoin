@@ -76,7 +76,9 @@ lib_path = path.join(skypath, 'build', 'libskycoin')
 library_file = path.join(lib_path, 'libskycoin.a')
 extra_link_args = [library_file]
 if platform.system() == "Darwin":
-	extra_link_args.append(["-framework Foundation", "-lz", "-framework Security"])
+	extra_link_args.append("-framework Foundation")
+	extra_link_args.append("-lz")
+	extra_link_args.append("-framework Security")
 
 setup(
 	name='Pyskycoin',  # Required
