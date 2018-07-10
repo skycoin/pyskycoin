@@ -9,6 +9,8 @@ brew install pyenv-virtualenv
 brew install swig;
 brew install gimme;
 
+curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+sudo python /tmp/get-pip.py
 python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
 
 # Install Python
