@@ -54,10 +54,18 @@ matrix:
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-    # Setup path in MacOS
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" && export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})" && export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )" && export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}" && echo "PATH=$PATH" && eval "python${PYCMD_VERSION} --version"; fi
+    # Setup environment and PATH in MacOS
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}" ; fi
+    # Print system env info in MacOS
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then echo "PATH=$PATH" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version" ; fi
     # Define command aliases
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)" ; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 

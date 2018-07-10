@@ -14,22 +14,6 @@ pyenv install ${PYTHON}
 pyenv install 2.7.14
 pyenv global ${PYTHON} 2.7.14
 
-# Temp vars
-export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)"
-export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
-export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )"
-
-pyenv versions
-pyenv which python${PYCMD_VERSION}
-
-export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
-echo "PATH=$PATH"
-eval "python${PYCMD_VERSION} --version"
-
-# Define command aliases
-eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})"
-eval "alias python2.7=$(pyenv which python2.7)"
-
 # Prepare and initialize pyenv environment
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
