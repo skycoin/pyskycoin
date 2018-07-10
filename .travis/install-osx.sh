@@ -24,7 +24,6 @@ pyenv which python${PYCMD_VERSION}
 
 export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
 echo "PATH=$PATH"
-sudo ln -s "${PYCMD_PATH}" "${PYCMD_DIRPATH}/python${PYCMD_VERSION}"
 
 # Define command aliases
 eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})"
