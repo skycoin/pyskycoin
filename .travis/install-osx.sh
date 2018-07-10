@@ -20,7 +20,7 @@ pyenv which python${PYTHOB}
 export PYCMDVERSION="$(echo $PYTHON | cut -d . -f 1,2)"
 export PYENVBINPATH="$(pyenv which python${PYCMDVERSION})"
 
-export PATH="$(dirname '${PYENVBINPATH}'):/Users/travis/.pyenv/shims:${PATH}"
+export PATH="$( dirname ${PYENVBINPATH} ):/Users/travis/.pyenv/shims:${PATH}"
 echo "PATH=$PATH"
 
 # Define command aliases
