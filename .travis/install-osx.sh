@@ -9,6 +9,8 @@ brew install pyenv-virtualenv
 brew install swig;
 brew install gimme;
 
+python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
+
 # Install Python
 pyenv install ${PYTHON}
 pyenv install 2.7.14
@@ -33,7 +35,6 @@ eval "alias python2.7=$(pyenv which python2.7)"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
-python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
 
 # Create and activate python virtual environment
 #pyenv virtualenv $PYTHON venv;
