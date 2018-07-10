@@ -25,7 +25,7 @@ A Python extension generated with SWIG to access Skycoin API from Python.
 ## Installation
 
 Download the repository from http://github.com/simelo/pyskycoin.git. 
-Execute make install
+Execute (python setup.py install) to install the library. Although executing (python setup.py develop) is a better choice for making changes to the library. However, when using tox these commands are not required at all because calling tox will make any necessary installation and execute the tests.
 
 ## Usage
 ### Naming
