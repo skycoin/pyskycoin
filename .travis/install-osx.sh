@@ -9,10 +9,6 @@ brew install pyenv-virtualenv
 brew install swig;
 brew install gimme;
 
-curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
-sudo python /tmp/get-pip.py
-python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
-
 # Install Python
 pyenv install ${PYTHON}
 pyenv install 2.7.14
@@ -28,6 +24,7 @@ pyenv which python${PYCMD_VERSION}
 
 export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
 echo "PATH=$PATH"
+eval "python${PYCMD_VERSION} --version"
 
 # Define command aliases
 eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})"
@@ -37,6 +34,7 @@ eval "alias python2.7=$(pyenv which python2.7)"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
+python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
 
 # Create and activate python virtual environment
 #pyenv virtualenv $PYTHON venv;
