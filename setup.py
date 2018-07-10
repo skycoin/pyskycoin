@@ -75,9 +75,8 @@ skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split('/')))
 lib_path = path.join(skypath, 'build', 'libskycoin')
 library_file = path.join(lib_path, 'libskycoin.a')
 extra_link_args = []
-extra_compile_args = []
 if platform.system() == "Darwin":
-	extra_compile_args += ["-framework", "Foundation", "-framework", "Security"]
+	extra_link_args += ["-framework", "Foundation", "-framework", "Security"]
 extra_link_args.append(library_file)
 
 setup(
@@ -123,7 +122,6 @@ setup(
                              "swig/include",
                              path.join(skypath, "include")
                          ],
-                         extra_compile_args = extra_compile_args,
                          extra_link_args=extra_link_args,
                          depends=[],
                    )],
