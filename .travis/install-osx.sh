@@ -16,13 +16,18 @@ pyenv global $PYTHON 2.7.14
 pyenv versions
 pyenv which python${PYTHOB}
 
-eval 'alias python$(echo $PYTHON | cut -d . -f 1,2)=$(pyenv which python3)'
-eval 'alias python2.7=$(pyenv which python2.7)'
+# Temp vars
+export PYCMDVERSION="$(echo $PYTHON | cut -d . -f 1,2)"
+export PYENVBINPATH="$(pyenv which python${PYCMDVERSION})"
+
+export PATH="$(dirname '${PYENVBINPATH}'):/Users/travis/.pyenv/shims:${PATH}"
+echo "PATH=$PATH"
+
+# Define command aliases
+eval "alias python$PYCMDVERSION=$(pyenv which python$PYCMDVERSION)"
+eval "alias python2.7=$(pyenv which python2.7)"
 
 # Prepare and initialize pyenv environment
-export PYENVBINPATH="$(pyenv which python${PYTHON})"
-export PATH="$(dirname ${PYENVBINPATH}):/Users/travis/.pyenv/shims:${PATH}"
-echo "PATH=$PATH"
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
