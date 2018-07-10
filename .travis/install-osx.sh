@@ -13,13 +13,14 @@ brew install gimme;
 pyenv install ${PYTHON}
 pyenv install 2.7.14
 pyenv global ${PYTHON} 2.7.14
-pyenv versions
-pyenv which python${PYTHON}
 
 # Temp vars
 export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)"
 export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
 export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )"
+
+pyenv versions
+pyenv which python${PYCMD_VERSION}
 
 export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
 echo "PATH=$PATH"
