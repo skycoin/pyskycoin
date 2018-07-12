@@ -51,6 +51,7 @@ build-swig:
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
+	rm -rf swig/pyskycoin_wrap.c
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
