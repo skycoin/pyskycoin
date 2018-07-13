@@ -56,18 +56,27 @@ build-swig:
 	
 develop:
 	python setup.py develop
+	
+develop27:
+	python2.7 setup.py develop
+	
+develop34:
+	python3.4 setup.py develop
+	
+develop35:
+	python3.5 setup.py develop
 
 build-libc-swig: build-libc build-swig
 
 test: 
 	tox
 
-test27: build-swig develop
+test27: build-libc build-swig develop27
 	python2.7 setup.py test	
 	
-test34: build-swig develop
+test34: build-libc build-swig develop34
 	python3.4 setup.py test
 	
-test35: build-swig develop
+test35: build-libc build-swig develop35
 	python3.5 setup.py test
 	
