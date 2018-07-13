@@ -17,6 +17,7 @@ FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
+HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.H")
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
@@ -28,7 +29,7 @@ configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
-$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
+$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
