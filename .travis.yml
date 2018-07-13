@@ -3,29 +3,80 @@
 
 matrix:
   include:
-      - os: osx
-        languague: generic
-        env:
-            - PYTHON=2.7
-            - TOXENV=py27
-      - os: linux
-        languague: python
-        python: 2.7
-        env:
-            - TOXENV=py27
+    - os: linux
+      language: python
+      python: 2.7
+      env:
+        - TOXENV=py27
+        - PYTHON=2.7
+    - os: linux
+      language: python
+      python: 3.4
+      env:
+        - TOXENV=py34
+        - PYTHON=3.4
+    - os: linux
+      language: python
+      python: 3.5
+      env:
+        - TOXENV=py35
+        - PYTHON=3.5
+    - os: linux
+      language: python
+      python: 3.6
+      env:
+        - TOXENV=py36
+        - PYTHON=3.6
+      addons:
+        apt:
+          sources: [deadsnakes]
+          packages: [python3.6, python3.6-dev]
+    - os: osx
+      languague: generic
+      env:
+        - PYTHON=2.7
+        - TOXENV=py27
+    - os: osx
+      languague: generic
+      env:
+        - PYTHON=3.4.8
+        - TOXENV=py34
+    - os: osx
+      languague: generic
+      env:
+        - PYTHON=3.5.5
+        - TOXENV=py35
+    - os: osx
+      languague: generic
+      env:
+        - PYTHON=3.6.5
+        - TOXENV=py36
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+    # Setup environment and PATH in MacOS
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}" ; fi
+    # Print system env info in MacOS
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then echo "PATH=$PATH" ; fi
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version" ; fi
+    # Define command aliases
+    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)" ; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 
 install:
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo pip install tox-travis; fi
-    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install swig; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update && sudo apt-get install python${PYTHON}-dev; fi
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then mkdir swig_build && cd swig_build && wget http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && tar -zxf swig-3.0.12.tar.gz && cd swig-3.0.12 && sudo ./configure --prefix=/usr && sudo make && sudo make install && cd ../../ && sudo rm -rf swig_build ; fi
     - eval "$(gimme 1.10)"
-
-after_script:
-    - cat /Users/travis/build/simelo/pyskycoin/.tox/py27/log/py27-*.log
+    
+after_failure:
+  - cat ./.tox/py35/log/py35-*.log
 
 script: make test
 

@@ -1,19 +1,25 @@
-# Include the README
-include *.md
+# Include all README
+recursive-include . *.md
 
 # Include the license file
 include LICENSE.txt
 
 include Makefile
-include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
+include gopath/src/github.com/skycoin/skycoin/Makefile
+#include gopath/src/github.com/skycoin/skycoin/build/libskycoin/libskycoin.a
 include skycoin.py
+
+recursive-include . *.s
+recursive-include . *.go
+recursive-include . *.i
+recursive-include swig/include *.h
+recursive-include gopath/src/github.com/skycoin/skycoin/include *.h
 
 recursive-include docker *
 recursive-include swig/include *
 recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
 recursive-exclude . *.orig
-
 exclude .github
 exclude .travis
 recursive-exclude .github *
