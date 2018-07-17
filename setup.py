@@ -52,7 +52,7 @@ class skycoin_build_ext(build_ext, object):
                        "the supplied 'sources' base dir "
                        "must exist" % ext.name)
 
-            make_path = os.path.realpath(os.path.join(sources_path,'..'))
+            make_path = os.path.realpath(script_dirname)
 
             make_process = subprocess.Popen('make build-libc-swig',
                                             cwd=make_path,
