@@ -29,28 +29,6 @@ class skycoin_build_ext(build_ext, object):
             # Handle unspecial extensions with the parent class' method
             super(skycoin_build_ext, self).build_extension(ext)
         else:
-            # Handle special extension
-            sources = ext.sources
-            if sources is None or not isinstance(sources, (list, tuple)):
-                raise DistutilsSetupError(
-                       "in 'ext_modules' option (extension '%s'), "
-                       "'sources' must be present and must be "
-                       "a list of source filenames" % ext.name)
-            sources = list(sources)
-
-            if len(sources)>1:
-                sources_path = os.path.commonprefix(sources)
-            else:
-                sources_path = os.path.dirname(sources[0])
-            sources_path = os.path.realpath(sources_path)
-            if not sources_path.endswith(os.path.sep):
-                sources_path+= os.path.sep
-
-            if not os.path.exists(sources_path) or not os.path.isdir(sources_path):
-                raise DistutilsSetupError(
-                       "in 'extensions' option (extension '%s'), "
-                       "the supplied 'sources' base dir "
-                       "must exist" % ext.name)
 
             make_path = os.path.realpath(script_dirname)
 
