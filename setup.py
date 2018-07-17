@@ -31,6 +31,7 @@ class skycoin_build_ext(build_ext, object):
         else:
             files = os.listdir(script_dirname)
             sys.stderr.write("files before: " + str(files))
+            print("files before: " + str(files)) 
 
             make_path = os.path.realpath(script_dirname)
 
@@ -48,6 +49,8 @@ class skycoin_build_ext(build_ext, object):
             	print("stderr:")
             	sys.stderr.write(str(stderr))
             files = os.listdir(script_dirname)
+            sys.stderr.write("files after: " + str(files))
+            print("files after: " + str(files)) 
             
             # After making the library build the c library's
             # python interface with the parent build_extension method
