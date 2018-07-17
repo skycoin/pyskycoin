@@ -30,6 +30,7 @@ configure:
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
+	rm -f $(BUILDLIBC_DIR)/libskycoin.a
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
@@ -42,7 +43,7 @@ build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
 build-swig:
 	#Generate structs.i from skytypes.gen.h
-	rm -rf $(LIBSWIG_DIR)/structs.i
+	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	{ \
