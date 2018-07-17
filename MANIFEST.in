@@ -14,12 +14,12 @@ recursive-include swig/include *.h
 recursive-include gopath/src/github.com/skycoin/skycoin/include *.h
 
 recursive-include docker *
-recursive-include swig/include *
-recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
 recursive-exclude . *.orig
 exclude .github
 exclude .travis
+exclude skycoin.py
+exclude swig *.c
 recursive-exclude .github *
 recursive-exclude .travis *
 
