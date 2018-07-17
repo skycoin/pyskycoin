@@ -18,7 +18,7 @@ recursive-include docker *
 recursive-exclude . *.orig
 exclude .github
 exclude .travis
-exclude skycoin.py
+include skycoin.py
 exclude swig *.c
 recursive-exclude .github *
 recursive-exclude .travis *
