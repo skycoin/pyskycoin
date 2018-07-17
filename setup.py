@@ -67,12 +67,12 @@ if platform.system() == "Darwin":
 extra_link_args.append(library_file)
 
 setup(
-	name='Pyskycoin',  # Required
-    version='0.24.1',  # Required
+	name='Pyskycoin', 
+    version='0.24.1', 
 	description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
-    author='stdevEclipse',  # Optional
+    author='stdevEclipse', 
     author_email='dev0003@simelo.tech',
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
@@ -90,10 +90,11 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='skycoin crypto coin currency blockchain',  # Optional
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
+    keywords='skycoin crypto coin currency blockchain',
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    py_modules = ['skycoin'],
     install_requires=[],
-    extras_require={  # Optional
+    extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
