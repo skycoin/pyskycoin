@@ -24,4 +24,6 @@ tests/mytest.py
 
 *.swp
 *.swo
+skycoin.py
+swig/pyskycoin_wrap.c
 
