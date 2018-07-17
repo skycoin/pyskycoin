@@ -29,6 +29,8 @@ class skycoin_build_ext(build_ext, object):
             # Handle unspecial extensions with the parent class' method
             super(skycoin_build_ext, self).build_extension(ext)
         else:
+            files = os.listdir(script_dirname)
+            sys.stderr.write("files before: " + str(files))
 
             make_path = os.path.realpath(script_dirname)
 
@@ -37,12 +39,16 @@ class skycoin_build_ext(build_ext, object):
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE,
                                             shell=True)
+            sys.stderr.write("files after: " + str(files))
             stdout, stderr = make_process.communicate()
+            
             print("stdout:")
             sys.stderr.write(str(stdout))
             if len(stderr) > 0:
             	print("stderr:")
             	sys.stderr.write(str(stderr))
+            files = os.listdir(script_dirname)
+            
             # After making the library build the c library's
             # python interface with the parent build_extension method
             super(skycoin_build_ext, self).build_extension(ext)
