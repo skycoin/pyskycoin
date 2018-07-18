@@ -18,11 +18,7 @@ FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
-<<<<<<< HEAD
-HEADER_FILES = $(shell find $(INCLUDE_DIR) -type f -name "*.h")
-=======
 HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
->>>>>>> skycoin/develop
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
