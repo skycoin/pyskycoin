@@ -78,7 +78,7 @@ install:
 after_failure:
   - cat ./.tox/py35/log/py35-*.log
 
-script: make test
+script: make test-ci
 
 notifications:
   email: false
