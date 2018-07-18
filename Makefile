@@ -2,6 +2,7 @@
 .ONESHELL:
 SHELL := /bin/bash
 
+PYTHON_BIN = python
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
 SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
@@ -56,28 +57,13 @@ build-swig:
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
-	python setup.py develop
+	$(PYTHON_BIN) setup.py develop
 	
-develop27:
-	python2.7 setup.py develop
-	
-develop34:
-	python3.4 setup.py develop
-	
-develop35:
-	python3.5 setup.py develop
-
 build-libc-swig: build-libc build-swig
 
-test: 
+test-ci: 
 	tox
 
-test27: build-libc build-swig develop27
-	python2.7 setup.py test	
-	
-test34: build-libc build-swig develop34
-	python3.4 setup.py test
-	
-test35: build-libc build-swig develop35
-	python3.5 setup.py test
-	
+test: build-libc build-swig develop27
+	$(PYTHON_BIN) setup.py test	
+
