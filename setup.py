@@ -48,9 +48,9 @@ class skycoin_build_ext(build_ext, object):
 
             if not os.path.exists(sources_path) or not os.path.isdir(sources_path):
                 raise DistutilsSetupError(
-                       "in 'extensions' option (extension '%s'), "
-                       "the supplied 'sources' base dir "
-                       "must exist" % ext.name)
+                    "in 'extensions' option (extension '%s'), "
+                    "the supplied 'sources' base dir "
+                     "must exist" % ext.name)
 
             make_path = os.path.realpath(os.path.join(sources_path,'..'))
 
@@ -63,8 +63,8 @@ class skycoin_build_ext(build_ext, object):
             print("stdout:")
             sys.stderr.write(str(stdout))
             if len(stderr) > 0:
-            	print("stderr:")
-            	sys.stderr.write(str(stderr))
+                print("stderr:")
+                sys.stderr.write(str(stderr))
             # After making the library build the c library's
             # python interface with the parent build_extension method
             super(skycoin_build_ext, self).build_extension(ext)
@@ -76,13 +76,13 @@ lib_path = path.join(skypath, 'build', 'libskycoin')
 library_file = path.join(lib_path, 'libskycoin.a')
 extra_link_args = []
 if platform.system() == "Darwin":
-	extra_link_args += ["-framework", "Foundation", "-framework", "Security"]
+    extra_link_args += ["-framework", "Foundation", "-framework", "Security"]
 extra_link_args.append(library_file)
 
 setup(
-	name='Pyskycoin',  # Required
-    version='0.24.1',  # Required
-	description='Skycoin Python Library',
+    name='Pyskycoin', 
+    version='0.24.1',  
+    description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional
@@ -94,19 +94,20 @@ setup(
         #   4 - Beta
         #   5 - Production/Stable
         'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
+         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
+         'Programming Language :: Python :: 3.6',
     ],
-    keywords='skycoin crypto coin currency blockchain',  # Optional
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
+    keywords='skycoin crypto coin currency blockchain',  
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),  
+    py_modules=['skycoin'],
     install_requires=[],
-    extras_require={  # Optional
+    extras_require={  
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
@@ -118,12 +119,12 @@ setup(
     },
     cmdclass = {'build_ext': skycoin_build_ext},
     ext_modules = [Extension("_skycoin", ["swig/pyskycoin_wrap.c"],
-                         include_dirs=[
-                             "swig/include",
+                        include_dirs=[
+                            "swig/include",
                              path.join(skypath, "include")
-                         ],
-                         extra_link_args=extra_link_args,
-                         depends=[],
-                   )],
+                        ],
+                        extra_link_args=extra_link_args,
+                        depends=[],
+                    )],
 
 )
