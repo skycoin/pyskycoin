@@ -116,6 +116,9 @@ class cipher_PubKey(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_PubKey, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_PubKey___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -138,6 +141,9 @@ class cipher_SecKey(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_SecKey, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_SecKey___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -160,6 +166,9 @@ class cipher_Ripemd160(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_Ripemd160, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_Ripemd160___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -182,6 +191,9 @@ class cipher_Sig(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_Sig, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_Sig___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -204,6 +216,9 @@ class cipher_SHA256(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_SHA256, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_SHA256___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -226,6 +241,9 @@ class cipher_Checksum(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher_Checksum, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher_Checksum___eq__(self, a)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:
@@ -254,6 +272,9 @@ class cipher_SecKeys(_object):
 
     def setAt(self, i, seckey):
         return _skycoin.cipher_SecKeys_setAt(self, i, seckey)
+
+    def __eq__(self, a):
+        return _skycoin.cipher_SecKeys___eq__(self, a)
 
     def allocate(self, n):
         return _skycoin.cipher_SecKeys_allocate(self, n)
@@ -292,6 +313,9 @@ class cipher_PubKeys(_object):
 
     def setAt(self, i, pubkey):
         return _skycoin.cipher_PubKeys_setAt(self, i, pubkey)
+
+    def __eq__(self, a):
+        return _skycoin.cipher_PubKeys___eq__(self, a)
 
     def allocate(self, n):
         return _skycoin.cipher_PubKeys_allocate(self, n)
@@ -2291,8 +2315,8 @@ class cipher__Address(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, cipher__Address, name)
     __repr__ = _swig_repr
 
-    def isEqual(self, a):
-        return _skycoin.cipher__Address_isEqual(self, a)
+    def __eq__(self, a):
+        return _skycoin.cipher__Address___eq__(self, a)
     __swig_setmethods__["Version"] = _skycoin.cipher__Address_Version_set
     __swig_getmethods__["Version"] = _skycoin.cipher__Address_Version_get
     if _newclass:
