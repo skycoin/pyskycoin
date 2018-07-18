@@ -35,7 +35,7 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
-	rm -Rf swig/include/libskycoin.h
+	rm -f swig/include/libskycoin.h
 	mkdir -p swig/include
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
@@ -54,8 +54,8 @@ build-swig:
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -f swig/pyskycoin_wrap.c
 	rm -f skycoin.py
+	rm -f swig/pyskycoin_wrap.c
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:

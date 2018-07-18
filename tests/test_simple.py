@@ -68,7 +68,7 @@ def test_cipherAddress():
     address2 = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_BitcoinAddressFromBytes(bytes, address2)
     assert error == 0
-    assert address.isEqual(address2)
+    assert address == address2
 
 
 
@@ -96,7 +96,7 @@ def test_GenerateKeyPairs():
     address2 = skycoin.cipher__Address()
     error = skycoin.SKY_cipher_DecodeBase58Address(address_string, address2)
     assert error == 0
-    assert address.isEqual(address2)
+    assert address == address2
     
 
 def test_GenerateDeterministicKeyPairs():
