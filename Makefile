@@ -2,6 +2,7 @@
 .ONESHELL:
 SHELL := /bin/bash
 
+PYTHON_BIN = python
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
 SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
@@ -17,7 +18,11 @@ FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
+<<<<<<< HEAD
 HEADER_FILES = $(shell find $(INCLUDE_DIR) -type f -name "*.h")
+=======
+HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
+>>>>>>> skycoin/develop
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
@@ -58,19 +63,13 @@ build-swig:
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
-	python setup.py develop
-
+	$(PYTHON_BIN) setup.py develop
+	
 build-libc-swig: build-libc build-swig
 
-test: 
+test-ci: 
 	tox
 
-test27: build-swig develop
-	python2.7 setup.py test	
-	
-test34: build-swig develop
-	python3.4 setup.py test
-	
-test35: build-swig develop
-	python3.5 setup.py test
-	
+test: build-libc build-swig develop
+	$(PYTHON_BIN) setup.py test	
+
