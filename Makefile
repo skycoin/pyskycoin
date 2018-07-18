@@ -2,6 +2,7 @@
 .ONESHELL:
 SHELL := /bin/bash
 
+PYTHON_BIN = python
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
 SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
@@ -17,6 +18,7 @@ FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
 SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
+HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
@@ -28,7 +30,8 @@ configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
-$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES)
+$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
+	rm -f $(BUILDLIBC_DIR)/libskycoin.a
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
 	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
@@ -41,7 +44,7 @@ build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
 
 build-swig:
 	#Generate structs.i from skytypes.gen.h
-	rm -rf $(LIBSWIG_DIR)/structs.i
+	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
 	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	{ \
@@ -51,22 +54,18 @@ build-swig:
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
+	rm -f swig/pyskycoin_wrap.c
+	rm -f skycoin.py
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 	
 develop:
-	python setup.py develop
-
+	$(PYTHON_BIN) setup.py develop
+	
 build-libc-swig: build-libc build-swig
 
-test: 
+test-ci: 
 	tox
 
-test27: build-swig develop
-	python2.7 setup.py test	
-	
-test34: build-swig develop
-	python3.4 setup.py test
-	
-test35: build-swig develop
-	python3.5 setup.py test
-	
+test: build-libc build-swig develop
+	$(PYTHON_BIN) setup.py test	
+
