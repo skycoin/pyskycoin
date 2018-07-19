@@ -84,6 +84,7 @@ setup(
     version='0.24.1',  # Required
 	description='Skycoin Python Library',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional
     author_email='dev0003@simelo.tech',
