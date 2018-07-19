@@ -2599,6 +2599,9 @@ class coin__BlockHeader(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__BlockHeader, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.coin__BlockHeader___eq__(self, a)
     __swig_setmethods__["Version"] = _skycoin.coin__BlockHeader_Version_set
     __swig_getmethods__["Version"] = _skycoin.coin__BlockHeader_Version_get
     if _newclass:
