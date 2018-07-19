@@ -391,8 +391,10 @@ def test_TestSecKeyHashTest():
 
 def test_TestGenerateDeterministicKeyPairsUsesAllBytes():
     # Tests that if a seed >128 bits is used, the generator does not ignore bits > 128
-    seed = "property diet little foster provide disagree witness mountain alley weekend kitten general"
+    seed = b"property diet little foster provide disagree witness mountain alley weekend kitten general"
     secret_keys =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 3)[1:]
     secret_keys_2 =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed[:16], 3)[1:]
+    # _, secret_keys =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 3)
+    # _, secret_keys_2 =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed[:16], 3)
     assert secret_keys != secret_keys_2
 

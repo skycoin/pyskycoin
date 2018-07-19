@@ -59,6 +59,10 @@ def test_TestSHA256Set():
     assert skycoin.SKY_cipher_SHA256_Set(h, b) == error["SKY_ERROR"]
     _, b = skycoin.SKY_cipher_RandByte(32)
     assert skycoin.SKY_cipher_SHA256_Set(h, b) == error["SKY_OK"]
+    _, b = skycoin.SKY_cipher_RandByte(32)
+    skycoin.SKY_cipher_SHA256_Set(h, b)
+    assert h.toStr()[:] == b
+
 
 
 def test_TestSHA256Hex():
@@ -125,6 +129,8 @@ def test_TestSHA256FromHex():
     h = skycoin.cipher_SHA256()
     skycoin.SKY_cipher_SumSHA256(b, h)
 
+    # Valid hex hash
+
 
 # Not implement
 def test_TestMustSHA256FromHex():
@@ -152,6 +158,7 @@ def test_TestDoubleSHA256():
     skycoin.SKY_cipher_DoubleSHA256(b, h)
     assert h != skycoin.cipher_SHA256()
     assert h != freshSumSHA256(b)
+
 
 def test_TestAddSHA256():
     pass
