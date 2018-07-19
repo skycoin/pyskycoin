@@ -81,5 +81,6 @@ after_failure:
 script: make test-ci
 
 notifications:
-  email: false
+  email:
+    - travis@skycoin.net
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
