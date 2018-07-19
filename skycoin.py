@@ -1545,8 +1545,8 @@ def SKY_coin_Create_Transactions():
     return _skycoin.SKY_coin_Create_Transactions()
 SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
 
-def SKY_coin_Get_Transactions_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transactions_Object(p0, p1)
+def SKY_coin_Get_Transactions_Object(p0):
+    return _skycoin.SKY_coin_Get_Transactions_Object(p0)
 SKY_coin_Get_Transactions_Object = _skycoin.SKY_coin_Get_Transactions_Object
 
 def SKY_coin_Transactions_Length(p0):
@@ -2205,8 +2205,8 @@ def SKY_coin_CreateUnspent(p0, p1, p2, p3):
     return _skycoin.SKY_coin_CreateUnspent(p0, p1, p2, p3)
 SKY_coin_CreateUnspent = _skycoin.SKY_coin_CreateUnspent
 
-def SKY_coin_GetBlockObject(p0, p1):
-    return _skycoin.SKY_coin_GetBlockObject(p0, p1)
+def SKY_coin_GetBlockObject(p0):
+    return _skycoin.SKY_coin_GetBlockObject(p0)
 SKY_coin_GetBlockObject = _skycoin.SKY_coin_GetBlockObject
 
 def SKY_coin_GetBlockBody(p0):

@@ -125,3 +125,22 @@ def test_GenerateDeterministicKeyPairsSeed():
     length = len(seckeys)
     assert length == 2
 
+def test_Transactions():
+	error, handle = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error  = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	assert error == 0
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_PushOutput(handle, address, 1000000, 100)
+	assert error == 0
+	error, transaction = skycoin.SKY_coin_Get_Transaction_Object(handle)
+	assert error == 0
+	assert transaction.Length >= 0
+	skycoin.SKY_handle_close(handle)
+
+	
+	
