@@ -2077,6 +2077,18 @@ def SKY_wallet_Balance_IsZero(p0):
     return _skycoin.SKY_wallet_Balance_IsZero(p0)
 SKY_wallet_Balance_IsZero = _skycoin.SKY_wallet_Balance_IsZero
 
+def SKY_ripemd160_New(p0):
+    return _skycoin.SKY_ripemd160_New(p0)
+SKY_ripemd160_New = _skycoin.SKY_ripemd160_New
+
+def SKY_ripemd160_Write(p0, p1):
+    return _skycoin.SKY_ripemd160_Write(p0, p1)
+SKY_ripemd160_Write = _skycoin.SKY_ripemd160_Write
+
+def SKY_ripemd160_Sum(p0, p1):
+    return _skycoin.SKY_ripemd160_Sum(p0, p1)
+SKY_ripemd160_Sum = _skycoin.SKY_ripemd160_Sum
+
 def SKY_coin_NewBlock(p0, p1, p2, p3, p4):
     return _skycoin.SKY_coin_NewBlock(p0, p1, p2, p3, p4)
 SKY_coin_NewBlock = _skycoin.SKY_coin_NewBlock
