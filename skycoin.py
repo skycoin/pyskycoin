@@ -1457,8 +1457,8 @@ def SKY_coin_Transaction_Copy(p0):
     return _skycoin.SKY_coin_Transaction_Copy(p0)
 SKY_coin_Transaction_Copy = _skycoin.SKY_coin_Transaction_Copy
 
-def SKY_coin_Get_Transaction_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transaction_Object(p0, p1)
+def SKY_coin_Get_Transaction_Object(p0):
+    return _skycoin.SKY_coin_Get_Transaction_Object(p0)
 SKY_coin_Get_Transaction_Object = _skycoin.SKY_coin_Get_Transaction_Object
 
 def SKY_coin_Transaction_ResetInputs(p0, p1):
