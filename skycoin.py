@@ -122,6 +122,9 @@ class cipher_PubKey(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_PubKey_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_PubKey_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -150,6 +153,9 @@ class cipher_SecKey(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_SecKey_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_SecKey_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -178,6 +184,9 @@ class cipher_Ripemd160(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_Ripemd160_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Ripemd160_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -206,6 +215,9 @@ class cipher_Sig(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_Sig_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Sig_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -234,6 +246,9 @@ class cipher_SHA256(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_SHA256_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_SHA256_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -262,6 +277,9 @@ class cipher_Checksum(_object):
 
     def compareToString(self, str):
         return _skycoin.cipher_Checksum_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Checksum_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:
@@ -1439,8 +1457,8 @@ def SKY_coin_Transaction_Copy(p0):
     return _skycoin.SKY_coin_Transaction_Copy(p0)
 SKY_coin_Transaction_Copy = _skycoin.SKY_coin_Transaction_Copy
 
-def SKY_coin_Get_Transaction_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transaction_Object(p0, p1)
+def SKY_coin_Get_Transaction_Object(p0):
+    return _skycoin.SKY_coin_Get_Transaction_Object(p0)
 SKY_coin_Get_Transaction_Object = _skycoin.SKY_coin_Get_Transaction_Object
 
 def SKY_coin_Transaction_ResetInputs(p0, p1):
@@ -1527,8 +1545,8 @@ def SKY_coin_Create_Transactions():
     return _skycoin.SKY_coin_Create_Transactions()
 SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
 
-def SKY_coin_Get_Transactions_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transactions_Object(p0, p1)
+def SKY_coin_Get_Transactions_Object(p0):
+    return _skycoin.SKY_coin_Get_Transactions_Object(p0)
 SKY_coin_Get_Transactions_Object = _skycoin.SKY_coin_Get_Transactions_Object
 
 def SKY_coin_Transactions_Length(p0):
@@ -2187,8 +2205,8 @@ def SKY_coin_CreateUnspent(p0, p1, p2, p3):
     return _skycoin.SKY_coin_CreateUnspent(p0, p1, p2, p3)
 SKY_coin_CreateUnspent = _skycoin.SKY_coin_CreateUnspent
 
-def SKY_coin_GetBlockObject(p0, p1):
-    return _skycoin.SKY_coin_GetBlockObject(p0, p1)
+def SKY_coin_GetBlockObject(p0):
+    return _skycoin.SKY_coin_GetBlockObject(p0)
 SKY_coin_GetBlockObject = _skycoin.SKY_coin_GetBlockObject
 
 def SKY_coin_GetBlockBody(p0):
@@ -2347,6 +2365,9 @@ class cipher__Address(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher__Address___eq__(self, a)
+
+    def toStr(self):
+        return _skycoin.cipher__Address_toStr(self)
     __swig_setmethods__["Version"] = _skycoin.cipher__Address_Version_set
     __swig_getmethods__["Version"] = _skycoin.cipher__Address_Version_get
     if _newclass:
