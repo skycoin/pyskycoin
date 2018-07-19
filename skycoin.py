@@ -119,6 +119,9 @@ class cipher_PubKey(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_PubKey___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_PubKey_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -144,6 +147,9 @@ class cipher_SecKey(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_SecKey___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_SecKey_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -169,6 +175,9 @@ class cipher_Ripemd160(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Ripemd160___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Ripemd160_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -194,6 +203,9 @@ class cipher_Sig(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Sig___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Sig_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -219,6 +231,9 @@ class cipher_SHA256(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_SHA256___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_SHA256_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -244,6 +259,9 @@ class cipher_Checksum(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Checksum___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Checksum_compareToString(self, str)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:

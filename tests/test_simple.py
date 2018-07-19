@@ -97,10 +97,6 @@ def test_GenerateKeyPairs():
     error = skycoin.SKY_cipher_DecodeBase58Address(address_string, address2)
     assert error == 0
     assert address == address2
-    x = skycoin.coin__BlockHeader()
-    y = skycoin.coin__BlockHeader()
-    if x == y:
-    	assert True
     
 
 def test_GenerateDeterministicKeyPairs():
