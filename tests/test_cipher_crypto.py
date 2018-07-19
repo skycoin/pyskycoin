@@ -1,5 +1,4 @@
 import skycoin
-from skycoin import SKY_cipher_GenerateKeyPair
 
 
 def test_TestNewPubKey():
@@ -379,10 +378,21 @@ def test_TestSecKeTest():
     assert skycoin.SKY_cipher_TestSecKey(secret_key) == 0
     assert skycoin.SKY_cipher_TestSecKey(secret_key_2) != 0
 
+def test_TestSecKeyHashTest():
+    public_key = skycoin.cipher_PubKey()
+    secret_key = skycoin.cipher_SecKey()
+    secret_key_2 = skycoin.cipher_SecKey()
+    skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
+    sha_sum_1 = skycoin.cipher_SHA256()
+    _, data = skycoin.SKY_cipher_RandByte(256)
+    skycoin.SKY_cipher_SumSHA256(data, sha_sum_1)
+    assert skycoin.SKY_cipher_TestSecKeyHash(secret_key, sha_sum_1) == 0
+    assert skycoin.SKY_cipher_TestSecKeyHash(secret_key_2, sha_sum_1) != 0
 
-
-
-
-
-
+def test_TestGenerateDeterministicKeyPairsUsesAllBytes():
+    # Tests that if a seed >128 bits is used, the generator does not ignore bits > 128
+    seed = "property diet little foster provide disagree witness mountain alley weekend kitten general"
+    secret_keys =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 3)[1:]
+    secret_keys_2 =  skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed[:16], 3)[1:]
+    assert secret_keys != secret_keys_2
 
