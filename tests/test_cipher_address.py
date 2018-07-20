@@ -1,6 +1,5 @@
 import skycoin
-from skycoin import _GoString_, SKY_cipher_BitcoinAddressFromPubkey
-
+from tests.utils.skyerror import error
 
 # cipher address
 def test_TestMustDecodeBase58Address():
@@ -9,29 +8,28 @@ def test_TestMustDecodeBase58Address():
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
     addres = skycoin.cipher__Address()
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
-    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == 0
+    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == error["SKY_OK"]
 
     assert skycoin.SKY_cipher_MustDecodeBase58Address(b'""', addres) != 0
     assert skycoin.SKY_cipher_MustDecodeBase58Address(b'"cascs"', addres) != 0
 
     _, byte = skycoin.SKY_cipher_Address_Bytes(addres)
     _, h = skycoin.SKY_base58_Hex2Base58(byte[:int(len(byte) / 2)])
-    assert skycoin.SKY_cipher_MustDecodeBase58Address(b'h', addres) != 0
+    assert skycoin.SKY_cipher_MustDecodeBase58Address(h, addres) != 0
 
     _, h = skycoin.SKY_base58_Hex2Base58(byte)
-    assert skycoin.SKY_cipher_MustDecodeBase58Address(h, addres) == 0
+    assert skycoin.SKY_cipher_MustDecodeBase58Address(h, addres) == error["SKY_OK"]
 
     addres_2 = skycoin.cipher__Address()
     skycoin.SKY_cipher_MustDecodeBase58Address(h, addres_2)
     assert addres == addres_2
 
     _, addres_str = skycoin.SKY_cipher_Address_String(addres)
-    assert skycoin.SKY_cipher_MustDecodeBase58Address(addres_str, addres) == 0
+    assert skycoin.SKY_cipher_MustDecodeBase58Address(addres_str, addres) == error["SKY_OK"]
     skycoin.SKY_cipher_MustDecodeBase58Address(addres_str, addres_2)
     assert addres == addres_2
 
     # preceding whitespace is invalid
-    badAddr = skycoin.cipher__Address()
     badAddr = b'" " + addres_str'
     assert skycoin.SKY_cipher_MustDecodeBase58Address(badAddr, addres) != 0
 
@@ -45,7 +43,7 @@ def test_TestMustDecodeBase58Address():
 
     # trailing zeroes are invalid
     badAddr = b'addres_str + "000"'
-    assert skycoin.SKY_cipher_MustDecodeBase58Address(badAddr, addres) != 0
+    assert skycoin.SKY_cipher_MustDecodeBase58Address(badAddr, addres) != error["SKY_OK"]
 
 
 def test_TestDecodeBase58Address():
@@ -54,7 +52,7 @@ def test_TestDecodeBase58Address():
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
     addres = skycoin.cipher__Address()
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
-    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == 0
+    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == error["SKY_OK"]
 
     addres_2 = skycoin.cipher__Address()
 
@@ -63,28 +61,28 @@ def test_TestDecodeBase58Address():
 
     _, byte = skycoin.SKY_cipher_Address_Bytes(addres)
     _, h = skycoin.SKY_base58_Hex2Base58(byte[:int(len(byte) / 2)])
-    assert skycoin.SKY_cipher_DecodeBase58Address(b'h', addres_2) != 0
+    assert skycoin.SKY_cipher_DecodeBase58Address(h, addres_2) != 0
     _, h = skycoin.SKY_base58_Hex2Base58(byte)
-    assert skycoin.SKY_cipher_DecodeBase58Address(h, addres_2) == 0
+    assert skycoin.SKY_cipher_DecodeBase58Address(h, addres_2) == error["SKY_OK"]
     assert addres == addres_2
 
     _, addres_str = skycoin.SKY_cipher_Address_String(addres)
-    assert skycoin.SKY_cipher_DecodeBase58Address(addres_str, addres_2) == 0
+    assert skycoin.SKY_cipher_DecodeBase58Address(addres_str, addres_2) == error["SKY_OK"]
     assert addres == addres_2
 
-	#  preceding whitespace is invalid
+    #  preceding whitespace is invalid
     addres_2_str = b'" " + a_str'
     assert skycoin.SKY_cipher_DecodeBase58Address(addres_2_str, addres_2) != 0
 
-	#  preceding zeroes are invalid
+    #  preceding zeroes are invalid
     addres_2_str = b'"000" + a_str'
     assert skycoin.SKY_cipher_DecodeBase58Address(addres_2_str, addres_2) != 0
 
-	#  trailing whitespace is invalid
+    #  trailing whitespace is invalid
     addres_2_str = b'a_str + " "'
     assert skycoin.SKY_cipher_DecodeBase58Address(addres_2_str, addres_2) != 0
 
-	# trailing zeroes are invalid
+    # trailing zeroes are invalid
     addres_2_str = b'a_str + "000"'
     assert skycoin.SKY_cipher_DecodeBase58Address(addres_2_str, addres_2) != 0
 
@@ -97,7 +95,7 @@ def test_TestAddressFromBytes():
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
     addres_2 = skycoin.cipher__Address()
     _, byte = skycoin.SKY_cipher_Address_Bytes(addres)
-    assert skycoin.SKY_cipher_AddressFromBytes(byte , addres_2) == 0
+    assert skycoin.SKY_cipher_AddressFromBytes(byte , addres_2) == error["SKY_OK"]
     assert addres ==addres_2
 
     # Invalid number of bytes
@@ -124,7 +122,7 @@ def test_TestBitcoinAddressFromBytes():
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
     addres_2 = skycoin.cipher__Address()
     _, byte = skycoin.SKY_cipher_Address_BitcoinBytes(addres)
-    assert skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, addres_2) == 0
+    assert skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, addres_2) == error["SKY_OK"]
     assert addres_2 == addres
 
     # Invalid number of bytes
@@ -152,7 +150,7 @@ def test_TestAddressRoundtrip():
     addres_2 = skycoin.cipher__Address()
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
     _, byte = skycoin.SKY_cipher_Address_BitcoinBytes(addres)
-    assert skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, addres_2) == 0
+    assert skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, addres_2) == error["SKY_OK"]
     assert addres == addres_2
     _, addres_str = skycoin.SKY_cipher_Address_String(addres)
     _, addres_2_str = skycoin.SKY_cipher_Address_String(addres_2)
@@ -166,7 +164,7 @@ def test_TestAddressVerify():
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
 
     # Valid pubkey+address
-    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == 0
+    assert skycoin.SKY_cipher_Address_Verify(addres, public_key) == error["SKY_OK"]
 
     # Invalid pubkey
     public_key_temp = skycoin.cipher_PubKey()
@@ -186,11 +184,11 @@ def test_TestAddressString():
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
     _, addres_str = skycoin.SKY_cipher_Address_String(addres)
     addres_2 = skycoin.cipher__Address()
-    assert skycoin.SKY_cipher_DecodeBase58Address( addres_str, addres_2) == 0
+    assert skycoin.SKY_cipher_DecodeBase58Address( addres_str, addres_2) == error["SKY_OK"]
     assert addres == addres_2
     _, addres_2_str = skycoin.SKY_cipher_Address_String(addres_2)
     addres_3 = skycoin.cipher__Address()
-    assert skycoin.SKY_cipher_DecodeBase58Address( addres_2_str, addres_3) == 0
+    assert skycoin.SKY_cipher_DecodeBase58Address( addres_2_str, addres_3) == error["SKY_OK"]
     assert addres_2 ==addres_3
 
 def test_TestBitcoinAddress1():
@@ -235,7 +233,7 @@ def test_TestBitcoinWIPRoundTrio():
     secret_key_2 = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key_1)
     _, wip_1 = skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(secret_key_1)
-    assert skycoin.SKY_cipher_SecKeyFromWalletImportFormat(wip_1, secret_key_2) == 0
+    assert skycoin.SKY_cipher_SecKeyFromWalletImportFormat(wip_1, secret_key_2) == error["SKY_OK"]
     _, wip_2 = skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(secret_key_2)
     _, secret_key_1_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_1)
     _, secret_key_2_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_2)
@@ -265,7 +263,7 @@ def test_TestBitcoinWIP():
     for p in range(len(wips)):
         secret_key = skycoin.cipher_SecKey()
         public_key = skycoin.cipher_PubKey()
-        assert skycoin.SKY_cipher_SecKeyFromWalletImportFormat(wips[p], secret_key) == 0
+        assert skycoin.SKY_cipher_SecKeyFromWalletImportFormat(wips[p], secret_key) == error["SKY_OK"]
         skycoin.SKY_cipher_PubKeyFromSecKey(secret_key, public_key)
         _, public_key_hex = skycoin.SKY_cipher_PubKey_Hex(public_key)
         assert public_key_hex == publics[p]
@@ -279,20 +277,22 @@ def test_TestAddressBulk():
         addres_1 = skycoin.cipher__Address()
         addres_2 = skycoin.cipher__Address()
         data = skycoin.SKY_cipher_RandByte(32)
-        skycoin.SKY_cipher_GenerateDeterministicKeyPair(b'data', public_key, secret_key)
+        skycoin.SKY_cipher_GenerateDeterministicKeyPair(bytes(data), public_key, secret_key)
         skycoin.SKY_cipher_AddressFromPubKey(public_key, addres_1)
-        assert skycoin.SKY_cipher_Address_Verify(addres_1, public_key) == 0
+        assert skycoin.SKY_cipher_Address_Verify(addres_1, public_key) == error["SKY_OK"]
         _, addres_str = skycoin.SKY_cipher_Address_String(addres_1)
-        assert skycoin.SKY_cipher_DecodeBase58Address(addres_str, addres_2) == 0
+        assert skycoin.SKY_cipher_DecodeBase58Address(addres_str, addres_2) == error["SKY_OK"]
         assert addres_1 == addres_2
 
 def test_TestAddressNull():
     addres = skycoin.cipher__Address()
-    error, isNull = skycoin.SKY_cipher_Address_Null(addres)
-    assert error == 0
+    _error, isNull = skycoin.SKY_cipher_Address_Null(addres)
+    assert _error == error["SKY_OK"]
     assert isNull == 1
 
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
-    assert skycoin.SKY_cipher_AddressFromPubKey(public_key, addres) == 0 #Null False
+    # assert skycoin.SKY_cipher_AddressFromPubKey(public_key, addres) == error["SKY_OK"]
+    skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
+    assert addres is not None
