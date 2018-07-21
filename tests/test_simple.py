@@ -151,7 +151,6 @@ def test_Transactions():
 	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
 	assert error == 0
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
-	error, transactions = skycoin.SKY_coin_Get_Transactions_Object(handleTransactions)
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	skycoin.SKY_handle_close(handleTransactions)
@@ -186,6 +185,9 @@ def test_SHA256NULL():
 	assert error == 0
 	assert result == True
 	
-
+def test_Number():
+	number = skycoin.Number()
+	error = skycoin.SKY_secp256k1go_Number_SetHex( number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	assert error == 0
 	
 	
