@@ -18,4 +18,4 @@ def test_TestGejDouble():
     assert skycoin.SKY_secp256k1go_Field_SetHex(
         aExp.Z, b"9075B4EE4D4788CABB49F7F81C221151FA2F68914D0AA833388FA11FF621A970") == error["SKY_OK"]
     assert skycoin.SKY_secp256k1go_XYZ_Double(a, r) == error["SKY_OK"]
-    assert r.__eq__(aExp)
+    assert skycoin.SKY_secp256k1go_XYZ_Equals(aExp, a)
