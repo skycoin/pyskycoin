@@ -201,7 +201,8 @@ def test_UxBody():
 	uxbody = skycoin.coin__UxBody()
 	uxbody.Address.Version = 45
 	sha256 = skycoin.cipher_SHA256()
-	sha2562 = uxbody.GetSrcTransaction()
-	uxbody.SetSrcTransaction(sha256)
+	x = sha256.toStr()
+	sha256.assignFrom( uxbody.SrcTransaction )
+	sha256.assignTo( uxbody.SrcTransaction )
 
 
