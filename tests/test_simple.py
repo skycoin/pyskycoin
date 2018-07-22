@@ -186,8 +186,15 @@ def test_SHA256NULL():
 	assert result == True
 	
 def test_Number():
-	number = skycoin.Number()
+	error, number = skycoin.SKY_secp256k1go_Number_Create()
+	assert error == 0
 	error = skycoin.SKY_secp256k1go_Number_SetHex( number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	assert error == 0
+	error, sig = skycoin.SKY_secp256k1go_Signature_Create()
+	assert error == 0
+	error, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+	assert error == 0
+	error = skycoin.SKY_secp256k1go_Number_SetHex( r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
 	assert error == 0
 	
 	
