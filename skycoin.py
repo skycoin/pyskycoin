@@ -138,6 +138,12 @@ class cipher_PubKey(_object):
 
     def toStr(self):
         return _skycoin.cipher_PubKey_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_PubKey_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_PubKey_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -169,6 +175,12 @@ class cipher_SecKey(_object):
 
     def toStr(self):
         return _skycoin.cipher_SecKey_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_SecKey_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_SecKey_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -200,6 +212,12 @@ class cipher_Ripemd160(_object):
 
     def toStr(self):
         return _skycoin.cipher_Ripemd160_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Ripemd160_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Ripemd160_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -231,6 +249,12 @@ class cipher_Sig(_object):
 
     def toStr(self):
         return _skycoin.cipher_Sig_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Sig_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Sig_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -262,6 +286,12 @@ class cipher_SHA256(_object):
 
     def toStr(self):
         return _skycoin.cipher_SHA256_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_SHA256_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_SHA256_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -293,6 +323,12 @@ class cipher_Checksum(_object):
 
     def toStr(self):
         return _skycoin.cipher_Checksum_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Checksum_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Checksum_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:
@@ -2825,6 +2861,12 @@ class coin__UxBody(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__UxBody, name)
     __repr__ = _swig_repr
+
+    def GetSrcTransaction(self):
+        return _skycoin.coin__UxBody_GetSrcTransaction(self)
+
+    def SetSrcTransaction(self, o):
+        return _skycoin.coin__UxBody_SetSrcTransaction(self, o)
     __swig_setmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_set
     __swig_getmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_get
     if _newclass:
