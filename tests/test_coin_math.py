@@ -27,7 +27,7 @@ def test_TestUint64ToInt64():
     values.b = int(0xFFFFFFFFFFFFFFFF)
     values.err = "SKY_ErrUint64OverflowsInt64"
     cases.append(values)
-    values.a = int(0x10000000000000000)
+    values.a = int(0xFFFFFFFFFFFFFFFF)
     values.b = 0
     values.err = "SKY_ErrUint64OverflowsInt64"
     cases.append(values)
