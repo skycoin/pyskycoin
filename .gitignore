@@ -10,7 +10,7 @@ __pycache__/
 *.so
 *.o
 *.orig
-Pyskycoin-0.24.1
+Pyskycoin-*
 eggs
 
 *~

@@ -125,7 +125,7 @@ def test_GenerateDeterministicKeyPairsSeed():
     length = len(seckeys)
     assert length == 2
 
-def test_Transactions():
+def test_Transaction():
 	error, handle = skycoin.SKY_coin_Create_Transaction()
 	assert error == 0
 	pubkey = skycoin.cipher_PubKey()
@@ -141,6 +141,60 @@ def test_Transactions():
 	assert error == 0
 	assert transaction.Length >= 0
 	skycoin.SKY_handle_close(handle)
-
+	
+def test_Transactions():
+	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
+	assert error == 0
+	error, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
+	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
+	skycoin.SKY_handle_close(handleTransaction1)
+	skycoin.SKY_handle_close(handleTransaction2)
+	skycoin.SKY_handle_close(handleTransactions)
+	
+def test_Transactions2():
+	error, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	error, transaction1 = skycoin.SKY_coin_Get_Transaction_Object(handleTransaction1)
+	assert error == 0
+	error, transaction2 = skycoin.SKY_coin_Get_Transaction_Object(handleTransaction2)
+	assert error == 0
+	assert transaction1 == transaction2
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error  = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	assert error == 0
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_PushOutput(handleTransaction1, address, 1000000, 100)
+	assert error == 0
+	assert not (transaction1 == transaction2)
+	skycoin.SKY_handle_close(handleTransaction1)
+	skycoin.SKY_handle_close(handleTransaction2)
+	
+	
+def test_SHA256NULL():
+	sha256 = skycoin.cipher_SHA256()
+	error, result = skycoin.SKY_cipher_SHA256_Null(sha256)
+	assert error == 0
+	assert result == True
+	
+def test_Number():
+	error, number = skycoin.SKY_secp256k1go_Number_Create()
+	assert error == 0
+	error = skycoin.SKY_secp256k1go_Number_SetHex( number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	assert error == 0
+	error, sig = skycoin.SKY_secp256k1go_Signature_Create()
+	assert error == 0
+	error, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+	assert error == 0
+	error = skycoin.SKY_secp256k1go_Number_SetHex( r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	assert error == 0
 	
 	
