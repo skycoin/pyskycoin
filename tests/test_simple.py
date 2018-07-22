@@ -197,4 +197,11 @@ def test_Number():
 	error = skycoin.SKY_secp256k1go_Number_SetHex( r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
 	assert error == 0
 	
-	
+def test_UxBody():
+	uxbody = skycoin.coin__UxBody()
+	uxbody.Address.Version = 45
+	sha256 = skycoin.cipher_SHA256()
+	sha2562 = uxbody.GetSrcTransaction()
+	uxbody.SetSrcTransaction(sha256)
+
+

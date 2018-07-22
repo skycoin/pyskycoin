@@ -2848,6 +2848,12 @@ class coin__UxBody(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__UxBody, name)
     __repr__ = _swig_repr
+
+    def GetSrcTransaction(self):
+        return _skycoin.coin__UxBody_GetSrcTransaction(self)
+
+    def SetSrcTransaction(self, o):
+        return _skycoin.coin__UxBody_SetSrcTransaction(self, o)
     __swig_setmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_set
     __swig_getmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_get
     if _newclass:
