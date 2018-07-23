@@ -150,8 +150,11 @@ def __feeCalculator(transaction):
 		output = skycoin.coin__TransactionOutput()
 		error = skycoin.SKY_coin_Transaction_Get_Output_At(transaction, 0, output )
 		assert error == 0
-		return output.Hours
-	return 0	
+		return 0, output.Hours
+	return 0, 0	
+	
+def __badFeeCalculator(transaction):
+	return 1, 0
 	
 def test_Transactions():
 	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
@@ -174,6 +177,8 @@ def test_Transactions():
 	error, fees = skycoin.SKY_coin_Transactions_Fees(handleTransactions, __feeCalculator)
 	assert error == 0
 	assert fees == 100
+	error, fees = skycoin.SKY_coin_Transactions_Fees(handleTransactions, __badFeeCalculator)
+	assert error != 0
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	skycoin.SKY_handle_close(handleTransactions)
