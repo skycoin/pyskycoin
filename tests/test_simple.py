@@ -142,6 +142,17 @@ def test_Transaction():
 	assert transaction.Length >= 0
 	skycoin.SKY_handle_close(handle)
 	
+	
+def __feeCalculator(transaction):
+	error, outCount = skycoin.SKY_coin_Transaction_Get_Outputs_Count(transaction)
+	assert error == 0
+	if outCount > 0:
+		output = skycoin.coin__TransactionOutput()
+		error = skycoin.SKY_coin_Transaction_Get_Output_At(transaction, 0, output )
+		assert error == 0
+		return output.Hours
+	return 0	
+	
 def test_Transactions():
 	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
 	assert error == 0
@@ -150,7 +161,19 @@ def test_Transactions():
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
 	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
 	assert error == 0
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error  = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	assert error == 0
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_PushOutput(handleTransaction2, address, 1000000, 100)
+	assert error == 0
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
+	error, fees = skycoin.SKY_coin_Transactions_Fees(handleTransactions, __feeCalculator)
+	assert error == 0
+	assert fees == 100
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	skycoin.SKY_handle_close(handleTransactions)
