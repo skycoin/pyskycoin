@@ -175,6 +175,9 @@ def test_Transactions2():
 	error = skycoin.SKY_coin_Transaction_PushOutput(handleTransaction1, address, 1000000, 100)
 	assert error == 0
 	assert not (transaction1 == transaction2)
+	output = skycoin.coin__TransactionOutput()
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_Get_Output_At(handleTransaction1, 0, output)
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	
