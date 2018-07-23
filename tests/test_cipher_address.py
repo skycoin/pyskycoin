@@ -276,8 +276,8 @@ def test_TestAddressBulk():
         secret_key = skycoin.cipher_SecKey()
         addres_1 = skycoin.cipher__Address()
         addres_2 = skycoin.cipher__Address()
-        data = skycoin.SKY_cipher_RandByte(32)
-        skycoin.SKY_cipher_GenerateDeterministicKeyPair(bytes(data), public_key, secret_key)
+        _, data = skycoin.SKY_cipher_RandByte(32)
+        skycoin.SKY_cipher_GenerateDeterministicKeyPair(data, public_key, secret_key)
         skycoin.SKY_cipher_AddressFromPubKey(public_key, addres_1)
         assert skycoin.SKY_cipher_Address_Verify(addres_1, public_key) == error["SKY_OK"]
         _, addres_str = skycoin.SKY_cipher_Address_String(addres_1)
@@ -293,6 +293,5 @@ def test_TestAddressNull():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
-    # assert skycoin.SKY_cipher_AddressFromPubKey(public_key, addres) == error["SKY_OK"]
     skycoin.SKY_cipher_AddressFromPubKey(public_key, addres)
     assert addres is not None
