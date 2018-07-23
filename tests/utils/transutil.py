@@ -1,7 +1,5 @@
 import skycoin
 from tests.utils.skyerror import error
-import sys
-
 
 def makeAddress():
     p = skycoin.cipher_PubKey()
