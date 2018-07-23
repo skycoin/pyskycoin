@@ -18,9 +18,11 @@ def makeTransactionFromUxOut(ux, s):
     h = skycoin.cipher_SHA256()
     skycoin.SKY_coin_UxOut_Hash(ux, h)
     skycoin.SKY_coin_Transaction_PushInput(tx, h)
-    skycoin.SKY_coin_Transaction_PushOutput(tx, makeAddress(), 1e6, 50)
-    skycoin.SKY_coin_Transaction_PushOutput(tx, makeAddress(), 5e6, 50)
-    skycoin.SKY_coin_Transaction_SignInputs(tx, s)
+    skycoin.SKY_coin_Transaction_PushOutput(
+        tx, makeAddress(), int(1e6), int(50))
+    skycoin.SKY_coin_Transaction_PushOutput(
+        tx, makeAddress(), int(5e6), int(50))
+    skycoin.SKY_coin_Transaction_SignInputs(tx, s.toStr())
     skycoin.SKY_coin_Transaction_UpdateHeader(tx)
     return tx
 
@@ -32,13 +34,13 @@ def makeUxBodyWithSecret():
     uxb = skycoin.coin__UxBody()
     _, b = skycoin.SKY_cipher_RandByte(128)
     h = skycoin.cipher_SHA256()
-    err =skycoin.SKY_cipher_SumSHA256(b, h)
-    uxb.SrcTransaction = h
+    err = skycoin.SKY_cipher_SumSHA256(b, h)
+    uxb.SetSrcTransaction(h.toStr())
     a = skycoin.cipher__Address()
     skycoin.SKY_cipher_AddressFromPubKey(p, a)
     uxb.Address = a
-    uxb.Coins = 1e6
-    uxb.Hours = 100
+    uxb.Coins = int(1e6)
+    uxb.Hours = int(100)
     return uxb, s
 
 
