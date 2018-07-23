@@ -110,6 +110,22 @@ destroy_cipher_SecKeys = _skycoin.destroy_cipher_SecKeys
 def destroy_cipher_PubKeys(p):
     return _skycoin.destroy_cipher_PubKeys(p)
 destroy_cipher_PubKeys = _skycoin.destroy_cipher_PubKeys
+
+def equalSlices(slice1, slice2, elem_size):
+    return _skycoin.equalSlices(slice1, slice2, elem_size)
+equalSlices = _skycoin.equalSlices
+
+def equalTransactions(t1, t2):
+    return _skycoin.equalTransactions(t1, t2)
+equalTransactions = _skycoin.equalTransactions
+
+def equalTransactionsArrays():
+    return _skycoin.equalTransactionsArrays()
+equalTransactionsArrays = _skycoin.equalTransactionsArrays
+
+def equalBlockHeaders(bh1, bh2):
+    return _skycoin.equalBlockHeaders(bh1, bh2)
+equalBlockHeaders = _skycoin.equalBlockHeaders
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -119,6 +135,12 @@ class cipher_PubKey(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_PubKey___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_PubKey_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_PubKey_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -144,6 +166,12 @@ class cipher_SecKey(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_SecKey___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_SecKey_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_SecKey_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -169,6 +197,12 @@ class cipher_Ripemd160(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Ripemd160___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Ripemd160_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Ripemd160_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -194,6 +228,12 @@ class cipher_Sig(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Sig___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Sig_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Sig_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -219,6 +259,12 @@ class cipher_SHA256(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_SHA256___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_SHA256_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_SHA256_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -244,6 +290,12 @@ class cipher_Checksum(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher_Checksum___eq__(self, a)
+
+    def compareToString(self, str):
+        return _skycoin.cipher_Checksum_compareToString(self, str)
+
+    def toStr(self):
+        return _skycoin.cipher_Checksum_toStr(self)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:
@@ -1413,6 +1465,10 @@ def SKY_cipher_MustSumSHA256(p0, p1, p2):
     return _skycoin.SKY_cipher_MustSumSHA256(p0, p1, p2)
 SKY_cipher_MustSumSHA256 = _skycoin.SKY_cipher_MustSumSHA256
 
+def SKY_cipher_SHA256_Null(p0):
+    return _skycoin.SKY_cipher_SHA256_Null(p0)
+SKY_cipher_SHA256_Null = _skycoin.SKY_cipher_SHA256_Null
+
 def SKY_coin_Create_Transaction():
     return _skycoin.SKY_coin_Create_Transaction()
 SKY_coin_Create_Transaction = _skycoin.SKY_coin_Create_Transaction
@@ -1421,8 +1477,8 @@ def SKY_coin_Transaction_Copy(p0):
     return _skycoin.SKY_coin_Transaction_Copy(p0)
 SKY_coin_Transaction_Copy = _skycoin.SKY_coin_Transaction_Copy
 
-def SKY_coin_Get_Transaction_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transaction_Object(p0, p1)
+def SKY_coin_Get_Transaction_Object(p0):
+    return _skycoin.SKY_coin_Get_Transaction_Object(p0)
 SKY_coin_Get_Transaction_Object = _skycoin.SKY_coin_Get_Transaction_Object
 
 def SKY_coin_Transaction_ResetInputs(p0, p1):
@@ -1509,8 +1565,8 @@ def SKY_coin_Create_Transactions():
     return _skycoin.SKY_coin_Create_Transactions()
 SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
 
-def SKY_coin_Get_Transactions_Object(p0, p1):
-    return _skycoin.SKY_coin_Get_Transactions_Object(p0, p1)
+def SKY_coin_Get_Transactions_Object(p0):
+    return _skycoin.SKY_coin_Get_Transactions_Object(p0)
 SKY_coin_Get_Transactions_Object = _skycoin.SKY_coin_Get_Transactions_Object
 
 def SKY_coin_Transactions_Length(p0):
@@ -2077,6 +2133,18 @@ def SKY_wallet_Balance_IsZero(p0):
     return _skycoin.SKY_wallet_Balance_IsZero(p0)
 SKY_wallet_Balance_IsZero = _skycoin.SKY_wallet_Balance_IsZero
 
+def SKY_ripemd160_New(p0):
+    return _skycoin.SKY_ripemd160_New(p0)
+SKY_ripemd160_New = _skycoin.SKY_ripemd160_New
+
+def SKY_ripemd160_Write(p0, p1):
+    return _skycoin.SKY_ripemd160_Write(p0, p1)
+SKY_ripemd160_Write = _skycoin.SKY_ripemd160_Write
+
+def SKY_ripemd160_Sum(p0, p1):
+    return _skycoin.SKY_ripemd160_Sum(p0, p1)
+SKY_ripemd160_Sum = _skycoin.SKY_ripemd160_Sum
+
 def SKY_coin_NewBlock(p0, p1, p2, p3, p4):
     return _skycoin.SKY_coin_NewBlock(p0, p1, p2, p3, p4)
 SKY_coin_NewBlock = _skycoin.SKY_coin_NewBlock
@@ -2157,8 +2225,8 @@ def SKY_coin_CreateUnspent(p0, p1, p2, p3):
     return _skycoin.SKY_coin_CreateUnspent(p0, p1, p2, p3)
 SKY_coin_CreateUnspent = _skycoin.SKY_coin_CreateUnspent
 
-def SKY_coin_GetBlockObject(p0, p1):
-    return _skycoin.SKY_coin_GetBlockObject(p0, p1)
+def SKY_coin_GetBlockObject(p0):
+    return _skycoin.SKY_coin_GetBlockObject(p0)
 SKY_coin_GetBlockObject = _skycoin.SKY_coin_GetBlockObject
 
 def SKY_coin_GetBlockBody(p0):
@@ -2317,6 +2385,9 @@ class cipher__Address(_object):
 
     def __eq__(self, a):
         return _skycoin.cipher__Address___eq__(self, a)
+
+    def toStr(self):
+        return _skycoin.cipher__Address_toStr(self)
     __swig_setmethods__["Version"] = _skycoin.cipher__Address_Version_set
     __swig_getmethods__["Version"] = _skycoin.cipher__Address_Version_get
     if _newclass:
@@ -2527,6 +2598,9 @@ class coin__Transaction(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__Transaction, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, t):
+        return _skycoin.coin__Transaction___eq__(self, t)
     __swig_setmethods__["Length"] = _skycoin.coin__Transaction_Length_set
     __swig_getmethods__["Length"] = _skycoin.coin__Transaction_Length_get
     if _newclass:
@@ -2569,6 +2643,9 @@ class coin__TransactionOutput(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__TransactionOutput, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, t):
+        return _skycoin.coin__TransactionOutput___eq__(self, t)
     __swig_setmethods__["Address"] = _skycoin.coin__TransactionOutput_Address_set
     __swig_getmethods__["Address"] = _skycoin.coin__TransactionOutput_Address_get
     if _newclass:
@@ -2599,6 +2676,9 @@ class coin__BlockHeader(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__BlockHeader, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, bh):
+        return _skycoin.coin__BlockHeader___eq__(self, bh)
     __swig_setmethods__["Version"] = _skycoin.coin__BlockHeader_Version_set
     __swig_getmethods__["Version"] = _skycoin.coin__BlockHeader_Version_get
     if _newclass:
@@ -2645,6 +2725,9 @@ class coin__BlockBody(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__BlockBody, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, b):
+        return _skycoin.coin__BlockBody___eq__(self, b)
     __swig_setmethods__["Transactions"] = _skycoin.coin__BlockBody_Transactions_set
     __swig_getmethods__["Transactions"] = _skycoin.coin__BlockBody_Transactions_get
     if _newclass:
@@ -2779,6 +2862,9 @@ class coin__UxOut(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__UxOut, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, u):
+        return _skycoin.coin__UxOut___eq__(self, u)
     __swig_setmethods__["Head"] = _skycoin.coin__UxOut_Head_set
     __swig_getmethods__["Head"] = _skycoin.coin__UxOut_Head_get
     if _newclass:
