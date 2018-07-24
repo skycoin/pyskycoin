@@ -4,6 +4,7 @@
 import skycoin
 import sys
 
+
 # Test with handles and strings
 def test_loadconfig():
     error, old_coin = skycoin.SKY_cli_Getenv(b"COIN")
@@ -71,7 +72,6 @@ def test_cipherAddress():
     assert address == address2
 
 
-
 # Test with array typedefs. Array typedefs were wrapped inside a struct
 # Notice that the type used is cipher_PubKey instead of cipher__PubKey
 def test_GenerateKeyPairs():
@@ -125,12 +125,13 @@ def test_GenerateDeterministicKeyPairsSeed():
     length = len(seckeys)
     assert length == 2
 
+
 def test_Transaction():
 	error, handle = skycoin.SKY_coin_Create_Transaction()
 	assert error == 0
 	pubkey = skycoin.cipher_PubKey()
 	seckey = skycoin.cipher_SecKey()
-	error  = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	error = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
 	assert error == 0
 	address = skycoin.cipher__Address()
 	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
@@ -142,6 +143,22 @@ def test_Transaction():
 	assert transaction.Length >= 0
 	skycoin.SKY_handle_close(handle)
 	
+	
+def __feeCalculator(transaction):
+	error, outCount = skycoin.SKY_coin_Transaction_Get_Outputs_Count(transaction)
+	assert error == 0
+	if outCount > 0:
+		output = skycoin.coin__TransactionOutput()
+		error = skycoin.SKY_coin_Transaction_Get_Output_At(transaction, 0, output)
+		assert error == 0
+		return 0, output.Hours
+	return 0, 0	
+
+	
+def __badFeeCalculator(transaction):
+	return 1, 0
+
+	
 def test_Transactions():
 	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
 	assert error == 0
@@ -151,9 +168,15 @@ def test_Transactions():
 	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
 	assert error == 0
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
+	error, fees = skycoin.SKY_coin_Transactions_Fees(handleTransactions, __feeCalculator)
+	assert error == 0
+	assert fees == 0
+	error, fees = skycoin.SKY_coin_Transactions_Fees(handleTransactions, __badFeeCalculator)
+	assert error != 0
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	skycoin.SKY_handle_close(handleTransactions)
+
 	
 def test_Transactions2():
 	error, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
@@ -167,7 +190,7 @@ def test_Transactions2():
 	assert transaction1 == transaction2
 	pubkey = skycoin.cipher_PubKey()
 	seckey = skycoin.cipher_SecKey()
-	error  = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	error = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
 	assert error == 0
 	address = skycoin.cipher__Address()
 	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
@@ -175,6 +198,9 @@ def test_Transactions2():
 	error = skycoin.SKY_coin_Transaction_PushOutput(handleTransaction1, address, 1000000, 100)
 	assert error == 0
 	assert not (transaction1 == transaction2)
+	output = skycoin.coin__TransactionOutput()
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_Get_Output_At(handleTransaction1, 0, output)
 	skycoin.SKY_handle_close(handleTransaction1)
 	skycoin.SKY_handle_close(handleTransaction2)
 	
@@ -184,25 +210,27 @@ def test_SHA256NULL():
 	error, result = skycoin.SKY_cipher_SHA256_Null(sha256)
 	assert error == 0
 	assert result == True
+
 	
 def test_Number():
 	error, number = skycoin.SKY_secp256k1go_Number_Create()
 	assert error == 0
-	error = skycoin.SKY_secp256k1go_Number_SetHex( number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	error = skycoin.SKY_secp256k1go_Number_SetHex(number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488")
 	assert error == 0
 	error, sig = skycoin.SKY_secp256k1go_Signature_Create()
 	assert error == 0
 	error, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
 	assert error == 0
-	error = skycoin.SKY_secp256k1go_Number_SetHex( r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488" )
+	error = skycoin.SKY_secp256k1go_Number_SetHex(r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488")
 	assert error == 0
+
 	
 def test_UxBody():
 	uxbody = skycoin.coin__UxBody()
 	uxbody.Address.Version = 45
 	sha256 = skycoin.cipher_SHA256()
 	x = sha256.toStr()
-	sha256.assignFrom( uxbody.SrcTransaction )
-	sha256.assignTo( uxbody.SrcTransaction )
+	sha256.assignFrom(uxbody.SrcTransaction)
+	sha256.assignTo(uxbody.SrcTransaction)
 
 
