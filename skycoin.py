@@ -1550,8 +1550,8 @@ def SKY_coin_Transaction_PushOutput(p0, p1, p2, p3):
     return _skycoin.SKY_coin_Transaction_PushOutput(p0, p1, p2, p3)
 SKY_coin_Transaction_PushOutput = _skycoin.SKY_coin_Transaction_PushOutput
 
-def SKY_coin_Transaction_SignInputs(p0, p1):
-    return _skycoin.SKY_coin_Transaction_SignInputs(p0, p1)
+def SKY_coin_Transaction_SignInputs(*args):
+    return _skycoin.SKY_coin_Transaction_SignInputs(*args)
 SKY_coin_Transaction_SignInputs = _skycoin.SKY_coin_Transaction_SignInputs
 
 def SKY_coin_Transaction_Size(p0):
