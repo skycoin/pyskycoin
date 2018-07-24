@@ -265,6 +265,7 @@ def test_SecKeysList():
 	sha256 = skycoin.cipher_SHA256()
 	error, r = skycoin.SKY_coin_Transaction_PushInput(handleTransaction, sha256)
 	assert error == 0
+	skycoin.SKY_coin_Transaction_ResetSignatures(handleTransaction, 0)
 	error = skycoin.SKY_coin_Transaction_SignInputs(handleTransaction, seckeysList)
 	assert error == 0
 	skycoin.SKY_handle_close(handleTransaction)
