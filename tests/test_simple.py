@@ -236,4 +236,36 @@ def test_UxBody():
 	sha256.assignFrom( uxbody.SrcTransaction )
 	sha256.assignTo( uxbody.SrcTransaction )
 
+def test_SecKeysList():
+	seckeysList = []    
+	#Generate pubkeys and seckeys
+	#then add seckeys to lists
+	error, data = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
+		    data, pubkey, seckey)
+	assert error == 0	
+	error, data = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	seckeysList.append(seckey)
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
+		    data, pubkey, seckey)
+	assert error == 0	
+	seckeysList.append(seckey)
+	error, handleTransaction = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0	
+	#Add as many inputs as keys
+	sha256 = skycoin.cipher_SHA256()
+	error, r = skycoin.SKY_coin_Transaction_PushInput(handleTransaction, sha256)
+	assert error == 0
+	sha256 = skycoin.cipher_SHA256()
+	error, r = skycoin.SKY_coin_Transaction_PushInput(handleTransaction, sha256)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_SignInputs(handleTransaction, seckeysList)
+	assert error == 0
+	skycoin.SKY_handle_close(handleTransaction)
 
