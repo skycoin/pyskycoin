@@ -1494,13 +1494,25 @@ def SKY_coin_Transaction_ResetInputs(p0, p1):
     return _skycoin.SKY_coin_Transaction_ResetInputs(p0, p1)
 SKY_coin_Transaction_ResetInputs = _skycoin.SKY_coin_Transaction_ResetInputs
 
+def SKY_coin_Transaction_Get_Inputs_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Inputs_Count(p0)
+SKY_coin_Transaction_Get_Inputs_Count = _skycoin.SKY_coin_Transaction_Get_Inputs_Count
+
 def SKY_coin_Transaction_Get_Input_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Input_At(p0, p1, p2)
 SKY_coin_Transaction_Get_Input_At = _skycoin.SKY_coin_Transaction_Get_Input_At
 
+def SKY_coin_Transaction_Get_Outputs_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Outputs_Count(p0)
+SKY_coin_Transaction_Get_Outputs_Count = _skycoin.SKY_coin_Transaction_Get_Outputs_Count
+
 def SKY_coin_Transaction_Get_Output_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Output_At(p0, p1, p2)
 SKY_coin_Transaction_Get_Output_At = _skycoin.SKY_coin_Transaction_Get_Output_At
+
+def SKY_coin_Transaction_Get_Signatures_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Signatures_Count(p0)
+SKY_coin_Transaction_Get_Signatures_Count = _skycoin.SKY_coin_Transaction_Get_Signatures_Count
 
 def SKY_coin_Transaction_Get_Signature_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Signature_At(p0, p1, p2)
@@ -1926,6 +1938,10 @@ def SKY_secp256k1_RandByte(p0):
     return _skycoin.SKY_secp256k1_RandByte(p0)
 SKY_secp256k1_RandByte = _skycoin.SKY_secp256k1_RandByte
 
+def SKY_secp256k1go_Number_Create():
+    return _skycoin.SKY_secp256k1go_Number_Create()
+SKY_secp256k1go_Number_Create = _skycoin.SKY_secp256k1go_Number_Create
+
 def SKY_secp256k1go_Number_Print(p0, p1):
     return _skycoin.SKY_secp256k1go_Number_Print(p0, p1)
 SKY_secp256k1go_Number_Print = _skycoin.SKY_secp256k1go_Number_Print
@@ -1937,6 +1953,10 @@ SKY_secp256k1go_Number_SetHex = _skycoin.SKY_secp256k1go_Number_SetHex
 def SKY_secp256k1go_Number_IsOdd(p0):
     return _skycoin.SKY_secp256k1go_Number_IsOdd(p0)
 SKY_secp256k1go_Number_IsOdd = _skycoin.SKY_secp256k1go_Number_IsOdd
+
+def SKY_secp256k1go_Number_IsEqual(p0, p1):
+    return _skycoin.SKY_secp256k1go_Number_IsEqual(p0, p1)
+SKY_secp256k1go_Number_IsEqual = _skycoin.SKY_secp256k1go_Number_IsEqual
 
 def SKY_api_NewClient(p0):
     return _skycoin.SKY_api_NewClient(p0)
@@ -2357,6 +2377,18 @@ SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
 def SKY_cli_GetWalletOutputs(p0, p2):
     return _skycoin.SKY_cli_GetWalletOutputs(p0, p2)
 SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
+
+def SKY_secp256k1go_Signature_Create():
+    return _skycoin.SKY_secp256k1go_Signature_Create()
+SKY_secp256k1go_Signature_Create = _skycoin.SKY_secp256k1go_Signature_Create
+
+def SKY_secp256k1go_Signature_Get_R(p0):
+    return _skycoin.SKY_secp256k1go_Signature_Get_R(p0)
+SKY_secp256k1go_Signature_Get_R = _skycoin.SKY_secp256k1go_Signature_Get_R
+
+def SKY_secp256k1go_Signature_Get_S(p0):
+    return _skycoin.SKY_secp256k1go_Signature_Get_S(p0)
+SKY_secp256k1go_Signature_Get_S = _skycoin.SKY_secp256k1go_Signature_Get_S
 
 def SKY_secp256k1go_Signature_Print(p0, p1):
     return _skycoin.SKY_secp256k1go_Signature_Print(p0, p1)
@@ -3211,58 +3243,6 @@ class httphelper__Address(_object):
     __del__ = lambda self: None
 httphelper__Address_swigregister = _skycoin.httphelper__Address_swigregister
 httphelper__Address_swigregister(httphelper__Address)
-
-class Number(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Number, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Number, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["neg"] = _skycoin.Number_neg_set
-    __swig_getmethods__["neg"] = _skycoin.Number_neg_get
-    if _newclass:
-        neg = _swig_property(_skycoin.Number_neg_get, _skycoin.Number_neg_set)
-    __swig_setmethods__["nat"] = _skycoin.Number_nat_set
-    __swig_getmethods__["nat"] = _skycoin.Number_nat_get
-    if _newclass:
-        nat = _swig_property(_skycoin.Number_nat_get, _skycoin.Number_nat_set)
-
-    def __init__(self):
-        this = _skycoin.new_Number()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_Number
-    __del__ = lambda self: None
-Number_swigregister = _skycoin.Number_swigregister
-Number_swigregister(Number)
-
-class Signature(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Signature, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Signature, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["R"] = _skycoin.Signature_R_set
-    __swig_getmethods__["R"] = _skycoin.Signature_R_get
-    if _newclass:
-        R = _swig_property(_skycoin.Signature_R_get, _skycoin.Signature_R_set)
-    __swig_setmethods__["S"] = _skycoin.Signature_S_set
-    __swig_getmethods__["S"] = _skycoin.Signature_S_get
-    if _newclass:
-        S = _swig_property(_skycoin.Signature_S_get, _skycoin.Signature_S_set)
-
-    def __init__(self):
-        this = _skycoin.new_Signature()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_Signature
-    __del__ = lambda self: None
-Signature_swigregister = _skycoin.Signature_swigregister
-Signature_swigregister(Signature)
 
 # This file is compatible with both classic and new-style classes.
 
