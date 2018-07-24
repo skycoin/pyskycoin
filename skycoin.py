@@ -1001,8 +1001,8 @@ def SKY_apputil_PrintProgramStatus():
     return _skycoin.SKY_apputil_PrintProgramStatus()
 SKY_apputil_PrintProgramStatus = _skycoin.SKY_apputil_PrintProgramStatus
 
-def SKY_utc_UnixNow():
-    return _skycoin.SKY_utc_UnixNow()
+def SKY_utc_UnixNow(p0):
+    return _skycoin.SKY_utc_UnixNow(p0)
 SKY_utc_UnixNow = _skycoin.SKY_utc_UnixNow
 
 def SKY_httphelper_Address_UnmarshalJSON(p0, p1):
@@ -2165,8 +2165,8 @@ def SKY_coin_AddUint64(p0, p1):
     return _skycoin.SKY_coin_AddUint64(p0, p1)
 SKY_coin_AddUint64 = _skycoin.SKY_coin_AddUint64
 
-def SKY_coin_Uint64ToInt64(p0):
-    return _skycoin.SKY_coin_Uint64ToInt64(p0)
+def SKY_coin_Uint64ToInt64(p0, p1):
+    return _skycoin.SKY_coin_Uint64ToInt64(p0, p1)
 SKY_coin_Uint64ToInt64 = _skycoin.SKY_coin_Uint64ToInt64
 
 def SKY_coin_Int64ToUint64(p0):
