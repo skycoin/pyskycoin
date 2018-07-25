@@ -3121,6 +3121,22 @@ static swig_module_info swig_module = {swig_types, 101, 0, 0, 0, 0};
 	#include "swig.h"
 
 
+	GoUint32 wrap_SKY_coin_Transaction_SignInputs(Transaction__Handle handle, cipher_SecKeys* __in_secKeys){
+		GoSlice data;
+		data.data = __in_secKeys->data;
+		data.len = __in_secKeys->count;
+		data.cap = __in_secKeys->count;
+		return SKY_coin_Transaction_SignInputs(handle, data);
+	}
+
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_unsigned_SS_int  (unsigned int value)
+{
+  return PyInt_FromSize_t((size_t) value);
+}
+
+
 	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairs(GoSlice seed, GoInt n, cipher_SecKeys* __out_secKeys){
 		__out_secKeys->data = NULL;
 		__out_secKeys->count = 0;
@@ -3317,13 +3333,6 @@ SWIG_AsVal_long_SS_long (PyObject *obj, long long *val)
   return res;
 }
 #endif
-
-
-SWIGINTERNINLINE PyObject*
-  SWIG_From_unsigned_SS_int  (unsigned int value)
-{
-  return PyInt_FromSize_t((size_t) value);
-}
 
 
 	GoUint32 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(GoSlice seed, GoInt n, coin__UxArray* newSeed, cipher_SecKeys* __out_secKeys){
@@ -4069,6 +4078,50 @@ SWIGINTERN int coin__UxOut___eq__(coin__UxOut *self,coin__UxOut *u){
 #ifdef __cplusplus
 extern "C" {
 #endif
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SignInputs__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Transaction__Handle arg1 ;
+  cipher_SecKeys *arg2 = (cipher_SecKeys *) 0 ;
+  cipher_SecKeys temp2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GoUint32 result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_Transaction_SignInputs",&obj0,&obj1)) SWIG_fail;
+  {
+    SWIG_AsVal_long(obj0, (long*)&arg1);
+  }
+  {
+    int i;
+    arg2 = &temp2;
+    arg2->count = PyList_Size(obj1);
+    arg2->data = malloc(sizeof(cipher_SecKey) * arg2->count);
+    cipher_SecKey* pdata = arg2->data;
+    for(i = 0; i < arg2->count; i++){
+      PyObject *o = PyList_GetItem(obj1, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type SecKey");
+      cipher_SecKey* p = (cipher_SecKey*)argp;
+      memcpy(pdata, p, sizeof(cipher_SecKey));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_Transaction_SignInputs(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SKY_cipher_GenerateDeterministicKeyPairs__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoSlice arg1 ;
@@ -4198,12 +4251,14 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  cipher_PubKeys temp1 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_cipher_PubKeySlice_Len",&obj0)) SWIG_fail;
   {
     int i;
+    arg1 = &temp1;
     arg1->count = PyList_Size(obj0);
     arg1->data = malloc(sizeof(cipher_PubKey) * arg1->count);
     cipher_PubKey* pdata = arg1->data;
@@ -4214,7 +4269,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_0(PyObject *SWIGUNUS
       if (!SWIG_IsOK(res))
       SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
       cipher_PubKey* p = (cipher_PubKey*)argp;
-      memcpy(p, pdata, sizeof(cipher_PubKey));
+      memcpy(pdata, p, sizeof(cipher_PubKey));
       pdata++;
     }
   }
@@ -4237,6 +4292,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_0(PyObject *SWIGUNU
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
+  cipher_PubKeys temp1 ;
   long long val2 ;
   int ecode2 = 0 ;
   long long val3 ;
@@ -4249,6 +4305,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_0(PyObject *SWIGUNU
   if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cipher_PubKeySlice_Less",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     int i;
+    arg1 = &temp1;
     arg1->count = PyList_Size(obj0);
     arg1->data = malloc(sizeof(cipher_PubKey) * arg1->count);
     cipher_PubKey* pdata = arg1->data;
@@ -4259,7 +4316,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_0(PyObject *SWIGUNU
       if (!SWIG_IsOK(res))
       SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
       cipher_PubKey* p = (cipher_PubKey*)argp;
-      memcpy(p, pdata, sizeof(cipher_PubKey));
+      memcpy(pdata, p, sizeof(cipher_PubKey));
       pdata++;
     }
   }
@@ -4292,6 +4349,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Swap__SWIG_0(PyObject *SWIGUNU
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
+  cipher_PubKeys temp1 ;
   long long val2 ;
   int ecode2 = 0 ;
   long long val3 ;
@@ -4304,6 +4362,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Swap__SWIG_0(PyObject *SWIGUNU
   if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cipher_PubKeySlice_Swap",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     int i;
+    arg1 = &temp1;
     arg1->count = PyList_Size(obj0);
     arg1->data = malloc(sizeof(cipher_PubKey) * arg1->count);
     cipher_PubKey* pdata = arg1->data;
@@ -4314,7 +4373,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Swap__SWIG_0(PyObject *SWIGUNU
       if (!SWIG_IsOK(res))
       SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
       cipher_PubKey* p = (cipher_PubKey*)argp;
-      memcpy(p, pdata, sizeof(cipher_PubKey));
+      memcpy(pdata, p, sizeof(cipher_PubKey));
       pdata++;
     }
   }
@@ -8833,23 +8892,27 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_DistributeSpendHours(PyObject *SWIGUNUSEDP
   unsigned char val3 ;
   int ecode3 = 0 ;
   GoUint64 temp4 ;
-  int res4 = SWIG_TMPOBJ ;
   GoSlice_ temp5 ;
   GoUint64 temp6 ;
-  int res6 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  arg4 = &temp4;
+  {
+    temp4 = 0;
+    arg4 = &temp4;
+  }
   {
     temp5.data = NULL;
     temp5.len = 0;
     temp5.cap = 0;
     arg5 = (cipher__PubKeySlice *)&temp5;
   }
-  arg6 = &temp6;
+  {
+    temp6 = 0;
+    arg6 = &temp6;
+  }
   if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_wallet_DistributeSpendHours",&obj0,&obj1,&obj2)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -8868,21 +8931,15 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_DistributeSpendHours(PyObject *SWIGUNUSEDP
   arg3 = (GoUint8)(val3);
   result = (GoUint32)SKY_wallet_DistributeSpendHours(arg1,arg2,arg3,arg4,arg5,arg6);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res4)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg4 ));
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg5->data, arg5->len  ));
     free( (void*)arg5->data );
   }
-  if (SWIG_IsTmpObj(res6)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg6)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res6) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg6), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg6 ));
   }
   return resultobj;
 fail:
@@ -9828,22 +9885,21 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Block_Time(PyObject *SWIGUNUSEDPARM(self), P
   Block__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Block_Time",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_coin_Block_Time(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -9856,22 +9912,21 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Block_Seq(PyObject *SWIGUNUSEDPARM(self), Py
   Block__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Block_Seq",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_coin_Block_Seq(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -10560,18 +10615,17 @@ SWIGINTERN PyObject *_wrap_SKY_utc_UnixNow(PyObject *SWIGUNUSEDPARM(self), PyObj
   PyObject *resultobj = 0;
   GoInt64 *arg1 = (GoInt64 *) 0 ;
   GoInt64 temp1 ;
-  int res1 = SWIG_TMPOBJ ;
   GoUint32 result;
   
-  arg1 = &temp1;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
   if (!PyArg_ParseTuple(args,(char *)":SKY_utc_UnixNow")) SWIG_fail;
   result = (GoUint32)SKY_utc_UnixNow(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   return resultobj;
 fail:
@@ -11451,12 +11505,14 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxOut_CoinHours(PyObject *SWIGUNUSEDPARM(sel
   unsigned long long val2 ;
   int ecode2 = 0 ;
   GoUint64 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  arg3 = &temp3;
+  {
+    temp3 = 0;
+    arg3 = &temp3;
+  }
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_UxOut_CoinHours",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__UxOut, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
@@ -11470,11 +11526,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxOut_CoinHours(PyObject *SWIGUNUSEDPARM(sel
   arg2 = (GoUint64)(val2);
   result = (GoUint32)SKY_coin_UxOut_CoinHours(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -11716,7 +11769,6 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins(PyObject *SWIGUNUSEDPARM(self)
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoSlice_ temp1 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   GoUint32 result;
   
   {
@@ -11725,7 +11777,10 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins(PyObject *SWIGUNUSEDPARM(self)
     temp1.cap = 0;
     arg1 = (cipher__PubKeySlice *)&temp1;
   }
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)":SKY_coin_UxArray_Coins")) SWIG_fail;
   result = (GoUint32)SKY_coin_UxArray_Coins(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
@@ -11733,11 +11788,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins(PyObject *SWIGUNUSEDPARM(self)
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
     free( (void*)arg1->data );
   }
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -11754,7 +11806,6 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *SWIGUNUSEDPARM(s
   unsigned long long val2 ;
   int ecode2 = 0 ;
   GoUint64 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
@@ -11764,7 +11815,10 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *SWIGUNUSEDPARM(s
     temp1.cap = 0;
     arg1 = (cipher__PubKeySlice *)&temp1;
   }
-  arg3 = &temp3;
+  {
+    temp3 = 0;
+    arg3 = &temp3;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_UxArray_CoinHours",&obj0)) SWIG_fail;
   ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val2);
   if (!SWIG_IsOK(ecode2)) {
@@ -11777,11 +11831,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *SWIGUNUSEDPARM(s
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
     free( (void*)arg1->data );
   }
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -12400,11 +12451,13 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RequiredFee(PyObject *SWIGUNUSEDPARM(self), P
   unsigned long long val1 ;
   int ecode1 = 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_fee_RequiredFee",&obj0)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -12413,11 +12466,8 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RequiredFee(PyObject *SWIGUNUSEDPARM(self), P
   arg1 = (GoUint64)(val1);
   result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -12432,11 +12482,13 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RemainingHours(PyObject *SWIGUNUSEDPARM(self)
   unsigned long long val1 ;
   int ecode1 = 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_fee_RemainingHours",&obj0)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -12445,11 +12497,8 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RemainingHours(PyObject *SWIGUNUSEDPARM(self)
   arg1 = (GoUint64)(val1);
   result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -12467,7 +12516,6 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self)
   int ecode2 = 0 ;
   GoSlice_ temp3 ;
   GoUint64 temp4 ;
-  int res4 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   GoUint32 result;
@@ -12478,7 +12526,10 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self)
     temp3.cap = 0;
     arg3 = (cipher__PubKeySlice *)&temp3;
   }
-  arg4 = &temp4;
+  {
+    temp4 = 0;
+    arg4 = &temp4;
+  }
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_fee_TransactionFee",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
@@ -12494,11 +12545,8 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self)
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
     free( (void*)arg3->data );
   }
-  if (SWIG_IsTmpObj(res4)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg4 ));
   }
   return resultobj;
 fail:
@@ -13447,12 +13495,14 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddUint64(PyObject *SWIGUNUSEDPARM(self), Py
   unsigned long long val2 ;
   int ecode2 = 0 ;
   GoUint64 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  arg3 = &temp3;
+  {
+    temp3 = 0;
+    arg3 = &temp3;
+  }
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_AddUint64",&obj0,&obj1)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -13466,11 +13516,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddUint64(PyObject *SWIGUNUSEDPARM(self), Py
   arg2 = (GoUint64)(val2);
   result = (GoUint32)SKY_coin_AddUint64(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -13485,11 +13532,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Uint64ToInt64(PyObject *SWIGUNUSEDPARM(self)
   unsigned long long val1 ;
   int ecode1 = 0 ;
   GoInt64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Uint64ToInt64",&obj0)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -13498,11 +13547,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Uint64ToInt64(PyObject *SWIGUNUSEDPARM(self)
   arg1 = (GoUint64)(val1);
   result = (GoUint32)SKY_coin_Uint64ToInt64(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -13517,11 +13563,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Int64ToUint64(PyObject *SWIGUNUSEDPARM(self)
   long long val1 ;
   int ecode1 = 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Int64ToUint64",&obj0)) SWIG_fail;
   ecode1 = SWIG_AsVal_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -13530,11 +13578,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Int64ToUint64(PyObject *SWIGUNUSEDPARM(self)
   arg1 = (GoInt64)(val1);
   result = (GoUint32)SKY_coin_Int64ToUint64(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -13696,22 +13741,21 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Progress_GetCurrent(PyObject *SWIGUNUSEDPA
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_Handle_Progress_GetCurrent",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_Handle_Progress_GetCurrent(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -13724,22 +13768,21 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Block_GetHeadSeq(PyObject *SWIGUNUSEDPARM(
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_Handle_Block_GetHeadSeq",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_Handle_Block_GetHeadSeq(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -13845,22 +13888,21 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Blocks_GetCount(PyObject *SWIGUNUSEDPARM(s
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_Handle_Blocks_GetCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_Handle_Blocks_GetCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -13873,22 +13915,21 @@ SWIGINTERN PyObject *_wrap_SKY_Handle_Connections_GetCount(PyObject *SWIGUNUSEDP
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_Handle_Connections_GetCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_Handle_Connections_GetCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -16403,7 +16444,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SignInputs(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SignInputs__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoSlice arg2 ;
@@ -16431,6 +16472,59 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SignInputs(PyObject *SWIGUNUSEDP
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SignInputs(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        char* buffer = 0;
+        size_t size = 0;
+        int res = SWIG_AsCharPtrAndSize( argv[1], &buffer, &size, 0 );
+        _v = SWIG_IsOK(res) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_SKY_coin_Transaction_SignInputs__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        _v = PyList_Check(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_SKY_coin_Transaction_SignInputs__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_Transaction_SignInputs'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_Transaction_SignInputs(Transaction__Handle,cipher_SecKeys *)\n"
+    "    SKY_coin_Transaction_SignInputs(Transaction__Handle,GoSlice)\n");
+  return 0;
 }
 
 
@@ -16736,22 +16830,21 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_OutputHours(PyObject *SWIGUNUSED
   Transaction__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_OutputHours",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_coin_Transaction_OutputHours(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -16865,12 +16958,14 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Fees(PyObject *SWIGUNUSEDPARM(s
   GoUint64 *arg3 = (GoUint64 *) 0 ;
   FeeCalculator temp2 ;
   GoUint64 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  arg3 = &temp3;
+  {
+    temp3 = 0;
+    arg3 = &temp3;
+  }
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_Transactions_Fees",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
@@ -16883,11 +16978,8 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Fees(PyObject *SWIGUNUSEDPARM(s
   }
   result = (GoUint32)SKY_coin_Transactions_Fees(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -21855,22 +21947,21 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_AddressCount(PyObject *SWIGUNUSEDPARM(
   Client__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_AddressCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   result = (GoUint32)SKY_api_Client_AddressCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -23357,12 +23448,14 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Coins_UnmarshalJSON(PyObject *SWIGUNUS
   PyObject *resultobj = 0;
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   GoSlice arg2 ;
-  httphelper__Coins temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg1 = &temp1;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_httphelper_Coins_UnmarshalJSON",&obj0)) SWIG_fail;
   {
     char* buffer = 0;
@@ -23377,11 +23470,8 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Coins_UnmarshalJSON(PyObject *SWIGUNUS
   }
   result = (GoUint32)SKY_httphelper_Coins_UnmarshalJSON(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   return resultobj;
 fail:
@@ -23393,12 +23483,14 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Coins_MarshalJSON(PyObject *SWIGUNUSED
   PyObject *resultobj = 0;
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   cipher__PubKeySlice *arg2 = (cipher__PubKeySlice *) 0 ;
-  httphelper__Coins temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   GoSlice_ temp2 ;
   GoUint32 result;
   
-  arg1 = &temp1;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
   {
     temp2.data = NULL;
     temp2.len = 0;
@@ -23408,11 +23500,8 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Coins_MarshalJSON(PyObject *SWIGUNUSED
   if (!PyArg_ParseTuple(args,(char *)":SKY_httphelper_Coins_MarshalJSON")) SWIG_fail;
   result = (GoUint32)SKY_httphelper_Coins_MarshalJSON(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
@@ -23428,28 +23517,26 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Coins_Value(PyObject *SWIGUNUSEDPARM(s
   PyObject *resultobj = 0;
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
-  httphelper__Coins temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   GoUint32 result;
   
-  arg1 = &temp1;
-  arg2 = &temp2;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)":SKY_httphelper_Coins_Value")) SWIG_fail;
   result = (GoUint32)SKY_httphelper_Coins_Value(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -23461,12 +23548,14 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Hours_UnmarshalJSON(PyObject *SWIGUNUS
   PyObject *resultobj = 0;
   httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
   GoSlice arg2 ;
-  httphelper__Hours temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg1 = &temp1;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_httphelper_Hours_UnmarshalJSON",&obj0)) SWIG_fail;
   {
     char* buffer = 0;
@@ -23481,11 +23570,8 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Hours_UnmarshalJSON(PyObject *SWIGUNUS
   }
   result = (GoUint32)SKY_httphelper_Hours_UnmarshalJSON(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   return resultobj;
 fail:
@@ -23497,12 +23583,14 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Hours_MarshalJSON(PyObject *SWIGUNUSED
   PyObject *resultobj = 0;
   httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
   cipher__PubKeySlice *arg2 = (cipher__PubKeySlice *) 0 ;
-  httphelper__Hours temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   GoSlice_ temp2 ;
   GoUint32 result;
   
-  arg1 = &temp1;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
   {
     temp2.data = NULL;
     temp2.len = 0;
@@ -23512,11 +23600,8 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Hours_MarshalJSON(PyObject *SWIGUNUSED
   if (!PyArg_ParseTuple(args,(char *)":SKY_httphelper_Hours_MarshalJSON")) SWIG_fail;
   result = (GoUint32)SKY_httphelper_Hours_MarshalJSON(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
@@ -23532,28 +23617,26 @@ SWIGINTERN PyObject *_wrap_SKY_httphelper_Hours_Value(PyObject *SWIGUNUSEDPARM(s
   PyObject *resultobj = 0;
   httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
-  httphelper__Hours temp1 ;
-  int res1 = SWIG_TMPOBJ ;
+  GoUint64 temp1 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   GoUint32 result;
   
-  arg1 = &temp1;
-  arg2 = &temp2;
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)":SKY_httphelper_Hours_Value")) SWIG_fail;
   result = (GoUint32)SKY_httphelper_Hours_Value(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res1)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg1)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res1) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg1), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
@@ -23968,11 +24051,13 @@ SWIGINTERN PyObject *_wrap_SKY_droplet_FromString(PyObject *SWIGUNUSEDPARM(self)
   GoString arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
-  arg2 = &temp2;
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_droplet_FromString",&obj0)) SWIG_fail;
   {
     char* buffer = 0;
@@ -23986,11 +24071,8 @@ SWIGINTERN PyObject *_wrap_SKY_droplet_FromString(PyObject *SWIGUNUSEDPARM(self)
   }
   result = (GoUint32)SKY_droplet_FromString(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_long_long, new_flags));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
   }
   return resultobj;
 fail:
