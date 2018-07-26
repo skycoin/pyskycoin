@@ -20,7 +20,17 @@ def test_TestScryptChacha20poly1305Encrypt():
         _, encData = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(crypto, define["PLAINTEXT"], define["PASSWORD"])
         assert _ == error["SKY_OK"]
         Data = base64.standard_b64decode(encData)
-        ml = ord(Data[0])
+        ml_ = [x for x in Data]
+        if type(ml_[0]) == int:
+            ml = ml_[0]
+            _Data = [chr(x) for x in Data]
+            D = ""
+            for x in _Data:
+                D += x 
+            Data = D
+            print(Data)
+        else:
+            ml = ord(ml_[0])
         assert int(define["SCRYPTCHACHA20METALENGTHSIZE"]+ml) <= len(Data)
         m = json.loads(Data[define["SCRYPTCHACHA20METALENGTHSIZE"]:define["SCRYPTCHACHA20METALENGTHSIZE"] + ml])
         print(m)
