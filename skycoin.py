@@ -430,6 +430,32 @@ class cipher_PubKeys(_object):
 cipher_PubKeys_swigregister = _skycoin.cipher_PubKeys_swigregister
 cipher_PubKeys_swigregister(cipher_PubKeys)
 
+class coin_UxOutArray(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, coin_UxOutArray, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, coin_UxOutArray, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.coin_UxOutArray_data_set
+    __swig_getmethods__["data"] = _skycoin.coin_UxOutArray_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.coin_UxOutArray_data_get, _skycoin.coin_UxOutArray_data_set)
+    __swig_setmethods__["count"] = _skycoin.coin_UxOutArray_count_set
+    __swig_getmethods__["count"] = _skycoin.coin_UxOutArray_count_get
+    if _newclass:
+        count = _swig_property(_skycoin.coin_UxOutArray_count_get, _skycoin.coin_UxOutArray_count_set)
+
+    def __init__(self):
+        this = _skycoin.new_coin_UxOutArray()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_coin_UxOutArray
+    __del__ = lambda self: None
+coin_UxOutArray_swigregister = _skycoin.coin_UxOutArray_swigregister
+coin_UxOutArray_swigregister(coin_UxOutArray)
+
 class _GoString_(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, _GoString_, name, value)
@@ -1685,12 +1711,12 @@ def SKY_coin_SortableTransactions_Swap(p0, p1, p2):
     return _skycoin.SKY_coin_SortableTransactions_Swap(p0, p1, p2)
 SKY_coin_SortableTransactions_Swap = _skycoin.SKY_coin_SortableTransactions_Swap
 
-def SKY_coin_VerifyTransactionCoinsSpending():
-    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending()
+def SKY_coin_VerifyTransactionCoinsSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending(*args)
 SKY_coin_VerifyTransactionCoinsSpending = _skycoin.SKY_coin_VerifyTransactionCoinsSpending
 
-def SKY_coin_VerifyTransactionHoursSpending(p0):
-    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(p0)
+def SKY_coin_VerifyTransactionHoursSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(*args)
 SKY_coin_VerifyTransactionHoursSpending = _skycoin.SKY_coin_VerifyTransactionHoursSpending
 
 def SKY_encrypt_Sha256Xor_Encrypt(p0, p1):
@@ -2281,8 +2307,8 @@ def SKY_coin_BlockBody_Bytes(p0):
     return _skycoin.SKY_coin_BlockBody_Bytes(p0)
 SKY_coin_BlockBody_Bytes = _skycoin.SKY_coin_BlockBody_Bytes
 
-def SKY_coin_CreateUnspents(p0, p1):
-    return _skycoin.SKY_coin_CreateUnspents(p0, p1)
+def SKY_coin_CreateUnspents(*args):
+    return _skycoin.SKY_coin_CreateUnspents(*args)
 SKY_coin_CreateUnspents = _skycoin.SKY_coin_CreateUnspents
 
 def SKY_coin_CreateUnspent(p0, p1, p2, p3):
