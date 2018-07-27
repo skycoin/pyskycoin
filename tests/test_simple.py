@@ -347,4 +347,7 @@ def test_VerifyInput():
 	in2.Body.Coins = 15 * million
 	in2.Body.Hours = 10
 	uxInList.append(in2)	
+	error, coins = skycoin.SKY_coin_UxArray_Coins(uxInList)
+	assert error == 0
+	assert coins == 25 * million
 	error = skycoin.SKY_coin_Transaction_VerifyInput(transactionHandle, uxInList)	

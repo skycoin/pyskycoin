@@ -1,7 +1,6 @@
 import skycoin
 from tests.utils.skyerror import error
 from tests.utils import transutil
-
 MaxUint64 = 0xFFFFFFFFFFFFFFFF
 Million = 1000000
 MaxUint16 = 0xFFFF
@@ -177,4 +176,15 @@ def test_TestTransactionVerifyInput():
     seckeys = []
     seckeys.append(ux)
     assert skycoin.SKY_coin_Transaction_VerifyInput(handle, seckeys) == error["SKY_ERROR"]
+
+    # tx.In does not match uxIn hashes
+    ux, s = transutil.makeUxOutWithSecret()
+    handle, tx = transutil.test_makeTransactionFromUxOut(ux, s)
+    seckeys = []
+    seckeys.append(skycoin.coin__UxOut())
+    assert skycoin.SKY_coin_Transaction_VerifyInput(handle, seckeys) == error["SKY_ERROR"]
+    # Invalid signature
+    ux, s = transutil.makeUxOutWithSecret()
+    handle, tx = transutil.test_makeTransactionFromUxOut(ux, s)
+    
 

@@ -3524,6 +3524,58 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 	}
 
 
+	GoUint32 wrap_SKY_coin_UxArray_HasDupes(coin_UxOutArray* __uxIn, GoUint8* p1){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_UxArray_HasDupes(&data, p1);
+	}
+
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_int  (int value)
+{
+  return PyInt_FromLong((long) value);
+}
+
+
+	GoUint32 wrap_SKY_coin_UxArray_Coins(coin_UxOutArray* __uxIn, GoUint64* p1){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_UxArray_Coins(&data, p1);
+	}
+
+
+	GoUint32 wrap_SKY_coin_UxArray_CoinHours(coin_UxOutArray* __uxIn, GoUint64 p1, GoUint64* p2){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_UxArray_CoinHours(&data, p1, p2);
+	}
+
+
+	GoUint32 wrap_SKY_coin_UxArray_Less(coin_UxOutArray* __uxIn, GoInt p1, GoInt p2, GoUint8* p3){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_UxArray_Less(&data, p1, p2, p3);
+	}
+
+
+	GoUint32 wrap_SKY_coin_UxArray_Swap(coin_UxOutArray* __uxIn, GoInt p1, GoInt p2){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_UxArray_Swap(&data, p1, p2);
+	}
+
+
 	void destroy_cipher_SecKeys(cipher_SecKeys* p){
 		if( p != NULL ){
 			if( p->data != NULL ){
@@ -3602,13 +3654,6 @@ SWIG_AsVal_int (PyObject * obj, int *val)
     }
   }  
   return res;
-}
-
-
-SWIGINTERNINLINE PyObject*
-  SWIG_From_int  (int value)
-{
-  return PyInt_FromLong((long) value);
 }
 
 
@@ -4682,6 +4727,284 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_VerifyInput__SWIG_0(PyObject *SW
 fail:
   {
     if (arg2->data) free(arg2->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_HasDupes__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  coin_UxOutArray temp1 ;
+  GoUint8 temp2 ;
+  int res2 = SWIG_TMPOBJ ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  arg2 = &temp2;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_UxArray_HasDupes",&obj0)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_UxArray_HasDupes(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res2)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
+  }
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  coin_UxOutArray temp1 ;
+  GoUint64 temp2 ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_UxArray_Coins",&obj0)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_UxArray_Coins(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
+  }
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
+  coin_UxOutArray temp1 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  GoUint64 temp3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp3 = 0;
+    arg3 = &temp3;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_UxArray_CoinHours",&obj0,&obj1)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_UxArray_CoinHours" "', argument " "2"" of type '" "GoUint64""'");
+  } 
+  arg2 = (GoUint64)(val2);
+  result = (GoUint32)wrap_SKY_coin_UxArray_CoinHours(arg1,arg2,arg3);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
+  }
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Less__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  GoInt arg2 ;
+  GoInt arg3 ;
+  GoUint8 *arg4 = (GoUint8 *) 0 ;
+  coin_UxOutArray temp1 ;
+  long long val2 ;
+  int ecode2 = 0 ;
+  long long val3 ;
+  int ecode3 = 0 ;
+  GoUint8 temp4 ;
+  int res4 = SWIG_TMPOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  GoUint32 result;
+  
+  arg4 = &temp4;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_UxArray_Less",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_UxArray_Less" "', argument " "2"" of type '" "GoInt""'");
+  } 
+  arg2 = (GoInt)(val2);
+  ecode3 = SWIG_AsVal_long_SS_long(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_coin_UxArray_Less" "', argument " "3"" of type '" "GoInt""'");
+  } 
+  arg3 = (GoInt)(val3);
+  result = (GoUint32)wrap_SKY_coin_UxArray_Less(arg1,arg2,arg3,arg4);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res4)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_char, new_flags));
+  }
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Swap__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  GoInt arg2 ;
+  GoInt arg3 ;
+  coin_UxOutArray temp1 ;
+  long long val2 ;
+  int ecode2 = 0 ;
+  long long val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  GoUint32 result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_UxArray_Swap",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_UxArray_Swap" "', argument " "2"" of type '" "GoInt""'");
+  } 
+  arg2 = (GoInt)(val2);
+  ecode3 = SWIG_AsVal_long_SS_long(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_coin_UxArray_Swap" "', argument " "3"" of type '" "GoInt""'");
+  } 
+  arg3 = (GoInt)(val3);
+  result = (GoUint32)wrap_SKY_coin_UxArray_Swap(arg1,arg2,arg3);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
   }
   return NULL;
 }
@@ -12053,7 +12376,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_HasDupes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_HasDupes__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
@@ -12085,6 +12408,40 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_HasDupes(PyObject *SWIGUNUSEDPARM(se
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_HasDupes(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_SKY_coin_UxArray_HasDupes__SWIG_1(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      return _wrap_SKY_coin_UxArray_HasDupes__SWIG_0(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_HasDupes'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_HasDupes(coin_UxOutArray *,GoUint8 *)\n"
+    "    SKY_coin_UxArray_HasDupes(cipher__PubKeySlice *,GoUint8 *)\n");
+  return 0;
 }
 
 
@@ -12148,7 +12505,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Less(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Less__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   GoInt arg2 ;
@@ -12201,7 +12558,66 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Less(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_long_SS_long(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_SKY_coin_UxArray_Less__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_long_SS_long(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_SKY_coin_UxArray_Less__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_Less'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_Less(coin_UxOutArray *,GoInt,GoInt,GoUint8 *)\n"
+    "    SKY_coin_UxArray_Less(cipher__PubKeySlice *,GoInt,GoInt,GoUint8 *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Swap__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   GoInt arg2 ;
@@ -12244,7 +12660,66 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Swap(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_long_SS_long(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_SKY_coin_UxArray_Swap__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_long_SS_long(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_SKY_coin_UxArray_Swap__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_Swap'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_Swap(coin_UxOutArray *,GoInt,GoInt)\n"
+    "    SKY_coin_UxArray_Swap(cipher__PubKeySlice *,GoInt,GoInt)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
@@ -12278,7 +12753,41 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Coins(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_SKY_coin_UxArray_Coins__SWIG_1(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      return _wrap_SKY_coin_UxArray_Coins__SWIG_0(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_Coins'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_Coins(coin_UxOutArray *,GoUint64 *)\n"
+    "    SKY_coin_UxArray_Coins(cipher__PubKeySlice *,GoUint64 *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   GoUint64 arg2 ;
@@ -12318,6 +12827,53 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *SWIGUNUSEDPARM(s
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_CoinHours(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_SKY_coin_UxArray_CoinHours__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_SKY_coin_UxArray_CoinHours__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_CoinHours'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_CoinHours(coin_UxOutArray *,GoUint64,GoUint64 *)\n"
+    "    SKY_coin_UxArray_CoinHours(cipher__PubKeySlice *,GoUint64,GoUint64 *)\n");
+  return 0;
 }
 
 

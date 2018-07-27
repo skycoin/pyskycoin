@@ -1044,8 +1044,8 @@ def SKY_coin_UxArray_Hashes():
     return _skycoin.SKY_coin_UxArray_Hashes()
 SKY_coin_UxArray_Hashes = _skycoin.SKY_coin_UxArray_Hashes
 
-def SKY_coin_UxArray_HasDupes():
-    return _skycoin.SKY_coin_UxArray_HasDupes()
+def SKY_coin_UxArray_HasDupes(*args):
+    return _skycoin.SKY_coin_UxArray_HasDupes(*args)
 SKY_coin_UxArray_HasDupes = _skycoin.SKY_coin_UxArray_HasDupes
 
 def SKY_coin_UxArray_Sort():
@@ -1056,20 +1056,20 @@ def SKY_coin_UxArray_Len():
     return _skycoin.SKY_coin_UxArray_Len()
 SKY_coin_UxArray_Len = _skycoin.SKY_coin_UxArray_Len
 
-def SKY_coin_UxArray_Less(p1, p2):
-    return _skycoin.SKY_coin_UxArray_Less(p1, p2)
+def SKY_coin_UxArray_Less(*args):
+    return _skycoin.SKY_coin_UxArray_Less(*args)
 SKY_coin_UxArray_Less = _skycoin.SKY_coin_UxArray_Less
 
-def SKY_coin_UxArray_Swap(p1, p2):
-    return _skycoin.SKY_coin_UxArray_Swap(p1, p2)
+def SKY_coin_UxArray_Swap(*args):
+    return _skycoin.SKY_coin_UxArray_Swap(*args)
 SKY_coin_UxArray_Swap = _skycoin.SKY_coin_UxArray_Swap
 
-def SKY_coin_UxArray_Coins():
-    return _skycoin.SKY_coin_UxArray_Coins()
+def SKY_coin_UxArray_Coins(*args):
+    return _skycoin.SKY_coin_UxArray_Coins(*args)
 SKY_coin_UxArray_Coins = _skycoin.SKY_coin_UxArray_Coins
 
-def SKY_coin_UxArray_CoinHours(p1):
-    return _skycoin.SKY_coin_UxArray_CoinHours(p1)
+def SKY_coin_UxArray_CoinHours(*args):
+    return _skycoin.SKY_coin_UxArray_CoinHours(*args)
 SKY_coin_UxArray_CoinHours = _skycoin.SKY_coin_UxArray_CoinHours
 
 def SKY_coin_UxArray_Sub():
