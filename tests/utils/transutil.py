@@ -13,7 +13,7 @@ def test_makeAddress():
 
 def test_makeTransactionFromUxOut(ux, s):
     _, handle = skycoin.SKY_coin_Create_Transaction()
-    _,tx = skycoin.SKY_coin_Get_Transaction_Object(handle)
+    _, tx = skycoin.SKY_coin_Get_Transaction_Object(handle)
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_cipher_SecKey_Verify(s) == error["SKY_OK"]
     assert skycoin.SKY_coin_UxOut_Hash(ux, h) == error["SKY_OK"]
@@ -23,9 +23,10 @@ def test_makeTransactionFromUxOut(ux, s):
         handle, test_makeAddress(), int(1e6), int(50)) == error["SKY_OK"]
     assert skycoin.SKY_coin_Transaction_PushOutput(
         handle, test_makeAddress(), int(5e6), int(50)) == error["SKY_OK"]
-    secKeys = []  
+    secKeys = []
     secKeys.append(s)
-    assert skycoin.SKY_coin_Transaction_SignInputs(handle, secKeys) == error["SKY_OK"]
+    assert skycoin.SKY_coin_Transaction_SignInputs(
+        handle, secKeys) == error["SKY_OK"]
     assert skycoin.SKY_coin_Transaction_UpdateHeader(handle) == error["SKY_OK"]
     return handle, tx
 
@@ -78,3 +79,16 @@ def copyTransaction(handle1, handle2):
         handle1, handle2) == error["SKY_OK"]
     # _, txo = skycoin.SKY_coin_Get_Transaction_Object(handle2)
     return handle2
+
+
+def makeEmptyTransaction():
+    err, handle = skycoin.SKY_coin_Create_Transaction()
+    ptransaction = skycoin.coin__Transaction()
+    assert skycoin.SKY_coin_Get_Transactions_Object(
+        handle, ptransaction) == error["SKY_OK"]
+    return handle, ptransaction
+
+
+def makeUxOut(puxOut):
+    seckey = skycoin.cipher_SecKey()
+    return makeUxOutWithSecret(puxOut, seckey)
