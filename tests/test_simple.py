@@ -338,5 +338,16 @@ def test_UxOutList_CreateUnspent():
 		i += 1
 	skycoin.SKY_handle_close(transactionHandle)
 		
-		
-		
+def test_VerifyInput():
+	million = 1000000
+	error, transactionHandle = skycoin.SKY_coin_Create_Transaction()	
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)	
+	error = skycoin.SKY_coin_Transaction_VerifyInput(transactionHandle, uxInList)	

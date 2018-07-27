@@ -1587,8 +1587,8 @@ def SKY_coin_Transaction_Verify(p0):
     return _skycoin.SKY_coin_Transaction_Verify(p0)
 SKY_coin_Transaction_Verify = _skycoin.SKY_coin_Transaction_Verify
 
-def SKY_coin_Transaction_VerifyInput(p0):
-    return _skycoin.SKY_coin_Transaction_VerifyInput(p0)
+def SKY_coin_Transaction_VerifyInput(*args):
+    return _skycoin.SKY_coin_Transaction_VerifyInput(*args)
 SKY_coin_Transaction_VerifyInput = _skycoin.SKY_coin_Transaction_VerifyInput
 
 def SKY_coin_Transaction_PushInput(p0, p1):
