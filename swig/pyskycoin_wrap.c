@@ -3046,45 +3046,46 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_cipher_Sig swig_types[61]
 #define SWIGTYPE_p_cipher__Address swig_types[62]
 #define SWIGTYPE_p_cli__SendAmount swig_types[63]
-#define SWIGTYPE_p_coin__Block swig_types[64]
-#define SWIGTYPE_p_coin__BlockBody swig_types[65]
-#define SWIGTYPE_p_coin__BlockHeader swig_types[66]
-#define SWIGTYPE_p_coin__SignedBlock swig_types[67]
-#define SWIGTYPE_p_coin__SortableTransactions swig_types[68]
-#define SWIGTYPE_p_coin__Transaction swig_types[69]
-#define SWIGTYPE_p_coin__TransactionOutput swig_types[70]
-#define SWIGTYPE_p_coin__UxBody swig_types[71]
-#define SWIGTYPE_p_coin__UxHead swig_types[72]
-#define SWIGTYPE_p_coin__UxOut swig_types[73]
-#define SWIGTYPE_p_double swig_types[74]
-#define SWIGTYPE_p_encoder__StructField swig_types[75]
-#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[76]
-#define SWIGTYPE_p_float swig_types[77]
-#define SWIGTYPE_p_httphelper__Address swig_types[78]
-#define SWIGTYPE_p_int swig_types[79]
-#define SWIGTYPE_p_long_long swig_types[80]
-#define SWIGTYPE_p_p_GoSlice_ swig_types[81]
-#define SWIGTYPE_p_p_coin__Block swig_types[82]
-#define SWIGTYPE_p_p_coin__Transaction swig_types[83]
-#define SWIGTYPE_p_secp256k1go__Field swig_types[84]
-#define SWIGTYPE_p_secp256k1go__XY swig_types[85]
-#define SWIGTYPE_p_secp256k1go__XYZ swig_types[86]
-#define SWIGTYPE_p_short swig_types[87]
-#define SWIGTYPE_p_signed_char swig_types[88]
-#define SWIGTYPE_p_unsigned_char swig_types[89]
-#define SWIGTYPE_p_unsigned_int swig_types[90]
-#define SWIGTYPE_p_unsigned_long_long swig_types[91]
-#define SWIGTYPE_p_unsigned_short swig_types[92]
-#define SWIGTYPE_p_void swig_types[93]
-#define SWIGTYPE_p_wallet__Balance swig_types[94]
-#define SWIGTYPE_p_wallet__BalancePair swig_types[95]
-#define SWIGTYPE_p_wallet__Entry swig_types[96]
-#define SWIGTYPE_p_wallet__Note swig_types[97]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[98]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[99]
-#define SWIGTYPE_p_wallet__Wallet swig_types[100]
-static swig_type_info *swig_types[102];
-static swig_module_info swig_module = {swig_types, 101, 0, 0, 0, 0};
+#define SWIGTYPE_p_coin_UxOutArray swig_types[64]
+#define SWIGTYPE_p_coin__Block swig_types[65]
+#define SWIGTYPE_p_coin__BlockBody swig_types[66]
+#define SWIGTYPE_p_coin__BlockHeader swig_types[67]
+#define SWIGTYPE_p_coin__SignedBlock swig_types[68]
+#define SWIGTYPE_p_coin__SortableTransactions swig_types[69]
+#define SWIGTYPE_p_coin__Transaction swig_types[70]
+#define SWIGTYPE_p_coin__TransactionOutput swig_types[71]
+#define SWIGTYPE_p_coin__UxBody swig_types[72]
+#define SWIGTYPE_p_coin__UxHead swig_types[73]
+#define SWIGTYPE_p_coin__UxOut swig_types[74]
+#define SWIGTYPE_p_double swig_types[75]
+#define SWIGTYPE_p_encoder__StructField swig_types[76]
+#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[77]
+#define SWIGTYPE_p_float swig_types[78]
+#define SWIGTYPE_p_httphelper__Address swig_types[79]
+#define SWIGTYPE_p_int swig_types[80]
+#define SWIGTYPE_p_long_long swig_types[81]
+#define SWIGTYPE_p_p_GoSlice_ swig_types[82]
+#define SWIGTYPE_p_p_coin__Block swig_types[83]
+#define SWIGTYPE_p_p_coin__Transaction swig_types[84]
+#define SWIGTYPE_p_secp256k1go__Field swig_types[85]
+#define SWIGTYPE_p_secp256k1go__XY swig_types[86]
+#define SWIGTYPE_p_secp256k1go__XYZ swig_types[87]
+#define SWIGTYPE_p_short swig_types[88]
+#define SWIGTYPE_p_signed_char swig_types[89]
+#define SWIGTYPE_p_unsigned_char swig_types[90]
+#define SWIGTYPE_p_unsigned_int swig_types[91]
+#define SWIGTYPE_p_unsigned_long_long swig_types[92]
+#define SWIGTYPE_p_unsigned_short swig_types[93]
+#define SWIGTYPE_p_void swig_types[94]
+#define SWIGTYPE_p_wallet__Balance swig_types[95]
+#define SWIGTYPE_p_wallet__BalancePair swig_types[96]
+#define SWIGTYPE_p_wallet__Entry swig_types[97]
+#define SWIGTYPE_p_wallet__Note swig_types[98]
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[99]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[100]
+#define SWIGTYPE_p_wallet__Wallet swig_types[101]
+static swig_type_info *swig_types[103];
+static swig_module_info swig_module = {swig_types, 102, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3377,6 +3378,139 @@ SWIG_AsVal_long_SS_long (PyObject *obj, long long *val)
 		data.len = __in_pubKeys->count;
 		data.cap = __in_pubKeys->count;
 		GoUint32 result = SKY_cipher_PubKeySlice_Swap(&data, p1, p2);
+		return result;
+	}
+
+
+	GoUint32 wrap_SKY_coin_VerifyTransactionCoinsSpending(coin_UxOutArray* __uxIn, coin_UxOutArray* __uxOut){
+		GoSlice_ dataIn;
+		dataIn.data = __uxIn->data;
+		dataIn.len = __uxIn->count;
+		dataIn.cap = __uxIn->count;
+		GoSlice_ dataOut;
+		dataOut.data = __uxOut->data;
+		dataOut.len = __uxOut->count;
+		dataOut.cap = __uxOut->count;
+		GoUint32 result = SKY_coin_VerifyTransactionCoinsSpending(&dataIn, &dataOut);
+		return result;
+	};
+
+
+	GoUint32 wrap_SKY_coin_VerifyTransactionHoursSpending(GoUint64 _headTime , coin_UxOutArray* __uxIn, coin_UxOutArray* __uxOut){
+		GoSlice_ dataIn;
+		dataIn.data = __uxIn->data;
+		dataIn.len = __uxIn->count;
+		dataIn.cap = __uxIn->count;
+		GoSlice_ dataOut;
+		dataOut.data = __uxOut->data;
+		dataOut.len = __uxOut->count;
+		dataOut.cap = __uxOut->count;
+		GoUint32 result = SKY_coin_VerifyTransactionHoursSpending(_headTime, &dataIn, &dataOut);
+		return result;
+	};
+
+
+SWIGINTERN int
+SWIG_AsVal_unsigned_SS_long (PyObject *obj, unsigned long *val) 
+{
+#if PY_VERSION_HEX < 0x03000000
+  if (PyInt_Check(obj)) {
+    long v = PyInt_AsLong(obj);
+    if (v >= 0) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      return SWIG_OverflowError;
+    }
+  } else
+#endif
+  if (PyLong_Check(obj)) {
+    unsigned long v = PyLong_AsUnsignedLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      PyErr_Clear();
+      return SWIG_OverflowError;
+    }
+  }
+#ifdef SWIG_PYTHON_CAST_MODE
+  {
+    int dispatch = 0;
+    unsigned long v = PyLong_AsUnsignedLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_AddCast(SWIG_OK);
+    } else {
+      PyErr_Clear();
+    }
+    if (!dispatch) {
+      double d;
+      int res = SWIG_AddCast(SWIG_AsVal_double (obj,&d));
+      if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, 0, ULONG_MAX)) {
+	if (val) *val = (unsigned long)(d);
+	return res;
+      }
+    }
+  }
+#endif
+  return SWIG_TypeError;
+}
+
+
+#ifdef SWIG_LONG_LONG_AVAILABLE
+SWIGINTERN int
+SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
+{
+  int res = SWIG_TypeError;
+  if (PyLong_Check(obj)) {
+    unsigned long long v = PyLong_AsUnsignedLongLong(obj);
+    if (!PyErr_Occurred()) {
+      if (val) *val = v;
+      return SWIG_OK;
+    } else {
+      PyErr_Clear();
+      res = SWIG_OverflowError;
+    }
+  } else {
+    unsigned long v;
+    res = SWIG_AsVal_unsigned_SS_long (obj,&v);
+    if (SWIG_IsOK(res)) {
+      if (val) *val = v;
+      return res;
+    }
+  }
+#ifdef SWIG_PYTHON_CAST_MODE
+  {
+    const double mant_max = 1LL << DBL_MANT_DIG;
+    double d;
+    res = SWIG_AsVal_double (obj,&d);
+    if (SWIG_IsOK(res) && !SWIG_CanCastAsInteger(&d, 0, mant_max))
+      return SWIG_OverflowError;
+    if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, 0, mant_max)) {
+      if (val) *val = (unsigned long long)(d);
+      return SWIG_AddCast(res);
+    }
+    res = SWIG_TypeError;
+  }
+#endif
+  return res;
+}
+#endif
+
+
+	GoUint32 wrap_SKY_coin_CreateUnspents(coin__BlockHeader* bh, Transaction__Handle t, coin_UxOutArray* __return_Ux){
+		__return_Ux->data = NULL;
+		__return_Ux->count = 0;
+		GoSlice_ data;
+		data.data = NULL;
+		data.len = 0;
+		data.cap = 0;
+		GoUint32 result = SKY_coin_CreateUnspents(bh, t, &data);
+		if( result == 0){
+			__return_Ux->data = data.data;
+			__return_Ux->count = data.len;
+		}
 		return result;
 	}
 
@@ -3866,54 +4000,6 @@ SWIG_From_ptrdiff_t  (ptrdiff_t value)
 
 
 SWIGINTERN int
-SWIG_AsVal_unsigned_SS_long (PyObject *obj, unsigned long *val) 
-{
-#if PY_VERSION_HEX < 0x03000000
-  if (PyInt_Check(obj)) {
-    long v = PyInt_AsLong(obj);
-    if (v >= 0) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      return SWIG_OverflowError;
-    }
-  } else
-#endif
-  if (PyLong_Check(obj)) {
-    unsigned long v = PyLong_AsUnsignedLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      PyErr_Clear();
-      return SWIG_OverflowError;
-    }
-  }
-#ifdef SWIG_PYTHON_CAST_MODE
-  {
-    int dispatch = 0;
-    unsigned long v = PyLong_AsUnsignedLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_AddCast(SWIG_OK);
-    } else {
-      PyErr_Clear();
-    }
-    if (!dispatch) {
-      double d;
-      int res = SWIG_AddCast(SWIG_AsVal_double (obj,&d));
-      if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, 0, ULONG_MAX)) {
-	if (val) *val = (unsigned long)(d);
-	return res;
-      }
-    }
-  }
-#endif
-  return SWIG_TypeError;
-}
-
-
-SWIGINTERN int
 SWIG_AsVal_unsigned_SS_char (PyObject * obj, unsigned char *val)
 {
   unsigned long v;
@@ -3927,47 +4013,6 @@ SWIG_AsVal_unsigned_SS_char (PyObject * obj, unsigned char *val)
   }  
   return res;
 }
-
-
-#ifdef SWIG_LONG_LONG_AVAILABLE
-SWIGINTERN int
-SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
-{
-  int res = SWIG_TypeError;
-  if (PyLong_Check(obj)) {
-    unsigned long long v = PyLong_AsUnsignedLongLong(obj);
-    if (!PyErr_Occurred()) {
-      if (val) *val = v;
-      return SWIG_OK;
-    } else {
-      PyErr_Clear();
-      res = SWIG_OverflowError;
-    }
-  } else {
-    unsigned long v;
-    res = SWIG_AsVal_unsigned_SS_long (obj,&v);
-    if (SWIG_IsOK(res)) {
-      if (val) *val = v;
-      return res;
-    }
-  }
-#ifdef SWIG_PYTHON_CAST_MODE
-  {
-    const double mant_max = 1LL << DBL_MANT_DIG;
-    double d;
-    res = SWIG_AsVal_double (obj,&d);
-    if (SWIG_IsOK(res) && !SWIG_CanCastAsInteger(&d, 0, mant_max))
-      return SWIG_OverflowError;
-    if (SWIG_IsOK(res) && SWIG_CanCastAsInteger(&d, 0, mant_max)) {
-      if (val) *val = (unsigned long long)(d);
-      return SWIG_AddCast(res);
-    }
-    res = SWIG_TypeError;
-  }
-#endif
-  return res;
-}
-#endif
 
 
 SWIGINTERN int
@@ -4397,6 +4442,194 @@ fail:
   {
     if (arg1->data) free(arg1->data);
   }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionCoinsSpending__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  coin_UxOutArray *arg2 = (coin_UxOutArray *) 0 ;
+  coin_UxOutArray temp1 ;
+  coin_UxOutArray temp2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GoUint32 result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_VerifyTransactionCoinsSpending",&obj0,&obj1)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  {
+    int i;
+    arg2 = &temp2;
+    arg2->count = PyList_Size(obj1);
+    arg2->data = malloc(sizeof(coin__UxOut) * arg2->count);
+    coin__UxOut* pdata = arg2->data;
+    for(i = 0; i < arg2->count; i++){
+      PyObject *o = PyList_GetItem(obj1, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_VerifyTransactionCoinsSpending(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionHoursSpending__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GoUint64 arg1 ;
+  coin_UxOutArray *arg2 = (coin_UxOutArray *) 0 ;
+  coin_UxOutArray *arg3 = (coin_UxOutArray *) 0 ;
+  unsigned long long val1 ;
+  int ecode1 = 0 ;
+  coin_UxOutArray temp2 ;
+  coin_UxOutArray temp3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  GoUint32 result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_VerifyTransactionHoursSpending",&obj0,&obj1,&obj2)) SWIG_fail;
+  ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_coin_VerifyTransactionHoursSpending" "', argument " "1"" of type '" "GoUint64""'");
+  } 
+  arg1 = (GoUint64)(val1);
+  {
+    int i;
+    arg2 = &temp2;
+    arg2->count = PyList_Size(obj1);
+    arg2->data = malloc(sizeof(coin__UxOut) * arg2->count);
+    coin__UxOut* pdata = arg2->data;
+    for(i = 0; i < arg2->count; i++){
+      PyObject *o = PyList_GetItem(obj1, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  {
+    int i;
+    arg3 = &temp3;
+    arg3->count = PyList_Size(obj2);
+    arg3->data = malloc(sizeof(coin__UxOut) * arg3->count);
+    coin__UxOut* pdata = arg3->data;
+    for(i = 0; i < arg3->count; i++){
+      PyObject *o = PyList_GetItem(obj2, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_VerifyTransactionHoursSpending(arg1,arg2,arg3);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  {
+    if (arg3->data) free(arg3->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg2->data) free(arg2->data);
+  }
+  {
+    if (arg3->data) free(arg3->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_CreateUnspents__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
+  Transaction__Handle arg2 ;
+  coin_UxOutArray *arg3 = (coin_UxOutArray *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  coin_UxOutArray temp3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp3.data = NULL;
+    temp3.count = 0;
+    arg3 = &temp3;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_CreateUnspents",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__BlockHeader, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_coin_CreateUnspents" "', argument " "1"" of type '" "coin__BlockHeader *""'"); 
+  }
+  arg1 = (coin__BlockHeader *)(argp1);
+  {
+    SWIG_AsVal_long(obj1, (long*)&arg2);
+  }
+  result = (GoUint32)wrap_SKY_coin_CreateUnspents(arg1,arg2,arg3);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    int i;
+    PyObject *list = PyList_New(0);
+    for (i = 0; i < arg3->count; i++) {
+      coin__UxOut* key = &(arg3->data[i]);
+      coin__UxOut* newKey = malloc(sizeof(coin__UxOut));
+      memcpy(newKey, key, sizeof(coin__UxOut));
+      PyObject *o = SWIG_NewPointerObj(SWIG_as_voidptr(newKey), SWIGTYPE_p_coin__UxOut, SWIG_POINTER_OWN );
+      PyList_Append(list, o);
+      Py_DECREF(o);
+    }
+    if( arg3->data != NULL)
+    free( (void*)arg3->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -6579,6 +6812,151 @@ SWIGINTERN PyObject *cipher_PubKeys_swigregister(PyObject *SWIGUNUSEDPARM(self),
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_cipher_PubKeys, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_coin_UxOutArray_data_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:coin_UxOutArray_data_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin_UxOutArray, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin_UxOutArray_data_set" "', argument " "1"" of type '" "coin_UxOutArray *""'"); 
+  }
+  arg1 = (coin_UxOutArray *)(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_coin__UxOut, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "coin_UxOutArray_data_set" "', argument " "2"" of type '" "coin__UxOut *""'"); 
+  }
+  arg2 = (coin__UxOut *)(argp2);
+  if (arg1) (arg1)->data = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_coin_UxOutArray_data_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  coin__UxOut *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:coin_UxOutArray_data_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin_UxOutArray, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin_UxOutArray_data_get" "', argument " "1"" of type '" "coin_UxOutArray *""'"); 
+  }
+  arg1 = (coin_UxOutArray *)(argp1);
+  result = (coin__UxOut *) ((arg1)->data);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_coin__UxOut, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_coin_UxOutArray_count_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:coin_UxOutArray_count_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin_UxOutArray, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin_UxOutArray_count_set" "', argument " "1"" of type '" "coin_UxOutArray *""'"); 
+  }
+  arg1 = (coin_UxOutArray *)(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "coin_UxOutArray_count_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  if (arg1) (arg1)->count = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_coin_UxOutArray_count_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:coin_UxOutArray_count_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin_UxOutArray, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin_UxOutArray_count_get" "', argument " "1"" of type '" "coin_UxOutArray *""'"); 
+  }
+  arg1 = (coin_UxOutArray *)(argp1);
+  result = (int) ((arg1)->count);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_coin_UxOutArray(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_coin_UxOutArray")) SWIG_fail;
+  result = (coin_UxOutArray *)calloc(1, sizeof(coin_UxOutArray));
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_coin_UxOutArray, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_coin_UxOutArray(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_coin_UxOutArray",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin_UxOutArray, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_coin_UxOutArray" "', argument " "1"" of type '" "coin_UxOutArray *""'"); 
+  }
+  arg1 = (coin_UxOutArray *)(argp1);
+  free((char *) arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *coin_UxOutArray_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_coin_UxOutArray, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -10317,7 +10695,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_CreateUnspents(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_CreateUnspents__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   Transaction__Handle arg2 ;
@@ -10353,6 +10731,56 @@ SWIGINTERN PyObject *_wrap_SKY_coin_CreateUnspents(PyObject *SWIGUNUSEDPARM(self
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_CreateUnspents(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_coin__BlockHeader, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PyInt_Check(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_SKY_coin_CreateUnspents__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_coin__BlockHeader, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PyInt_Check(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_SKY_coin_CreateUnspents__SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_CreateUnspents'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_CreateUnspents(coin__BlockHeader *,Transaction__Handle,coin_UxOutArray *)\n"
+    "    SKY_coin_CreateUnspents(coin__BlockHeader *,Transaction__Handle,cipher__PubKeySlice *)\n");
+  return 0;
 }
 
 
@@ -17354,7 +17782,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionCoinsSpending(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionCoinsSpending__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   cipher__PubKeySlice *arg2 = (cipher__PubKeySlice *) 0 ;
@@ -17391,7 +17819,46 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionHoursSpending(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionCoinsSpending(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[3] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_SKY_coin_VerifyTransactionCoinsSpending__SWIG_1(self, args);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        _v = PyList_Check(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        return _wrap_SKY_coin_VerifyTransactionCoinsSpending__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_VerifyTransactionCoinsSpending'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_VerifyTransactionCoinsSpending(coin_UxOutArray *,coin_UxOutArray *)\n"
+    "    SKY_coin_VerifyTransactionCoinsSpending(cipher__PubKeySlice *,cipher__PubKeySlice *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionHoursSpending__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
   cipher__PubKeySlice *arg2 = (cipher__PubKeySlice *) 0 ;
@@ -17434,6 +17901,58 @@ SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionHoursSpending(PyObject *SWI
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_VerifyTransactionHoursSpending(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_SKY_coin_VerifyTransactionHoursSpending__SWIG_1(self, args);
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      {
+        _v = PyList_Check(argv[1]) ? 1 : 0;
+      }
+      if (_v) {
+        {
+          _v = PyList_Check(argv[2]) ? 1 : 0;
+        }
+        if (_v) {
+          return _wrap_SKY_coin_VerifyTransactionHoursSpending__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_VerifyTransactionHoursSpending'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_VerifyTransactionHoursSpending(GoUint64,coin_UxOutArray *,coin_UxOutArray *)\n"
+    "    SKY_coin_VerifyTransactionHoursSpending(GoUint64,cipher__PubKeySlice *,cipher__PubKeySlice *)\n");
+  return 0;
 }
 
 
@@ -30320,6 +30839,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_cipher_PubKeys", _wrap_new_cipher_PubKeys, METH_VARARGS, NULL},
 	 { (char *)"delete_cipher_PubKeys", _wrap_delete_cipher_PubKeys, METH_VARARGS, NULL},
 	 { (char *)"cipher_PubKeys_swigregister", cipher_PubKeys_swigregister, METH_VARARGS, NULL},
+	 { (char *)"coin_UxOutArray_data_set", _wrap_coin_UxOutArray_data_set, METH_VARARGS, NULL},
+	 { (char *)"coin_UxOutArray_data_get", _wrap_coin_UxOutArray_data_get, METH_VARARGS, NULL},
+	 { (char *)"coin_UxOutArray_count_set", _wrap_coin_UxOutArray_count_set, METH_VARARGS, NULL},
+	 { (char *)"coin_UxOutArray_count_get", _wrap_coin_UxOutArray_count_get, METH_VARARGS, NULL},
+	 { (char *)"new_coin_UxOutArray", _wrap_new_coin_UxOutArray, METH_VARARGS, NULL},
+	 { (char *)"delete_coin_UxOutArray", _wrap_delete_coin_UxOutArray, METH_VARARGS, NULL},
+	 { (char *)"coin_UxOutArray_swigregister", coin_UxOutArray_swigregister, METH_VARARGS, NULL},
 	 { (char *)"_GoString__p_set", _wrap__GoString__p_set, METH_VARARGS, NULL},
 	 { (char *)"_GoString__p_get", _wrap__GoString__p_get, METH_VARARGS, NULL},
 	 { (char *)"_GoString__n_set", _wrap__GoString__n_set, METH_VARARGS, NULL},
@@ -31133,6 +31659,7 @@ static swig_type_info _swigt__p_cipher_SecKeys = {"_p_cipher_SecKeys", "cipher_S
 static swig_type_info _swigt__p_cipher_Sig = {"_p_cipher_Sig", "cipher_Sig *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cipher__Address = {"_p_cipher__Address", "cipher__Address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cli__SendAmount = {"_p_cli__SendAmount", "cli__SendAmount *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_coin_UxOutArray = {"_p_coin_UxOutArray", "coin_UxOutArray *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__Block = {"_p_coin__Block", "coin__Block *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__BlockBody = {"_p_coin__BlockBody", "coin__BlockBody *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__BlockHeader = {"_p_coin__BlockHeader", "coin__BlockHeader *", 0, 0, (void*)0, 0};
@@ -31236,6 +31763,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_cipher_Sig,
   &_swigt__p_cipher__Address,
   &_swigt__p_cli__SendAmount,
+  &_swigt__p_coin_UxOutArray,
   &_swigt__p_coin__Block,
   &_swigt__p_coin__BlockBody,
   &_swigt__p_coin__BlockHeader,
@@ -31339,6 +31867,7 @@ static swig_cast_info _swigc__p_cipher_SecKeys[] = {  {&_swigt__p_cipher_SecKeys
 static swig_cast_info _swigc__p_cipher_Sig[] = {  {&_swigt__p_cipher_Sig, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cipher__Address[] = {  {&_swigt__p_cipher__Address, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cli__SendAmount[] = {  {&_swigt__p_cli__SendAmount, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_coin_UxOutArray[] = {  {&_swigt__p_coin_UxOutArray, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__Block[] = {  {&_swigt__p_coin__Block, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__BlockBody[] = {  {&_swigt__p_coin__BlockBody, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__BlockHeader[] = {  {&_swigt__p_coin__BlockHeader, 0, 0, 0},{0, 0, 0, 0}};
@@ -31442,6 +31971,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_cipher_Sig,
   _swigc__p_cipher__Address,
   _swigc__p_cli__SendAmount,
+  _swigc__p_coin_UxOutArray,
   _swigc__p_coin__Block,
   _swigc__p_coin__BlockBody,
   _swigc__p_coin__BlockHeader,
