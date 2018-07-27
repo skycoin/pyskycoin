@@ -1847,24 +1847,24 @@ def SKY_coin_UxArray_CoinHours(*args):
     return _skycoin.SKY_coin_UxArray_CoinHours(*args)
 SKY_coin_UxArray_CoinHours = _skycoin.SKY_coin_UxArray_CoinHours
 
-def SKY_coin_UxArray_Sub():
-    return _skycoin.SKY_coin_UxArray_Sub()
+def SKY_coin_UxArray_Sub(*args):
+    return _skycoin.SKY_coin_UxArray_Sub(*args)
 SKY_coin_UxArray_Sub = _skycoin.SKY_coin_UxArray_Sub
 
-def SKY_coin_UxArray_Add():
-    return _skycoin.SKY_coin_UxArray_Add()
+def SKY_coin_UxArray_Add(*args):
+    return _skycoin.SKY_coin_UxArray_Add(*args)
 SKY_coin_UxArray_Add = _skycoin.SKY_coin_UxArray_Add
 
-def SKY_coin_NewAddressUxOuts(p1):
-    return _skycoin.SKY_coin_NewAddressUxOuts(p1)
+def SKY_coin_NewAddressUxOuts(*args):
+    return _skycoin.SKY_coin_NewAddressUxOuts(*args)
 SKY_coin_NewAddressUxOuts = _skycoin.SKY_coin_NewAddressUxOuts
 
 def SKY_coin_AddressUxOuts_Keys(p0):
     return _skycoin.SKY_coin_AddressUxOuts_Keys(p0)
 SKY_coin_AddressUxOuts_Keys = _skycoin.SKY_coin_AddressUxOuts_Keys
 
-def SKY_coin_AddressUxOuts_Flatten(p0):
-    return _skycoin.SKY_coin_AddressUxOuts_Flatten(p0)
+def SKY_coin_AddressUxOuts_Flatten(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Flatten(*args)
 SKY_coin_AddressUxOuts_Flatten = _skycoin.SKY_coin_AddressUxOuts_Flatten
 
 def SKY_coin_AddressUxOuts_Sub(p0, p1, p2):
@@ -1875,8 +1875,8 @@ def SKY_coin_AddressUxOuts_Add(p0, p1, p2):
     return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1, p2)
 SKY_coin_AddressUxOuts_Add = _skycoin.SKY_coin_AddressUxOuts_Add
 
-def SKY_coin_AddressUxOuts_Get(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Get(p0, p1)
+def SKY_coin_AddressUxOuts_Get(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Get(*args)
 SKY_coin_AddressUxOuts_Get = _skycoin.SKY_coin_AddressUxOuts_Get
 
 def SKY_coin_AddressUxOuts_HasKey(p0, p1):
@@ -1891,8 +1891,8 @@ def SKY_coin_AddressUxOuts_Length(p0):
     return _skycoin.SKY_coin_AddressUxOuts_Length(p0)
 SKY_coin_AddressUxOuts_Length = _skycoin.SKY_coin_AddressUxOuts_Length
 
-def SKY_coin_AddressUxOuts_Set(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Set(p0, p1)
+def SKY_coin_AddressUxOuts_Set(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Set(*args)
 SKY_coin_AddressUxOuts_Set = _skycoin.SKY_coin_AddressUxOuts_Set
 
 def SKY_scrypt_Key(p0, p1, p2, p3, p4, p5):
