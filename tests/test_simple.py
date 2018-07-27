@@ -233,4 +233,121 @@ def test_UxBody():
 	sha256.assignFrom(uxbody.SrcTransaction)
 	sha256.assignTo(uxbody.SrcTransaction)
 
+def test_SecKeysList():
+	seckeysList = []    
+	#Generate pubkeys and seckeys
+	#then add seckeys to lists
+	error, data = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
+		    data, pubkey, seckey)
+	assert error == 0	
+	error, data = skycoin.SKY_cipher_RandByte(32)
+	assert error == 0
+	seckeysList.append(seckey)
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
+		    data, pubkey, seckey)
+	assert error == 0	
+	seckeysList.append(seckey)
+	error, handleTransaction = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0	
+	#Add as many inputs as keys
+	sha256 = skycoin.cipher_SHA256()
+	error, r = skycoin.SKY_coin_Transaction_PushInput(handleTransaction, sha256)
+	assert error == 0
+	sha256 = skycoin.cipher_SHA256()
+	error, r = skycoin.SKY_coin_Transaction_PushInput(handleTransaction, sha256)
+	assert error == 0
+	skycoin.SKY_coin_Transaction_ResetSignatures(handleTransaction, 0)
+	error = skycoin.SKY_coin_Transaction_SignInputs(handleTransaction, seckeysList)
+	assert error == 0
+	skycoin.SKY_handle_close(handleTransaction)
+	
+def test_UxOutList_CoinsHoursSpending():
+	million = 1000000
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)
+	uxOutList = []
+	out1 = skycoin.coin__UxOut()
+	out1.Body.Coins = 10 * million
+	out1.Body.Hours = 11
+	uxOutList.append(out1)
+	out2 = skycoin.coin__UxOut()
+	out2.Body.Coins = 10 * million
+	out2.Body.Hours = 1
+	uxOutList.append(out2)
+	out3 = skycoin.coin__UxOut()
+	out3.Body.Coins = 5 * million
+	out3.Body.Hours = 0
+	uxOutList.append(out3)
+	error = skycoin.SKY_coin_VerifyTransactionCoinsSpending(uxInList, uxOutList)
+	assert error == 0
+	error = skycoin.SKY_coin_VerifyTransactionHoursSpending(0, uxInList, uxOutList)
+	assert error == 0
 
+def test_UxOutList_CreateUnspent():
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	assert error == 0
+	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
+	assert error == 0
+	error, transactionHandle = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_PushOutput(transactionHandle, address, 11000000, 255)
+	assert error == 0
+	bh = skycoin.coin__BlockHeader()
+	bh.Time = 0
+	bh.BkSeq = 1
+	error,  unspents = skycoin.SKY_coin_CreateUnspents(bh, transactionHandle)
+	assert error == 0
+	assert len(unspents) == 1
+	error, outputsCount = skycoin.SKY_coin_Transaction_Get_Outputs_Count(transactionHandle)
+	assert error == 0
+	assert outputsCount == len(unspents)
+	i = 0
+	for unspent in unspents:
+		assert unspent.Head.Time == bh.Time
+		assert unspent.Head.BkSeq == bh.BkSeq
+		output = skycoin.coin__TransactionOutput()
+		skycoin.SKY_coin_Transaction_Get_Output_At(transactionHandle, i, output)
+		assert unspent.Body.Coins == output.Coins
+		assert unspent.Body.Hours == output.Hours
+		hash = skycoin.cipher_SHA256()
+		error = skycoin.SKY_coin_Transaction_Hash(transactionHandle, hash)
+		assert error == 0
+		hash2 = skycoin.cipher_SHA256()
+		hash2.assignFrom(unspent.Body.SrcTransaction)
+		assert hash == hash2
+		assert unspent.Body.Address == output.Address
+		i += 1
+	skycoin.SKY_handle_close(transactionHandle)
+		
+def test_VerifyInput():
+	million = 1000000
+	error, transactionHandle = skycoin.SKY_coin_Create_Transaction()	
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)	
+	error, coins = skycoin.SKY_coin_UxArray_Coins(uxInList)
+	assert error == 0
+	assert coins == 25 * million
+	error = skycoin.SKY_coin_Transaction_VerifyInput(transactionHandle, uxInList)	
