@@ -123,4 +123,5 @@ error = {
     "SKY_ErrWalletConstraint": 0x0B000027,
     "SKY_ErrDuplicateUxOuts ": 0x0B000028,
     "SKY_ErrUnknownWalletID ": 0x0B000029,
+    "SKY_BAD_HANDLE": 0xFF000001,
 }
