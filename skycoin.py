@@ -1555,6 +1555,10 @@ def SKY_coin_Transaction_Get_Input_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Input_At(p0, p1, p2)
 SKY_coin_Transaction_Get_Input_At = _skycoin.SKY_coin_Transaction_Get_Input_At
 
+def SKY_coin_Transaction_Set_Input_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Input_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Input_At = _skycoin.SKY_coin_Transaction_Set_Input_At
+
 def SKY_coin_Transaction_Get_Outputs_Count(p0):
     return _skycoin.SKY_coin_Transaction_Get_Outputs_Count(p0)
 SKY_coin_Transaction_Get_Outputs_Count = _skycoin.SKY_coin_Transaction_Get_Outputs_Count
@@ -1563,6 +1567,10 @@ def SKY_coin_Transaction_Get_Output_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Output_At(p0, p1, p2)
 SKY_coin_Transaction_Get_Output_At = _skycoin.SKY_coin_Transaction_Get_Output_At
 
+def SKY_coin_Transaction_Set_Output_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Output_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Output_At = _skycoin.SKY_coin_Transaction_Set_Output_At
+
 def SKY_coin_Transaction_Get_Signatures_Count(p0):
     return _skycoin.SKY_coin_Transaction_Get_Signatures_Count(p0)
 SKY_coin_Transaction_Get_Signatures_Count = _skycoin.SKY_coin_Transaction_Get_Signatures_Count
@@ -1570,6 +1578,10 @@ SKY_coin_Transaction_Get_Signatures_Count = _skycoin.SKY_coin_Transaction_Get_Si
 def SKY_coin_Transaction_Get_Signature_At(p0, p1, p2):
     return _skycoin.SKY_coin_Transaction_Get_Signature_At(p0, p1, p2)
 SKY_coin_Transaction_Get_Signature_At = _skycoin.SKY_coin_Transaction_Get_Signature_At
+
+def SKY_coin_Transaction_Set_Signature_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Signature_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Signature_At = _skycoin.SKY_coin_Transaction_Set_Signature_At
 
 def SKY_coin_Transaction_Push_Signature(p0, p1):
     return _skycoin.SKY_coin_Transaction_Push_Signature(p0, p1)
