@@ -83,12 +83,8 @@ def copyTransaction(handle1, handle2):
 
 def makeEmptyTransaction():
     err, handle = skycoin.SKY_coin_Create_Transaction()
-    ptransaction = skycoin.coin__Transaction()
-    assert skycoin.SKY_coin_Get_Transactions_Object(
-        handle, ptransaction) == error["SKY_OK"]
-    return handle, ptransaction
+    return handle
 
 
-def makeUxOut(puxOut):
-    seckey = skycoin.cipher_SecKey()
-    return makeUxOutWithSecret(puxOut, seckey)
+def makeUxOut():
+    return makeUxOutWithSecret()

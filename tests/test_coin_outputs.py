@@ -141,7 +141,7 @@ def test_TestUxOutCoinHours():
     assert hours == uxh.Time + (uxb.Coins / 1000000) * 6
     assert err == error["SKY_OK"]
     # Time is backwards (treated as no hours passed)
-    now = uxh.Time / 2
+    now = int(uxh.Time / 2)
     err, hours =  skycoin.SKY_coin_UxOut_CoinHours(uxo, now)
     assert hours == uxh.Time
     assert err == error["SKY_OK"]

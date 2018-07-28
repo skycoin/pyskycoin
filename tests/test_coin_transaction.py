@@ -203,3 +203,58 @@ def test_TestTransactionVerifyInput():
     seckeys.append(ux)
     assert skycoin.SKY_coin_Transaction_VerifyInput(
         handle, seckeys) == error["SKY_OK"]
+
+
+def test_TestTransactionPushInput():
+    handle = transutil.makeEmptyTransaction()
+    ux, _ = transutil.makeUxOut()
+    sha = skycoin.cipher_SHA256()
+    assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == error["SKY_OK"]
+    _, r = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
+    assert r == 0
+    _, count = skycoin.SKY_coin_Transaction_Get_Inputs_Count(handle)
+    assert count == 1
+    sha1 = skycoin.cipher_SHA256()
+    skycoin.SKY_coin_Transaction_Get_Input_At(handle, 0, sha1)
+    assert sha == sha1
+    skycoin.SKY_coin_Transaction_ResetInputs(handle, 0)
+    for _ in range(MaxUint16):
+        err, _ = skycoin.SKY_coin_Transaction_PushInput(
+            handle, skycoin.cipher_SHA256())
+        assert err == error["SKY_OK"]
+    ux, _ = transutil.makeUxOut()
+    assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == error["SKY_OK"]
+    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
+    assert err == error["SKY_ERROR"]
+
+
+def test_TestTransactionPushOutput():
+    handle = transutil.makeEmptyTransaction()
+    a = transutil.test_makeAddress()
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, a, 100, 150) == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transaction_Get_Outputs_Count(handle)
+    assert err == error["SKY_OK"]
+    assert count == 1
+    pOut1 = skycoin.coin__TransactionOutput()
+    pOut = skycoin.coin__TransactionOutput()
+    pOut1.Address = a
+    pOut1.Coins = 100
+    pOut1.Hours = 150
+    assert skycoin.SKY_coin_Transaction_Get_Output_At(
+        handle, 0, pOut) == error["SKY_OK"]
+    assert pOut == pOut1
+    for i in range(1, 20):
+        a = transutil.test_makeAddress()
+        assert skycoin.SKY_coin_Transaction_PushOutput(
+            handle, a, int(i * 100), int(i * 50)) == error["SKY_OK"]
+        err, count = skycoin.SKY_coin_Transaction_Get_Outputs_Count(handle)
+        assert err == error["SKY_OK"]
+        assert count == int(i + 1)
+        pOut1.Address = a
+        pOut1.Coins = int(i * 100)
+        pOut1.Hours = int(i * 150)
+        assert skycoin.SKY_coin_Transaction_Get_Output_At(
+            handle, i, pOut) == error["SKY_OK"]
+        assert pOut == pOut
+        i += 1
