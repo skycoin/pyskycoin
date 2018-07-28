@@ -1,16 +1,16 @@
 import skycoin
 from tests.utils.skyerror import error
-from tests.utils.transutil import makeUxBodyWithSecret, makeUxOutWithSecret
+from tests.utils.transutil import test_makeUxBodyWithSecret, makeUxOutWithSecret
 
 def test_TestUxBodyHash():
-    uxb, _ = makeUxBodyWithSecret()
+    uxb, _ = test_makeUxBodyWithSecret()
     hash_null = skycoin.cipher_SHA256()
     hashx  = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_UxBody_Hash(uxb, hashx) == error["SKY_OK"]
     assert hashx != hash_null
 
 def test_TestUxOutHash():
-    uxb, _ = makeUxBodyWithSecret()
+    uxb, _ = test_makeUxBodyWithSecret()
     uxo, _ = makeUxOutWithSecret()
     uxo.Body = uxb
     hash_body = skycoin.cipher_SHA256()

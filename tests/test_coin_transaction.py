@@ -175,16 +175,31 @@ def test_TestTransactionVerifyInput():
     skycoin.cipher_SHA256().assignTo(tx.InnerHash)
     seckeys = []
     seckeys.append(ux)
-    assert skycoin.SKY_coin_Transaction_VerifyInput(handle, seckeys) == error["SKY_ERROR"]
+    assert skycoin.SKY_coin_Transaction_VerifyInput(
+        handle, seckeys) == error["SKY_ERROR"]
 
     # tx.In does not match uxIn hashes
     ux, s = transutil.makeUxOutWithSecret()
     handle, tx = transutil.test_makeTransactionFromUxOut(ux, s)
     seckeys = []
     seckeys.append(skycoin.coin__UxOut())
-    assert skycoin.SKY_coin_Transaction_VerifyInput(handle, seckeys) == error["SKY_ERROR"]
+    assert skycoin.SKY_coin_Transaction_VerifyInput(
+        handle, seckeys) == error["SKY_ERROR"]
     # Invalid signature
     ux, s = transutil.makeUxOutWithSecret()
     handle, tx = transutil.test_makeTransactionFromUxOut(ux, s)
-    
+    sigs = skycoin.cipher_Sig()
+    assert skycoin.SKY_coin_Transaction_Set_Signature_At(
+        handle, 0, sigs) == error["SKY_OK"]
+    seckeys = []
+    seckeys.append(ux)
+    assert skycoin.SKY_coin_Transaction_VerifyInput(
+        handle, seckeys) == error["SKY_ERROR"]
 
+    # Valid
+    ux, s = transutil.makeUxOutWithSecret()
+    handle, tx = transutil.test_makeTransactionFromUxOut(ux, s)
+    seckeys = []
+    seckeys.append(ux)
+    assert skycoin.SKY_coin_Transaction_VerifyInput(
+        handle, seckeys) == error["SKY_OK"]
