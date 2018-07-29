@@ -427,6 +427,47 @@ class cipher_PubKeys(_object):
 cipher_PubKeys_swigregister = _skycoin.cipher_PubKeys_swigregister
 cipher_PubKeys_swigregister(cipher_PubKeys)
 
+class cipher_SHA256s(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_SHA256s, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, cipher_SHA256s, name)
+    __repr__ = _swig_repr
+
+    def getAt(self, i):
+        return _skycoin.cipher_SHA256s_getAt(self, i)
+
+    def setAt(self, i, hash):
+        return _skycoin.cipher_SHA256s_setAt(self, i, hash)
+
+    def __eq__(self, a):
+        return _skycoin.cipher_SHA256s___eq__(self, a)
+
+    def allocate(self, n):
+        return _skycoin.cipher_SHA256s_allocate(self, n)
+
+    def release(self):
+        return _skycoin.cipher_SHA256s_release(self)
+    __swig_setmethods__["data"] = _skycoin.cipher_SHA256s_data_set
+    __swig_getmethods__["data"] = _skycoin.cipher_SHA256s_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.cipher_SHA256s_data_get, _skycoin.cipher_SHA256s_data_set)
+    __swig_setmethods__["count"] = _skycoin.cipher_SHA256s_count_set
+    __swig_getmethods__["count"] = _skycoin.cipher_SHA256s_count_get
+    if _newclass:
+        count = _swig_property(_skycoin.cipher_SHA256s_count_get, _skycoin.cipher_SHA256s_count_set)
+
+    def __init__(self):
+        this = _skycoin.new_cipher_SHA256s()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_cipher_SHA256s
+    __del__ = lambda self: None
+cipher_SHA256s_swigregister = _skycoin.cipher_SHA256s_swigregister
+cipher_SHA256s_swigregister(cipher_SHA256s)
+
 class coin_UxOutArray(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, coin_UxOutArray, name, value)
@@ -1072,24 +1113,24 @@ def SKY_coin_UxArray_CoinHours(*args):
     return _skycoin.SKY_coin_UxArray_CoinHours(*args)
 SKY_coin_UxArray_CoinHours = _skycoin.SKY_coin_UxArray_CoinHours
 
-def SKY_coin_UxArray_Sub():
-    return _skycoin.SKY_coin_UxArray_Sub()
+def SKY_coin_UxArray_Sub(*args):
+    return _skycoin.SKY_coin_UxArray_Sub(*args)
 SKY_coin_UxArray_Sub = _skycoin.SKY_coin_UxArray_Sub
 
-def SKY_coin_UxArray_Add():
-    return _skycoin.SKY_coin_UxArray_Add()
+def SKY_coin_UxArray_Add(*args):
+    return _skycoin.SKY_coin_UxArray_Add(*args)
 SKY_coin_UxArray_Add = _skycoin.SKY_coin_UxArray_Add
 
-def SKY_coin_NewAddressUxOuts(p1):
-    return _skycoin.SKY_coin_NewAddressUxOuts(p1)
+def SKY_coin_NewAddressUxOuts(*args):
+    return _skycoin.SKY_coin_NewAddressUxOuts(*args)
 SKY_coin_NewAddressUxOuts = _skycoin.SKY_coin_NewAddressUxOuts
 
-def SKY_coin_AddressUxOuts_Keys(p0):
-    return _skycoin.SKY_coin_AddressUxOuts_Keys(p0)
+def SKY_coin_AddressUxOuts_Keys(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Keys(*args)
 SKY_coin_AddressUxOuts_Keys = _skycoin.SKY_coin_AddressUxOuts_Keys
 
-def SKY_coin_AddressUxOuts_Flatten(p0):
-    return _skycoin.SKY_coin_AddressUxOuts_Flatten(p0)
+def SKY_coin_AddressUxOuts_Flatten(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Flatten(*args)
 SKY_coin_AddressUxOuts_Flatten = _skycoin.SKY_coin_AddressUxOuts_Flatten
 
 def SKY_coin_AddressUxOuts_Sub(p0, p1, p2):
@@ -1100,8 +1141,8 @@ def SKY_coin_AddressUxOuts_Add(p0, p1, p2):
     return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1, p2)
 SKY_coin_AddressUxOuts_Add = _skycoin.SKY_coin_AddressUxOuts_Add
 
-def SKY_coin_AddressUxOuts_Get(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Get(p0, p1)
+def SKY_coin_AddressUxOuts_Get(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Get(*args)
 SKY_coin_AddressUxOuts_Get = _skycoin.SKY_coin_AddressUxOuts_Get
 
 def SKY_coin_AddressUxOuts_HasKey(p0, p1):
@@ -1116,8 +1157,8 @@ def SKY_coin_AddressUxOuts_Length(p0):
     return _skycoin.SKY_coin_AddressUxOuts_Length(p0)
 SKY_coin_AddressUxOuts_Length = _skycoin.SKY_coin_AddressUxOuts_Length
 
-def SKY_coin_AddressUxOuts_Set(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Set(p0, p1)
+def SKY_coin_AddressUxOuts_Set(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Set(*args)
 SKY_coin_AddressUxOuts_Set = _skycoin.SKY_coin_AddressUxOuts_Set
 
 def SKY_fee_VerifyTransactionFee(p0, p1):
