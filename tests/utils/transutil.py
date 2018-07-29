@@ -2,7 +2,7 @@ import skycoin
 from tests.utils.skyerror import error
 
 
-def test_makeAddress():
+def makeAddress():
     p = skycoin.cipher_PubKey()
     s = skycoin.cipher_SecKey()
     assert skycoin.SKY_cipher_GenerateKeyPair(p, s) == error["SKY_OK"]
@@ -11,7 +11,7 @@ def test_makeAddress():
     return a
 
 
-def test_makeTransactionFromUxOut(ux, s):
+def makeTransactionFromUxOut(ux, s):
     _, handle = skycoin.SKY_coin_Create_Transaction()
     _, tx = skycoin.SKY_coin_Get_Transaction_Object(handle)
     h = skycoin.cipher_SHA256()
@@ -20,9 +20,9 @@ def test_makeTransactionFromUxOut(ux, s):
     err, r = skycoin.SKY_coin_Transaction_PushInput(handle, h)
     assert err == error["SKY_OK"]
     assert skycoin.SKY_coin_Transaction_PushOutput(
-        handle, test_makeAddress(), int(1e6), int(50)) == error["SKY_OK"]
+        handle, makeAddress(), int(1e6), int(50)) == error["SKY_OK"]
     assert skycoin.SKY_coin_Transaction_PushOutput(
-        handle, test_makeAddress(), int(5e6), int(50)) == error["SKY_OK"]
+        handle, makeAddress(), int(5e6), int(50)) == error["SKY_OK"]
     secKeys = []
     secKeys.append(s)
     assert skycoin.SKY_coin_Transaction_SignInputs(
@@ -31,7 +31,7 @@ def test_makeTransactionFromUxOut(ux, s):
     return handle, tx
 
 
-def test_makeUxBodyWithSecret():
+def makeUxBodyWithSecret():
     p = skycoin.cipher_PubKey()
     s = skycoin.cipher_SecKey()
     assert skycoin.SKY_cipher_GenerateKeyPair(p, s) == error["SKY_OK"]
@@ -50,7 +50,7 @@ def test_makeUxBodyWithSecret():
 
 
 def makeUxOutWithSecret():
-    body, sec = test_makeUxBodyWithSecret()
+    body, sec = makeUxBodyWithSecret()
     uxo = skycoin.coin__UxOut()
     uxh = skycoin.coin__UxHead()
     uxh.Time = 100
@@ -62,7 +62,7 @@ def makeUxOutWithSecret():
 
 def makeTransaction():
     ux, s = makeUxOutWithSecret()
-    return test_makeTransactionFromUxOut(ux, s)
+    return makeTransactionFromUxOut(ux, s)
 
 
 def makeTransactions(n):
@@ -74,11 +74,15 @@ def makeTransactions(n):
     return handle
 
 
-def copyTransaction(handle1, handle2):
-    assert skycoin.SKY_coin_Transaction_Copy(
-        handle1, handle2) == error["SKY_OK"]
-    # _, txo = skycoin.SKY_coin_Get_Transaction_Object(handle2)
-    return handle2
+def copyTransaction(handle):
+    handle2 = skycoin.coin__Transaction()
+    err, handle2 = skycoin.SKY_coin_Transaction_Copy(
+        handle)
+    assert err == error["SKY_OK"]
+    assert skycoin.SKY_coin_Transaction_Verify(handle2) == error["SKY_OK"]
+    err, ptx = skycoin.SKY_coin_Get_Transaction_Object(handle2)
+    assert err == error["SKY_OK"]
+    return handle2, ptx
 
 
 def makeEmptyTransaction():
