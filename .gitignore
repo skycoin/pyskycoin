@@ -20,7 +20,6 @@ swig/include/libskycoin.h
 
 #Just for testing outside tox
 tests/mytest.py
-skycoin.py
 
 # due to using tox and pytest
 .tox
