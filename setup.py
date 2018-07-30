@@ -104,6 +104,7 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords='skycoin crypto coin currency blockchain',  # Optional
+    py_modules=['skycoin'],
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
     install_requires=[],
     extras_require={  # Optional
