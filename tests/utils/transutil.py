@@ -68,7 +68,7 @@ def makeTransaction():
 def makeTransactions(n):
     _, handle = skycoin.SKY_coin_Create_Transactions()
     for i in range(n):
-        thandle = makeTransaction()
+        thandle, _ = makeTransaction()
         assert skycoin.SKY_coin_Transactions_Add(
             handle, thandle) == error["SKY_OK"]
     return handle
