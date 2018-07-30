@@ -61,6 +61,8 @@ class skycoin_build_ext(build_ext, object):
                                             stderr=subprocess.PIPE,
                                             shell=True)
             stdout, stderr = make_process.communicate()
+            files = os.listdir(make_path)
+            raise DistutilsSetupError(files)
             print("stdout:")
             sys.stderr.write(str(stdout))
             if len(stderr) > 0:
