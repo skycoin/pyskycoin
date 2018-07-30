@@ -61,8 +61,6 @@ class skycoin_build_ext(build_ext, object):
                                             stderr=subprocess.PIPE,
                                             shell=True)
             stdout, stderr = make_process.communicate()
-            files = os.listdir(make_path)
-            raise DistutilsSetupError(files)
             print("stdout:")
             sys.stderr.write(str(stdout))
             if len(stderr) > 0:
@@ -71,6 +69,8 @@ class skycoin_build_ext(build_ext, object):
             # After making the library build the c library's
             # python interface with the parent build_extension method
             super(skycoin_build_ext, self).build_extension(ext)
+            files = os.listdir(make_path)
+            raise DistutilsSetupError(files)
 
 
 
