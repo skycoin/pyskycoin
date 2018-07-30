@@ -69,6 +69,8 @@ class skycoin_build_ext(build_ext, object):
             # After making the library build the c library's
             # python interface with the parent build_extension method
             super(skycoin_build_ext, self).build_extension(ext)
+            files = os.listdir(os.path.join(make_path, "gopath/src/github/skycoin/skycoin/lib/cgo"))
+            raise DistutilsSetupError(files)
 
 
 
