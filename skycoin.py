@@ -1701,8 +1701,8 @@ def SKY_coin_Transactions_GetAt(p0, p1):
     return _skycoin.SKY_coin_Transactions_GetAt(p0, p1)
 SKY_coin_Transactions_GetAt = _skycoin.SKY_coin_Transactions_GetAt
 
-def SKY_coin_Transactions_Hashes(p0):
-    return _skycoin.SKY_coin_Transactions_Hashes(p0)
+def SKY_coin_Transactions_Hashes(*args):
+    return _skycoin.SKY_coin_Transactions_Hashes(*args)
 SKY_coin_Transactions_Hashes = _skycoin.SKY_coin_Transactions_Hashes
 
 def SKY_coin_Transactions_Size(p0):
