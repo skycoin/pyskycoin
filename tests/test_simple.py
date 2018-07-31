@@ -364,3 +364,9 @@ def test_Transaction_Hashes():
 	error, hashesList = skycoin.SKY_coin_Transactions_Hashes(handleTransactions)
 	assert error == 0
 	assert len(hashesList) == 2
+	h1 = skycoin.cipher_SHA256()
+	h2 = skycoin.cipher_SHA256()
+	assert h1 == h2
+	for hash in hashesList:
+		h = skycoin.cipher_SHA256()
+		assert not (h == hash)
