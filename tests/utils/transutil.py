@@ -68,7 +68,7 @@ def makeTransaction():
 def makeTransactions(n):
     _, handle = skycoin.SKY_coin_Create_Transactions()
     for i in range(n):
-        thandle = makeTransaction()
+        thandle, _ = makeTransaction()
         assert skycoin.SKY_coin_Transactions_Add(
             handle, thandle) == error["SKY_OK"]
     return handle
@@ -86,9 +86,32 @@ def copyTransaction(handle):
 
 
 def makeEmptyTransaction():
-    err, handle = skycoin.SKY_coin_Create_Transaction()
+    _, handle = skycoin.SKY_coin_Create_Transaction()
     return handle
 
 
 def makeUxOut():
     return makeUxOutWithSecret()
+
+
+def equalTransactions(handle1, handle2):
+    err, size1 = skycoin.SKY_coin_Transactions_Length(handle1)
+    assert err == error["SKY_OK"]
+    err, size2 = skycoin.SKY_coin_Transactions_Length(handle2)
+    assert err == error["SKY_OK"]
+    if size1 != size2:
+        return 1
+
+    for i in range(int(size1 - 1)):
+        err, tx1 = skycoin.SKY_coin_Transactions_GetAt(handle1, i)
+        assert err == error["SKY_OK"]
+        err, tx2 = skycoin.SKY_coin_Transactions_GetAt(handle2, i)
+        assert err == error["SKY_OK"]
+        err, tx1_obj = skycoin.SKY_coin_Get_Transaction_Object(tx1)
+        assert err == error["SKY_OK"]
+        err, tx2_obj = skycoin.SKY_coin_Get_Transaction_Object(tx2)
+        assert err == error["SKY_OK"]
+        assert tx1_obj == tx2_obj
+        i += 1
+
+    return 0
