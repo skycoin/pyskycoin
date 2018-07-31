@@ -54,7 +54,6 @@ class skycoin_build_ext(build_ext, object):
 
             make_path = os.path.realpath(os.path.join(sources_path,'..'))
 
-            print("Before calling make in subprocess")
             make_process = subprocess.Popen('make build-libc-swig',
                                             cwd=make_path,
                                             stdout=subprocess.PIPE,
