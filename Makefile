@@ -31,10 +31,8 @@ configure:
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
-	echo "Before building libskycoin"
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
-	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
 	rm -f swig/include/libskycoin.h
 	mkdir -p swig/include
