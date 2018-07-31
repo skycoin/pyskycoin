@@ -426,3 +426,144 @@ def test_TestTransactionSerialization():
     # Invalid deserialization
     err, _ = skycoin.SKY_coin_MustTransactionDeserialize(bytes(0x04))
     assert err == error["SKY_ERROR"]
+
+
+def test_TestTransactionOutputHours():
+    handle = transutil.makeEmptyTransaction()
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, transutil.makeAddress(), int(1e6), 100) == error["SKY_OK"]
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, transutil.makeAddress(), int(1e6), 200) == error["SKY_OK"]
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, transutil.makeAddress(), int(1e6), 500) == error["SKY_OK"]
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, transutil.makeAddress(), int(1e6), 0) == error["SKY_OK"]
+    err, hours = skycoin.SKY_coin_Transaction_OutputHours(handle)
+    assert err == error["SKY_OK"]
+    assert hours == 800
+
+    assert skycoin.SKY_coin_Transaction_PushOutput(
+        handle, transutil.makeAddress(), int(1e6), int(MaxUint64 - 700)) == error["SKY_OK"]
+    err, _ = skycoin.SKY_coin_Transaction_OutputHours(handle)
+    assert err == error["SKY_ERROR"]
+
+
+def test_TestTransactionsSize():
+    handle = transutil.makeTransactions(10)
+    size = 0
+    for i in range(10):
+        err, tx = skycoin.SKY_coin_Transactions_GetAt(handle, i)
+        assert err == error["SKY_OK"]
+        err, b = skycoin.SKY_coin_Transaction_Serialize(tx)
+        size += len(b)
+        i += 1
+
+    assert size != 0
+    err, sizetx = skycoin.SKY_coin_Transactions_Size(handle)
+    assert err == error["SKY_OK"]
+    assert sizetx == size
+
+
+def test_TestTransactionsHashes():
+    handle = transutil.makeTransactions(4)
+    err, hashes = skycoin.SKY_coin_Transactions_Hashes(handle)
+    assert err == error["SKY_OK"]
+    len_hashes = len(hashes)
+    assert len_hashes == 4
+    for i in range(len_hashes):
+        err, tx = skycoin.SKY_coin_Transactions_GetAt(handle, i)
+        assert err == error["SKY_OK"]
+        h = skycoin.cipher_SHA256()
+        assert skycoin.SKY_coin_Transaction_Hash(tx, h) == error["SKY_OK"]
+        assert h == hashes[i]
+        i += 1
+
+
+def test_TestTransactionsTruncateBytesTo():
+    handles = transutil.makeTransactions(10)
+    trunc = 0
+    for i in range(5):
+        err, handle = skycoin.SKY_coin_Transactions_GetAt(handles, i)
+        assert err == error["SKY_OK"]
+        err, count = skycoin.SKY_coin_Transaction_Size(handle)
+        assert err == error["SKY_OK"]
+        trunc += count
+        i += 1
+    # Trucating halfway
+    err, tnxs2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert err == error["SKY_OK"]
+    err, len_tnxs2 = skycoin.SKY_coin_Transactions_Length(tnxs2)
+    assert err == error["SKY_OK"]
+    assert len_tnxs2 == 5
+    err, count = skycoin.SKY_coin_Transactions_Size(tnxs2)
+    assert err == error["SKY_OK"]
+    assert count == trunc
+
+    # Stepping into next boundary has same cutoff, must exceed
+    trunc += 1
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Length(tnxs2)
+    assert err == error["SKY_OK"]
+    assert count == 5
+    err, count = skycoin.SKY_coin_Transactions_Size(tnxs2)
+    assert err == error["SKY_OK"]
+    assert count == int(trunc - 1)
+
+    # Moving to 1 before next level
+    err, tnxs_5 = skycoin.SKY_coin_Transactions_GetAt(handles, 5)
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transaction_Size(tnxs_5)
+    assert err == error["SKY_OK"]
+    trunc += int(count - 2)
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Length(txns2)
+    assert err == error["SKY_OK"]
+    assert count == 5
+    err, count = skycoin.SKY_coin_Transactions_Size(txns2)
+    assert err == error["SKY_OK"]
+    err, count_tnxs5 = skycoin.SKY_coin_Transaction_Size(tnxs_5)
+    assert err == error["SKY_OK"]
+    assert int(trunc - count_tnxs5 + 1) == count
+
+    # Moving to next level
+    trunc += 1
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Length(txns2)
+    assert err == error["SKY_OK"]
+    assert count == 6
+    err, count = skycoin.SKY_coin_Transactions_Size(txns2)
+    assert err == error["SKY_OK"]
+    assert count == trunc
+
+    # Truncating to full available amt
+    err, trunc = skycoin.SKY_coin_Transactions_Size(handles)
+    assert err == error["SKY_OK"]
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert err == error["SKY_OK"]
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Size(txns2)
+    assert err == error["SKY_OK"]
+    assert count == trunc
+    assert transutil.equalTransactions(handles, txns2) == error["SKY_OK"]
+
+    # Truncating over amount
+    trunc += 1
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, trunc)
+    assert transutil.equalTransactions(handles, txns2) == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Size(handles)
+    assert err == error["SKY_OK"]
+    assert count == int(trunc - 1)
+
+    # Truncating to 0
+    trunc = 0
+    err, txns2 = skycoin.SKY_coin_Transactions_TruncateBytesTo(handles, 0)
+    assert err == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Length(txns2)
+    assert err == error["SKY_OK"]
+    assert count == 0
+    err, count = skycoin.SKY_coin_Transactions_Size(txns2)
+    assert err == error["SKY_OK"]
+    assert count == trunc
