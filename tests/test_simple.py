@@ -354,3 +354,16 @@ def test_VerifyInput():
 	assert error == 0
 	assert coins == 25 * million
 	error = skycoin.SKY_coin_Transaction_VerifyInput(transactionHandle, uxInList)	
+	
+def test_Transaction_Hashes():
+	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
+	assert error == 0
+	error, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
+	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
+	error, hashesList = skycoin.SKY_coin_Transactions_Hashes(handleTransactions)
+	assert error == 0
+	assert len(hashesList) == 2
