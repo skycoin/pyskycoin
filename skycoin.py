@@ -99,10 +99,6 @@ except __builtin__.Exception:
     _newclass = 0
 
 
-def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
-    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
-wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
-
 def destroy_cipher_SecKeys(p):
     return _skycoin.destroy_cipher_SecKeys(p)
 destroy_cipher_SecKeys = _skycoin.destroy_cipher_SecKeys
@@ -119,13 +115,17 @@ def equalTransactions(t1, t2):
     return _skycoin.equalTransactions(t1, t2)
 equalTransactions = _skycoin.equalTransactions
 
-def equalTransactionsArrays():
-    return _skycoin.equalTransactionsArrays()
+def equalTransactionsArrays(pTxs1, pTxs2):
+    return _skycoin.equalTransactionsArrays(pTxs1, pTxs2)
 equalTransactionsArrays = _skycoin.equalTransactionsArrays
 
 def equalBlockHeaders(bh1, bh2):
     return _skycoin.equalBlockHeaders(bh1, bh2)
 equalBlockHeaders = _skycoin.equalBlockHeaders
+
+def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
+    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
+wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
