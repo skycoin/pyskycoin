@@ -141,6 +141,12 @@ class cipher_PubKey(_object):
 
     def toStr(self):
         return _skycoin.cipher_PubKey_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_PubKey_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_PubKey_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_PubKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_PubKey_data_get
     if _newclass:
@@ -172,6 +178,12 @@ class cipher_SecKey(_object):
 
     def toStr(self):
         return _skycoin.cipher_SecKey_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_SecKey_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_SecKey_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_SecKey_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SecKey_data_get
     if _newclass:
@@ -203,6 +215,12 @@ class cipher_Ripemd160(_object):
 
     def toStr(self):
         return _skycoin.cipher_Ripemd160_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Ripemd160_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Ripemd160_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Ripemd160_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Ripemd160_data_get
     if _newclass:
@@ -234,6 +252,12 @@ class cipher_Sig(_object):
 
     def toStr(self):
         return _skycoin.cipher_Sig_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Sig_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Sig_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Sig_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Sig_data_get
     if _newclass:
@@ -265,6 +289,12 @@ class cipher_SHA256(_object):
 
     def toStr(self):
         return _skycoin.cipher_SHA256_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_SHA256_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_SHA256_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -296,6 +326,12 @@ class cipher_Checksum(_object):
 
     def toStr(self):
         return _skycoin.cipher_Checksum_toStr(self)
+
+    def assignFrom(self, data):
+        return _skycoin.cipher_Checksum_assignFrom(self, data)
+
+    def assignTo(self, data):
+        return _skycoin.cipher_Checksum_assignTo(self, data)
     __swig_setmethods__["data"] = _skycoin.cipher_Checksum_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_Checksum_data_get
     if _newclass:
@@ -393,6 +429,73 @@ class cipher_PubKeys(_object):
     __del__ = lambda self: None
 cipher_PubKeys_swigregister = _skycoin.cipher_PubKeys_swigregister
 cipher_PubKeys_swigregister(cipher_PubKeys)
+
+class cipher_SHA256s(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_SHA256s, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, cipher_SHA256s, name)
+    __repr__ = _swig_repr
+
+    def getAt(self, i):
+        return _skycoin.cipher_SHA256s_getAt(self, i)
+
+    def setAt(self, i, hash):
+        return _skycoin.cipher_SHA256s_setAt(self, i, hash)
+
+    def __eq__(self, a):
+        return _skycoin.cipher_SHA256s___eq__(self, a)
+
+    def allocate(self, n):
+        return _skycoin.cipher_SHA256s_allocate(self, n)
+
+    def release(self):
+        return _skycoin.cipher_SHA256s_release(self)
+    __swig_setmethods__["data"] = _skycoin.cipher_SHA256s_data_set
+    __swig_getmethods__["data"] = _skycoin.cipher_SHA256s_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.cipher_SHA256s_data_get, _skycoin.cipher_SHA256s_data_set)
+    __swig_setmethods__["count"] = _skycoin.cipher_SHA256s_count_set
+    __swig_getmethods__["count"] = _skycoin.cipher_SHA256s_count_get
+    if _newclass:
+        count = _swig_property(_skycoin.cipher_SHA256s_count_get, _skycoin.cipher_SHA256s_count_set)
+
+    def __init__(self):
+        this = _skycoin.new_cipher_SHA256s()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_cipher_SHA256s
+    __del__ = lambda self: None
+cipher_SHA256s_swigregister = _skycoin.cipher_SHA256s_swigregister
+cipher_SHA256s_swigregister(cipher_SHA256s)
+
+class coin_UxOutArray(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, coin_UxOutArray, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, coin_UxOutArray, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.coin_UxOutArray_data_set
+    __swig_getmethods__["data"] = _skycoin.coin_UxOutArray_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.coin_UxOutArray_data_get, _skycoin.coin_UxOutArray_data_set)
+    __swig_setmethods__["count"] = _skycoin.coin_UxOutArray_count_set
+    __swig_getmethods__["count"] = _skycoin.coin_UxOutArray_count_get
+    if _newclass:
+        count = _swig_property(_skycoin.coin_UxOutArray_count_get, _skycoin.coin_UxOutArray_count_set)
+
+    def __init__(self):
+        this = _skycoin.new_coin_UxOutArray()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_coin_UxOutArray
+    __del__ = lambda self: None
+coin_UxOutArray_swigregister = _skycoin.coin_UxOutArray_swigregister
+coin_UxOutArray_swigregister(coin_UxOutArray)
 
 class _GoString_(_object):
     __swig_setmethods__ = {}
@@ -1485,6 +1588,46 @@ def SKY_coin_Transaction_ResetInputs(p0, p1):
     return _skycoin.SKY_coin_Transaction_ResetInputs(p0, p1)
 SKY_coin_Transaction_ResetInputs = _skycoin.SKY_coin_Transaction_ResetInputs
 
+def SKY_coin_Transaction_Get_Inputs_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Inputs_Count(p0)
+SKY_coin_Transaction_Get_Inputs_Count = _skycoin.SKY_coin_Transaction_Get_Inputs_Count
+
+def SKY_coin_Transaction_Get_Input_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Get_Input_At(p0, p1, p2)
+SKY_coin_Transaction_Get_Input_At = _skycoin.SKY_coin_Transaction_Get_Input_At
+
+def SKY_coin_Transaction_Set_Input_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Input_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Input_At = _skycoin.SKY_coin_Transaction_Set_Input_At
+
+def SKY_coin_Transaction_Get_Outputs_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Outputs_Count(p0)
+SKY_coin_Transaction_Get_Outputs_Count = _skycoin.SKY_coin_Transaction_Get_Outputs_Count
+
+def SKY_coin_Transaction_Get_Output_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Get_Output_At(p0, p1, p2)
+SKY_coin_Transaction_Get_Output_At = _skycoin.SKY_coin_Transaction_Get_Output_At
+
+def SKY_coin_Transaction_Set_Output_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Output_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Output_At = _skycoin.SKY_coin_Transaction_Set_Output_At
+
+def SKY_coin_Transaction_Get_Signatures_Count(p0):
+    return _skycoin.SKY_coin_Transaction_Get_Signatures_Count(p0)
+SKY_coin_Transaction_Get_Signatures_Count = _skycoin.SKY_coin_Transaction_Get_Signatures_Count
+
+def SKY_coin_Transaction_Get_Signature_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Get_Signature_At(p0, p1, p2)
+SKY_coin_Transaction_Get_Signature_At = _skycoin.SKY_coin_Transaction_Get_Signature_At
+
+def SKY_coin_Transaction_Set_Signature_At(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_Set_Signature_At(p0, p1, p2)
+SKY_coin_Transaction_Set_Signature_At = _skycoin.SKY_coin_Transaction_Set_Signature_At
+
+def SKY_coin_Transaction_Push_Signature(p0, p1):
+    return _skycoin.SKY_coin_Transaction_Push_Signature(p0, p1)
+SKY_coin_Transaction_Push_Signature = _skycoin.SKY_coin_Transaction_Push_Signature
+
 def SKY_coin_Transaction_ResetOutputs(p0, p1):
     return _skycoin.SKY_coin_Transaction_ResetOutputs(p0, p1)
 SKY_coin_Transaction_ResetOutputs = _skycoin.SKY_coin_Transaction_ResetOutputs
@@ -1497,8 +1640,8 @@ def SKY_coin_Transaction_Verify(p0):
     return _skycoin.SKY_coin_Transaction_Verify(p0)
 SKY_coin_Transaction_Verify = _skycoin.SKY_coin_Transaction_Verify
 
-def SKY_coin_Transaction_VerifyInput(p0):
-    return _skycoin.SKY_coin_Transaction_VerifyInput(p0)
+def SKY_coin_Transaction_VerifyInput(*args):
+    return _skycoin.SKY_coin_Transaction_VerifyInput(*args)
 SKY_coin_Transaction_VerifyInput = _skycoin.SKY_coin_Transaction_VerifyInput
 
 def SKY_coin_Transaction_PushInput(p0, p1):
@@ -1513,8 +1656,8 @@ def SKY_coin_Transaction_PushOutput(p0, p1, p2, p3):
     return _skycoin.SKY_coin_Transaction_PushOutput(p0, p1, p2, p3)
 SKY_coin_Transaction_PushOutput = _skycoin.SKY_coin_Transaction_PushOutput
 
-def SKY_coin_Transaction_SignInputs(p0, p1):
-    return _skycoin.SKY_coin_Transaction_SignInputs(p0, p1)
+def SKY_coin_Transaction_SignInputs(*args):
+    return _skycoin.SKY_coin_Transaction_SignInputs(*args)
 SKY_coin_Transaction_SignInputs = _skycoin.SKY_coin_Transaction_SignInputs
 
 def SKY_coin_Transaction_Size(p0):
@@ -1565,8 +1708,8 @@ def SKY_coin_Create_Transactions():
     return _skycoin.SKY_coin_Create_Transactions()
 SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
 
-def SKY_coin_Get_Transactions_Object(p0):
-    return _skycoin.SKY_coin_Get_Transactions_Object(p0)
+def SKY_coin_Get_Transactions_Object(p0, p1):
+    return _skycoin.SKY_coin_Get_Transactions_Object(p0, p1)
 SKY_coin_Get_Transactions_Object = _skycoin.SKY_coin_Get_Transactions_Object
 
 def SKY_coin_Transactions_Length(p0):
@@ -1621,12 +1764,12 @@ def SKY_coin_SortableTransactions_Swap(p0, p1, p2):
     return _skycoin.SKY_coin_SortableTransactions_Swap(p0, p1, p2)
 SKY_coin_SortableTransactions_Swap = _skycoin.SKY_coin_SortableTransactions_Swap
 
-def SKY_coin_VerifyTransactionCoinsSpending():
-    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending()
+def SKY_coin_VerifyTransactionCoinsSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending(*args)
 SKY_coin_VerifyTransactionCoinsSpending = _skycoin.SKY_coin_VerifyTransactionCoinsSpending
 
-def SKY_coin_VerifyTransactionHoursSpending(p0):
-    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(p0)
+def SKY_coin_VerifyTransactionHoursSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(*args)
 SKY_coin_VerifyTransactionHoursSpending = _skycoin.SKY_coin_VerifyTransactionHoursSpending
 
 def SKY_encrypt_Sha256Xor_Encrypt(p0, p1):
@@ -1717,8 +1860,8 @@ def SKY_coin_UxArray_Hashes():
     return _skycoin.SKY_coin_UxArray_Hashes()
 SKY_coin_UxArray_Hashes = _skycoin.SKY_coin_UxArray_Hashes
 
-def SKY_coin_UxArray_HasDupes():
-    return _skycoin.SKY_coin_UxArray_HasDupes()
+def SKY_coin_UxArray_HasDupes(*args):
+    return _skycoin.SKY_coin_UxArray_HasDupes(*args)
 SKY_coin_UxArray_HasDupes = _skycoin.SKY_coin_UxArray_HasDupes
 
 def SKY_coin_UxArray_Sort():
@@ -1729,40 +1872,40 @@ def SKY_coin_UxArray_Len():
     return _skycoin.SKY_coin_UxArray_Len()
 SKY_coin_UxArray_Len = _skycoin.SKY_coin_UxArray_Len
 
-def SKY_coin_UxArray_Less(p1, p2):
-    return _skycoin.SKY_coin_UxArray_Less(p1, p2)
+def SKY_coin_UxArray_Less(*args):
+    return _skycoin.SKY_coin_UxArray_Less(*args)
 SKY_coin_UxArray_Less = _skycoin.SKY_coin_UxArray_Less
 
-def SKY_coin_UxArray_Swap(p1, p2):
-    return _skycoin.SKY_coin_UxArray_Swap(p1, p2)
+def SKY_coin_UxArray_Swap(*args):
+    return _skycoin.SKY_coin_UxArray_Swap(*args)
 SKY_coin_UxArray_Swap = _skycoin.SKY_coin_UxArray_Swap
 
-def SKY_coin_UxArray_Coins():
-    return _skycoin.SKY_coin_UxArray_Coins()
+def SKY_coin_UxArray_Coins(*args):
+    return _skycoin.SKY_coin_UxArray_Coins(*args)
 SKY_coin_UxArray_Coins = _skycoin.SKY_coin_UxArray_Coins
 
-def SKY_coin_UxArray_CoinHours(p1):
-    return _skycoin.SKY_coin_UxArray_CoinHours(p1)
+def SKY_coin_UxArray_CoinHours(*args):
+    return _skycoin.SKY_coin_UxArray_CoinHours(*args)
 SKY_coin_UxArray_CoinHours = _skycoin.SKY_coin_UxArray_CoinHours
 
-def SKY_coin_UxArray_Sub():
-    return _skycoin.SKY_coin_UxArray_Sub()
+def SKY_coin_UxArray_Sub(*args):
+    return _skycoin.SKY_coin_UxArray_Sub(*args)
 SKY_coin_UxArray_Sub = _skycoin.SKY_coin_UxArray_Sub
 
-def SKY_coin_UxArray_Add():
-    return _skycoin.SKY_coin_UxArray_Add()
+def SKY_coin_UxArray_Add(*args):
+    return _skycoin.SKY_coin_UxArray_Add(*args)
 SKY_coin_UxArray_Add = _skycoin.SKY_coin_UxArray_Add
 
-def SKY_coin_NewAddressUxOuts(p1):
-    return _skycoin.SKY_coin_NewAddressUxOuts(p1)
+def SKY_coin_NewAddressUxOuts(*args):
+    return _skycoin.SKY_coin_NewAddressUxOuts(*args)
 SKY_coin_NewAddressUxOuts = _skycoin.SKY_coin_NewAddressUxOuts
 
-def SKY_coin_AddressUxOuts_Keys(p0):
-    return _skycoin.SKY_coin_AddressUxOuts_Keys(p0)
+def SKY_coin_AddressUxOuts_Keys(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Keys(*args)
 SKY_coin_AddressUxOuts_Keys = _skycoin.SKY_coin_AddressUxOuts_Keys
 
-def SKY_coin_AddressUxOuts_Flatten(p0):
-    return _skycoin.SKY_coin_AddressUxOuts_Flatten(p0)
+def SKY_coin_AddressUxOuts_Flatten(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Flatten(*args)
 SKY_coin_AddressUxOuts_Flatten = _skycoin.SKY_coin_AddressUxOuts_Flatten
 
 def SKY_coin_AddressUxOuts_Sub(p0, p1, p2):
@@ -1773,8 +1916,8 @@ def SKY_coin_AddressUxOuts_Add(p0, p1, p2):
     return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1, p2)
 SKY_coin_AddressUxOuts_Add = _skycoin.SKY_coin_AddressUxOuts_Add
 
-def SKY_coin_AddressUxOuts_Get(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Get(p0, p1)
+def SKY_coin_AddressUxOuts_Get(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Get(*args)
 SKY_coin_AddressUxOuts_Get = _skycoin.SKY_coin_AddressUxOuts_Get
 
 def SKY_coin_AddressUxOuts_HasKey(p0, p1):
@@ -1789,8 +1932,8 @@ def SKY_coin_AddressUxOuts_Length(p0):
     return _skycoin.SKY_coin_AddressUxOuts_Length(p0)
 SKY_coin_AddressUxOuts_Length = _skycoin.SKY_coin_AddressUxOuts_Length
 
-def SKY_coin_AddressUxOuts_Set(p0, p1):
-    return _skycoin.SKY_coin_AddressUxOuts_Set(p0, p1)
+def SKY_coin_AddressUxOuts_Set(*args):
+    return _skycoin.SKY_coin_AddressUxOuts_Set(*args)
 SKY_coin_AddressUxOuts_Set = _skycoin.SKY_coin_AddressUxOuts_Set
 
 def SKY_scrypt_Key(p0, p1, p2, p3, p4, p5):
@@ -2217,8 +2360,8 @@ def SKY_coin_BlockBody_Bytes(p0):
     return _skycoin.SKY_coin_BlockBody_Bytes(p0)
 SKY_coin_BlockBody_Bytes = _skycoin.SKY_coin_BlockBody_Bytes
 
-def SKY_coin_CreateUnspents(p0, p1):
-    return _skycoin.SKY_coin_CreateUnspents(p0, p1)
+def SKY_coin_CreateUnspents(*args):
+    return _skycoin.SKY_coin_CreateUnspents(*args)
 SKY_coin_CreateUnspents = _skycoin.SKY_coin_CreateUnspents
 
 def SKY_coin_CreateUnspent(p0, p1, p2, p3):
@@ -2281,6 +2424,18 @@ def SKY_cli_MakeAlphanumericSeed():
     return _skycoin.SKY_cli_MakeAlphanumericSeed()
 SKY_cli_MakeAlphanumericSeed = _skycoin.SKY_cli_MakeAlphanumericSeed
 
+def SKY_secp256k1go_Signature_Create():
+    return _skycoin.SKY_secp256k1go_Signature_Create()
+SKY_secp256k1go_Signature_Create = _skycoin.SKY_secp256k1go_Signature_Create
+
+def SKY_secp256k1go_Signature_Get_R(p0):
+    return _skycoin.SKY_secp256k1go_Signature_Get_R(p0)
+SKY_secp256k1go_Signature_Get_R = _skycoin.SKY_secp256k1go_Signature_Get_R
+
+def SKY_secp256k1go_Signature_Get_S(p0):
+    return _skycoin.SKY_secp256k1go_Signature_Get_S(p0)
+SKY_secp256k1go_Signature_Get_S = _skycoin.SKY_secp256k1go_Signature_Get_S
+
 def SKY_secp256k1go_Signature_Print(p0, p1):
     return _skycoin.SKY_secp256k1go_Signature_Print(p0, p1)
 SKY_secp256k1go_Signature_Print = _skycoin.SKY_secp256k1go_Signature_Print
@@ -2305,6 +2460,10 @@ def SKY_secp256k1go_Signature_Bytes(p0):
     return _skycoin.SKY_secp256k1go_Signature_Bytes(p0)
 SKY_secp256k1go_Signature_Bytes = _skycoin.SKY_secp256k1go_Signature_Bytes
 
+def SKY_secp256k1go_Number_Create():
+    return _skycoin.SKY_secp256k1go_Number_Create()
+SKY_secp256k1go_Number_Create = _skycoin.SKY_secp256k1go_Number_Create
+
 def SKY_secp256k1go_Number_Print(p0, p1):
     return _skycoin.SKY_secp256k1go_Number_Print(p0, p1)
 SKY_secp256k1go_Number_Print = _skycoin.SKY_secp256k1go_Number_Print
@@ -2316,6 +2475,10 @@ SKY_secp256k1go_Number_SetHex = _skycoin.SKY_secp256k1go_Number_SetHex
 def SKY_secp256k1go_Number_IsOdd(p0):
     return _skycoin.SKY_secp256k1go_Number_IsOdd(p0)
 SKY_secp256k1go_Number_IsOdd = _skycoin.SKY_secp256k1go_Number_IsOdd
+
+def SKY_secp256k1go_Number_IsEqual(p0, p1):
+    return _skycoin.SKY_secp256k1go_Number_IsEqual(p0, p1)
+SKY_secp256k1go_Number_IsEqual = _skycoin.SKY_secp256k1go_Number_IsEqual
 
 def SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6):
     return _skycoin.SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6)
@@ -2828,6 +2991,12 @@ class coin__UxBody(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, coin__UxBody, name)
     __repr__ = _swig_repr
+
+    def GetSrcTransaction(self):
+        return _skycoin.coin__UxBody_GetSrcTransaction(self)
+
+    def SetSrcTransaction(self, o):
+        return _skycoin.coin__UxBody_SetSrcTransaction(self, o)
     __swig_setmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_set
     __swig_getmethods__["SrcTransaction"] = _skycoin.coin__UxBody_SrcTransaction_get
     if _newclass:

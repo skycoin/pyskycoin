@@ -24,7 +24,7 @@ ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
 else ifeq ($(shell uname -s),Darwin)
 	TEMP_DIR = $TMPDIR
-endif 
+endif
 
 configure:
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
@@ -33,7 +33,6 @@ configure:
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
-	echo "After building libskycoin"
 	ls $(BUILDLIBC_DIR)
 	rm -f swig/include/libskycoin.h
 	mkdir -p swig/include
@@ -57,15 +56,14 @@ build-swig:
 	rm -f skycoin.py
 	rm -f swig/pyskycoin_wrap.c
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir . -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
-	
+
 develop:
 	$(PYTHON_BIN) setup.py develop
-	
+
 build-libc-swig: build-libc build-swig
 
-test-ci: 
+test-ci:
 	tox
 
 test: build-libc build-swig develop
-	$(PYTHON_BIN) setup.py test	
-
+	$(PYTHON_BIN) setup.py test
