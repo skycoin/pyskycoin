@@ -567,3 +567,119 @@ def test_TestTransactionsTruncateBytesTo():
     err, count = skycoin.SKY_coin_Transactions_Size(txns2)
     assert err == error["SKY_OK"]
     assert count == trunc
+
+
+class ux():
+    coins = 0
+    hours = 0
+
+
+class cases():
+    name = ""
+    inUxs = []
+    outUxs = []
+    err = error["SKY_OK"]
+
+
+def test_TestVerifyTransactionCoinsSpending():
+    case = []
+    inu1 = ux()
+    tests1 = cases
+    tests1.name = "Input coins overflow"
+    tests1.err = error["SKY_ERROR"]
+    inu1.coins = int(MaxUint64 - int(1e6) + 1)
+    inu1.hours = 10
+    tests1.inUxs.append(inu1)
+    inu1.coins = int(1e6)
+    inu1.hours = 0
+    tests1.inUxs.append(inu1)
+    case.append(tests1)
+
+    tests2 = cases
+    inu2 = ux
+    tests2.name = "Output coins overflow"
+    tests2.err = error["SKY_ERROR"]
+    inu2.coins = int(10e6)
+    inu2.hours = 10
+    tests2.inUxs.append(inu2)
+    inu2.coins = int(MaxUint64 - 10e6 + 1)
+    inu2.hours = 0
+    tests2.outUxs.append(inu2)
+    inu2.coins = int(20e6)
+    inu2.hours = 1
+    tests2.outUxs.append(inu2)
+    case.append(tests2)
+
+    tests3 = cases
+    inu3 = ux
+    tests3.name = "Insufficient coins"
+    tests3.err = error["SKY_ERROR"]
+    inu3.coins = int(10e6)
+    inu3.hours = int(10)
+    tests3.inUxs.append(inu3)
+    inu3.coins = int(15e6)
+    inu3.hours = int(10)
+    tests3.inUxs.append(inu3)
+    inu3.coins = int(20e6)
+    inu3.hours = int(1)
+    tests3.outUxs.append(inu3)
+    inu3.coins = int(10e6)
+    inu3.hours = int(1)
+    tests3.outUxs.append(inu3)
+    case.append(tests3)
+
+    tests4 = cases
+    inu4 = ux
+    tests4.name = "Destroyed coins"
+    tests4.err = error["SKY_ERROR"]
+    inu4.coins = int(10e6)
+    inu4.hours = int(10)
+    tests4.inUxs.append(inu4)
+    inu4.coins = int(15e6)
+    inu4.hours = int(10)
+    tests4.inUxs.append(inu4)
+    inu4.coins = int(5e6)
+    inu4.hours = int(1)
+    tests4.outUxs.append(inu4)
+    inu4.coins = int(10e6)
+    inu4.hours = int(1)
+    tests4.outUxs.append(inu4)
+    case.append(tests4)
+
+    tests5 = cases
+    inu5 = ux
+    tests5.name = "valid"
+
+    inu5.coins = int(10e6)
+    inu5.hours = int(10)
+    tests5.inUxs.append(inu5)
+    inu5.coins = int(15e6)
+    inu5.hours = int(10)
+    tests5.inUxs.append(inu5)
+
+    inu5.coins = int(10e6)
+    inu5.hours = int(11)
+    tests5.outUxs.append(inu5)
+    inu5.coins = int(10e6)
+    inu5.hours = int(1)
+    tests5.outUxs.append(inu5)
+    inu5.coins = int(5e6)
+    inu5.hours = int(0)
+    tests5.outUxs.append(inu5)
+    case.append(tests5)
+
+    for tc in case:
+        uxIn = []
+        uxOut = []
+        for ch in tc.inUxs:
+            puxIn = skycoin.coin__UxOut()
+            puxIn.Body.Coins = ch.coins
+            puxIn.Body.Hours = ch.hours
+            uxIn.append(puxIn)
+        for ch in tc.outUxs:
+            puxOut = skycoin.coin__UxOut()
+            puxOut.Body.Coins = ch.coins
+            puxOut.Body.Hours = ch.hours
+            uxOut.append(puxOut)
+        assert skycoin.SKY_coin_VerifyTransactionCoinsSpending(
+            uxIn, uxOut) == tc.err
