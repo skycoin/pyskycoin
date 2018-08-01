@@ -353,6 +353,24 @@ def test_VerifyInput():
 	assert error == 0
 	assert coins == 25 * million
 	error = skycoin.SKY_coin_Transaction_VerifyInput(transactionHandle, uxInList)
+	skycoin.SKY_handle_close(transactionHandle)
+	error, hasDupes = skycoin.SKY_coin_UxArray_HasDupes(uxInList)
+	assert error == 0
+	assert not hasDupes
+	uxInList2 = []
+	in3 = skycoin.coin__UxOut()
+	in3.Body.Coins = 12 * million
+	in3.Body.Hours = 12
+	uxInList2.append(in3)
+	in4 = skycoin.coin__UxOut()
+	in4.Body.Coins = 18 * million
+	in4.Body.Hours = 19
+	uxInList2.append(in4)
+	error, uxListResult = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
+	assert len(uxListResult) == 2
+	error, uxListResult2 = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
+	assert len(uxListResult2) == 2
+	
 
 def test_Transaction_Hashes():
 	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
