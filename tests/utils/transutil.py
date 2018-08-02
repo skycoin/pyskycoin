@@ -1,6 +1,10 @@
 import skycoin
 from tests.utils.skyerror import error
 
+MaxUint64 = 0xFFFFFFFFFFFFFFFF
+Million = 1000000
+MaxUint16 = 0xFFFF
+
 
 def makeAddress():
     p = skycoin.cipher_PubKey()
@@ -91,7 +95,8 @@ def makeEmptyTransaction():
 
 
 def makeUxOut():
-    return makeUxOutWithSecret()
+    pOut, _ = makeUxOutWithSecret()
+    return pOut
 
 
 def equalTransactions(handle1, handle2):
