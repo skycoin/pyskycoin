@@ -12454,6 +12454,32 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SKY_handle_copy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Handle arg1 ;
+  Handle *arg2 = (Handle *) 0 ;
+  Handle temp2 ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  {
+    arg2 = &temp2;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_handle_copy",&obj0)) SWIG_fail;
+  {
+    SWIG_AsVal_long(obj0, (long*)&arg1);
+  }
+  result = (GoUint32)SKY_handle_copy(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SKY_apputil_CatchInterruptPanic(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint32 result;
@@ -15570,7 +15596,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_map_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_map_Get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
@@ -15588,18 +15614,18 @@ SWIGINTERN PyObject *_wrap_SKY_map_get(PyObject *SWIGUNUSEDPARM(self), PyObject 
     temp3.n = 0;
     arg3 = (GoString_ *)&temp3;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_map_get",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_map_Get",&obj0)) SWIG_fail;
   {
     char* buffer = 0;
     size_t size = 0;
     int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
     if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_map_get', expecting string");
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_map_Get', expecting string");
     }
     (&arg2)->p = buffer;
     (&arg2)->n = size - 1;
   }
-  result = (GoUint32)SKY_map_get(arg1,arg2,arg3);
+  result = (GoUint32)SKY_map_Get(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg1));
@@ -15614,7 +15640,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_map_has_key(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_map_HasKey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
@@ -15625,18 +15651,18 @@ SWIGINTERN PyObject *_wrap_SKY_map_has_key(PyObject *SWIGUNUSEDPARM(self), PyObj
   {
     arg1 = &temp1;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_map_has_key",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_map_HasKey",&obj0)) SWIG_fail;
   {
     char* buffer = 0;
     size_t size = 0;
     int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
     if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_map_has_key', expecting string");
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_map_HasKey', expecting string");
     }
     (&arg2)->p = buffer;
     (&arg2)->n = size - 1;
   }
-  result = (GoUint8)SKY_map_has_key(arg1,arg2);
+  result = (GoUint8)SKY_map_HasKey(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_char((unsigned char)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg1));
@@ -15647,7 +15673,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_map_close(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_map_Close(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   Handle temp1 ;
@@ -15656,8 +15682,8 @@ SWIGINTERN PyObject *_wrap_SKY_map_close(PyObject *SWIGUNUSEDPARM(self), PyObjec
   {
     arg1 = &temp1;
   }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_map_close")) SWIG_fail;
-  result = (GoUint32)SKY_map_close(arg1);
+  if (!PyArg_ParseTuple(args,(char *)":SKY_map_Close")) SWIG_fail;
+  result = (GoUint32)SKY_map_Close(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg1));
@@ -18206,7 +18232,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Get_Transaction_Object(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_GetTransactionObject(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   coin__Transaction **arg2 = (coin__Transaction **) 0 ;
@@ -18218,11 +18244,11 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Get_Transaction_Object(PyObject *SWIGUNUSEDP
     temp2 = NULL;
     arg2 = &temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Get_Transaction_Object",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_GetTransactionObject",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_coin_Get_Transaction_Object(arg1,arg2);
+  result = (GoUint32)SKY_coin_GetTransactionObject(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj(SWIG_as_voidptr(*arg2), SWIGTYPE_p_coin__Transaction, 0 ));
@@ -18260,7 +18286,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Inputs_Count(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetInputsCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
@@ -18270,11 +18296,11 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Inputs_Count(PyObject *SWIGU
   GoUint32 result;
   
   arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_Get_Inputs_Count",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_GetInputsCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_coin_Transaction_Get_Inputs_Count(arg1,arg2);
+  result = (GoUint32)SKY_coin_Transaction_GetInputsCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
@@ -18288,7 +18314,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Input_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetInputAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18300,13 +18326,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Input_At(PyObject *SWIGUNUSE
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Get_Input_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_GetInputAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Get_Input_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_GetInputAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   {
@@ -18317,7 +18343,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Input_At(PyObject *SWIGUNUSE
     cipher_SHA256* p = (cipher_SHA256*)argp;
     arg3 = &p->data;
   }
-  result = (GoUint32)SKY_coin_Transaction_Get_Input_At(arg1,arg2,(unsigned char (*)[32])arg3);
+  result = (GoUint32)SKY_coin_Transaction_GetInputAt(arg1,arg2,(unsigned char (*)[32])arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18325,7 +18351,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Input_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SetInputAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18337,13 +18363,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Input_At(PyObject *SWIGUNUSE
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Set_Input_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_SetInputAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Set_Input_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_SetInputAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   {
@@ -18354,7 +18380,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Input_At(PyObject *SWIGUNUSE
     cipher_SHA256* p = (cipher_SHA256*)argp;
     arg3 = &p->data;
   }
-  result = (GoUint32)SKY_coin_Transaction_Set_Input_At(arg1,arg2,(unsigned char (*)[32])arg3);
+  result = (GoUint32)SKY_coin_Transaction_SetInputAt(arg1,arg2,(unsigned char (*)[32])arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18362,7 +18388,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Outputs_Count(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetOutputsCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
@@ -18372,11 +18398,11 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Outputs_Count(PyObject *SWIG
   GoUint32 result;
   
   arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_Get_Outputs_Count",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_GetOutputsCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_coin_Transaction_Get_Outputs_Count(arg1,arg2);
+  result = (GoUint32)SKY_coin_Transaction_GetOutputsCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
@@ -18390,7 +18416,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Output_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetOutputAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18404,21 +18430,21 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Output_At(PyObject *SWIGUNUS
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Get_Output_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_GetOutputAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Get_Output_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_GetOutputAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_coin__TransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_coin_Transaction_Get_Output_At" "', argument " "3"" of type '" "coin__TransactionOutput *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_coin_Transaction_GetOutputAt" "', argument " "3"" of type '" "coin__TransactionOutput *""'"); 
   }
   arg3 = (coin__TransactionOutput *)(argp3);
-  result = (GoUint32)SKY_coin_Transaction_Get_Output_At(arg1,arg2,arg3);
+  result = (GoUint32)SKY_coin_Transaction_GetOutputAt(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18426,7 +18452,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Output_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SetOutputAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18440,21 +18466,21 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Output_At(PyObject *SWIGUNUS
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Set_Output_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_SetOutputAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Set_Output_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_SetOutputAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_coin__TransactionOutput, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_coin_Transaction_Set_Output_At" "', argument " "3"" of type '" "coin__TransactionOutput *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_coin_Transaction_SetOutputAt" "', argument " "3"" of type '" "coin__TransactionOutput *""'"); 
   }
   arg3 = (coin__TransactionOutput *)(argp3);
-  result = (GoUint32)SKY_coin_Transaction_Set_Output_At(arg1,arg2,arg3);
+  result = (GoUint32)SKY_coin_Transaction_SetOutputAt(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18462,7 +18488,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Signatures_Count(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetSignaturesCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
@@ -18472,11 +18498,11 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Signatures_Count(PyObject *S
   GoUint32 result;
   
   arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_Get_Signatures_Count",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_Transaction_GetSignaturesCount",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_coin_Transaction_Get_Signatures_Count(arg1,arg2);
+  result = (GoUint32)SKY_coin_Transaction_GetSignaturesCount(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   if (SWIG_IsTmpObj(res2)) {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
@@ -18490,7 +18516,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Signature_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetSignatureAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18502,13 +18528,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Signature_At(PyObject *SWIGU
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Get_Signature_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_GetSignatureAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Get_Signature_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_GetSignatureAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   {
@@ -18519,7 +18545,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Get_Signature_At(PyObject *SWIGU
     cipher_Sig* p = (cipher_Sig*)argp;
     arg3 = &p->data;
   }
-  result = (GoUint32)SKY_coin_Transaction_Get_Signature_At(arg1,arg2,(unsigned char (*)[65])arg3);
+  result = (GoUint32)SKY_coin_Transaction_GetSignatureAt(arg1,arg2,(unsigned char (*)[65])arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18527,7 +18553,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Signature_At(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SetSignatureAt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoInt arg2 ;
@@ -18539,13 +18565,13 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Signature_At(PyObject *SWIGU
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_Set_Signature_At",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_coin_Transaction_SetSignatureAt",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_Set_Signature_At" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transaction_SetSignatureAt" "', argument " "2"" of type '" "GoInt""'");
   } 
   arg2 = (GoInt)(val2);
   {
@@ -18556,7 +18582,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Set_Signature_At(PyObject *SWIGU
     cipher_Sig* p = (cipher_Sig*)argp;
     arg3 = &p->data;
   }
-  result = (GoUint32)SKY_coin_Transaction_Set_Signature_At(arg1,arg2,(unsigned char (*)[65])arg3);
+  result = (GoUint32)SKY_coin_Transaction_SetSignatureAt(arg1,arg2,(unsigned char (*)[65])arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -18564,7 +18590,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Push_Signature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_PushSignature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
@@ -18572,7 +18598,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Push_Signature(PyObject *SWIGUNU
   PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_Transaction_Push_Signature",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_Transaction_PushSignature",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
@@ -18584,7 +18610,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Push_Signature(PyObject *SWIGUNU
     cipher_Sig* p = (cipher_Sig*)argp;
     arg2 = &p->data;
   }
-  result = (GoUint32)SKY_coin_Transaction_Push_Signature(arg1,(unsigned char (*)[65])arg2);
+  result = (GoUint32)SKY_coin_Transaction_PushSignature(arg1,(unsigned char (*)[65])arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -19293,7 +19319,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_Get_Transactions_Object(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_GetTransactionsObject(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transactions__Handle arg1 ;
   cipher__PubKeySlice **arg2 = (cipher__PubKeySlice **) 0 ;
@@ -19303,16 +19329,16 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Get_Transactions_Object(PyObject *SWIGUNUSED
   PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_Get_Transactions_Object",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_GetTransactionsObject",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_p_GoSlice_, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_coin_Get_Transactions_Object" "', argument " "2"" of type '" "cipher__PubKeySlice **""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_coin_GetTransactionsObject" "', argument " "2"" of type '" "cipher__PubKeySlice **""'"); 
   }
   arg2 = (cipher__PubKeySlice **)(argp2);
-  result = (GoUint32)SKY_coin_Get_Transactions_Object(arg1,arg2);
+  result = (GoUint32)SKY_coin_GetTransactionsObject(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -26784,7 +26810,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Get_R(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_GetR(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Signature_Handle arg1 ;
   Number_Handle *arg2 = (Number_Handle *) 0 ;
@@ -26795,11 +26821,11 @@ SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Get_R(PyObject *SWIGUNUSEDP
   {
     arg2 = &temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_Get_R",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_GetR",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_secp256k1go_Signature_Get_R(arg1,arg2);
+  result = (GoUint32)SKY_secp256k1go_Signature_GetR(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
@@ -26810,7 +26836,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Get_S(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_GetS(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Signature_Handle arg1 ;
   Number_Handle *arg2 = (Number_Handle *) 0 ;
@@ -26821,11 +26847,11 @@ SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Get_S(PyObject *SWIGUNUSEDP
   {
     arg2 = &temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_Get_S",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_GetS",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_secp256k1go_Signature_Get_S(arg1,arg2);
+  result = (GoUint32)SKY_secp256k1go_Signature_GetS(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
@@ -33013,6 +33039,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_encoder_StructField_String", _wrap_SKY_encoder_StructField_String, METH_VARARGS, NULL},
 	 { (char *)"SKY_encoder_ParseFields", _wrap_SKY_encoder_ParseFields, METH_VARARGS, NULL},
 	 { (char *)"SKY_handle_close", _wrap_SKY_handle_close, METH_VARARGS, NULL},
+	 { (char *)"SKY_handle_copy", _wrap_SKY_handle_copy, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_CatchInterruptPanic", _wrap_SKY_apputil_CatchInterruptPanic, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_CatchDebug", _wrap_SKY_apputil_CatchDebug, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_PrintProgramStatus", _wrap_SKY_apputil_PrintProgramStatus, METH_VARARGS, NULL},
@@ -33080,9 +33107,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_secp256k1_SignatureErrorString", _wrap_SKY_secp256k1_SignatureErrorString, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1_RecoverPubkey", _wrap_SKY_secp256k1_RecoverPubkey, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1_ECDH", _wrap_SKY_secp256k1_ECDH, METH_VARARGS, NULL},
-	 { (char *)"SKY_map_get", _wrap_SKY_map_get, METH_VARARGS, NULL},
-	 { (char *)"SKY_map_has_key", _wrap_SKY_map_has_key, METH_VARARGS, NULL},
-	 { (char *)"SKY_map_close", _wrap_SKY_map_close, METH_VARARGS, NULL},
+	 { (char *)"SKY_map_Get", _wrap_SKY_map_Get, METH_VARARGS, NULL},
+	 { (char *)"SKY_map_HasKey", _wrap_SKY_map_HasKey, METH_VARARGS, NULL},
+	 { (char *)"SKY_map_Close", _wrap_SKY_map_Close, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_AddPrivateKey", _wrap_SKY_cli_AddPrivateKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_AddPrivateKeyToFile", _wrap_SKY_cli_AddPrivateKeyToFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_AddUint64", _wrap_SKY_coin_AddUint64, METH_VARARGS, NULL},
@@ -33157,18 +33184,18 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_wallet_CryptoTypeFromString", _wrap_SKY_wallet_CryptoTypeFromString, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Create_Transaction", _wrap_SKY_coin_Create_Transaction, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_Copy", _wrap_SKY_coin_Transaction_Copy, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Get_Transaction_Object", _wrap_SKY_coin_Get_Transaction_Object, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_GetTransactionObject", _wrap_SKY_coin_GetTransactionObject, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_ResetInputs", _wrap_SKY_coin_Transaction_ResetInputs, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Inputs_Count", _wrap_SKY_coin_Transaction_Get_Inputs_Count, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Input_At", _wrap_SKY_coin_Transaction_Get_Input_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Set_Input_At", _wrap_SKY_coin_Transaction_Set_Input_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Outputs_Count", _wrap_SKY_coin_Transaction_Get_Outputs_Count, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Output_At", _wrap_SKY_coin_Transaction_Get_Output_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Set_Output_At", _wrap_SKY_coin_Transaction_Set_Output_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Signatures_Count", _wrap_SKY_coin_Transaction_Get_Signatures_Count, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Get_Signature_At", _wrap_SKY_coin_Transaction_Get_Signature_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Set_Signature_At", _wrap_SKY_coin_Transaction_Set_Signature_At, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Transaction_Push_Signature", _wrap_SKY_coin_Transaction_Push_Signature, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetInputsCount", _wrap_SKY_coin_Transaction_GetInputsCount, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetInputAt", _wrap_SKY_coin_Transaction_GetInputAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_SetInputAt", _wrap_SKY_coin_Transaction_SetInputAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetOutputsCount", _wrap_SKY_coin_Transaction_GetOutputsCount, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetOutputAt", _wrap_SKY_coin_Transaction_GetOutputAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_SetOutputAt", _wrap_SKY_coin_Transaction_SetOutputAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetSignaturesCount", _wrap_SKY_coin_Transaction_GetSignaturesCount, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_GetSignatureAt", _wrap_SKY_coin_Transaction_GetSignatureAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_SetSignatureAt", _wrap_SKY_coin_Transaction_SetSignatureAt, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_Transaction_PushSignature", _wrap_SKY_coin_Transaction_PushSignature, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_ResetOutputs", _wrap_SKY_coin_Transaction_ResetOutputs, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_ResetSignatures", _wrap_SKY_coin_Transaction_ResetSignatures, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_Verify", _wrap_SKY_coin_Transaction_Verify, METH_VARARGS, NULL},
@@ -33189,7 +33216,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_coin_TransactionDeserialize", _wrap_SKY_coin_TransactionDeserialize, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_OutputHours", _wrap_SKY_coin_Transaction_OutputHours, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Create_Transactions", _wrap_SKY_coin_Create_Transactions, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_Get_Transactions_Object", _wrap_SKY_coin_Get_Transactions_Object, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_GetTransactionsObject", _wrap_SKY_coin_GetTransactionsObject, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transactions_Length", _wrap_SKY_coin_Transactions_Length, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transactions_Add", _wrap_SKY_coin_Transactions_Add, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transactions_Fees", _wrap_SKY_coin_Transactions_Fees, METH_VARARGS, NULL},
@@ -33384,8 +33411,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cli_GetWalletOutputsFromFile", _wrap_SKY_cli_GetWalletOutputsFromFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GetWalletOutputs", _wrap_SKY_cli_GetWalletOutputs, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1go_Signature_Create", _wrap_SKY_secp256k1go_Signature_Create, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Get_R", _wrap_SKY_secp256k1go_Signature_Get_R, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Get_S", _wrap_SKY_secp256k1go_Signature_Get_S, METH_VARARGS, NULL},
+	 { (char *)"SKY_secp256k1go_Signature_GetR", _wrap_SKY_secp256k1go_Signature_GetR, METH_VARARGS, NULL},
+	 { (char *)"SKY_secp256k1go_Signature_GetS", _wrap_SKY_secp256k1go_Signature_GetS, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1go_Signature_Print", _wrap_SKY_secp256k1go_Signature_Print, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1go_Signature_Verify", _wrap_SKY_secp256k1go_Signature_Verify, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1go_Signature_Recover", _wrap_SKY_secp256k1go_Signature_Recover, METH_VARARGS, NULL},

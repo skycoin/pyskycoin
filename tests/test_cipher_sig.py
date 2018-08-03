@@ -26,9 +26,9 @@ def test_TestSigRecover():
 	_, sig = skycoin.SKY_secp256k1go_Signature_Create()
 	_, msg = skycoin.SKY_secp256k1go_Number_Create()
 	for v in vs:
-		_, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+		_, r = skycoin.SKY_secp256k1go_Signature_GetR(sig)
 		skycoin.SKY_secp256k1go_Number_SetHex(r , v[0])
-		_, s = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+		_, s = skycoin.SKY_secp256k1go_Signature_GetR(sig)
 		skycoin.SKY_secp256k1go_Number_SetHex(s , v[1])
 		skycoin.SKY_secp256k1go_Number_SetHex(msg , v[2])
 		rid = int(v[3])
@@ -45,9 +45,9 @@ def test_TestSigVerify():
 	_, sig = skycoin.SKY_secp256k1go_Signature_Create()
 	_, msg = skycoin.SKY_secp256k1go_Number_Create()
 	skycoin.SKY_secp256k1go_Number_SetHex(msg ,b"D474CBF2203C1A55A411EEC4404AF2AFB2FE942C434B23EFE46E9F04DA8433CA")
-	_, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+	_, r = skycoin.SKY_secp256k1go_Signature_GetR(sig)
 	skycoin.SKY_secp256k1go_Number_SetHex(r ,b"98F9D784BA6C5C77BB7323D044C0FC9F2B27BAA0A5B0718FE88596CC56681980")
-	_, s = skycoin.SKY_secp256k1go_Signature_Get_S(sig)
+	_, s = skycoin.SKY_secp256k1go_Signature_GetS(sig)
 	skycoin.SKY_secp256k1go_Number_SetHex(s ,b"E3599D551029336A745B9FB01566624D870780F363356CEE1425ED67D1294480")
 	skycoin.SKY_secp256k1go_Field_SetHex(key.X ,b"7d709f85a331813f9ae6046c56b3a42737abf4eb918b2e7afee285070e968b93")
 	skycoin.SKY_secp256k1go_Field_SetHex(key.Y ,b"26150d1a63b342986c373977b00131950cb5fc194643cad6ea36b5157eba4602")	
@@ -55,9 +55,9 @@ def test_TestSigVerify():
 	assert err == error["SKY_OK"] and val
 
 	skycoin.SKY_secp256k1go_Number_SetHex(msg , b"2c43a883f4edc2b66c67a7a355b9312a565bb3d33bb854af36a06669e2028377")
-	_, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+	_, r = skycoin.SKY_secp256k1go_Signature_GetR(sig)
 	skycoin.SKY_secp256k1go_Number_SetHex(r , b"6b2fa9344462c958d4a674c2a42fbedf7d6159a5276eb658887e2e1b3915329b")
-	_, s = skycoin.SKY_secp256k1go_Signature_Get_S(sig)
+	_, s = skycoin.SKY_secp256k1go_Signature_GetS(sig)
 	skycoin.SKY_secp256k1go_Number_SetHex(s , b"eddc6ea7f190c14a0aa74e41519d88d2681314f011d253665f301425caf86b86")
 
 	_, xy = skycoin.SKY_base58_String2Hex(b"02a60d70cfba37177d8239d018185d864b2bdd0caf5e175fd4454cc006fd2d75ac")
@@ -82,7 +82,7 @@ def test_TestSigSign():
 		assert recid == 1
 	
 	skycoin.SKY_secp256k1go_Number_SetHex(non , b"98f9d784ba6c5c77bb7323d044c0fc9f2b27baa0a5b0718fe88596cc56681980")
-	_, r = skycoin.SKY_secp256k1go_Signature_Get_R(sig)
+	_, r = skycoin.SKY_secp256k1go_Signature_GetR(sig)
 	err, val = skycoin.SKY_secp256k1go_Number_IsEqual(r, non)
 	assert err == error["SKY_OK"] and val
 
@@ -91,6 +91,6 @@ def test_TestSigSign():
 	else:
 		assert skycoin.SKY_secp256k1go_Number_SetHex(non , b"E3599D551029336A745B9FB01566624D870780F363356CEE1425ED67D1294480") == error["SKY_OK"]
 
-	_, s = skycoin.SKY_secp256k1go_Signature_Get_S(sig)
+	_, s = skycoin.SKY_secp256k1go_Signature_GetS(sig)
 	err, val = skycoin.SKY_secp256k1go_Number_IsEqual(s, non)
 	assert err == error["SKY_OK"] and val

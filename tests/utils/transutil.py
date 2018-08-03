@@ -17,7 +17,7 @@ def makeAddress():
 
 def makeTransactionFromUxOut(ux, s):
     _, handle = skycoin.SKY_coin_Create_Transaction()
-    _, tx = skycoin.SKY_coin_Get_Transaction_Object(handle)
+    _, tx = skycoin.SKY_coin_GetTransactionObject(handle)
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_cipher_SecKey_Verify(s) == error["SKY_OK"]
     assert skycoin.SKY_coin_UxOut_Hash(ux, h) == error["SKY_OK"]
@@ -75,6 +75,9 @@ def makeTransactions(n):
         thandle, _ = makeTransaction()
         assert skycoin.SKY_coin_Transactions_Add(
             handle, thandle) == error["SKY_OK"]
+    err, count = skycoin.SKY_coin_Transactions_Length(handle)
+    assert err == error["SKY_OK"]
+    assert count == n
     return handle
 
 
@@ -84,7 +87,7 @@ def copyTransaction(handle):
         handle)
     assert err == error["SKY_OK"]
     assert skycoin.SKY_coin_Transaction_Verify(handle2) == error["SKY_OK"]
-    err, ptx = skycoin.SKY_coin_Get_Transaction_Object(handle2)
+    err, ptx = skycoin.SKY_coin_GetTransactionObject(handle2)
     assert err == error["SKY_OK"]
     return handle2, ptx
 
@@ -112,11 +115,15 @@ def equalTransactions(handle1, handle2):
         assert err == error["SKY_OK"]
         err, tx2 = skycoin.SKY_coin_Transactions_GetAt(handle2, i)
         assert err == error["SKY_OK"]
-        err, tx1_obj = skycoin.SKY_coin_Get_Transaction_Object(tx1)
+        err, tx1_obj = skycoin.SKY_coin_GetTransactionObject(tx1)
         assert err == error["SKY_OK"]
-        err, tx2_obj = skycoin.SKY_coin_Get_Transaction_Object(tx2)
+        err, tx2_obj = skycoin.SKY_coin_GetTransactionObject(tx2)
         assert err == error["SKY_OK"]
         assert tx1_obj == tx2_obj
         i += 1
 
     return 0
+
+
+def badFeeCalculator(transaction):
+    return 1, 0
