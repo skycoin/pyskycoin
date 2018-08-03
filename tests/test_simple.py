@@ -297,6 +297,7 @@ def test_UxOutList_CoinsHoursSpending():
 	assert error == 0
 	error = skycoin.SKY_coin_VerifyTransactionHoursSpending(0, uxInList, uxOutList)
 	assert error == 0
+	error, hashes = skycoin.SKY_coin_UxArray_Hashes(uxInList)
 
 def test_UxOutList_CreateUnspent():
 	pubkey = skycoin.cipher_PubKey()
