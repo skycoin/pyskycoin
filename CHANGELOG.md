@@ -18,4 +18,3 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Known issues
 
-- Pip tool for python3.4 is is not compatible with Debian's  openssl package, so, python3.4 is installed without pip.

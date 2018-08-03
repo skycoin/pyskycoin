@@ -1085,8 +1085,8 @@ def SKY_coin_UxOut_CoinHours(p0, p1):
     return _skycoin.SKY_coin_UxOut_CoinHours(p0, p1)
 SKY_coin_UxOut_CoinHours = _skycoin.SKY_coin_UxOut_CoinHours
 
-def SKY_coin_UxArray_Hashes():
-    return _skycoin.SKY_coin_UxArray_Hashes()
+def SKY_coin_UxArray_Hashes(*args):
+    return _skycoin.SKY_coin_UxArray_Hashes(*args)
 SKY_coin_UxArray_Hashes = _skycoin.SKY_coin_UxArray_Hashes
 
 def SKY_coin_UxArray_HasDupes(*args):
