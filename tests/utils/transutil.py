@@ -127,3 +127,11 @@ def equalTransactions(handle1, handle2):
 
 def badFeeCalculator(transaction):
     return 1, 0
+
+
+def calc(transaction):
+    return 0, 1
+
+
+def overflowCalc(transaction):
+    return 0, MaxUint64

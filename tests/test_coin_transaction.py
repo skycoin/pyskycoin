@@ -863,3 +863,12 @@ def test_TestTransactionsFees():
         txns, calc)
     assert err == error["SKY_OK"]
     assert fee == 2
+
+    # calc error
+    err, _ = skycoin.SKY_coin_Transactions_Fees(
+        txns, transutil.badFeeCalculator)
+    assert err == error["SKY_ERROR"]
+
+    # summing of calculated fees overflows
+    err, _ = skycoin.SKY_coin_Transactions_Fees(txns, transutil.overflowCalc)
+    assert err == error["SKY_ERROR"]
