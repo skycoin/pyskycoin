@@ -1,6 +1,6 @@
 #PySkycoin
 
-[![Build Status](https://travis-ci.org/simelo/pyskycoin.svg?branch=develop)](https://travis-ci.org/simelo/pyskycoin)
+[![Build Status](https://travis-ci.org/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.org/skycoin/pyskycoin)
 
 Python extension for Skycoin API.
 A Python extension generated with SWIG to access Skycoin API from Python.
@@ -51,11 +51,12 @@ Config is a struct type that is treated as a handle in Pyskycoin. The usage in P
 
 ```python
 
-import skycoin
+from skycoin import skycoin
+from skycoin.skyerror import error
 	
 def main:
-	error, configHandle = skycoin.SKY_cli_LoadConfig()
-	if error == 0:  # 0 then no error
+	err, configHandle = skycoin.SKY_cli_LoadConfig()
+	if err == error["SKY_OK"]:  # 0 then no error
 		fullWalletPath = skycoin.SKY_cli_FullWalletPath(configHandle)
 		print fullWallerPath
 		#Close the handle after using the it
@@ -63,7 +64,7 @@ def main:
 		skycoin.SKY_handle_close( configHandle )
 	else: 
 		#Error
-		print error
+		print err
 ```
 
 #### Byte slices
@@ -80,8 +81,8 @@ Will be called like this:
 encrypt_settings = skycoin.encrypt__ScryptChacha20poly1305()
 data = "Data to encrypt" #It will be passed as a parameter of type []byte
 pwd = "password"         #As []byte too
-error, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(encrypt_settings, data, pwd)
-if error == 0:
+err, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(encrypt_settings, data, pwd)
+if err == error["SKY_OK]:
 	print encrypted #Encrypted is string
 ```
 
@@ -116,11 +117,11 @@ This is how it is used in Python:
 
 ```python
 #Generates random seed
-error, data = skycoin.SKY_cipher_RandByte(32)
-assert error == 0
+err, data = skycoin.SKY_cipher_RandByte(32)
+assert err == error["SKY_OK"]
 pubkey = skycoin.cipher_PubKey()
 seckey = skycoin.cipher_SecKey()
-error = skycoin.SKY_cipher_GenerateDeterministicKeyPair(data, pubkey, seckey)
+err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(data, pubkey, seckey)
 ```
 
 pubkey and seckey are objects of type structure containing a field name data for the corresponding type of PubKey and SecKey. Something like:
@@ -147,13 +148,13 @@ Would be like:
 
 ```python
 #Generates random seed
-error, seed = skycoin.SKY_cipher_RandByte(32)
-error, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
+err, seed = skycoin.SKY_cipher_RandByte(32)
+err, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
 for seckey in seckeys:
 	pubkey = skycoin.cipher_PubKey()
 	skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
-	error = skycoin.SKY_cipher_PubKey_Verify(pubkey)
-	assert error == 0
+	err = skycoin.SKY_cipher_PubKey_Verify(pubkey)
+	assert err == error["SKY_OK"]
 ```
 
 ### Memory Management
