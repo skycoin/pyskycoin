@@ -51,12 +51,11 @@ Config is a struct type that is treated as a handle in Pyskycoin. The usage in P
 
 ```python
 
-from skycoin import skycoin
-from skycoin.skyerror import error
+import skycoin
 	
 def main:
 	err, configHandle = skycoin.SKY_cli_LoadConfig()
-	if err == error["SKY_OK"]:  # 0 then no error
+	if err == skycoin.SKY_OK:  # 0 then no error
 		fullWalletPath = skycoin.SKY_cli_FullWalletPath(configHandle)
 		print fullWallerPath
 		#Close the handle after using the it
@@ -82,7 +81,7 @@ encrypt_settings = skycoin.encrypt__ScryptChacha20poly1305()
 data = "Data to encrypt" #It will be passed as a parameter of type []byte
 pwd = "password"         #As []byte too
 err, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(encrypt_settings, data, pwd)
-if err == error["SKY_OK]:
+if err == skycoin.SKY_OK:
 	print encrypted #Encrypted is string
 ```
 

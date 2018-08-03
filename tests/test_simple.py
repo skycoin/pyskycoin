@@ -1,38 +1,37 @@
 # the inclusion of the tests module is not meant to offer best practices for
 # testing in general, but rather to support the `find_packages` example in
 # setup.py that excludes installing the "tests" package
-from skycoin import skycoin
-from skycoin.skyerror import error
+import skycoin
 
 
 # Test with handles and strings
 def test_loadconfig():
     err, old_coin = skycoin.SKY_cli_Getenv(b"COIN")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_cli_Setenv(b"COIN", b"foocoin")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, configHandle = skycoin.SKY_cli_LoadConfig()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, new_coin = skycoin.SKY_cli_Config_GetCoin(configHandle)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert new_coin == b"foocoin"
     skycoin.SKY_handle_close(configHandle)
     err = skycoin.SKY_cli_Setenv(b"COIN", old_coin)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
 
 # Test with slices as []byte
 def test_Sha256XorEncrypt():
     err, data = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert len(data) == 32
     pwd = b"pwd"
     err, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
         data, pwd)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, decrypted = skycoin.SKY_encrypt_Sha256Xor_Decrypt(
         encrypted, pwd)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert data == decrypted
 
 
@@ -45,14 +44,14 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
     encrypt_settings.KeyLen = 32
 
     err, data = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert len(data) == 32
     err, encrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(
         encrypt_settings, data, b"password")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(
         encrypt_settings, encrypted, b"password")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert data == decrypted
 
 
@@ -61,14 +60,14 @@ def test_cipherAddress():
     address = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_DecodeBase58Address(
         b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
     err, byte = skycoin.SKY_cipher_Address_BitcoinBytes(address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert len(byte) > 0
     address2 = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, address2)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert address == address2
 
 
@@ -76,50 +75,50 @@ def test_cipherAddress():
 # Notice that the type used is cipher_PubKey instead of cipher__PubKey
 def test_GenerateKeyPairs():
     err, data = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
 
     err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
         data, pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
     address = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_cipher_Address_Verify(address, pubkey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
     err, address_string = skycoin.SKY_cipher_Address_String(address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     address2 = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_DecodeBase58Address(address_string, address2)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert address == address2
 
 
 def test_GenerateDeterministicKeyPairs():
     err, seed = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairs(seed, 2)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     length = len(seckeys)
     assert length == 2
     for seckey in seckeys:
         address = skycoin.cipher__Address()
         err = skycoin.SKY_cipher_AddressFromSecKey(seckey, address)
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
         pubkey = skycoin.cipher_PubKey()
         err = skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
         err = skycoin.SKY_cipher_PubKey_Verify(pubkey)
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
 
 
 def test_GenerateDeterministicKeyPairsSeed():
     err, seed = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, newseed, seckeys = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(
         seed, 2)
     length = len(seckeys)
@@ -128,30 +127,30 @@ def test_GenerateDeterministicKeyPairsSeed():
 
 def test_Transaction():
     err, handle = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     address = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_Transaction_PushOutput(
         handle, address, 1000000, 100)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, transaction = skycoin.SKY_coin_GetTransactionObject(handle)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert transaction.Length >= 0
     skycoin.SKY_handle_close(handle)
 
 
 def __feeCalculator(transaction):
     err, outCount = skycoin.SKY_coin_Transaction_GetOutputsCount(transaction)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     if outCount > 0:
         output = skycoin.coin__TransactionOutput()
         err = skycoin.SKY_coin_Transaction_GetOutputAt(transaction, 0, output)
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
         return 0, output.Hours
     return 0, 0
 
@@ -162,26 +161,26 @@ def __badFeeCalculator(transaction):
 
 def test_Transactions():
     err, handleTransactions = skycoin.SKY_coin_Create_Transactions()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
     err, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     address = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_Transaction_PushOutput(
         handleTransaction2, address, 1000000, 100)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
     err, fees = skycoin.SKY_coin_Transactions_Fees(
         handleTransactions, __feeCalculator)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert fees == 100
     err, fees = skycoin.SKY_coin_Transactions_Fees(
         handleTransactions, __badFeeCalculator)
@@ -193,29 +192,29 @@ def test_Transactions():
 
 def test_Transactions2():
     err, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, transaction1 = skycoin.SKY_coin_GetTransactionObject(
         handleTransaction1)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, transaction2 = skycoin.SKY_coin_GetTransactionObject(
         handleTransaction2)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert transaction1 == transaction2
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     address = skycoin.cipher__Address()
     err = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_Transaction_PushOutput(
         handleTransaction1, address, 1000000, 100)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert not (transaction1 == transaction2)
     output = skycoin.coin__TransactionOutput()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_Transaction_GetOutputAt(
         handleTransaction1, 0, output)
     skycoin.SKY_handle_close(handleTransaction1)
@@ -225,23 +224,23 @@ def test_Transactions2():
 def test_SHA256NULL():
     sha256 = skycoin.cipher_SHA256()
     err, result = skycoin.SKY_cipher_SHA256_Null(sha256)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert result == True
 
 
 def test_Number():
     err, number = skycoin.SKY_secp256k1go_Number_Create()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_secp256k1go_Number_SetHex(
         number, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, sig = skycoin.SKY_secp256k1go_Signature_Create()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, r = skycoin.SKY_secp256k1go_Signature_GetR(sig)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_secp256k1go_Number_SetHex(
         r, b"6028b9e3a31c9e725fcbd7d5d16736aaaafcc9bf157dfb4be62bcbcf0969d488")
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
 
 def test_UxBody():
@@ -258,36 +257,36 @@ def test_SecKeysList():
     # Generate pubkeys and seckeys
     # then add seckeys to lists
     err, data = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
         data, pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, data = skycoin.SKY_cipher_RandByte(32)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     seckeysList.append(seckey)
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(
         data, pubkey, seckey)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     seckeysList.append(seckey)
     err, handleTransaction = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     # Add as many inputs as keys
     sha256 = skycoin.cipher_SHA256()
     err, r = skycoin.SKY_coin_Transaction_PushInput(
         handleTransaction, sha256)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     sha256 = skycoin.cipher_SHA256()
     err, r = skycoin.SKY_coin_Transaction_PushInput(
         handleTransaction, sha256)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_coin_Transaction_ResetSignatures(handleTransaction, 0)
     err = skycoin.SKY_coin_Transaction_SignInputs(
         handleTransaction, seckeysList)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_handle_close(handleTransaction)
 
 
@@ -317,10 +316,10 @@ def test_UxOutList_CoinsHoursSpending():
     uxOutList.append(out3)
     err = skycoin.SKY_coin_VerifyTransactionCoinsSpending(
         uxInList, uxOutList)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_VerifyTransactionHoursSpending(
         0, uxInList, uxOutList)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
 
 
 def test_UxOutList_CreateUnspent():
@@ -329,21 +328,21 @@ def test_UxOutList_CreateUnspent():
     address = skycoin.cipher__Address()
     skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
     err = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, transactionHandle = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_Transaction_PushOutput(
         transactionHandle, address, 11000000, 255)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     bh = skycoin.coin__BlockHeader()
     bh.Time = 0
     bh.BkSeq = 1
     err, unspents = skycoin.SKY_coin_CreateUnspents(bh, transactionHandle)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert len(unspents) == 1
     err, outputsCount = skycoin.SKY_coin_Transaction_GetOutputsCount(
         transactionHandle)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert outputsCount == len(unspents)
     i = 0
     for unspent in unspents:
@@ -355,7 +354,7 @@ def test_UxOutList_CreateUnspent():
         assert unspent.Body.Hours == output.Hours
         hash = skycoin.cipher_SHA256()
         err = skycoin.SKY_coin_Transaction_Hash(transactionHandle, hash)
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
         hash2 = skycoin.cipher_SHA256()
         hash2.assignFrom(unspent.Body.SrcTransaction)
         assert hash == hash2
@@ -377,13 +376,13 @@ def test_VerifyInput():
     in2.Body.Hours = 10
     uxInList.append(in2)
     err, coins = skycoin.SKY_coin_UxArray_Coins(uxInList)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert coins == 25 * million
     err = skycoin.SKY_coin_Transaction_VerifyInput(
         transactionHandle, uxInList)
     skycoin.SKY_handle_close(transactionHandle)
     err, hasDupes = skycoin.SKY_coin_UxArray_HasDupes(uxInList)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert not hasDupes
     uxInList2 = []
     in3 = skycoin.coin__UxOut()
@@ -402,16 +401,16 @@ def test_VerifyInput():
 
 def test_Transaction_Hashes():
     err, handleTransactions = skycoin.SKY_coin_Create_Transactions()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     err, handleTransaction1 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
     err, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
     err, hashesList = skycoin.SKY_coin_Transactions_Hashes(
         handleTransactions)
-    assert err == error["SKY_OK"]
+    assert err == skycoin.SKY_OK
     assert len(hashesList) == 2
     h1 = skycoin.cipher_SHA256()
     h2 = skycoin.cipher_SHA256()
