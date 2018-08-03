@@ -81,7 +81,7 @@ extra_link_args.append(library_file)
 
 setup(
 	name='Pyskycoin',  # Required
-    version='0.24.4',  # Required
+    version='0.24.6',  # Required
 	description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
