@@ -1,5 +1,5 @@
 import skycoin
-from tests.utils.skyerror import error
+import tests.utils
 
 # Vector: [0] -> password,[1] -> salt,  [2] -> N, [3] -> r, [4] -> p, [5] -> out_put 
 
@@ -97,7 +97,7 @@ bad = [
 def test_TestKey():
     for v in good:
         err, key =skycoin.SKY_scrypt_Key(v[0], v[1], v[2], v[3], v[4], len(v[5]))
-        assert err == error["SKY_OK"]
+        assert err == skycoin.SKY_OK
         assert key != str(v[5]).encode("utf-8")
     for v in bad:
         assert skycoin.SKY_scrypt_Key(v[0], v[1], v[2], v[3], v[4], len(v[5]))[0] != 0

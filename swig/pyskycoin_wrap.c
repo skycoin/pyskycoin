@@ -3734,6 +3734,24 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 	}
 
  
+	GoUint32 wrap_SKY_coin_UxArray_Hashes(coin_UxOutArray* __uxIn,  cipher_SHA256s* __out_hashes){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		GoSlice_ dataOut;
+		dataOut.data = NULL;
+		dataOut.len = 0;
+		dataOut.cap = 0;
+		GoUint32 result = SKY_coin_UxArray_Hashes(&data, &dataOut);
+		if(result == 0){
+			__out_hashes->data = dataOut.data;
+			__out_hashes->count = dataOut.len;
+		}
+		return result;
+	}
+
+ 
 	GoUint32 wrap_SKY_coin_AddressUxOuts_Flatten(AddressUxOuts_Handle p0, coin_UxOutArray* __return_Ux){
 		GoSlice_ data;
 		data.data = NULL;
@@ -5539,6 +5557,67 @@ SWIGINTERN PyObject *_wrap_SKY_coin_NewAddressUxOuts__SWIG_0(PyObject *SWIGUNUSE
   arg2 = (AddressUxOuts_Handle *)(argp2);
   result = (GoUint32)wrap_SKY_coin_NewAddressUxOuts(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg1->data) free(arg1->data);
+  }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Hashes__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
+  cipher_SHA256s *arg2 = (cipher_SHA256s *) 0 ;
+  coin_UxOutArray temp1 ;
+  cipher_SHA256s temp2 ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp2.data = NULL;
+    temp2.count = 0;
+    arg2 = &temp2;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_UxArray_Hashes",&obj0)) SWIG_fail;
+  {
+    int i;
+    arg1 = &temp1;
+    arg1->count = PyList_Size(obj0);
+    arg1->data = malloc(sizeof(coin__UxOut) * arg1->count);
+    coin__UxOut* pdata = arg1->data;
+    for(i = 0; i < arg1->count; i++){
+      PyObject *o = PyList_GetItem(obj0, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_coin_UxArray_Hashes(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    int i;
+    PyObject *list = PyList_New(0);
+    for (i = 0; i < arg2->count; i++) {
+      cipher_SHA256* key = &(arg2->data[i]);
+      cipher_SHA256* newKey = malloc(sizeof(cipher_SHA256));
+      memcpy(newKey, key, sizeof(cipher_SHA256));
+      PyObject *o = SWIG_NewPointerObj(SWIG_as_voidptr(newKey), SWIGTYPE_p_cipher_SHA256, SWIG_POINTER_OWN );
+      PyList_Append(list, o);
+      Py_DECREF(o);
+    }
+    if( arg2->data != NULL)
+    free( (void*)arg2->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
   {
     if (arg1->data) free(arg1->data);
   }
@@ -13285,7 +13364,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Hashes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Hashes__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__PubKeySlice *arg1 = (cipher__PubKeySlice *) 0 ;
   cipher__PubKeySlice *arg2 = (cipher__PubKeySlice *) 0 ;
@@ -13319,6 +13398,40 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Hashes(PyObject *SWIGUNUSEDPARM(self
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Hashes(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[2] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_SKY_coin_UxArray_Hashes__SWIG_1(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      _v = PyList_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      return _wrap_SKY_coin_UxArray_Hashes__SWIG_0(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_coin_UxArray_Hashes'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_coin_UxArray_Hashes(coin_UxOutArray *,cipher_SHA256s *)\n"
+    "    SKY_coin_UxArray_Hashes(cipher__PubKeySlice *,cipher__PubKeySlice *)\n");
+  return 0;
 }
 
 

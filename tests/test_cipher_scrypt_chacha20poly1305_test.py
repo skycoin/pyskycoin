@@ -1,7 +1,7 @@
 import skycoin
 import json
 import base64
-from tests.utils.skyerror import error
+import tests.utils
 
 define = {
 "PLAINTEXT" :   b"plaintext",
@@ -18,7 +18,7 @@ def test_TestScryptChacha20poly1305Encrypt():
         crypto.KeyLen = 32
         crypto.N = 1 << i
         _, encData = skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(crypto, define["PLAINTEXT"], define["PASSWORD"])
-        assert _ == error["SKY_OK"]
+        assert _ == skycoin.SKY_OK
         Data = base64.standard_b64decode(encData)
         ml_ = [x for x in Data]
         if type(ml_[0]) == int:
@@ -49,11 +49,11 @@ def test_TestScryptChacha20poly1305Decrypt():
     crypto.KeyLen = 32
     crypto.N = 1 << 19    
     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(crypto, encrypto, password)
-    assert err == error["SKY_OK"] and decrypted == define["PLAINTEXT"]
+    assert err == skycoin.SKY_OK and decrypted == define["PLAINTEXT"]
     # Wrong Password
     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(crypto, encrypto, invalid_passwd)
-    assert err != error["SKY_OK"]
+    assert err == skycoin.SKY_ERROR
     # Missing Password
     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(crypto, encrypto, b"")
-    assert err != error["SKY_OK"]
+    assert err == skycoin.SKY_ERROR
 
