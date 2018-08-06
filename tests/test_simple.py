@@ -411,8 +411,6 @@ def test_Transaction_Hashes():
 	error = skycoin.SKY_coin_Transaction_Hash(handleTransaction1, h2)
 	assert error == 0
 	assert h1 == h2
-	h2.corrupt()
-	assert not (h1 == h2)
 	error = skycoin.SKY_coin_Transaction_Hash(handleTransaction2, h2)
 	assert error == 0
 	assert not (h1 == h2)

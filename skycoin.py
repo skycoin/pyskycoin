@@ -291,9 +291,6 @@ class cipher_SHA256(_object):
 
     def assignTo(self, data):
         return _skycoin.cipher_SHA256_assignTo(self, data)
-
-    def corrupt(self):
-        return _skycoin.cipher_SHA256_corrupt(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
