@@ -496,6 +496,32 @@ class coin_UxOutArray(_object):
 coin_UxOutArray_swigregister = _skycoin.coin_UxOutArray_swigregister
 coin_UxOutArray_swigregister(coin_UxOutArray)
 
+class cipher_Addresses(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_Addresses, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, cipher_Addresses, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.cipher_Addresses_data_set
+    __swig_getmethods__["data"] = _skycoin.cipher_Addresses_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.cipher_Addresses_data_get, _skycoin.cipher_Addresses_data_set)
+    __swig_setmethods__["count"] = _skycoin.cipher_Addresses_count_set
+    __swig_getmethods__["count"] = _skycoin.cipher_Addresses_count_get
+    if _newclass:
+        count = _swig_property(_skycoin.cipher_Addresses_count_get, _skycoin.cipher_Addresses_count_set)
+
+    def __init__(self):
+        this = _skycoin.new_cipher_Addresses()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_cipher_Addresses
+    __del__ = lambda self: None
+cipher_Addresses_swigregister = _skycoin.cipher_Addresses_swigregister
+cipher_Addresses_swigregister(cipher_Addresses)
+
 class _GoString_(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, _GoString_, name, value)
