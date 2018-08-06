@@ -2117,9 +2117,15 @@ def SKY_wallet_ReadableWallet_Load(p0, p1):
     return _skycoin.SKY_wallet_ReadableWallet_Load(p0, p1)
 SKY_wallet_ReadableWallet_Load = _skycoin.SKY_wallet_ReadableWallet_Load
 
+<<<<<<< HEAD
 def SKY_wallet_ReadableWallet_Erase(p0):
     return _skycoin.SKY_wallet_ReadableWallet_Erase(p0)
 SKY_wallet_ReadableWallet_Erase = _skycoin.SKY_wallet_ReadableWallet_Erase
+=======
+def SKY_coin_UxArray_Hashes(*args):
+    return _skycoin.SKY_coin_UxArray_Hashes(*args)
+SKY_coin_UxArray_Hashes = _skycoin.SKY_coin_UxArray_Hashes
+>>>>>>> 36eabf14aa384e29a3916234d045ddcf102ec388
 
 def SKY_encrypt_Sha256Xor_Encrypt(p0, p1):
     return _skycoin.SKY_encrypt_Sha256Xor_Encrypt(p0, p1)
