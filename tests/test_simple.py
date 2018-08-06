@@ -371,7 +371,13 @@ def test_VerifyInput():
 	assert len(uxListResult) == 2
 	error, uxListResult2 = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
 	assert len(uxListResult2) == 2
-	
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 12 * million
+	in1.Body.Hours = 12
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 12 * million
+	in2.Body.Hours = 12
+	assert in1 == in2
 
 def test_Transaction_Hashes():
 	error, handleTransactions = skycoin.SKY_coin_Create_Transactions()
@@ -380,6 +386,15 @@ def test_Transaction_Hashes():
 	assert error == 0
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction1)
 	error, handleTransaction2 = skycoin.SKY_coin_Create_Transaction()
+	assert error == 0
+	pubkey = skycoin.cipher_PubKey()
+	seckey = skycoin.cipher_SecKey()
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+	assert error == 0
+	error = skycoin.SKY_cipher_AddressFromPubKey(pubkey, address)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_PushOutput(handleTransaction2, address, 11000000, 255)
 	assert error == 0
 	skycoin.SKY_coin_Transactions_Add(handleTransactions, handleTransaction2)
 	error, hashesList = skycoin.SKY_coin_Transactions_Hashes(handleTransactions)
@@ -391,3 +406,28 @@ def test_Transaction_Hashes():
 	for hash in hashesList:
 		h = skycoin.cipher_SHA256()
 		assert not (h == hash)
+	error = skycoin.SKY_coin_Transaction_Hash(handleTransaction1, h1)
+	assert error == 0
+	error = skycoin.SKY_coin_Transaction_Hash(handleTransaction1, h2)
+	assert error == 0
+	assert h1 == h2
+	h2.corrupt()
+	assert not (h1 == h2)
+	error = skycoin.SKY_coin_Transaction_Hash(handleTransaction2, h2)
+	assert error == 0
+	assert not (h1 == h2)
+	
+def test_coinUxArray_Sort():
+	million = 1000000
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)
+	error, sortedList = skycoin.SKY_coin_UxArray_Sort(uxInList)
+	assert error == 0
+	assert len(sortedList) == 2

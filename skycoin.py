@@ -122,10 +122,6 @@ equalTransactionsArrays = _skycoin.equalTransactionsArrays
 def equalBlockHeaders(bh1, bh2):
     return _skycoin.equalBlockHeaders(bh1, bh2)
 equalBlockHeaders = _skycoin.equalBlockHeaders
-
-def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
-    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
-wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -295,6 +291,9 @@ class cipher_SHA256(_object):
 
     def assignTo(self, data):
         return _skycoin.cipher_SHA256_assignTo(self, data)
+
+    def corrupt(self):
+        return _skycoin.cipher_SHA256_corrupt(self)
     __swig_setmethods__["data"] = _skycoin.cipher_SHA256_data_set
     __swig_getmethods__["data"] = _skycoin.cipher_SHA256_data_get
     if _newclass:
@@ -860,8 +859,8 @@ def SKY_cipher_GenerateDeterministicKeyPairs(*args):
     return _skycoin.SKY_cipher_GenerateDeterministicKeyPairs(*args)
 SKY_cipher_GenerateDeterministicKeyPairs = _skycoin.SKY_cipher_GenerateDeterministicKeyPairs
 
-def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1)
+def SKY_cipher_GenerateDeterministicKeyPairsSeed(*args):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(*args)
 SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed
 
 def SKY_cipher_TestSecKey(p0):
@@ -1868,8 +1867,8 @@ def SKY_coin_UxArray_HasDupes(*args):
     return _skycoin.SKY_coin_UxArray_HasDupes(*args)
 SKY_coin_UxArray_HasDupes = _skycoin.SKY_coin_UxArray_HasDupes
 
-def SKY_coin_UxArray_Sort():
-    return _skycoin.SKY_coin_UxArray_Sort()
+def SKY_coin_UxArray_Sort(*args):
+    return _skycoin.SKY_coin_UxArray_Sort(*args)
 SKY_coin_UxArray_Sort = _skycoin.SKY_coin_UxArray_Sort
 
 def SKY_coin_UxArray_Len():
@@ -1912,12 +1911,12 @@ def SKY_coin_AddressUxOuts_Flatten(*args):
     return _skycoin.SKY_coin_AddressUxOuts_Flatten(*args)
 SKY_coin_AddressUxOuts_Flatten = _skycoin.SKY_coin_AddressUxOuts_Flatten
 
-def SKY_coin_AddressUxOuts_Sub(p0, p1, p2):
-    return _skycoin.SKY_coin_AddressUxOuts_Sub(p0, p1, p2)
+def SKY_coin_AddressUxOuts_Sub(p0, p1):
+    return _skycoin.SKY_coin_AddressUxOuts_Sub(p0, p1)
 SKY_coin_AddressUxOuts_Sub = _skycoin.SKY_coin_AddressUxOuts_Sub
 
-def SKY_coin_AddressUxOuts_Add(p0, p1, p2):
-    return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1, p2)
+def SKY_coin_AddressUxOuts_Add(p0, p1):
+    return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1)
 SKY_coin_AddressUxOuts_Add = _skycoin.SKY_coin_AddressUxOuts_Add
 
 def SKY_coin_AddressUxOuts_Get(*args):
