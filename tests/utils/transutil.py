@@ -127,3 +127,19 @@ def equalTransactions(handle1, handle2):
 
 def badFeeCalculator(transaction):
     return 1, 0
+
+def makeUxBody():
+    return makeUxBodyWithSecret()[0]
+
+def make_UxOut():
+    return makeUxOutWithSecret()[0]
+
+def makeUxArray(n):
+    lista = []
+    for _ in range(n):
+        lista.append(make_UxOut())
+    return lista
+
+def err_CoinHours_Overflow(p0):
+    if MaxUint16 < p0:
+        return 67108864
