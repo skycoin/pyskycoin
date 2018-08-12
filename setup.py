@@ -63,8 +63,8 @@ class skycoin_build_ext(build_ext, object):
             print("stdout:")
             sys.stderr.write(str(stdout))
             if len(stderr) > 0:
-            	print("stderr:")
-            	sys.stderr.write(str(stderr))
+                print("stderr:")
+                sys.stderr.write(str(stderr))
             # After making the library build the c library's
             # python interface with the parent build_extension method
             super(skycoin_build_ext, self).build_extension(ext)
@@ -76,13 +76,13 @@ lib_path = path.join(skypath, 'build', 'libskycoin')
 library_file = path.join(lib_path, 'libskycoin.a')
 extra_link_args = []
 if platform.system() == "Darwin":
-	extra_link_args += ["-framework", "Foundation", "-framework", "Security"]
+    extra_link_args += ["-framework", "Foundation", "-framework", "Security"]
 extra_link_args.append(library_file)
 
 setup(
-	name='Pyskycoin',  # Required
-    version='0.24.6',  # Required
-	description='Skycoin Python Library',
+    name='Pyskycoin',  # Required
+    version='0.25.0',  # Required
+    description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional
