@@ -440,6 +440,8 @@ def test_coinUxArray_Sort():
 	error, uxList = skycoin.SKY_coin_AddressUxOuts_Get(uxAddressOutHandle, address)
 	assert error == 0
 	assert len(uxList) == 2
+	assert uxInList[0] == uxList[0]
+	assert uxInList[1] == uxList[1]
 	error, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxAddressOutHandle)
 	assert error == 0
 	assert len(keys) > 0
