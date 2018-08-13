@@ -33,13 +33,13 @@ def test_TestHashRipemd160():
 def test_TestRipemd160Set():
     h = skycoin.cipher_Ripemd160()
     _, b = skycoin.SKY_cipher_RandByte(21)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(100)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(19)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(0)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(20)
     assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_OK
     _, b1 = skycoin.SKY_cipher_RandByte(20)
@@ -50,13 +50,13 @@ def test_TestRipemd160Set():
 def test_TestSHA256Set():
     h = skycoin.cipher_SHA256()
     _, b = skycoin.SKY_cipher_RandByte(33)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(100)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(31)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(0)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ERROR
+    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(32)
     assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_OK
     _, b = skycoin.SKY_cipher_RandByte(32)
@@ -139,21 +139,6 @@ def test_TestSHA256FromHex():
     assert err == skycoin.SKY_OK
 
 
-def test_TestMustSumSHA256():
-    _, b = skycoin.SKY_cipher_RandByte(128)
-    h = skycoin.cipher_SHA256()
-    err = skycoin.SKY_cipher_MustSumSHA256(b, 127, h)
-    assert err == skycoin.SKY_ERROR
-    err = skycoin.SKY_cipher_MustSumSHA256(b, 129, h)
-    assert err == skycoin.SKY_ERROR
-    err = skycoin.SKY_cipher_MustSumSHA256(b, 128, h)
-    assert err == skycoin.SKY_OK
-
-    err = skycoin.SKY_cipher_MustSumSHA256(b, 128, h)
-    assert h != skycoin.cipher_SHA256()
-    assert h == freshSumSHA256(b)
-
-
 def test_TestDoubleSHA256():
     _, b = skycoin.SKY_cipher_RandByte(128)
     h = skycoin.cipher_SHA256()
@@ -204,11 +189,4 @@ def test_TestSHA256Null():
     skycoin.SKY_cipher_SumSHA256(b, x)
     _, isNull = skycoin.SKY_cipher_SHA256_Null(x)
     assert not isNull
-
-    
-
-
-
-    
-
 

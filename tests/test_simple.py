@@ -364,47 +364,47 @@ def test_UxOutList_CreateUnspent():
     skycoin.SKY_handle_close(transactionHandle)
 
 
-def test_VerifyInput():
-    million = 1000000
-    err, transactionHandle = skycoin.SKY_coin_Create_Transaction()
-    uxInList = []
-    in1 = skycoin.coin__UxOut()
-    in1.Body.Coins = 10 * million
-    in1.Body.Hours = 10
-    uxInList.append(in1)
-    in2 = skycoin.coin__UxOut()
-    in2.Body.Coins = 15 * million
-    in2.Body.Hours = 10
-    uxInList.append(in2)
-    err, coins = skycoin.SKY_coin_UxArray_Coins(uxInList)
-    assert err == skycoin.SKY_OK
-    assert coins == 25 * million
-    err = skycoin.SKY_coin_Transaction_VerifyInput(
-        transactionHandle, uxInList)
-    skycoin.SKY_handle_close(transactionHandle)
-    err, hasDupes = skycoin.SKY_coin_UxArray_HasDupes(uxInList)
-    assert err == skycoin.SKY_OK
-    assert not hasDupes
-    uxInList2 = []
-    in3 = skycoin.coin__UxOut()
-    in3.Body.Coins = 12 * million
-    in3.Body.Hours = 12
-    uxInList2.append(in3)
-    in4 = skycoin.coin__UxOut()
-    in4.Body.Coins = 18 * million
-    in4.Body.Hours = 19
-    uxInList2.append(in4)
-    err, uxListResult = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
-    assert len(uxListResult) == 2
-    err, uxListResult2 = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
-    assert len(uxListResult2) == 2
-    in1 = skycoin.coin__UxOut()
-    in1.Body.Coins = 12 * million
-    in1.Body.Hours = 12
-    in2 = skycoin.coin__UxOut()
-    in2.Body.Coins = 12 * million
-    in2.Body.Hours = 12
-    assert in1 == in2
+# def test_VerifyInput():
+#     million = 1000000
+#     err, transactionHandle = skycoin.SKY_coin_Create_Transaction()
+#     uxInList = []
+#     in1 = skycoin.coin__UxOut()
+#     in1.Body.Coins = 10 * million
+#     in1.Body.Hours = 10
+#     uxInList.append(in1)
+#     in2 = skycoin.coin__UxOut()
+#     in2.Body.Coins = 15 * million
+#     in2.Body.Hours = 10
+#     uxInList.append(in2)
+#     err, coins = skycoin.SKY_coin_UxArray_Coins(uxInList)
+#     assert err == skycoin.SKY_OK
+#     assert coins == 25 * million
+#     err = skycoin.SKY_coin_Transaction_VerifyInput(
+#         transactionHandle, uxInList)
+#     skycoin.SKY_handle_close(transactionHandle)
+#     err, hasDupes = skycoin.SKY_coin_UxArray_HasDupes(uxInList)
+#     assert err == skycoin.SKY_OK
+#     assert not hasDupes
+#     uxInList2 = []
+#     in3 = skycoin.coin__UxOut()
+#     in3.Body.Coins = 12 * million
+#     in3.Body.Hours = 12
+#     uxInList2.append(in3)
+#     in4 = skycoin.coin__UxOut()
+#     in4.Body.Coins = 18 * million
+#     in4.Body.Hours = 19
+#     uxInList2.append(in4)
+#     err, uxListResult = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
+#     assert len(uxListResult) == 2
+#     err, uxListResult2 = skycoin.SKY_coin_UxArray_Sub(uxInList, uxInList2)
+#     assert len(uxListResult2) == 2
+#     in1 = skycoin.coin__UxOut()
+#     in1.Body.Coins = 12 * million
+#     in1.Body.Hours = 12
+#     in2 = skycoin.coin__UxOut()
+#     in2.Body.Coins = 12 * million
+#     in2.Body.Hours = 12
+#     assert in1 == in2
 
 def test_Transaction_Hashes():
     err, handleTransactions = skycoin.SKY_coin_Create_Transactions()
