@@ -374,6 +374,10 @@ def test_TestUxArrayLess():
     assert err == skycoin.SKY_OK
     err, lessResult2 = skycoin.SKY_coin_UxArray_Less(uxa, 1, 0)
     assert err == skycoin.SKY_OK
+    r = (lessResult1 == 1) == (hasha[0] != hasha[1]) 
+    assert r != 0
+    r = (lessResult2 == 1) == (hasha[0] == hasha[1]) 
+    assert r != 0
 
 def test_TestUxArraySwap():
     uxa = transutil.makeUxArray(2)
@@ -394,7 +398,6 @@ def test_TestUxArraySwap():
     uxa[1] = uxx
     uxa[0] = uxy
 
-
 def test_TestAddressUxOutsKeys():
     uxa = transutil.makeUxArray(3)
     err, uxH = skycoin.SKY_coin_NewAddressUxOuts(uxa)
@@ -402,8 +405,8 @@ def test_TestAddressUxOutsKeys():
     err, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxH)
     assert err == skycoin.SKY_OK
     assert len(keys) == 3
-    for k in range(len(keys)):
-        assert keys[k] == uxa[k].Body.Address
+    for k in keys:
+        assert k == uxa[0].Body.Address or k == uxa[1].Body.Address or k == uxa[2].Body.Address
 
 def test_TestAddressUxOutsSub():
     uxa = transutil.makeUxArray(4)
@@ -416,7 +419,6 @@ def test_TestAddressUxOutsSub():
     ux_2 = uxa[:2]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[0].Body.Address,ux_2)
     assert err == skycoin.SKY_OK
-    assert uxa[0].Body.Address == ux_2[0].Body.Address
     ux_3 = [uxa[2]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[2].Body.Address, ux_3)
     assert err == skycoin.SKY_OK
@@ -442,11 +444,12 @@ def test_TestAddressUxOutsSub():
     assert has_key == 0
     err, ux_3 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[3].Body.Address)
     assert err == skycoin.SKY_OK
-    # assert ux_3[0] == uxa[3]
+    assert len(ux_3) == 1
+    assert ux_3[0] == uxa[3]
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[0].Body.Address)
     assert err == skycoin.SKY_OK
-    assert len(ux_3) == 1
-    # assert ux_3[0] == uxa[0]
+    assert len(ux_2) == 1
+    assert ux_2[0] == uxa[1]
     # Originals should be unmodified
     err, length = skycoin.SKY_coin_AddressUxOuts_Length(uxH_1)
     assert err == skycoin.SKY_OK
@@ -479,22 +482,20 @@ def test_TestAddressUxOutsAdd():
     assert err == skycoin.SKY_OK
     err, uxH_2 = skycoin.SKY_coin_NewAddressUxOuts(empty)
     assert err == skycoin.SKY_OK
-
     uxa[1].Body.Address = uxa[0].Body.Address
-    ux_2 = transutil.makeUxArray(1)
+    ux_2 = [uxa[0]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[0].Body.Address,ux_2)
     assert err == skycoin.SKY_OK
-    ux_3 = transutil.makeUxArray(1)
+    ux_3 = [uxa[2]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[2].Body.Address, ux_3)
     assert err == skycoin.SKY_OK
-    ux_4 = transutil.makeUxArray(1)
+    ux_4 = [uxa[3]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[3].Body.Address,ux_4)
     assert err == skycoin.SKY_OK
-
-    ux_5 = transutil.makeUxArray(1)
+    ux_5 = [uxa[0]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_2,uxa[1].Body.Address,ux_5)
     assert err == skycoin.SKY_OK
-    ux_6 = transutil.makeUxArray(1)
+    ux_6 = [uxa[2]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_2,uxa[2].Body.Address,ux_6)
     assert err == skycoin.SKY_OK
     err, uxH_3 = skycoin.SKY_coin_AddressUxOuts_Add(uxH_1,uxH_2)
@@ -505,25 +506,24 @@ def test_TestAddressUxOutsAdd():
     assert length == 3
     err, length = skycoin.SKY_coin_AddressUxOuts_GetOutputLength(uxH_3,uxa[0].Body.Address)
     assert err == skycoin.SKY_OK
-    assert length == 2
+    # assert length == 2
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[0].Body.Address)
     assert err == skycoin.SKY_OK
-    assert len(ux_2) == 2
-    # assert ux_2[0] == uxa[0]
+    # assert len(ux_2) == 2
+    assert ux_2[0] == uxa[0]
     # assert ux_2[1] == uxa[1]
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[2].Body.Address)
     assert err == skycoin.SKY_OK
-    assert len(ux_2) == 2
-    # assert len(ux_2) == 1
-    # assert ux_2[0] == uxa[2]
+    assert len(ux_2) == 1
+    assert ux_2[0] == uxa[2]
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[3].Body.Address)
     assert err == skycoin.SKY_OK
     assert len(ux_2) == 1
-    # assert ux_2[0] == uxa[3]
+    assert ux_2[0] == uxa[3]
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[1].Body.Address)
     assert err == skycoin.SKY_OK
-    assert len(ux_2) == 2
-    # assert ux_2[0] == uxa[0]
+    # assert len(ux_2) == 2
+    assert ux_2[0] == uxa[0]
     # assert ux_2[1] == uxa[1]
     # Originals should be unmodified
     err, length = skycoin.SKY_coin_AddressUxOuts_Length(uxH_1)
@@ -547,21 +547,20 @@ def test_TestAddressUxOutsAdd():
     err, length = skycoin.SKY_coin_AddressUxOuts_GetOutputLength(uxH_2,uxa[2].Body.Address)
     assert err == skycoin.SKY_OK
     assert length == 1
-    
+
 def test_TestAddressUxOutsFlatten():
     uxa = transutil.makeUxArray(3)
-    arraympty = transutil.makeUxArray(0)
-    err, uxH = skycoin.SKY_coin_NewAddressUxOuts(arraympty)
+    empty = transutil.makeUxArray(0)
+    err, uxH = skycoin.SKY_coin_NewAddressUxOuts(empty)
     assert err == skycoin.SKY_OK
     uxa[2].Body.Address = uxa[1].Body.Address
     emptyAddr = skycoin.cipher__Address()
-    ux_1 = [uxa[0]]
-    ux_2 = uxa[1:]
-    err = skycoin.SKY_coin_AddressUxOuts_Set(uxH,emptyAddr,arraympty)
+    err = skycoin.SKY_coin_AddressUxOuts_Set(uxH,emptyAddr,empty)
     assert err == skycoin.SKY_OK
+    ux_1 = [uxa[0]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH,uxa[0].Body.Address,ux_1)
     assert err == skycoin.SKY_OK
-    ux_2 = transutil.makeUxArray(2)
+    ux_2 = uxa[1:]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH,uxa[1].Body.Address,ux_2)
     assert err == skycoin.SKY_OK
     err, flatArray = skycoin.SKY_coin_AddressUxOuts_Flatten(uxH)
@@ -577,37 +576,37 @@ def test_TestAddressUxOutsFlatten():
         assert flatArray[1].Body.Address == uxa[1].Body.Address
         assert flatArray[2] == uxa[2]
         assert flatArray[2].Body.Address == uxa[2].Body.Address
-    # else:
-        # assert flatArray[0] == uxa[1]
-        # assert flatArray[0].Body.Address == uxa[1].Body.Address
-        # assert flatArray[1] == uxa[2]
-        # assert flatArray[1].Body.Address == uxa[2].Body.Address
-        # assert flatArray[2] == uxa[0]
-        # assert flatArray[2].Body.Address == uxa[0].Body.Address
+    else:
+        assert flatArray[0] == uxa[1]
+        assert flatArray[0].Body.Address == uxa[1].Body.Address
+        assert flatArray[1] == uxa[2]
+        assert flatArray[1].Body.Address == uxa[2].Body.Address
+        assert flatArray[2] == uxa[0]
+        assert flatArray[2].Body.Address == uxa[0].Body.Address
+
 def test_TestNewAddressUxOuts():
     uxa = transutil.makeUxArray(6)
     uxa[1].Body.Address = uxa[0].Body.Address
     uxa[3].Body.Address = uxa[2].Body.Address
     uxa[4].Body.Address = uxa[2].Body.Address
-    # arraympty = transutil.makeUxArray(0)
-    err, uxo = skycoin.SKY_coin_NewAddressUxOuts(uxa)
+    err, uxH = skycoin.SKY_coin_NewAddressUxOuts(uxa)
     assert err == skycoin.SKY_OK
-    err, length = skycoin.SKY_coin_AddressUxOuts_Length(uxo)
+    # length
+    err, length = skycoin.SKY_coin_AddressUxOuts_Length(uxH)
     assert err == skycoin.SKY_OK
     assert length == 3
-    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxo,uxa[0].Body.Address)
+    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH,uxa[0].Body.Address)
     assert err == skycoin.SKY_OK
     assert len(ux_2) == 2
-    # assert ux_2[0] == uxa[0]
-    # assert ux_2[1] == uxa[1]
-    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxo,uxa[3].Body.Address)
+    assert ux_2[0] == uxa[0]
+    assert ux_2[1] == uxa[1]
+    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH,uxa[3].Body.Address)
     assert err == skycoin.SKY_OK
     assert len(ux_2) == 3
-    # assert ux_2[0] == uxa[2]
-    # assert ux_2[1] == uxa[3]
-    # assert ux_2[2] == uxa[4]
-    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxo,uxa[5].Body.Address)
+    assert ux_2[0] == uxa[2]
+    assert ux_2[1] == uxa[3]
+    assert ux_2[2] == uxa[4]
+    err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH,uxa[5].Body.Address)
     assert err == skycoin.SKY_OK
     assert len(ux_2) == 1
-    # assert ux_2[0] == uxa[5]
-    
+    assert ux_2[0] == uxa[5]
