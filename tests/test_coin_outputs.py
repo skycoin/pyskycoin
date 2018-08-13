@@ -374,9 +374,9 @@ def test_TestUxArrayLess():
     assert err == skycoin.SKY_OK
     err, lessResult2 = skycoin.SKY_coin_UxArray_Less(uxa, 1, 0)
     assert err == skycoin.SKY_OK
-    r = (lessResult1 == 1) == (hasha[0] != hasha[1]) 
+    r = lessResult1 == 1 
     assert r != 0
-    r = (lessResult2 == 1) == (hasha[0] == hasha[1]) 
+    r = lessResult2 != 1 
     assert r != 0
 
 def test_TestUxArraySwap():
@@ -493,7 +493,7 @@ def test_TestAddressUxOutsAdd():
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_1,uxa[3].Body.Address,ux_4)
     assert err == skycoin.SKY_OK
     ux_5 = [uxa[0]]
-    err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_2,uxa[1].Body.Address,ux_5)
+    err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_2,uxa[0].Body.Address,ux_5)
     assert err == skycoin.SKY_OK
     ux_6 = [uxa[2]]
     err = skycoin.SKY_coin_AddressUxOuts_Set(uxH_2,uxa[2].Body.Address,ux_6)
