@@ -401,35 +401,69 @@ def test_Transaction_Hashes():
     assert not (h1 == h2)
     
 def test_coinUxArray_Sort():
-    million = 1000000
-    uxInList = []
-    in1 = skycoin.coin__UxOut()
-    in1.Body.Coins = 10 * million
-    in1.Body.Hours = 10
-    uxInList.append(in1)
-    in2 = skycoin.coin__UxOut()
-    in2.Body.Coins = 15 * million
-    in2.Body.Hours = 10
-    uxInList.append(in2)
-    assert not (in1 == in2)
-    error, sortedList = skycoin.SKY_coin_UxArray_Sort(uxInList)
-    assert error == 0
-    assert len(sortedList) == 2
-    error, uxAddressOutHandle = skycoin.SKY_coin_NewAddressUxOuts(uxInList)
-    assert error == 0
-    address = skycoin.cipher__Address()
-    error = skycoin.SKY_cipher_DecodeBase58Address(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
-    assert error == 0
-    error = skycoin.SKY_coin_AddressUxOuts_Set(uxAddressOutHandle, address, uxInList)
-    assert error == 0
-    error, uxList = skycoin.SKY_coin_AddressUxOuts_Get(uxAddressOutHandle, address)
-    assert error == 0
-    assert len(uxList) == 2
-    error, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxAddressOutHandle)
-    assert error == 0
-    assert len(keys) > 0
-    keyFound = False
-    for key in keys:
-        if key == address:
-            keyFound = True
-    assert keyFound
+	million = 1000000
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)
+	assert not (in1 == in2)
+	error, sortedList = skycoin.SKY_coin_UxArray_Sort(uxInList)
+	assert error == 0
+	assert len(sortedList) == 2
+	error, uxAddressOutHandle = skycoin.SKY_coin_NewAddressUxOuts(uxInList)
+	assert error == 0
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_DecodeBase58Address(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+	assert error == 0
+	error = skycoin.SKY_coin_AddressUxOuts_Set(uxAddressOutHandle, address, uxInList)
+	assert error == 0
+	error, uxList = skycoin.SKY_coin_AddressUxOuts_Get(uxAddressOutHandle, address)
+	assert error == 0
+	assert len(uxList) == 2
+	assert uxInList[0] == uxList[0]
+	assert uxInList[1] == uxList[1]
+	error, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxAddressOutHandle)
+	assert error == 0
+	assert len(keys) > 0
+	keyFound = False
+	for key in keys:
+		if key == address:
+			keyFound = True
+	assert keyFound
+	million = 1000000
+	uxInList = []
+	in1 = skycoin.coin__UxOut()
+	in1.Body.Coins = 10 * million
+	in1.Body.Hours = 10
+	uxInList.append(in1)
+	in2 = skycoin.coin__UxOut()
+	in2.Body.Coins = 15 * million
+	in2.Body.Hours = 10
+	uxInList.append(in2)
+	assert not (in1 == in2)
+	error, sortedList = skycoin.SKY_coin_UxArray_Sort(uxInList)
+	assert error == 0
+	assert len(sortedList) == 2
+	error, uxAddressOutHandle = skycoin.SKY_coin_NewAddressUxOuts(uxInList)
+	assert error == 0
+	address = skycoin.cipher__Address()
+	error = skycoin.SKY_cipher_DecodeBase58Address(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+	assert error == 0
+	error = skycoin.SKY_coin_AddressUxOuts_Set(uxAddressOutHandle, address, uxInList)
+	assert error == 0
+	error, uxList = skycoin.SKY_coin_AddressUxOuts_Get(uxAddressOutHandle, address)
+	assert error == 0
+	assert len(uxList) == 2
+	error, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxAddressOutHandle)
+	assert error == 0
+	assert len(keys) > 0
+	keyFound = False
+	for key in keys:
+		if key == address:
+			keyFound = True
+	assert keyFound
