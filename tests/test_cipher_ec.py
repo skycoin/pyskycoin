@@ -1,5 +1,5 @@
 import skycoin
-from tests.utils.skyerror import error
+import tests.utils
 
 def test_TestECmult():
     _, u1 = skycoin.SKY_secp256k1go_Number_Create()
@@ -15,9 +15,9 @@ def test_TestECmult():
     skycoin.SKY_secp256k1go_Field_SetHex(expres.Y, b"8E8CEB84E1502FC536FFE67967BC44314270A0B38C79865FFED5A85D138DCA6B")
     skycoin.SKY_secp256k1go_Field_SetHex(expres.Z, b"813925AF112AAB8243F8CCBADE4CC7F63DF387263028DE6E679232A73A7F3C31")
     
-    assert skycoin.SKY_secp256k1go_XYZ_ECmult(public_keyj, pr, u2, u1) == error["SKY_OK"]
+    assert skycoin.SKY_secp256k1go_XYZ_ECmult(public_keyj, pr, u2, u1) == skycoin.SKY_OK
     err, val = skycoin.SKY_secp256k1go_XYZ_Equals(pr, expres) 
-    assert err == error["SKY_OK"] and val
+    assert err == skycoin.SKY_OK and val
 
 def test_TestMultGen():
     _, noce = skycoin.SKY_secp256k1go_Number_Create()
@@ -35,8 +35,8 @@ def test_TestMultGen():
     skycoin.SKY_secp256k1go_Field_Normalize(pr.Y)
     skycoin.SKY_secp256k1go_Field_Normalize(pr.Z)
     err, val = skycoin.SKY_secp256k1go_Field_Equals(pr.X, x)
-    assert err == error["SKY_OK"] and val
+    assert err == skycoin.SKY_OK and val
     err, val = skycoin.SKY_secp256k1go_Field_Equals(pr.Y, y)
-    assert err == error["SKY_OK"] and val
+    assert err == skycoin.SKY_OK and val
     err, val = skycoin.SKY_secp256k1go_Field_Equals(pr.Z, z)
-    assert err == error["SKY_OK"] and val
+    assert err == skycoin.SKY_OK and val

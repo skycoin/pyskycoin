@@ -871,10 +871,6 @@ def SKY_cipher_VerifySignature(p0, p1, p2):
     return _skycoin.SKY_cipher_VerifySignature(p0, p1, p2)
 SKY_cipher_VerifySignature = _skycoin.SKY_cipher_VerifySignature
 
-def SKY_cipher_GenerateKeyPair(p0, p1):
-    return _skycoin.SKY_cipher_GenerateKeyPair(p0, p1)
-SKY_cipher_GenerateKeyPair = _skycoin.SKY_cipher_GenerateKeyPair
-
 def SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2):
     return _skycoin.SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2)
 SKY_cipher_GenerateDeterministicKeyPair = _skycoin.SKY_cipher_GenerateDeterministicKeyPair
@@ -898,6 +894,10 @@ SKY_cipher_TestSecKey = _skycoin.SKY_cipher_TestSecKey
 def SKY_cipher_TestSecKeyHash(p0, p1):
     return _skycoin.SKY_cipher_TestSecKeyHash(p0, p1)
 SKY_cipher_TestSecKeyHash = _skycoin.SKY_cipher_TestSecKeyHash
+
+def SKY_cipher_GenerateKeyPair(p0, p1):
+    return _skycoin.SKY_cipher_GenerateKeyPair(p0, p1)
+SKY_cipher_GenerateKeyPair = _skycoin.SKY_cipher_GenerateKeyPair
 
 def SKY_cli_App_Run(p0, p1):
     return _skycoin.SKY_cli_App_Run(p0, p1)
@@ -2095,13 +2095,13 @@ def SKY_cipher_MustAddressFromBytes(p0, p1):
     return _skycoin.SKY_cipher_MustAddressFromBytes(p0, p1)
 SKY_cipher_MustAddressFromBytes = _skycoin.SKY_cipher_MustAddressFromBytes
 
-def SKY_cipher_Address_Bytes(p0):
-    return _skycoin.SKY_cipher_Address_Bytes(p0)
-SKY_cipher_Address_Bytes = _skycoin.SKY_cipher_Address_Bytes
-
 def SKY_cipher_Address_Null(p0):
     return _skycoin.SKY_cipher_Address_Null(p0)
 SKY_cipher_Address_Null = _skycoin.SKY_cipher_Address_Null
+
+def SKY_cipher_Address_Bytes(p0):
+    return _skycoin.SKY_cipher_Address_Bytes(p0)
+SKY_cipher_Address_Bytes = _skycoin.SKY_cipher_Address_Bytes
 
 def SKY_cipher_Address_BitcoinBytes(p0):
     return _skycoin.SKY_cipher_Address_BitcoinBytes(p0)

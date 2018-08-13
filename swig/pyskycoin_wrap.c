@@ -3465,22 +3465,22 @@ SWIG_AsVal_long_SS_long (PyObject *obj, long long *val)
 	}
 
 
-	GoUint32 wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys* __in_pubKeys){
+	GoUint32 wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys* __in_pubKeys, GoInt* __out_Len){
 		GoSlice_ data;
 		data.data = __in_pubKeys->data;
 		data.len = __in_pubKeys->count;
 		data.cap = __in_pubKeys->count;
-		GoUint32 result = SKY_cipher_PubKeySlice_Len(&data);
+		GoUint32 result = SKY_cipher_PubKeySlice_Len(&data,__out_Len);
 		return result;
 	}
 
 
-	GoUint32 wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys* __in_pubKeys, GoInt p1, GoInt p2){
+	GoUint32 wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys* __in_pubKeys, GoInt p1, GoInt p2, GoUint8* __out_Less){
 		GoSlice_ data;
 		data.data = __in_pubKeys->data;
 		data.len = __in_pubKeys->count;
 		data.cap = __in_pubKeys->count;
-		GoUint32 result = SKY_cipher_PubKeySlice_Less(&data, p1, p2);
+		GoUint32 result = SKY_cipher_PubKeySlice_Less(&data, p1, p2,__out_Less);
 		return result;
 	}
 
@@ -4715,10 +4715,14 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
+  GoInt *arg2 = (GoInt *) 0 ;
   cipher_PubKeys temp1 ;
+  GoInt temp2 ;
+  int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
+  arg2 = &temp2;
   if (!PyArg_ParseTuple(args,(char *)"O:SKY_cipher_PubKeySlice_Len",&obj0)) SWIG_fail;
   {
     int i;
@@ -4737,8 +4741,14 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_0(PyObject *SWIGUNUS
       pdata++;
     }
   }
-  result = (GoUint32)wrap_SKY_cipher_PubKeySlice_Len(arg1);
+  result = (GoUint32)wrap_SKY_cipher_PubKeySlice_Len(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res2)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+  }
   {
     if (arg1->data) free(arg1->data);
   }
@@ -4756,16 +4766,20 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_0(PyObject *SWIGUNU
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
+  GoUint8 *arg4 = (GoUint8 *) 0 ;
   cipher_PubKeys temp1 ;
   long long val2 ;
   int ecode2 = 0 ;
   long long val3 ;
   int ecode3 = 0 ;
+  GoUint8 temp4 ;
+  int res4 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
   GoUint32 result;
   
+  arg4 = &temp4;
   if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cipher_PubKeySlice_Less",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     int i;
@@ -4794,8 +4808,14 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_0(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_cipher_PubKeySlice_Less" "', argument " "3"" of type '" "GoInt""'");
   } 
   arg3 = (GoInt)(val3);
-  result = (GoUint32)wrap_SKY_cipher_PubKeySlice_Less(arg1,arg2,arg3);
+  result = (GoUint32)wrap_SKY_cipher_PubKeySlice_Less(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res4)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_char, new_flags));
+  }
   {
     if (arg1->data) free(arg1->data);
   }
@@ -11251,8 +11271,11 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoInt *arg2 = (GoInt *) 0 ;
   GoSlice_ temp1 ;
-  GoInt result;
+  GoInt temp2 ;
+  int res2 = SWIG_TMPOBJ ;
+  GoUint32 result;
   
   {
     temp1.data = NULL;
@@ -11260,12 +11283,19 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len__SWIG_1(PyObject *SWIGUNUS
     temp1.cap = 0;
     arg1 = (coin__UxArray *)&temp1;
   }
+  arg2 = &temp2;
   if (!PyArg_ParseTuple(args,(char *)":SKY_cipher_PubKeySlice_Len")) SWIG_fail;
-  result = (GoInt)SKY_cipher_PubKeySlice_Len(arg1);
-  resultobj = SWIG_From_long_SS_long((long long)(result));
+  result = (GoUint32)SKY_cipher_PubKeySlice_Len(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
     free( (void*)arg1->data );
+  }
+  if (SWIG_IsTmpObj(res2)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
   }
   return resultobj;
 fail:
@@ -11301,8 +11331,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Len(PyObject *self, PyObject *
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_cipher_PubKeySlice_Len'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys *)\n"
-    "    SKY_cipher_PubKeySlice_Len(coin__UxArray *)\n");
+    "    wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys *,GoInt *)\n"
+    "    SKY_cipher_PubKeySlice_Len(coin__UxArray *,GoInt *)\n");
   return 0;
 }
 
@@ -11312,14 +11342,17 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_1(PyObject *SWIGUNU
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
+  GoUint8 *arg4 = (GoUint8 *) 0 ;
   GoSlice_ temp1 ;
   long long val2 ;
   int ecode2 = 0 ;
   long long val3 ;
   int ecode3 = 0 ;
+  GoUint8 temp4 ;
+  int res4 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  GoUint8 result;
+  GoUint32 result;
   
   {
     temp1.data = NULL;
@@ -11327,6 +11360,7 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_1(PyObject *SWIGUNU
     temp1.cap = 0;
     arg1 = (coin__UxArray *)&temp1;
   }
+  arg4 = &temp4;
   if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_PubKeySlice_Less",&obj0,&obj1)) SWIG_fail;
   ecode2 = SWIG_AsVal_long_SS_long(obj0, &val2);
   if (!SWIG_IsOK(ecode2)) {
@@ -11338,11 +11372,17 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less__SWIG_1(PyObject *SWIGUNU
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_cipher_PubKeySlice_Less" "', argument " "3"" of type '" "GoInt""'");
   } 
   arg3 = (GoInt)(val3);
-  result = (GoUint8)SKY_cipher_PubKeySlice_Less(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_char((unsigned char)(result));
+  result = (GoUint32)SKY_cipher_PubKeySlice_Less(arg1,arg2,arg3,arg4);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
     free( (void*)arg1->data );
+  }
+  if (SWIG_IsTmpObj(res4)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_char, new_flags));
   }
   return resultobj;
 fail:
@@ -11403,8 +11443,8 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeySlice_Less(PyObject *self, PyObject 
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_cipher_PubKeySlice_Less'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys *,GoInt,GoInt)\n"
-    "    SKY_cipher_PubKeySlice_Less(coin__UxArray *,GoInt,GoInt)\n");
+    "    wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys *,GoInt,GoInt,GoUint8 *)\n"
+    "    SKY_cipher_PubKeySlice_Less(coin__UxArray *,GoInt,GoInt,GoUint8 *)\n");
   return 0;
 }
 
@@ -12326,39 +12366,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_cipher_GenerateKeyPair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_GenerateKeyPair",&obj0,&obj1)) SWIG_fail;
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_cipher_PubKey, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
-    cipher_PubKey* p = (cipher_PubKey*)argp;
-    arg1 = &p->data;
-  }
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type SecKey");
-    cipher_SecKey* p = (cipher_SecKey*)argp;
-    arg2 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_GenerateKeyPair((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_GenerateDeterministicKeyPair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoSlice arg1 ;
@@ -12734,6 +12741,39 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_TestSecKeyHash(PyObject *SWIGUNUSEDPARM(se
     arg2 = &p->data;
   }
   result = (GoUint32)SKY_cipher_TestSecKeyHash((unsigned char (*)[32])arg1,(unsigned char (*)[32])arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_cipher_GenerateKeyPair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
+  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  GoUint32 result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_GenerateKeyPair",&obj0,&obj1)) SWIG_fail;
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(obj0, &argp, SWIGTYPE_p_cipher_PubKey, 0 | 0);
+    if (!SWIG_IsOK(res))
+    SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
+    cipher_PubKey* p = (cipher_PubKey*)argp;
+    arg1 = &p->data;
+  }
+  {
+    void *argp = 0;
+    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
+    if (!SWIG_IsOK(res))
+    SWIG_exception_fail(SWIG_TypeError, "expecting type SecKey");
+    cipher_SecKey* p = (cipher_SecKey*)argp;
+    arg2 = &p->data;
+  }
+  result = (GoUint32)SKY_cipher_GenerateKeyPair((unsigned char (*)[33])arg1,(unsigned char (*)[32])arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -19101,6 +19141,7 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_CreateOptionsHandle(PyObject *SWIGUNUSEDPA
   PyObject * obj4 = 0 ;
   PyObject * obj5 = 0 ;
   PyObject * obj6 = 0 ;
+  GoUint32 result;
   
   {
     arg8 = &temp8;
@@ -19166,8 +19207,8 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_CreateOptionsHandle(PyObject *SWIGUNUSEDPA
     SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "SKY_wallet_CreateOptionsHandle" "', argument " "7"" of type '" "GoUint64""'");
   } 
   arg7 = (GoUint64)(val7);
-  SKY_wallet_CreateOptionsHandle(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
-  resultobj = SWIG_Py_Void();
+  result = (GoUint32)SKY_wallet_CreateOptionsHandle(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg8));
   }
@@ -23637,6 +23678,38 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SKY_cipher_Address_Null(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher__Address *arg1 = (cipher__Address *) 0 ;
+  GoUint8 *arg2 = (GoUint8 *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  GoUint8 temp2 ;
+  int res2 = SWIG_TMPOBJ ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  arg2 = &temp2;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_cipher_Address_Null",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher__Address, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_cipher_Address_Null" "', argument " "1"" of type '" "cipher__Address *""'"); 
+  }
+  arg1 = (cipher__Address *)(argp1);
+  result = (GoUint32)SKY_cipher_Address_Null(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res2)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SKY_cipher_Address_Bytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__Address *arg1 = (cipher__Address *) 0 ;
@@ -23664,38 +23737,6 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_Address_Bytes(PyObject *SWIGUNUSEDPARM(sel
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
     free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_cipher_Address_Null(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  cipher__Address *arg1 = (cipher__Address *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_cipher_Address_Null",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher__Address, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_cipher_Address_Null" "', argument " "1"" of type '" "cipher__Address *""'"); 
-  }
-  arg1 = (cipher__Address *)(argp1);
-  result = (GoUint32)SKY_cipher_Address_Null(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
   }
   return resultobj;
 fail:
@@ -33287,13 +33328,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_ChkSig", _wrap_SKY_cipher_ChkSig, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_VerifySignedHash", _wrap_SKY_cipher_VerifySignedHash, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_VerifySignature", _wrap_SKY_cipher_VerifySignature, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_GenerateKeyPair", _wrap_SKY_cipher_GenerateKeyPair, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_GenerateDeterministicKeyPair", _wrap_SKY_cipher_GenerateDeterministicKeyPair, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_DeterministicKeyPairIterator", _wrap_SKY_cipher_DeterministicKeyPairIterator, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_GenerateDeterministicKeyPairs", _wrap_SKY_cipher_GenerateDeterministicKeyPairs, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_GenerateDeterministicKeyPairsSeed", _wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_TestSecKey", _wrap_SKY_cipher_TestSecKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_TestSecKeyHash", _wrap_SKY_cipher_TestSecKeyHash, METH_VARARGS, NULL},
+	 { (char *)"SKY_cipher_GenerateKeyPair", _wrap_SKY_cipher_GenerateKeyPair, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_App_Run", _wrap_SKY_cli_App_Run, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Config_GetCoin", _wrap_SKY_cli_Config_GetCoin, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Config_GetRPCAddress", _wrap_SKY_cli_Config_GetRPCAddress, METH_VARARGS, NULL},
@@ -33593,8 +33634,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_AddressFromSecKey", _wrap_SKY_cipher_AddressFromSecKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_BitcoinDecodeBase58Address", _wrap_SKY_cipher_BitcoinDecodeBase58Address, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_MustAddressFromBytes", _wrap_SKY_cipher_MustAddressFromBytes, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_Address_Bytes", _wrap_SKY_cipher_Address_Bytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_Null", _wrap_SKY_cipher_Address_Null, METH_VARARGS, NULL},
+	 { (char *)"SKY_cipher_Address_Bytes", _wrap_SKY_cipher_Address_Bytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_BitcoinBytes", _wrap_SKY_cipher_Address_BitcoinBytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_Verify", _wrap_SKY_cipher_Address_Verify, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_String", _wrap_SKY_cipher_Address_String, METH_VARARGS, NULL},
