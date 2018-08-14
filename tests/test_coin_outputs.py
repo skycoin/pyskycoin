@@ -374,7 +374,6 @@ def test_TestUxArrayLess():
     err, lessResult2 = skycoin.SKY_coin_UxArray_Less(uxa, 1, 0)
     assert err == skycoin.SKY_OK
 
-
 def test_TestUxArraySwap():
     uxa = utils.makeUxArray(2)
     uxx = utils.make_UxOut()
