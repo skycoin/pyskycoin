@@ -1,19 +1,9 @@
 import skycoin
-import tests.utils
+import tests.utils as utils
 
 
-def test_makeTestTransactions():
-    err, transactions = skycoin.SKY_coin_Create_Transactions()
-    assert err == skycoin.SKY_OK
-    err, transaction = skycoin.SKY_coin_Create_Transaction()
-    assert err == skycoin.SKY_OK
-    assert skycoin.SKY_coin_Transactions_Add(
-        transactions, transaction) == skycoin.SKY_OK
-    return transactions
-
-
-def test_makeNewBlock():
-    transactions = test_makeTestTransactions()
+def makeNewBlock(uxHash):
+    transactions = utils.makeTransactions(1)
     err, block = skycoin.SKY_coin_NewEmptyBlock(transactions)
     assert err == skycoin.SKY_OK
     err, pBlock = skycoin.SKY_coin_GetBlockObject(block)
@@ -27,5 +17,17 @@ def test_makeNewBlock():
     bodyhash = skycoin.cipher_SHA256()
     err = skycoin.SKY_coin_BlockBody_Hash(body, bodyhash)
     assert err == skycoin.SKY_OK
+    return skycoin.SKY_coin_NewBlock(pBlock, 100 + 20, uxHash, transactions, utils.badFeeCalculator)
+
+def addTransactionToBlock(b):
+    tx = utils.makeTransaction()
+    b.Body.Transactions.append(tx)
+    return tx
+
+def test_TestNewBlock():
+    pass
+
+    
+    
 
 
