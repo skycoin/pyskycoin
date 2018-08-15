@@ -140,6 +140,9 @@ def overflowCalc(transaction):
     return 0, MaxUint64
     return 1, 0
 
+def fix121FeeCalculator(transaction):
+    return skycoin.SKY_OK, 121
+
 
 def makeUxBody():
     return makeUxBodyWithSecret()[0]
