@@ -132,15 +132,22 @@ def calc(transaction):
     return 0, 1
 
 
+def feeCalc(transaction):
+    return skycoin.SKY_OK, 0
+
+
 def overflowCalc(transaction):
     return 0, MaxUint64
     return 1, 0
 
+
 def makeUxBody():
     return makeUxBodyWithSecret()[0]
 
+
 def make_UxOut():
     return makeUxOutWithSecret()[0]
+
 
 def makeUxArray(n):
     lista = []
@@ -148,6 +155,16 @@ def makeUxArray(n):
         lista.append(make_UxOut())
     return lista
 
+
 def err_CoinHours_Overflow(p0):
     if MaxUint16 < p0:
         return 67108864
+
+
+def RandSHA256():
+    err, sha = skycoin.SKY_cipher_RandByte(128)
+    assert err == skycoin.SKY_OK
+    sh = skycoin.cipher_SHA256()
+    err = skycoin.SKY_cipher_SumSHA256(sha, sh)
+    assert err == skycoin.SKY_OK
+    return sh
