@@ -140,6 +140,7 @@ def overflowCalc(transaction):
     return 0, MaxUint64
     return 1, 0
 
+
 def fix121FeeCalculator(transaction):
     return skycoin.SKY_OK, 121
 
@@ -171,3 +172,14 @@ def RandSHA256():
     err = skycoin.SKY_cipher_SumSHA256(sha, sh)
     assert err == skycoin.SKY_OK
     return sh
+
+
+def makeKeysAndAddress():
+    ppubkey = skycoin.cipher_PubKey()
+    pseckey = skycoin.cipher_SecKey()
+    err = skycoin.SKY_cipher_GenerateKeyPair(ppubkey, pseckey)
+    assert err == skycoin.SKY_OK
+    paddress = skycoin.cipher__Address()
+    err = skycoin.SKY_cipher_AddressFromPubKey(ppubkey, paddress)
+    assert err == skycoin.SKY_OK
+    return err, ppubkey, pseckey, paddress
