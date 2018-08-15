@@ -28,7 +28,6 @@ def test_TestScryptChacha20poly1305Encrypt():
             for x in _Data:
                 D += x 
             Data = D
-            print(Data)
         else:
             ml = ord(ml_[0])
         assert int(define["SCRYPTCHACHA20METALENGTHSIZE"]+ml) <= len(Data)
