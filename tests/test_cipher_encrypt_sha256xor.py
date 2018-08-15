@@ -1,6 +1,11 @@
 import skycoin
 import base64
 
+sha256XorDataLengthSize = 4
+sha256XorBlockSize = 32
+sha256XorNonceSize = 32
+sha256XorChecksumSize = 32
+
 tt = [
     [
         b"data length=1 password is empty=true",
@@ -40,10 +45,11 @@ tt = [
     ],
 ]
 
-sha256XorDataLengthSize = 4
-sha256XorBlockSize = 32
-sha256XorNonceSize = 32
-sha256XorChecksumSize = 32
+def makeEncryptedData(data, dataLength = 32 ):
+	err, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(data, b"pwd")
+	assert err == skycoin.SKY_OK
+	encrypted += skycoin.SKY_cipher_RandByte(dataLength)[1]
+	return encrypted
 
 def test_TestEncrypt():
     for t in tt:
@@ -57,7 +63,7 @@ def test_TestEncrypt():
         if m > 0:
             n += 1
         
-        rdata = base64.standard_b64decode(str(encrypted))
+        rdata = base64.standard_b64decode(encrypted)
         assert len(rdata) >= 0
         totalEncryptedDataLen = sha256XorBlockSize + sha256XorNonceSize + 32 + n * sha256XorBlockSize
         assert len(rdata) == totalEncryptedDataLen
@@ -78,7 +84,7 @@ def test_TestEncrypt():
         if m > 0:
             n += 1
 
-        rdata = base64.standard_b64decode(str(encrypted))
+        rdata = base64.standard_b64decode(encrypted)
         assert len(rdata) >= 0
         totalEncryptedDataLen = sha256XorBlockSize + sha256XorNonceSize + 32 + n * sha256XorBlockSize
         assert len(rdata) == totalEncryptedDataLen
@@ -87,3 +93,46 @@ def test_TestEncrypt():
         skycoin.SKY_cipher_SumSHA256(rdata[sha256XorChecksumSize:], sha_sum)
         assert sha_sum.toStr() == checksum
 
+def test_TestDecrypt():
+	err, data = skycoin.SKY_cipher_RandByte(32)
+	assert err == skycoin.SKY_OK
+
+	tt2 = [
+	[
+       	b"invalid data length",
+		makeEncryptedData(data, 65),
+        b"pwd",
+		skycoin.SKY_ERROR,
+    ],
+    [
+        b"empty password",
+		makeEncryptedData(data, 32),
+        b"",
+		skycoin.SKY_ErrSHA256orMissingPassword,
+    ],
+    [
+        b"invalid password",
+		makeEncryptedData(data, 32, ),
+        b"wrongpassword",
+		skycoin.SKY_ERROR,
+    ],
+	]
+	for t in tt2:
+		err, decrypted = skycoin.SKY_encrypt_Sha256Xor_Decrypt(t[1], t[2])
+		assert err == t[3]
+		if err != skycoin.SKY_OK:
+			continue
+		assert data == decrypted
+	
+	for i in range(64):
+		err, data = skycoin.SKY_cipher_RandByte(32)
+		assert err == skycoin.SKY_OK
+		assert len(data) == 32
+		pwd = b"pwd"
+		err, encrypted = skycoin.SKY_encrypt_Sha256Xor_Encrypt(
+		data, pwd)
+		assert err == skycoin.SKY_OK
+		err, decrypted = skycoin.SKY_encrypt_Sha256Xor_Decrypt(
+		encrypted, pwd)
+		assert err == skycoin.SKY_OK
+		assert data == decrypted
