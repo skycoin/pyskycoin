@@ -11,6 +11,7 @@ def makeTestTransactions():
 
 
 def makeNewBlock(uxHash):
+    bodyhash = skycoin.cipher_SHA256()
     transactions = makeTestTransactions()
     err, block = skycoin.SKY_coin_NewEmptyBlock(transactions)
     assert err == skycoin.SKY_OK
@@ -22,10 +23,11 @@ def makeNewBlock(uxHash):
     pBlock.Head.Fee = 10
     err, body = skycoin.SKY_coin_GetBlockBody(block)
     assert err == skycoin.SKY_OK
-    bodyhash = skycoin.cipher_SHA256()
     err = skycoin.SKY_coin_BlockBody_Hash(body, bodyhash)
     assert err == skycoin.SKY_OK
-    return skycoin.SKY_coin_NewBlock(block, 100 + 20, uxHash, transactions, utils.feeCalc)
+    err, newBlock = skycoin.SKY_coin_NewBlock(block, int(100 + 200), uxHash, transactions, utils.feeCalc)
+    assert err == skycoin.SKY_OK
+    return newBlock
 
 
 def addTransactionToBlock(b):
@@ -56,8 +58,8 @@ def test_TestNewBlock():
     err, pBlock = skycoin.SKY_coin_GetBlockObject(b)
     assert err == skycoin.SKY_OK
 
+
 def test_TestBlockHashHeader():
-    uxHash= utils.RandSHA256()
-    err, b = makeNewBlock(uxHash)
-    assert err == skycoin.SKY_OK
+    uxHash = utils.RandSHA256()
+    b = makeNewBlock(uxHash)
     
