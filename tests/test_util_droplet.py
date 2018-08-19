@@ -60,15 +60,15 @@ def test_TestFromString():
 
 def test_TestToString():
     cases = []
-    cases.append(tmpstruct("0.000000", 0))
-    cases.append(tmpstruct("0.000001", 1))
-    cases.append(tmpstruct("1.000000", int(1e6)))
-    cases.append(tmpstruct("0.100100", 100100))
-    cases.append(tmpstruct("1.001000", 1001000))
-    cases.append(tmpstruct("0.000999", 999))
-    cases.append(tmpstruct("999.000000", 999000000))
-    cases.append(tmpstruct("123.000456", 123000456))
-    cases.append(tmpstruct("", 9223372036854775808, skycoin.SKY_ErrTooLarge))
+    cases.append(tmpstruct(b"0.000000", 0))
+    cases.append(tmpstruct(b"0.000001", 1))
+    cases.append(tmpstruct(b"1.000000", int(1e6)))
+    cases.append(tmpstruct(b"0.100100", 100100))
+    cases.append(tmpstruct(b"1.001000", 1001000))
+    cases.append(tmpstruct(b"0.000999", 999))
+    cases.append(tmpstruct(b"999.000000", 999000000))
+    cases.append(tmpstruct(b"123.000456", 123000456))
+    cases.append(tmpstruct(b"", 9223372036854775808, skycoin.SKY_ErrTooLarge))
     
     for tcc in cases:
         tc = tcc
