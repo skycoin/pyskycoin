@@ -2155,8 +2155,8 @@ def SKY_fee_RemainingHours(p0):
     return _skycoin.SKY_fee_RemainingHours(p0)
 SKY_fee_RemainingHours = _skycoin.SKY_fee_RemainingHours
 
-def SKY_fee_TransactionFee(p0, p1):
-    return _skycoin.SKY_fee_TransactionFee(p0, p1)
+def SKY_fee_TransactionFee(*args):
+    return _skycoin.SKY_fee_TransactionFee(*args)
 SKY_fee_TransactionFee = _skycoin.SKY_fee_TransactionFee
 
 def SKY_cli_LoadConfig():

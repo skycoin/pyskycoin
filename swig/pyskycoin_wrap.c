@@ -3832,6 +3832,16 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 		return result;
 	}
 
+
+	GoUint32 wrap_SKY_fee_TransactionFee(Transaction__Handle __txn, GoUint64 __p1, coin__UxArray  __uxIn, GoUint64  *__return_fee ){
+		GoSlice_ *data;
+		data->data = __uxIn.data;
+		data->len = __uxIn.len;
+		data->cap = __uxIn.cap;
+		GoUint32 result = SKY_fee_TransactionFee(__txn,__p1, data,&__return_fee);
+		return result;
+	}
+
 SWIGINTERN int cipher_PubKey___eq__(cipher_PubKey *self,cipher_PubKey *a){
 		return memcmp(self->data, a->data, sizeof(a->data)) == 0;
 	}
@@ -5956,6 +5966,57 @@ fail:
   {
     if (arg1->data) free(arg1->data);
   }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Transaction__Handle arg1 ;
+  GoUint64 arg2 ;
+  coin__UxArray arg3 ;
+  GoUint64 *arg4 = (GoUint64 *) 0 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  GoUint64 temp4 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp4 = 0;
+    arg4 = &temp4;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_fee_TransactionFee",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    SWIG_AsVal_long(obj0, (long*)&arg1);
+  }
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_TransactionFee" "', argument " "2"" of type '" "GoUint64""'");
+  } 
+  arg2 = (GoUint64)(val2);
+  {
+    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_GoSlice_,  0 );
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_fee_TransactionFee" "', argument " "3"" of type '" "coin__UxArray""'"); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_fee_TransactionFee" "', argument " "3"" of type '" "coin__UxArray""'");
+    } else {
+      arg3 = *((coin__UxArray *)(argp3));
+    }
+  }
+  result = (GoUint32)wrap_SKY_fee_TransactionFee(arg1,arg2,arg3,arg4);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg4 ));
+  }
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -24010,7 +24071,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
@@ -24055,6 +24116,63 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self)
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_SKY_fee_TransactionFee__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_GoSlice_, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_SKY_fee_TransactionFee__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_fee_TransactionFee'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin__UxArray,GoUint64 *)\n"
+    "    SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin__UxArray *,GoUint64 *)\n");
+  return 0;
 }
 
 
