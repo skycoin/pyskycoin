@@ -3833,13 +3833,12 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 	}
 
 
-	GoUint32 wrap_SKY_fee_TransactionFee(Transaction__Handle __txn, GoUint64 __p1, coin__UxArray  __uxIn, GoUint64  *__return_fee ){
-		GoSlice_ *data;
-		data->data = __uxIn.data;
-		data->len = __uxIn.len;
-		data->cap = __uxIn.cap;
-		GoUint32 result = SKY_fee_TransactionFee(__txn,__p1, data,&__return_fee);
-		return result;
+	GoUint32 wrap_SKY_fee_TransactionFee(Transaction__Handle __txn, GoUint64 __p1, coin_UxOutArray*  __uxIn, GoUint64  *__return_fee ){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_fee_TransactionFee(__txn,__p1, &data,__return_fee);
 	}
 
 SWIGINTERN int cipher_PubKey___eq__(cipher_PubKey *self,cipher_PubKey *a){
@@ -5974,12 +5973,11 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_0(PyObject *SWIGUNUSEDPA
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
-  coin__UxArray arg3 ;
+  coin_UxOutArray *arg3 = (coin_UxOutArray *) 0 ;
   GoUint64 *arg4 = (GoUint64 *) 0 ;
   unsigned long long val2 ;
   int ecode2 = 0 ;
-  void *argp3 ;
-  int res3 = 0 ;
+  coin_UxOutArray temp3 ;
   GoUint64 temp4 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
@@ -6000,14 +5998,20 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_0(PyObject *SWIGUNUSEDPA
   } 
   arg2 = (GoUint64)(val2);
   {
-    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_GoSlice_,  0 );
-    if (!SWIG_IsOK(res3)) {
-      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_fee_TransactionFee" "', argument " "3"" of type '" "coin__UxArray""'"); 
-    }  
-    if (!argp3) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_fee_TransactionFee" "', argument " "3"" of type '" "coin__UxArray""'");
-    } else {
-      arg3 = *((coin__UxArray *)(argp3));
+    int i;
+    arg3 = &temp3;
+    arg3->count = PyList_Size(obj2);
+    arg3->data = malloc(sizeof(coin__UxOut) * arg3->count);
+    coin__UxOut* pdata = arg3->data;
+    for(i = 0; i < arg3->count; i++){
+      PyObject *o = PyList_GetItem(obj2, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
     }
   }
   result = (GoUint32)wrap_SKY_fee_TransactionFee(arg1,arg2,arg3,arg4);
@@ -6015,8 +6019,14 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_0(PyObject *SWIGUNUSEDPA
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg4 ));
   }
+  {
+    if (arg3->data) free(arg3->data);
+  }
   return resultobj;
 fail:
+  {
+    if (arg3->data) free(arg3->data);
+  }
   return NULL;
 }
 
@@ -24157,9 +24167,9 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *self, PyObject *args
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(argv[2], &vptr, SWIGTYPE_p_GoSlice_, 0);
-        _v = SWIG_CheckState(res);
+        {
+          _v = PyList_Check(argv[2]) ? 1 : 0;
+        }
         if (_v) {
           return _wrap_SKY_fee_TransactionFee__SWIG_0(self, args);
         }
@@ -24170,7 +24180,7 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *self, PyObject *args
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_fee_TransactionFee'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    wrap_SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin__UxArray,GoUint64 *)\n"
+    "    wrap_SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin_UxOutArray *,GoUint64 *)\n"
     "    SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin__UxArray *,GoUint64 *)\n");
   return 0;
 }

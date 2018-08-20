@@ -151,33 +151,39 @@ class tmpstruct:
     fee = 0
     err = skycoin.SKY_OK
 
+    def __init__(self):
+        self.name = ""
+        self.out = []
+        self.ins = []
+        self.headTime = 0
+        self.fee = 0
+        self.err = skycoin.SKY_OK
 
-headTime = 1000
-nextTime = headTime + 3600  # 1 hour later
+
+headTime = int(1000)
+nextTime = int(headTime + 3600)  # 1 hour later
 
 cases = []
 #  Test case with one output, one input
 case1 = tmpstruct()
 case1.fee = 5
-case1.headTime = headTime
-case1.out.append(5)
+case1.headTime = 1000
+case1.out = [5]
 case1.ins.append(uxInput(headTime, 10e6, 10))
 cases.append(case1)
 
 # Test case with multiple outputs, multiple inputs
 case2 = tmpstruct()
 case2.fee = 0
-case2.headTime,
-case2.out.append(5)
-case2.out.append(7)
-case2.out.append(3)
-case2.ins.append(uxInput(headTime, 10e6, 10))
-case2.ins.append(uxInput(headTime, 10e6, 5))
+case2.headTime = 1000
+case2.out = [5, 7, 3]
+case2.ins.append(uxInput(headTime, int(10e6), 10))
+case2.ins.append(uxInput(headTime, int(10e6), 5))
 cases.append(case2)
-# Test case with multiple outputs, multiple inputs, and some inputs have more CoinHours once adjusted for HeadTime
+# # Test case with multiple outputs, multiple inputs, and some inputs have more CoinHours once adjusted for HeadTime
 case3 = tmpstruct()
 case3.fee = 8
-case3.headTime = headTime
+case3.headTime = 1000
 case3.out.append(5)
 case3.out.append(10)
 case3.ins.append(uxInput(nextTime, 10e6, 10))
@@ -196,7 +202,7 @@ case5.err = skycoin.SKY_ERROR
 case5.out.append(0)
 case5.ins.append(uxInput(headTime, 10e6, 10))
 case5.ins.append(uxInput(headTime, 10e6, utils.MaxUint64 - 9))
-case5.headTime = headTime
+case5.headTime = 1000
 # Test case with overflowing output hours
 case6 = tmpstruct()
 case6.err = skycoin.SKY_ERROR
@@ -205,14 +211,16 @@ case6.out.append(10)
 case6.out.append(utils.MaxUint64 - 9)
 case6.ins.append(uxInput(headTime, 10e6, 10))
 case6.ins.append(uxInput(headTime, 10e6, 100))
-case6.headTime = headTime
+case6.headTime = 1000
 
 
 def test_TestTransactionFee():
     addr = utils.makeAddress()
-    for tc in cases:
+    for j in range(len(cases)):
+        tc = cases[j]
         tx = utils.makeEmptyTransaction()
         for h in tc.out:
+            print h
             err = skycoin.SKY_coin_Transaction_PushOutput(tx, addr, 0, h)
             assert err == skycoin.SKY_OK
         
@@ -222,7 +230,7 @@ def test_TestTransactionFee():
             inUxs[i].Head.Time = b.time
             inUxs[i].Body.Coins = int(b.coins)
             inUxs[i].Body.Hours = int(b.hours)
-            fee = 0
-        # err = skycoin.SKY_fee_TransactionFee(tx, tc.headTime, inUxs)
-        # assert err == tc.err
-        # assert tc.fee == fee
+        
+        err, fee = skycoin.SKY_fee_TransactionFee(tx, int(tc.headTime), inUxs)
+        assert err == tc.err
+        assert tc.fee == fee
