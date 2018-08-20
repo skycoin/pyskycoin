@@ -220,7 +220,6 @@ def test_TestTransactionFee():
         tc = cases[j]
         tx = utils.makeEmptyTransaction()
         for h in tc.out:
-            print h
             err = skycoin.SKY_coin_Transaction_PushOutput(tx, addr, 0, h)
             assert err == skycoin.SKY_OK
         
