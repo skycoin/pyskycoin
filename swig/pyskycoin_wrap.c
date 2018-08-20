@@ -3008,9 +3008,9 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_Hash_Handle swig_types[23]
 #define SWIGTYPE_p_Number_Handle swig_types[24]
 #define SWIGTYPE_p_Options__Handle swig_types[25]
-#define SWIGTYPE_p_OutputsResult_Handle swig_types[26]
-#define SWIGTYPE_p_PasswordReader__Handle swig_types[27]
-#define SWIGTYPE_p_ReadableEntry__Handle swig_types[28]
+#define SWIGTYPE_p_PasswordReader__Handle swig_types[26]
+#define SWIGTYPE_p_ReadableEntry__Handle swig_types[27]
+#define SWIGTYPE_p_ReadableOutputSet__Handle swig_types[28]
 #define SWIGTYPE_p_ReadableWallet__Handle swig_types[29]
 #define SWIGTYPE_p_Signature_Handle swig_types[30]
 #define SWIGTYPE_p_SortableTransactionResult_Handle swig_types[31]
@@ -10414,12 +10414,12 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_api_Client_Blocks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  GoInt arg2 ;
-  GoInt arg3 ;
+  GoUint64 arg2 ;
+  GoUint64 arg3 ;
   Handle *arg4 = (Handle *) 0 ;
-  long long val2 ;
+  unsigned long long val2 ;
   int ecode2 = 0 ;
-  long long val3 ;
+  unsigned long long val3 ;
   int ecode3 = 0 ;
   Handle temp4 ;
   PyObject * obj0 = 0 ;
@@ -10434,16 +10434,16 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_Blocks(PyObject *SWIGUNUSEDPARM(self),
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_api_Client_Blocks" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_api_Client_Blocks" "', argument " "2"" of type '" "GoUint64""'");
   } 
-  arg2 = (GoInt)(val2);
-  ecode3 = SWIG_AsVal_long_SS_long(obj2, &val3);
+  arg2 = (GoUint64)(val2);
+  ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_api_Client_Blocks" "', argument " "3"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_api_Client_Blocks" "', argument " "3"" of type '" "GoUint64""'");
   } 
-  arg3 = (GoInt)(val3);
+  arg3 = (GoUint64)(val3);
   result = (GoUint32)SKY_api_Client_Blocks(arg1,arg2,arg3,arg4);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -10458,9 +10458,9 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_api_Client_LastBlocks(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  GoInt arg2 ;
+  GoUint64 arg2 ;
   Handle *arg3 = (Handle *) 0 ;
-  long long val2 ;
+  unsigned long long val2 ;
   int ecode2 = 0 ;
   Handle temp3 ;
   PyObject * obj0 = 0 ;
@@ -10474,11 +10474,11 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_LastBlocks(PyObject *SWIGUNUSEDPARM(se
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_api_Client_LastBlocks" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_api_Client_LastBlocks" "', argument " "2"" of type '" "GoUint64""'");
   } 
-  arg2 = (GoInt)(val2);
+  arg2 = (GoUint64)(val2);
   result = (GoUint32)SKY_api_Client_LastBlocks(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -11579,7 +11579,7 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_api_Client_InjectTransaction(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  GoString arg2 ;
+  Transaction__Handle arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
   GoString temp3 ;
   PyObject * obj0 = 0 ;
@@ -11596,14 +11596,7 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_InjectTransaction(PyObject *SWIGUNUSED
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
   {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_InjectTransaction', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
+    SWIG_AsVal_long(obj1, (long*)&arg2);
   }
   result = (GoUint32)SKY_api_Client_InjectTransaction(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
@@ -15006,87 +14999,6 @@ SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_CSRF(PyObject *SWIGUNUSEDPARM(self)
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
     free( (void*)arg2->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_GetUnspentOutputs(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WebRpcClient__Handle arg1 ;
-  GoSlice arg2 ;
-  OutputsResult_Handle *arg3 = (OutputsResult_Handle *) 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_webrpc_Client_GetUnspentOutputs",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_webrpc_Client_GetUnspentOutputs', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_OutputsResult_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_webrpc_Client_GetUnspentOutputs" "', argument " "3"" of type '" "OutputsResult_Handle *""'"); 
-  }
-  arg3 = (OutputsResult_Handle *)(argp3);
-  result = (GoUint32)SKY_webrpc_Client_GetUnspentOutputs(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_webrpc_Client_InjectTransactionString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WebRpcClient__Handle arg1 ;
-  GoString arg2 ;
-  GoString_ *arg3 = (GoString_ *) 0 ;
-  GoString temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.p = NULL;
-    temp3.n = 0;
-    arg3 = (GoString_ *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_webrpc_Client_InjectTransactionString",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_webrpc_Client_InjectTransactionString', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_webrpc_Client_InjectTransactionString(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->p, arg3->n  ));
-    free( (void*)arg3->p );
   }
   return resultobj;
 fail:
@@ -24875,7 +24787,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
   PyObject *resultobj = 0;
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
-  OutputsResult_Handle *arg3 = (OutputsResult_Handle *) 0 ;
+  ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
   PyObject * obj0 = 0 ;
@@ -24897,11 +24809,11 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
     (&arg2)->p = buffer;
     (&arg2)->n = size - 1;
   }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_OutputsResult_Handle, 0 |  0 );
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_ReadableOutputSet__Handle, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputsFromFile" "', argument " "3"" of type '" "OutputsResult_Handle *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputsFromFile" "', argument " "3"" of type '" "ReadableOutputSet__Handle *""'"); 
   }
-  arg3 = (OutputsResult_Handle *)(argp3);
+  arg3 = (ReadableOutputSet__Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputsFromFile(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
@@ -24914,7 +24826,7 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputs(PyObject *SWIGUNUSEDPARM(sel
   PyObject *resultobj = 0;
   WebRpcClient__Handle arg1 ;
   Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
-  OutputsResult_Handle *arg3 = (OutputsResult_Handle *) 0 ;
+  ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
   Handle temp2 ;
   void *argp3 = 0 ;
   int res3 = 0 ;
@@ -24929,11 +24841,11 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputs(PyObject *SWIGUNUSEDPARM(sel
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  res3 = SWIG_ConvertPtr(obj1, &argp3,SWIGTYPE_p_OutputsResult_Handle, 0 |  0 );
+  res3 = SWIG_ConvertPtr(obj1, &argp3,SWIGTYPE_p_ReadableOutputSet__Handle, 0 |  0 );
   if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputs" "', argument " "3"" of type '" "OutputsResult_Handle *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputs" "', argument " "3"" of type '" "ReadableOutputSet__Handle *""'"); 
   }
-  arg3 = (OutputsResult_Handle *)(argp3);
+  arg3 = (ReadableOutputSet__Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputs(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -33549,8 +33461,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cli_MakeAlphanumericSeed", _wrap_SKY_cli_MakeAlphanumericSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_NewClient", _wrap_SKY_webrpc_NewClient, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_CSRF", _wrap_SKY_webrpc_Client_CSRF, METH_VARARGS, NULL},
-	 { (char *)"SKY_webrpc_Client_GetUnspentOutputs", _wrap_SKY_webrpc_Client_GetUnspentOutputs, METH_VARARGS, NULL},
-	 { (char *)"SKY_webrpc_Client_InjectTransactionString", _wrap_SKY_webrpc_Client_InjectTransactionString, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_InjectTransaction", _wrap_SKY_webrpc_Client_InjectTransaction, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_GetStatus", _wrap_SKY_webrpc_Client_GetStatus, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_GetTransactionByID", _wrap_SKY_webrpc_Client_GetTransactionByID, METH_VARARGS, NULL},
@@ -34144,9 +34054,9 @@ static swig_type_info _swigt__p_Handle = {"_p_Handle", "Handle *", 0, 0, (void*)
 static swig_type_info _swigt__p_Hash_Handle = {"_p_Hash_Handle", "Hash_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Number_Handle = {"_p_Number_Handle", "Number_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Options__Handle = {"_p_Options__Handle", "Options__Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_OutputsResult_Handle = {"_p_OutputsResult_Handle", "OutputsResult_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PasswordReader__Handle = {"_p_PasswordReader__Handle", "PasswordReader__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableEntry__Handle = {"_p_ReadableEntry__Handle", "ReadableEntry__Handle *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ReadableOutputSet__Handle = {"_p_ReadableOutputSet__Handle", "ReadableOutputSet__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableWallet__Handle = {"_p_ReadableWallet__Handle", "ReadableWallet__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Signature_Handle = {"_p_Signature_Handle", "Signature_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SortableTransactionResult_Handle = {"_p_SortableTransactionResult_Handle", "SortableTransactionResult_Handle *", 0, 0, (void*)0, 0};
@@ -34250,9 +34160,9 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Hash_Handle,
   &_swigt__p_Number_Handle,
   &_swigt__p_Options__Handle,
-  &_swigt__p_OutputsResult_Handle,
   &_swigt__p_PasswordReader__Handle,
   &_swigt__p_ReadableEntry__Handle,
+  &_swigt__p_ReadableOutputSet__Handle,
   &_swigt__p_ReadableWallet__Handle,
   &_swigt__p_Signature_Handle,
   &_swigt__p_SortableTransactionResult_Handle,
@@ -34356,9 +34266,9 @@ static swig_cast_info _swigc__p_Handle[] = {  {&_swigt__p_Handle, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_Hash_Handle[] = {  {&_swigt__p_Hash_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Number_Handle[] = {  {&_swigt__p_Number_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Options__Handle[] = {  {&_swigt__p_Options__Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_OutputsResult_Handle[] = {  {&_swigt__p_OutputsResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PasswordReader__Handle[] = {  {&_swigt__p_PasswordReader__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableEntry__Handle[] = {  {&_swigt__p_ReadableEntry__Handle, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ReadableOutputSet__Handle[] = {  {&_swigt__p_ReadableOutputSet__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableWallet__Handle[] = {  {&_swigt__p_ReadableWallet__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Signature_Handle[] = {  {&_swigt__p_Signature_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SortableTransactionResult_Handle[] = {  {&_swigt__p_SortableTransactionResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -34462,9 +34372,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Hash_Handle,
   _swigc__p_Number_Handle,
   _swigc__p_Options__Handle,
-  _swigc__p_OutputsResult_Handle,
   _swigc__p_PasswordReader__Handle,
   _swigc__p_ReadableEntry__Handle,
+  _swigc__p_ReadableOutputSet__Handle,
   _swigc__p_ReadableWallet__Handle,
   _swigc__p_Signature_Handle,
   _swigc__p_SortableTransactionResult_Handle,

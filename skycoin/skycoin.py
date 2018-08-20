@@ -1243,14 +1243,6 @@ def SKY_webrpc_Client_CSRF(p0):
     return _skycoin.SKY_webrpc_Client_CSRF(p0)
 SKY_webrpc_Client_CSRF = _skycoin.SKY_webrpc_Client_CSRF
 
-def SKY_webrpc_Client_GetUnspentOutputs(p0, p1, p2):
-    return _skycoin.SKY_webrpc_Client_GetUnspentOutputs(p0, p1, p2)
-SKY_webrpc_Client_GetUnspentOutputs = _skycoin.SKY_webrpc_Client_GetUnspentOutputs
-
-def SKY_webrpc_Client_InjectTransactionString(p0, p1):
-    return _skycoin.SKY_webrpc_Client_InjectTransactionString(p0, p1)
-SKY_webrpc_Client_InjectTransactionString = _skycoin.SKY_webrpc_Client_InjectTransactionString
-
 def SKY_webrpc_Client_InjectTransaction(p0, p1):
     return _skycoin.SKY_webrpc_Client_InjectTransaction(p0, p1)
 SKY_webrpc_Client_InjectTransaction = _skycoin.SKY_webrpc_Client_InjectTransaction
