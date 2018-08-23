@@ -59,11 +59,10 @@ def test_TestAddressFromBytes():
     err = skycoin.SKY_cipher_AddressFromBytes(byte[:len(byte) - 2], __)
     assert err == skycoin.SKY_ErrAddressInvalidLength
     # Invalid checksum
-    str_bte = byte[:len(byte) - 2]
-    bte = byte[len(byte) - 1]
-    byte_bte_update = bytes(bte) + b'1'
-    str_bte += byte_bte_update
-    err = skycoin.SKY_cipher_AddressFromBytes(str_bte, __)
+    byte_array = bytearray(byte)
+    byte_array[-1] = 1
+    byte_new = bytes(byte_array)
+    err = skycoin.SKY_cipher_AddressFromBytes(byte_new, __)
     assert err == skycoin.SKY_ErrAddressInvalidChecksum
     address.Version = 2
     _, b = skycoin.SKY_cipher_Address_Bytes(address)
@@ -87,11 +86,10 @@ def test_TestBitcoinAddressFromBytes():
     err = skycoin.SKY_cipher_BitcoinAddressFromBytes(byte[:len(byte) - 2], __)
     assert err == skycoin.SKY_ErrAddressInvalidLength
     # Invalid checksum
-    str_bte = byte[:len(byte) - 2]
-    bte = byte[len(byte) - 1]
-    byte_bte_update = bytes(bte) + b'1'
-    str_bte += byte_bte_update
-    err = skycoin.SKY_cipher_BitcoinAddressFromBytes(str_bte, __)
+    byte_array = bytearray(byte)
+    byte_array[-1] = 1
+    byte_new = bytes(byte_array)
+    err = skycoin.SKY_cipher_BitcoinAddressFromBytes(byte_new, __)
     assert err == skycoin.SKY_ErrAddressInvalidChecksum
     # Invalid Version
     address.Version = 2
