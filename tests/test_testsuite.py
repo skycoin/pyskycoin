@@ -26,7 +26,7 @@ def InputTestDataFromJSON(InputTestDataJSON):
 	hashes = []
 	for h in InputTestDataJSON.Hashes:
 		h2 = skycoin.cipher_SHA256()
-		err = skycoin.SKY_cipher_SHA256FromHex(bytes(h), h2)
+		err = skycoin.SKY_cipher_SHA256FromHex(h.encode(), h2) #ok python2
 		hashes.append(h2)
 		if err != skycoin.SKY_OK:
 			return skycoin.SKY_ERROR, None
@@ -36,10 +36,10 @@ def InputTestDataFromJSON(InputTestDataJSON):
 # KeysTestDataFromJSON converts KeysTestDataJSON to KeysTestData
 def KeysTestDataFromJSON(KeysTestDataJSON):
 	addres = skycoin.cipher__Address()
-	err = skycoin.SKY_cipher_DecodeBase58Address(bytes(KeysTestDataJSON["address"]), addres)
+	err = skycoin.SKY_cipher_DecodeBase58Address(KeysTestDataJSON["address"].encode(), addres)
 	if err != skycoin.SKY_OK:
 		return skycoin.SKY_ERROR, None 
-	err, hex_str = skycoin.SKY_base58_String2Hex(bytes(KeysTestDataJSON["secret"]))
+	err, hex_str = skycoin.SKY_base58_String2Hex(KeysTestDataJSON["secret"].encode())
 	assert err == skycoin.SKY_OK 
 	secret_key = skycoin.cipher_SecKey()
 	err = skycoin.SKY_cipher_NewSecKey(hex_str, secret_key)
@@ -49,7 +49,7 @@ def KeysTestDataFromJSON(KeysTestDataJSON):
 	if err != skycoin.SKY_OK:
 		return skycoin.SKY_ERROR, None 
 	
-	err, hex_str = skycoin.SKY_base58_String2Hex(bytes(KeysTestDataJSON["public"]))
+	err, hex_str = skycoin.SKY_base58_String2Hex(KeysTestDataJSON["public"].encode())
 	assert err == skycoin.SKY_OK 
 	public_key = skycoin.cipher_PubKey()
 	err = skycoin.SKY_cipher_NewPubKey(hex_str, public_key)
@@ -70,7 +70,7 @@ def KeysTestDataFromJSON(KeysTestDataJSON):
 	if len(KeysTestDataJSON["signatures"]) >= 0:
 		for s in KeysTestDataJSON["signatures"]:
 			sig_fromHex = skycoin.cipher_Sig()
-			err = skycoin.SKY_cipher_SigFromHex(bytes(s), sig_fromHex)
+			err = skycoin.SKY_cipher_SigFromHex(s.encode(), sig_fromHex)
 			assert err == skycoin.SKY_OK
 			sigs.append(sig_fromHex)
 			assert err == skycoin.SKY_OK
@@ -103,14 +103,14 @@ def ValidateSeedData(SeedTestData = None, InputTestData = None):
 		secret_Key_null = skycoin.cipher_SecKey()
 		if s == secret_Key_null:
 			return skycoin.SKY_ErrInvalidSecKey
-		if SeedTestData.Keys[i].Secret != binascii.hexlify(bytearray(s.toStr())).decode('ascii'):
+		if (SeedTestData.Keys[i].Secret).decode() != binascii.hexlify(bytearray(s.toStr())).decode('ascii'):
 			assert err == skycoin.SKY_ERROR
 		p = skycoin.cipher_PubKey()
 		p_null = skycoin.cipher_PubKey()
 		err = skycoin.SKY_cipher_PubKeyFromSecKey(s, p)
 		if p == p_null:
 			return skycoin.SKY_ErrInvalidPubKey
-		if SeedTestData.Keys[i].Public != binascii.hexlify(bytearray(p.toStr())).decode('ascii'):
+		if (SeedTestData.Keys[i].Public).decode() != binascii.hexlify(bytearray(p.toStr())).decode('ascii'):
 			return skycoin.SKY_ErrInvalidPubKey
 		addr1 = skycoin.cipher__Address()
 		addr_null = skycoin.cipher__Address()

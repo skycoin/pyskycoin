@@ -1,5 +1,5 @@
 import skycoin
-import test_testsuite
+from . import test_testsuite
 import json
 import os
 import re
