@@ -807,10 +807,6 @@ def SKY_api_Client_CreateTransaction(p0):
     return _skycoin.SKY_api_Client_CreateTransaction(p0)
 SKY_api_Client_CreateTransaction = _skycoin.SKY_api_Client_CreateTransaction
 
-def SKY_api_Client_WalletTransactions(p0, p1):
-    return _skycoin.SKY_api_Client_WalletTransactions(p0, p1)
-SKY_api_Client_WalletTransactions = _skycoin.SKY_api_Client_WalletTransactions
-
 def SKY_api_Client_UpdateWallet(p0, p1, p2):
     return _skycoin.SKY_api_Client_UpdateWallet(p0, p1, p2)
 SKY_api_Client_UpdateWallet = _skycoin.SKY_api_Client_UpdateWallet
@@ -1071,58 +1067,6 @@ def SKY_cli_GetBalanceOfAddresses(p0, p1, p2):
     return _skycoin.SKY_cli_GetBalanceOfAddresses(p0, p1, p2)
 SKY_cli_GetBalanceOfAddresses = _skycoin.SKY_cli_GetBalanceOfAddresses
 
-def SKY_wallet_NewNotesFilename():
-    return _skycoin.SKY_wallet_NewNotesFilename()
-SKY_wallet_NewNotesFilename = _skycoin.SKY_wallet_NewNotesFilename
-
-def SKY_wallet_LoadNotes(p0, p1):
-    return _skycoin.SKY_wallet_LoadNotes(p0, p1)
-SKY_wallet_LoadNotes = _skycoin.SKY_wallet_LoadNotes
-
-def SKY_wallet_LoadReadableNotes(p0, p1):
-    return _skycoin.SKY_wallet_LoadReadableNotes(p0, p1)
-SKY_wallet_LoadReadableNotes = _skycoin.SKY_wallet_LoadReadableNotes
-
-def SKY_wallet_ReadableNotes_Load(p0, p1):
-    return _skycoin.SKY_wallet_ReadableNotes_Load(p0, p1)
-SKY_wallet_ReadableNotes_Load = _skycoin.SKY_wallet_ReadableNotes_Load
-
-def SKY_wallet_ReadableNotes_ToNotes(p0, p1):
-    return _skycoin.SKY_wallet_ReadableNotes_ToNotes(p0, p1)
-SKY_wallet_ReadableNotes_ToNotes = _skycoin.SKY_wallet_ReadableNotes_ToNotes
-
-def SKY_wallet_ReadableNotes_Save(p0, p1):
-    return _skycoin.SKY_wallet_ReadableNotes_Save(p0, p1)
-SKY_wallet_ReadableNotes_Save = _skycoin.SKY_wallet_ReadableNotes_Save
-
-def SKY_wallet_NewReadableNote(p0, p1):
-    return _skycoin.SKY_wallet_NewReadableNote(p0, p1)
-SKY_wallet_NewReadableNote = _skycoin.SKY_wallet_NewReadableNote
-
-def SKY_wallet_NewReadableNotesFromNotes(p0, p1):
-    return _skycoin.SKY_wallet_NewReadableNotesFromNotes(p0, p1)
-SKY_wallet_NewReadableNotesFromNotes = _skycoin.SKY_wallet_NewReadableNotesFromNotes
-
-def SKY_wallet_Notes_Save(p0, p1, p2):
-    return _skycoin.SKY_wallet_Notes_Save(p0, p1, p2)
-SKY_wallet_Notes_Save = _skycoin.SKY_wallet_Notes_Save
-
-def SKY_wallet_Notes_SaveNote(p0, p1, p2):
-    return _skycoin.SKY_wallet_Notes_SaveNote(p0, p1, p2)
-SKY_wallet_Notes_SaveNote = _skycoin.SKY_wallet_Notes_SaveNote
-
-def SKY_wallet_Notes_ToReadable(p0, p1):
-    return _skycoin.SKY_wallet_Notes_ToReadable(p0, p1)
-SKY_wallet_Notes_ToReadable = _skycoin.SKY_wallet_Notes_ToReadable
-
-def SKY_wallet_NotesFileExist(p0):
-    return _skycoin.SKY_wallet_NotesFileExist(p0)
-SKY_wallet_NotesFileExist = _skycoin.SKY_wallet_NotesFileExist
-
-def SKY_wallet_CreateNoteFileIfNotExist(p0):
-    return _skycoin.SKY_wallet_CreateNoteFileIfNotExist(p0)
-SKY_wallet_CreateNoteFileIfNotExist = _skycoin.SKY_wallet_CreateNoteFileIfNotExist
-
 def SKY_wallet_NewReadableEntry(p0):
     return _skycoin.SKY_wallet_NewReadableEntry(p0)
 SKY_wallet_NewReadableEntry = _skycoin.SKY_wallet_NewReadableEntry
@@ -1351,10 +1295,6 @@ def SKY_cipher_NewPubKey(p0, p1):
     return _skycoin.SKY_cipher_NewPubKey(p0, p1)
 SKY_cipher_NewPubKey = _skycoin.SKY_cipher_NewPubKey
 
-def SKY_cipher_MustPubKeyFromHex(p0, p1):
-    return _skycoin.SKY_cipher_MustPubKeyFromHex(p0, p1)
-SKY_cipher_MustPubKeyFromHex = _skycoin.SKY_cipher_MustPubKeyFromHex
-
 def SKY_cipher_PubKeyFromHex(p0, p1):
     return _skycoin.SKY_cipher_PubKeyFromHex(p0, p1)
 SKY_cipher_PubKeyFromHex = _skycoin.SKY_cipher_PubKeyFromHex
@@ -1383,10 +1323,6 @@ def SKY_cipher_NewSecKey(p0, p1):
     return _skycoin.SKY_cipher_NewSecKey(p0, p1)
 SKY_cipher_NewSecKey = _skycoin.SKY_cipher_NewSecKey
 
-def SKY_cipher_MustSecKeyFromHex(p0, p1):
-    return _skycoin.SKY_cipher_MustSecKeyFromHex(p0, p1)
-SKY_cipher_MustSecKeyFromHex = _skycoin.SKY_cipher_MustSecKeyFromHex
-
 def SKY_cipher_SecKeyFromHex(p0, p1):
     return _skycoin.SKY_cipher_SecKeyFromHex(p0, p1)
 SKY_cipher_SecKeyFromHex = _skycoin.SKY_cipher_SecKeyFromHex
@@ -1406,10 +1342,6 @@ SKY_cipher_ECDH = _skycoin.SKY_cipher_ECDH
 def SKY_cipher_NewSig(p0, p1):
     return _skycoin.SKY_cipher_NewSig(p0, p1)
 SKY_cipher_NewSig = _skycoin.SKY_cipher_NewSig
-
-def SKY_cipher_MustSigFromHex(p0, p1):
-    return _skycoin.SKY_cipher_MustSigFromHex(p0, p1)
-SKY_cipher_MustSigFromHex = _skycoin.SKY_cipher_MustSigFromHex
 
 def SKY_cipher_SigFromHex(p0, p1):
     return _skycoin.SKY_cipher_SigFromHex(p0, p1)
@@ -1711,14 +1643,6 @@ def SKY_cipher_DecodeBase58Address(p0, p1):
     return _skycoin.SKY_cipher_DecodeBase58Address(p0, p1)
 SKY_cipher_DecodeBase58Address = _skycoin.SKY_cipher_DecodeBase58Address
 
-def SKY_cipher_MustDecodeBase58Address(p0, p1):
-    return _skycoin.SKY_cipher_MustDecodeBase58Address(p0, p1)
-SKY_cipher_MustDecodeBase58Address = _skycoin.SKY_cipher_MustDecodeBase58Address
-
-def SKY_cipher_BitcoinMustDecodeBase58Address(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinMustDecodeBase58Address(p0, p1)
-SKY_cipher_BitcoinMustDecodeBase58Address = _skycoin.SKY_cipher_BitcoinMustDecodeBase58Address
-
 def SKY_cipher_AddressFromBytes(p0, p1):
     return _skycoin.SKY_cipher_AddressFromBytes(p0, p1)
 SKY_cipher_AddressFromBytes = _skycoin.SKY_cipher_AddressFromBytes
@@ -1734,10 +1658,6 @@ SKY_cipher_AddressFromSecKey = _skycoin.SKY_cipher_AddressFromSecKey
 def SKY_cipher_BitcoinDecodeBase58Address(p0, p1):
     return _skycoin.SKY_cipher_BitcoinDecodeBase58Address(p0, p1)
 SKY_cipher_BitcoinDecodeBase58Address = _skycoin.SKY_cipher_BitcoinDecodeBase58Address
-
-def SKY_cipher_MustAddressFromBytes(p0, p1):
-    return _skycoin.SKY_cipher_MustAddressFromBytes(p0, p1)
-SKY_cipher_MustAddressFromBytes = _skycoin.SKY_cipher_MustAddressFromBytes
 
 def SKY_cipher_Address_Null(p0):
     return _skycoin.SKY_cipher_Address_Null(p0)
@@ -1786,10 +1706,6 @@ SKY_cipher_BitcoinAddressFromBytes = _skycoin.SKY_cipher_BitcoinAddressFromBytes
 def SKY_cipher_SecKeyFromWalletImportFormat(p0, p1):
     return _skycoin.SKY_cipher_SecKeyFromWalletImportFormat(p0, p1)
 SKY_cipher_SecKeyFromWalletImportFormat = _skycoin.SKY_cipher_SecKeyFromWalletImportFormat
-
-def SKY_cipher_MustSecKeyFromWalletImportFormat(p0, p1):
-    return _skycoin.SKY_cipher_MustSecKeyFromWalletImportFormat(p0, p1)
-SKY_cipher_MustSecKeyFromWalletImportFormat = _skycoin.SKY_cipher_MustSecKeyFromWalletImportFormat
 
 def SKY_JsonEncode_Handle(p0):
     return _skycoin.SKY_JsonEncode_Handle(p0)
@@ -2215,12 +2131,12 @@ def SKY_file_DetermineResourcePath(p0, p1, p2):
     return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
 SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
 
-def SKY_cli_GetWalletOutputsFromFile(p0, p1, p2):
-    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1, p2)
+def SKY_cli_GetWalletOutputsFromFile(p0, p1):
+    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1)
 SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
 
-def SKY_cli_GetWalletOutputs(p0, p2):
-    return _skycoin.SKY_cli_GetWalletOutputs(p0, p2)
+def SKY_cli_GetWalletOutputs(p0):
+    return _skycoin.SKY_cli_GetWalletOutputs(p0)
 SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
 
 def SKY_testutil_MakeAddress(p0):
@@ -2347,10 +2263,6 @@ def SKY_cipher_Merkle(p0, p1):
     return _skycoin.SKY_cipher_Merkle(p0, p1)
 SKY_cipher_Merkle = _skycoin.SKY_cipher_Merkle
 
-def SKY_cipher_MustSumSHA256(p0, p1, p2):
-    return _skycoin.SKY_cipher_MustSumSHA256(p0, p1, p2)
-SKY_cipher_MustSumSHA256 = _skycoin.SKY_cipher_MustSumSHA256
-
 def SKY_cipher_SHA256_Null(p0):
     return _skycoin.SKY_cipher_SHA256_Null(p0)
 SKY_cipher_SHA256_Null = _skycoin.SKY_cipher_SHA256_Null
@@ -2474,10 +2386,6 @@ SKY_coin_Transaction_HashInner = _skycoin.SKY_coin_Transaction_HashInner
 def SKY_coin_Transaction_Serialize(p0):
     return _skycoin.SKY_coin_Transaction_Serialize(p0)
 SKY_coin_Transaction_Serialize = _skycoin.SKY_coin_Transaction_Serialize
-
-def SKY_coin_MustTransactionDeserialize(p0):
-    return _skycoin.SKY_coin_MustTransactionDeserialize(p0)
-SKY_coin_MustTransactionDeserialize = _skycoin.SKY_coin_MustTransactionDeserialize
 
 def SKY_coin_TransactionDeserialize(p0):
     return _skycoin.SKY_coin_TransactionDeserialize(p0)

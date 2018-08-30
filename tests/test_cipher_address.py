@@ -154,18 +154,6 @@ def test_TestAddressString():
     assert address_2 == addres_3
 
 
-def test_TestBitcoinAddress1():
-    secret_key = skycoin.cipher_SecKey()
-    skycoin.SKY_cipher_MustSecKeyFromHex(
-        b'1111111111111111111111111111111111111111111111111111111111111111', secret_key)
-    public_key = skycoin.cipher_PubKey()
-    skycoin.SKY_cipher_PubKeyFromSecKey(secret_key, public_key)
-    public_key_str = b'034f355bdcb7cc0af728ef3cceb9615d90684bb5b2ca5f859ab0f0b704075871aa'
-    _, public_key_hex = skycoin.SKY_cipher_PubKey_Hex(public_key)
-    assert public_key_hex == public_key_str
-    bitcoin_srt = b'1Q1pE5vPGEEMqRcVRMbtBK842Y6Pzo6nK9'
-    _, bitcoin_addr = skycoin.SKY_cipher_BitcoinAddressFromPubkey(public_key)
-    assert bitcoin_srt == bitcoin_addr
 
 
 def test_TestBitcoinAddress2():

@@ -20,16 +20,6 @@ def test_TestNewPubKey():
 
 
 
-def test_TestPubKeyHex():
-    public_key = skycoin.cipher_PubKey()
-    public_key_2 = skycoin.cipher_PubKey()
-    _, data = skycoin.SKY_cipher_RandByte(33)
-    skycoin.SKY_cipher_NewPubKey(data, public_key)
-    _, public_key_hex = skycoin.SKY_cipher_PubKey_Hex(public_key)
-    skycoin.SKY_cipher_MustPubKeyFromHex(public_key_hex, public_key_2)
-    _, public_key_hex_2 = skycoin.SKY_cipher_PubKey_Hex(public_key_2)
-    assert public_key == public_key_2
-    assert public_key_hex == public_key_hex_2
 
 def test_TestPubKeyVerify():
     # Random bytes should not be valid, most of the time
@@ -103,16 +93,7 @@ def test_TestMustNewSecKey():
     assert skycoin.SKY_cipher_NewSecKey(data, secret_key) == skycoin.SKY_OK
     assert secret_key.toStr() == data
 
-def test_TestSecKeyHex():
-    secret_key = skycoin.cipher_SecKey()
-    secret_key_2 = skycoin.cipher_SecKey()
-    _, data = skycoin.SKY_cipher_RandByte(32)
-    skycoin.SKY_cipher_NewSecKey(data, secret_key)
-    _, secret_key_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key)
-    skycoin.SKY_cipher_MustSecKeyFromHex(secret_key_hex, secret_key_2)
-    _, secret_key_hex_2 = skycoin.SKY_cipher_SecKey_Hex(secret_key_2)
-    assert secret_key == secret_key_2
-    assert secret_key_hex == secret_key_hex_2
+
 
 def test_TestSecKeyVerify():
     # Empty secret key should not be valid
@@ -163,16 +144,6 @@ def test_TestNewSig():
     assert sig.toStr() == data
 
 
-def tes_TestSigHex():
-    sig_1 = skycoin.cipher_Sig()
-    sig_2 = skycoin.cipher_Sig()
-    _, data = skycoin.SKY_cipher_RandByte(65)
-    skycoin.SKY_cipher_NewSig(data, sig_1)
-    _, sig_hex_1 = skycoin.SKY_cipher_Sig_Hex(sig_1)
-    skycoin.SKY_cipher_MustSigFromHex(sig_hex_1, sig_2)
-    _, sig_hex_2 = skycoin.SKY_cipher_Sig_Hex(sig_2)
-    assert sig_1 == sig_2
-    assert sig_hex_1 == sig_hex_2
 
 def test_TestChkSig():
     secret_key_1 = skycoin.cipher_SecKey()

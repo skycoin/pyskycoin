@@ -3020,74 +3020,72 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_TransactionResult_Handle swig_types[35]
 #define SWIGTYPE_p_Transaction__Handle swig_types[36]
 #define SWIGTYPE_p_Transactions__Handle swig_types[37]
-#define SWIGTYPE_p_WalletNotes_Handle swig_types[38]
-#define SWIGTYPE_p_WalletReadableNotes_Handle swig_types[39]
-#define SWIGTYPE_p_WalletResponse__Handle swig_types[40]
-#define SWIGTYPE_p_Wallet__Handle swig_types[41]
-#define SWIGTYPE_p_Wallets__Handle swig_types[42]
-#define SWIGTYPE_p_WebRpcClient__Handle swig_types[43]
-#define SWIGTYPE_p__GoString_ swig_types[44]
-#define SWIGTYPE_p___SIZE_TYPE__ swig_types[45]
-#define SWIGTYPE_p_a_20__unsigned_char swig_types[46]
-#define SWIGTYPE_p_a_32__unsigned_char swig_types[47]
-#define SWIGTYPE_p_a_33__unsigned_char swig_types[48]
-#define SWIGTYPE_p_a_4__unsigned_char swig_types[49]
-#define SWIGTYPE_p_a_65__unsigned_char swig_types[50]
-#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[51]
-#define SWIGTYPE_p_api__RichlistParams swig_types[52]
-#define SWIGTYPE_p_char swig_types[53]
-#define SWIGTYPE_p_cipher_Addresses swig_types[54]
-#define SWIGTYPE_p_cipher_Checksum swig_types[55]
-#define SWIGTYPE_p_cipher_PubKey swig_types[56]
-#define SWIGTYPE_p_cipher_PubKeys swig_types[57]
-#define SWIGTYPE_p_cipher_Ripemd160 swig_types[58]
-#define SWIGTYPE_p_cipher_SHA256 swig_types[59]
-#define SWIGTYPE_p_cipher_SHA256s swig_types[60]
-#define SWIGTYPE_p_cipher_SecKey swig_types[61]
-#define SWIGTYPE_p_cipher_SecKeys swig_types[62]
-#define SWIGTYPE_p_cipher_Sig swig_types[63]
-#define SWIGTYPE_p_cipher__Address swig_types[64]
-#define SWIGTYPE_p_cli__SendAmount swig_types[65]
-#define SWIGTYPE_p_coin_UxOutArray swig_types[66]
-#define SWIGTYPE_p_coin__Block swig_types[67]
-#define SWIGTYPE_p_coin__BlockBody swig_types[68]
-#define SWIGTYPE_p_coin__BlockHeader swig_types[69]
-#define SWIGTYPE_p_coin__SignedBlock swig_types[70]
-#define SWIGTYPE_p_coin__SortableTransactions swig_types[71]
-#define SWIGTYPE_p_coin__Transaction swig_types[72]
-#define SWIGTYPE_p_coin__TransactionOutput swig_types[73]
-#define SWIGTYPE_p_coin__UxBody swig_types[74]
-#define SWIGTYPE_p_coin__UxHead swig_types[75]
-#define SWIGTYPE_p_coin__UxOut swig_types[76]
-#define SWIGTYPE_p_double swig_types[77]
-#define SWIGTYPE_p_encoder__StructField swig_types[78]
-#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[79]
-#define SWIGTYPE_p_float swig_types[80]
-#define SWIGTYPE_p_httphelper__Address swig_types[81]
-#define SWIGTYPE_p_int swig_types[82]
-#define SWIGTYPE_p_long_long swig_types[83]
-#define SWIGTYPE_p_p_GoSlice_ swig_types[84]
-#define SWIGTYPE_p_p_coin__Block swig_types[85]
-#define SWIGTYPE_p_p_coin__Transaction swig_types[86]
-#define SWIGTYPE_p_secp256k1go__Field swig_types[87]
-#define SWIGTYPE_p_secp256k1go__XY swig_types[88]
-#define SWIGTYPE_p_secp256k1go__XYZ swig_types[89]
-#define SWIGTYPE_p_short swig_types[90]
-#define SWIGTYPE_p_signed_char swig_types[91]
-#define SWIGTYPE_p_unsigned_char swig_types[92]
-#define SWIGTYPE_p_unsigned_int swig_types[93]
-#define SWIGTYPE_p_unsigned_long_long swig_types[94]
-#define SWIGTYPE_p_unsigned_short swig_types[95]
-#define SWIGTYPE_p_void swig_types[96]
-#define SWIGTYPE_p_wallet__Balance swig_types[97]
-#define SWIGTYPE_p_wallet__BalancePair swig_types[98]
-#define SWIGTYPE_p_wallet__Entry swig_types[99]
-#define SWIGTYPE_p_wallet__Note swig_types[100]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[101]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[102]
-#define SWIGTYPE_p_wallet__Wallet swig_types[103]
-static swig_type_info *swig_types[105];
-static swig_module_info swig_module = {swig_types, 104, 0, 0, 0, 0};
+#define SWIGTYPE_p_WalletResponse__Handle swig_types[38]
+#define SWIGTYPE_p_Wallet__Handle swig_types[39]
+#define SWIGTYPE_p_Wallets__Handle swig_types[40]
+#define SWIGTYPE_p_WebRpcClient__Handle swig_types[41]
+#define SWIGTYPE_p__GoString_ swig_types[42]
+#define SWIGTYPE_p___SIZE_TYPE__ swig_types[43]
+#define SWIGTYPE_p_a_20__unsigned_char swig_types[44]
+#define SWIGTYPE_p_a_32__unsigned_char swig_types[45]
+#define SWIGTYPE_p_a_33__unsigned_char swig_types[46]
+#define SWIGTYPE_p_a_4__unsigned_char swig_types[47]
+#define SWIGTYPE_p_a_65__unsigned_char swig_types[48]
+#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[49]
+#define SWIGTYPE_p_api__RichlistParams swig_types[50]
+#define SWIGTYPE_p_char swig_types[51]
+#define SWIGTYPE_p_cipher_Addresses swig_types[52]
+#define SWIGTYPE_p_cipher_Checksum swig_types[53]
+#define SWIGTYPE_p_cipher_PubKey swig_types[54]
+#define SWIGTYPE_p_cipher_PubKeys swig_types[55]
+#define SWIGTYPE_p_cipher_Ripemd160 swig_types[56]
+#define SWIGTYPE_p_cipher_SHA256 swig_types[57]
+#define SWIGTYPE_p_cipher_SHA256s swig_types[58]
+#define SWIGTYPE_p_cipher_SecKey swig_types[59]
+#define SWIGTYPE_p_cipher_SecKeys swig_types[60]
+#define SWIGTYPE_p_cipher_Sig swig_types[61]
+#define SWIGTYPE_p_cipher__Address swig_types[62]
+#define SWIGTYPE_p_cli__SendAmount swig_types[63]
+#define SWIGTYPE_p_coin_UxOutArray swig_types[64]
+#define SWIGTYPE_p_coin__Block swig_types[65]
+#define SWIGTYPE_p_coin__BlockBody swig_types[66]
+#define SWIGTYPE_p_coin__BlockHeader swig_types[67]
+#define SWIGTYPE_p_coin__SignedBlock swig_types[68]
+#define SWIGTYPE_p_coin__SortableTransactions swig_types[69]
+#define SWIGTYPE_p_coin__Transaction swig_types[70]
+#define SWIGTYPE_p_coin__TransactionOutput swig_types[71]
+#define SWIGTYPE_p_coin__UxBody swig_types[72]
+#define SWIGTYPE_p_coin__UxHead swig_types[73]
+#define SWIGTYPE_p_coin__UxOut swig_types[74]
+#define SWIGTYPE_p_double swig_types[75]
+#define SWIGTYPE_p_encoder__StructField swig_types[76]
+#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[77]
+#define SWIGTYPE_p_float swig_types[78]
+#define SWIGTYPE_p_httphelper__Address swig_types[79]
+#define SWIGTYPE_p_int swig_types[80]
+#define SWIGTYPE_p_long_long swig_types[81]
+#define SWIGTYPE_p_p_GoSlice_ swig_types[82]
+#define SWIGTYPE_p_p_coin__Block swig_types[83]
+#define SWIGTYPE_p_p_coin__Transaction swig_types[84]
+#define SWIGTYPE_p_secp256k1go__Field swig_types[85]
+#define SWIGTYPE_p_secp256k1go__XY swig_types[86]
+#define SWIGTYPE_p_secp256k1go__XYZ swig_types[87]
+#define SWIGTYPE_p_short swig_types[88]
+#define SWIGTYPE_p_signed_char swig_types[89]
+#define SWIGTYPE_p_unsigned_char swig_types[90]
+#define SWIGTYPE_p_unsigned_int swig_types[91]
+#define SWIGTYPE_p_unsigned_long_long swig_types[92]
+#define SWIGTYPE_p_unsigned_short swig_types[93]
+#define SWIGTYPE_p_void swig_types[94]
+#define SWIGTYPE_p_wallet__Balance swig_types[95]
+#define SWIGTYPE_p_wallet__BalancePair swig_types[96]
+#define SWIGTYPE_p_wallet__Entry swig_types[97]
+#define SWIGTYPE_p_wallet__Note swig_types[98]
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[99]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[100]
+#define SWIGTYPE_p_wallet__Wallet swig_types[101]
+static swig_type_info *swig_types[103];
+static swig_module_info swig_module = {swig_types, 102, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -11056,44 +11054,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_api_Client_WalletTransactions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Client__Handle arg1 ;
-  GoString arg2 ;
-  Handle *arg3 = (Handle *) 0 ;
-  Handle temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    arg3 = &temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_api_Client_WalletTransactions",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_WalletTransactions', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_api_Client_WalletTransactions(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_api_Client_UpdateWallet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
@@ -13428,481 +13388,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_wallet_NewNotesFilename(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString_ *arg1 = (GoString_ *) 0 ;
-  GoString temp1 ;
-  GoUint32 result;
-  
-  {
-    temp1.p = NULL;
-    temp1.n = 0;
-    arg1 = (GoString_ *)&temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_wallet_NewNotesFilename")) SWIG_fail;
-  result = (GoUint32)SKY_wallet_NewNotesFilename(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->p, arg1->n  ));
-    free( (void*)arg1->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_LoadNotes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  WalletNotes_Handle *arg2 = (WalletNotes_Handle *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_LoadNotes",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_LoadNotes', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_WalletNotes_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_LoadNotes" "', argument " "2"" of type '" "WalletNotes_Handle *""'"); 
-  }
-  arg2 = (WalletNotes_Handle *)(argp2);
-  result = (GoUint32)SKY_wallet_LoadNotes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_LoadReadableNotes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  WalletReadableNotes_Handle *arg2 = (WalletReadableNotes_Handle *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_LoadReadableNotes",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_LoadReadableNotes', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_WalletReadableNotes_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_LoadReadableNotes" "', argument " "2"" of type '" "WalletReadableNotes_Handle *""'"); 
-  }
-  arg2 = (WalletReadableNotes_Handle *)(argp2);
-  result = (GoUint32)SKY_wallet_LoadReadableNotes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableNotes_Load(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletReadableNotes_Handle arg1 ;
-  GoString arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_ReadableNotes_Load",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletReadableNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_ReadableNotes_Load" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_ReadableNotes_Load" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'");
-    } else {
-      arg1 = *((WalletReadableNotes_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_ReadableNotes_Load', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_ReadableNotes_Load(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableNotes_ToNotes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletReadableNotes_Handle arg1 ;
-  WalletNotes_Handle *arg2 = (WalletNotes_Handle *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_ReadableNotes_ToNotes",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletReadableNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_ReadableNotes_ToNotes" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_ReadableNotes_ToNotes" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'");
-    } else {
-      arg1 = *((WalletReadableNotes_Handle *)(argp1));
-    }
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_WalletNotes_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_ReadableNotes_ToNotes" "', argument " "2"" of type '" "WalletNotes_Handle *""'"); 
-  }
-  arg2 = (WalletNotes_Handle *)(argp2);
-  result = (GoUint32)SKY_wallet_ReadableNotes_ToNotes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_ReadableNotes_Save(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletReadableNotes_Handle arg1 ;
-  GoString arg2 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_ReadableNotes_Save",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletReadableNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_ReadableNotes_Save" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_ReadableNotes_Save" "', argument " "1"" of type '" "WalletReadableNotes_Handle""'");
-    } else {
-      arg1 = *((WalletReadableNotes_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_ReadableNotes_Save', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_ReadableNotes_Save(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_NewReadableNote(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Note *arg1 = (wallet__Note *) 0 ;
-  wallet__ReadableNote *arg2 = (wallet__ReadableNote *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_NewReadableNote",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Note, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_NewReadableNote" "', argument " "1"" of type '" "wallet__Note *""'"); 
-  }
-  arg1 = (wallet__Note *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_wallet__ReadableNote, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_NewReadableNote" "', argument " "2"" of type '" "wallet__ReadableNote *""'"); 
-  }
-  arg2 = (wallet__ReadableNote *)(argp2);
-  result = (GoUint32)SKY_wallet_NewReadableNote(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_NewReadableNotesFromNotes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletNotes_Handle arg1 ;
-  WalletReadableNotes_Handle *arg2 = (WalletReadableNotes_Handle *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_NewReadableNotesFromNotes",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_NewReadableNotesFromNotes" "', argument " "1"" of type '" "WalletNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_NewReadableNotesFromNotes" "', argument " "1"" of type '" "WalletNotes_Handle""'");
-    } else {
-      arg1 = *((WalletNotes_Handle *)(argp1));
-    }
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_WalletReadableNotes_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_NewReadableNotesFromNotes" "', argument " "2"" of type '" "WalletReadableNotes_Handle *""'"); 
-  }
-  arg2 = (WalletReadableNotes_Handle *)(argp2);
-  result = (GoUint32)SKY_wallet_NewReadableNotesFromNotes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_Notes_Save(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletNotes_Handle arg1 ;
-  GoString arg2 ;
-  GoString arg3 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_wallet_Notes_Save",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_Notes_Save" "', argument " "1"" of type '" "WalletNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_Notes_Save" "', argument " "1"" of type '" "WalletNotes_Handle""'");
-    } else {
-      arg1 = *((WalletNotes_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_Notes_Save', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj2, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_Notes_Save', expecting string");
-    }
-    (&arg3)->p = buffer;
-    (&arg3)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_Notes_Save(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_Notes_SaveNote(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletNotes_Handle arg1 ;
-  GoString arg2 ;
-  wallet__Note *arg3 = (wallet__Note *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_wallet_Notes_SaveNote",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_Notes_SaveNote" "', argument " "1"" of type '" "WalletNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_Notes_SaveNote" "', argument " "1"" of type '" "WalletNotes_Handle""'");
-    } else {
-      arg1 = *((WalletNotes_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_Notes_SaveNote', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_wallet__Note, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_wallet_Notes_SaveNote" "', argument " "3"" of type '" "wallet__Note *""'"); 
-  }
-  arg3 = (wallet__Note *)(argp3);
-  result = (GoUint32)SKY_wallet_Notes_SaveNote(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_Notes_ToReadable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  WalletNotes_Handle arg1 ;
-  WalletReadableNotes_Handle *arg2 = (WalletReadableNotes_Handle *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_wallet_Notes_ToReadable",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_WalletNotes_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_wallet_Notes_ToReadable" "', argument " "1"" of type '" "WalletNotes_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_wallet_Notes_ToReadable" "', argument " "1"" of type '" "WalletNotes_Handle""'");
-    } else {
-      arg1 = *((WalletNotes_Handle *)(argp1));
-    }
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_WalletReadableNotes_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_wallet_Notes_ToReadable" "', argument " "2"" of type '" "WalletReadableNotes_Handle *""'"); 
-  }
-  arg2 = (WalletReadableNotes_Handle *)(argp2);
-  result = (GoUint32)SKY_wallet_Notes_ToReadable(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_NotesFileExist(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_wallet_NotesFileExist",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_NotesFileExist', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_NotesFileExist(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_wallet_CreateNoteFileIfNotExist(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_wallet_CreateNoteFileIfNotExist",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_CreateNoteFileIfNotExist', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_CreateNoteFileIfNotExist(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_wallet_NewReadableEntry(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
@@ -16189,41 +15674,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustPubKeyFromHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustPubKeyFromHex",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustPubKeyFromHex', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_PubKey, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type PubKey");
-    cipher_PubKey* p = (cipher_PubKey*)argp;
-    arg2 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_MustPubKeyFromHex(arg1,(unsigned char (*)[33])arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_PubKeyFromHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
@@ -16461,41 +15911,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustSecKeyFromHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustSecKeyFromHex",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustSecKeyFromHex', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type SecKey");
-    cipher_SecKey* p = (cipher_SecKey*)argp;
-    arg2 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_MustSecKeyFromHex(arg1,(unsigned char (*)[32])arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_SecKeyFromHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
@@ -16662,41 +16077,6 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_NewSig(PyObject *SWIGUNUSEDPARM(self), PyO
     arg2 = &p->data;
   }
   result = (GoUint32)SKY_cipher_NewSig(arg1,(unsigned char (*)[65])arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustSigFromHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__Sig *arg2 = (cipher__Sig *) 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustSigFromHex",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustSigFromHex', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_Sig, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type Sig");
-    cipher_Sig* p = (cipher_Sig*)argp;
-    arg2 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_MustSigFromHex(arg1,(unsigned char (*)[65])arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -19440,74 +18820,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustDecodeBase58Address(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustDecodeBase58Address",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustDecodeBase58Address', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher__Address, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_cipher_MustDecodeBase58Address" "', argument " "2"" of type '" "cipher__Address *""'"); 
-  }
-  arg2 = (cipher__Address *)(argp2);
-  result = (GoUint32)SKY_cipher_MustDecodeBase58Address(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_cipher_BitcoinMustDecodeBase58Address(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_BitcoinMustDecodeBase58Address",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_BitcoinMustDecodeBase58Address', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher__Address, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_cipher_BitcoinMustDecodeBase58Address" "', argument " "2"" of type '" "cipher__Address *""'"); 
-  }
-  arg2 = (cipher__Address *)(argp2);
-  result = (GoUint32)SKY_cipher_BitcoinMustDecodeBase58Address(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_AddressFromBytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoSlice arg1 ;
@@ -19634,41 +18946,6 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_BitcoinDecodeBase58Address(PyObject *SWIGU
   }
   arg2 = (cipher__Address *)(argp2);
   result = (GoUint32)SKY_cipher_BitcoinDecodeBase58Address(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustAddressFromBytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  cipher__Address *arg2 = (cipher__Address *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustAddressFromBytes",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustAddressFromBytes', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher__Address, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_cipher_MustAddressFromBytes" "', argument " "2"" of type '" "cipher__Address *""'"); 
-  }
-  arg2 = (cipher__Address *)(argp2);
-  result = (GoUint32)SKY_cipher_MustAddressFromBytes(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -20069,41 +19346,6 @@ SWIGINTERN PyObject *_wrap_SKY_cipher_SecKeyFromWalletImportFormat(PyObject *SWI
     arg2 = &p->data;
   }
   result = (GoUint32)SKY_cipher_SecKeyFromWalletImportFormat(arg1,(unsigned char (*)[32])arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustSecKeyFromWalletImportFormat(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cipher_MustSecKeyFromWalletImportFormat",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustSecKeyFromWalletImportFormat', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj1, &argp, SWIGTYPE_p_cipher_SecKey, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type SecKey");
-    cipher_SecKey* p = (cipher_SecKey*)argp;
-    arg2 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_MustSecKeyFromWalletImportFormat(arg1,(unsigned char (*)[32])arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -24788,14 +24030,15 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
+  Handle temp3 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cli_GetWalletOutputsFromFile",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    arg3 = &temp3;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cli_GetWalletOutputsFromFile",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
@@ -24809,13 +24052,11 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
     (&arg2)->p = buffer;
     (&arg2)->n = size - 1;
   }
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_ReadableOutputSet__Handle, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputsFromFile" "', argument " "3"" of type '" "ReadableOutputSet__Handle *""'"); 
-  }
-  arg3 = (ReadableOutputSet__Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputsFromFile(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
+  }
   return resultobj;
 fail:
   return NULL;
@@ -24828,28 +24069,27 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputs(PyObject *SWIGUNUSEDPARM(sel
   Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
   ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
   Handle temp2 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
+  Handle temp3 ;
   PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
   GoUint32 result;
   
   {
     arg2 = &temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cli_GetWalletOutputs",&obj0,&obj1)) SWIG_fail;
+  {
+    arg3 = &temp3;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_cli_GetWalletOutputs",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  res3 = SWIG_ConvertPtr(obj1, &argp3,SWIGTYPE_p_ReadableOutputSet__Handle, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputs" "', argument " "3"" of type '" "ReadableOutputSet__Handle *""'"); 
-  }
-  arg3 = (ReadableOutputSet__Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputs(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+  }
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
   }
   return resultobj;
 fail:
@@ -25963,51 +25203,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_cipher_MustSumSHA256(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt arg2 ;
-  cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  long long val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cipher_MustSumSHA256",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_cipher_MustSumSHA256', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_cipher_MustSumSHA256" "', argument " "2"" of type '" "GoInt""'");
-  } 
-  arg2 = (GoInt)(val2);
-  {
-    void *argp = 0;
-    int res = SWIG_ConvertPtr(obj2, &argp, SWIGTYPE_p_cipher_SHA256, 0 | 0);
-    if (!SWIG_IsOK(res))
-    SWIG_exception_fail(SWIG_TypeError, "expecting type SHA256");
-    cipher_SHA256* p = (cipher_SHA256*)argp;
-    arg3 = &p->data;
-  }
-  result = (GoUint32)SKY_cipher_MustSumSHA256(arg1,arg2,(unsigned char (*)[32])arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cipher_SHA256_Null(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
@@ -27052,40 +26247,6 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Serialize(PyObject *SWIGUNUSEDPA
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
     free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_coin_MustTransactionDeserialize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
-  Handle temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    arg2 = &temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_MustTransactionDeserialize",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_coin_MustTransactionDeserialize', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_coin_MustTransactionDeserialize(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
   }
   return resultobj;
 fail:
@@ -33352,7 +32513,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_api_Client_WalletBalance", _wrap_SKY_api_Client_WalletBalance, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_Spend", _wrap_SKY_api_Client_Spend, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_CreateTransaction", _wrap_SKY_api_Client_CreateTransaction, METH_VARARGS, NULL},
-	 { (char *)"SKY_api_Client_WalletTransactions", _wrap_SKY_api_Client_WalletTransactions, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_UpdateWallet", _wrap_SKY_api_Client_UpdateWallet, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_WalletFolderName", _wrap_SKY_api_Client_WalletFolderName, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_NewSeed", _wrap_SKY_api_Client_NewSeed, METH_VARARGS, NULL},
@@ -33418,19 +32578,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_wallet_ChooseSpendsMaximizeUxOuts", _wrap_SKY_wallet_ChooseSpendsMaximizeUxOuts, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_CheckWalletBalance", _wrap_SKY_cli_CheckWalletBalance, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GetBalanceOfAddresses", _wrap_SKY_cli_GetBalanceOfAddresses, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_NewNotesFilename", _wrap_SKY_wallet_NewNotesFilename, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_LoadNotes", _wrap_SKY_wallet_LoadNotes, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_LoadReadableNotes", _wrap_SKY_wallet_LoadReadableNotes, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_ReadableNotes_Load", _wrap_SKY_wallet_ReadableNotes_Load, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_ReadableNotes_ToNotes", _wrap_SKY_wallet_ReadableNotes_ToNotes, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_ReadableNotes_Save", _wrap_SKY_wallet_ReadableNotes_Save, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_NewReadableNote", _wrap_SKY_wallet_NewReadableNote, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_NewReadableNotesFromNotes", _wrap_SKY_wallet_NewReadableNotesFromNotes, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_Notes_Save", _wrap_SKY_wallet_Notes_Save, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_Notes_SaveNote", _wrap_SKY_wallet_Notes_SaveNote, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_Notes_ToReadable", _wrap_SKY_wallet_Notes_ToReadable, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_NotesFileExist", _wrap_SKY_wallet_NotesFileExist, METH_VARARGS, NULL},
-	 { (char *)"SKY_wallet_CreateNoteFileIfNotExist", _wrap_SKY_wallet_CreateNoteFileIfNotExist, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_NewReadableEntry", _wrap_SKY_wallet_NewReadableEntry, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_LoadReadableEntry", _wrap_SKY_wallet_LoadReadableEntry, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_NewReadableEntryFromPubkey", _wrap_SKY_wallet_NewReadableEntryFromPubkey, METH_VARARGS, NULL},
@@ -33488,7 +32635,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_PubKeySlice_Swap", _wrap_SKY_cipher_PubKeySlice_Swap, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_RandByte", _wrap_SKY_cipher_RandByte, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_NewPubKey", _wrap_SKY_cipher_NewPubKey, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustPubKeyFromHex", _wrap_SKY_cipher_MustPubKeyFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_PubKeyFromHex", _wrap_SKY_cipher_PubKeyFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_PubKeyFromSecKey", _wrap_SKY_cipher_PubKeyFromSecKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_PubKeyFromSig", _wrap_SKY_cipher_PubKeyFromSig, METH_VARARGS, NULL},
@@ -33496,13 +32642,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_PubKey_Hex", _wrap_SKY_cipher_PubKey_Hex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_PubKey_ToAddressHash", _wrap_SKY_cipher_PubKey_ToAddressHash, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_NewSecKey", _wrap_SKY_cipher_NewSecKey, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustSecKeyFromHex", _wrap_SKY_cipher_MustSecKeyFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SecKeyFromHex", _wrap_SKY_cipher_SecKeyFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SecKey_Verify", _wrap_SKY_cipher_SecKey_Verify, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SecKey_Hex", _wrap_SKY_cipher_SecKey_Hex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_ECDH", _wrap_SKY_cipher_ECDH, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_NewSig", _wrap_SKY_cipher_NewSig, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustSigFromHex", _wrap_SKY_cipher_MustSigFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SigFromHex", _wrap_SKY_cipher_SigFromHex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Sig_Hex", _wrap_SKY_cipher_Sig_Hex, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SignHash", _wrap_SKY_cipher_SignHash, METH_VARARGS, NULL},
@@ -33578,13 +32722,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_map_HasKey", _wrap_SKY_map_HasKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_map_Close", _wrap_SKY_map_Close, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_DecodeBase58Address", _wrap_SKY_cipher_DecodeBase58Address, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustDecodeBase58Address", _wrap_SKY_cipher_MustDecodeBase58Address, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_BitcoinMustDecodeBase58Address", _wrap_SKY_cipher_BitcoinMustDecodeBase58Address, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_AddressFromBytes", _wrap_SKY_cipher_AddressFromBytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_AddressFromPubKey", _wrap_SKY_cipher_AddressFromPubKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_AddressFromSecKey", _wrap_SKY_cipher_AddressFromSecKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_BitcoinDecodeBase58Address", _wrap_SKY_cipher_BitcoinDecodeBase58Address, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustAddressFromBytes", _wrap_SKY_cipher_MustAddressFromBytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_Null", _wrap_SKY_cipher_Address_Null, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_Bytes", _wrap_SKY_cipher_Address_Bytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Address_BitcoinBytes", _wrap_SKY_cipher_Address_BitcoinBytes, METH_VARARGS, NULL},
@@ -33597,7 +32738,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_BitcoinWalletImportFormatFromSeckey", _wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_BitcoinAddressFromBytes", _wrap_SKY_cipher_BitcoinAddressFromBytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SecKeyFromWalletImportFormat", _wrap_SKY_cipher_SecKeyFromWalletImportFormat, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustSecKeyFromWalletImportFormat", _wrap_SKY_cipher_MustSecKeyFromWalletImportFormat, METH_VARARGS, NULL},
 	 { (char *)"SKY_JsonEncode_Handle", _wrap_SKY_JsonEncode_Handle, METH_VARARGS, NULL},
 	 { (char *)"SKY_Handle_Progress_GetCurrent", _wrap_SKY_Handle_Progress_GetCurrent, METH_VARARGS, NULL},
 	 { (char *)"SKY_Handle_Block_GetHeadSeq", _wrap_SKY_Handle_Block_GetHeadSeq, METH_VARARGS, NULL},
@@ -33737,7 +32877,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_DoubleSHA256", _wrap_SKY_cipher_DoubleSHA256, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_AddSHA256", _wrap_SKY_cipher_AddSHA256, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Merkle", _wrap_SKY_cipher_Merkle, METH_VARARGS, NULL},
-	 { (char *)"SKY_cipher_MustSumSHA256", _wrap_SKY_cipher_MustSumSHA256, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SHA256_Null", _wrap_SKY_cipher_SHA256_Null, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Create_Transaction", _wrap_SKY_coin_Create_Transaction, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_Copy", _wrap_SKY_coin_Transaction_Copy, METH_VARARGS, NULL},
@@ -33769,7 +32908,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_coin_Transaction_UpdateHeader", _wrap_SKY_coin_Transaction_UpdateHeader, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_HashInner", _wrap_SKY_coin_Transaction_HashInner, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_Serialize", _wrap_SKY_coin_Transaction_Serialize, METH_VARARGS, NULL},
-	 { (char *)"SKY_coin_MustTransactionDeserialize", _wrap_SKY_coin_MustTransactionDeserialize, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_TransactionDeserialize", _wrap_SKY_coin_TransactionDeserialize, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Transaction_OutputHours", _wrap_SKY_coin_Transaction_OutputHours, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Create_Transactions", _wrap_SKY_coin_Create_Transactions, METH_VARARGS, NULL},
@@ -34066,8 +33204,6 @@ static swig_type_info _swigt__p_Strings__Handle = {"_p_Strings__Handle", "String
 static swig_type_info _swigt__p_TransactionResult_Handle = {"_p_TransactionResult_Handle", "TransactionResult_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Transaction__Handle = {"_p_Transaction__Handle", "Transaction__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Transactions__Handle = {"_p_Transactions__Handle", "Transactions__Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_WalletNotes_Handle = {"_p_WalletNotes_Handle", "WalletNotes_Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_WalletReadableNotes_Handle = {"_p_WalletReadableNotes_Handle", "WalletReadableNotes_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_WalletResponse__Handle = {"_p_WalletResponse__Handle", "WalletResponse__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Wallet__Handle = {"_p_Wallet__Handle", "Wallet__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Wallets__Handle = {"_p_Wallets__Handle", "Wallets__Handle *", 0, 0, (void*)0, 0};
@@ -34172,8 +33308,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_TransactionResult_Handle,
   &_swigt__p_Transaction__Handle,
   &_swigt__p_Transactions__Handle,
-  &_swigt__p_WalletNotes_Handle,
-  &_swigt__p_WalletReadableNotes_Handle,
   &_swigt__p_WalletResponse__Handle,
   &_swigt__p_Wallet__Handle,
   &_swigt__p_Wallets__Handle,
@@ -34278,8 +33412,6 @@ static swig_cast_info _swigc__p_Strings__Handle[] = {  {&_swigt__p_Strings__Hand
 static swig_cast_info _swigc__p_TransactionResult_Handle[] = {  {&_swigt__p_TransactionResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Transaction__Handle[] = {  {&_swigt__p_Transaction__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Transactions__Handle[] = {  {&_swigt__p_Transactions__Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_WalletNotes_Handle[] = {  {&_swigt__p_WalletNotes_Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_WalletReadableNotes_Handle[] = {  {&_swigt__p_WalletReadableNotes_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_WalletResponse__Handle[] = {  {&_swigt__p_WalletResponse__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Wallet__Handle[] = {  {&_swigt__p_Wallet__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Wallets__Handle[] = {  {&_swigt__p_Wallets__Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -34384,8 +33516,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_TransactionResult_Handle,
   _swigc__p_Transaction__Handle,
   _swigc__p_Transactions__Handle,
-  _swigc__p_WalletNotes_Handle,
-  _swigc__p_WalletReadableNotes_Handle,
   _swigc__p_WalletResponse__Handle,
   _swigc__p_Wallet__Handle,
   _swigc__p_Wallets__Handle,

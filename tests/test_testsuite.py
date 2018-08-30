@@ -35,8 +35,8 @@ def InputTestDataFromJSON(InputTestDataJSON):
 
 # KeysTestDataFromJSON converts KeysTestDataJSON to KeysTestData
 def KeysTestDataFromJSON(KeysTestDataJSON):
-	addres = skycoin.cipher__Address()
-	err = skycoin.SKY_cipher_DecodeBase58Address(KeysTestDataJSON["address"].encode(), addres)
+	address = skycoin.cipher__Address()
+	err = skycoin.SKY_cipher_DecodeBase58Address(KeysTestDataJSON["address"].encode(), address)
 	if err != skycoin.SKY_OK:
 		return skycoin.SKY_ERROR, None 
 	err, hex_str = skycoin.SKY_base58_String2Hex(KeysTestDataJSON["secret"].encode())
@@ -60,7 +60,7 @@ def KeysTestDataFromJSON(KeysTestDataJSON):
 		return skycoin.SKY_ERROR, None 
 
 	r = KeysTestData()
-	r.Address = addres
+	r.Address = address
 	r.Public = public_key_hex
 	r.Secret = secret_key_hex
 	r.Signatures = 0
