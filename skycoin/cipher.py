@@ -1,4 +1,3 @@
-# from .libpy import *
 from libpy import skycoin
 
 def PubKey():
@@ -84,3 +83,63 @@ def GenerateDeterministicKeyPair(data, public_key, secret_key):
 
 def AddressNull(address):
     return skycoin.SKY_cipher_Address_Null(address)
+
+def PubKeyVerify(public_key):
+    return skycoin.SKY_cipher_PubKey_Verify(public_key)
+
+def SecKeyVerify(secret_key):
+    return skycoin.SKY_cipher_SecKey_Verify(secret_key)
+
+def ECDH(public_key_2, secret_key_1):
+    return skycoin.SKY_cipher_ECDH(public_key_2, secret_key_1)
+
+def Sig():
+    return skycoin.cipher_Sig()
+
+def NewSig(data, sig):
+    return skycoin.SKY_cipher_NewSig(data, sig)
+
+def SignHash(sha_sum, secret_key_1, sig_1):
+    return skycoin.SKY_cipher_SignHash(sha_sum, secret_key_1, sig_1)
+
+def ChkSig(addres, sha_sum, sig_1):
+    return skycoin.SKY_cipher_ChkSig(addres, sha_sum, sig_1)
+
+def PubKeyFromSig(sig_1, sha_sum, public_key_2):
+    return skycoin.SKY_cipher_PubKeyFromSig(sig_1, sha_sum, public_key_2)
+
+def VerifySignature(public_key, sig_1, sha_sum_1):
+    return skycoin.SKY_cipher_VerifySignature(public_key, sig_1, sha_sum_1)
+
+def GenerateDeterministicKeyPairsSeed(seed, num):
+    return skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, num)
+
+def Ripemd160():
+    return skycoin.cipher_Ripemd160()
+
+def HashRipemd160(p0, p1):
+    return skycoin.SKY_cipher_HashRipemd160(p0, p1)
+
+def Ripemd160Set(h, b):
+    return skycoin.SKY_cipher_Ripemd160_Set(h, b)
+
+def SHA256Set(h, b):
+    return skycoin.SKY_cipher_SHA256_Set(h, b)
+
+def SHA256Hex(h):
+    return skycoin.SKY_cipher_SHA256_Hex(h)
+
+def SHA256FromHex(p0, p1):
+    return skycoin.SKY_cipher_SHA256FromHex(p0, p1)
+
+def DoubleSHA256(b, h):
+    return skycoin.SKY_cipher_DoubleSHA256(b, h)
+
+def AddSHA256(p0, p1, p2):
+    return skycoin.SKY_cipher_AddSHA256(p0, p1, p2)
+
+def SHA256Xor(p0, p1, p2):
+    return skycoin.SKY_cipher_SHA256_Xor(p0, p1, p2)
+
+def SHA256Null(p0):
+    return skycoin.SKY_cipher_SHA256_Null(p0)

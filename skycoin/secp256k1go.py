@@ -30,3 +30,6 @@ def FieldNormalize(p0):
 
 def FieldEquals(p0, p1):
     return skycoin.SKY_secp256k1go_Field_Equals(p0, p1)
+
+def FieldInv(in_, out):
+    return skycoin.SKY_secp256k1go_Field_Inv(in_, out)
