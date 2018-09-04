@@ -143,3 +143,4 @@ def SHA256Xor(p0, p1, p2):
 
 def SHA256Null(p0):
     return skycoin.SKY_cipher_SHA256_Null(p0)
+
