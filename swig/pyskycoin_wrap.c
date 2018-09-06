@@ -2998,94 +2998,90 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_CreatedTransaction__Handle swig_types[13]
 #define SWIGTYPE_p_FeeCalculator swig_types[14]
 #define SWIGTYPE_p_GoInterface swig_types[15]
-#define SWIGTYPE_p_GoInterface_ swig_types[16]
-#define SWIGTYPE_p_GoMap_ swig_types[17]
-#define SWIGTYPE_p_GoSlice swig_types[18]
-#define SWIGTYPE_p_GoSlice_ swig_types[19]
-#define SWIGTYPE_p_GoStringMap_ swig_types[20]
-#define SWIGTYPE_p_GoString_ swig_types[21]
-#define SWIGTYPE_p_Handle swig_types[22]
-#define SWIGTYPE_p_Hash_Handle swig_types[23]
-#define SWIGTYPE_p_Number_Handle swig_types[24]
-#define SWIGTYPE_p_Options__Handle swig_types[25]
-#define SWIGTYPE_p_PasswordReader__Handle swig_types[26]
-#define SWIGTYPE_p_ReadableEntry__Handle swig_types[27]
-#define SWIGTYPE_p_ReadableOutputSet__Handle swig_types[28]
-#define SWIGTYPE_p_ReadableWallet__Handle swig_types[29]
-#define SWIGTYPE_p_Signature_Handle swig_types[30]
-#define SWIGTYPE_p_SortableTransactionResult_Handle swig_types[31]
-#define SWIGTYPE_p_SpendResult_Handle swig_types[32]
-#define SWIGTYPE_p_StatusResult_Handle swig_types[33]
-#define SWIGTYPE_p_Strings__Handle swig_types[34]
-#define SWIGTYPE_p_TransactionResult_Handle swig_types[35]
-#define SWIGTYPE_p_Transaction__Handle swig_types[36]
-#define SWIGTYPE_p_Transactions__Handle swig_types[37]
-#define SWIGTYPE_p_WalletResponse__Handle swig_types[38]
-#define SWIGTYPE_p_Wallet__Handle swig_types[39]
-#define SWIGTYPE_p_Wallets__Handle swig_types[40]
-#define SWIGTYPE_p_WebRpcClient__Handle swig_types[41]
-#define SWIGTYPE_p__GoString_ swig_types[42]
-#define SWIGTYPE_p___SIZE_TYPE__ swig_types[43]
-#define SWIGTYPE_p_a_20__unsigned_char swig_types[44]
-#define SWIGTYPE_p_a_32__unsigned_char swig_types[45]
-#define SWIGTYPE_p_a_33__unsigned_char swig_types[46]
-#define SWIGTYPE_p_a_4__unsigned_char swig_types[47]
-#define SWIGTYPE_p_a_65__unsigned_char swig_types[48]
-#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[49]
-#define SWIGTYPE_p_api__RichlistParams swig_types[50]
-#define SWIGTYPE_p_char swig_types[51]
-#define SWIGTYPE_p_cipher_Addresses swig_types[52]
-#define SWIGTYPE_p_cipher_Checksum swig_types[53]
-#define SWIGTYPE_p_cipher_PubKey swig_types[54]
-#define SWIGTYPE_p_cipher_PubKeys swig_types[55]
-#define SWIGTYPE_p_cipher_Ripemd160 swig_types[56]
-#define SWIGTYPE_p_cipher_SHA256 swig_types[57]
-#define SWIGTYPE_p_cipher_SHA256s swig_types[58]
-#define SWIGTYPE_p_cipher_SecKey swig_types[59]
-#define SWIGTYPE_p_cipher_SecKeys swig_types[60]
-#define SWIGTYPE_p_cipher_Sig swig_types[61]
-#define SWIGTYPE_p_cipher__Address swig_types[62]
-#define SWIGTYPE_p_cli__SendAmount swig_types[63]
-#define SWIGTYPE_p_coin_UxOutArray swig_types[64]
-#define SWIGTYPE_p_coin__Block swig_types[65]
-#define SWIGTYPE_p_coin__BlockBody swig_types[66]
-#define SWIGTYPE_p_coin__BlockHeader swig_types[67]
-#define SWIGTYPE_p_coin__SignedBlock swig_types[68]
-#define SWIGTYPE_p_coin__SortableTransactions swig_types[69]
-#define SWIGTYPE_p_coin__Transaction swig_types[70]
-#define SWIGTYPE_p_coin__TransactionOutput swig_types[71]
-#define SWIGTYPE_p_coin__UxBody swig_types[72]
-#define SWIGTYPE_p_coin__UxHead swig_types[73]
-#define SWIGTYPE_p_coin__UxOut swig_types[74]
-#define SWIGTYPE_p_double swig_types[75]
-#define SWIGTYPE_p_encoder__StructField swig_types[76]
-#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[77]
-#define SWIGTYPE_p_float swig_types[78]
-#define SWIGTYPE_p_httphelper__Address swig_types[79]
-#define SWIGTYPE_p_int swig_types[80]
-#define SWIGTYPE_p_long_long swig_types[81]
-#define SWIGTYPE_p_p_GoSlice_ swig_types[82]
-#define SWIGTYPE_p_p_coin__Block swig_types[83]
-#define SWIGTYPE_p_p_coin__Transaction swig_types[84]
-#define SWIGTYPE_p_secp256k1go__Field swig_types[85]
-#define SWIGTYPE_p_secp256k1go__XY swig_types[86]
-#define SWIGTYPE_p_secp256k1go__XYZ swig_types[87]
-#define SWIGTYPE_p_short swig_types[88]
-#define SWIGTYPE_p_signed_char swig_types[89]
-#define SWIGTYPE_p_unsigned_char swig_types[90]
-#define SWIGTYPE_p_unsigned_int swig_types[91]
-#define SWIGTYPE_p_unsigned_long_long swig_types[92]
-#define SWIGTYPE_p_unsigned_short swig_types[93]
-#define SWIGTYPE_p_void swig_types[94]
-#define SWIGTYPE_p_wallet__Balance swig_types[95]
-#define SWIGTYPE_p_wallet__BalancePair swig_types[96]
-#define SWIGTYPE_p_wallet__Entry swig_types[97]
-#define SWIGTYPE_p_wallet__Note swig_types[98]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[99]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[100]
-#define SWIGTYPE_p_wallet__Wallet swig_types[101]
-static swig_type_info *swig_types[103];
-static swig_module_info swig_module = {swig_types, 102, 0, 0, 0, 0};
+#define SWIGTYPE_p_GoSlice swig_types[16]
+#define SWIGTYPE_p_GoSlice_ swig_types[17]
+#define SWIGTYPE_p_GoStringMap_ swig_types[18]
+#define SWIGTYPE_p_GoString_ swig_types[19]
+#define SWIGTYPE_p_Handle swig_types[20]
+#define SWIGTYPE_p_Hash_Handle swig_types[21]
+#define SWIGTYPE_p_Number_Handle swig_types[22]
+#define SWIGTYPE_p_Options__Handle swig_types[23]
+#define SWIGTYPE_p_PasswordReader__Handle swig_types[24]
+#define SWIGTYPE_p_ReadableEntry__Handle swig_types[25]
+#define SWIGTYPE_p_ReadableOutputSet_Handle swig_types[26]
+#define SWIGTYPE_p_ReadableWallet__Handle swig_types[27]
+#define SWIGTYPE_p_Signature_Handle swig_types[28]
+#define SWIGTYPE_p_SortableTransactionResult_Handle swig_types[29]
+#define SWIGTYPE_p_SpendResult_Handle swig_types[30]
+#define SWIGTYPE_p_StatusResult_Handle swig_types[31]
+#define SWIGTYPE_p_Strings__Handle swig_types[32]
+#define SWIGTYPE_p_TransactionResult_Handle swig_types[33]
+#define SWIGTYPE_p_Transaction__Handle swig_types[34]
+#define SWIGTYPE_p_Transactions__Handle swig_types[35]
+#define SWIGTYPE_p_WalletResponse__Handle swig_types[36]
+#define SWIGTYPE_p_Wallet__Handle swig_types[37]
+#define SWIGTYPE_p_Wallets__Handle swig_types[38]
+#define SWIGTYPE_p_WebRpcClient__Handle swig_types[39]
+#define SWIGTYPE_p__GoString_ swig_types[40]
+#define SWIGTYPE_p___SIZE_TYPE__ swig_types[41]
+#define SWIGTYPE_p_a_20__unsigned_char swig_types[42]
+#define SWIGTYPE_p_a_32__unsigned_char swig_types[43]
+#define SWIGTYPE_p_a_33__unsigned_char swig_types[44]
+#define SWIGTYPE_p_a_4__unsigned_char swig_types[45]
+#define SWIGTYPE_p_a_65__unsigned_char swig_types[46]
+#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[47]
+#define SWIGTYPE_p_api__RichlistParams swig_types[48]
+#define SWIGTYPE_p_char swig_types[49]
+#define SWIGTYPE_p_cipher_Addresses swig_types[50]
+#define SWIGTYPE_p_cipher_Checksum swig_types[51]
+#define SWIGTYPE_p_cipher_PubKey swig_types[52]
+#define SWIGTYPE_p_cipher_PubKeys swig_types[53]
+#define SWIGTYPE_p_cipher_Ripemd160 swig_types[54]
+#define SWIGTYPE_p_cipher_SHA256 swig_types[55]
+#define SWIGTYPE_p_cipher_SHA256s swig_types[56]
+#define SWIGTYPE_p_cipher_SecKey swig_types[57]
+#define SWIGTYPE_p_cipher_SecKeys swig_types[58]
+#define SWIGTYPE_p_cipher_Sig swig_types[59]
+#define SWIGTYPE_p_cipher__Address swig_types[60]
+#define SWIGTYPE_p_cli__SendAmount swig_types[61]
+#define SWIGTYPE_p_coin_UxOutArray swig_types[62]
+#define SWIGTYPE_p_coin__Block swig_types[63]
+#define SWIGTYPE_p_coin__BlockBody swig_types[64]
+#define SWIGTYPE_p_coin__BlockHeader swig_types[65]
+#define SWIGTYPE_p_coin__SignedBlock swig_types[66]
+#define SWIGTYPE_p_coin__Transaction swig_types[67]
+#define SWIGTYPE_p_coin__TransactionOutput swig_types[68]
+#define SWIGTYPE_p_coin__UxBody swig_types[69]
+#define SWIGTYPE_p_coin__UxHead swig_types[70]
+#define SWIGTYPE_p_coin__UxOut swig_types[71]
+#define SWIGTYPE_p_double swig_types[72]
+#define SWIGTYPE_p_encoder__StructField swig_types[73]
+#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[74]
+#define SWIGTYPE_p_float swig_types[75]
+#define SWIGTYPE_p_httphelper__Address swig_types[76]
+#define SWIGTYPE_p_int swig_types[77]
+#define SWIGTYPE_p_long_long swig_types[78]
+#define SWIGTYPE_p_p_GoSlice_ swig_types[79]
+#define SWIGTYPE_p_p_coin__Block swig_types[80]
+#define SWIGTYPE_p_p_coin__Transaction swig_types[81]
+#define SWIGTYPE_p_secp256k1go__Field swig_types[82]
+#define SWIGTYPE_p_secp256k1go__XY swig_types[83]
+#define SWIGTYPE_p_secp256k1go__XYZ swig_types[84]
+#define SWIGTYPE_p_short swig_types[85]
+#define SWIGTYPE_p_signed_char swig_types[86]
+#define SWIGTYPE_p_unsigned_char swig_types[87]
+#define SWIGTYPE_p_unsigned_int swig_types[88]
+#define SWIGTYPE_p_unsigned_long_long swig_types[89]
+#define SWIGTYPE_p_unsigned_short swig_types[90]
+#define SWIGTYPE_p_void swig_types[91]
+#define SWIGTYPE_p_wallet__Balance swig_types[92]
+#define SWIGTYPE_p_wallet__BalancePair swig_types[93]
+#define SWIGTYPE_p_wallet__Entry swig_types[94]
+#define SWIGTYPE_p_wallet__Note swig_types[95]
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[96]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[97]
+static swig_type_info *swig_types[99];
+static swig_module_info swig_module = {swig_types, 98, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -24029,16 +24025,15 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
   PyObject *resultobj = 0;
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
-  ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
-  Handle temp3 ;
+  ReadableOutputSet_Handle *arg3 = (ReadableOutputSet_Handle *) 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  {
-    arg3 = &temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cli_GetWalletOutputsFromFile",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_cli_GetWalletOutputsFromFile",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
@@ -24052,11 +24047,13 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputsFromFile(PyObject *SWIGUNUSED
     (&arg2)->p = buffer;
     (&arg2)->n = size - 1;
   }
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_ReadableOutputSet_Handle, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputsFromFile" "', argument " "3"" of type '" "ReadableOutputSet_Handle *""'"); 
+  }
+  arg3 = (ReadableOutputSet_Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputsFromFile(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
-  }
   return resultobj;
 fail:
   return NULL;
@@ -24067,29 +24064,30 @@ SWIGINTERN PyObject *_wrap_SKY_cli_GetWalletOutputs(PyObject *SWIGUNUSEDPARM(sel
   PyObject *resultobj = 0;
   WebRpcClient__Handle arg1 ;
   Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
-  ReadableOutputSet__Handle *arg3 = (ReadableOutputSet__Handle *) 0 ;
+  ReadableOutputSet_Handle *arg3 = (ReadableOutputSet_Handle *) 0 ;
   Handle temp2 ;
-  Handle temp3 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   GoUint32 result;
   
   {
     arg2 = &temp2;
   }
-  {
-    arg3 = &temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_cli_GetWalletOutputs",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_cli_GetWalletOutputs",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
+  res3 = SWIG_ConvertPtr(obj1, &argp3,SWIGTYPE_p_ReadableOutputSet_Handle, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_cli_GetWalletOutputs" "', argument " "3"" of type '" "ReadableOutputSet_Handle *""'"); 
+  }
+  arg3 = (ReadableOutputSet_Handle *)(argp3);
   result = (GoUint32)SKY_cli_GetWalletOutputs(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
   }
   return resultobj;
 fail:
@@ -28301,221 +28299,6 @@ SWIGINTERN PyObject *secp256k1go__XYZ_swigregister(PyObject *SWIGUNUSEDPARM(self
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Txns_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  coin__Transactions arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:coin__SortableTransactions_Txns_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Txns_set" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GoSlice_,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "coin__SortableTransactions_Txns_set" "', argument " "2"" of type '" "coin__Transactions""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "coin__SortableTransactions_Txns_set" "', argument " "2"" of type '" "coin__Transactions""'");
-    } else {
-      arg2 = *((coin__Transactions *)(argp2));
-    }
-  }
-  if (arg1) (arg1)->Txns = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Txns_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  coin__Transactions result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:coin__SortableTransactions_Txns_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Txns_get" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  result =  ((arg1)->Txns);
-  resultobj = SWIG_NewPointerObj((coin__Transactions *)memcpy((coin__Transactions *)calloc(1,sizeof(coin__Transactions)),&result,sizeof(coin__Transactions)), SWIGTYPE_p_GoSlice_, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Fees_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  GoSlice_ arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:coin__SortableTransactions_Fees_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Fees_set" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GoSlice_,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "coin__SortableTransactions_Fees_set" "', argument " "2"" of type '" "GoSlice_""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "coin__SortableTransactions_Fees_set" "', argument " "2"" of type '" "GoSlice_""'");
-    } else {
-      arg2 = *((GoSlice_ *)(argp2));
-    }
-  }
-  if (arg1) (arg1)->Fees = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Fees_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoSlice_ result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:coin__SortableTransactions_Fees_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Fees_get" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  result =  ((arg1)->Fees);
-  resultobj = SWIG_NewPointerObj((GoSlice_ *)memcpy((GoSlice_ *)calloc(1,sizeof(GoSlice_)),&result,sizeof(GoSlice_)), SWIGTYPE_p_GoSlice_, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Hashes_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  GoSlice_ arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:coin__SortableTransactions_Hashes_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Hashes_set" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GoSlice_,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "coin__SortableTransactions_Hashes_set" "', argument " "2"" of type '" "GoSlice_""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "coin__SortableTransactions_Hashes_set" "', argument " "2"" of type '" "GoSlice_""'");
-    } else {
-      arg2 = *((GoSlice_ *)(argp2));
-    }
-  }
-  if (arg1) (arg1)->Hashes = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_coin__SortableTransactions_Hashes_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoSlice_ result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:coin__SortableTransactions_Hashes_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "coin__SortableTransactions_Hashes_get" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  result =  ((arg1)->Hashes);
-  resultobj = SWIG_NewPointerObj((GoSlice_ *)memcpy((GoSlice_ *)calloc(1,sizeof(GoSlice_)),&result,sizeof(GoSlice_)), SWIGTYPE_p_GoSlice_, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_coin__SortableTransactions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_coin__SortableTransactions")) SWIG_fail;
-  result = (coin__SortableTransactions *)calloc(1, sizeof(coin__SortableTransactions));
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_coin__SortableTransactions, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_coin__SortableTransactions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__SortableTransactions *arg1 = (coin__SortableTransactions *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_coin__SortableTransactions",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_coin__SortableTransactions, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_coin__SortableTransactions" "', argument " "1"" of type '" "coin__SortableTransactions *""'"); 
-  }
-  arg1 = (coin__SortableTransactions *)(argp1);
-  free((char *) arg1);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *coin__SortableTransactions_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_coin__SortableTransactions, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
 SWIGINTERN PyObject *_wrap_coin__Transaction___eq__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
@@ -31463,163 +31246,6 @@ SWIGINTERN PyObject *wallet__ReadableNote_swigregister(PyObject *SWIGUNUSEDPARM(
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_wallet__Wallet_Meta_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *arg1 = (wallet__Wallet *) 0 ;
-  GoMap_ arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Wallet_Meta_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Wallet, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Wallet_Meta_set" "', argument " "1"" of type '" "wallet__Wallet *""'"); 
-  }
-  arg1 = (wallet__Wallet *)(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GoMap_,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "wallet__Wallet_Meta_set" "', argument " "2"" of type '" "GoMap_""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "wallet__Wallet_Meta_set" "', argument " "2"" of type '" "GoMap_""'");
-    } else {
-      arg2 = *((GoMap_ *)(argp2));
-    }
-  }
-  if (arg1) (arg1)->Meta = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_wallet__Wallet_Meta_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *arg1 = (wallet__Wallet *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoMap_ result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Wallet_Meta_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Wallet, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Wallet_Meta_get" "', argument " "1"" of type '" "wallet__Wallet *""'"); 
-  }
-  arg1 = (wallet__Wallet *)(argp1);
-  result =  ((arg1)->Meta);
-  resultobj = SWIG_NewPointerObj((GoMap_ *)memcpy((GoMap_ *)calloc(1,sizeof(GoMap_)),&result,sizeof(GoMap_)), SWIGTYPE_p_GoMap_, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_wallet__Wallet_Entries_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *arg1 = (wallet__Wallet *) 0 ;
-  GoSlice_ arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:wallet__Wallet_Entries_set",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Wallet, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Wallet_Entries_set" "', argument " "1"" of type '" "wallet__Wallet *""'"); 
-  }
-  arg1 = (wallet__Wallet *)(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_GoSlice_,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "wallet__Wallet_Entries_set" "', argument " "2"" of type '" "GoSlice_""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "wallet__Wallet_Entries_set" "', argument " "2"" of type '" "GoSlice_""'");
-    } else {
-      arg2 = *((GoSlice_ *)(argp2));
-    }
-  }
-  if (arg1) (arg1)->Entries = arg2;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_wallet__Wallet_Entries_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *arg1 = (wallet__Wallet *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoSlice_ result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:wallet__Wallet_Entries_get",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Wallet, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "wallet__Wallet_Entries_get" "', argument " "1"" of type '" "wallet__Wallet *""'"); 
-  }
-  arg1 = (wallet__Wallet *)(argp1);
-  result =  ((arg1)->Entries);
-  resultobj = SWIG_NewPointerObj((GoSlice_ *)memcpy((GoSlice_ *)calloc(1,sizeof(GoSlice_)),&result,sizeof(GoSlice_)), SWIGTYPE_p_GoSlice_, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_wallet__Wallet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_wallet__Wallet")) SWIG_fail;
-  result = (wallet__Wallet *)calloc(1, sizeof(wallet__Wallet));
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_wallet__Wallet, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_wallet__Wallet(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  wallet__Wallet *arg1 = (wallet__Wallet *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_wallet__Wallet",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_wallet__Wallet, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_wallet__Wallet" "', argument " "1"" of type '" "wallet__Wallet *""'"); 
-  }
-  arg1 = (wallet__Wallet *)(argp1);
-  free((char *) arg1);
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *wallet__Wallet_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_wallet__Wallet, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
 SWIGINTERN PyObject *_wrap_wallet__UxBalance_Hash_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
@@ -32983,15 +32609,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_secp256k1go__XYZ", _wrap_new_secp256k1go__XYZ, METH_VARARGS, NULL},
 	 { (char *)"delete_secp256k1go__XYZ", _wrap_delete_secp256k1go__XYZ, METH_VARARGS, NULL},
 	 { (char *)"secp256k1go__XYZ_swigregister", secp256k1go__XYZ_swigregister, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Txns_set", _wrap_coin__SortableTransactions_Txns_set, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Txns_get", _wrap_coin__SortableTransactions_Txns_get, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Fees_set", _wrap_coin__SortableTransactions_Fees_set, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Fees_get", _wrap_coin__SortableTransactions_Fees_get, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Hashes_set", _wrap_coin__SortableTransactions_Hashes_set, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_Hashes_get", _wrap_coin__SortableTransactions_Hashes_get, METH_VARARGS, NULL},
-	 { (char *)"new_coin__SortableTransactions", _wrap_new_coin__SortableTransactions, METH_VARARGS, NULL},
-	 { (char *)"delete_coin__SortableTransactions", _wrap_delete_coin__SortableTransactions, METH_VARARGS, NULL},
-	 { (char *)"coin__SortableTransactions_swigregister", coin__SortableTransactions_swigregister, METH_VARARGS, NULL},
 	 { (char *)"coin__Transaction___eq__", _wrap_coin__Transaction___eq__, METH_VARARGS, NULL},
 	 { (char *)"coin__Transaction_Length_set", _wrap_coin__Transaction_Length_set, METH_VARARGS, NULL},
 	 { (char *)"coin__Transaction_Length_get", _wrap_coin__Transaction_Length_get, METH_VARARGS, NULL},
@@ -33121,13 +32738,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_wallet__ReadableNote", _wrap_new_wallet__ReadableNote, METH_VARARGS, NULL},
 	 { (char *)"delete_wallet__ReadableNote", _wrap_delete_wallet__ReadableNote, METH_VARARGS, NULL},
 	 { (char *)"wallet__ReadableNote_swigregister", wallet__ReadableNote_swigregister, METH_VARARGS, NULL},
-	 { (char *)"wallet__Wallet_Meta_set", _wrap_wallet__Wallet_Meta_set, METH_VARARGS, NULL},
-	 { (char *)"wallet__Wallet_Meta_get", _wrap_wallet__Wallet_Meta_get, METH_VARARGS, NULL},
-	 { (char *)"wallet__Wallet_Entries_set", _wrap_wallet__Wallet_Entries_set, METH_VARARGS, NULL},
-	 { (char *)"wallet__Wallet_Entries_get", _wrap_wallet__Wallet_Entries_get, METH_VARARGS, NULL},
-	 { (char *)"new_wallet__Wallet", _wrap_new_wallet__Wallet, METH_VARARGS, NULL},
-	 { (char *)"delete_wallet__Wallet", _wrap_delete_wallet__Wallet, METH_VARARGS, NULL},
-	 { (char *)"wallet__Wallet_swigregister", wallet__Wallet_swigregister, METH_VARARGS, NULL},
 	 { (char *)"wallet__UxBalance_Hash_set", _wrap_wallet__UxBalance_Hash_set, METH_VARARGS, NULL},
 	 { (char *)"wallet__UxBalance_Hash_get", _wrap_wallet__UxBalance_Hash_get, METH_VARARGS, NULL},
 	 { (char *)"wallet__UxBalance_BkSeq_set", _wrap_wallet__UxBalance_BkSeq_set, METH_VARARGS, NULL},
@@ -33182,8 +32792,6 @@ static swig_type_info _swigt__p_CreatedTransactionOutput__Handle = {"_p_CreatedT
 static swig_type_info _swigt__p_CreatedTransaction__Handle = {"_p_CreatedTransaction__Handle", "CreatedTransaction__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_FeeCalculator = {"_p_FeeCalculator", "FeeCalculator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoInterface = {"_p_GoInterface", "GoInterface *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GoInterface_ = {"_p_GoInterface_", "wallet__Validator *|GoInterface_ *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GoMap_ = {"_p_GoMap_", "GoMap_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoSlice = {"_p_GoSlice", "GoSlice *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoSlice_ = {"_p_GoSlice_", "coin__Transactions *|coin__UxArray *|GoSlice_ *|cli__PasswordFromBytes *|visor__ReadableOutputs *|cipher__PubKeySlice *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoStringMap_ = {"_p_GoStringMap_", "GoStringMap_ *", 0, 0, (void*)0, 0};
@@ -33194,7 +32802,7 @@ static swig_type_info _swigt__p_Number_Handle = {"_p_Number_Handle", "Number_Han
 static swig_type_info _swigt__p_Options__Handle = {"_p_Options__Handle", "Options__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PasswordReader__Handle = {"_p_PasswordReader__Handle", "PasswordReader__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableEntry__Handle = {"_p_ReadableEntry__Handle", "ReadableEntry__Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ReadableOutputSet__Handle = {"_p_ReadableOutputSet__Handle", "ReadableOutputSet__Handle *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ReadableOutputSet_Handle = {"_p_ReadableOutputSet_Handle", "ReadableOutputSet_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableWallet__Handle = {"_p_ReadableWallet__Handle", "ReadableWallet__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Signature_Handle = {"_p_Signature_Handle", "Signature_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SortableTransactionResult_Handle = {"_p_SortableTransactionResult_Handle", "SortableTransactionResult_Handle *", 0, 0, (void*)0, 0};
@@ -33235,7 +32843,6 @@ static swig_type_info _swigt__p_coin__Block = {"_p_coin__Block", "coin__Block *"
 static swig_type_info _swigt__p_coin__BlockBody = {"_p_coin__BlockBody", "coin__BlockBody *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__BlockHeader = {"_p_coin__BlockHeader", "coin__BlockHeader *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__SignedBlock = {"_p_coin__SignedBlock", "coin__SignedBlock *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_coin__SortableTransactions = {"_p_coin__SortableTransactions", "coin__SortableTransactions *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__Transaction = {"_p_coin__Transaction", "coin__Transaction *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__TransactionOutput = {"_p_coin__TransactionOutput", "coin__TransactionOutput *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_coin__UxBody = {"_p_coin__UxBody", "coin__UxBody *", 0, 0, (void*)0, 0};
@@ -33267,7 +32874,6 @@ static swig_type_info _swigt__p_wallet__Entry = {"_p_wallet__Entry", "wallet__En
 static swig_type_info _swigt__p_wallet__Note = {"_p_wallet__Note", "wallet__Note *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__ReadableNote = {"_p_wallet__ReadableNote", "wallet__ReadableNote *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__UxBalance = {"_p_wallet__UxBalance", "wallet__UxBalance *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_wallet__Wallet = {"_p_wallet__Wallet", "wallet__Wallet *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_AddressUxOuts_Handle,
@@ -33286,8 +32892,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_CreatedTransaction__Handle,
   &_swigt__p_FeeCalculator,
   &_swigt__p_GoInterface,
-  &_swigt__p_GoInterface_,
-  &_swigt__p_GoMap_,
   &_swigt__p_GoSlice,
   &_swigt__p_GoSlice_,
   &_swigt__p_GoStringMap_,
@@ -33298,7 +32902,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Options__Handle,
   &_swigt__p_PasswordReader__Handle,
   &_swigt__p_ReadableEntry__Handle,
-  &_swigt__p_ReadableOutputSet__Handle,
+  &_swigt__p_ReadableOutputSet_Handle,
   &_swigt__p_ReadableWallet__Handle,
   &_swigt__p_Signature_Handle,
   &_swigt__p_SortableTransactionResult_Handle,
@@ -33339,7 +32943,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_coin__BlockBody,
   &_swigt__p_coin__BlockHeader,
   &_swigt__p_coin__SignedBlock,
-  &_swigt__p_coin__SortableTransactions,
   &_swigt__p_coin__Transaction,
   &_swigt__p_coin__TransactionOutput,
   &_swigt__p_coin__UxBody,
@@ -33371,7 +32974,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_wallet__Note,
   &_swigt__p_wallet__ReadableNote,
   &_swigt__p_wallet__UxBalance,
-  &_swigt__p_wallet__Wallet,
 };
 
 static swig_cast_info _swigc__p_AddressUxOuts_Handle[] = {  {&_swigt__p_AddressUxOuts_Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -33390,8 +32992,6 @@ static swig_cast_info _swigc__p_CreatedTransactionOutput__Handle[] = {  {&_swigt
 static swig_cast_info _swigc__p_CreatedTransaction__Handle[] = {  {&_swigt__p_CreatedTransaction__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_FeeCalculator[] = {  {&_swigt__p_FeeCalculator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoInterface[] = {  {&_swigt__p_GoInterface, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_GoInterface_[] = {  {&_swigt__p_GoInterface_, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_GoMap_[] = {  {&_swigt__p_GoMap_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoSlice[] = {  {&_swigt__p_GoSlice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoSlice_[] = {  {&_swigt__p_GoSlice_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoStringMap_[] = {  {&_swigt__p_GoStringMap_, 0, 0, 0},{0, 0, 0, 0}};
@@ -33402,7 +33002,7 @@ static swig_cast_info _swigc__p_Number_Handle[] = {  {&_swigt__p_Number_Handle, 
 static swig_cast_info _swigc__p_Options__Handle[] = {  {&_swigt__p_Options__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PasswordReader__Handle[] = {  {&_swigt__p_PasswordReader__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableEntry__Handle[] = {  {&_swigt__p_ReadableEntry__Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ReadableOutputSet__Handle[] = {  {&_swigt__p_ReadableOutputSet__Handle, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ReadableOutputSet_Handle[] = {  {&_swigt__p_ReadableOutputSet_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableWallet__Handle[] = {  {&_swigt__p_ReadableWallet__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Signature_Handle[] = {  {&_swigt__p_Signature_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SortableTransactionResult_Handle[] = {  {&_swigt__p_SortableTransactionResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -33443,7 +33043,6 @@ static swig_cast_info _swigc__p_coin__Block[] = {  {&_swigt__p_coin__Block, 0, 0
 static swig_cast_info _swigc__p_coin__BlockBody[] = {  {&_swigt__p_coin__BlockBody, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__BlockHeader[] = {  {&_swigt__p_coin__BlockHeader, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__SignedBlock[] = {  {&_swigt__p_coin__SignedBlock, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_coin__SortableTransactions[] = {  {&_swigt__p_coin__SortableTransactions, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__Transaction[] = {  {&_swigt__p_coin__Transaction, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__TransactionOutput[] = {  {&_swigt__p_coin__TransactionOutput, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_coin__UxBody[] = {  {&_swigt__p_coin__UxBody, 0, 0, 0},{0, 0, 0, 0}};
@@ -33475,7 +33074,6 @@ static swig_cast_info _swigc__p_wallet__Entry[] = {  {&_swigt__p_wallet__Entry, 
 static swig_cast_info _swigc__p_wallet__Note[] = {  {&_swigt__p_wallet__Note, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__ReadableNote[] = {  {&_swigt__p_wallet__ReadableNote, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_wallet__UxBalance[] = {  {&_swigt__p_wallet__UxBalance, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_wallet__Wallet[] = {  {&_swigt__p_wallet__Wallet, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_AddressUxOuts_Handle,
@@ -33494,8 +33092,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_CreatedTransaction__Handle,
   _swigc__p_FeeCalculator,
   _swigc__p_GoInterface,
-  _swigc__p_GoInterface_,
-  _swigc__p_GoMap_,
   _swigc__p_GoSlice,
   _swigc__p_GoSlice_,
   _swigc__p_GoStringMap_,
@@ -33506,7 +33102,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Options__Handle,
   _swigc__p_PasswordReader__Handle,
   _swigc__p_ReadableEntry__Handle,
-  _swigc__p_ReadableOutputSet__Handle,
+  _swigc__p_ReadableOutputSet_Handle,
   _swigc__p_ReadableWallet__Handle,
   _swigc__p_Signature_Handle,
   _swigc__p_SortableTransactionResult_Handle,
@@ -33547,7 +33143,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_coin__BlockBody,
   _swigc__p_coin__BlockHeader,
   _swigc__p_coin__SignedBlock,
-  _swigc__p_coin__SortableTransactions,
   _swigc__p_coin__Transaction,
   _swigc__p_coin__TransactionOutput,
   _swigc__p_coin__UxBody,
@@ -33579,7 +33174,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_wallet__Note,
   _swigc__p_wallet__ReadableNote,
   _swigc__p_wallet__UxBalance,
-  _swigc__p_wallet__Wallet,
 };
 
 

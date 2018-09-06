@@ -2131,12 +2131,12 @@ def SKY_file_DetermineResourcePath(p0, p1, p2):
     return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
 SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
 
-def SKY_cli_GetWalletOutputsFromFile(p0, p1):
-    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1)
+def SKY_cli_GetWalletOutputsFromFile(p0, p1, p2):
+    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1, p2)
 SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
 
-def SKY_cli_GetWalletOutputs(p0):
-    return _skycoin.SKY_cli_GetWalletOutputs(p0)
+def SKY_cli_GetWalletOutputs(p0, p2):
+    return _skycoin.SKY_cli_GetWalletOutputs(p0, p2)
 SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
 
 def SKY_testutil_MakeAddress(p0):
@@ -2648,36 +2648,6 @@ class secp256k1go__XYZ(_object):
 secp256k1go__XYZ_swigregister = _skycoin.secp256k1go__XYZ_swigregister
 secp256k1go__XYZ_swigregister(secp256k1go__XYZ)
 
-class coin__SortableTransactions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, coin__SortableTransactions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, coin__SortableTransactions, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["Txns"] = _skycoin.coin__SortableTransactions_Txns_set
-    __swig_getmethods__["Txns"] = _skycoin.coin__SortableTransactions_Txns_get
-    if _newclass:
-        Txns = _swig_property(_skycoin.coin__SortableTransactions_Txns_get, _skycoin.coin__SortableTransactions_Txns_set)
-    __swig_setmethods__["Fees"] = _skycoin.coin__SortableTransactions_Fees_set
-    __swig_getmethods__["Fees"] = _skycoin.coin__SortableTransactions_Fees_get
-    if _newclass:
-        Fees = _swig_property(_skycoin.coin__SortableTransactions_Fees_get, _skycoin.coin__SortableTransactions_Fees_set)
-    __swig_setmethods__["Hashes"] = _skycoin.coin__SortableTransactions_Hashes_set
-    __swig_getmethods__["Hashes"] = _skycoin.coin__SortableTransactions_Hashes_get
-    if _newclass:
-        Hashes = _swig_property(_skycoin.coin__SortableTransactions_Hashes_get, _skycoin.coin__SortableTransactions_Hashes_set)
-
-    def __init__(self):
-        this = _skycoin.new_coin__SortableTransactions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_coin__SortableTransactions
-    __del__ = lambda self: None
-coin__SortableTransactions_swigregister = _skycoin.coin__SortableTransactions_swigregister
-coin__SortableTransactions_swigregister(coin__SortableTransactions)
-
 class coin__Transaction(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, coin__Transaction, name, value)
@@ -3110,32 +3080,6 @@ class wallet__ReadableNote(_object):
     __del__ = lambda self: None
 wallet__ReadableNote_swigregister = _skycoin.wallet__ReadableNote_swigregister
 wallet__ReadableNote_swigregister(wallet__ReadableNote)
-
-class wallet__Wallet(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, wallet__Wallet, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, wallet__Wallet, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["Meta"] = _skycoin.wallet__Wallet_Meta_set
-    __swig_getmethods__["Meta"] = _skycoin.wallet__Wallet_Meta_get
-    if _newclass:
-        Meta = _swig_property(_skycoin.wallet__Wallet_Meta_get, _skycoin.wallet__Wallet_Meta_set)
-    __swig_setmethods__["Entries"] = _skycoin.wallet__Wallet_Entries_set
-    __swig_getmethods__["Entries"] = _skycoin.wallet__Wallet_Entries_get
-    if _newclass:
-        Entries = _swig_property(_skycoin.wallet__Wallet_Entries_get, _skycoin.wallet__Wallet_Entries_set)
-
-    def __init__(self):
-        this = _skycoin.new_wallet__Wallet()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_wallet__Wallet
-    __del__ = lambda self: None
-wallet__Wallet_swigregister = _skycoin.wallet__Wallet_swigregister
-wallet__Wallet_swigregister(wallet__Wallet)
 
 class wallet__UxBalance(_object):
     __swig_setmethods__ = {}
