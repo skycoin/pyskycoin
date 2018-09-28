@@ -1215,10 +1215,6 @@ def SKY_webrpc_Client_GetLastBlocks(p0, p1):
     return _skycoin.SKY_webrpc_Client_GetLastBlocks(p0, p1)
 SKY_webrpc_Client_GetLastBlocks = _skycoin.SKY_webrpc_Client_GetLastBlocks
 
-def SKY_browser_Open(p0):
-    return _skycoin.SKY_browser_Open(p0)
-SKY_browser_Open = _skycoin.SKY_browser_Open
-
 def SKY_iputil_LocalhostIP():
     return _skycoin.SKY_iputil_LocalhostIP()
 SKY_iputil_LocalhostIP = _skycoin.SKY_iputil_LocalhostIP
@@ -1482,10 +1478,6 @@ SKY_wallet_Balance_Equals = _skycoin.SKY_wallet_Balance_Equals
 def SKY_wallet_Balance_IsZero(p0):
     return _skycoin.SKY_wallet_Balance_IsZero(p0)
 SKY_wallet_Balance_IsZero = _skycoin.SKY_wallet_Balance_IsZero
-
-def SKY_utc_UnixNow():
-    return _skycoin.SKY_utc_UnixNow()
-SKY_utc_UnixNow = _skycoin.SKY_utc_UnixNow
 
 def SKY_httphelper_Address_UnmarshalJSON(p0, p1):
     return _skycoin.SKY_httphelper_Address_UnmarshalJSON(p0, p1)
@@ -3193,6 +3185,162 @@ class httphelper__Address(_object):
 httphelper__Address_swigregister = _skycoin.httphelper__Address_swigregister
 httphelper__Address_swigregister(httphelper__Address)
 
+SKY_OK = _skycoin.SKY_OK
+SKY_ERROR = _skycoin.SKY_ERROR
+SKY_PKG_API = _skycoin.SKY_PKG_API
+SKY_PKG_CIPHER = _skycoin.SKY_PKG_CIPHER
+SKY_PKG_CLI = _skycoin.SKY_PKG_CLI
+SKY_PKG_COIN = _skycoin.SKY_PKG_COIN
+SKY_PKG_CONSENSUS = _skycoin.SKY_PKG_CONSENSUS
+SKY_PKG_DAEMON = _skycoin.SKY_PKG_DAEMON
+SKY_PKG_GUI = _skycoin.SKY_PKG_GUI
+SKY_PKG_SKYCOIN = _skycoin.SKY_PKG_SKYCOIN
+SKY_PKG_UTIL = _skycoin.SKY_PKG_UTIL
+SKY_PKG_VISOR = _skycoin.SKY_PKG_VISOR
+SKY_PKG_WALLET = _skycoin.SKY_PKG_WALLET
+SKY_ErrAddressInvalidLength = _skycoin.SKY_ErrAddressInvalidLength
+SKY_ErrAddressInvalidChecksum = _skycoin.SKY_ErrAddressInvalidChecksum
+SKY_ErrAddressInvalidVersion = _skycoin.SKY_ErrAddressInvalidVersion
+SKY_ErrAddressInvalidPubKey = _skycoin.SKY_ErrAddressInvalidPubKey
+SKY_ErrAddressInvalidFirstByte = _skycoin.SKY_ErrAddressInvalidFirstByte
+SKY_ErrAddressInvalidLastByte = _skycoin.SKY_ErrAddressInvalidLastByte
+SKY_ErrBufferUnderflow = _skycoin.SKY_ErrBufferUnderflow
+SKY_ErrInvalidOmitEmpty = _skycoin.SKY_ErrInvalidOmitEmpty
+SKY_ErrInvalidLengthPubKey = _skycoin.SKY_ErrInvalidLengthPubKey
+SKY_ErrPubKeyFromNullSecKey = _skycoin.SKY_ErrPubKeyFromNullSecKey
+SKY_ErrPubKeyFromBadSecKey = _skycoin.SKY_ErrPubKeyFromBadSecKey
+SKY_ErrInvalidLengthSecKey = _skycoin.SKY_ErrInvalidLengthSecKey
+SKY_ErrECHDInvalidPubKey = _skycoin.SKY_ErrECHDInvalidPubKey
+SKY_ErrECHDInvalidSecKey = _skycoin.SKY_ErrECHDInvalidSecKey
+SKY_ErrInvalidLengthSig = _skycoin.SKY_ErrInvalidLengthSig
+SKY_ErrInvalidLengthRipemd160 = _skycoin.SKY_ErrInvalidLengthRipemd160
+SKY_ErrInvalidLengthSHA256 = _skycoin.SKY_ErrInvalidLengthSHA256
+SKY_ErrInvalidBase58Char = _skycoin.SKY_ErrInvalidBase58Char
+SKY_ErrInvalidBase58String = _skycoin.SKY_ErrInvalidBase58String
+SKY_ErrInvalidBase58Length = _skycoin.SKY_ErrInvalidBase58Length
+SKY_ErrInvalidHexLength = _skycoin.SKY_ErrInvalidHexLength
+SKY_ErrInvalidBytesLength = _skycoin.SKY_ErrInvalidBytesLength
+SKY_ErrInvalidPubKey = _skycoin.SKY_ErrInvalidPubKey
+SKY_ErrInvalidSecKey = _skycoin.SKY_ErrInvalidSecKey
+SKY_ErrInvalidSigForPubKey = _skycoin.SKY_ErrInvalidSigForPubKey
+SKY_ErrInvalidSecKeyHex = _skycoin.SKY_ErrInvalidSecKeyHex
+SKY_ErrInvalidAddressForSig = _skycoin.SKY_ErrInvalidAddressForSig
+SKY_ErrInvalidHashForSig = _skycoin.SKY_ErrInvalidHashForSig
+SKY_ErrPubKeyRecoverMismatch = _skycoin.SKY_ErrPubKeyRecoverMismatch
+SKY_ErrInvalidSigInvalidPubKey = _skycoin.SKY_ErrInvalidSigInvalidPubKey
+SKY_ErrInvalidSigValidity = _skycoin.SKY_ErrInvalidSigValidity
+SKY_ErrInvalidSigForMessage = _skycoin.SKY_ErrInvalidSigForMessage
+SKY_ErrInvalidSecKyVerification = _skycoin.SKY_ErrInvalidSecKyVerification
+SKY_ErrNullPubKeyFromSecKey = _skycoin.SKY_ErrNullPubKeyFromSecKey
+SKY_ErrInvalidDerivedPubKeyFromSecKey = _skycoin.SKY_ErrInvalidDerivedPubKeyFromSecKey
+SKY_ErrInvalidPubKeyFromHash = _skycoin.SKY_ErrInvalidPubKeyFromHash
+SKY_ErrPubKeyFromSecKeyMissmatch = _skycoin.SKY_ErrPubKeyFromSecKeyMissmatch
+SKY_ErrTemporaryInsufficientBalance = _skycoin.SKY_ErrTemporaryInsufficientBalance
+SKY_ErrAddress = _skycoin.SKY_ErrAddress
+SKY_ErrWalletName = _skycoin.SKY_ErrWalletName
+SKY_ErrJSONMarshal = _skycoin.SKY_ErrJSONMarshal
+SKY_WalletLoadError = _skycoin.SKY_WalletLoadError
+SKY_WalletSaveError = _skycoin.SKY_WalletSaveError
+SKY_ErrAddEarnedCoinHoursAdditionOverflow = _skycoin.SKY_ErrAddEarnedCoinHoursAdditionOverflow
+SKY_ErrUint64MultOverflow = _skycoin.SKY_ErrUint64MultOverflow
+SKY_ErrUint64AddOverflow = _skycoin.SKY_ErrUint64AddOverflow
+SKY_ErrUint32AddOverflow = _skycoin.SKY_ErrUint32AddOverflow
+SKY_ErrUint64OverflowsInt64 = _skycoin.SKY_ErrUint64OverflowsInt64
+SKY_ErrInt64UnderflowsUint64 = _skycoin.SKY_ErrInt64UnderflowsUint64
+SKY_ErrPeerlistFull = _skycoin.SKY_ErrPeerlistFull
+SKY_ErrInvalidAddress = _skycoin.SKY_ErrInvalidAddress
+SKY_ErrNoLocalhost = _skycoin.SKY_ErrNoLocalhost
+SKY_ErrNotExternalIP = _skycoin.SKY_ErrNotExternalIP
+SKY_ErrPortTooLow = _skycoin.SKY_ErrPortTooLow
+SKY_ErrBlacklistedAddress = _skycoin.SKY_ErrBlacklistedAddress
+SKY_ErrDisconnectReadFailed = _skycoin.SKY_ErrDisconnectReadFailed
+SKY_ErrDisconnectWriteFailed = _skycoin.SKY_ErrDisconnectWriteFailed
+SKY_ErrDisconnectSetReadDeadlineFailed = _skycoin.SKY_ErrDisconnectSetReadDeadlineFailed
+SKY_ErrDisconnectInvalidMessageLength = _skycoin.SKY_ErrDisconnectInvalidMessageLength
+SKY_ErrDisconnectMalformedMessage = _skycoin.SKY_ErrDisconnectMalformedMessage
+SKY_ErrDisconnectUnknownMessage = _skycoin.SKY_ErrDisconnectUnknownMessage
+SKY_ErrDisconnectUnexpectedError = _skycoin.SKY_ErrDisconnectUnexpectedError
+SKY_ErrConnectionPoolClosed = _skycoin.SKY_ErrConnectionPoolClosed
+SKY_ErrWriteQueueFull = _skycoin.SKY_ErrWriteQueueFull
+SKY_ErrNoReachableConnections = _skycoin.SKY_ErrNoReachableConnections
+SKY_ErrMaxDefaultConnectionsReached = _skycoin.SKY_ErrMaxDefaultConnectionsReached
+SKY_ErrDisconnectInvalidVersion = _skycoin.SKY_ErrDisconnectInvalidVersion
+SKY_ErrDisconnectIntroductionTimeout = _skycoin.SKY_ErrDisconnectIntroductionTimeout
+SKY_ErrDisconnectVersionSendFailed = _skycoin.SKY_ErrDisconnectVersionSendFailed
+SKY_ErrDisconnectIsBlacklisted = _skycoin.SKY_ErrDisconnectIsBlacklisted
+SKY_ErrDisconnectSelf = _skycoin.SKY_ErrDisconnectSelf
+SKY_ErrDisconnectConnectedTwice = _skycoin.SKY_ErrDisconnectConnectedTwice
+SKY_ErrDisconnectIdle = _skycoin.SKY_ErrDisconnectIdle
+SKY_ErrDisconnectNoIntroduction = _skycoin.SKY_ErrDisconnectNoIntroduction
+SKY_ErrDisconnectIPLimitReached = _skycoin.SKY_ErrDisconnectIPLimitReached
+SKY_ErrDisconnectOtherError = _skycoin.SKY_ErrDisconnectOtherError
+SKY_ErrDisconnectMaxDefaultConnectionReached = _skycoin.SKY_ErrDisconnectMaxDefaultConnectionReached
+SKY_ErrDisconnectMaxOutgoingConnectionsReached = _skycoin.SKY_ErrDisconnectMaxOutgoingConnectionsReached
+SKY_ConnectionError = _skycoin.SKY_ConnectionError
+SKY_ErrTxnNoFee = _skycoin.SKY_ErrTxnNoFee
+SKY_ErrTxnInsufficientFee = _skycoin.SKY_ErrTxnInsufficientFee
+SKY_ErrTxnInsufficientCoinHours = _skycoin.SKY_ErrTxnInsufficientCoinHours
+SKY_ErrNegativeValue = _skycoin.SKY_ErrNegativeValue
+SKY_ErrTooManyDecimals = _skycoin.SKY_ErrTooManyDecimals
+SKY_ErrTooLarge = _skycoin.SKY_ErrTooLarge
+SKY_ErrEmptyDirectoryName = _skycoin.SKY_ErrEmptyDirectoryName
+SKY_ErrDotDirectoryName = _skycoin.SKY_ErrDotDirectoryName
+SKY_ErrHistoryDBCorrupted = _skycoin.SKY_ErrHistoryDBCorrupted
+SKY_ErrUxOutNotExist = _skycoin.SKY_ErrUxOutNotExist
+SKY_ErrNoHeadBlock = _skycoin.SKY_ErrNoHeadBlock
+SKY_ErrMissingSignature = _skycoin.SKY_ErrMissingSignature
+SKY_ErrUnspentNotExist = _skycoin.SKY_ErrUnspentNotExist
+SKY_ErrVerifyStopped = _skycoin.SKY_ErrVerifyStopped
+SKY_ErrCreateBucketFailed = _skycoin.SKY_ErrCreateBucketFailed
+SKY_ErrBucketNotExist = _skycoin.SKY_ErrBucketNotExist
+SKY_ErrTxnViolatesHardConstraint = _skycoin.SKY_ErrTxnViolatesHardConstraint
+SKY_ErrTxnViolatesSoftConstraint = _skycoin.SKY_ErrTxnViolatesSoftConstraint
+SKY_ErrTxnViolatesUserConstraint = _skycoin.SKY_ErrTxnViolatesUserConstraint
+SKY_ErrInsufficientBalance = _skycoin.SKY_ErrInsufficientBalance
+SKY_ErrInsufficientHours = _skycoin.SKY_ErrInsufficientHours
+SKY_ErrZeroSpend = _skycoin.SKY_ErrZeroSpend
+SKY_ErrSpendingUnconfirmed = _skycoin.SKY_ErrSpendingUnconfirmed
+SKY_ErrInvalidEncryptedField = _skycoin.SKY_ErrInvalidEncryptedField
+SKY_ErrWalletEncrypted = _skycoin.SKY_ErrWalletEncrypted
+SKY_ErrWalletNotEncrypted = _skycoin.SKY_ErrWalletNotEncrypted
+SKY_ErrMissingPassword = _skycoin.SKY_ErrMissingPassword
+SKY_ErrMissingEncrypt = _skycoin.SKY_ErrMissingEncrypt
+SKY_ErrInvalidPassword = _skycoin.SKY_ErrInvalidPassword
+SKY_ErrMissingSeed = _skycoin.SKY_ErrMissingSeed
+SKY_ErrMissingAuthenticated = _skycoin.SKY_ErrMissingAuthenticated
+SKY_ErrWrongCryptoType = _skycoin.SKY_ErrWrongCryptoType
+SKY_ErrWalletNotExist = _skycoin.SKY_ErrWalletNotExist
+SKY_ErrSeedUsed = _skycoin.SKY_ErrSeedUsed
+SKY_ErrWalletAPIDisabled = _skycoin.SKY_ErrWalletAPIDisabled
+SKY_ErrSeedAPIDisabled = _skycoin.SKY_ErrSeedAPIDisabled
+SKY_ErrWalletNameConflict = _skycoin.SKY_ErrWalletNameConflict
+SKY_ErrInvalidHoursSelectionMode = _skycoin.SKY_ErrInvalidHoursSelectionMode
+SKY_ErrInvalidHoursSelectionType = _skycoin.SKY_ErrInvalidHoursSelectionType
+SKY_ErrUnknownAddress = _skycoin.SKY_ErrUnknownAddress
+SKY_ErrUnknownUxOut = _skycoin.SKY_ErrUnknownUxOut
+SKY_ErrNoUnspents = _skycoin.SKY_ErrNoUnspents
+SKY_ErrNullChangeAddress = _skycoin.SKY_ErrNullChangeAddress
+SKY_ErrMissingTo = _skycoin.SKY_ErrMissingTo
+SKY_ErrZeroCoinsTo = _skycoin.SKY_ErrZeroCoinsTo
+SKY_ErrNullAddressTo = _skycoin.SKY_ErrNullAddressTo
+SKY_ErrDuplicateTo = _skycoin.SKY_ErrDuplicateTo
+SKY_ErrMissingWalletID = _skycoin.SKY_ErrMissingWalletID
+SKY_ErrIncludesNullAddress = _skycoin.SKY_ErrIncludesNullAddress
+SKY_ErrDuplicateAddresses = _skycoin.SKY_ErrDuplicateAddresses
+SKY_ErrZeroToHoursAuto = _skycoin.SKY_ErrZeroToHoursAuto
+SKY_ErrMissingModeAuto = _skycoin.SKY_ErrMissingModeAuto
+SKY_ErrInvalidHoursSelMode = _skycoin.SKY_ErrInvalidHoursSelMode
+SKY_ErrInvalidModeManual = _skycoin.SKY_ErrInvalidModeManual
+SKY_ErrInvalidHoursSelType = _skycoin.SKY_ErrInvalidHoursSelType
+SKY_ErrMissingShareFactor = _skycoin.SKY_ErrMissingShareFactor
+SKY_ErrInvalidShareFactor = _skycoin.SKY_ErrInvalidShareFactor
+SKY_ErrShareFactorOutOfRange = _skycoin.SKY_ErrShareFactorOutOfRange
+SKY_ErrWalletConstraint = _skycoin.SKY_ErrWalletConstraint
+SKY_ErrDuplicateUxOuts = _skycoin.SKY_ErrDuplicateUxOuts
+SKY_ErrUnknownWalletID = _skycoin.SKY_ErrUnknownWalletID
+SKY_ErrSHA256orMissingPassword = _skycoin.SKY_ErrSHA256orMissingPassword
+SKY_ErrSHA256LenghtDataOverflowMaxUint32 = _skycoin.SKY_ErrSHA256LenghtDataOverflowMaxUint32
+SKY_ErrVerifySignatureInvalidPubkeysLength = _skycoin.SKY_ErrVerifySignatureInvalidPubkeysLength
 # This file is compatible with both classic and new-style classes.
 
 

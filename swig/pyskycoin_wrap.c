@@ -14760,31 +14760,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_browser_Open(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoString arg1 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_browser_Open",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_browser_Open', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  result = (GoUint32)SKY_browser_Open(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_iputil_LocalhostIP(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString_ *arg1 = (GoString_ *) 0 ;
@@ -17508,28 +17483,6 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Balance_IsZero(PyObject *SWIGUNUSEDPARM(se
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_utc_UnixNow(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoInt64 *arg1 = (GoInt64 *) 0 ;
-  GoInt64 temp1 ;
-  GoUint32 result;
-  
-  {
-    temp1 = 0;
-    arg1 = &temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_utc_UnixNow")) SWIG_fail;
-  result = (GoUint32)SKY_utc_UnixNow(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg1 ));
   }
   return resultobj;
 fail:
@@ -32241,7 +32194,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_webrpc_Client_GetBlocks", _wrap_SKY_webrpc_Client_GetBlocks, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_GetBlocksBySeq", _wrap_SKY_webrpc_Client_GetBlocksBySeq, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_GetLastBlocks", _wrap_SKY_webrpc_Client_GetLastBlocks, METH_VARARGS, NULL},
-	 { (char *)"SKY_browser_Open", _wrap_SKY_browser_Open, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, METH_VARARGS, NULL},
@@ -32308,7 +32260,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_wallet_Balance_Sub", _wrap_SKY_wallet_Balance_Sub, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_Balance_Equals", _wrap_SKY_wallet_Balance_Equals, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_Balance_IsZero", _wrap_SKY_wallet_Balance_IsZero, METH_VARARGS, NULL},
-	 { (char *)"SKY_utc_UnixNow", _wrap_SKY_utc_UnixNow, METH_VARARGS, NULL},
 	 { (char *)"SKY_httphelper_Address_UnmarshalJSON", _wrap_SKY_httphelper_Address_UnmarshalJSON, METH_VARARGS, NULL},
 	 { (char *)"SKY_httphelper_Address_MarshalJSON", _wrap_SKY_httphelper_Address_MarshalJSON, METH_VARARGS, NULL},
 	 { (char *)"SKY_httphelper_Coins_UnmarshalJSON", _wrap_SKY_httphelper_Coins_UnmarshalJSON, METH_VARARGS, NULL},
@@ -33864,6 +33815,162 @@ SWIG_init(void) {
   
   SWIG_InstallConstants(d,swig_const_table);
   
+  SWIG_Python_SetConstant(d, "SKY_OK",SWIG_From_int((int)(0)));
+  SWIG_Python_SetConstant(d, "SKY_ERROR",SWIG_From_int((int)(0x7FFFFFFF)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_API",SWIG_From_int((int)(0x01000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_CIPHER",SWIG_From_int((int)(0x02000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_CLI",SWIG_From_int((int)(0x03000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_COIN",SWIG_From_int((int)(0x04000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_CONSENSUS",SWIG_From_int((int)(0x05000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_DAEMON",SWIG_From_int((int)(0x06000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_GUI",SWIG_From_int((int)(0x07000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_SKYCOIN",SWIG_From_int((int)(0x08000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_UTIL",SWIG_From_int((int)(0x09000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_VISOR",SWIG_From_int((int)(0x0A000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_WALLET",SWIG_From_int((int)(0x0B000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidLength",SWIG_From_int((int)(0x02000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidChecksum",SWIG_From_int((int)(0x02000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidVersion",SWIG_From_int((int)(0x02000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidPubKey",SWIG_From_int((int)(0x02000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidFirstByte",SWIG_From_int((int)(0x02000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidLastByte",SWIG_From_int((int)(0x02000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrBufferUnderflow",SWIG_From_int((int)(0x02000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidOmitEmpty",SWIG_From_int((int)(0x02000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidLengthPubKey",SWIG_From_int((int)(0x02000008)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPubKeyFromNullSecKey",SWIG_From_int((int)(0x02000009)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPubKeyFromBadSecKey",SWIG_From_int((int)(0x0200000A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidLengthSecKey",SWIG_From_int((int)(0x0200000B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrECHDInvalidPubKey",SWIG_From_int((int)(0x0200000C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrECHDInvalidSecKey",SWIG_From_int((int)(0x0200000D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidLengthSig",SWIG_From_int((int)(0x0200000E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidLengthRipemd160",SWIG_From_int((int)(0x0200000F)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidLengthSHA256",SWIG_From_int((int)(0x02000010)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBase58Char",SWIG_From_int((int)(0x02000011)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBase58String",SWIG_From_int((int)(0x02000012)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBase58Length",SWIG_From_int((int)(0x02000013)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHexLength",SWIG_From_int((int)(0x02000014)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBytesLength",SWIG_From_int((int)(0x02000015)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidPubKey",SWIG_From_int((int)(0x02000016)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSecKey",SWIG_From_int((int)(0x02000017)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSigForPubKey",SWIG_From_int((int)(0x02000018)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSecKeyHex",SWIG_From_int((int)(0x02000019)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidAddressForSig",SWIG_From_int((int)(0x0200001A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHashForSig",SWIG_From_int((int)(0x0200001B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPubKeyRecoverMismatch",SWIG_From_int((int)(0x0200001C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSigInvalidPubKey",SWIG_From_int((int)(0x0200001D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSigValidity",SWIG_From_int((int)(0x0200001E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSigForMessage",SWIG_From_int((int)(0x0200001F)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidSecKyVerification",SWIG_From_int((int)(0x02000020)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNullPubKeyFromSecKey",SWIG_From_int((int)(0x02000021)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidDerivedPubKeyFromSecKey",SWIG_From_int((int)(0x02000022)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidPubKeyFromHash",SWIG_From_int((int)(0x02000023)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPubKeyFromSecKeyMissmatch",SWIG_From_int((int)(0x02000024)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTemporaryInsufficientBalance",SWIG_From_int((int)(0x03000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddress",SWIG_From_int((int)(0x03000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletName",SWIG_From_int((int)(0x03000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrJSONMarshal",SWIG_From_int((int)(0x03000003)));
+  SWIG_Python_SetConstant(d, "SKY_WalletLoadError",SWIG_From_int((int)(0x03000004)));
+  SWIG_Python_SetConstant(d, "SKY_WalletSaveError",SWIG_From_int((int)(0x03000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrAddEarnedCoinHoursAdditionOverflow",SWIG_From_int((int)(0x04000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUint64MultOverflow",SWIG_From_int((int)(0x04000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUint64AddOverflow",SWIG_From_int((int)(0x04000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUint32AddOverflow",SWIG_From_int((int)(0x04000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUint64OverflowsInt64",SWIG_From_int((int)(0x04000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInt64UnderflowsUint64",SWIG_From_int((int)(0x04000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPeerlistFull",SWIG_From_int((int)(0x06000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidAddress",SWIG_From_int((int)(0x06000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNoLocalhost",SWIG_From_int((int)(0x06000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNotExternalIP",SWIG_From_int((int)(0x06000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrPortTooLow",SWIG_From_int((int)(0x06000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrBlacklistedAddress",SWIG_From_int((int)(0x06000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectReadFailed",SWIG_From_int((int)(0x06000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectWriteFailed",SWIG_From_int((int)(0x06000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectSetReadDeadlineFailed",SWIG_From_int((int)(0x06000008)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectInvalidMessageLength",SWIG_From_int((int)(0x06000009)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMalformedMessage",SWIG_From_int((int)(0x0600000A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectUnknownMessage",SWIG_From_int((int)(0x0600000B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectUnexpectedError",SWIG_From_int((int)(0x0600000C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrConnectionPoolClosed",SWIG_From_int((int)(0x0600000D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWriteQueueFull",SWIG_From_int((int)(0x0600000E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNoReachableConnections",SWIG_From_int((int)(0x0600000F)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMaxDefaultConnectionsReached",SWIG_From_int((int)(0x06000010)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectInvalidVersion",SWIG_From_int((int)(0x06000011)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIntroductionTimeout",SWIG_From_int((int)(0x06000012)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectVersionSendFailed",SWIG_From_int((int)(0x06000013)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIsBlacklisted",SWIG_From_int((int)(0x06000014)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectSelf",SWIG_From_int((int)(0x06000015)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectConnectedTwice",SWIG_From_int((int)(0x06000016)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIdle",SWIG_From_int((int)(0x06000017)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectNoIntroduction",SWIG_From_int((int)(0x06000018)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIPLimitReached",SWIG_From_int((int)(0x06000019)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectOtherError",SWIG_From_int((int)(0x0600001A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxDefaultConnectionReached",SWIG_From_int((int)(0x0600001B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxOutgoingConnectionsReached",SWIG_From_int((int)(0x0600001C)));
+  SWIG_Python_SetConstant(d, "SKY_ConnectionError",SWIG_From_int((int)(0x0600001D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnNoFee",SWIG_From_int((int)(0x09000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnInsufficientFee",SWIG_From_int((int)(0x09000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnInsufficientCoinHours",SWIG_From_int((int)(0x09000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNegativeValue",SWIG_From_int((int)(0x09000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTooManyDecimals",SWIG_From_int((int)(0x09000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTooLarge",SWIG_From_int((int)(0x09000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrEmptyDirectoryName",SWIG_From_int((int)(0x09000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDotDirectoryName",SWIG_From_int((int)(0x09000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrHistoryDBCorrupted",SWIG_From_int((int)(0x0A000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUxOutNotExist",SWIG_From_int((int)(0x0A000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNoHeadBlock",SWIG_From_int((int)(0x0A000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingSignature",SWIG_From_int((int)(0x0A000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUnspentNotExist",SWIG_From_int((int)(0x0A000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrVerifyStopped",SWIG_From_int((int)(0x0A000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrCreateBucketFailed",SWIG_From_int((int)(0x0A000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrBucketNotExist",SWIG_From_int((int)(0x0A000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnViolatesHardConstraint",SWIG_From_int((int)(0x0A000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnViolatesSoftConstraint",SWIG_From_int((int)(0x0A000008)));
+  SWIG_Python_SetConstant(d, "SKY_ErrTxnViolatesUserConstraint",SWIG_From_int((int)(0x0A000009)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInsufficientBalance",SWIG_From_int((int)(0x0B000000)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInsufficientHours",SWIG_From_int((int)(0x0B000001)));
+  SWIG_Python_SetConstant(d, "SKY_ErrZeroSpend",SWIG_From_int((int)(0x0B000002)));
+  SWIG_Python_SetConstant(d, "SKY_ErrSpendingUnconfirmed",SWIG_From_int((int)(0x0B000003)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidEncryptedField",SWIG_From_int((int)(0x0B000004)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletEncrypted",SWIG_From_int((int)(0x0B000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletNotEncrypted",SWIG_From_int((int)(0x0B000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingPassword",SWIG_From_int((int)(0x0B000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingEncrypt",SWIG_From_int((int)(0x0B000008)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidPassword",SWIG_From_int((int)(0x0B000009)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingSeed",SWIG_From_int((int)(0x0B00000A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingAuthenticated",SWIG_From_int((int)(0x0B00000B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWrongCryptoType",SWIG_From_int((int)(0x0B00000C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletNotExist",SWIG_From_int((int)(0x0B00000D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrSeedUsed",SWIG_From_int((int)(0x0B00000E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletAPIDisabled",SWIG_From_int((int)(0x0B00000F)));
+  SWIG_Python_SetConstant(d, "SKY_ErrSeedAPIDisabled",SWIG_From_int((int)(0x0B000010)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletNameConflict",SWIG_From_int((int)(0x0B000011)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHoursSelectionMode",SWIG_From_int((int)(0x0B000012)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHoursSelectionType",SWIG_From_int((int)(0x0B000013)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUnknownAddress",SWIG_From_int((int)(0x0B000014)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUnknownUxOut",SWIG_From_int((int)(0x0B000015)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNoUnspents",SWIG_From_int((int)(0x0B000016)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNullChangeAddress",SWIG_From_int((int)(0x0B000017)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingTo",SWIG_From_int((int)(0x0B000018)));
+  SWIG_Python_SetConstant(d, "SKY_ErrZeroCoinsTo",SWIG_From_int((int)(0x0B000019)));
+  SWIG_Python_SetConstant(d, "SKY_ErrNullAddressTo",SWIG_From_int((int)(0x0B00001A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDuplicateTo",SWIG_From_int((int)(0x0B00001B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingWalletID",SWIG_From_int((int)(0x0B00001C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrIncludesNullAddress",SWIG_From_int((int)(0x0B00001D)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDuplicateAddresses",SWIG_From_int((int)(0x0B00001E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrZeroToHoursAuto",SWIG_From_int((int)(0x0B00001F)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingModeAuto",SWIG_From_int((int)(0x0B000020)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHoursSelMode",SWIG_From_int((int)(0x0B000021)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidModeManual",SWIG_From_int((int)(0x0B000022)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidHoursSelType",SWIG_From_int((int)(0x0B000023)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingShareFactor",SWIG_From_int((int)(0x0B000024)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidShareFactor",SWIG_From_int((int)(0x0B000025)));
+  SWIG_Python_SetConstant(d, "SKY_ErrShareFactorOutOfRange",SWIG_From_int((int)(0x0B000026)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletConstraint",SWIG_From_int((int)(0x0B000027)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDuplicateUxOuts",SWIG_From_int((int)(0x0B000028)));
+  SWIG_Python_SetConstant(d, "SKY_ErrUnknownWalletID",SWIG_From_int((int)(0x0B000029)));
+  SWIG_Python_SetConstant(d, "SKY_ErrSHA256orMissingPassword",SWIG_From_int((int)(0x0B00002A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrSHA256LenghtDataOverflowMaxUint32",SWIG_From_int((int)(0x0B00002B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrVerifySignatureInvalidPubkeysLength",SWIG_From_int((int)(0X0b000036)));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else
