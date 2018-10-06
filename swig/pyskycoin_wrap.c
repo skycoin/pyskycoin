@@ -14865,86 +14865,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_encoder_StructField_String(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  encoder__StructField *arg1 = (encoder__StructField *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoString temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_encoder_StructField_String",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_encoder__StructField, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_encoder_StructField_String" "', argument " "1"" of type '" "encoder__StructField *""'"); 
-  }
-  arg1 = (encoder__StructField *)(argp1);
-  result = (GoUint32)SKY_encoder_StructField_String(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_encoder_ParseFields(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoStringMap_ *arg3 = (GoStringMap_ *) 0 ;
-  Handle temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    arg3 = &temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_encoder_ParseFields",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encoder_ParseFields', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encoder_ParseFields', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_encoder_ParseFields(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_secp256k1_SumSHA256(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoSlice arg1 ;
@@ -32197,8 +32117,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, METH_VARARGS, NULL},
-	 { (char *)"SKY_encoder_StructField_String", _wrap_SKY_encoder_StructField_String, METH_VARARGS, NULL},
-	 { (char *)"SKY_encoder_ParseFields", _wrap_SKY_encoder_ParseFields, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1_SumSHA256", _wrap_SKY_secp256k1_SumSHA256, METH_VARARGS, NULL},
 	 { (char *)"SKY_secp256k1_RandByte", _wrap_SKY_secp256k1_RandByte, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GenerateAddressesInFile", _wrap_SKY_cli_GenerateAddressesInFile, METH_VARARGS, NULL},

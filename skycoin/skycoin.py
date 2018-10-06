@@ -1227,14 +1227,6 @@ def SKY_iputil_SplitAddr(p0):
     return _skycoin.SKY_iputil_SplitAddr(p0)
 SKY_iputil_SplitAddr = _skycoin.SKY_iputil_SplitAddr
 
-def SKY_encoder_StructField_String(p0):
-    return _skycoin.SKY_encoder_StructField_String(p0)
-SKY_encoder_StructField_String = _skycoin.SKY_encoder_StructField_String
-
-def SKY_encoder_ParseFields(p0, p1):
-    return _skycoin.SKY_encoder_ParseFields(p0, p1)
-SKY_encoder_ParseFields = _skycoin.SKY_encoder_ParseFields
-
 def SKY_secp256k1_SumSHA256(p0):
     return _skycoin.SKY_secp256k1_SumSHA256(p0)
 SKY_secp256k1_SumSHA256 = _skycoin.SKY_secp256k1_SumSHA256
