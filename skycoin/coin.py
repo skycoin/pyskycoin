@@ -89,3 +89,54 @@ def TransactionCopy(handle):
 
 def TransactionVerify(handle2):
     return skycoin.coin_Transaction_Verify(handle2)
+
+def AddUint64(p0, p1):
+    return skycoin.SKY_coin_AddUint64(p0, p1)
+
+def Uint64ToInt64(s):
+    return skycoin.SKY_coin_Uint64ToInt64(s)
+
+def Int64ToUint64(s):
+    return skycoin.SKY_coin_Int64ToUint64(s)
+
+def SHA256():
+    return skycoin.cipher_SHA256()
+
+def UxBodyHash(uxb, hashx):
+    return skycoin.SKY_coin_UxBody_Hash(uxb, hashx)
+
+def UxOutSnapshotHash(uxo, hn):
+    return skycoin.SKY_coin_UxOut_SnapshotHash(uxo, hn) 
+
+def UxOutCoinHours(uxo, now):
+    return skycoin.SKY_coin_UxOut_CoinHours(uxo, now)
+
+def UxArrayCoins(uxa):
+    return skycoin.SKY_coin_UxArray_Coins(uxa)
+
+def UxArrayCoinHours(uxa, num):
+    return skycoin.SKY_coin_UxArray_CoinHours(uxa, num)
+
+def UxArrayHashes(uxa):
+    return skycoin.SKY_coin_UxArray_Hashes(uxa)
+
+def UxArrayHasDupes(uxa):
+    return skycoin.SKY_coin_UxArray_HasDupes(uxa)
+
+def UxArraySub(uxc, uxa):
+    return skycoin.SKY_coin_UxArray_Sub(uxc, uxa)
+
+def UxArrayLess(uxa, p0, p1):
+    return skycoin.SKY_coin_UxArray_Less(uxa, p0, p1)
+
+def UxArraySwap(uxa, p0, p1):
+    return skycoin.SKY_coin_UxArray_Swap(uxa, p0, p1)
+
+def NewAddressUxOuts(uxa):
+    return skycoin.SKY_coin_NewAddressUxOuts(uxa)
+
+def AddressUxOutsKeys(uxH):
+    return skycoin.SKY_coin_AddressUxOuts_Keys(uxH)
+
+def AddressUxOutsSet(uxH,uxa_Body_Address,ux_2):
+    return skycoin.SKY_coin_AddressUxOuts_Set(uxH,uxa_Body_Address,ux_2)
