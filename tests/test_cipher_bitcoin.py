@@ -9,7 +9,7 @@ def test_TestBitcoinAddressFromBytes():
     byte = skycoin.skycoin.SKY_cipher_BitcoinAddress_Bytes(address)
     err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, address_2)
     assert err == skycoin.SKY_OK
-    #@ assert address_2 == address
+    assert address_2 == address
     ## Invalid number of bytes
     __ = skycoin.cipher__BitcoinAddress()
     err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte[:len(byte) - 2], __)

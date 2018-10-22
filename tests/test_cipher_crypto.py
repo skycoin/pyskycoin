@@ -1,5 +1,4 @@
 import skycoin
-import tests.utils
 
 
 def test_TestNewPubKey():
@@ -21,16 +20,11 @@ def test_TestNewPubKey():
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
     assert err == skycoin.SKY_OK
-    pubkey_l = []
-    pubkey_l.append(pubkey)
+    ptemp = pubkey.toStr()
     pubkey2 = skycoin.cipher_PubKey()
-    print(pubkey.data)
-
-    assert skycoin.SKY_cipher_NewPubKey(pubkey[:], pubkey2) == skycoin.SKY_OK
-
-    # assert public_key.toStr() == data
-
-
+    err = skycoin.SKY_cipher_NewPubKey(ptemp, pubkey2)
+    assert err == skycoin.SKY_OK
+    assert pubkey == pubkey2
 
 
 def test_TestPubKeyVerify():

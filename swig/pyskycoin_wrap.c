@@ -4238,6 +4238,15 @@ SWIGINTERN int cipher__Address___eq__(cipher__Address *self,cipher__Address *a){
 SWIGINTERN PyObject *cipher__Address_toStr(cipher__Address *self){
 		return PyBytes_FromStringAndSize((const char*)self->Key, sizeof(self->Key));
 	}
+SWIGINTERN int cipher__BitcoinAddress___eq__(cipher__BitcoinAddress *self,cipher__BitcoinAddress *a){
+		if( self->Version == a->Version ){
+			return memcmp(self->Key, a->Key, sizeof(a->Key)) == 0;
+		}
+		return 0;
+	}
+SWIGINTERN PyObject *cipher__BitcoinAddress_toStr(cipher__BitcoinAddress *self){
+		return PyBytes_FromStringAndSize((const char*)self->Key, sizeof(self->Key));
+	}
 SWIGINTERN int coin__Transaction___eq__(coin__Transaction *self,coin__Transaction *t){
 		return equalTransactions(self, t);
 	}
@@ -26632,6 +26641,59 @@ SWIGINTERN PyObject *cipher__Address_swigregister(PyObject *SWIGUNUSEDPARM(self)
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress___eq__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:cipher__BitcoinAddress___eq__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher__BitcoinAddress, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher__BitcoinAddress___eq__" "', argument " "1"" of type '" "cipher__BitcoinAddress *""'"); 
+  }
+  arg1 = (cipher__BitcoinAddress *)(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher__BitcoinAddress, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "cipher__BitcoinAddress___eq__" "', argument " "2"" of type '" "cipher__BitcoinAddress *""'"); 
+  }
+  arg2 = (cipher__BitcoinAddress *)(argp2);
+  result = (int)cipher__BitcoinAddress___eq__(arg1,arg2);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_toStr(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:cipher__BitcoinAddress_toStr",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher__BitcoinAddress, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher__BitcoinAddress_toStr" "', argument " "1"" of type '" "cipher__BitcoinAddress *""'"); 
+  }
+  arg1 = (cipher__BitcoinAddress *)(argp1);
+  result = (PyObject *)cipher__BitcoinAddress_toStr(arg1);
+  resultobj = result;
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_Version_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
@@ -31708,6 +31770,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_cipher__Address", _wrap_new_cipher__Address, METH_VARARGS, NULL},
 	 { (char *)"delete_cipher__Address", _wrap_delete_cipher__Address, METH_VARARGS, NULL},
 	 { (char *)"cipher__Address_swigregister", cipher__Address_swigregister, METH_VARARGS, NULL},
+	 { (char *)"cipher__BitcoinAddress___eq__", _wrap_cipher__BitcoinAddress___eq__, METH_VARARGS, NULL},
+	 { (char *)"cipher__BitcoinAddress_toStr", _wrap_cipher__BitcoinAddress_toStr, METH_VARARGS, NULL},
 	 { (char *)"cipher__BitcoinAddress_Version_set", _wrap_cipher__BitcoinAddress_Version_set, METH_VARARGS, NULL},
 	 { (char *)"cipher__BitcoinAddress_Version_get", _wrap_cipher__BitcoinAddress_Version_get, METH_VARARGS, NULL},
 	 { (char *)"cipher__BitcoinAddress_Key_set", _wrap_cipher__BitcoinAddress_Key_set, METH_VARARGS, NULL},
@@ -33105,7 +33169,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrWriteQueueFull",SWIG_From_int((int)(0x0600000E)));
   SWIG_Python_SetConstant(d, "SKY_ErrNoReachableConnections",SWIG_From_int((int)(0x0600000F)));
   SWIG_Python_SetConstant(d, "SKY_ErrMaxDefaultConnectionsReached",SWIG_From_int((int)(0x06000010)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectInvalidVersion",SWIG_From_int((int)(0x06000011)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectVersionNotSupported",SWIG_From_int((int)(0x06000011)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIntroductionTimeout",SWIG_From_int((int)(0x06000012)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectVersionSendFailed",SWIG_From_int((int)(0x06000013)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIsBlacklisted",SWIG_From_int((int)(0x06000014)));
@@ -33114,7 +33178,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIdle",SWIG_From_int((int)(0x06000017)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectNoIntroduction",SWIG_From_int((int)(0x06000018)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIPLimitReached",SWIG_From_int((int)(0x06000019)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectOtherError",SWIG_From_int((int)(0x0600001A)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIncomprehensibleError",SWIG_From_int((int)(0x0600001A)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxDefaultConnectionReached",SWIG_From_int((int)(0x0600001B)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxOutgoingConnectionsReached",SWIG_From_int((int)(0x0600001C)));
   SWIG_Python_SetConstant(d, "SKY_ConnectionError",SWIG_From_int((int)(0x0600001D)));

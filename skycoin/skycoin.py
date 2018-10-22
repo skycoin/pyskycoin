@@ -2516,6 +2516,12 @@ class cipher__BitcoinAddress(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher__BitcoinAddress, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher__BitcoinAddress___eq__(self, a)
+
+    def toStr(self):
+        return _skycoin.cipher__BitcoinAddress_toStr(self)
     __swig_setmethods__["Version"] = _skycoin.cipher__BitcoinAddress_Version_set
     __swig_getmethods__["Version"] = _skycoin.cipher__BitcoinAddress_Version_get
     if _newclass:
@@ -3273,7 +3279,7 @@ SKY_ErrConnectionPoolClosed = _skycoin.SKY_ErrConnectionPoolClosed
 SKY_ErrWriteQueueFull = _skycoin.SKY_ErrWriteQueueFull
 SKY_ErrNoReachableConnections = _skycoin.SKY_ErrNoReachableConnections
 SKY_ErrMaxDefaultConnectionsReached = _skycoin.SKY_ErrMaxDefaultConnectionsReached
-SKY_ErrDisconnectInvalidVersion = _skycoin.SKY_ErrDisconnectInvalidVersion
+SKY_ErrDisconnectVersionNotSupported = _skycoin.SKY_ErrDisconnectVersionNotSupported
 SKY_ErrDisconnectIntroductionTimeout = _skycoin.SKY_ErrDisconnectIntroductionTimeout
 SKY_ErrDisconnectVersionSendFailed = _skycoin.SKY_ErrDisconnectVersionSendFailed
 SKY_ErrDisconnectIsBlacklisted = _skycoin.SKY_ErrDisconnectIsBlacklisted
@@ -3282,7 +3288,7 @@ SKY_ErrDisconnectConnectedTwice = _skycoin.SKY_ErrDisconnectConnectedTwice
 SKY_ErrDisconnectIdle = _skycoin.SKY_ErrDisconnectIdle
 SKY_ErrDisconnectNoIntroduction = _skycoin.SKY_ErrDisconnectNoIntroduction
 SKY_ErrDisconnectIPLimitReached = _skycoin.SKY_ErrDisconnectIPLimitReached
-SKY_ErrDisconnectOtherError = _skycoin.SKY_ErrDisconnectOtherError
+SKY_ErrDisconnectIncomprehensibleError = _skycoin.SKY_ErrDisconnectIncomprehensibleError
 SKY_ErrDisconnectMaxDefaultConnectionReached = _skycoin.SKY_ErrDisconnectMaxDefaultConnectionReached
 SKY_ErrDisconnectMaxOutgoingConnectionsReached = _skycoin.SKY_ErrDisconnectMaxOutgoingConnectionsReached
 SKY_ConnectionError = _skycoin.SKY_ConnectionError

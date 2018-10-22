@@ -57,18 +57,18 @@ def test_encrypt_ScryptChacha20poly1305Encrypt():
 
 # Test with struct containing array
 def test_cipherAddress():
-    address = skycoin.cipher__Address()
-    err = skycoin.SKY_cipher_DecodeBase58Address(
-        b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+    address =  skycoin.cipher__BitcoinAddress()
+    # err = skycoin.skycoin.SKY_cipher_DecodeBase58BitcoinAddress(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+    # err = skycoin.SKY_cipher_DecodeBase58BitcoinAddress(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
+    err = skycoin.SKY_cipher_DecodeBase58Address(b"2GgFvqoyk9RjwVzj8tqfcXVXB4orBwoc9qv", address)
     assert err == skycoin.SKY_OK
-
-    err, byte = skycoin.SKY_cipher_Address_BitcoinBytes(address)
-    assert err == skycoin.SKY_OK
+    byte = skycoin.skycoin.SKY_cipher_BitcoinAddress_Bytes(address)
     assert len(byte) > 0
-    address2 = skycoin.cipher__Address()
-    err = skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, address2)
+    address_2 = skycoin.cipher__BitcoinAddress()
+    err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, address_2)
     assert err == skycoin.SKY_OK
-    assert address == address2
+    assert address_2 == address
+    assert 4 == 5
 
 
 # Test with array typedefs. Array typedefs were wrapped inside a struct
