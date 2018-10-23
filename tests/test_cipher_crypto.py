@@ -1,5 +1,4 @@
 import skycoin
-import tests.utils
 
 
 def test_TestNewPubKey():
@@ -15,10 +14,17 @@ def test_TestNewPubKey():
     _, data = skycoin.SKY_cipher_RandByte(100)
     assert skycoin.SKY_cipher_NewPubKey(data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
     _, data = skycoin.SKY_cipher_RandByte(33)
-    assert skycoin.SKY_cipher_NewPubKey(data, public_key) == skycoin.SKY_OK
-    assert public_key.toStr() == data
-
-
+    assert skycoin.SKY_cipher_NewPubKey(data, public_key) == skycoin.SKY_ErrInvalidPubKey
+    
+    pubkey = skycoin.cipher_PubKey()
+    seckey = skycoin.cipher_SecKey()
+    err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+    assert err == skycoin.SKY_OK
+    ptemp = pubkey.toStr()
+    pubkey2 = skycoin.cipher_PubKey()
+    err = skycoin.SKY_cipher_NewPubKey(ptemp, pubkey2)
+    assert err == skycoin.SKY_OK
+    assert pubkey == pubkey2
 
 
 def test_TestPubKeyVerify():
@@ -284,13 +290,17 @@ def test_TestGenerateDeterministicKeyPair():
     assert skycoin.SKY_cipher_PubKey_Verify(public_key) == skycoin.SKY_OK
     assert skycoin.SKY_cipher_SecKey_Verify(secret_key) == skycoin.SKY_OK
     
-def test_TestSecKeTest():
+
+def test_TestSecKeyTest():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
     secret_key_2 = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
-    assert skycoin.SKY_cipher_TestSecKey(secret_key) == skycoin.SKY_OK
-    assert skycoin.SKY_cipher_TestSecKey(secret_key_2) == skycoin.SKY_ErrInvalidSecKyVerification
+    value = skycoin.skycoin.SKY_cipher_CheckSecKey(secret_key)
+    assert value == skycoin.SKY_OK
+    value = skycoin.skycoin.SKY_cipher_CheckSecKey(secret_key_2)
+    assert value == skycoin.SKY_ErrInvalidSecKyVerification
+
 
 def test_TestSecKeyHashTest():
     public_key = skycoin.cipher_PubKey()
@@ -300,8 +310,11 @@ def test_TestSecKeyHashTest():
     sha_sum_1 = skycoin.cipher_SHA256()
     _, data = skycoin.SKY_cipher_RandByte(256)
     skycoin.SKY_cipher_SumSHA256(data, sha_sum_1)
-    assert skycoin.SKY_cipher_TestSecKeyHash(secret_key, sha_sum_1) == skycoin.SKY_OK
-    assert skycoin.SKY_cipher_TestSecKeyHash(secret_key_2, sha_sum_1) == skycoin.SKY_ErrInvalidSecKyVerification
+    value = skycoin.skycoin.SKY_cipher_CheckSecKeyHash(secret_key, sha_sum_1)
+    assert value == skycoin.SKY_OK
+    value = skycoin.skycoin.SKY_cipher_CheckSecKeyHash(secret_key_2, sha_sum_1)
+    assert value == skycoin.SKY_ErrInvalidSecKyVerification
+
 
 def test_TestGenerateDeterministicKeyPairsUsesAllBytes():
     # Tests that if a seed >128 bits is used, the generator does not ignore bits > 128

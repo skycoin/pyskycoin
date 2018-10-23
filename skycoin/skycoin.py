@@ -1349,17 +1349,17 @@ def SKY_cipher_SignHash(p0, p1, p2):
     return _skycoin.SKY_cipher_SignHash(p0, p1, p2)
 SKY_cipher_SignHash = _skycoin.SKY_cipher_SignHash
 
-def SKY_cipher_ChkSig(p0, p1, p2):
-    return _skycoin.SKY_cipher_ChkSig(p0, p1, p2)
-SKY_cipher_ChkSig = _skycoin.SKY_cipher_ChkSig
+def SKY_cipher_VerifyAddressSignedHash(p0, p1, p2):
+    return _skycoin.SKY_cipher_VerifyAddressSignedHash(p0, p1, p2)
+SKY_cipher_VerifyAddressSignedHash = _skycoin.SKY_cipher_VerifyAddressSignedHash
 
 def SKY_cipher_VerifySignedHash(p0, p1):
     return _skycoin.SKY_cipher_VerifySignedHash(p0, p1)
 SKY_cipher_VerifySignedHash = _skycoin.SKY_cipher_VerifySignedHash
 
-def SKY_cipher_VerifySignature(p0, p1, p2):
-    return _skycoin.SKY_cipher_VerifySignature(p0, p1, p2)
-SKY_cipher_VerifySignature = _skycoin.SKY_cipher_VerifySignature
+def SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2):
+    return _skycoin.SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2)
+SKY_cipher_VerifyPubKeySignedHash = _skycoin.SKY_cipher_VerifyPubKeySignedHash
 
 def SKY_cipher_GenerateKeyPair(p0, p1):
     return _skycoin.SKY_cipher_GenerateKeyPair(p0, p1)
@@ -1865,12 +1865,12 @@ def SKY_coin_AddressUxOuts_Flatten(*args):
     return _skycoin.SKY_coin_AddressUxOuts_Flatten(*args)
 SKY_coin_AddressUxOuts_Flatten = _skycoin.SKY_coin_AddressUxOuts_Flatten
 
-def SKY_coin_AddressUxOuts_Sub(p0, p1, p2):
-    return _skycoin.SKY_coin_AddressUxOuts_Sub(p0, p1, p2)
+def SKY_coin_AddressUxOuts_Sub(p0, p1):
+    return _skycoin.SKY_coin_AddressUxOuts_Sub(p0, p1)
 SKY_coin_AddressUxOuts_Sub = _skycoin.SKY_coin_AddressUxOuts_Sub
 
-def SKY_coin_AddressUxOuts_Add(p0, p1, p2):
-    return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1, p2)
+def SKY_coin_AddressUxOuts_Add(p0, p1):
+    return _skycoin.SKY_coin_AddressUxOuts_Add(p0, p1)
 SKY_coin_AddressUxOuts_Add = _skycoin.SKY_coin_AddressUxOuts_Add
 
 def SKY_coin_AddressUxOuts_Get(*args):
@@ -2516,6 +2516,12 @@ class cipher__BitcoinAddress(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, cipher__BitcoinAddress, name)
     __repr__ = _swig_repr
+
+    def __eq__(self, a):
+        return _skycoin.cipher__BitcoinAddress___eq__(self, a)
+
+    def toStr(self):
+        return _skycoin.cipher__BitcoinAddress_toStr(self)
     __swig_setmethods__["Version"] = _skycoin.cipher__BitcoinAddress_Version_set
     __swig_getmethods__["Version"] = _skycoin.cipher__BitcoinAddress_Version_get
     if _newclass:
@@ -3215,7 +3221,7 @@ SKY_ErrInvalidHexLength = _skycoin.SKY_ErrInvalidHexLength
 SKY_ErrInvalidBytesLength = _skycoin.SKY_ErrInvalidBytesLength
 SKY_ErrInvalidPubKey = _skycoin.SKY_ErrInvalidPubKey
 SKY_ErrInvalidSecKey = _skycoin.SKY_ErrInvalidSecKey
-SKY_ErrInvalidSigForPubKey = _skycoin.SKY_ErrInvalidSigForPubKey
+SKY_ErrInvalidSigPubKeyRecovery = _skycoin.SKY_ErrInvalidSigPubKeyRecovery
 SKY_ErrInvalidSecKeyHex = _skycoin.SKY_ErrInvalidSecKeyHex
 SKY_ErrInvalidAddressForSig = _skycoin.SKY_ErrInvalidAddressForSig
 SKY_ErrInvalidHashForSig = _skycoin.SKY_ErrInvalidHashForSig
@@ -3273,7 +3279,7 @@ SKY_ErrConnectionPoolClosed = _skycoin.SKY_ErrConnectionPoolClosed
 SKY_ErrWriteQueueFull = _skycoin.SKY_ErrWriteQueueFull
 SKY_ErrNoReachableConnections = _skycoin.SKY_ErrNoReachableConnections
 SKY_ErrMaxDefaultConnectionsReached = _skycoin.SKY_ErrMaxDefaultConnectionsReached
-SKY_ErrDisconnectInvalidVersion = _skycoin.SKY_ErrDisconnectInvalidVersion
+SKY_ErrDisconnectVersionNotSupported = _skycoin.SKY_ErrDisconnectVersionNotSupported
 SKY_ErrDisconnectIntroductionTimeout = _skycoin.SKY_ErrDisconnectIntroductionTimeout
 SKY_ErrDisconnectVersionSendFailed = _skycoin.SKY_ErrDisconnectVersionSendFailed
 SKY_ErrDisconnectIsBlacklisted = _skycoin.SKY_ErrDisconnectIsBlacklisted
@@ -3282,7 +3288,7 @@ SKY_ErrDisconnectConnectedTwice = _skycoin.SKY_ErrDisconnectConnectedTwice
 SKY_ErrDisconnectIdle = _skycoin.SKY_ErrDisconnectIdle
 SKY_ErrDisconnectNoIntroduction = _skycoin.SKY_ErrDisconnectNoIntroduction
 SKY_ErrDisconnectIPLimitReached = _skycoin.SKY_ErrDisconnectIPLimitReached
-SKY_ErrDisconnectOtherError = _skycoin.SKY_ErrDisconnectOtherError
+SKY_ErrDisconnectIncomprehensibleError = _skycoin.SKY_ErrDisconnectIncomprehensibleError
 SKY_ErrDisconnectMaxDefaultConnectionReached = _skycoin.SKY_ErrDisconnectMaxDefaultConnectionReached
 SKY_ErrDisconnectMaxOutgoingConnectionsReached = _skycoin.SKY_ErrDisconnectMaxOutgoingConnectionsReached
 SKY_ConnectionError = _skycoin.SKY_ConnectionError
