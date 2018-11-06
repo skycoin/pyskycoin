@@ -40,11 +40,11 @@ def test_TestVerifyTransactionFee():
     assert 0 == hours
 
     #  A txn with no outputs hours and no coinhours burn fee is valid   
-    err = skycoin.SKY_fee_VerifyTransactionFee(emptyTxn, 0)
+    err = skycoin.SKY_fee_VerifyTransactionFee(emptyTxn, 0, 2)
     assert err == skycoin.SKY_ErrTxnNoFee
 
     # A txn with no outputs hours but with a coinhours burn fee is valid
-    err = skycoin.SKY_fee_VerifyTransactionFee(emptyTxn, 100)
+    err = skycoin.SKY_fee_VerifyTransactionFee(emptyTxn, 100, 2)
     assert err == skycoin.SKY_OK
 
     txn = utils.makeEmptyTransaction()
@@ -59,30 +59,30 @@ def test_TestVerifyTransactionFee():
     assert hours == int(4e6)
 
     # A txn with insufficient net coinhours burn fee is invalid
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 0)
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 0, 2)
     assert err == skycoin.SKY_ErrTxnNoFee
 
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 1)
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 1, 2)
     assert err == skycoin.SKY_ErrTxnInsufficientFee
 
     # A txn with sufficient net coinhours burn fee is valid
     err, hours = skycoin.SKY_coin_Transaction_OutputHours(txn)
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, hours)
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, hours, 2)
     assert err == skycoin.SKY_OK
     err, hours = skycoin.SKY_coin_Transaction_OutputHours(txn)
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, hours * 10)
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, hours * 10, 2)
     assert err == skycoin.SKY_OK
 
     # fee + hours overflows
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, utils.MaxUint64 - int(3e6))
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, utils.MaxUint64 - int(3e6), 2)
     assert err == skycoin.SKY_ERROR
 
     # txn has overflowing output hours
     err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, int(utils.MaxUint64 - 1e6 - 3e6 + 1))
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 10)
+    err = skycoin.SKY_fee_VerifyTransactionFee(txn, 10, 2)
     assert err == skycoin.SKY_ERROR
 
     cases = burnFactor2verifyTxFeeTestCase
@@ -91,7 +91,7 @@ def test_TestVerifyTransactionFee():
         txn = utils.makeEmptyTransaction()
         err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, tc.outputHours)
         assert tc.inputHours >= tc.outputHours
-        err = skycoin.SKY_fee_VerifyTransactionFee(txn, int(tc.inputHours - tc.outputHours))
+        err = skycoin.SKY_fee_VerifyTransactionFee(txn, int(tc.inputHours - tc.outputHours), 2)
         assert tc.err == err
 
 
@@ -124,10 +124,10 @@ def test_TestRequiredFee():
     cases = burnFactor2RequiredFeeTestCases
 
     for tc in cases:
-        err , fee = skycoin.SKY_fee_RequiredFee(tc.hours)
+        err , fee = skycoin.SKY_fee_RequiredFee(tc.hours, 2)
         assert err == skycoin.SKY_OK
         assert tc.fee == fee
-        err , remainingHours = skycoin.SKY_fee_RemainingHours(tc.hours)
+        err , remainingHours = skycoin.SKY_fee_RemainingHours(tc.hours, 2)
         assert err == skycoin.SKY_OK
         assert ((tc.hours - fee) == remainingHours)
 
@@ -229,7 +229,6 @@ def test_TestTransactionFee():
             inUxs[i].Head.Time = b.time
             inUxs[i].Body.Coins = int(b.coins)
             inUxs[i].Body.Hours = int(b.hours)
-        
         err, fee = skycoin.SKY_fee_TransactionFee(tx, int(tc.headTime), inUxs)
         assert err == tc.err
         assert tc.fee == fee

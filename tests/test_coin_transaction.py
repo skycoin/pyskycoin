@@ -246,10 +246,6 @@ def test_TestTransactionSignInputs():
         handle, 0, txsig0) == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_GetSignatureAt(
         handle, 1, txsig1) == skycoin.SKY_OK
-    assert skycoin.SKY_cipher_ChkSig(a, sha1, txsig0) == skycoin.SKY_OK
-    assert skycoin.SKY_cipher_ChkSig(a2, sha2, txsig1) == skycoin.SKY_OK
-    assert skycoin.SKY_cipher_ChkSig(a, h, txsig1) == skycoin.SKY_ErrInvalidAddressForSig
-    assert skycoin.SKY_cipher_ChkSig(a2, h, txsig0) == skycoin.SKY_ErrInvalidAddressForSig
 
 def test_TestTransactionHash():
     handle, _ = utils.makeTransaction()

@@ -3004,86 +3004,84 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_GoStringMap_ swig_types[19]
 #define SWIGTYPE_p_GoString_ swig_types[20]
 #define SWIGTYPE_p_Handle swig_types[21]
-#define SWIGTYPE_p_Hash_Handle swig_types[22]
-#define SWIGTYPE_p_Number_Handle swig_types[23]
-#define SWIGTYPE_p_Options__Handle swig_types[24]
-#define SWIGTYPE_p_PasswordReader__Handle swig_types[25]
-#define SWIGTYPE_p_ReadableEntry__Handle swig_types[26]
-#define SWIGTYPE_p_ReadableUnspentOutputsSummary_Handle swig_types[27]
-#define SWIGTYPE_p_ReadableWallet__Handle swig_types[28]
-#define SWIGTYPE_p_Signature_Handle swig_types[29]
-#define SWIGTYPE_p_SortableTransactionResult_Handle swig_types[30]
-#define SWIGTYPE_p_SpendResult_Handle swig_types[31]
-#define SWIGTYPE_p_StatusResult_Handle swig_types[32]
-#define SWIGTYPE_p_Strings__Handle swig_types[33]
-#define SWIGTYPE_p_TransactionResult_Handle swig_types[34]
-#define SWIGTYPE_p_Transaction__Handle swig_types[35]
-#define SWIGTYPE_p_Transactions__Handle swig_types[36]
-#define SWIGTYPE_p_WalletResponse__Handle swig_types[37]
-#define SWIGTYPE_p_Wallet__Handle swig_types[38]
-#define SWIGTYPE_p_Wallets__Handle swig_types[39]
-#define SWIGTYPE_p_WebRpcClient__Handle swig_types[40]
-#define SWIGTYPE_p__GoString_ swig_types[41]
-#define SWIGTYPE_p___SIZE_TYPE__ swig_types[42]
-#define SWIGTYPE_p_a_20__unsigned_char swig_types[43]
-#define SWIGTYPE_p_a_32__unsigned_char swig_types[44]
-#define SWIGTYPE_p_a_33__unsigned_char swig_types[45]
-#define SWIGTYPE_p_a_4__unsigned_char swig_types[46]
-#define SWIGTYPE_p_a_65__unsigned_char swig_types[47]
-#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[48]
-#define SWIGTYPE_p_api__RichlistParams swig_types[49]
-#define SWIGTYPE_p_char swig_types[50]
-#define SWIGTYPE_p_cipher_Addresses swig_types[51]
-#define SWIGTYPE_p_cipher_Checksum swig_types[52]
-#define SWIGTYPE_p_cipher_PubKey swig_types[53]
-#define SWIGTYPE_p_cipher_PubKeys swig_types[54]
-#define SWIGTYPE_p_cipher_Ripemd160 swig_types[55]
-#define SWIGTYPE_p_cipher_SHA256 swig_types[56]
-#define SWIGTYPE_p_cipher_SHA256s swig_types[57]
-#define SWIGTYPE_p_cipher_SecKey swig_types[58]
-#define SWIGTYPE_p_cipher_SecKeys swig_types[59]
-#define SWIGTYPE_p_cipher_Sig swig_types[60]
-#define SWIGTYPE_p_cipher__Address swig_types[61]
-#define SWIGTYPE_p_cipher__BitcoinAddress swig_types[62]
-#define SWIGTYPE_p_cli__SendAmount swig_types[63]
-#define SWIGTYPE_p_coin_UxOutArray swig_types[64]
-#define SWIGTYPE_p_coin__Block swig_types[65]
-#define SWIGTYPE_p_coin__BlockBody swig_types[66]
-#define SWIGTYPE_p_coin__BlockHeader swig_types[67]
-#define SWIGTYPE_p_coin__SignedBlock swig_types[68]
-#define SWIGTYPE_p_coin__Transaction swig_types[69]
-#define SWIGTYPE_p_coin__TransactionOutput swig_types[70]
-#define SWIGTYPE_p_coin__UxBody swig_types[71]
-#define SWIGTYPE_p_coin__UxHead swig_types[72]
-#define SWIGTYPE_p_coin__UxOut swig_types[73]
-#define SWIGTYPE_p_double swig_types[74]
-#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[75]
-#define SWIGTYPE_p_f_Transaction__Handle_p_unsigned_long_long_p_void__unsigned_int swig_types[76]
-#define SWIGTYPE_p_float swig_types[77]
-#define SWIGTYPE_p_httphelper__Address swig_types[78]
-#define SWIGTYPE_p_int swig_types[79]
-#define SWIGTYPE_p_long_long swig_types[80]
-#define SWIGTYPE_p_p_GoSlice_ swig_types[81]
-#define SWIGTYPE_p_p_coin__Block swig_types[82]
-#define SWIGTYPE_p_p_coin__Transaction swig_types[83]
-#define SWIGTYPE_p_secp256k1go__Field swig_types[84]
-#define SWIGTYPE_p_secp256k1go__XY swig_types[85]
-#define SWIGTYPE_p_secp256k1go__XYZ swig_types[86]
-#define SWIGTYPE_p_short swig_types[87]
-#define SWIGTYPE_p_signed_char swig_types[88]
-#define SWIGTYPE_p_unsigned_char swig_types[89]
-#define SWIGTYPE_p_unsigned_int swig_types[90]
-#define SWIGTYPE_p_unsigned_long_long swig_types[91]
-#define SWIGTYPE_p_unsigned_short swig_types[92]
-#define SWIGTYPE_p_void swig_types[93]
-#define SWIGTYPE_p_wallet__Balance swig_types[94]
-#define SWIGTYPE_p_wallet__BalancePair swig_types[95]
-#define SWIGTYPE_p_wallet__Entry swig_types[96]
-#define SWIGTYPE_p_wallet__Note swig_types[97]
-#define SWIGTYPE_p_wallet__ReadableNote swig_types[98]
-#define SWIGTYPE_p_wallet__UxBalance swig_types[99]
-static swig_type_info *swig_types[101];
-static swig_module_info swig_module = {swig_types, 100, 0, 0, 0, 0};
+#define SWIGTYPE_p_Options__Handle swig_types[22]
+#define SWIGTYPE_p_PasswordReader__Handle swig_types[23]
+#define SWIGTYPE_p_ReadableEntry__Handle swig_types[24]
+#define SWIGTYPE_p_ReadableUnspentOutputsSummary_Handle swig_types[25]
+#define SWIGTYPE_p_ReadableWallet__Handle swig_types[26]
+#define SWIGTYPE_p_SortableTransactionResult_Handle swig_types[27]
+#define SWIGTYPE_p_SpendResult_Handle swig_types[28]
+#define SWIGTYPE_p_StatusResult_Handle swig_types[29]
+#define SWIGTYPE_p_Strings__Handle swig_types[30]
+#define SWIGTYPE_p_TransactionResult_Handle swig_types[31]
+#define SWIGTYPE_p_Transaction__Handle swig_types[32]
+#define SWIGTYPE_p_Transactions__Handle swig_types[33]
+#define SWIGTYPE_p_WalletResponse__Handle swig_types[34]
+#define SWIGTYPE_p_Wallet__Handle swig_types[35]
+#define SWIGTYPE_p_Wallets__Handle swig_types[36]
+#define SWIGTYPE_p_WebRpcClient__Handle swig_types[37]
+#define SWIGTYPE_p__GoString_ swig_types[38]
+#define SWIGTYPE_p___SIZE_TYPE__ swig_types[39]
+#define SWIGTYPE_p_a_20__unsigned_char swig_types[40]
+#define SWIGTYPE_p_a_32__unsigned_char swig_types[41]
+#define SWIGTYPE_p_a_33__unsigned_char swig_types[42]
+#define SWIGTYPE_p_a_4__unsigned_char swig_types[43]
+#define SWIGTYPE_p_a_65__unsigned_char swig_types[44]
+#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[45]
+#define SWIGTYPE_p_api__NetworkConnectionsFilter swig_types[46]
+#define SWIGTYPE_p_api__RichlistParams swig_types[47]
+#define SWIGTYPE_p_char swig_types[48]
+#define SWIGTYPE_p_cipher_Addresses swig_types[49]
+#define SWIGTYPE_p_cipher_Checksum swig_types[50]
+#define SWIGTYPE_p_cipher_PubKey swig_types[51]
+#define SWIGTYPE_p_cipher_PubKeys swig_types[52]
+#define SWIGTYPE_p_cipher_Ripemd160 swig_types[53]
+#define SWIGTYPE_p_cipher_SHA256 swig_types[54]
+#define SWIGTYPE_p_cipher_SHA256s swig_types[55]
+#define SWIGTYPE_p_cipher_SecKey swig_types[56]
+#define SWIGTYPE_p_cipher_SecKeys swig_types[57]
+#define SWIGTYPE_p_cipher_Sig swig_types[58]
+#define SWIGTYPE_p_cipher__Address swig_types[59]
+#define SWIGTYPE_p_cipher__BitcoinAddress swig_types[60]
+#define SWIGTYPE_p_cli__SendAmount swig_types[61]
+#define SWIGTYPE_p_coin_UxOutArray swig_types[62]
+#define SWIGTYPE_p_coin__Block swig_types[63]
+#define SWIGTYPE_p_coin__BlockBody swig_types[64]
+#define SWIGTYPE_p_coin__BlockHeader swig_types[65]
+#define SWIGTYPE_p_coin__SignedBlock swig_types[66]
+#define SWIGTYPE_p_coin__Transaction swig_types[67]
+#define SWIGTYPE_p_coin__TransactionOutput swig_types[68]
+#define SWIGTYPE_p_coin__UxBody swig_types[69]
+#define SWIGTYPE_p_coin__UxHead swig_types[70]
+#define SWIGTYPE_p_coin__UxOut swig_types[71]
+#define SWIGTYPE_p_double swig_types[72]
+#define SWIGTYPE_p_encrypt__ScryptChacha20poly1305 swig_types[73]
+#define SWIGTYPE_p_f_Transaction__Handle_p_unsigned_long_long_p_void__unsigned_int swig_types[74]
+#define SWIGTYPE_p_float swig_types[75]
+#define SWIGTYPE_p_httphelper__Address swig_types[76]
+#define SWIGTYPE_p_int swig_types[77]
+#define SWIGTYPE_p_long_long swig_types[78]
+#define SWIGTYPE_p_p_GoSlice_ swig_types[79]
+#define SWIGTYPE_p_p_coin__Block swig_types[80]
+#define SWIGTYPE_p_p_coin__Transaction swig_types[81]
+#define SWIGTYPE_p_secp256k1go__Field swig_types[82]
+#define SWIGTYPE_p_secp256k1go__XY swig_types[83]
+#define SWIGTYPE_p_secp256k1go__XYZ swig_types[84]
+#define SWIGTYPE_p_short swig_types[85]
+#define SWIGTYPE_p_signed_char swig_types[86]
+#define SWIGTYPE_p_unsigned_char swig_types[87]
+#define SWIGTYPE_p_unsigned_int swig_types[88]
+#define SWIGTYPE_p_unsigned_long_long swig_types[89]
+#define SWIGTYPE_p_unsigned_short swig_types[90]
+#define SWIGTYPE_p_void swig_types[91]
+#define SWIGTYPE_p_wallet__Balance swig_types[92]
+#define SWIGTYPE_p_wallet__BalancePair swig_types[93]
+#define SWIGTYPE_p_wallet__Entry swig_types[94]
+#define SWIGTYPE_p_wallet__Note swig_types[95]
+#define SWIGTYPE_p_wallet__ReadableNote swig_types[96]
+#define SWIGTYPE_p_wallet__UxBalance swig_types[97]
+static swig_type_info *swig_types[99];
+static swig_module_info swig_module = {swig_types, 98, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3749,7 +3747,7 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 
  
 	GoUint32 wrap_SKY_coin_AddressUxOuts_Set(AddressUxOuts_Handle p0, cipher__Address* p1, coin_UxOutArray* __uxIn){
-		GoSlice_ data;
+		coin__UxArray data;
 		data.data = __uxIn->data;
 		data.len = __uxIn->count;
 		data.cap = __uxIn->count;
@@ -3782,6 +3780,15 @@ SWIG_AsVal_unsigned_SS_long_SS_long (PyObject *obj, unsigned long long *val)
 			__out_hashes->count = data.len;
 		}
 		return result;
+	}
+
+
+	GoUint32 wrap_SKY_fee_TransactionFee(Transaction__Handle __txn, GoUint64 __p1, coin_UxOutArray*  __uxIn, GoUint64  *__return_fee ){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_fee_TransactionFee(__txn,__p1, &data,__return_fee);
 	}
 
 SWIGINTERN int cipher_PubKey___eq__(cipher_PubKey *self,cipher_PubKey *a){
@@ -4311,7 +4318,7 @@ SWIGINTERN void coin__UxBody_SetSrcTransaction(coin__UxBody *self,PyObject *o){
 		}
 	}
 SWIGINTERN int coin__UxOut___eq__(coin__UxOut *self,coin__UxOut *u){
-		return memcmp(&self, u, sizeof(coin__UxOut)) == 0;
+		return memcmp(self, u, sizeof(coin__UxOut)) == 0;
 	}
 #ifdef __cplusplus
 extern "C" {
@@ -5599,23 +5606,36 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Keys__SWIG_0(PyObject *SWIGUNU
   PyObject *resultobj = 0;
   AddressUxOuts_Handle arg1 ;
   cipher_Addresses *arg2 = (cipher_Addresses *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
+  cipher_Addresses temp2 ;
   PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_coin_AddressUxOuts_Keys",&obj0,&obj1)) SWIG_fail;
+  {
+    temp2.data = NULL;
+    temp2.count = 0;
+    arg2 = &temp2;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_AddressUxOuts_Keys",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_cipher_Addresses, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_coin_AddressUxOuts_Keys" "', argument " "2"" of type '" "cipher_Addresses *""'"); 
-  }
-  arg2 = (cipher_Addresses *)(argp2);
   result = (GoUint32)wrap_SKY_coin_AddressUxOuts_Keys(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    int i;
+    PyObject *list = PyList_New(0);
+    for (i = 0; i < arg2->count; i++) {
+      cipher__Address* key = &(arg2->data[i]);
+      cipher__Address* newKey = malloc(sizeof(cipher__Address));
+      memcpy(newKey, key, sizeof(cipher__Address));
+      PyObject *o = SWIG_NewPointerObj(SWIG_as_voidptr(newKey), SWIGTYPE_p_cipher__Address, SWIG_POINTER_OWN );
+      PyList_Append(list, o);
+      Py_DECREF(o);
+    }
+    if( arg2->data != NULL)
+    free( (void*)arg2->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
   return resultobj;
 fail:
   return NULL;
@@ -5658,6 +5678,68 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Hashes__SWIG_0(PyObject *SWIGUN
   }
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  Transaction__Handle arg1 ;
+  GoUint64 arg2 ;
+  coin_UxOutArray *arg3 = (coin_UxOutArray *) 0 ;
+  GoUint64 *arg4 = (GoUint64 *) 0 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  coin_UxOutArray temp3 ;
+  GoUint64 temp4 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  GoUint32 result;
+  
+  {
+    temp4 = 0;
+    arg4 = &temp4;
+  }
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_fee_TransactionFee",&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    SWIG_AsVal_long(obj0, (long*)&arg1);
+  }
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_TransactionFee" "', argument " "2"" of type '" "GoUint64""'");
+  } 
+  arg2 = (GoUint64)(val2);
+  {
+    int i;
+    arg3 = &temp3;
+    arg3->count = PyList_Size(obj2);
+    arg3->data = malloc(sizeof(coin__UxOut) * arg3->count);
+    coin__UxOut* pdata = arg3->data;
+    for(i = 0; i < arg3->count; i++){
+      PyObject *o = PyList_GetItem(obj2, i);
+      void *argp = 0;
+      int res = SWIG_ConvertPtr(o, &argp, SWIGTYPE_p_coin__UxOut, 0 | 0);
+      if (!SWIG_IsOK(res))
+      SWIG_exception_fail(SWIG_TypeError, "expecting type UxOut");
+      coin__UxOut* p = (coin__UxOut*)argp;
+      memcpy(pdata, p, sizeof(coin__UxOut));
+      pdata++;
+    }
+  }
+  result = (GoUint32)wrap_SKY_fee_TransactionFee(arg1,arg2,arg3,arg4);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg4 ));
+  }
+  {
+    if (arg3->data) free(arg3->data);
+  }
+  return resultobj;
+fail:
+  {
+    if (arg3->data) free(arg3->data);
+  }
   return NULL;
 }
 
@@ -11024,22 +11106,31 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkConnections(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  Handle *arg2 = (Handle *) 0 ;
-  Handle temp2 ;
+  api__NetworkConnectionsFilter *arg2 = (api__NetworkConnectionsFilter *) 0 ;
+  Handle *arg3 = (Handle *) 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  Handle temp3 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   GoUint32 result;
   
   {
-    arg2 = &temp2;
+    arg3 = &temp3;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkConnections",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_api_Client_NetworkConnections",&obj0,&obj1)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_api_Client_NetworkConnections(arg1,arg2);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_api__NetworkConnectionsFilter, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_api_Client_NetworkConnections" "', argument " "2"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg2 = (api__NetworkConnectionsFilter *)(argp2);
+  result = (GoUint32)SKY_api_Client_NetworkConnections(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg3));
   }
   return resultobj;
 fail:
@@ -11047,25 +11138,29 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkDefaultConnections(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkDefaultPeers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  Handle *arg2 = (Handle *) 0 ;
-  Handle temp2 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoSlice_ temp2 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
   {
-    arg2 = &temp2;
+    temp2.data = NULL;
+    temp2.len = 0;
+    temp2.cap = 0;
+    arg2 = (coin__UxArray *)&temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkDefaultConnections",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkDefaultPeers",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_api_Client_NetworkDefaultConnections(arg1,arg2);
+  result = (GoUint32)SKY_api_Client_NetworkDefaultPeers(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
+    free( (void*)arg2->data );
   }
   return resultobj;
 fail:
@@ -11073,25 +11168,29 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkTrustedConnections(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkTrustedPeers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  Handle *arg2 = (Handle *) 0 ;
-  Handle temp2 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoSlice_ temp2 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
   {
-    arg2 = &temp2;
+    temp2.data = NULL;
+    temp2.len = 0;
+    temp2.cap = 0;
+    arg2 = (coin__UxArray *)&temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkTrustedConnections",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkTrustedPeers",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_api_Client_NetworkTrustedConnections(arg1,arg2);
+  result = (GoUint32)SKY_api_Client_NetworkTrustedPeers(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
+    free( (void*)arg2->data );
   }
   return resultobj;
 fail:
@@ -11099,25 +11198,29 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkExchangeableConnections(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_api_Client_NetworkExchangedPeers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Client__Handle arg1 ;
-  Handle *arg2 = (Handle *) 0 ;
-  Handle temp2 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoSlice_ temp2 ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
   
   {
-    arg2 = &temp2;
+    temp2.data = NULL;
+    temp2.len = 0;
+    temp2.cap = 0;
+    arg2 = (coin__UxArray *)&temp2;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkExchangeableConnections",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_api_Client_NetworkExchangedPeers",&obj0)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  result = (GoUint32)SKY_api_Client_NetworkExchangeableConnections(arg1,arg2);
+  result = (GoUint32)SKY_api_Client_NetworkExchangedPeers(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
+    free( (void*)arg2->data );
   }
   return resultobj;
 fail:
@@ -11656,392 +11759,6 @@ SWIGINTERN PyObject *_wrap_SKY_api_Client_DecryptWallet(PyObject *SWIGUNUSEDPARM
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg4));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_Print(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  GoString arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XY_Print",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_Print" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_XY_Print', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_XY_Print(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_ParsePubkey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  GoSlice arg2 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  arg3 = &temp3;
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XY_ParsePubkey",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_ParsePubkey" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_XY_ParsePubkey', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_XY_ParsePubkey(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_Bytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XY_Bytes",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_Bytes" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XY_Bytes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_BytesUncompressed(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XY_BytesUncompressed",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_BytesUncompressed" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XY_BytesUncompressed(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_SetXY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg3 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_XY_SetXY",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_SetXY" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XY_SetXY" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_secp256k1go_XY_SetXY" "', argument " "3"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg3 = (secp256k1go__Field *)(argp3);
-  result = (GoUint32)SKY_secp256k1go_XY_SetXY(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_IsValid(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XY_IsValid",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_IsValid" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XY_IsValid(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_SetXYZ(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XY_SetXYZ",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_SetXYZ" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XY_SetXYZ" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XY_SetXYZ(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_Neg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  secp256k1go__XY *arg2 = (secp256k1go__XY *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XY_Neg",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_Neg" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XY_Neg" "', argument " "2"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg2 = (secp256k1go__XY *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XY_Neg(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_SetXO(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  GoUint8 arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  unsigned char val3 ;
-  int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_XY_SetXO",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_SetXO" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XY_SetXO" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  ecode3 = SWIG_AsVal_unsigned_SS_char(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_secp256k1go_XY_SetXO" "', argument " "3"" of type '" "GoUint8""'");
-  } 
-  arg3 = (GoUint8)(val3);
-  result = (GoUint32)SKY_secp256k1go_XY_SetXO(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_AddXY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  secp256k1go__XY *arg2 = (secp256k1go__XY *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XY_AddXY",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_AddXY" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XY_AddXY" "', argument " "2"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg2 = (secp256k1go__XY *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XY_AddXY(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XY_GetPublicKey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XY_GetPublicKey",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XY_GetPublicKey" "', argument " "1"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg1 = (secp256k1go__XY *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XY_GetPublicKey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
   }
   return resultobj;
 fail:
@@ -13311,374 +13028,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_DecompressPoint(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoUint8 arg2 ;
-  GoSlice arg3 ;
-  unsigned char val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_DecompressPoint",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_DecompressPoint', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  ecode2 = SWIG_AsVal_unsigned_SS_char(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_secp256k1go_DecompressPoint" "', argument " "2"" of type '" "GoUint8""'");
-  } 
-  arg2 = (GoUint8)(val2);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj2, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_DecompressPoint', expecting string");
-    }
-    (&arg3)->data = buffer;
-    (&arg3)->len = size - 1;
-    (&arg3)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_DecompressPoint(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_RecoverPublicKey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoInt arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoInt *arg5 = (GoInt *) 0 ;
-  long long val3 ;
-  int ecode3 = 0 ;
-  GoSlice_ temp4 ;
-  GoInt temp5 ;
-  int res5 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp4.data = NULL;
-    temp4.len = 0;
-    temp4.cap = 0;
-    arg4 = (coin__UxArray *)&temp4;
-  }
-  arg5 = &temp5;
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_RecoverPublicKey",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_RecoverPublicKey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_RecoverPublicKey', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  ecode3 = SWIG_AsVal_long_SS_long(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_secp256k1go_RecoverPublicKey" "', argument " "3"" of type '" "GoInt""'");
-  } 
-  arg3 = (GoInt)(val3);
-  result = (GoUint32)SKY_secp256k1go_RecoverPublicKey(arg1,arg2,arg3,arg4,arg5);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg4->data, arg4->len  ));
-    free( (void*)arg4->data );
-  }
-  if (SWIG_IsTmpObj(res5)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg5)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res5) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg5), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Multiply(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Multiply",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Multiply', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Multiply', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_Multiply(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_BaseMultiply(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_BaseMultiply",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_BaseMultiply', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_BaseMultiply(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_BaseMultiplyAdd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_BaseMultiplyAdd",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_BaseMultiplyAdd', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_BaseMultiplyAdd', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_BaseMultiplyAdd(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_GeneratePublicKey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_GeneratePublicKey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_GeneratePublicKey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_GeneratePublicKey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_SeckeyIsValid(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_SeckeyIsValid",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_SeckeyIsValid', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_SeckeyIsValid(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_PubkeyIsValid(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_PubkeyIsValid",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_PubkeyIsValid', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_PubkeyIsValid(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_base58_String2Hex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
@@ -14548,78 +13897,6 @@ SWIGINTERN PyObject *_wrap_SKY_iputil_SplitAddr(PyObject *SWIGUNUSEDPARM(self), 
   } else {
     int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_short, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_SumSHA256(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_SumSHA256",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SumSHA256', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_SumSHA256(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_RandByte(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoInt arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  long long val1 ;
-  int ecode1 = 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_RandByte",&obj0)) SWIG_fail;
-  ecode1 = SWIG_AsVal_long_SS_long(obj0, &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_secp256k1_RandByte" "', argument " "1"" of type '" "GoInt""'");
-  } 
-  arg1 = (GoInt)(val1);
-  result = (GoUint32)SKY_secp256k1_RandByte(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
   }
   return resultobj;
 fail:
@@ -15969,316 +15246,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Create(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle *arg1 = (Signature_Handle *) 0 ;
-  Handle temp1 ;
-  GoUint32 result;
-  
-  {
-    arg1 = &temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_secp256k1go_Signature_Create")) SWIG_fail;
-  result = (GoUint32)SKY_secp256k1go_Signature_Create(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg1));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_GetR(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  Number_Handle *arg2 = (Number_Handle *) 0 ;
-  Handle temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    arg2 = &temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_GetR",&obj0)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_GetR(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_GetS(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  Number_Handle *arg2 = (Number_Handle *) 0 ;
-  Handle temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    arg2 = &temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_GetS",&obj0)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_GetS(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg2));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Print(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  GoString arg2 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Signature_Print",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Signature_Print', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_Print(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Verify(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  secp256k1go__XY *arg2 = (secp256k1go__XY *) 0 ;
-  Number_Handle arg3 ;
-  GoUint8 *arg4 = (GoUint8 *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  GoUint8 temp4 ;
-  int res4 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  arg4 = &temp4;
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_Signature_Verify",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Signature_Verify" "', argument " "2"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg2 = (secp256k1go__XY *)(argp2);
-  {
-    SWIG_AsVal_long(obj2, (long*)&arg3);
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_Verify(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res4)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Recover(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  secp256k1go__XY *arg2 = (secp256k1go__XY *) 0 ;
-  Number_Handle arg3 ;
-  GoInt arg4 ;
-  GoUint8 *arg5 = (GoUint8 *) 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  long long val4 ;
-  int ecode4 = 0 ;
-  GoUint8 temp5 ;
-  int res5 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  GoUint32 result;
-  
-  arg5 = &temp5;
-  if (!PyArg_ParseTuple(args,(char *)"OOOO:SKY_secp256k1go_Signature_Recover",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Signature_Recover" "', argument " "2"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg2 = (secp256k1go__XY *)(argp2);
-  {
-    SWIG_AsVal_long(obj2, (long*)&arg3);
-  }
-  ecode4 = SWIG_AsVal_long_SS_long(obj3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "SKY_secp256k1go_Signature_Recover" "', argument " "4"" of type '" "GoInt""'");
-  } 
-  arg4 = (GoInt)(val4);
-  result = (GoUint32)SKY_secp256k1go_Signature_Recover(arg1,arg2,arg3,arg4,arg5);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res5)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg5)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res5) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg5), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Sign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  Number_Handle arg2 ;
-  Number_Handle arg3 ;
-  Number_Handle arg4 ;
-  GoInt *arg5 = (GoInt *) 0 ;
-  GoInt *arg6 = (GoInt *) 0 ;
-  GoInt temp5 ;
-  int res5 = SWIG_TMPOBJ ;
-  GoInt temp6 ;
-  int res6 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  GoUint32 result;
-  
-  arg5 = &temp5;
-  arg6 = &temp6;
-  if (!PyArg_ParseTuple(args,(char *)"OOOO:SKY_secp256k1go_Signature_Sign",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    SWIG_AsVal_long(obj1, (long*)&arg2);
-  }
-  {
-    SWIG_AsVal_long(obj2, (long*)&arg3);
-  }
-  {
-    SWIG_AsVal_long(obj3, (long*)&arg4);
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_Sign(arg1,arg2,arg3,arg4,arg5,arg6);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res5)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg5)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res5) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg5), SWIGTYPE_p_long_long, new_flags));
-  }
-  if (SWIG_IsTmpObj(res6)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg6)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res6) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg6), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_ParseBytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  GoSlice arg2 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Signature_ParseBytes",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Signature_ParseBytes', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_ParseBytes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Signature_Bytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Signature_Handle arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Signature_Bytes",&obj0)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  result = (GoUint32)SKY_secp256k1go_Signature_Bytes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_cli_App_Run(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   App__Handle arg1 ;
@@ -16460,66 +15427,6 @@ SWIGINTERN PyObject *_wrap_SKY_cli_Setenv(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   result = (GoUint32)SKY_cli_Setenv(arg1,arg2);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_poly1305_Verify(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoUint8 *arg4 = (GoUint8 *) 0 ;
-  GoSlice_ temp1 ;
-  GoSlice_ temp3 ;
-  GoUint8 temp4 ;
-  int res4 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  arg4 = &temp4;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_poly1305_Verify",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_poly1305_Verify', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_poly1305_Verify(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  if (SWIG_IsTmpObj(res4)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_unsigned_char, new_flags));
-  }
   return resultobj;
 fail:
   return NULL;
@@ -17066,510 +15973,6 @@ SWIGINTERN PyObject *_wrap_SKY_wallet_Entry_VerifyPublic(PyObject *SWIGUNUSEDPAR
   arg1 = (wallet__Entry *)(argp1);
   result = (GoUint32)SKY_wallet_Entry_VerifyPublic(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Print(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  GoString arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XYZ_Print",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Print" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_XYZ_Print', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_XYZ_Print(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_SetXY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XY *arg2 = (secp256k1go__XY *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XYZ_SetXY",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_SetXY" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_SetXY" "', argument " "2"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg2 = (secp256k1go__XY *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XYZ_SetXY(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_IsInfinity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XYZ_IsInfinity",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_IsInfinity" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XYZ_IsInfinity(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_IsValid(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XYZ_IsValid",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_IsValid" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XYZ_IsValid(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Normalize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_XYZ_Normalize",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Normalize" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_XYZ_Normalize(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Equals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  GoUint8 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  arg3 = &temp3;
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XYZ_Equals",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Equals" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_Equals" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XYZ_Equals(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_ECmult(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  Number_Handle arg3 ;
-  Number_Handle arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOOO:SKY_secp256k1go_XYZ_ECmult",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_ECmult" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_ECmult" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  {
-    SWIG_AsVal_long(obj2, (long*)&arg3);
-  }
-  {
-    SWIG_AsVal_long(obj3, (long*)&arg4);
-  }
-  result = (GoUint32)SKY_secp256k1go_XYZ_ECmult(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Neg(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XYZ_Neg",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Neg" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_Neg" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XYZ_Neg(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Double(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_XYZ_Double",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Double" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_Double" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_XYZ_Double(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_AddXY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XY *arg3 = (secp256k1go__XY *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_XYZ_AddXY",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_AddXY" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_AddXY" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_secp256k1go__XY, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_secp256k1go_XYZ_AddXY" "', argument " "3"" of type '" "secp256k1go__XY *""'"); 
-  }
-  arg3 = (secp256k1go__XY *)(argp3);
-  result = (GoUint32)SKY_secp256k1go_XYZ_AddXY(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_XYZ_Add(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg2 = (secp256k1go__XYZ *) 0 ;
-  secp256k1go__XYZ *arg3 = (secp256k1go__XYZ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_XYZ_Add",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_XYZ_Add" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_XYZ_Add" "', argument " "2"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg2 = (secp256k1go__XYZ *)(argp2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_secp256k1go_XYZ_Add" "', argument " "3"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg3 = (secp256k1go__XYZ *)(argp3);
-  result = (GoUint32)SKY_secp256k1go_XYZ_Add(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_ECmultGen(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
-  Number_Handle arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_ECmultGen",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__XYZ, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_ECmultGen" "', argument " "1"" of type '" "secp256k1go__XYZ *""'"); 
-  }
-  arg1 = (secp256k1go__XYZ *)(argp1);
-  {
-    SWIG_AsVal_long(obj1, (long*)&arg2);
-  }
-  result = (GoUint32)SKY_secp256k1go_ECmultGen(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_encrypt_Sha256Xor_Encrypt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_encrypt_Sha256Xor_Encrypt",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encrypt_Sha256Xor_Encrypt', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encrypt_Sha256Xor_Encrypt', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_encrypt_Sha256Xor_Encrypt(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_encrypt_Sha256Xor_Decrypt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_encrypt_Sha256Xor_Decrypt",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encrypt_Sha256Xor_Decrypt', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_encrypt_Sha256Xor_Decrypt', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_encrypt_Sha256Xor_Decrypt(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
   return resultobj;
 fail:
   return NULL;
@@ -19025,274 +17428,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_ripemd160_New(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Hash_Handle *arg1 = (Hash_Handle *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_ripemd160_New",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_Hash_Handle, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_ripemd160_New" "', argument " "1"" of type '" "Hash_Handle *""'"); 
-  }
-  arg1 = (Hash_Handle *)(argp1);
-  result = (GoUint32)SKY_ripemd160_New(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_ripemd160_Write(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Hash_Handle arg1 ;
-  GoSlice arg2 ;
-  GoInt *arg3 = (GoInt *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  GoInt temp3 ;
-  int res3 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  arg3 = &temp3;
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_ripemd160_Write",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_Hash_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_ripemd160_Write" "', argument " "1"" of type '" "Hash_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_ripemd160_Write" "', argument " "1"" of type '" "Hash_Handle""'");
-    } else {
-      arg1 = *((Hash_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_ripemd160_Write', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_ripemd160_Write(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_ripemd160_Sum(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Hash_Handle arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_ripemd160_Sum",&obj0,&obj1)) SWIG_fail;
-  {
-    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_Hash_Handle,  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_ripemd160_Sum" "', argument " "1"" of type '" "Hash_Handle""'"); 
-    }  
-    if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SKY_ripemd160_Sum" "', argument " "1"" of type '" "Hash_Handle""'");
-    } else {
-      arg1 = *((Hash_Handle *)(argp1));
-    }
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_ripemd160_Sum', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_ripemd160_Sum(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Number_Create(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Number_Handle *arg1 = (Number_Handle *) 0 ;
-  Handle temp1 ;
-  GoUint32 result;
-  
-  {
-    arg1 = &temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_secp256k1go_Number_Create")) SWIG_fail;
-  result = (GoUint32)SKY_secp256k1go_Number_Create(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long(*arg1));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Number_Print(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Number_Handle arg1 ;
-  GoString arg2 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Number_Print",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Number_Print', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_Number_Print(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Number_SetHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Number_Handle arg1 ;
-  GoString arg2 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Number_SetHex",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Number_SetHex', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_Number_SetHex(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Number_IsOdd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Number_Handle arg1 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Number_IsOdd",&obj0)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  result = (GoUint32)SKY_secp256k1go_Number_IsOdd(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Number_IsEqual(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  Number_Handle arg1 ;
-  Number_Handle arg2 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  GoUint8 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  arg3 = &temp3;
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Number_IsEqual",&obj0,&obj1)) SWIG_fail;
-  {
-    SWIG_AsVal_long(obj0, (long*)&arg1);
-  }
-  {
-    SWIG_AsVal_long(obj1, (long*)&arg2);
-  }
-  result = (GoUint32)SKY_secp256k1go_Number_IsEqual(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_coin_UxOut_Hash(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
@@ -20276,37 +18411,32 @@ fail:
 
 SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Keys(PyObject *self, PyObject *args) {
   Py_ssize_t argc;
-  PyObject *argv[3] = {
+  PyObject *argv[2] = {
     0
   };
   Py_ssize_t ii;
   
   if (!PyTuple_Check(args)) SWIG_fail;
   argc = args ? PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 2) && (ii < argc); ii++) {
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
     argv[ii] = PyTuple_GET_ITEM(args,ii);
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
-      return _wrap_SKY_coin_AddressUxOuts_Keys__SWIG_1(self, args);
+      return _wrap_SKY_coin_AddressUxOuts_Keys__SWIG_0(self, args);
     }
   }
-  if (argc == 2) {
+  if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_cipher_Addresses, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_SKY_coin_AddressUxOuts_Keys__SWIG_0(self, args);
-      }
+      return _wrap_SKY_coin_AddressUxOuts_Keys__SWIG_1(self, args);
     }
   }
   
@@ -20363,18 +18493,18 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Flatten(PyObject *self, PyObje
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       return _wrap_SKY_coin_AddressUxOuts_Flatten__SWIG_0(self, args);
     }
   }
   if (argc == 1) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       return _wrap_SKY_coin_AddressUxOuts_Flatten__SWIG_1(self, args);
     }
@@ -20504,9 +18634,9 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Get(PyObject *self, PyObject *
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_cipher__Address, 0);
@@ -20518,9 +18648,9 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Get(PyObject *self, PyObject *
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_cipher__Address, 0);
@@ -20695,9 +18825,9 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Set(PyObject *self, PyObject *
   }
   if (argc == 2) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_cipher__Address, 0);
@@ -20709,9 +18839,9 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Set(PyObject *self, PyObject *
   }
   if (argc == 3) {
     int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_AddressUxOuts_Handle, 0);
-    _v = SWIG_CheckState(res);
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
     if (_v) {
       void *vptr = 0;
       int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_cipher__Address, 0);
@@ -21037,757 +19167,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_GenerateKeyPair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp1 ;
-  GoSlice_ temp2 ;
-  GoUint32 result;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_secp256k1_GenerateKeyPair")) SWIG_fail;
-  result = (GoUint32)SKY_secp256k1_GenerateKeyPair(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_PubkeyFromSeckey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_PubkeyFromSeckey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_PubkeyFromSeckey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_PubkeyFromSeckey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_UncompressPubkey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_UncompressPubkey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_UncompressPubkey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_UncompressPubkey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_UncompressedPubkeyFromSeckey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_UncompressedPubkeyFromSeckey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_UncompressedPubkeyFromSeckey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_UncompressedPubkeyFromSeckey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_Secp256k1Hash(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_Secp256k1Hash",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_Secp256k1Hash', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_Secp256k1Hash(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_GenerateDeterministicKeyPair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_GenerateDeterministicKeyPair",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_GenerateDeterministicKeyPair', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_GenerateDeterministicKeyPair(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_DeterministicKeyPairIterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice_ temp2 ;
-  GoSlice_ temp3 ;
-  GoSlice_ temp4 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  {
-    temp4.data = NULL;
-    temp4.len = 0;
-    temp4.cap = 0;
-    arg4 = (coin__UxArray *)&temp4;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_DeterministicKeyPairIterator",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_DeterministicKeyPairIterator', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_DeterministicKeyPairIterator(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg4->data, arg4->len  ));
-    free( (void*)arg4->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_Sign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1_Sign",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_Sign', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_Sign', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_Sign(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_SignDeterministic(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  coin__UxArray *arg4 = (coin__UxArray *) 0 ;
-  GoSlice_ temp4 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp4.data = NULL;
-    temp4.len = 0;
-    temp4.cap = 0;
-    arg4 = (coin__UxArray *)&temp4;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1_SignDeterministic",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignDeterministic', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignDeterministic', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj2, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignDeterministic', expecting string");
-    }
-    (&arg3)->data = buffer;
-    (&arg3)->len = size - 1;
-    (&arg3)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_SignDeterministic(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg4->data, arg4->len  ));
-    free( (void*)arg4->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_VerifySeckey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_VerifySeckey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifySeckey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_VerifySeckey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_VerifyPubkey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_VerifyPubkey",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifyPubkey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_VerifyPubkey(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_VerifySignatureValidity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1_VerifySignatureValidity",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifySignatureValidity', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_VerifySignatureValidity(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_VerifySignature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  GoInt *arg4 = (GoInt *) 0 ;
-  GoInt temp4 ;
-  int res4 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  arg4 = &temp4;
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1_VerifySignature",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifySignature', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifySignature', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj2, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_VerifySignature', expecting string");
-    }
-    (&arg3)->data = buffer;
-    (&arg3)->len = size - 1;
-    (&arg3)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_VerifySignature(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res4)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg4)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res4) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg4), SWIGTYPE_p_long_long, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_SignatureErrorString(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoSlice arg3 ;
-  GoString_ *arg4 = (GoString_ *) 0 ;
-  GoString temp4 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp4.p = NULL;
-    temp4.n = 0;
-    arg4 = (GoString_ *)&temp4;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1_SignatureErrorString",&obj0,&obj1,&obj2)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignatureErrorString', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignatureErrorString', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj2, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_SignatureErrorString', expecting string");
-    }
-    (&arg3)->data = buffer;
-    (&arg3)->len = size - 1;
-    (&arg3)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_SignatureErrorString(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg4->p, arg4->n  ));
-    free( (void*)arg4->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_RecoverPubkey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1_RecoverPubkey",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_RecoverPubkey', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_RecoverPubkey', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_RecoverPubkey(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1_ECDH(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  coin__UxArray *arg3 = (coin__UxArray *) 0 ;
-  GoSlice_ temp3 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp3.data = NULL;
-    temp3.len = 0;
-    temp3.cap = 0;
-    arg3 = (coin__UxArray *)&temp3;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1_ECDH",&obj0,&obj1)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_ECDH', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1_ECDH', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1_ECDH(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg3->data, arg3->len  ));
-    free( (void*)arg3->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_apputil_CatchInterruptPanic(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint32 result;
@@ -21905,13 +19284,17 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFee(PyObject *SWIGUNUSEDPARM
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
+  GoUint64 arg3 ;
   unsigned long long val2 ;
   int ecode2 = 0 ;
+  unsigned long long val3 ;
+  int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_fee_VerifyTransactionFee",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_fee_VerifyTransactionFee",&obj0,&obj1,&obj2)) SWIG_fail;
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
@@ -21920,7 +19303,12 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFee(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_VerifyTransactionFee" "', argument " "2"" of type '" "GoUint64""'");
   } 
   arg2 = (GoUint64)(val2);
-  result = (GoUint32)SKY_fee_VerifyTransactionFee(arg1,arg2);
+  ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFee" "', argument " "3"" of type '" "GoUint64""'");
+  } 
+  arg3 = (GoUint64)(val3);
+  result = (GoUint32)SKY_fee_VerifyTransactionFee(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -21932,15 +19320,19 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFeeForHours(PyObject *SWIGUN
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
   GoUint64 arg2 ;
+  GoUint64 arg3 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
   unsigned long long val2 ;
   int ecode2 = 0 ;
+  unsigned long long val3 ;
+  int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
   GoUint32 result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_fee_VerifyTransactionFeeForHours",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_fee_VerifyTransactionFeeForHours",&obj0,&obj1,&obj2)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "1"" of type '" "GoUint64""'");
@@ -21951,7 +19343,12 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFeeForHours(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "2"" of type '" "GoUint64""'");
   } 
   arg2 = (GoUint64)(val2);
-  result = (GoUint32)SKY_fee_VerifyTransactionFeeForHours(arg1,arg2);
+  ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "3"" of type '" "GoUint64""'");
+  } 
+  arg3 = (GoUint64)(val3);
+  result = (GoUint32)SKY_fee_VerifyTransactionFeeForHours(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
 fail:
@@ -21962,27 +19359,36 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_fee_RequiredFee(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
-  GoUint64 temp2 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  GoUint64 temp3 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   GoUint32 result;
   
   {
-    temp2 = 0;
-    arg2 = &temp2;
+    temp3 = 0;
+    arg3 = &temp3;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_fee_RequiredFee",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_fee_RequiredFee",&obj0,&obj1)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_fee_RequiredFee" "', argument " "1"" of type '" "GoUint64""'");
   } 
   arg1 = (GoUint64)(val1);
-  result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2);
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RequiredFee" "', argument " "2"" of type '" "GoUint64""'");
+  } 
+  arg2 = (GoUint64)(val2);
+  result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -21993,27 +19399,36 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_fee_RemainingHours(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  GoUint64 arg2 ;
+  GoUint64 *arg3 = (GoUint64 *) 0 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
-  GoUint64 temp2 ;
+  unsigned long long val2 ;
+  int ecode2 = 0 ;
+  GoUint64 temp3 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   GoUint32 result;
   
   {
-    temp2 = 0;
-    arg2 = &temp2;
+    temp3 = 0;
+    arg3 = &temp3;
   }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_fee_RemainingHours",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_fee_RemainingHours",&obj0,&obj1)) SWIG_fail;
   ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(obj0, &val1);
   if (!SWIG_IsOK(ecode1)) {
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_fee_RemainingHours" "', argument " "1"" of type '" "GoUint64""'");
   } 
   arg1 = (GoUint64)(val1);
-  result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2);
+  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RemainingHours" "', argument " "2"" of type '" "GoUint64""'");
+  } 
+  arg2 = (GoUint64)(val2);
+  result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg2 ));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_long( *arg3 ));
   }
   return resultobj;
 fail:
@@ -22021,7 +19436,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
@@ -22066,6 +19481,63 @@ SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *SWIGUNUSEDPARM(self)
   return resultobj;
 fail:
   return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_fee_TransactionFee(PyObject *self, PyObject *args) {
+  Py_ssize_t argc;
+  PyObject *argv[4] = {
+    0
+  };
+  Py_ssize_t ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 3) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_SKY_fee_TransactionFee__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    {
+      _v = PyInt_Check(argv[0]) ? 1 : 0;
+    }
+    if (_v) {
+      {
+        int res = SWIG_AsVal_unsigned_SS_long_SS_long(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          _v = PyList_Check(argv[2]) ? 1 : 0;
+        }
+        if (_v) {
+          return _wrap_SKY_fee_TransactionFee__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'SKY_fee_TransactionFee'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    wrap_SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin_UxOutArray *,GoUint64 *)\n"
+    "    SKY_fee_TransactionFee(Transaction__Handle,GoUint64,coin__UxArray *,GoUint64 *)\n");
+  return 0;
 }
 
 
@@ -23194,723 +20666,6 @@ SWIGINTERN PyObject *_wrap_SKY_testutil_MakeAddress(PyObject *SWIGUNUSEDPARM(sel
   arg1 = (cipher__Address *)(argp1);
   result = (GoUint32)SKY_testutil_MakeAddress(arg1);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_String(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoString temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Field_String",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_String" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_Field_String(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Print(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoString arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_Print",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Print" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Field_Print', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_Field_Print(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_SetB32(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoSlice arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_SetB32",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_SetB32" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Field_SetB32', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_Field_SetB32(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_SetBytes(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoSlice arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_SetBytes",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_SetBytes" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Field_SetBytes', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_Field_SetBytes(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_SetHex(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoString arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_SetHex",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_SetHex" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Field_SetHex', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  result = (GoUint32)SKY_secp256k1go_Field_SetHex(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_IsOdd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Field_IsOdd",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_IsOdd" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_Field_IsOdd(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_IsZero(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoUint8 *arg2 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  GoUint8 temp2 ;
-  int res2 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  arg2 = &temp2;
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Field_IsZero",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_IsZero" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_Field_IsZero(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res2)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_SetInt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoUint32 arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  unsigned int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_SetInt",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_SetInt" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_secp256k1go_Field_SetInt" "', argument " "2"" of type '" "GoUint32""'");
-  } 
-  arg2 = (GoUint32)(val2);
-  result = (GoUint32)SKY_secp256k1go_Field_SetInt(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Normalize(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_secp256k1go_Field_Normalize",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Normalize" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  result = (GoUint32)SKY_secp256k1go_Field_Normalize(arg1);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_GetB32(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoSlice arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_GetB32",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_GetB32" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_secp256k1go_Field_GetB32', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_secp256k1go_Field_GetB32(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Equals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  GoUint8 *arg3 = (GoUint8 *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  GoUint8 temp3 ;
-  int res3 = SWIG_TMPOBJ ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  arg3 = &temp3;
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_Equals",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Equals" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Equals" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_Equals(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  if (SWIG_IsTmpObj(res3)) {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
-  } else {
-    int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_char, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_SetAdd(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_SetAdd",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_SetAdd" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_SetAdd" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_SetAdd(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_MulInt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  GoUint32 arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  unsigned int val2 ;
-  int ecode2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_MulInt",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_MulInt" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_secp256k1go_Field_MulInt" "', argument " "2"" of type '" "GoUint32""'");
-  } 
-  arg2 = (GoUint32)(val2);
-  result = (GoUint32)SKY_secp256k1go_Field_MulInt(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Negate(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  GoUint32 arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  unsigned int val3 ;
-  int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_Field_Negate",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Negate" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Negate" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  ecode3 = SWIG_AsVal_unsigned_SS_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_secp256k1go_Field_Negate" "', argument " "3"" of type '" "GoUint32""'");
-  } 
-  arg3 = (GoUint32)(val3);
-  result = (GoUint32)SKY_secp256k1go_Field_Negate(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Inv(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_Inv",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Inv" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Inv" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_Inv(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Sqrt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_Sqrt",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Sqrt" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Sqrt" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_Sqrt(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_InvVar(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_InvVar",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_InvVar" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_InvVar" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_InvVar(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Mul(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg3 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:SKY_secp256k1go_Field_Mul",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Mul" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Mul" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "SKY_secp256k1go_Field_Mul" "', argument " "3"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg3 = (secp256k1go__Field *)(argp3);
-  result = (GoUint32)SKY_secp256k1go_Field_Mul(arg1,arg2,arg3);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_secp256k1go_Field_Sqr(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
-  secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  GoUint32 result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:SKY_secp256k1go_Field_Sqr",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SKY_secp256k1go_Field_Sqr" "', argument " "1"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg1 = (secp256k1go__Field *)(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_secp256k1go__Field, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SKY_secp256k1go_Field_Sqr" "', argument " "2"" of type '" "secp256k1go__Field *""'"); 
-  }
-  arg2 = (secp256k1go__Field *)(argp2);
-  result = (GoUint32)SKY_secp256k1go_Field_Sqr(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_scrypt_Key(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoSlice arg2 ;
-  GoInt arg3 ;
-  GoInt arg4 ;
-  GoInt arg5 ;
-  GoInt arg6 ;
-  coin__UxArray *arg7 = (coin__UxArray *) 0 ;
-  long long val3 ;
-  int ecode3 = 0 ;
-  long long val4 ;
-  int ecode4 = 0 ;
-  long long val5 ;
-  int ecode5 = 0 ;
-  long long val6 ;
-  int ecode6 = 0 ;
-  GoSlice_ temp7 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  PyObject * obj4 = 0 ;
-  PyObject * obj5 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp7.data = NULL;
-    temp7.len = 0;
-    temp7.cap = 0;
-    arg7 = (coin__UxArray *)&temp7;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"OOOOOO:SKY_scrypt_Key",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_scrypt_Key', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_scrypt_Key', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  ecode3 = SWIG_AsVal_long_SS_long(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_scrypt_Key" "', argument " "3"" of type '" "GoInt""'");
-  } 
-  arg3 = (GoInt)(val3);
-  ecode4 = SWIG_AsVal_long_SS_long(obj3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "SKY_scrypt_Key" "', argument " "4"" of type '" "GoInt""'");
-  } 
-  arg4 = (GoInt)(val4);
-  ecode5 = SWIG_AsVal_long_SS_long(obj4, &val5);
-  if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "SKY_scrypt_Key" "', argument " "5"" of type '" "GoInt""'");
-  } 
-  arg5 = (GoInt)(val5);
-  ecode6 = SWIG_AsVal_long_SS_long(obj5, &val6);
-  if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "SKY_scrypt_Key" "', argument " "6"" of type '" "GoInt""'");
-  } 
-  arg6 = (GoInt)(val6);
-  result = (GoUint32)SKY_scrypt_Key(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg7->data, arg7->len  ));
-    free( (void*)arg7->data );
-  }
   return resultobj;
 fail:
   return NULL;
@@ -26263,6 +23018,157 @@ SWIGINTERN PyObject *api__RichlistParams_swigregister(PyObject *SWIGUNUSEDPARM(s
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_api__NetworkConnectionsFilter_States_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
+  GoString_ arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__NetworkConnectionsFilter_States_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__NetworkConnectionsFilter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__NetworkConnectionsFilter_States_set" "', argument " "1"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg1 = (api__NetworkConnectionsFilter *)(argp1);
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'api__NetworkConnectionsFilter_States_set', expecting string");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
+  }
+  if (arg1) (arg1)->States = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_api__NetworkConnectionsFilter_States_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  GoString_ result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:api__NetworkConnectionsFilter_States_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__NetworkConnectionsFilter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__NetworkConnectionsFilter_States_get" "', argument " "1"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg1 = (api__NetworkConnectionsFilter *)(argp1);
+  result =  ((arg1)->States);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_api__NetworkConnectionsFilter_Direction_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
+  GoString_ arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:api__NetworkConnectionsFilter_Direction_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__NetworkConnectionsFilter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__NetworkConnectionsFilter_Direction_set" "', argument " "1"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg1 = (api__NetworkConnectionsFilter *)(argp1);
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( obj1, &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'api__NetworkConnectionsFilter_Direction_set', expecting string");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
+  }
+  if (arg1) (arg1)->Direction = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_api__NetworkConnectionsFilter_Direction_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  GoString_ result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:api__NetworkConnectionsFilter_Direction_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__NetworkConnectionsFilter, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "api__NetworkConnectionsFilter_Direction_get" "', argument " "1"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg1 = (api__NetworkConnectionsFilter *)(argp1);
+  result =  ((arg1)->Direction);
+  resultobj = SWIG_NewPointerObj((GoString_ *)memcpy((GoString_ *)calloc(1,sizeof(GoString_)),&result,sizeof(GoString_)), SWIGTYPE_p_GoString_, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_api__NetworkConnectionsFilter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_api__NetworkConnectionsFilter")) SWIG_fail;
+  result = (api__NetworkConnectionsFilter *)calloc(1, sizeof(api__NetworkConnectionsFilter));
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_api__NetworkConnectionsFilter, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_api__NetworkConnectionsFilter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_api__NetworkConnectionsFilter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_api__NetworkConnectionsFilter, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_api__NetworkConnectionsFilter" "', argument " "1"" of type '" "api__NetworkConnectionsFilter *""'"); 
+  }
+  arg1 = (api__NetworkConnectionsFilter *)(argp1);
+  free((char *) arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *api__NetworkConnectionsFilter_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char *)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_api__NetworkConnectionsFilter, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN PyObject *_wrap_cipher__Address___eq__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__Address *arg1 = (cipher__Address *) 0 ;
@@ -26524,7 +23430,7 @@ fail:
 SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_Version_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
-  unsigned char arg2 ;
+  GoUint8_ arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   unsigned char val2 ;
@@ -26540,9 +23446,9 @@ SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_Version_set(PyObject *SWIGUNUS
   arg1 = (cipher__BitcoinAddress *)(argp1);
   ecode2 = SWIG_AsVal_unsigned_SS_char(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher__BitcoinAddress_Version_set" "', argument " "2"" of type '" "unsigned char""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "cipher__BitcoinAddress_Version_set" "', argument " "2"" of type '" "GoUint8_""'");
   } 
-  arg2 = (unsigned char)(val2);
+  arg2 = (GoUint8_)(val2);
   if (arg1) (arg1)->Version = arg2;
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -26557,7 +23463,7 @@ SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_Version_get(PyObject *SWIGUNUS
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  unsigned char result;
+  GoUint8_ result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:cipher__BitcoinAddress_Version_get",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_cipher__BitcoinAddress, 0 |  0 );
@@ -26565,7 +23471,7 @@ SWIGINTERN PyObject *_wrap_cipher__BitcoinAddress_Version_get(PyObject *SWIGUNUS
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "cipher__BitcoinAddress_Version_get" "', argument " "1"" of type '" "cipher__BitcoinAddress *""'"); 
   }
   arg1 = (cipher__BitcoinAddress *)(argp1);
-  result = (unsigned char) ((arg1)->Version);
+  result = (GoUint8_) ((arg1)->Version);
   resultobj = SWIG_From_unsigned_SS_char((unsigned char)(result));
   return resultobj;
 fail:
@@ -31183,9 +28089,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_api_Client_WalletSeed", _wrap_SKY_api_Client_WalletSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_NetworkConnection", _wrap_SKY_api_Client_NetworkConnection, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_NetworkConnections", _wrap_SKY_api_Client_NetworkConnections, METH_VARARGS, NULL},
-	 { (char *)"SKY_api_Client_NetworkDefaultConnections", _wrap_SKY_api_Client_NetworkDefaultConnections, METH_VARARGS, NULL},
-	 { (char *)"SKY_api_Client_NetworkTrustedConnections", _wrap_SKY_api_Client_NetworkTrustedConnections, METH_VARARGS, NULL},
-	 { (char *)"SKY_api_Client_NetworkExchangeableConnections", _wrap_SKY_api_Client_NetworkExchangeableConnections, METH_VARARGS, NULL},
+	 { (char *)"SKY_api_Client_NetworkDefaultPeers", _wrap_SKY_api_Client_NetworkDefaultPeers, METH_VARARGS, NULL},
+	 { (char *)"SKY_api_Client_NetworkTrustedPeers", _wrap_SKY_api_Client_NetworkTrustedPeers, METH_VARARGS, NULL},
+	 { (char *)"SKY_api_Client_NetworkExchangedPeers", _wrap_SKY_api_Client_NetworkExchangedPeers, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_PendingTransactions", _wrap_SKY_api_Client_PendingTransactions, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_Transaction", _wrap_SKY_api_Client_Transaction, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_Transactions", _wrap_SKY_api_Client_Transactions, METH_VARARGS, NULL},
@@ -31201,17 +28107,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_api_Client_Health", _wrap_SKY_api_Client_Health, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_EncryptWallet", _wrap_SKY_api_Client_EncryptWallet, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Client_DecryptWallet", _wrap_SKY_api_Client_DecryptWallet, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_Print", _wrap_SKY_secp256k1go_XY_Print, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_ParsePubkey", _wrap_SKY_secp256k1go_XY_ParsePubkey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_Bytes", _wrap_SKY_secp256k1go_XY_Bytes, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_BytesUncompressed", _wrap_SKY_secp256k1go_XY_BytesUncompressed, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_SetXY", _wrap_SKY_secp256k1go_XY_SetXY, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_IsValid", _wrap_SKY_secp256k1go_XY_IsValid, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_SetXYZ", _wrap_SKY_secp256k1go_XY_SetXYZ, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_Neg", _wrap_SKY_secp256k1go_XY_Neg, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_SetXO", _wrap_SKY_secp256k1go_XY_SetXO, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_AddXY", _wrap_SKY_secp256k1go_XY_AddXY, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XY_GetPublicKey", _wrap_SKY_secp256k1go_XY_GetPublicKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_NewWalletResponse", _wrap_SKY_api_NewWalletResponse, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_NewCreateTransactionResponse", _wrap_SKY_api_NewCreateTransactionResponse, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_NewCreatedTransaction", _wrap_SKY_api_NewCreatedTransaction, METH_VARARGS, NULL},
@@ -31247,14 +28142,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_wallet_ReadableWallet_Save", _wrap_SKY_wallet_ReadableWallet_Save, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_ReadableWallet_Load", _wrap_SKY_wallet_ReadableWallet_Load, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_ReadableWallet_Erase", _wrap_SKY_wallet_ReadableWallet_Erase, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_DecompressPoint", _wrap_SKY_secp256k1go_DecompressPoint, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_RecoverPublicKey", _wrap_SKY_secp256k1go_RecoverPublicKey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Multiply", _wrap_SKY_secp256k1go_Multiply, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_BaseMultiply", _wrap_SKY_secp256k1go_BaseMultiply, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_BaseMultiplyAdd", _wrap_SKY_secp256k1go_BaseMultiplyAdd, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_GeneratePublicKey", _wrap_SKY_secp256k1go_GeneratePublicKey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_SeckeyIsValid", _wrap_SKY_secp256k1go_SeckeyIsValid, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_PubkeyIsValid", _wrap_SKY_secp256k1go_PubkeyIsValid, METH_VARARGS, NULL},
 	 { (char *)"SKY_base58_String2Hex", _wrap_SKY_base58_String2Hex, METH_VARARGS, NULL},
 	 { (char *)"SKY_base58_Base58_ToInt", _wrap_SKY_base58_Base58_ToInt, METH_VARARGS, NULL},
 	 { (char *)"SKY_base58_Base58_ToHex", _wrap_SKY_base58_Base58_ToHex, METH_VARARGS, NULL},
@@ -31279,8 +28166,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_SumSHA256", _wrap_SKY_secp256k1_SumSHA256, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_RandByte", _wrap_SKY_secp256k1_RandByte, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GenerateAddressesInFile", _wrap_SKY_cli_GenerateAddressesInFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJSON", _wrap_SKY_cli_FormatAddressesAsJSON, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJoinedArray", _wrap_SKY_cli_FormatAddressesAsJoinedArray, METH_VARARGS, NULL},
@@ -31315,22 +28200,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cipher_GenerateDeterministicKeyPairsSeed", _wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_CheckSecKey", _wrap_SKY_cipher_CheckSecKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_CheckSecKeyHash", _wrap_SKY_cipher_CheckSecKeyHash, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Create", _wrap_SKY_secp256k1go_Signature_Create, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_GetR", _wrap_SKY_secp256k1go_Signature_GetR, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_GetS", _wrap_SKY_secp256k1go_Signature_GetS, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Print", _wrap_SKY_secp256k1go_Signature_Print, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Verify", _wrap_SKY_secp256k1go_Signature_Verify, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Recover", _wrap_SKY_secp256k1go_Signature_Recover, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Sign", _wrap_SKY_secp256k1go_Signature_Sign, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_ParseBytes", _wrap_SKY_secp256k1go_Signature_ParseBytes, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Signature_Bytes", _wrap_SKY_secp256k1go_Signature_Bytes, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_App_Run", _wrap_SKY_cli_App_Run, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Config_GetCoin", _wrap_SKY_cli_Config_GetCoin, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Config_GetRPCAddress", _wrap_SKY_cli_Config_GetRPCAddress, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_RPCClientFromApp", _wrap_SKY_cli_RPCClientFromApp, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Getenv", _wrap_SKY_cli_Getenv, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_Setenv", _wrap_SKY_cli_Setenv, METH_VARARGS, NULL},
-	 { (char *)"SKY_poly1305_Verify", _wrap_SKY_poly1305_Verify, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_NewBalance", _wrap_SKY_wallet_NewBalance, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_NewBalanceFromUxOut", _wrap_SKY_wallet_NewBalanceFromUxOut, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_Balance_Add", _wrap_SKY_wallet_Balance_Add, METH_VARARGS, NULL},
@@ -31347,20 +28222,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_httphelper_Hours_Value", _wrap_SKY_httphelper_Hours_Value, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_Entry_Verify", _wrap_SKY_wallet_Entry_Verify, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_Entry_VerifyPublic", _wrap_SKY_wallet_Entry_VerifyPublic, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Print", _wrap_SKY_secp256k1go_XYZ_Print, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_SetXY", _wrap_SKY_secp256k1go_XYZ_SetXY, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_IsInfinity", _wrap_SKY_secp256k1go_XYZ_IsInfinity, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_IsValid", _wrap_SKY_secp256k1go_XYZ_IsValid, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Normalize", _wrap_SKY_secp256k1go_XYZ_Normalize, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Equals", _wrap_SKY_secp256k1go_XYZ_Equals, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_ECmult", _wrap_SKY_secp256k1go_XYZ_ECmult, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Neg", _wrap_SKY_secp256k1go_XYZ_Neg, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Double", _wrap_SKY_secp256k1go_XYZ_Double, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_AddXY", _wrap_SKY_secp256k1go_XYZ_AddXY, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_XYZ_Add", _wrap_SKY_secp256k1go_XYZ_Add, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_ECmultGen", _wrap_SKY_secp256k1go_ECmultGen, METH_VARARGS, NULL},
-	 { (char *)"SKY_encrypt_Sha256Xor_Encrypt", _wrap_SKY_encrypt_Sha256Xor_Encrypt, METH_VARARGS, NULL},
-	 { (char *)"SKY_encrypt_Sha256Xor_Decrypt", _wrap_SKY_encrypt_Sha256Xor_Decrypt, METH_VARARGS, NULL},
 	 { (char *)"SKY_droplet_FromString", _wrap_SKY_droplet_FromString, METH_VARARGS, NULL},
 	 { (char *)"SKY_droplet_ToString", _wrap_SKY_droplet_ToString, METH_VARARGS, NULL},
 	 { (char *)"SKY_wallet_CryptoTypeFromString", _wrap_SKY_wallet_CryptoTypeFromString, METH_VARARGS, NULL},
@@ -31409,14 +28270,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_api_Handle_GetWalletSeed", _wrap_SKY_api_Handle_GetWalletSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Handle_GetWalletLastSeed", _wrap_SKY_api_Handle_GetWalletLastSeed, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_Handle_GetBuildInfoData", _wrap_SKY_api_Handle_GetBuildInfoData, METH_VARARGS, NULL},
-	 { (char *)"SKY_ripemd160_New", _wrap_SKY_ripemd160_New, METH_VARARGS, NULL},
-	 { (char *)"SKY_ripemd160_Write", _wrap_SKY_ripemd160_Write, METH_VARARGS, NULL},
-	 { (char *)"SKY_ripemd160_Sum", _wrap_SKY_ripemd160_Sum, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Number_Create", _wrap_SKY_secp256k1go_Number_Create, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Number_Print", _wrap_SKY_secp256k1go_Number_Print, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Number_SetHex", _wrap_SKY_secp256k1go_Number_SetHex, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Number_IsOdd", _wrap_SKY_secp256k1go_Number_IsOdd, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Number_IsEqual", _wrap_SKY_secp256k1go_Number_IsEqual, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_UxOut_Hash", _wrap_SKY_coin_UxOut_Hash, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_UxOut_SnapshotHash", _wrap_SKY_coin_UxOut_SnapshotHash, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_UxBody_Hash", _wrap_SKY_coin_UxBody_Hash, METH_VARARGS, NULL},
@@ -31446,22 +28299,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_wallet_CreateOptionsHandle", _wrap_SKY_wallet_CreateOptionsHandle, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_AddPrivateKey", _wrap_SKY_cli_AddPrivateKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_AddPrivateKeyToFile", _wrap_SKY_cli_AddPrivateKeyToFile, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_GenerateKeyPair", _wrap_SKY_secp256k1_GenerateKeyPair, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_PubkeyFromSeckey", _wrap_SKY_secp256k1_PubkeyFromSeckey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_UncompressPubkey", _wrap_SKY_secp256k1_UncompressPubkey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_UncompressedPubkeyFromSeckey", _wrap_SKY_secp256k1_UncompressedPubkeyFromSeckey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_Secp256k1Hash", _wrap_SKY_secp256k1_Secp256k1Hash, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_GenerateDeterministicKeyPair", _wrap_SKY_secp256k1_GenerateDeterministicKeyPair, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_DeterministicKeyPairIterator", _wrap_SKY_secp256k1_DeterministicKeyPairIterator, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_Sign", _wrap_SKY_secp256k1_Sign, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_SignDeterministic", _wrap_SKY_secp256k1_SignDeterministic, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_VerifySeckey", _wrap_SKY_secp256k1_VerifySeckey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_VerifyPubkey", _wrap_SKY_secp256k1_VerifyPubkey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_VerifySignatureValidity", _wrap_SKY_secp256k1_VerifySignatureValidity, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_VerifySignature", _wrap_SKY_secp256k1_VerifySignature, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_SignatureErrorString", _wrap_SKY_secp256k1_SignatureErrorString, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_RecoverPubkey", _wrap_SKY_secp256k1_RecoverPubkey, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1_ECDH", _wrap_SKY_secp256k1_ECDH, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_CatchInterruptPanic", _wrap_SKY_apputil_CatchInterruptPanic, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_CatchDebug", _wrap_SKY_apputil_CatchDebug, METH_VARARGS, NULL},
 	 { (char *)"SKY_apputil_PrintProgramStatus", _wrap_SKY_apputil_PrintProgramStatus, METH_VARARGS, NULL},
@@ -31501,26 +28338,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_cli_GetWalletOutputsFromFile", _wrap_SKY_cli_GetWalletOutputsFromFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GetWalletOutputs", _wrap_SKY_cli_GetWalletOutputs, METH_VARARGS, NULL},
 	 { (char *)"SKY_testutil_MakeAddress", _wrap_SKY_testutil_MakeAddress, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_String", _wrap_SKY_secp256k1go_Field_String, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Print", _wrap_SKY_secp256k1go_Field_Print, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_SetB32", _wrap_SKY_secp256k1go_Field_SetB32, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_SetBytes", _wrap_SKY_secp256k1go_Field_SetBytes, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_SetHex", _wrap_SKY_secp256k1go_Field_SetHex, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_IsOdd", _wrap_SKY_secp256k1go_Field_IsOdd, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_IsZero", _wrap_SKY_secp256k1go_Field_IsZero, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_SetInt", _wrap_SKY_secp256k1go_Field_SetInt, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Normalize", _wrap_SKY_secp256k1go_Field_Normalize, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_GetB32", _wrap_SKY_secp256k1go_Field_GetB32, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Equals", _wrap_SKY_secp256k1go_Field_Equals, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_SetAdd", _wrap_SKY_secp256k1go_Field_SetAdd, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_MulInt", _wrap_SKY_secp256k1go_Field_MulInt, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Negate", _wrap_SKY_secp256k1go_Field_Negate, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Inv", _wrap_SKY_secp256k1go_Field_Inv, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Sqrt", _wrap_SKY_secp256k1go_Field_Sqrt, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_InvVar", _wrap_SKY_secp256k1go_Field_InvVar, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Mul", _wrap_SKY_secp256k1go_Field_Mul, METH_VARARGS, NULL},
-	 { (char *)"SKY_secp256k1go_Field_Sqr", _wrap_SKY_secp256k1go_Field_Sqr, METH_VARARGS, NULL},
-	 { (char *)"SKY_scrypt_Key", _wrap_SKY_scrypt_Key, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_Ripemd160_Set", _wrap_SKY_cipher_Ripemd160_Set, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_HashRipemd160", _wrap_SKY_cipher_HashRipemd160, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_SHA256_Set", _wrap_SKY_cipher_SHA256_Set, METH_VARARGS, NULL},
@@ -31588,6 +28405,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"new_api__RichlistParams", _wrap_new_api__RichlistParams, METH_VARARGS, NULL},
 	 { (char *)"delete_api__RichlistParams", _wrap_delete_api__RichlistParams, METH_VARARGS, NULL},
 	 { (char *)"api__RichlistParams_swigregister", api__RichlistParams_swigregister, METH_VARARGS, NULL},
+	 { (char *)"api__NetworkConnectionsFilter_States_set", _wrap_api__NetworkConnectionsFilter_States_set, METH_VARARGS, NULL},
+	 { (char *)"api__NetworkConnectionsFilter_States_get", _wrap_api__NetworkConnectionsFilter_States_get, METH_VARARGS, NULL},
+	 { (char *)"api__NetworkConnectionsFilter_Direction_set", _wrap_api__NetworkConnectionsFilter_Direction_set, METH_VARARGS, NULL},
+	 { (char *)"api__NetworkConnectionsFilter_Direction_get", _wrap_api__NetworkConnectionsFilter_Direction_get, METH_VARARGS, NULL},
+	 { (char *)"new_api__NetworkConnectionsFilter", _wrap_new_api__NetworkConnectionsFilter, METH_VARARGS, NULL},
+	 { (char *)"delete_api__NetworkConnectionsFilter", _wrap_delete_api__NetworkConnectionsFilter, METH_VARARGS, NULL},
+	 { (char *)"api__NetworkConnectionsFilter_swigregister", api__NetworkConnectionsFilter_swigregister, METH_VARARGS, NULL},
 	 { (char *)"cipher__Address___eq__", _wrap_cipher__Address___eq__, METH_VARARGS, NULL},
 	 { (char *)"cipher__Address_toStr", _wrap_cipher__Address_toStr, METH_VARARGS, NULL},
 	 { (char *)"cipher__Address_Version_set", _wrap_cipher__Address_Version_set, METH_VARARGS, NULL},
@@ -31824,14 +28648,11 @@ static swig_type_info _swigt__p_GoSlice_ = {"_p_GoSlice_", "coin__Transactions *
 static swig_type_info _swigt__p_GoStringMap_ = {"_p_GoStringMap_", "GoStringMap_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GoString_ = {"_p_GoString_", "GoString_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle = {"_p_Handle", "Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Hash_Handle = {"_p_Hash_Handle", "Hash_Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Number_Handle = {"_p_Number_Handle", "Number_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Options__Handle = {"_p_Options__Handle", "Options__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PasswordReader__Handle = {"_p_PasswordReader__Handle", "PasswordReader__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableEntry__Handle = {"_p_ReadableEntry__Handle", "ReadableEntry__Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableUnspentOutputsSummary_Handle = {"_p_ReadableUnspentOutputsSummary_Handle", "ReadableUnspentOutputsSummary_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ReadableWallet__Handle = {"_p_ReadableWallet__Handle", "ReadableWallet__Handle *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Signature_Handle = {"_p_Signature_Handle", "Signature_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SortableTransactionResult_Handle = {"_p_SortableTransactionResult_Handle", "SortableTransactionResult_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SpendResult_Handle = {"_p_SpendResult_Handle", "SpendResult_Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_StatusResult_Handle = {"_p_StatusResult_Handle", "StatusResult_Handle *", 0, 0, (void*)0, 0};
@@ -31851,6 +28672,7 @@ static swig_type_info _swigt__p_a_33__unsigned_char = {"_p_a_33__unsigned_char",
 static swig_type_info _swigt__p_a_4__unsigned_char = {"_p_a_4__unsigned_char", "cipher__Checksum *|unsigned char (*)[4]", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_65__unsigned_char = {"_p_a_65__unsigned_char", "unsigned char (*)[65]|cipher__Sig *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_sizeof_void_____64_8_1__1__char = {"_p_a_sizeof_void_____64_8_1__1__char", "char (*)[sizeof(void *)==64/8?1:-1]|_check_for_64_bit_pointer_matching_GoInt *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_api__NetworkConnectionsFilter = {"_p_api__NetworkConnectionsFilter", "api__NetworkConnectionsFilter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_api__RichlistParams = {"_p_api__RichlistParams", "api__RichlistParams *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_cipher_Addresses = {"_p_cipher_Addresses", "cipher_Addresses *", 0, 0, (void*)0, 0};
@@ -31926,14 +28748,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GoStringMap_,
   &_swigt__p_GoString_,
   &_swigt__p_Handle,
-  &_swigt__p_Hash_Handle,
-  &_swigt__p_Number_Handle,
   &_swigt__p_Options__Handle,
   &_swigt__p_PasswordReader__Handle,
   &_swigt__p_ReadableEntry__Handle,
   &_swigt__p_ReadableUnspentOutputsSummary_Handle,
   &_swigt__p_ReadableWallet__Handle,
-  &_swigt__p_Signature_Handle,
   &_swigt__p_SortableTransactionResult_Handle,
   &_swigt__p_SpendResult_Handle,
   &_swigt__p_StatusResult_Handle,
@@ -31953,6 +28772,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_a_4__unsigned_char,
   &_swigt__p_a_65__unsigned_char,
   &_swigt__p_a_sizeof_void_____64_8_1__1__char,
+  &_swigt__p_api__NetworkConnectionsFilter,
   &_swigt__p_api__RichlistParams,
   &_swigt__p_char,
   &_swigt__p_cipher_Addresses,
@@ -32028,14 +28848,11 @@ static swig_cast_info _swigc__p_GoSlice_[] = {  {&_swigt__p_GoSlice_, 0, 0, 0},{
 static swig_cast_info _swigc__p_GoStringMap_[] = {  {&_swigt__p_GoStringMap_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GoString_[] = {  {&_swigt__p_GoString_, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle[] = {  {&_swigt__p_Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Hash_Handle[] = {  {&_swigt__p_Hash_Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Number_Handle[] = {  {&_swigt__p_Number_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Options__Handle[] = {  {&_swigt__p_Options__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PasswordReader__Handle[] = {  {&_swigt__p_PasswordReader__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableEntry__Handle[] = {  {&_swigt__p_ReadableEntry__Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableUnspentOutputsSummary_Handle[] = {  {&_swigt__p_ReadableUnspentOutputsSummary_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ReadableWallet__Handle[] = {  {&_swigt__p_ReadableWallet__Handle, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Signature_Handle[] = {  {&_swigt__p_Signature_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SortableTransactionResult_Handle[] = {  {&_swigt__p_SortableTransactionResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SpendResult_Handle[] = {  {&_swigt__p_SpendResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_StatusResult_Handle[] = {  {&_swigt__p_StatusResult_Handle, 0, 0, 0},{0, 0, 0, 0}};
@@ -32055,6 +28872,7 @@ static swig_cast_info _swigc__p_a_33__unsigned_char[] = {  {&_swigt__p_a_33__uns
 static swig_cast_info _swigc__p_a_4__unsigned_char[] = {  {&_swigt__p_a_4__unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_a_65__unsigned_char[] = {  {&_swigt__p_a_65__unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_a_sizeof_void_____64_8_1__1__char[] = {  {&_swigt__p_a_sizeof_void_____64_8_1__1__char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_api__NetworkConnectionsFilter[] = {  {&_swigt__p_api__NetworkConnectionsFilter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_api__RichlistParams[] = {  {&_swigt__p_api__RichlistParams, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_cipher_Addresses[] = {  {&_swigt__p_cipher_Addresses, 0, 0, 0},{0, 0, 0, 0}};
@@ -32130,14 +28948,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_GoStringMap_,
   _swigc__p_GoString_,
   _swigc__p_Handle,
-  _swigc__p_Hash_Handle,
-  _swigc__p_Number_Handle,
   _swigc__p_Options__Handle,
   _swigc__p_PasswordReader__Handle,
   _swigc__p_ReadableEntry__Handle,
   _swigc__p_ReadableUnspentOutputsSummary_Handle,
   _swigc__p_ReadableWallet__Handle,
-  _swigc__p_Signature_Handle,
   _swigc__p_SortableTransactionResult_Handle,
   _swigc__p_SpendResult_Handle,
   _swigc__p_StatusResult_Handle,
@@ -32157,6 +28972,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_a_4__unsigned_char,
   _swigc__p_a_65__unsigned_char,
   _swigc__p_a_sizeof_void_____64_8_1__1__char,
+  _swigc__p_api__NetworkConnectionsFilter,
   _swigc__p_api__RichlistParams,
   _swigc__p_char,
   _swigc__p_cipher_Addresses,
@@ -32901,7 +29717,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_OK",SWIG_From_int((int)(0)));
   SWIG_Python_SetConstant(d, "SKY_ERROR",SWIG_From_int((int)(0x7FFFFFFF)));
   SWIG_Python_SetConstant(d, "SKY_BAD_HANDLE",SWIG_From_int((int)(0x7F000001)));
-  SWIG_Python_SetConstant(d, "SKY_API_LOCKED",SWIG_From_int((int)(0x7F000002)));
+  SWIG_Python_SetConstant(d, "SKY_INVALID_TIMESTRING",SWIG_From_int((int)(0x7F000002)));
   SWIG_Python_SetConstant(d, "SKY_PKG_API",SWIG_From_int((int)(0x01000000)));
   SWIG_Python_SetConstant(d, "SKY_PKG_CIPHER",SWIG_From_int((int)(0x02000000)));
   SWIG_Python_SetConstant(d, "SKY_PKG_CLI",SWIG_From_int((int)(0x03000000)));
@@ -32957,14 +29773,14 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrBitcoinWIFInvalidChecksum",SWIG_From_int((int)(0x02000028)));
   SWIG_Python_SetConstant(d, "SKY_ErrEmptySeed",SWIG_From_int((int)(0x02000029)));
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidSig",SWIG_From_int((int)(0x0200002A)));
-  SWIG_Python_SetConstant(d, "SKY_ErrSHA256orMissingPassword",SWIG_From_int((int)(0x0200002B)));
-  SWIG_Python_SetConstant(d, "SKY_ErrLenghtDataOverflowMaxUint32",SWIG_From_int((int)(0x0200002C)));
+  SWIG_Python_SetConstant(d, "SKY_ErrMissingPassword",SWIG_From_int((int)(0x0200002B)));
+  SWIG_Python_SetConstant(d, "SKY_ErrDataTooLarge",SWIG_From_int((int)(0x0200002C)));
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidChecksumLength",SWIG_From_int((int)(0x0200002D)));
-  SWIG_Python_SetConstant(d, "SKY_ErrInvalidDataChecksumNotMatched",SWIG_From_int((int)(0x0200002E)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidChecksum",SWIG_From_int((int)(0x0200002E)));
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidNonceLength",SWIG_From_int((int)(0x0200002F)));
-  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBlockSizeMultiple32Bytes",SWIG_From_int((int)(0x02000030)));
-  SWIG_Python_SetConstant(d, "SKY_ErrReadDataHashFailedLength",SWIG_From_int((int)(0x02000031)));
-  SWIG_Python_SetConstant(d, "SKY_ErrSHA256orInvalidPassword",SWIG_From_int((int)(0x02000032)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidBlockSize",SWIG_From_int((int)(0x02000030)));
+  SWIG_Python_SetConstant(d, "SKY_ErrReadDataHashFailed",SWIG_From_int((int)(0x02000031)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidPassword",SWIG_From_int((int)(0x02000032)));
   SWIG_Python_SetConstant(d, "SKY_ErrReadDataLengthFailed",SWIG_From_int((int)(0x02000033)));
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidDataLength",SWIG_From_int((int)(0x02000034)));
   SWIG_Python_SetConstant(d, "SKY_ErrTemporaryInsufficientBalance",SWIG_From_int((int)(0x03000000)));
@@ -32985,27 +29801,23 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrNotExternalIP",SWIG_From_int((int)(0x06000003)));
   SWIG_Python_SetConstant(d, "SKY_ErrPortTooLow",SWIG_From_int((int)(0x06000004)));
   SWIG_Python_SetConstant(d, "SKY_ErrBlacklistedAddress",SWIG_From_int((int)(0x06000005)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectReadFailed",SWIG_From_int((int)(0x06000006)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectWriteFailed",SWIG_From_int((int)(0x06000007)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectSetReadDeadlineFailed",SWIG_From_int((int)(0x06000008)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectInvalidMessageLength",SWIG_From_int((int)(0x06000009)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMalformedMessage",SWIG_From_int((int)(0x0600000A)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectUnknownMessage",SWIG_From_int((int)(0x0600000B)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectUnexpectedError",SWIG_From_int((int)(0x0600000C)));
   SWIG_Python_SetConstant(d, "SKY_ErrConnectionPoolClosed",SWIG_From_int((int)(0x0600000D)));
   SWIG_Python_SetConstant(d, "SKY_ErrWriteQueueFull",SWIG_From_int((int)(0x0600000E)));
   SWIG_Python_SetConstant(d, "SKY_ErrNoReachableConnections",SWIG_From_int((int)(0x0600000F)));
   SWIG_Python_SetConstant(d, "SKY_ErrMaxDefaultConnectionsReached",SWIG_From_int((int)(0x06000010)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectVersionNotSupported",SWIG_From_int((int)(0x06000011)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIntroductionTimeout",SWIG_From_int((int)(0x06000012)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectVersionSendFailed",SWIG_From_int((int)(0x06000013)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIsBlacklisted",SWIG_From_int((int)(0x06000014)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectSelf",SWIG_From_int((int)(0x06000015)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectConnectedTwice",SWIG_From_int((int)(0x06000016)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIdle",SWIG_From_int((int)(0x06000017)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectNoIntroduction",SWIG_From_int((int)(0x06000018)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIPLimitReached",SWIG_From_int((int)(0x06000019)));
-  SWIG_Python_SetConstant(d, "SKY_ErrDisconnectIncomprehensibleError",SWIG_From_int((int)(0x0600001A)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxDefaultConnectionReached",SWIG_From_int((int)(0x0600001B)));
   SWIG_Python_SetConstant(d, "SKY_ErrDisconnectMaxOutgoingConnectionsReached",SWIG_From_int((int)(0x0600001C)));
   SWIG_Python_SetConstant(d, "SKY_ConnectionError",SWIG_From_int((int)(0x0600001D)));
@@ -33035,9 +29847,9 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidEncryptedField",SWIG_From_int((int)(0x0B000004)));
   SWIG_Python_SetConstant(d, "SKY_ErrWalletEncrypted",SWIG_From_int((int)(0x0B000005)));
   SWIG_Python_SetConstant(d, "SKY_ErrWalletNotEncrypted",SWIG_From_int((int)(0x0B000006)));
-  SWIG_Python_SetConstant(d, "SKY_ErrMissingPassword",SWIG_From_int((int)(0x0B000007)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletMissingPassword",SWIG_From_int((int)(0x0B000007)));
   SWIG_Python_SetConstant(d, "SKY_ErrMissingEncrypt",SWIG_From_int((int)(0x0B000008)));
-  SWIG_Python_SetConstant(d, "SKY_ErrInvalidPassword",SWIG_From_int((int)(0x0B000009)));
+  SWIG_Python_SetConstant(d, "SKY_ErrWalletInvalidPassword",SWIG_From_int((int)(0x0B000009)));
   SWIG_Python_SetConstant(d, "SKY_ErrMissingSeed",SWIG_From_int((int)(0x0B00000A)));
   SWIG_Python_SetConstant(d, "SKY_ErrMissingAuthenticated",SWIG_From_int((int)(0x0B00000B)));
   SWIG_Python_SetConstant(d, "SKY_ErrWrongCryptoType",SWIG_From_int((int)(0x0B00000C)));

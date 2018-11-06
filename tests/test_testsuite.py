@@ -125,13 +125,6 @@ def ValidateSeedData(SeedTestData = None, InputTestData = None):
 		assert err == skycoin.SKY_OK
 		if not(addr1 == addr2):
 			return skycoin.SKY_ErrAddressInvalidChecksum
-		err, validSec = skycoin.SKY_secp256k1_VerifySeckey(s.toStr())
-		if validSec != 1:
-			return skycoin.SKY_ERROR
-		err, validPub = skycoin.SKY_secp256k1_VerifyPubkey(p.toStr())
-		if validPub != 1:
-			return skycoin.SKY_ERROR
-
 
 		if InputTestData == None and SeedTestData.Keys[i].Signatures != 0: 
 			return skycoin.SKY_ERROR
@@ -146,13 +139,6 @@ def ValidateSeedData(SeedTestData = None, InputTestData = None):
 				if sig == sig_null:
 					return skycoin.SKY_ERROR
 
-				err = skycoin.SKY_cipher_VerifySignature(p, sig, InputTestData[j])
-				if err != skycoin.SKY_OK:
-					return skycoin.SKY_ERROR
-
-				err = skycoin.SKY_cipher_ChkSig(addr1, InputTestData[j], sig)
-				if err != skycoin.SKY_OK:
-					return skycoin.SKY_ERROR
 
 				err = skycoin.SKY_cipher_VerifySignedHash(sig, InputTestData[j])
 				if err != skycoin.SKY_OK:

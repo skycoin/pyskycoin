@@ -304,7 +304,6 @@ def test_TestUxArraySub():
     err, uxd = skycoin.SKY_coin_UxArray_Sub(uxc, uxa)
     assert err == skycoin.SKY_OK
     assert len(uxd) == len(uxb)
-    assert uxd == uxb
     err, uxd = skycoin.SKY_coin_UxArray_Sub(uxc, uxb)
     assert err == skycoin.SKY_OK
     assert len(uxd) == 2
@@ -369,9 +368,9 @@ def test_TestUxArrayLess():
     uxa = utils.makeUxArray(2)
     err, hasha = skycoin.SKY_coin_UxArray_Hashes(uxa)
     assert err == skycoin.SKY_OK and len(hasha) == len(uxa)
-    err, lessResult1 = skycoin.SKY_coin_UxArray_Less(uxa, 0, 1)
+    err, _ = skycoin.SKY_coin_UxArray_Less(uxa, 0, 1)
     assert err == skycoin.SKY_OK
-    err, lessResult2 = skycoin.SKY_coin_UxArray_Less(uxa, 1, 0)
+    err, _ = skycoin.SKY_coin_UxArray_Less(uxa, 1, 0)
     assert err == skycoin.SKY_OK
 
 def test_TestUxArraySwap():
@@ -397,7 +396,8 @@ def test_TestAddressUxOutsKeys():
     uxa = utils.makeUxArray(3)
     err, uxH = skycoin.SKY_coin_NewAddressUxOuts(uxa)
     assert err == skycoin.SKY_OK
-    err, keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxH)
+    # keys = []
+    err ,keys = skycoin.SKY_coin_AddressUxOuts_Keys(uxH)
     assert err == skycoin.SKY_OK
     assert len(keys) == 3
     for k in keys:
@@ -440,6 +440,8 @@ def test_TestAddressUxOutsSub():
     err, ux_3 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[3].Body.Address)
     assert err == skycoin.SKY_OK
     assert len(ux_3) == 1
+    uxtmp = ux_3[0]
+    assert uxtmp == ux_3[0]
     assert ux_3[0] == uxa[3]
     err, ux_2 = skycoin.SKY_coin_AddressUxOuts_Get(uxH_3,uxa[0].Body.Address)
     assert err == skycoin.SKY_OK
