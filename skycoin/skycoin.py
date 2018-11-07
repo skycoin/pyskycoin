@@ -104,6 +104,10 @@ def destroy_cipher_PubKeys(p):
     return _skycoin.destroy_cipher_PubKeys(p)
 destroy_cipher_PubKeys = _skycoin.destroy_cipher_PubKeys
 
+def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
+    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
+wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
+
 def equalSlices(slice1, slice2, elem_size):
     return _skycoin.equalSlices(slice1, slice2, elem_size)
 equalSlices = _skycoin.equalSlices
@@ -112,17 +116,13 @@ def equalTransactions(t1, t2):
     return _skycoin.equalTransactions(t1, t2)
 equalTransactions = _skycoin.equalTransactions
 
-def equalTransactionsArrays(pTxs1, pTxs2):
-    return _skycoin.equalTransactionsArrays(pTxs1, pTxs2)
+def equalTransactionsArrays():
+    return _skycoin.equalTransactionsArrays()
 equalTransactionsArrays = _skycoin.equalTransactionsArrays
 
 def equalBlockHeaders(bh1, bh2):
     return _skycoin.equalBlockHeaders(bh1, bh2)
 equalBlockHeaders = _skycoin.equalBlockHeaders
-
-def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
-    return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
-wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)

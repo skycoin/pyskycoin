@@ -9,7 +9,6 @@
 
 //Apply strictly to python
 //Not for other languages
-#if defined(SWIGPYTHON)
 %include "python_skycoin.cipher.crypto.i"
 %include "python_uxarray.i"
 %include "python_sha256s.i"
@@ -18,8 +17,8 @@
 %include "golang.cgo.i"
 %include "structs_typemaps.i"
 %include "skycoin.mem.i"
-#endif
 
+%include "/gopath/src/github.com/skycoin/skycoin/lib/swig/includes.i"
 %include "swig.h"
 /* Find the modified copy of libskycoin */
 %include "libskycoin.h"

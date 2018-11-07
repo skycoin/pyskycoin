@@ -1,4 +1,3 @@
-%include "cmp.i"
 
 %extend coin__BlockHeader {
 	int __eq__(coin__BlockHeader* bh){
