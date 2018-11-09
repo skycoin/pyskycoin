@@ -55,6 +55,8 @@ build-swig:
 	}
 	rm -f ./skycoin/skycoin.py
 	rm -f swig/pyskycoin_wrap.c
+	rm -f swig/include/swig.h
+	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
 
 develop:

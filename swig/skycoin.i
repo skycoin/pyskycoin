@@ -16,6 +16,7 @@
 %include "python_skycoin.callback.i"
 %include "golang.cgo.i"
 %include "structs_typemaps.i"
+%include "python_basic.i"
 %include "skycoin.mem.i"
 
 %include "/gopath/src/github.com/skycoin/skycoin/lib/swig/includes.i"

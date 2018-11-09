@@ -108,6 +108,18 @@ def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
     return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
 
+def SKY_params_GetDistributionAddresses():
+    return _skycoin.SKY_params_GetDistributionAddresses()
+SKY_params_GetDistributionAddresses = _skycoin.SKY_params_GetDistributionAddresses
+
+def SKY_params_GetUnlockedDistributionAddresses():
+    return _skycoin.SKY_params_GetUnlockedDistributionAddresses()
+SKY_params_GetUnlockedDistributionAddresses = _skycoin.SKY_params_GetUnlockedDistributionAddresses
+
+def SKY_params_GetLockedDistributionAddresses():
+    return _skycoin.SKY_params_GetLockedDistributionAddresses()
+SKY_params_GetLockedDistributionAddresses = _skycoin.SKY_params_GetLockedDistributionAddresses
+
 def equalSlices(slice1, slice2, elem_size):
     return _skycoin.equalSlices(slice1, slice2, elem_size)
 equalSlices = _skycoin.equalSlices
@@ -1168,18 +1180,6 @@ SKY_iputil_IsLocalhost = _skycoin.SKY_iputil_IsLocalhost
 def SKY_iputil_SplitAddr(p0):
     return _skycoin.SKY_iputil_SplitAddr(p0)
 SKY_iputil_SplitAddr = _skycoin.SKY_iputil_SplitAddr
-
-def SKY_params_GetDistributionAddresses():
-    return _skycoin.SKY_params_GetDistributionAddresses()
-SKY_params_GetDistributionAddresses = _skycoin.SKY_params_GetDistributionAddresses
-
-def SKY_params_GetUnlockedDistributionAddresses():
-    return _skycoin.SKY_params_GetUnlockedDistributionAddresses()
-SKY_params_GetUnlockedDistributionAddresses = _skycoin.SKY_params_GetUnlockedDistributionAddresses
-
-def SKY_params_GetLockedDistributionAddresses():
-    return _skycoin.SKY_params_GetLockedDistributionAddresses()
-SKY_params_GetLockedDistributionAddresses = _skycoin.SKY_params_GetLockedDistributionAddresses
 
 def SKY_cli_GenerateAddressesInFile(p0, p1, p2):
     return _skycoin.SKY_cli_GenerateAddressesInFile(p0, p1, p2)
@@ -2945,6 +2945,8 @@ SKY_ErrUint64AddOverflow = _skycoin.SKY_ErrUint64AddOverflow
 SKY_ErrUint32AddOverflow = _skycoin.SKY_ErrUint32AddOverflow
 SKY_ErrUint64OverflowsInt64 = _skycoin.SKY_ErrUint64OverflowsInt64
 SKY_ErrInt64UnderflowsUint64 = _skycoin.SKY_ErrInt64UnderflowsUint64
+SKY_ErrIntUnderflowsUint32 = _skycoin.SKY_ErrIntUnderflowsUint32
+SKY_ErrIntOverflowsUint32 = _skycoin.SKY_ErrIntOverflowsUint32
 SKY_ErrPeerlistFull = _skycoin.SKY_ErrPeerlistFull
 SKY_ErrInvalidAddress = _skycoin.SKY_ErrInvalidAddress
 SKY_ErrNoLocalhost = _skycoin.SKY_ErrNoLocalhost

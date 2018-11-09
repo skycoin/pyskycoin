@@ -418,3 +418,26 @@
 		return SKY_fee_TransactionFee(__txn,__p1, &data,__return_fee);
 	}
 }
+
+
+%rename(SKY_params_GetDistributionAddresses) wrap_SKY_params_GetDistributionAddresses;
+%inline{
+	 void wrap_SKY_params_GetDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetDistributionAddresses(__return_strings);
+	}
+}
+
+%rename(SKY_params_GetUnlockedDistributionAddresses) wrap_SKY_params_GetUnlockedDistributionAddresses;
+%inline{
+	 void wrap_SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetUnlockedDistributionAddresses(__return_strings);
+	}
+}
+
+%rename(SKY_params_GetLockedDistributionAddresses) wrap_SKY_params_GetLockedDistributionAddresses;
+%inline{
+	 void wrap_SKY_params_GetLockedDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetLockedDistributionAddresses(__return_strings);
+	}
+}
+

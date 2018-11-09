@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1eb4d8f5-f967-46f5-9b27-23002e7fccc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin" beforeDir="false" afterPath="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skycoin/skycoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/skycoin/skycoin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swig/pyskycoin_wrap.c" beforeDir="false" afterPath="$PROJECT_DIR$/swig/pyskycoin_wrap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swig/skycoin.i" beforeDir="false" afterPath="$PROJECT_DIR$/swig/skycoin.i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swig/skycoin.mem.i" beforeDir="false" afterPath="$PROJECT_DIR$/swig/skycoin.mem.i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_address.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_bip39.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_bitcoin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_crypto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_hash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cipher_scrypt_chacha20poly1305_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_coin_block.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_coin_math.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_coin_outputs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_coin_transaction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_testsuite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_testsuite_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_util_droplet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_util_fee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_util_param_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_util_param_distribution.py" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tox/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/pyskycoin$test_util_param_distribution.coverage" NAME="test_util_param_distribution Coverage Results" MODIFIED="1541796246514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1473020533">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="i" value="1" />
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/test_util_param_distribution.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swig/skycoin.mem.i">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="409" lean-forward="true" selection-start-line="409" selection-end-line="409" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin/electron/package.json" />
+      <path value="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin/electron/src/package.json" />
+      <path value="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin/src/gui/static/package.json" />
+      <path value="$PROJECT_DIR$/gopath/src/github.com/skycoin/skycoin/vendor/github.com/blang/semver/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="47" />
+    <option name="width" value="1346" />
+    <option name="height" value="673" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pyskycoin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyskycoin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyskycoin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyskycoin" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value=".mem&#9;FILE&#9;file:///home/maykel/go/src/github.com/skycoin/pyskycoin/swig/skycoin.mem.i" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="test_util_param_distribution" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pyskycoin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_util_param_distribution.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_util_param_distribution" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1eb4d8f5-f967-46f5-9b27-23002e7fccc0" name="Default Changelist" comment="" />
+      <created>1541795911762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541795911762</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="47" width="1346" height="673" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496136" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32906765" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32906765" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/swig/skycoin.mem.i">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="409" lean-forward="true" selection-start-line="409" selection-end-line="409" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_util_param_distribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

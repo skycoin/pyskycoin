@@ -3729,6 +3729,21 @@ SWIGINTERNINLINE PyObject*
 	}
 
 
+	 void wrap_SKY_params_GetDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetDistributionAddresses(__return_strings);
+	}
+
+
+	 void wrap_SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetUnlockedDistributionAddresses(__return_strings);
+	}
+
+
+	 void wrap_SKY_params_GetLockedDistributionAddresses(coin__UxArray* __return_strings){
+		SKY_params_GetLockedDistributionAddresses(__return_strings);
+	}
+
+
 	int equalSlices(GoSlice* slice1, GoSlice* slice2, int elem_size){
 	  if(slice1->len != slice2->len)
 		return 0;
@@ -5607,6 +5622,132 @@ fail:
   {
     if (arg3->data) free(arg3->data);
   }
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_params_GetDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = &temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetDistributionAddresses")) SWIG_fail;
+  wrap_SKY_params_GetDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    int itoken;
+    PyObject *list = PyList_New(0);
+    GoString *iStr;
+    int ntokens = arg1->len; 
+    PyObject *py_string_tmp; 
+    int py_err; 
+    for (itoken = 0, iStr = (GoString *) arg1->data; itoken< ntokens; ++itoken, ++iStr) {
+      if (iStr == NULL) break; 
+      
+      /* convert C string to Python string */ 
+      py_string_tmp = SWIG_FromCharPtrAndSize((const char *) iStr->p,iStr->n ); 
+      if (! py_string_tmp) return NULL; 
+      
+      /* put Python string into the list */ 
+      PyList_Append(list, py_string_tmp);
+      if (py_err == -1) return NULL; 
+    } 
+    if( arg1->data != NULL)
+    free( (void*)arg1->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_params_GetUnlockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = &temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetUnlockedDistributionAddresses")) SWIG_fail;
+  wrap_SKY_params_GetUnlockedDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    int itoken;
+    PyObject *list = PyList_New(0);
+    GoString *iStr;
+    int ntokens = arg1->len; 
+    PyObject *py_string_tmp; 
+    int py_err; 
+    for (itoken = 0, iStr = (GoString *) arg1->data; itoken< ntokens; ++itoken, ++iStr) {
+      if (iStr == NULL) break; 
+      
+      /* convert C string to Python string */ 
+      py_string_tmp = SWIG_FromCharPtrAndSize((const char *) iStr->p,iStr->n ); 
+      if (! py_string_tmp) return NULL; 
+      
+      /* put Python string into the list */ 
+      PyList_Append(list, py_string_tmp);
+      if (py_err == -1) return NULL; 
+    } 
+    if( arg1->data != NULL)
+    free( (void*)arg1->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_params_GetLockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  coin__UxArray temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = &temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetLockedDistributionAddresses")) SWIG_fail;
+  wrap_SKY_params_GetLockedDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    int itoken;
+    PyObject *list = PyList_New(0);
+    GoString *iStr;
+    int ntokens = arg1->len; 
+    PyObject *py_string_tmp; 
+    int py_err; 
+    for (itoken = 0, iStr = (GoString *) arg1->data; itoken< ntokens; ++itoken, ++iStr) {
+      if (iStr == NULL) break; 
+      
+      /* convert C string to Python string */ 
+      py_string_tmp = SWIG_FromCharPtrAndSize((const char *) iStr->p,iStr->n ); 
+      if (! py_string_tmp) return NULL; 
+      
+      /* put Python string into the list */ 
+      PyList_Append(list, py_string_tmp);
+      if (py_err == -1) return NULL; 
+    } 
+    if( arg1->data != NULL)
+    free( (void*)arg1->data );
+    resultobj = SWIG_Python_AppendOutput(resultobj, list);
+  }
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -9249,8 +9390,8 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_Block_Size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Block__Handle arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  GoUint32 temp2 ;
   int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
@@ -9266,7 +9407,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Block_Size(PyObject *SWIGUNUSEDPARM(self), P
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
   }
   return resultobj;
 fail:
@@ -9543,9 +9684,9 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_BlockBody_Size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BlockBody__Handle *arg1 = (BlockBody__Handle *) 0 ;
-  GoInt *arg2 = (GoInt *) 0 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
   Handle temp1 ;
-  GoInt temp2 ;
+  GoUint32 temp2 ;
   int res2 = SWIG_TMPOBJ ;
   GoUint32 result;
   
@@ -9563,7 +9704,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_BlockBody_Size(PyObject *SWIGUNUSEDPARM(self
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
   }
   return resultobj;
 fail:
@@ -13903,78 +14044,6 @@ SWIGINTERN PyObject *_wrap_SKY_iputil_SplitAddr(PyObject *SWIGUNUSEDPARM(self), 
   } else {
     int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_unsigned_short, new_flags));
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_params_GetDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoSlice_ temp1 ;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetDistributionAddresses")) SWIG_fail;
-  SKY_params_GetDistributionAddresses(arg1);
-  resultobj = SWIG_Py_Void();
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_params_GetUnlockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoSlice_ temp1 ;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetUnlockedDistributionAddresses")) SWIG_fail;
-  SKY_params_GetUnlockedDistributionAddresses(arg1);
-  resultobj = SWIG_Py_Void();
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_SKY_params_GetLockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoSlice_ temp1 ;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetLockedDistributionAddresses")) SWIG_fail;
-  SKY_params_GetLockedDistributionAddresses(arg1);
-  resultobj = SWIG_Py_Void();
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
   }
   return resultobj;
 fail:
@@ -19362,10 +19431,10 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFee(PyObject *SWIGUNUSEDPARM
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
-  GoUint64 arg3 ;
+  GoUint32 arg3 ;
   unsigned long long val2 ;
   int ecode2 = 0 ;
-  unsigned long long val3 ;
+  unsigned int val3 ;
   int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
@@ -19381,11 +19450,11 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFee(PyObject *SWIGUNUSEDPARM
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_VerifyTransactionFee" "', argument " "2"" of type '" "GoUint64""'");
   } 
   arg2 = (GoUint64)(val2);
-  ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
+  ecode3 = SWIG_AsVal_unsigned_SS_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFee" "', argument " "3"" of type '" "GoUint64""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFee" "', argument " "3"" of type '" "GoUint32""'");
   } 
-  arg3 = (GoUint64)(val3);
+  arg3 = (GoUint32)(val3);
   result = (GoUint32)SKY_fee_VerifyTransactionFee(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
@@ -19398,12 +19467,12 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFeeForHours(PyObject *SWIGUN
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
   GoUint64 arg2 ;
-  GoUint64 arg3 ;
+  GoUint32 arg3 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
   unsigned long long val2 ;
   int ecode2 = 0 ;
-  unsigned long long val3 ;
+  unsigned int val3 ;
   int ecode3 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
@@ -19421,11 +19490,11 @@ SWIGINTERN PyObject *_wrap_SKY_fee_VerifyTransactionFeeForHours(PyObject *SWIGUN
     SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "2"" of type '" "GoUint64""'");
   } 
   arg2 = (GoUint64)(val2);
-  ecode3 = SWIG_AsVal_unsigned_SS_long_SS_long(obj2, &val3);
+  ecode3 = SWIG_AsVal_unsigned_SS_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "3"" of type '" "GoUint64""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SKY_fee_VerifyTransactionFeeForHours" "', argument " "3"" of type '" "GoUint32""'");
   } 
-  arg3 = (GoUint64)(val3);
+  arg3 = (GoUint32)(val3);
   result = (GoUint32)SKY_fee_VerifyTransactionFeeForHours(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   return resultobj;
@@ -19437,11 +19506,11 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_fee_RequiredFee(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
-  GoUint64 arg2 ;
+  GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
-  unsigned long long val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   GoUint64 temp3 ;
   PyObject * obj0 = 0 ;
@@ -19458,11 +19527,11 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RequiredFee(PyObject *SWIGUNUSEDPARM(self), P
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_fee_RequiredFee" "', argument " "1"" of type '" "GoUint64""'");
   } 
   arg1 = (GoUint64)(val1);
-  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RequiredFee" "', argument " "2"" of type '" "GoUint64""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RequiredFee" "', argument " "2"" of type '" "GoUint32""'");
   } 
-  arg2 = (GoUint64)(val2);
+  arg2 = (GoUint32)(val2);
   result = (GoUint32)SKY_fee_RequiredFee(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -19477,11 +19546,11 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_fee_RemainingHours(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoUint64 arg1 ;
-  GoUint64 arg2 ;
+  GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
   unsigned long long val1 ;
   int ecode1 = 0 ;
-  unsigned long long val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   GoUint64 temp3 ;
   PyObject * obj0 = 0 ;
@@ -19498,11 +19567,11 @@ SWIGINTERN PyObject *_wrap_SKY_fee_RemainingHours(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_fee_RemainingHours" "', argument " "1"" of type '" "GoUint64""'");
   } 
   arg1 = (GoUint64)(val1);
-  ecode2 = SWIG_AsVal_unsigned_SS_long_SS_long(obj1, &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RemainingHours" "', argument " "2"" of type '" "GoUint64""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_fee_RemainingHours" "', argument " "2"" of type '" "GoUint32""'");
   } 
-  arg2 = (GoUint64)(val2);
+  arg2 = (GoUint32)(val2);
   result = (GoUint32)SKY_fee_RemainingHours(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -21942,8 +22011,8 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  GoUint32 temp2 ;
   int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
@@ -21959,7 +22028,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_Size(PyObject *SWIGUNUSEDPARM(se
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
   }
   return resultobj;
 fail:
@@ -21998,9 +22067,9 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SizeHash(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transaction__Handle arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
-  GoInt temp2 ;
+  GoUint32 temp2 ;
   int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
@@ -22025,7 +22094,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_SizeHash(PyObject *SWIGUNUSEDPAR
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
   }
   return resultobj;
 fail:
@@ -22472,8 +22541,8 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transactions__Handle arg1 ;
-  GoInt *arg2 = (GoInt *) 0 ;
-  GoInt temp2 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  GoUint32 temp2 ;
   int res2 = SWIG_TMPOBJ ;
   PyObject * obj0 = 0 ;
   GoUint32 result;
@@ -22489,7 +22558,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Size(PyObject *SWIGUNUSEDPARM(s
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
   }
   return resultobj;
 fail:
@@ -22500,9 +22569,9 @@ fail:
 SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_TruncateBytesTo(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   Transactions__Handle arg1 ;
-  GoInt arg2 ;
+  GoUint32 arg2 ;
   Transactions__Handle *arg3 = (Transactions__Handle *) 0 ;
-  long long val2 ;
+  unsigned int val2 ;
   int ecode2 = 0 ;
   Handle temp3 ;
   PyObject * obj0 = 0 ;
@@ -22516,11 +22585,11 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_TruncateBytesTo(PyObject *SWIGU
   {
     SWIG_AsVal_long(obj0, (long*)&arg1);
   }
-  ecode2 = SWIG_AsVal_long_SS_long(obj1, &val2);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transactions_TruncateBytesTo" "', argument " "2"" of type '" "GoInt""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SKY_coin_Transactions_TruncateBytesTo" "', argument " "2"" of type '" "GoUint32""'");
   } 
-  arg2 = (GoInt)(val2);
+  arg2 = (GoUint32)(val2);
   result = (GoUint32)SKY_coin_Transactions_TruncateBytesTo(arg1,arg2,arg3);
   resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
@@ -27965,6 +28034,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"destroy_cipher_SecKeys", _wrap_destroy_cipher_SecKeys, METH_VARARGS, NULL},
 	 { (char *)"destroy_cipher_PubKeys", _wrap_destroy_cipher_PubKeys, METH_VARARGS, NULL},
 	 { (char *)"wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed", _wrap_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetDistributionAddresses", _wrap_SKY_params_GetDistributionAddresses, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetUnlockedDistributionAddresses", _wrap_SKY_params_GetUnlockedDistributionAddresses, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetLockedDistributionAddresses", _wrap_SKY_params_GetLockedDistributionAddresses, METH_VARARGS, NULL},
 	 { (char *)"equalSlices", _wrap_equalSlices, METH_VARARGS, NULL},
 	 { (char *)"equalTransactions", _wrap_equalTransactions, METH_VARARGS, NULL},
 	 { (char *)"equalTransactionsArrays", _wrap_equalTransactionsArrays, METH_VARARGS, NULL},
@@ -28244,9 +28316,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, METH_VARARGS, NULL},
-	 { (char *)"SKY_params_GetDistributionAddresses", _wrap_SKY_params_GetDistributionAddresses, METH_VARARGS, NULL},
-	 { (char *)"SKY_params_GetUnlockedDistributionAddresses", _wrap_SKY_params_GetUnlockedDistributionAddresses, METH_VARARGS, NULL},
-	 { (char *)"SKY_params_GetLockedDistributionAddresses", _wrap_SKY_params_GetLockedDistributionAddresses, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GenerateAddressesInFile", _wrap_SKY_cli_GenerateAddressesInFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJSON", _wrap_SKY_cli_FormatAddressesAsJSON, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJoinedArray", _wrap_SKY_cli_FormatAddressesAsJoinedArray, METH_VARARGS, NULL},
@@ -29877,6 +29946,8 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrUint32AddOverflow",SWIG_From_int((int)(0x04000003)));
   SWIG_Python_SetConstant(d, "SKY_ErrUint64OverflowsInt64",SWIG_From_int((int)(0x04000004)));
   SWIG_Python_SetConstant(d, "SKY_ErrInt64UnderflowsUint64",SWIG_From_int((int)(0x04000005)));
+  SWIG_Python_SetConstant(d, "SKY_ErrIntUnderflowsUint32",SWIG_From_int((int)(0x04000006)));
+  SWIG_Python_SetConstant(d, "SKY_ErrIntOverflowsUint32",SWIG_From_int((int)(0x04000007)));
   SWIG_Python_SetConstant(d, "SKY_ErrPeerlistFull",SWIG_From_int((int)(0x06000000)));
   SWIG_Python_SetConstant(d, "SKY_ErrInvalidAddress",SWIG_From_int((int)(0x06000001)));
   SWIG_Python_SetConstant(d, "SKY_ErrNoLocalhost",SWIG_From_int((int)(0x06000002)));
