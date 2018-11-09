@@ -10,5 +10,4 @@ def test_TestDistributionAddressArrays():
     assert len(skycoin.SKY_params_GetLockedDistributionAddresses()) == 75
     all = skycoin.SKY_params_GetDistributionAddresses()
     for i in  range(len(all)):
-        print all[i]
-        print i
+        pass
