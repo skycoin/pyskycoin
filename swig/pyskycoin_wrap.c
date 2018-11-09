@@ -13910,6 +13910,78 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SKY_params_GetDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoSlice_ temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = (coin__UxArray *)&temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetDistributionAddresses")) SWIG_fail;
+  SKY_params_GetDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
+    free( (void*)arg1->data );
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_params_GetUnlockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoSlice_ temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = (coin__UxArray *)&temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetUnlockedDistributionAddresses")) SWIG_fail;
+  SKY_params_GetUnlockedDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
+    free( (void*)arg1->data );
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SKY_params_GetLockedDistributionAddresses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoSlice_ temp1 ;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = (coin__UxArray *)&temp1;
+  }
+  if (!PyArg_ParseTuple(args,(char *)":SKY_params_GetLockedDistributionAddresses")) SWIG_fail;
+  SKY_params_GetLockedDistributionAddresses(arg1);
+  resultobj = SWIG_Py_Void();
+  {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
+    free( (void*)arg1->data );
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SKY_cli_GenerateAddressesInFile(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
@@ -28172,6 +28244,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, METH_VARARGS, NULL},
 	 { (char *)"SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetDistributionAddresses", _wrap_SKY_params_GetDistributionAddresses, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetUnlockedDistributionAddresses", _wrap_SKY_params_GetUnlockedDistributionAddresses, METH_VARARGS, NULL},
+	 { (char *)"SKY_params_GetLockedDistributionAddresses", _wrap_SKY_params_GetLockedDistributionAddresses, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_GenerateAddressesInFile", _wrap_SKY_cli_GenerateAddressesInFile, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJSON", _wrap_SKY_cli_FormatAddressesAsJSON, METH_VARARGS, NULL},
 	 { (char *)"SKY_cli_FormatAddressesAsJoinedArray", _wrap_SKY_cli_FormatAddressesAsJoinedArray, METH_VARARGS, NULL},
@@ -29735,6 +29810,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_PKG_UTIL",SWIG_From_int((int)(0x09000000)));
   SWIG_Python_SetConstant(d, "SKY_PKG_VISOR",SWIG_From_int((int)(0x0A000000)));
   SWIG_Python_SetConstant(d, "SKY_PKG_WALLET",SWIG_From_int((int)(0x0B000000)));
+  SWIG_Python_SetConstant(d, "SKY_PKG_PARAMS",SWIG_From_int((int)(0x0C000000)));
   SWIG_Python_SetConstant(d, "SKY_PKG_LIBCGO",SWIG_From_int((int)(0x7F000000)));
   SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidLength",SWIG_From_int((int)(0x02000000)));
   SWIG_Python_SetConstant(d, "SKY_ErrAddressInvalidChecksum",SWIG_From_int((int)(0x02000001)));
@@ -29891,6 +29967,7 @@ SWIG_init(void) {
   SWIG_Python_SetConstant(d, "SKY_ErrVerifySignatureInvalidInputsNils",SWIG_From_int((int)(0x0B000033)));
   SWIG_Python_SetConstant(d, "SKY_ErrVerifySignatureInvalidSigLength",SWIG_From_int((int)(0x0B000034)));
   SWIG_Python_SetConstant(d, "SKY_ErrVerifySignatureInvalidPubkeysLength",SWIG_From_int((int)(0x0B000035)));
+  SWIG_Python_SetConstant(d, "SKY_ErrInvalidDecimals",SWIG_From_int((int)(0x0C000000)));
 #if PY_VERSION_HEX >= 0x03000000
   return m;
 #else

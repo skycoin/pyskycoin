@@ -1169,6 +1169,18 @@ def SKY_iputil_SplitAddr(p0):
     return _skycoin.SKY_iputil_SplitAddr(p0)
 SKY_iputil_SplitAddr = _skycoin.SKY_iputil_SplitAddr
 
+def SKY_params_GetDistributionAddresses():
+    return _skycoin.SKY_params_GetDistributionAddresses()
+SKY_params_GetDistributionAddresses = _skycoin.SKY_params_GetDistributionAddresses
+
+def SKY_params_GetUnlockedDistributionAddresses():
+    return _skycoin.SKY_params_GetUnlockedDistributionAddresses()
+SKY_params_GetUnlockedDistributionAddresses = _skycoin.SKY_params_GetUnlockedDistributionAddresses
+
+def SKY_params_GetLockedDistributionAddresses():
+    return _skycoin.SKY_params_GetLockedDistributionAddresses()
+SKY_params_GetLockedDistributionAddresses = _skycoin.SKY_params_GetLockedDistributionAddresses
+
 def SKY_cli_GenerateAddressesInFile(p0, p1, p2):
     return _skycoin.SKY_cli_GenerateAddressesInFile(p0, p1, p2)
 SKY_cli_GenerateAddressesInFile = _skycoin.SKY_cli_GenerateAddressesInFile
@@ -2866,6 +2878,7 @@ SKY_PKG_SKYCOIN = _skycoin.SKY_PKG_SKYCOIN
 SKY_PKG_UTIL = _skycoin.SKY_PKG_UTIL
 SKY_PKG_VISOR = _skycoin.SKY_PKG_VISOR
 SKY_PKG_WALLET = _skycoin.SKY_PKG_WALLET
+SKY_PKG_PARAMS = _skycoin.SKY_PKG_PARAMS
 SKY_PKG_LIBCGO = _skycoin.SKY_PKG_LIBCGO
 SKY_ErrAddressInvalidLength = _skycoin.SKY_ErrAddressInvalidLength
 SKY_ErrAddressInvalidChecksum = _skycoin.SKY_ErrAddressInvalidChecksum
@@ -3022,6 +3035,7 @@ SKY_ErrUnknownWalletID = _skycoin.SKY_ErrUnknownWalletID
 SKY_ErrVerifySignatureInvalidInputsNils = _skycoin.SKY_ErrVerifySignatureInvalidInputsNils
 SKY_ErrVerifySignatureInvalidSigLength = _skycoin.SKY_ErrVerifySignatureInvalidSigLength
 SKY_ErrVerifySignatureInvalidPubkeysLength = _skycoin.SKY_ErrVerifySignatureInvalidPubkeysLength
+SKY_ErrInvalidDecimals = _skycoin.SKY_ErrInvalidDecimals
 # This file is compatible with both classic and new-style classes.
 
 
