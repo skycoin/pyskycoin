@@ -14326,6 +14326,38 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_SKY_coin_IntToUint32(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  GoInt arg1 ;
+  GoUint32 *arg2 = (GoUint32 *) 0 ;
+  long long val1 ;
+  int ecode1 = 0 ;
+  GoUint32 temp2 ;
+  int res2 = SWIG_TMPOBJ ;
+  PyObject * obj0 = 0 ;
+  GoUint32 result;
+  
+  arg2 = &temp2;
+  if (!PyArg_ParseTuple(args,(char *)"O:SKY_coin_IntToUint32",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_long_SS_long(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "SKY_coin_IntToUint32" "', argument " "1"" of type '" "GoInt""'");
+  } 
+  arg1 = (GoInt)(val1);
+  result = (GoUint32)SKY_coin_IntToUint32(arg1,arg2);
+  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  if (SWIG_IsTmpObj(res2)) {
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
+  } else {
+    int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_unsigned_int, new_flags));
+  }
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_SKY_cipher_RandByte(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoInt arg1 ;
@@ -28323,6 +28355,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_coin_AddUint64", _wrap_SKY_coin_AddUint64, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Uint64ToInt64", _wrap_SKY_coin_Uint64ToInt64, METH_VARARGS, NULL},
 	 { (char *)"SKY_coin_Int64ToUint64", _wrap_SKY_coin_Int64ToUint64, METH_VARARGS, NULL},
+	 { (char *)"SKY_coin_IntToUint32", _wrap_SKY_coin_IntToUint32, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_RandByte", _wrap_SKY_cipher_RandByte, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_NewPubKey", _wrap_SKY_cipher_NewPubKey, METH_VARARGS, NULL},
 	 { (char *)"SKY_cipher_PubKeyFromHex", _wrap_SKY_cipher_PubKeyFromHex, METH_VARARGS, NULL},

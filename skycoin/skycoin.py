@@ -1209,6 +1209,10 @@ def SKY_coin_Int64ToUint64(p0):
     return _skycoin.SKY_coin_Int64ToUint64(p0)
 SKY_coin_Int64ToUint64 = _skycoin.SKY_coin_Int64ToUint64
 
+def SKY_coin_IntToUint32(p0):
+    return _skycoin.SKY_coin_IntToUint32(p0)
+SKY_coin_IntToUint32 = _skycoin.SKY_coin_IntToUint32
+
 def SKY_cipher_RandByte(p0):
     return _skycoin.SKY_cipher_RandByte(p0)
 SKY_cipher_RandByte = _skycoin.SKY_cipher_RandByte
