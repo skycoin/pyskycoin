@@ -31,6 +31,14 @@ matrix:
         apt:
           sources: [deadsnakes]
           packages: [python3.6, python3.6-dev]
+    - os: linux
+      language: python
+      dist: xenial
+      python: 3.7
+      sudo: true
+      env:
+      - TOXENV=py37
+      - PYTHON=3.7
     - os: osx
       languague: generic
       env:
@@ -51,6 +59,11 @@ matrix:
       env:
         - PYTHON=3.6.5
         - TOXENV=py36
+    - os: osx
+      languague: generic
+      env:
+      - PYTHON=3.7.1
+      - TOXENV=py37
 
 before_install:
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
