@@ -66,8 +66,9 @@ The downside is that you need to make sure that the directory exists, and that e
 2. Start your docker container like this:
 
 ```sh
-$ docker run --privileged --name some-name -v /my/own/var-lib-docker:/var/lib/docker \ 
--d skycoin/skycoindev-python:dind
+$ docker run --privileged --name some-name \
+    -v /my/own/var-lib-docker:/var/lib/docker \ 
+    -d skycoin/skycoindev-python:dind
 ```
 
 # Build your own images
@@ -106,4 +107,10 @@ $ docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
                -t IMAGE_NAME .
 ```
 
+## Automated builds
+
+Docker Cloud is configured to build images from `develop` branch on every push.
+The same process is triggered for all feature branches matching the pattern
+`/^([^_]+)_t([0-9]+)_.*docker/`. The tag generated for those images will be of the form
+`feature-{\1}-{\2}-docker`.
 
