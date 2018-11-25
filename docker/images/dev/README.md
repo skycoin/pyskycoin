@@ -5,11 +5,14 @@
 -	[`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
 -	[`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
 
-# Pyskycoin CLI development image
+# Pyskycoin CLI/DIND development image
 
-This image has the necessary tools to build, test, edit, lint and version the Pyskycoin
-source code.  It comes with some versions of Python (2.7, 3.4, 3.5 and 3.6) and with Vim editor installed, along with some plugins
+This image (CLI) has the necessary tools to build, test, edit, lint and version the Pyskycoin
+source code. It comes with some versions of Python (2.7, 3.4, 3.5 and 3.6) and with Vim editor installed, along with some plugins
 to ease go development and version control with git.
+
+You also can use Docker in Docker (DIND) Pyskycoin development image,
+it is based on `skycoin/skycoindev-cli:dind` and provide all tools included on Pyskycoin CLI image.
 
 # How to use this image
 
@@ -29,7 +32,7 @@ as root and the files created by it are therefore owned by root.
 
 ## Running commands inside the container
 
-You can run commands by just passing the them to the image.  Everything is run
+You can run commands by just passing the them to the image. Everything is run
 in a container and deleted when finished.
 
 ### Running tests
@@ -79,32 +82,31 @@ $ docker run --privileged --name some-name \
 
 `DOCKERFILE_PATH`: the dockerfile currently being built.
 
-
 Build image from `skycoindev-cli:develop`.
 
 ```sh
 $ cd skycoin
-$ SOURCE_COMMIT=352c8705eb776baf79da96216308b6d164e0ae13
+$ SOURCE_COMMIT=$(git rev-parse HEAD)
 $ IMAGE_NAME=skycoin/skycoindev-python:develop
 $ DOCKERFILE_PATH=docker/images/dev/Dockerfile
 $ docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
                -f $DOCKERFILE_PATH \
-               -t $IMAGE_NAME .
+               -t "$IMAGE_NAME" .
 ```
 
 Or, if you prefer use `skycoindev-cli:dind`. Run:
 
 ```sh
 $ cd skycoin
-$ SOURCE_COMMIT=352c8705eb776baf79da96216308b6d164e0ae13
+$ SOURCE_COMMIT=$(git rev-parse HEAD)
 $ IMAGE_NAME=skycoin/skycoindev-python:dind
 $ DOCKERFILE_PATH=docker/images/dev/Dockerfile
 $ docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
                -f $DOCKERFILE_PATH \
-               -t IMAGE_NAME .
+               -t "$IMAGE_NAME" .
 ```
 
 ## Automated builds

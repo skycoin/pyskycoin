@@ -6,18 +6,18 @@ ARG SCOMMIT
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
-      "org.label-schema.description"="Docker image with go, node, dev tools and Visual Studio Code for Skycoin developers" \
+      "org.label-schema.description"="Docker image with go, node, python and dev tools for Skycoin developers" \
       "org.label-schema.vendor"="Skycoin project" \
       "org.label-schema.url"="skycoin.net" \
-      "org.label-schema.schema-version"="0.24.4" \
+      "org.label-schema.version"="0.24.4" \
       "org.label-schema.build-date"=$BDATE \
       "org.label-schema.vcs-url"="https://github.com/skycoin/pyskycoin.git" \
       "org.label-schema.vcs-ref"=$SCOMMIT \
       "org.label-schema.usage"="https://github.com/skycoin/pyskycoin/blob/"$SCOMMIT"/docker/images/dev/README.md" \
-      "org.label-schema.docker.cmd"=""
+      "org.label-schema.schema-version"="1.0" \
+      "org.label-schema.docker.cmd"="mkdir src; docker run --rm -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop git clone https://github.com/simelo/pyskycoin.git"
 
 # Install Python 2.7/3.5 runtime and development tools
-
 RUN set -ex; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
@@ -39,7 +39,6 @@ RUN set -ex; \
     pip install --upgrade pip
 
 # Install Python 3.6
-
 # runtime dependencies
 ENV PYTHON_VERSION 3.6.5
 
@@ -90,7 +89,6 @@ RUN set -ex \
 	&& rm -rf /usr/src/python
 
 # Install Python 3.4
-
 # runtime dependencies
 ENV PYTHON_VERSION 3.4.8
 
