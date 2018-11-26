@@ -177,6 +177,6 @@ All these make rules require skycoin to be a git submodule of pyskycoin
 
 It is highly recommended for developers to setup their environment using
 the available Docker images.
-Read the [PySkycoin Docker docs](docker/images/dev/README.md) for further
+Read the [PySkycoin Docker docs](docker/images/dev-cli/README.md) for further
 details.
 
