@@ -80,6 +80,8 @@ before_install:
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 
 install:
+    - python -V
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo python -V; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo python -m pip install --upgrade pip setuptools wheel tox tox-travis tox-pyenv pytest pytest-runner; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then mkdir swig_build && cd swig_build && wget http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && tar -zxf swig-3.0.12.tar.gz && cd swig-3.0.12 && sudo ./configure --prefix=/usr && sudo make && sudo make install && cd ../../ && sudo rm -rf swig_build ; fi
     - eval "$(gimme 1.10)"

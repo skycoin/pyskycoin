@@ -11,7 +11,7 @@
 # CACHE_TAG: the Docker repository tag being built.
 # IMAGE_NAME: the name and tag of the Docker repository being built.
 #             (This variable is a combination of DOCKER_REPO:CACHE_TAG.)
-# PIP_PACKAGES: pip packeges to install inside docker image.
+# PIP_PACKAGES: pip packages to install inside docker image.
 
 echo "Build hook running"
 
