@@ -80,9 +80,9 @@ if platform.system() == "Darwin":
 extra_link_args.append(library_file)
 
 setup(
-	name='Pyskycoin',  # Required
+    name='Pyskycoin',  # Required
     version='0.24.4',  # Required
-	description='Skycoin Python Library',
+    description='Skycoin Python Library',
     long_description=long_description,
     url='https://github.com/simelo/pyskycoin',
     author='stdevEclipse',  # Optional

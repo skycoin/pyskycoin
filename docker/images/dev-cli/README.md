@@ -11,8 +11,8 @@ This image (CLI) has the necessary tools to build, test, edit, lint and version 
 source code. It comes with some versions of Python (2.7, 3.4, 3.5 and 3.6) and with Vim editor installed, along with some plugins
 to ease go development and version control with git.
 
-You also can use Docker in Docker (DIND) Pyskycoin development image,
-it is based on `skycoin/skycoindev-cli:dind` and provide all tools included on Pyskycoin CLI image.
+Besides it is possible to use Docker in Docker (DIND) Pyskycoin development image,
+it is based on `skycoin/skycoindev-cli:dind` and provides all tools included in Pyskycoin CLI image.
 
 # How to use this image
 
@@ -32,7 +32,7 @@ as root and the files created by it are therefore owned by root.
 
 ## Running commands inside the container
 
-You can run commands by just passing the them to the image. Everything is run
+You can run commands by just passing them to the image. Everything is run
 in a container and deleted when finished.
 
 ### Running tests
@@ -51,7 +51,7 @@ $ docker run --rm \
     vim
 ```
 
-## How to use docker in docker image
+## How to use Docker in Docker image
 
 ### Start a daemon instance
 
@@ -76,13 +76,13 @@ $ docker run --privileged --name some-name \
 
 # Build your own images
 
-`SOURCE_COMMIT`: the SHA1 hash of the commit being tested.
+The build process relies on the following parameters
 
-`IMAGE_NAME`: the name and tag of the Docker repository being built.
+- `SOURCE_COMMIT`: the SHA1 hash of the commit being tested.
+- `IMAGE_NAME`: the name and tag of the Docker repository being built.
+- `DOCKERFILE_PATH`: the dockerfile currently being built.
 
-`DOCKERFILE_PATH`: the dockerfile currently being built.
-
-Build image from `skycoindev-cli:develop`.
+In order to build image from `skycoindev-cli:develop` execute the following shell command
 
 ```sh
 $ cd skycoin
@@ -95,7 +95,7 @@ $ docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                -t "$IMAGE_NAME" .
 ```
 
-Or, if you prefer use `skycoindev-cli:dind`. Run:
+If you prefer to use `skycoindev-cli:dind` then run:
 
 ```sh
 $ cd skycoin
@@ -111,8 +111,9 @@ $ docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
 
 ## Automated builds
 
-Docker Cloud is configured to build images from `develop` branch on every push.
-The same process is triggered for all feature branches matching the pattern
-`/^([^_]+)_t([0-9]+)_.*docker/`. The tag generated for those images will be of the form
-`feature-{\1}-{\2}-docker`.
+Docker Cloud is configured to build images from `develop`
+and `master` branch on every push made after merging. The same process 
+is triggered for all feature branches matching the pattern
+`/^([^_]+)_t([0-9]+)_.*docker.*/`. The tag generated for such images
+will be of the form `feature-{\1}-{\2}`.
 
