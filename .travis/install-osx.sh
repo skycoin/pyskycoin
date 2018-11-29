@@ -18,7 +18,7 @@ pyenv global ${PYTHON} 2.7.14
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
-python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
+python -m pip install --upgrade pip setuptools wheel tox tox-pyenv pytest pytest-runner
 
 # Create and activate python virtual environment
 #pyenv virtualenv $PYTHON venv;
