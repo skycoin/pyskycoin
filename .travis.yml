@@ -62,6 +62,7 @@ matrix:
       - TOXENV=py37
 
 before_install:
+    - cd gopath/src/github.com/skycoin/skycoin && git checkout origin/stdevEclipse_t1568_swig_files && cd ../../../../../
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
     # Setup environment and PATH in MacOS
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ; fi
@@ -79,6 +80,7 @@ before_install:
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then chmod +x ~/bin/gimme; fi
 
 install:
+    - python -V
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo pip install tox-travis pytest pytest-runner; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then mkdir swig_build && cd swig_build && wget http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && tar -zxf swig-3.0.12.tar.gz && cd swig-3.0.12 && sudo ./configure --prefix=/usr && sudo make && sudo make install && cd ../../ && sudo rm -rf swig_build ; fi
     - eval "$(gimme 1.10)"
