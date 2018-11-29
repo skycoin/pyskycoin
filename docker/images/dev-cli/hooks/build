@@ -18,7 +18,7 @@ echo "Build hook running"
 # Build :develop tag
 docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --build-arg SCOMMIT=$SOURCE_COMMIT \
-             --build-arg PIP_PACKAGES="tox tox-travis pytest pytest-runner" \
+             --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner" \
              -f $DOCKERFILE_PATH \
              -t "$IMAGE_NAME" .
 
@@ -27,7 +27,7 @@ if [ "$CACHE_TAG" -eq "develop" ]; then
   docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
-               --build-arg PIP_PACKAGES="tox tox-travis pytest pytest-runner" \
+               --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner" \
                -f $DOCKERFILE_PATH \
                -t "$DOCKER_REPO:dind" .
 fi

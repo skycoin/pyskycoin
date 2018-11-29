@@ -3,7 +3,7 @@ FROM $IMAGE_FROM
 
 ARG BDATE
 ARG SCOMMIT
-ARG PIP_PACKAGES
+ARG PIP_PACKAGES="setuptools wheel"
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
@@ -44,7 +44,6 @@ RUN set -ex \
 # Install Python 3.7
 # runtime dependencies
 ENV PYTHON_VERSION 3.7.1
-
 RUN set -ex \
 	&& buildDeps=" \
 		libexpat1-dev \
@@ -94,7 +93,6 @@ RUN set -ex \
 # Install Python 3.6
 # runtime dependencies
 ENV PYTHON_VERSION 3.6.7
-
 RUN set -ex \
 	&& buildDeps=" \
 		libexpat1-dev \
@@ -144,7 +142,6 @@ RUN set -ex \
 # Install Python 3.4
 # runtime dependencies
 ENV PYTHON_VERSION 3.4.9
-
 RUN set -ex \
 	&& buildDeps=" \
 # as of Stretch, "gpg" is no longer included by default
@@ -194,7 +191,6 @@ RUN set -ex \
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
 ENV PYTHON_PIP_VERSION 18.1
-
 RUN set -ex; \
 	\
 	wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'; \
@@ -227,13 +223,12 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-# Install packages
-ENV PACKAGES "tox tox-travis pytest pytest-runner"
-RUN pip install $PACKAGES \
-    && pip3 install $PACKAGES \
-    &&  python3.4 -m pip install $PACKAGES \
-    &&  python3.6 -m pip install $PACKAGES \
-    &&  python3.7 -m pip install $PACKAGES
+# Install packages in PIP_PACKAGES
+RUN pip install --upgrade $PIP_PACKAGES \
+    && pip3 install --upgrade $PIP_PACKAGES \
+    &&  python3.4 -m pip install --upgrade $PIP_PACKAGES \
+    &&  python3.6 -m pip install --upgrade $PIP_PACKAGES \
+    &&  python3.7 -m pip install --upgrade $PIP_PACKAGES
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
