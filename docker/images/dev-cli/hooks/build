@@ -11,13 +11,14 @@
 # CACHE_TAG: the Docker repository tag being built.
 # IMAGE_NAME: the name and tag of the Docker repository being built.
 #             (This variable is a combination of DOCKER_REPO:CACHE_TAG.)
-# VS_EXTENSIONS: VS Code extensions to add on docker image.
+# PIP_PACKAGES: pip packeges to install inside docker image.
 
 echo "Build hook running"
 
 # Build :develop tag
 docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --build-arg SCOMMIT=$SOURCE_COMMIT \
+             --build-arg PIP_PACKAGES="tox tox-travis pytest pytest-runner" \
              -f $DOCKERFILE_PATH \
              -t "$IMAGE_NAME" .
 
@@ -26,6 +27,7 @@ if [ "$CACHE_TAG" -eq "develop" ]; then
   docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
+               --build-arg PIP_PACKAGES="tox tox-travis pytest pytest-runner" \
                -f $DOCKERFILE_PATH \
                -t "$DOCKER_REPO:dind" .
 fi
