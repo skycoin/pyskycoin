@@ -1,3 +1,4 @@
+# Creates an image for skycoin development with Python tools installed
 ARG IMAGE_FROM=skycoin/skycoindev-cli:develop
 FROM $IMAGE_FROM
 
