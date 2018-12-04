@@ -66,6 +66,9 @@ before_install:
     - cd gopath/src/github.com/skycoin/skycoin && git checkout origin/stdevEclipse_t1568_swig_files && cd ${TRAVIS_BUILD_DIR}
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+    # Define command aliases
+    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)"; fi
+
     # Print system env info
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi

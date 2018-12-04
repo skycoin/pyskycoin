@@ -26,6 +26,3 @@ export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
 export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )"
 export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
 
-# Define command aliases
-eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)"
-
