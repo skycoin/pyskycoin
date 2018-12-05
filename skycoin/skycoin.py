@@ -96,6 +96,22 @@ except __builtin__.Exception:
     _newclass = 0
 
 
+def equalSlices(slice1, slice2, elem_size):
+    return _skycoin.equalSlices(slice1, slice2, elem_size)
+equalSlices = _skycoin.equalSlices
+
+def equalTransactions(t1, t2):
+    return _skycoin.equalTransactions(t1, t2)
+equalTransactions = _skycoin.equalTransactions
+
+def equalTransactionsArrays(pTxs1, pTxs2):
+    return _skycoin.equalTransactionsArrays(pTxs1, pTxs2)
+equalTransactionsArrays = _skycoin.equalTransactionsArrays
+
+def equalBlockHeaders(bh1, bh2):
+    return _skycoin.equalBlockHeaders(bh1, bh2)
+equalBlockHeaders = _skycoin.equalBlockHeaders
+
 def destroy_cipher_SecKeys(p):
     return _skycoin.destroy_cipher_SecKeys(p)
 destroy_cipher_SecKeys = _skycoin.destroy_cipher_SecKeys
@@ -119,22 +135,6 @@ SKY_params_GetUnlockedDistributionAddresses = _skycoin.SKY_params_GetUnlockedDis
 def SKY_params_GetLockedDistributionAddresses():
     return _skycoin.SKY_params_GetLockedDistributionAddresses()
 SKY_params_GetLockedDistributionAddresses = _skycoin.SKY_params_GetLockedDistributionAddresses
-
-def equalSlices(slice1, slice2, elem_size):
-    return _skycoin.equalSlices(slice1, slice2, elem_size)
-equalSlices = _skycoin.equalSlices
-
-def equalTransactions(t1, t2):
-    return _skycoin.equalTransactions(t1, t2)
-equalTransactions = _skycoin.equalTransactions
-
-def equalTransactionsArrays():
-    return _skycoin.equalTransactionsArrays()
-equalTransactionsArrays = _skycoin.equalTransactionsArrays
-
-def equalBlockHeaders(bh1, bh2):
-    return _skycoin.equalBlockHeaders(bh1, bh2)
-equalBlockHeaders = _skycoin.equalBlockHeaders
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)

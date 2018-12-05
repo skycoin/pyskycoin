@@ -1,3 +1,7 @@
+%begin %{
+#define SWIG_PYTHON_STRICT_BYTE_CHAR
+%}
+
 %typecheck(SWIG_TYPECHECK_STRING_ARRAY) coin__UxArray*  {
   $1 = PyList_Check($input) ? 1 : 0;
 }

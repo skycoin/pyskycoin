@@ -9,17 +9,17 @@
 
 //Apply strictly to python
 //Not for other languages
+%include "/gopath/src/github.com/skycoin/skycoin/lib/swig/includes.i"
+%include "/gopath/src/github.com/skycoin/skycoin/lib/swig/dynamic/dynamic.i"
 %include "python_skycoin.cipher.crypto.i"
 %include "python_uxarray.i"
 %include "python_sha256s.i"
 %include "python_skycoin.coin.i"
 %include "python_skycoin.callback.i"
-%include "golang.cgo.i"
 %include "structs_typemaps.i"
 %include "python_basic.i"
 %include "skycoin.mem.i"
 
-%include "/gopath/src/github.com/skycoin/skycoin/lib/swig/includes.i"
 %include "swig.h"
 /* Find the modified copy of libskycoin */
 %include "libskycoin.h"
