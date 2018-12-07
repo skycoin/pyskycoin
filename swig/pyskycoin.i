@@ -16,7 +16,6 @@
 %include "python_sha256s.i"
 %include "python_skycoin.coin.i"
 %include "python_skycoin.callback.i"
-%include "structs_typemaps.i"
 %include "python_basic.i"
 %include "python_mem.i"
 

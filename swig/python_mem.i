@@ -1,41 +1,3 @@
-/**
-*
-* typemaps for Handles
-*
-**/
-
-/* Handle reference typemap. */
-%typemap(in, numinputs=0) Handle* (Handle temp) {
-	$1 = &temp;
-}
-
-/* Handle out typemap. */
-%typemap(argout) Handle* {
-	%append_output( SWIG_From_long(*$1) );
-}
-
-/* Handle not as pointer is input. */
-%typemap(in) Handle {
-	SWIG_AsVal_long($input, (long*)&$1);
-}
-
-
-%apply Handle { Wallet__Handle, Options__Handle, ReadableEntry__Handle, ReadableWallet__Handle, WebRpcClient__Handle,
-	WalletResponse__Handle, Client__Handle, Strings__Handle, Wallets__Handle, Config__Handle, App__Handle, Context__Handle,
-	GoStringMap, PasswordReader__Handle_,
-	Transaction__Handle, Transactions__Handle, CreatedTransaction__Handle,
-	CreatedTransactionOutput__Handle, CreatedTransactionInput__Handle, CreateTransactionResponse__Handle,
-	Block__Handle, SignedBlock__Handle, BlockBody__Handle, BuildInfo_Handle, Number_Handle, Signature_Handle,AddressUxOuts_Handle
-	}
-
-%apply Handle* { Wallet__Handle*, Options__Handle*, ReadableEntry__Handle*, ReadableWallet__Handle*, WebRpcClient__Handle*,
-	WalletResponse__Handle*, Client__Handle*, Strings__Handle*, Wallets__Handle*, Config__Handle*,
-	App__Handle*, Context__Handle*, GoStringMap_*, PasswordReader__Handle*,
-	Transaction__Handle*, Transactions__Handle*, CreatedTransaction__Handle*,
-	CreatedTransactionOutput__Handle*, CreatedTransactionInput__Handle*, CreateTransactionResponse__Handle*,
-	Block__Handle*, SignedBlock__Handle*, BlockBody__Handle*, BuildInfo_Handle*, Number_Handle*, Signature_Handle*,AddressUxOuts_Handle*
-	}
-
 %typecheck(SWIG_TYPECHECK_INTEGER) Transaction__Handle {
   $1 = PyInt_Check($input) ? 1 : 0;
 }
@@ -101,42 +63,6 @@
 		return result;
 	}
 }
-
-// %rename(SKY_cipher_PubKeySlice_Len) wrap_SKY_cipher_PubKeySlice_Len;
-// %inline {
-// 	GoUint32 wrap_SKY_cipher_PubKeySlice_Len(cipher_PubKeys* __in_pubKeys){
-// 		GoSlice_ data;
-// 		data.data = __in_pubKeys->data;
-// 		data.len = __in_pubKeys->count;
-// 		data.cap = __in_pubKeys->count;
-// 		GoUint32 result = SKY_cipher_PubKeySlice_Len(&data);
-// 		return result;
-// 	}
-// }
-
-// %rename(SKY_cipher_PubKeySlice_Less) wrap_SKY_cipher_PubKeySlice_Less;
-// %inline {
-// 	GoUint32 wrap_SKY_cipher_PubKeySlice_Less(cipher_PubKeys* __in_pubKeys, GoInt p1, GoInt p2){
-// 		GoSlice_ data;
-// 		data.data = __in_pubKeys->data;
-// 		data.len = __in_pubKeys->count;
-// 		data.cap = __in_pubKeys->count;
-// 		GoUint32 result = SKY_cipher_PubKeySlice_Less(&data, p1, p2);
-// 		return result;
-// 	}
-// }
-
-// %rename(SKY_cipher_PubKeySlice_Swap) wrap_SKY_cipher_PubKeySlice_Swap;
-// %inline {
-// 	GoUint32 wrap_SKY_cipher_PubKeySlice_Swap(cipher_PubKeys* __in_pubKeys, GoInt p1, GoInt p2){
-// 		GoSlice_ data;
-// 		data.data = __in_pubKeys->data;
-// 		data.len = __in_pubKeys->count;
-// 		data.cap = __in_pubKeys->count;
-// 		GoUint32 result = SKY_cipher_PubKeySlice_Swap(&data, p1, p2);
-// 		return result;
-// 	}
-// }
 
 %rename(SKY_coin_VerifyTransactionCoinsSpending) wrap_SKY_coin_VerifyTransactionCoinsSpending;
 %inline {
