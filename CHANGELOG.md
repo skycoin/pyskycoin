@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added all the SWIG interface files corresponding to the repository
+- Add Python-specific SWIG interface files
 - Add versions of Python3.4, 3.5 and 3.6 in skycoindev-cli:py3 image.
 
 ### Fixed
@@ -18,4 +18,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 ### Known issues
+
+- The file swig.h has to be copied at build time from `skycoin/skycoin` submodule due to bizarre error
 
