@@ -28,3 +28,5 @@ tests/mytest.py
 *.swp
 *.swo
 
+# IDES
+.idea/
