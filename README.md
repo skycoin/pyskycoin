@@ -1,4 +1,4 @@
-#PySkycoin
+# PySkycoin
 
 [![Build Status](https://travis-ci.org/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.org/skycoin/pyskycoin)
 
