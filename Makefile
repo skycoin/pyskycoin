@@ -62,10 +62,10 @@ build-swig:
 develop:
 	$(PYTHON_BIN) setup.py develop
 
-build-libc-swig: build-swig build-libc
+build-libc-swig: build-libc build-swig
 
 test-ci:
 	tox
 
-test: build-swig build-libc develop
+test: build-libc build-swig develop
 	$(PYTHON_BIN) setup.py test
