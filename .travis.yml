@@ -84,7 +84,7 @@ install:
     - eval "$(gimme 1.10)"
     
 after_failure:
-  - cat ./.tox/py35/log/py35-*.log
+  - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 
 script: make test-ci
 
