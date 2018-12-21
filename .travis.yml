@@ -62,8 +62,9 @@ matrix:
       - TOXENV=py37
 
 before_install:
-    # Change to stdevEclipse_t1568_swig_files branch
-    - cd gopath/src/github.com/skycoin/skycoin && git checkout origin/stdevEclipse_t1568_swig_files && cd ${TRAVIS_BUILD_DIR}
+    # Sync to develop branch
+    # FIXME: Checkout skycoin/skycoin:master
+    - cd gopath/src/github.com/skycoin/skycoin && git checkout develop && cd ${TRAVIS_BUILD_DIR}
     - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
     - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
     # Define command aliases
