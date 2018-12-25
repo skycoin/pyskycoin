@@ -85,13 +85,13 @@ if platform.system() == "Darwin":
 extra_link_args.append(library_file)
 
 setup(
-    name='Pyskycoin',  # Required
+    name='pyskycoin',  # Required
     version=__version__,  # Required
     description="Skycoin Python Library",
     long_description=long_description,
     url="https://github.com/simelo/pyskycoin",
-    author="stdevEclipse",  # Optional
-    author_email="dev0003@simelo.tech",
+    author="Ratmil Torres",  # Optional
+    author_email="skycoin@simelo.tech",
     setup_requires=["pytest-runner"],
     tests_require=["pytest"],
     classifiers=[
