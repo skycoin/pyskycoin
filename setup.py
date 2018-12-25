@@ -85,7 +85,7 @@ if platform.system() == "Darwin":
 extra_link_args.append(library_file)
 
 setup(
-    name="Pyskycoin",  # Required
+    name='Pyskycoin',  # Required
     version=__version__,  # Required
     description="Skycoin Python Library",
     long_description=long_description,
