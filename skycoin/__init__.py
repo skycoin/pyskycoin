@@ -10,7 +10,6 @@ except (AttributeError, ImportError) as _err :
 
     import sys, traceback
     print("Error initializing skycoin package. Details:", file=sys.stderr)
-    exc_info = sys.exc_info()
-    traceback.print_exception(*exc_info)
+    traceback.print_exception(*sys.exc_info())
     print("\n\nInport succeeded but package load failed", file=sys.stderr)
 
