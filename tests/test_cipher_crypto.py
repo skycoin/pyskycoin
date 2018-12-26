@@ -201,7 +201,7 @@ def test_TestPubKeyFromSig():
     assert skycoin.SKY_cipher_PubKeyFromSig(sig_1, sha_sum, public_key_2) == skycoin.SKY_OK
     assert public_key == public_key_2
     sig_2 = skycoin.cipher_Sig()
-    assert skycoin.SKY_cipher_PubKeyFromSig(sig_2, sha_sum, public_key_2) == skycoin.SKY_ErrInvalidSigForPubKey
+    assert skycoin.SKY_cipher_PubKeyFromSig(sig_2, sha_sum, public_key_2) == skycoin.SKY_ErrInvalidSigPubKeyRecovery
 
 
 
