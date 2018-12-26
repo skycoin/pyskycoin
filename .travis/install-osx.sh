@@ -18,8 +18,12 @@ pyenv global ${PYTHON} 2.7.14
 eval "$(pyenv init -)";
 eval "$(pyenv virtualenv-init -)";
 pyenv rehash
-python -m pip install --upgrade pip setuptools wheel tox tox-pyenv
 
-# Create and activate python virtual environment
-#pyenv virtualenv $PYTHON venv;
-#pyenv activate venv;
+# Setup environment and PATH in MacOS
+export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)"
+export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
+export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )"
+export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
+
+eval "python${PYCMD_VERSION} -m pip install --upgrade pip setuptools wheel tox tox-pyenv pytest pytest-runner"
+

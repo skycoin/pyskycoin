@@ -9,7 +9,7 @@ SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
 SKYBUILD_DIR = $(SKYCOIN_DIR)/build
 BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
 LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
-LIBSWIG_DIR = $(SKYCOIN_DIR)/lib/swig
+LIBSWIG_DIR = swig
 BUILD_DIR = build
 BIN_DIR = $(SKYCOIN_DIR)/bin
 INCLUDE_DIR = $(SKYCOIN_DIR)/include
@@ -55,7 +55,9 @@ build-swig:
 	}
 	rm -f ./skycoin/skycoin.py
 	rm -f swig/pyskycoin_wrap.c
-	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/skycoin.i
+	rm -f swig/include/swig.h
+	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
+	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop:
 	$(PYTHON_BIN) setup.py develop
