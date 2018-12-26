@@ -1,4 +1,3 @@
-
 __version__ = "0.25.0"
 init_error = None
 
@@ -7,7 +6,6 @@ def _print2stderr(msg):
 
 try:
     from .skycoin import *
-    from .skyerror import *
 except (AttributeError, ImportError) as _err :
     init_error = _err
 
