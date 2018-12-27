@@ -62,7 +62,7 @@ RUN set -ex \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
+	      gpg --no-tty --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -111,7 +111,7 @@ RUN set -ex \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
+	      gpg --no-tty --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -157,7 +157,7 @@ RUN set -ex \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
+	      gpg --no-tty --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
