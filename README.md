@@ -20,6 +20,11 @@ A Python extension generated with SWIG to access Skycoin API from Python.
     - [Memory Managemanet](#memory-management)
 - [Make rules](#make-rules)
 - [Development setup](#development-setup)
+  - [Running tests](#running-tests)
+  - [Releases](#releases)
+    - [Update the version](#update-the-version)
+    - [Pre-release testing](#pre-release-testing)
+    - [Creating release builds](#creating-release-builds)
 <!-- /MarkdownTOC -->
 
 ## Installation
