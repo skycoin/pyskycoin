@@ -201,6 +201,13 @@ These branches may be forked out of either `master` or `develop` branches, and
 the submodule at `gopath/src/github.com/skycoin/skycoin` has to be
 in sync with the corresponding tag of `skycoin/skycoin` official repository.
 
+Stable development branches are created most of the time for the following reasons:
+
+- A Skycoin release increasing [patch version number](https://semver.org/).
+- Enhanced support and bug fixes for a version of PySkycoin compiled against an
+  stable version of Skycoin
+- Backporting useful features added in `develop`.
+
 ### Running tests
 
 ```sh
