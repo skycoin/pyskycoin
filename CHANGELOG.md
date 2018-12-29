@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Add `make build` target to build PySkycoin C extension module
+- Add `make help`
 - Add Python-specific SWIG interface files
 - Add versions of Python3.4, 3.5 and 3.6 in skycoindev-cli:py3 image.
 
