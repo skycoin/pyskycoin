@@ -40,7 +40,7 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 
 build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a ## Build libskycoin C client library
 
-build-swig: ## Generate Pyhton C module from SWIG interfaces
+build-swig: ## Generate Python C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
@@ -64,6 +64,7 @@ develop: ## Install PySkycoin for development
 build-libc-swig: build-swig build-libc
 
 build: build-libc-swig ## Build PySkycoin Python package
+	$(PYTHON_BIN) setup.py build
 
 test-ci: ## Run tests on (Travis) CI build
 	tox
