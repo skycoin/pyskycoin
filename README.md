@@ -20,6 +20,11 @@ A Python extension generated with SWIG to access Skycoin API from Python.
     - [Memory Managemanet](#memory-management)
 - [Make rules](#make-rules)
 - [Development setup](#development-setup)
+  - [Running tests](#running-tests)
+  - [Releases](#releases)
+    - [Update the version](#update-the-version)
+    - [Pre-release testing](#pre-release-testing)
+    - [Creating release builds](#creating-release-builds)
 <!-- /MarkdownTOC -->
 
 ## Installation
@@ -179,4 +184,71 @@ It is highly recommended for developers to setup their environment using
 the available Docker images.
 Read the [PySkycoin Docker docs](docker/images/dev-cli/README.md) for further
 details.
+
+The project has two branches: `master` and `develop`.
+
+- `develop` is the default branch and will always have the latest code.
+  The submodule at `gopath/src/github.com/skycoin/skycoin` has to be
+  in sync with `skycoin/skycoin` `develop` branch.
+- `master` will always be equal to the current stable release on the website, and should correspond with the latest release tag.
+  The submodule at `gopath/src/github.com/skycoin/skycoin` has to be
+  in sync with `skycoin/skycoin` `master` branch.
+
+Separate stable development branches will be created to work on releases for supporting the
+most recent stable version of Skycoin. The name of these branches should be the Skycoin
+imajor and minor version numbers followed by `dev` suffix e.g. `0.25dev`.
+These branches may be forked out of either `master` or `develop` branches, and 
+the submodule at `gopath/src/github.com/skycoin/skycoin` has to be
+in sync with the corresponding tag of `skycoin/skycoin` official repository.
+
+Stable development branches are created most of the time for the following reasons:
+
+- A Skycoin release increasing [patch version number](https://semver.org/).
+- Enhanced support and bug fixes for a version of PySkycoin compiled against an
+  stable version of Skycoin
+- Backporting useful features added in `develop`.
+
+### Running tests
+
+```sh
+$ make test
+```
+
+### Releases
+
+#### Update the version
+
+0. If the `master` branch has commits that are not in `develop` (e.g. due to a hotfix applied to `master`), merge `master` into `develop` (and fix any build or test failures)
+0. Switch to a new release branch named `release-X.Y.Z` for preparing the release.
+0. Ensure that the submodule at `gopath/src/github.com/skycoin/skycoin` is in sync with respect to the corresponding tag in https://github.com/skycoin/skycoin repository.
+0. Update `__version__` in `skycoin/__init__.py`
+0. Run `make build` to make sure that the code base is up to date
+0. Update `CHANGELOG.md`: move the "unreleased" changes to the version and add the date.
+0. Update files in https://github.com/skycoin/repo-info/tree/master/repos/skycoin/remote for `skycoin/skycoin-python` Docker image, adding a new file for the new version and adjusting any configuration text that may have changed
+0. Follow the steps in [pre-release testing](#pre-release-testing)
+0. Make a PR merging the release branch into `master`
+0. Review the PR and merge it
+0. Tag the `master` branch with the version number. Version tags start with `v`, e.g. `v0.20.0`. Sign the tag. If you have your GPG key in github, creating a release on the Github website will automatically tag the release. It can be tagged from the command line with `git tag -as v0.20.0 $COMMIT_ID`, but Github will not recognize it as a "release".
+0. Release builds are created and uploaded by travis. To do it manually, checkout the master branch and follow the [create release builds instructions](#creating-release-builds).
+0. Checkout `develop` branch and bump `__version__` to next [`dev` version number](https://www.python.org/dev/peps/pep-0440/#developmental-releases).
+
+#### Pre-release testing
+
+Perform these actions before releasing:
+
+```sh
+make check
+make integration-test
+```
+
+#### Creating release builds
+
+Release builds should be created from `master` branch . After [updating release version](#update-the-version) it is necessary to follow these steps
+
+```sh
+cd /path/to/pyskycoin
+python3 setup.py sdist bdist_wheel
+python3 -m pip install --user --upgrade twine
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
 
