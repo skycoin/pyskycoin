@@ -61,7 +61,7 @@ build-swig: ## Generate Python C module from SWIG interfaces
 develop: ## Install PySkycoin for development
 	$(PYTHON_BIN) setup.py develop
 
-build-libc-swig: build-swig build-libc
+build-libc-swig: build-libc build-swig
 
 build: build-libc-swig ## Build PySkycoin Python package
 	$(PYTHON_BIN) setup.py build
