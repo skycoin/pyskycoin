@@ -26,7 +26,7 @@ else ifeq ($(shell uname -s),Darwin)
 	TEMP_DIR = $TMPDIR
 endif
 
-configure:
+configure: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 
@@ -38,10 +38,9 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	mkdir -p swig/include
 	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
-## Build libskycoin C client library
-build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a
+build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a ## Build libskycoin C client library
 
-build-swig:
+build-swig: ## Generate Pyhton C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
@@ -59,16 +58,18 @@ build-swig:
 	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
 	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
-develop:
+develop: ## Install PySkycoin for development
 	$(PYTHON_BIN) setup.py develop
 
 build-libc-swig: build-libc build-swig
 
-test-ci:
+build: build-libc-swig ## Build PySkycoin Python package
+
+test-ci: ## Run tests on (Travis) CI build
 	tox
 
-test: build-libc build-swig develop
+test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
 
-help:
+help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
