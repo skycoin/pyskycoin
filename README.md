@@ -218,7 +218,7 @@ $ make test
 
 #### Update the version
 
-0. If the `master` branch has commits that are not in `develop` (e.g. due to a hotfix applied to `master`), merge `master` into `develop`
+0. If the `master` branch has commits that are not in `develop` (e.g. due to a hotfix applied to `master`), merge `master` into `develop` (and fix any build or test failures)
 0. Switch to a new release branch named `release-X.Y.Z` for preparing the release.
 0. Ensure that the submodule at `gopath/src/github.com/skycoin/skycoin` is in sync with respect to the corresponding tag in https://github.com/skycoin/skycoin repository.
 0. Update `__version__` in `skycoin/__init__.py`
