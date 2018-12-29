@@ -243,7 +243,7 @@ make integration-test
 
 #### Creating release builds
 
-Release builds should be created from `master` branch . After [updating release version](#update-the-version) it is necessary to follow these steps
+Release builds should be created from git tags . After [updating release version](#update-the-version) it is necessary to follow these steps
 
 ```sh
 cd /path/to/pyskycoin
