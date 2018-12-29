@@ -25,9 +25,14 @@ tests/mytest.py
 .tox
 .cache
 
+# Temp files
 *.swp
 *.swo
 
 # IDES
 .idea/
 .vscode/
+
+# SWIG
+*.kbk
+
