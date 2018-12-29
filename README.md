@@ -219,19 +219,18 @@ $ make test
 #### Update the version
 
 0. If the `master` branch has commits that are not in `develop` (e.g. due to a hotfix applied to `master`), merge `master` into `develop`
-0. Ensure that the submodule at `gopath/src/github.com/skycoin/skycoin` is in sync with respect to the `master` branch of https://github.com/skycoin/skycoin .
-0. Run `make build` to make sure that the code base is up to date
+0. Switch to a new release branch named `release-X.Y.Z` for preparing the release.
+0. Ensure that the submodule at `gopath/src/github.com/skycoin/skycoin` is in sync with respect to the corresponding tag in https://github.com/skycoin/skycoin repository.
 0. Update `__version__` in `skycoin/__init__.py`
+0. Run `make build` to make sure that the code base is up to date
 0. Update `CHANGELOG.md`: move the "unreleased" changes to the version and add the date.
 0. Update files in https://github.com/skycoin/repo-info/tree/master/repos/skycoin/remote for `skycoin/skycoin-python` Docker image, adding a new file for the new version and adjusting any configuration text that may have changed
-0. Merge these changes to develop
 0. Follow the steps in [pre-release testing](#pre-release-testing)
-0. Make a PR merging `develop` into `master`
+0. Make a PR merging the release branch into `master`
 0. Review the PR and merge it
 0. Tag the `master` branch with the version number. Version tags start with `v`, e.g. `v0.20.0`. Sign the tag. If you have your GPG key in github, creating a release on the Github website will automatically tag the release. It can be tagged from the command line with `git tag -as v0.20.0 $COMMIT_ID`, but Github will not recognize it as a "release".
 0. Release builds are created and uploaded by travis. To do it manually, checkout the master branch and follow the [create release builds instructions](#creating-release-builds).
-0. Checkout `develop` branch and bump `__version__` to next `rc` version number.
-0. Synchronize with `develop` branch the submodule at `gopath/src/github.com/skycoin/skycoin`.
+0. Checkout `develop` branch and bump `__version__` to next [`dev` version number](https://www.python.org/dev/peps/pep-0440/#developmental-releases).
 
 #### Pre-release testing
 

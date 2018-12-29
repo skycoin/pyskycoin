@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Feature compatible with Skycoin `v0.25.0`
-- Distribute PySkycoin under the terms of the MIT license
 - Add Python-specific SWIG interface files
 - Add `skycoin/skycoindev-python:develop` Docker image including Python `3.4`, `3.5`, `3.6`, and `3.7`
 
