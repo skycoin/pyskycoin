@@ -193,10 +193,13 @@ The project has two branches: `master` and `develop`.
 - `master` will always be equal to the current stable release on the website, and should correspond with the latest release tag.
   The submodule at `gopath/src/github.com/skycoin/skycoin` has to be
   in sync with `skycoin/skycoin` `master` branch.
-- `next` will be created if the next planned release is expected to be built
-  out of latest stable version of Skycoin. It should be started from `master` branch and 
-  the submodule at `gopath/src/github.com/skycoin/skycoin` has to be
-  in sync with `skycoin/skycoin` `master` branch.
+
+Separate stable development branches will be created to work on releases for supporting the
+most recent stable version of Skycoin. The name of these branches should be the Skycoin
+imajor and minor version numbers followed by `dev` suffix e.g. `0.25dev`.
+These branches may be forked out of either `master` or `develop` branches, and 
+the submodule at `gopath/src/github.com/skycoin/skycoin` has to be
+in sync with the corresponding tag of `skycoin/skycoin` official repository.
 
 ### Running tests
 
