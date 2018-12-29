@@ -196,7 +196,7 @@ The project has two branches: `master` and `develop`.
 
 Separate stable development branches will be created to work on releases for supporting the
 most recent stable version of Skycoin. The name of these branches should be the Skycoin
-imajor and minor version numbers followed by `dev` suffix e.g. `0.25dev`.
+major and minor version numbers followed by `dev` suffix e.g. `0.25dev`.
 These branches may be forked out of either `master` or `develop` branches, and 
 the submodule at `gopath/src/github.com/skycoin/skycoin` has to be
 in sync with the corresponding tag of `skycoin/skycoin` official repository.
@@ -227,7 +227,7 @@ $ make test
 0. Follow the steps in [pre-release testing](#pre-release-testing)
 0. Make a PR merging the release branch into `master`
 0. Review the PR and merge it
-0. Update files in https://github.com/skycoin/repo-info/tree/master/repos/skycoin/remote for `skycoin/skycoin-python` Docker image, adding a new file for the new version and adjusting any configuration text that may have changed
+0. Update files in https://github.com/skycoin/repo-info/tree/master/repos/skycoin/remote for `simelotech/skycoindev-dotnet` Docker image, adding a new file for the new version and adjusting any configuration text that may have changed
 0. Tag the `master` branch with the version number. Version tags start with `v`, e.g. `v0.20.0`. Sign the tag. If you have your GPG key in github, creating a release on the Github website will automatically tag the release. It can be tagged from the command line with `git tag -as v0.20.0 $COMMIT_ID`, but Github will not recognize it as a "release".
 0. Release builds are created and uploaded by travis. To do it manually, checkout the master branch and follow the [create release builds instructions](#creating-release-builds).
 0. Checkout `develop` branch and bump `__version__` to next [`dev` version number](https://www.python.org/dev/peps/pep-0440/#developmental-releases).
