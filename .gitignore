@@ -3,10 +3,15 @@ build/
 dist/
 *.egg-info/
 *.egg
+*.eggs
 *.py[cod]
 __pycache__/
+.pytest_cache
 *.so
 *.o
+*.orig
+Pyskycoin-*
+eggs
 
 *~
 
@@ -19,3 +24,15 @@ tests/mytest.py
 # due to using tox and pytest
 .tox
 .cache
+
+# Temp files
+*.swp
+*.swo
+
+# IDES
+.idea/
+.vscode/
+
+# SWIG
+*.kbk
+
