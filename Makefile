@@ -1,3 +1,7 @@
+.DEFAULT_GOAL := help
+.PHONY: configure build-libc build-swig develop build-libc-swig build 
+.PHONY: test test-ci help
+
 # Compilation output
 .ONESHELL:
 SHELL := /bin/bash
