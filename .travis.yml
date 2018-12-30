@@ -95,4 +95,3 @@ deploy:
   on:
     tags: true
     repo: skycoin/pyskycoin
-    condition: "$TOXENV = py37"
