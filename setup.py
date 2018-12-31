@@ -89,6 +89,7 @@ setup(
     version=__version__,  # Required
     description="Skycoin Python Library",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/simelo/pyskycoin",
     author="Ratmil Torres",  # Optional
     author_email="skycoin@simelo.tech",
