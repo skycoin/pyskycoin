@@ -1,93 +1,97 @@
-# this file is *not* meant to cover or endorse the use of travis, but rather to
-# help confirm pull requests to this project.
-
 matrix:
   include:
-    - os: linux
-      language: python
-      python: 2.7
-      env:
-        - TOXENV=py27
-        - PYTHON=2.7
-    - os: linux
-      language: python
-      python: 3.4
-      env:
-        - TOXENV=py34
-        - PYTHON=3.4
-    - os: linux
-      language: python
-      python: 3.5
-      env:
-        - TOXENV=py35
-        - PYTHON=3.5
-    - os: linux
-      language: python
-      python: 3.6
-      env:
-        - TOXENV=py36
-        - PYTHON=3.6
-    - os: linux
-      language: python
-      dist: xenial
-      python: 3.7
-      sudo: true
-      env:
-        - TOXENV=py37
-        - PYTHON=3.7
-    - os: osx
-      languague: generic
-      env:
-        - PYTHON=2.7
-        - TOXENV=py27
-    - os: osx
-      languague: generic
-      env:
-        - PYTHON=3.4.8
-        - TOXENV=py34
-    - os: osx
-      languague: generic
-      env:
-        - PYTHON=3.5.5
-        - TOXENV=py35
-    - os: osx
-      languague: generic
-      env:
-        - PYTHON=3.6.5
-        - TOXENV=py36
-    - os: osx
-      languague: generic
-      env:
-      - PYTHON=3.7.1
-      - TOXENV=py37
-
+  - os: linux
+    language: python
+    python: 2.7
+    env:
+    - TOXENV=py27
+    - PYTHON=2.7
+  - os: linux
+    language: python
+    python: 3.4
+    env:
+    - TOXENV=py34
+    - PYTHON=3.4
+  - os: linux
+    language: python
+    python: 3.5
+    env:
+    - TOXENV=py35
+    - PYTHON=3.5
+  - os: linux
+    language: python
+    python: 3.6
+    env:
+    - TOXENV=py36
+    - PYTHON=3.6
+  - os: linux
+    language: python
+    dist: xenial
+    python: 3.7
+    sudo: true
+    env:
+    - TOXENV=py37
+    - PYTHON=3.7
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=2.7
+    - TOXENV=py27
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.4.8
+    - TOXENV=py34
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.5.5
+    - TOXENV=py35
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.6.5
+    - TOXENV=py36
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.7.1
+    - TOXENV=py37
 before_install:
-    # Sync to develop branch
-    # FIXME: Checkout skycoin/skycoin:master
-    - cd gopath/src/github.com/skycoin/skycoin && git checkout develop && cd ${TRAVIS_BUILD_DIR}
-    - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-    # Setup environment and PATH in MacOS
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})" ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )" ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}" ; fi
-    # Define command aliases
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)"; fi
-    # Print system env info
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-    - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version" ; fi
-    - echo "PATH=$PATH"
-
+- cd gopath/src/github.com/skycoin/skycoin && git checkout develop && cd ${TRAVIS_BUILD_DIR}
+- if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} |
+  cut -d . -f 1,2)" ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
+  ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH}
+  )" ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
+  ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv
+  which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+  fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"
+  ; fi
+- echo "PATH=$PATH"
 install:
-    - eval "$(gimme 1.10)"
-    
+- eval "$(gimme 1.10)"
 after_failure:
-  - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
-
+- cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 script: make test-ci
-
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+deploy:
+  provider: pypi
+  user: olemis
+  distributions: sdist bdist_wheel
+  password:
+    secure: oWPiupPzGPN4jIn8cPAus5XuQ5/sSwLs3mewMoDpnBt/N7rhvJU2QcWbKcWffKAimcOK+BEjGiqFRR2zi8J6HWa7dgumovyVX9Ojp+y8yPWeTkQ2tHLa4vlf/DaMtGTxSVqIWlpr2RANJ/aFmc7gLthnl7PiuC+EZ5mqRTRgirQkXDk+3I1BevQtvjXlYQMTSu9UaabxjX9RCHgB3uDSYTKwQhmv4ye5X501RkgB+dziq3okGbBtmGDD7I195sc0veeq7lgcCJnTC0CL9HUZKPj8i7j4zfk14ID/cv+XC3A4zZCoD5BnR3+c0PoG1vs/cLWqCgJb3GnbadEN9cDLXLLSCqCRkbOav4SpMIskOTfEjgCVkLocDaJLen3MEmj/4hyc8ayUjSulKuLgndWYTCYvQ0mXWHDHgTlsNw4zR8x+ETJPBMp69wGhHqgLivWdjdkfgMCgn5cUR47l1OD0TIWWvHMvqoXY2rL9OVT+iXdiqBvt6hQvqZQBs0BT+3DiiqTlCxi0czzhDklp/WkwA9WDo05A3SQ9CB1XjbZhcw0ulYxeOV8jC8JeWIXPH6F0ahzJqTjWXcze+AR21lbJkVgythJplRjvIPZGQRPaodNZ/jqOHARAFI5hm2Hme21K2U7UvdmsSjLSNgPN4ElzNjdIPuqCGJ5meIZYrWLmdcY=
+  on:
+    tags: true
+    repo: skycoin/pyskycoin
+    condition: "$TOXENV = py37"
