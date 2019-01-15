@@ -60,7 +60,7 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
-- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then
+- if [ $TRAVIS_OS_NAME == 'linux' -a $TOXENV == 'py37' -a $TRAVIS_TAG != '' ]; then
   export PYPI_DEPLOY=true ;
   echo "Deploying to PYPI"
   fi
