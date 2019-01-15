@@ -2,12 +2,17 @@
 
 set -ev
 
+# Repository root path
+REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
+echo "Install Linux packages from $REPO_ROOT"
+
 # Install gimme
 curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 chmod +x ~/bin/gimme
 
 #Install Python libraries
-python -m pip install --upgrade pip setuptools wheel tox tox-travis tox-pyenv pytest pytest-runner
+python -m pip install --upgrade pip setuptools tox-travis
+python -m pip install --upgrade "$REPO_ROOT/requirements.dev.txt"
 
 # Compile SWIG
 mkdir swig_build && \
