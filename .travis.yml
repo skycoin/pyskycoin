@@ -29,6 +29,8 @@ matrix:
     dist: xenial
     python: 3.7
     sudo: true
+    services:
+      - docker
     env:
     - TOXENV=py37
     - PYTHON=3.7
@@ -58,40 +60,70 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
-- cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} |
-  cut -d . -f 1,2)" ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
-  ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH}
-  )" ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
-  ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv
-  which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+- if [ "$TRAVIS_OS_NAME" == 'linux' && "$TOXENV" == 'py37' && "$TRAVIS_TAG" != '' ]; then
+  export PYPI_DEPLOY=true ;
+  echo "Deploying to PYPI" ;
   fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"
-  ; fi
+- cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
+- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+  export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
+  fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+  eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+  fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.10)"
+before_script:
+  # Install PyPA Docker images for building multilinux wheels
+- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
+- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
+script:
+  # Test PySkycoin
+- make test-ci
+- mkdir -p dist
+- if [ "$PYPI_DEPLOY" = "true" ]; then 
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh ;
+  ls wheelhouse/ ;
+  fi
+- if [ "$PYPI_DEPLOY" = "true" ]; then
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh ;
+  ls wheelhouse/ ;
+  cp wheelhouse/* dist/ ;
+  fi
+- ls dist/
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
-script: make test-ci
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
 deploy:
-  provider: pypi
-  user: olemis
-  password:
-    secure: Lek+1bI8jaYADO5b4oLTirI3xqdYktV/ihyGCraK+Glp/U6FwwlF3ttRpvdT9/YyVRgWEt/jePQxH+COW3WbKh54MZWCMlMKmWc4JTs6zHliAWXecAQSvPDWHjzO0F1iz839MRBfQdBUMh1g7BFi4nC886DS7ts7+p2XXGsWwtI+quOwvZ6bS0M6nMTecG8OtpYCkOAoGZI6JEoDXyIygPR5+TIWXO2QFt7KT+fsircOvDHzdA2YY/oexwUWwLLf7J0qnRm2AEx0dDjpFTCaOr6+VxdjD7F8qDoXePzVEvW7AG6k0Emx3Vuj9JiTgga8qX3ExHSXoomNhiJoOM30UbH00mdT5Fz+6HqYqFieijX/Li2fExqXXp6Za4VHMrwImrXoYQw4350F8b6QzF7E4WouBBysBZIkBEswp69783uU1lGcbU0wnyj8SN6rYIPO03MG1e5HO+Dd9avMtCMdGj3qsNlmfK0v3fAGjrYsStMQtrfOUZGTahrHPh7P3VPB4qmsJ7eNo+lFtLN0I2+ehoqMd3UH+qggdFdLQFGVMe0SWCUV9Aoyxo9vVqbnPzclsmWL44M6YRDIgOtochNiDINbdx/EA/L517GrpSDjZwvhrJkoCE7Wr9m5YcC+x8qQXCpQ4dcYAJ4C+okASAIwtjOai5dQB7TfHJfN5XzSLUI=
-  distributions: sdist bdist_wheel
-  skip_existing: true
-  on:
-    tags: true
-    repo: skycoin/pyskycoin
+  matrix:
+  - provider: releases
+    api_key:
+      secure: kfY02m+bBVHJqwAoeJnLLPs2W7nis+YkfaU/Cb4IFsNlgjszHNDNZZikLdiO7TDw3XDLIPTHF0yesoeobA8oLiD8D1Z9n6eZg6fuQPBeOA2qOvBXasJNN+fZwJztSlr8yyVUp7OX+rWT0TNbDaqRI8MTJseKX7x8yIDi9Cxnkh6RIoPbvrdpmEvwlYf76ukC7Caw1IjBz/0QSML5C9U3hmkSNMGGzQh/oN4VexclDTP1Ze3DRXxXS8cSZMP8FaDSRt90AFErTJYO2hn4U3zCqL8eW6q/caL30hxdXN1xZuEwik3OfTiqB/86DOAVqJJAcpHCp1B/1JooSQ8SA0nsqTiw4CAAyR4a3cQcsbAM54kmbnTLj6GZg7OFn6MeYlsVpfx1E606uoHQjglHJZa0qPmwvEQE70gW9zxH3KGhiYLDba/ONtZWe0sc228jsrcqxQYvBfpRvizjpuEFPW2Bn6d8+C2mJzHWceAoUfvy1mhfZzYrrQJArewD55RFryqdjWpJg9RjF095rVWYCxq1Q90Xz1Ogx7f8y07MK747wYrgAiTcXnoX+pu6PzWYmK17y1N/9FamnUzmFUhv6xam7xFCAlR2yBvHnpJabgUjrcHnL3Ik7VQvZhPpHmf2M+xChZQgqOrcAAPz0mpUI4x1x1uudjas+WEO1fJBu01m6Xg=
+    file: dist/*
+    skip_cleanup: true
+    on:
+      tags: true
+      repo: skycoin/pyskycoin
+  # FIXME: Upload manylinux wheels
+  - provider: pypi
+    distributions: sdist
+    skip_cleanup: true
+    skip_existing: true
+    user:
+      secure: qPng5d9MuWToDdnABpvUvKspQJ2xj+evgBQOMxpCpXKkrp3EcJtT7VA4bi3k3RlShiKMw71+gqqpGFOO8QshRRf0qldDSzwYefUxe0/dqwuKcb77tY4yUZJtYi3MX/jmWUW0kLSedNGXv42ye4TbFxnd0yCCNVrffbIclcIapzqAECB2a61btcrLTWqaqsO5BYitEQ9VfRtv20Kx4wSjxECNGr354kYV95d74g6zF0OzxMcxha2VB4MYKQ308gX1ISF11ZuaW35ZRa81dT8/fWa9j7/xhpXVBZ6craCBtAFc3q5AcQL0FlYmhM1XFgDanhv3Uxw75mhjapyMedQFpmRT+2ej4v+Le9Etf8rxeebZRJBch0o/zw8ZRUltKSeN8comWSCwaS1NQVauhb9D0cQ7R+0ULkLkBw3E4Os+9wLWNPppw4p7v4m5SpCcD5AVeBuUFd4F9y4LNfjWGrEMfyGjcSyZqZts0xoZ3L6ta05n1vr84ah8DpQRHrMl6PeuH0dfbYRxnGEhBJcEfXZ2RmqC6EBdV1OBnWh91bUpltnwv/kG+aIhtgp/ZSQY1DukglJ2QDrXZZ0HI7TjXwYTJeScPuxsbPcluepfFrxU0K3dib8JyeJEQOfN1ioE6ln9TDGcDgTuYvBbA3ndjtqJZeWiUS7siyO9d7aE2kPZOSI=
+    password:
+      secure: Lek+1bI8jaYADO5b4oLTirI3xqdYktV/ihyGCraK+Glp/U6FwwlF3ttRpvdT9/YyVRgWEt/jePQxH+COW3WbKh54MZWCMlMKmWc4JTs6zHliAWXecAQSvPDWHjzO0F1iz839MRBfQdBUMh1g7BFi4nC886DS7ts7+p2XXGsWwtI+quOwvZ6bS0M6nMTecG8OtpYCkOAoGZI6JEoDXyIygPR5+TIWXO2QFt7KT+fsircOvDHzdA2YY/oexwUWwLLf7J0qnRm2AEx0dDjpFTCaOr6+VxdjD7F8qDoXePzVEvW7AG6k0Emx3Vuj9JiTgga8qX3ExHSXoomNhiJoOM30UbH00mdT5Fz+6HqYqFieijX/Li2fExqXXp6Za4VHMrwImrXoYQw4350F8b6QzF7E4WouBBysBZIkBEswp69783uU1lGcbU0wnyj8SN6rYIPO03MG1e5HO+Dd9avMtCMdGj3qsNlmfK0v3fAGjrYsStMQtrfOUZGTahrHPh7P3VPB4qmsJ7eNo+lFtLN0I2+ehoqMd3UH+qggdFdLQFGVMe0SWCUV9Aoyxo9vVqbnPzclsmWL44M6YRDIgOtochNiDINbdx/EA/L517GrpSDjZwvhrJkoCE7Wr9m5YcC+x8qQXCpQ4dcYAJ4C+okASAIwtjOai5dQB7TfHJfN5XzSLUI=
+    on:
+      tags: true
+      repo: skycoin/pyskycoin
