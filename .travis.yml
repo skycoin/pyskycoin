@@ -60,6 +60,10 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
+- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then
+  export PYPI_DEPLOY=true ;
+  echo "Deploying to PYPI"
+  fi
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -80,20 +84,21 @@ install:
 - eval "$(gimme 1.10)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
-- docker pull quay.io/pypa/manylinux1_x86_64
-- docker pull quay.io/pypa/manylinux1_i686
+- if [ $PYPI_DEPLOY = "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
+- if [ $PYPI_DEPLOY = "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
 script:
   # Test PySkycoin
 - make test-ci
-- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then 
+- mkdir -p dist
+- if [ $PYPI_DEPLOY = "true" ]; then 
   docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh
   ls wheelhouse/
   fi
-- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then
+- if [ $PYPI_DEPLOY = "true" ]; then
   docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh
   ls wheelhouse/
+  cp wheelhouse/* dist/*
   fi
-- cp wheelhouse/* dist/*
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
