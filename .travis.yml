@@ -29,6 +29,8 @@ matrix:
     dist: xenial
     python: 3.7
     sudo: true
+    services:
+      - docker
     env:
     - TOXENV=py37
     - PYTHON=3.7
@@ -61,26 +63,37 @@ before_install:
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_VERSION="$(echo ${PYTHON} |
-  cut -d . -f 1,2)" ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"
-  ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH}
-  )" ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
-  ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "alias python${PYCMD_VERSION}=$(pyenv
-  which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+  export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
+  fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+  eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
   fi
 - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
 - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"
-  ; fi
+- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.10)"
+before_script:
+  # Install PyPA Docker images for building multilinux wheels
+- docker pull quay.io/pypa/manylinux1_x86_64
+- docker pull quay.io/pypa/manylinux1_i686
 script:
+  # Test PySkycoin
 - make test-ci
+- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then 
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh
+  ls wheelhouse/
+  fi
+- if [ ( $TRAVIS_OS_NAME == 'linux' ) -a ( $TOXENV == 'py37') -a ( $TRAVIS_TAG != '' )  ]; then
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh
+  ls wheelhouse/
+  fi
+- cp wheelhouse/* dist/*
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
@@ -96,6 +109,7 @@ deploy:
     on:
       tags: true
       repo: skycoin/pyskycoin
+# FIXME: Upload manylinux wheels
 #  - provider: pypi
 #    user:
 #      secure: qPng5d9MuWToDdnABpvUvKspQJ2xj+evgBQOMxpCpXKkrp3EcJtT7VA4bi3k3RlShiKMw71+gqqpGFOO8QshRRf0qldDSzwYefUxe0/dqwuKcb77tY4yUZJtYi3MX/jmWUW0kLSedNGXv42ye4TbFxnd0yCCNVrffbIclcIapzqAECB2a61btcrLTWqaqsO5BYitEQ9VfRtv20Kx4wSjxECNGr354kYV95d74g6zF0OzxMcxha2VB4MYKQ308gX1ISF11ZuaW35ZRa81dT8/fWa9j7/xhpXVBZ6craCBtAFc3q5AcQL0FlYmhM1XFgDanhv3Uxw75mhjapyMedQFpmRT+2ej4v+Le9Etf8rxeebZRJBch0o/zw8ZRUltKSeN8comWSCwaS1NQVauhb9D0cQ7R+0ULkLkBw3E4Os+9wLWNPppw4p7v4m5SpCcD5AVeBuUFd4F9y4LNfjWGrEMfyGjcSyZqZts0xoZ3L6ta05n1vr84ah8DpQRHrMl6PeuH0dfbYRxnGEhBJcEfXZ2RmqC6EBdV1OBnWh91bUpltnwv/kG+aIhtgp/ZSQY1DukglJ2QDrXZZ0HI7TjXwYTJeScPuxsbPcluepfFrxU0K3dib8JyeJEQOfN1ioE6ln9TDGcDgTuYvBbA3ndjtqJZeWiUS7siyO9d7aE2kPZOSI=
