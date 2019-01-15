@@ -62,7 +62,7 @@ matrix:
 before_install:
 - if [ "$TRAVIS_OS_NAME" == 'linux' && "$TOXENV" == 'py37' && "$TRAVIS_TAG" != '' ]; then
   export PYPI_DEPLOY=true ;
-  echo "Deploying to PYPI"
+  echo "Deploying to PYPI" ;
   fi
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
