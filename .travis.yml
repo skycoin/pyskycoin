@@ -60,45 +60,46 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
-- if [ $TRAVIS_OS_NAME == 'linux' -a $TOXENV == 'py37' -a $TRAVIS_TAG != '' ]; then
+- if [ "$TRAVIS_OS_NAME" == 'linux' && "$TOXENV" == 'py37' && "$TRAVIS_TAG" != '' ]; then
   export PYPI_DEPLOY=true ;
   echo "Deploying to PYPI"
   fi
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- if [[ $TRAVIS_OS_NAME == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
   export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
   fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
   eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
   fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv versions ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-- if [[ $TRAVIS_OS_NAME == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.10)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
-- if [ $PYPI_DEPLOY = "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
-- if [ $PYPI_DEPLOY = "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
+- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
+- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
 script:
   # Test PySkycoin
 - make test-ci
 - mkdir -p dist
-- if [ $PYPI_DEPLOY = "true" ]; then 
+- if [ "$PYPI_DEPLOY" = "true" ]; then 
   docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh
   ls wheelhouse/
   fi
-- if [ $PYPI_DEPLOY = "true" ]; then
+- if [ "$PYPI_DEPLOY" = "true" ]; then
   docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh
   ls wheelhouse/
   cp wheelhouse/* dist/*
   fi
+- ls dist/
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
