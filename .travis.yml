@@ -91,13 +91,13 @@ script:
 - make test-ci
 - mkdir -p dist
 - if [ "$PYPI_DEPLOY" = "true" ]; then 
-  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh
-  ls wheelhouse/
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh ;
+  ls wheelhouse/ ;
   fi
 - if [ "$PYPI_DEPLOY" = "true" ]; then
-  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh
-  ls wheelhouse/
-  cp wheelhouse/* dist/*
+  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh ;
+  ls wheelhouse/ ;
+  cp wheelhouse/* dist/ ;
   fi
 - ls dist/
 after_failure:
