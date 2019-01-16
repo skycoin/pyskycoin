@@ -15,6 +15,7 @@ BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
 LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
 LIBSWIG_DIR = swig
 BUILD_DIR = build
+DIST_DIR = dist
 BIN_DIR = $(SKYCOIN_DIR)/bin
 INCLUDE_DIR = $(SKYCOIN_DIR)/include
 FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
@@ -33,6 +34,7 @@ endif
 configure: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
+	mkdir -p $(DIST_DIR)
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
@@ -75,6 +77,29 @@ test-ci: ## Run tests on (Travis) CI build
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
+
+sdist: ## Create source distribution archive
+	$(PYTHON_BIN) setup.py sdist --formats=gztar
+
+bdist_wheel: ## Create architecture-specific binary wheel distribution archive
+	$(PYTHON_BIN) setup.py bdist_wheel
+
+bdist_manylinux: bdist_manylinux_amd64 bdist_manylinux_i686 ## Create multilinux binary wheel distribution archives
+
+bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution archives
+	docker pull quay.io/pypa/manylinux1_x86_64
+	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
+	ls wheelhouse/
+	cp -v wheelhouse/* $(DIST_DIR)
+
+bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
+	docker pull quay.io/pypa/manylinux1_i686
+	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
+	ls wheelhouse/
+	cp -v wheelhouse/* $(DIST_DIR)
+
+# FIXME: After libskycoin 32-bits binaries bdist_manylinux_amd64 => bdist_manylinux
+dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
