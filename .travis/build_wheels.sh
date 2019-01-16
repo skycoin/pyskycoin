@@ -4,6 +4,9 @@ set -e -x
 # Install a system package required by our library
 yum install -y atlas-devel
 
+sh /io/.travis/install_linux.sh
+eval "$(gimme 1.10)"
+
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
   "${PYBIN}/pip" install -r /io/requirements.dev.txt
