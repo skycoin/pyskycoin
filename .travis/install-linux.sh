@@ -12,7 +12,7 @@ chmod +x ~/bin/gimme
 
 #Install Python libraries
 python -m pip install --upgrade pip setuptools tox-travis
-python -m pip install --upgrade "$REPO_ROOT/requirements.dev.txt"
+python -m pip install -r "$REPO_ROOT/requirements.dev.txt"
 
 # Compile SWIG
 mkdir swig_build && \
