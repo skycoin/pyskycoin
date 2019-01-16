@@ -3,13 +3,8 @@
 set -ev
 
 # Environment checks
-if "PIP" == ""; then
-  PIP='python -m pip'
-fi
-if "which sudo" == ""; then
-  SUDO=''
-else
-  SUDO='sudo'
+if [ $PIP == "" ]; then
+  export PIP='python -m pip'
 fi
 
 # Repository root path
@@ -30,9 +25,9 @@ mkdir swig_build && \
   curl -sL -o "swig-3.0.12.tar.gz" http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && \
   tar -zxf swig-3.0.12.tar.gz && \
   cd swig-3.0.12 && \
-  $SUDO ./configure --prefix=/usr && \
-  $SUDO make && \
-  $SUDO make install && \
+  sudo ./configure --prefix=/usr && \
+  sudo make && \
+  sudo make install && \
   cd ../../ && \
-  $SUDO rm -rf swig_build
+  sudo rm -rf swig_build
 
