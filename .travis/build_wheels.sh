@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e -x
 
-# Install a system package required by our library
-yum install -y atlas-devel
-
-sh /io/.travis/install_linux.sh
+# Install system packages required by our library
+yum install -y sudo pcre pcre-devel
+mkdir -p "$HOME/bin"
+PIP=/opt/python/cp27-cp27m/bin/pip source /io/.travis/install-linux.sh
 eval "$(gimme 1.10)"
 
 # Compile wheels

@@ -84,21 +84,22 @@ install:
 - eval "$(gimme 1.10)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
-- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
-- if [ "$PYPI_DEPLOY" = "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
+- if [ "$PYPI_DEPLOY" == "true" ]; then docker pull quay.io/pypa/manylinux1_x86_64 ; fi
+- if [ "$PYPI_DEPLOY" == "true" ]; then docker pull quay.io/pypa/manylinux1_i686 ; fi
 script:
   # Test PySkycoin
 - make test-ci
 - mkdir -p dist
-- if [ "$PYPI_DEPLOY" = "true" ]; then 
-  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/travis/build-wheels.sh ;
+- if [ "$PYPI_DEPLOY" == "true" ]; then 
+  docker run --rm -t -v `pwd`:/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
   ls wheelhouse/ ;
   fi
-- if [ "$PYPI_DEPLOY" = "true" ]; then
-  docker run --rm -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/travis/build-wheels.sh ;
-  ls wheelhouse/ ;
-  cp wheelhouse/* dist/ ;
-  fi
+# FIXME: Support in libskycoin for compiling 32 bit binaries
+#- if [ "$PYPI_DEPLOY" == "true" ]; then
+#  docker run --rm -t -v `pwd`:/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
+#  ls wheelhouse/ ;
+#  cp wheelhouse/* dist/ ;
+#  fi
 - ls dist/
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
