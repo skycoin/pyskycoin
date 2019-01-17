@@ -3,7 +3,7 @@
 set -ev
 
 # Environment checks
-if [ $PIP == "" ]; then
+if [ "$PIP" == "" ]; then
   export PIP='python -m pip'
 fi
 
