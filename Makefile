@@ -84,7 +84,8 @@ sdist: ## Create source distribution archive
 bdist_wheel: ## Create architecture-specific binary wheel distribution archive
 	$(PYTHON_BIN) setup.py bdist_wheel
 
-bdist_manylinux: bdist_manylinux_amd64 bdist_manylinux_i686 ## Create multilinux binary wheel distribution archives
+# FIXME: After libskycoin 32-bits binaries add bdist_manylinux_i686
+bdist_manylinux: bdist_manylinux_amd64 ## Create multilinux binary wheel distribution archives
 
 bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_x86_64
@@ -98,8 +99,10 @@ bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution arc
 	ls wheelhouse/
 	cp -v wheelhouse/* $(DIST_DIR)
 
-# FIXME: After libskycoin 32-bits binaries bdist_manylinux_amd64 => bdist_manylinux
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
+
+check-dist: dist ## Perform self-tests upon distributions archives
+	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

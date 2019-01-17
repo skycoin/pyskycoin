@@ -18,9 +18,3 @@ for whl in wheelhouse/*.whl; do
   auditwheel repair "$whl" -w /io/wheelhouse/
 done
 
-# Install packages and test
-for PYBIN in /opt/python/*/bin/; do
-  "${PYBIN}/pip" install pyskycoin --no-index -f /io/wheelhouse
-  (cd /io ; "${PYBIN}/python" -m pytest tests --showlocals )
-done
-
