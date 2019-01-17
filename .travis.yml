@@ -81,9 +81,8 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
-  # Test PySkycoin
+# Test PySkycoin
 - make test-ci
-- ls dist/
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
@@ -94,6 +93,7 @@ before_deploy:
 - make sdist
 - make bdist_wheel
 - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+- ls dist
 deploy:
 - provider: releases
   api_key:
