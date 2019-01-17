@@ -12,6 +12,7 @@ __pycache__/
 *.orig
 Pyskycoin-*
 eggs
+wheelhouse/
 
 *~
 
