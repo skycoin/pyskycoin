@@ -38,7 +38,7 @@ Execute (`python setup.py install`) to install the library. Although executing (
 The exported function in PySkycoin have the following naming format: `SKY_package_func_name` where package is replace by the package where the original Skycoin function is and func_name is the name of the function. For example, `LoadConfig` function from `cli` package is called in Python `SKY_cli_LoadConfig`
 ### Parameters
 
-All skycoin exported functions return an error object as the last of the return parameters. In Pyskycoin error is return as an integer and it is the first return parameter. The rest of the parameters are returned in the same order.
+All skycoin exported functions return an error object as the last of the return parameters. In Pyskycoin error is returned as an integer and it is the first return parameter. The rest of the parameters are returned in the same order.
 
 Receivers in Skycoin are the first of the input parameters. Simple types, like integer, float, string will be used as the corresponding types in Python.
 
