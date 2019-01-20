@@ -43,7 +43,7 @@ if [ "$CACHE_TAG" == "develop" ]; then
                 --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                 --build-arg SCOMMIT=$SOURCE_COMMIT \
                 --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
-                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces eamodio.gitlens" \
+                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces VisualStudioExptTeam.vscodeintellicode" \
                 -f Dockerfile \
                 -t "$DOCKER_REPO:vscode" .
 
@@ -51,7 +51,7 @@ if [ "$CACHE_TAG" == "develop" ]; then
                 --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                 --build-arg SCOMMIT=$SOURCE_COMMIT \
                 --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
-                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces eamodio.gitlens" \
+                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces VisualStudioExptTeam.vscodeintellicode" \
                 -f Dockerfile \
                 -t "$DOCKER_REPO:vscode-dind" .
 fi

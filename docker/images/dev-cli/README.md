@@ -16,7 +16,7 @@ it is based on `skycoin/skycoindev-cli:dind` and provides all tools included in 
 
 ## How to use this image
 
-## Initialize your development environment.
+## Initialize your development environment
 
 ```sh
 $ mkdir src
@@ -29,6 +29,21 @@ $ sudo chown -R `whoami` src
 This downloads the pyskycoin source to src/pyskycoin and changes the owner
 to your user. This is necessary, because all processes inside the container run
 as root and the files created by it are therefore owned by root.
+
+## Pre-installed pip packages
+
+In order to provide a good development environment for you, some pip packages has been installed:
+
+- [setuptools](https://pypi.org/project/setuptools/)
+- [wheel](https://pypi.org/project/wheel/)
+- [tox](https://pypi.org/project/tox/)
+- [tox-pyenv](https://pypi.org/project/tox-pyenv/)
+- [tox-travis](https://pypi.org/project/tox-travis/)
+- [pytest](https://pypi.org/project/pytest/)
+- [pytest-runner](https://pypi.org/project/pytest-runner/)
+- [virtualenv](https://pypi.org/project/virtualenv/)
+- [pylint](https://pypi.org/project/pylint/)
+- [flake8](https://pypi.org/project/flake8/)
 
 ## Running commands inside the container
 
@@ -75,6 +90,31 @@ $ docker run --privileged --name some-name \
     -d skycoin/skycoindev-python:dind
 ```
 
+### Use Visual Studio Code
+
+In order to use Visual Studio Code on development process, please read carefull
+the [documentation of oficial Skycoin Visual Studio Code dev image](https://github.com/skycoin/skycoin/tree/develop/docker/images/dev-vscode#initialize-your-development-environment)
+
+#### Pre-installed extensions
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Python Docstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
+- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+
+#### Add extensions to Visual Studio Code
+
+Like Skycoin Visual Studio Code dev image, you must pass `VS_EXTENSIONS` environment variable
+to the command-line with extensions you prefer. **Pass it if you use a docker image with Visual Studio Code**
+
+```sh
+$ docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix \
+        -v $PWD:/go/src/github.com/simelo/libskycoin-dotnet \
+        -w $GOPATH/src/github.com/simelo/libskycoin-dotnet \
+        -e DISPLAY=$DISPLAY \
+        -e VS_EXTENSIONS="ms-python.python rebornix.Ruby" \
+        simelotech/skycoindev-dotnet:vscode
+```
+
 ## Build your own images
 
 The build process relies on the following parameters
@@ -82,30 +122,55 @@ The build process relies on the following parameters
 - `SOURCE_COMMIT`: the SHA1 hash of the commit being tested.
 - `IMAGE_NAME`: the name and tag of the Docker repository being built.
 - `DOCKERFILE_PATH`: the dockerfile currently being built.
+- `PIP_PACKAGES`: pip packages to install inside docker image.
+- `VS_EXTENSIONS` Visual Studio Code extensions to add on docker image.
 
 In order to build image from `skycoindev-cli:develop` execute the following shell command
 
 ```sh
-$ cd skycoin
+$ cd pyskycoin
 $ SOURCE_COMMIT=$(git rev-parse HEAD)
 $ IMAGE_NAME=skycoin/skycoindev-python:develop
-$ DOCKERFILE_PATH=docker/images/dev/Dockerfile
+$ DOCKERFILE_PATH=docker/images/dev-cli/Dockerfile
 $ docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
+               --build-arg PIP_PACKAGES="Twisted tox" \
                -f $DOCKERFILE_PATH \
                -t "$IMAGE_NAME" .
 ```
 
-If you prefer to use `skycoindev-cli:dind` then run:
+If do you prefer to use `skycoindev-cli:dind` then run:
 
 ```sh
-$ cd skycoin
+$ cd pyskycoin
+$ IMAGE_FROM="skycoin/skycoindev-cli:dind"
 $ SOURCE_COMMIT=$(git rev-parse HEAD)
 $ IMAGE_NAME=skycoin/skycoindev-python:dind
-$ DOCKERFILE_PATH=docker/images/dev/Dockerfile
-$ docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
+$ DOCKERFILE_PATH=docker/images/dev-cli/Dockerfile
+$ docker build --build-arg IMAGE_FROM="$IMAGE_FROM" \
                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
+               --build-arg PIP_PACKAGES="Twisted tox" \
+               -f $DOCKERFILE_PATH \
+               -t "$IMAGE_NAME" .
+```
+
+Nevertheless, if do you like use Visual Studio Code instead of CLI, you can change `IMAGE_FROM` to build it. **When base image use Visual Studio Code, you can use `VS_EXTENSIONS` build arg**
+
+```sh
+$ cd pyskycoin
+$ git submodule update --init --recursive
+$ # Move to vscode folder to avoid file errors with vscode docker image
+$ cd gopath/src/github.com/skycoin/skycoin/docker/images/dev-vscode/
+$ IMAGE_FROM="skycoin/skycoindev-python:develop"
+$ SOURCE_COMMIT=$(git rev-parse HEAD)
+$ IMAGE_NAME=skycoin/skycoindev-python:vscode
+$ DOCKERFILE_PATH=docker/images/dev-cli/Dockerfile
+$ docker build --build-arg IMAGE_FROM="$IMAGE_FROM"
+               --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+               --build-arg SCOMMIT=$SOURCE_COMMIT \
+               --build-arg PIP_PACKAGES="matplotlib tox" \
+               --build-arg VS_EXTENSIONS="almenon.arepl ms-python.python" \
                -f $DOCKERFILE_PATH \
                -t "$IMAGE_NAME" .
 ```
