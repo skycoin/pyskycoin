@@ -2,6 +2,8 @@
 
 docker push $IMAGE_NAME
 
-if [ "$CACHE_TAG" -eq "develop" ]; then
-    docker push $DOCKER_REPO:dind
+if [ "$CACHE_TAG" == "develop" ]; then
+    docker push "$DOCKER_REPO:dind"
+    docker push "$DOCKER_REPO:vscode"
+    docker push "$DOCKER_REPO:vscode-dind"
 fi
