@@ -41,7 +41,6 @@ RUN set -ex \
 		python3-pip \
     && pip install --upgrade pip virtualenv \
     && pip3 install --upgrade pip virtualenv \
-    && /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh" \
     && mkdir -p /srv/venv/pysky27 \
     && mkdir -p /srv/venv/pysky34 \
     && mkdir -p /srv/venv/pysky35 \
