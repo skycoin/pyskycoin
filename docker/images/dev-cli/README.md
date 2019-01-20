@@ -2,7 +2,7 @@
 
 ## Simple Tags
 
-- [`develop, dind, vscode, vscode-dind` (*docker/images/dev/Dockerfile*)](https://github.com/skycoin/pyskycoin/blob/develop/docker/images/dev-cli/Dockerfile)
+- [`develop, dind, vscode, vscode-dind` (*docker/images/dev-cli/Dockerfile*)](https://github.com/skycoin/pyskycoin/blob/develop/docker/images/dev-cli/Dockerfile)
 
 ## Pyskycoin CLI/DIND development image
 
