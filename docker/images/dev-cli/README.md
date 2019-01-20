@@ -2,10 +2,10 @@
 
 ## Simple Tags
 
--	[`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
--	[`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
+- [`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
+- [`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
 
-# Pyskycoin CLI/DIND development image
+## Pyskycoin CLI/DIND development image
 
 This image (CLI) has the necessary tools to build, test, edit, lint and version the Pyskycoin
 source code. It comes with some versions of Python (2.7, 3.4, 3.5 and 3.6) and with Vim editor installed, along with some plugins
@@ -14,7 +14,7 @@ to ease go development and version control with git.
 Besides it is possible to use Docker in Docker (DIND) Pyskycoin development image,
 it is based on `skycoin/skycoindev-cli:dind` and provides all tools included in Pyskycoin CLI image.
 
-# How to use this image
+## How to use this image
 
 ## Initialize your development environment.
 
@@ -56,7 +56,8 @@ $ docker run --rm \
 ### Start a daemon instance
 
 ```sh
-$ docker run --privileged --name some-name -d skycoin/skycoindev-python:dind
+$ docker run --privileged --name some-name \
+    -d skycoin/skycoindev-python:dind
 ```
 
 ### Where to store data
@@ -74,7 +75,7 @@ $ docker run --privileged --name some-name \
     -d skycoin/skycoindev-python:dind
 ```
 
-# Build your own images
+## Build your own images
 
 The build process relies on the following parameters
 
@@ -116,4 +117,3 @@ and `master` branch on every push made after merging. The same process
 is triggered for all feature branches matching the pattern
 `/^([^_]+)_t([0-9]+)_.*docker.*/`. The tag generated for such images
 will be of the form `feature-{\1}-{\2}`.
-

@@ -39,12 +39,22 @@ RUN set -ex \
 		wget \
 		python-pip \
 		python3-pip \
-    && pip install --upgrade pip \
-    && pip3 install --upgrade pip
+    && pip install --upgrade pip virtualenv \
+    && pip3 install --upgrade pip virtualenv \
+    && /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh" \
+    && mkdir -p /srv/venv/pysky27 \
+    && mkdir -p /srv/venv/pysky34 \
+    && mkdir -p /srv/venv/pysky35 \
+    && mkdir -p /srv/venv/pysky36 \
+    && mkdir -p /srv/venv/pysky37 \
+    && virtualenv /srv/venv/pysky27 \
+    && /bin/bash -c "source /srv/venv/pysky27/bin/activate && pip install pyskycoin && deactivate" \
+    && virtualenv -p python3.5 /srv/venv/pysky35 \
+    && /bin/bash -c "source /srv/venv/pysky35/bin/activate && pip install pyskycoin && deactivate"
 
 # Install Python 3.7
 # runtime dependencies
-ENV PYTHON_VERSION 3.7.1
+ENV PYTHON_VERSION="3.7.2"
 RUN set -ex \
 	&& buildDeps=" \
 		libexpat1-dev \
@@ -55,14 +65,14 @@ RUN set -ex \
 	" \
 	&& apt-get install -y $buildDeps --no-install-recommends \
 	\
-	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
-	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+	&& wget -qO python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+	&& wget -qO python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& for server in ha.pool.sks-keyservers.net \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
+	      gpg --no-tty -q --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -93,7 +103,7 @@ RUN set -ex \
 
 # Install Python 3.6
 # runtime dependencies
-ENV PYTHON_VERSION 3.6.7
+ENV PYTHON_VERSION="3.6.8"
 RUN set -ex \
 	&& buildDeps=" \
 		libexpat1-dev \
@@ -104,14 +114,14 @@ RUN set -ex \
 	" \
 	&& apt-get install -y $buildDeps --no-install-recommends \
 	\
-	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
-	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+	&& wget -qO python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+	&& wget -qO python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& for server in ha.pool.sks-keyservers.net \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
+	      gpg --no-tty -q --keyserver "$server" --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -142,7 +152,7 @@ RUN set -ex \
 
 # Install Python 3.4
 # runtime dependencies
-ENV PYTHON_VERSION 3.4.9
+ENV PYTHON_VERSION="3.4.9"
 RUN set -ex \
 	&& buildDeps=" \
 # as of Stretch, "gpg" is no longer included by default
@@ -150,14 +160,14 @@ RUN set -ex \
 	" \
 	&& apt-get install -y libssl1.0-dev $buildDeps --no-install-recommends \
 	\
-	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
-	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+	&& wget -qO python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+	&& wget -qO python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& for server in ha.pool.sks-keyservers.net \
               hkp://p80.pool.sks-keyservers.net:80 \
               keyserver.ubuntu.com \
               hkp://keyserver.ubuntu.com:80 ;do\
-	      gpg --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
+	      gpg --no-tty -q --keyserver "$server" --recv-keys 97FC712E4C024BBEA48A61ED3A5CA953F73C700D;done \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \
 	&& rm -rf "$GNUPGHOME" python.tar.xz.asc \
 	&& mkdir -p /usr/src/python \
@@ -191,7 +201,7 @@ RUN set -ex \
 	&& rm -rf /usr/src/python
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 18.1
+ENV PYTHON_PIP_VERSION="18.1"
 RUN set -ex; \
 	\
 	wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'; \
@@ -225,11 +235,18 @@ RUN set -ex; \
 	rm -f get-pip.py
 
 # Install packages in PIP_PACKAGES
+# Create python virtualenv with pyskycoin pre-installed
 RUN pip install --upgrade $PIP_PACKAGES \
     && pip3 install --upgrade $PIP_PACKAGES \
-    &&  python3.4 -m pip install --upgrade $PIP_PACKAGES \
-    &&  python3.6 -m pip install --upgrade $PIP_PACKAGES \
-    &&  python3.7 -m pip install --upgrade $PIP_PACKAGES
+    && python3.4 -m pip install --upgrade $PIP_PACKAGES \
+    && python3.6 -m pip install --upgrade $PIP_PACKAGES \
+    && python3.7 -m pip install --upgrade $PIP_PACKAGES \
+    && virtualenv -p python3.4 /srv/venv/pysky34 \
+    && /bin/bash -c "source /srv/venv/pysky34/bin/activate && pip install pyskycoin && deactivate" \
+    && virtualenv -p python3.6 /srv/venv/pysky36 \
+    && /bin/bash -c "source /srv/venv/pysky36/bin/activate && pip install pyskycoin && deactivate" \
+    && virtualenv -p python3.7 /srv/venv/pysky37 \
+    && /bin/bash -c "source /srv/venv/pysky37/bin/activate && pip install pyskycoin && deactivate"
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
