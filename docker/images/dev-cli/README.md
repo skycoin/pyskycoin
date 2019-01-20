@@ -2,8 +2,7 @@
 
 ## Simple Tags
 
-- [`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
-- [`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
+- [`develop, dind, vscode, vscode-dind` (*docker/images/dev/Dockerfile*)](https://github.com/skycoin/pyskycoin/blob/develop/docker/images/dev-cli/Dockerfile)
 
 ## Pyskycoin CLI/DIND development image
 
@@ -22,7 +21,7 @@ it is based on `skycoin/skycoindev-cli:dind` and provides all tools included in 
 $ mkdir src
 $ docker run --rm \
     -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop \
-    git clone https://github.com/simelo/pyskycoin.git \
+    git clone https://github.com/skycoin/pyskycoin.git \
 $ sudo chown -R `whoami` src
 ```
 
@@ -86,7 +85,7 @@ The downside is that you need to make sure that the directory exists, and that e
 
 ```sh
 $ docker run --privileged --name some-name \
-    -v /my/own/var-lib-docker:/var/lib/docker \ 
+    -v /my/own/var-lib-docker:/var/lib/docker \
     -d skycoin/skycoindev-python:dind
 ```
 
@@ -108,11 +107,11 @@ to the command-line with extensions you prefer. **Pass it if you use a docker im
 
 ```sh
 $ docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix \
-        -v $PWD:/go/src/github.com/simelo/libskycoin-dotnet \
-        -w $GOPATH/src/github.com/simelo/libskycoin-dotnet \
+        -v $PWD:/go/src/github.com/skycoin/pyskycoin \
+        -w $GOPATH/src/github.com/skycoin/pyskycoin \
         -e DISPLAY=$DISPLAY \
         -e VS_EXTENSIONS="ms-python.python rebornix.Ruby" \
-        simelotech/skycoindev-dotnet:vscode
+        skycoindev-python:vscode
 ```
 
 ## Build your own images
