@@ -46,7 +46,7 @@ RUN set -ex \
     && mkdir -p /srv/venv/pysky35 \
     && mkdir -p /srv/venv/pysky36 \
     && mkdir -p /srv/venv/pysky37 \
-    && virtualenv /srv/venv/pysky27 \
+    && virtualenv -p python2.7 /srv/venv/pysky27 \
     && /bin/bash -c "source /srv/venv/pysky27/bin/activate && pip install pyskycoin && deactivate" \
     && virtualenv -p python3.5 /srv/venv/pysky35 \
     && /bin/bash -c "source /srv/venv/pysky35/bin/activate && pip install pyskycoin && deactivate"
