@@ -12,6 +12,7 @@ __pycache__/
 *.orig
 Pyskycoin-*
 eggs
+wheelhouse/
 
 *~
 
@@ -25,9 +26,14 @@ tests/mytest.py
 .tox
 .cache
 
+# Temp files
 *.swp
 *.swo
 
 # IDES
 .idea/
 .vscode/
+
+# SWIG
+*.kbk
+
