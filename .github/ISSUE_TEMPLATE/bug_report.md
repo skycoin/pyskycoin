@@ -1,5 +1,11 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: 'bug'
+assignees: ''
 
-Issue tracker is **ONLY** used for reporting bugs, features and enhancements. NO SUPPORT TICKETS ACCEPTED! Use [stackoverflow](https://stackoverflow.com) for supporting issues.
+---
 
 ## Expected Behavior
 
