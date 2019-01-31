@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add `make help`
 - Add Python-specific SWIG interface files
 - Add `skycoin/skycoindev-python:develop` Docker image including Python `3.4`, `3.5`, `3.6`, and `3.7`
+- Support for Skycoin `api`, `cipher`, `cli`, `coin`, `params`, `util`, `wallet`, `wallet_option`.
 
 ### Fixed
 
