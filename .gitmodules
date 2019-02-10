@@ -1,3 +1,6 @@
 [submodule "libskycoin"]
 	path = gopath/src/github.com/skycoin/libskycoin
 	url = https://github.com/skycoin/libskycoin.git
+[submodule "gopath/src/github.com/skycoin/libskycoin"]
+	path = gopath/src/github.com/skycoin/libskycoin
+	url = https://github.com/skycoin/libskycoin
