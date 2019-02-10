@@ -83,7 +83,6 @@ before_script:
 script:
 # Test PySkycoin
 - make test
-- make test-ci
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
