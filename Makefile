@@ -70,7 +70,7 @@ build-libc-swig: build-libc build-swig
 build: build-libc-swig ## Build PySkycoin Python package
 	$(PYTHON_BIN) setup.py build
 
-test-ci: ## Run tests on (Travis) CI build
+test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
 
 test: build-libc build-swig develop ## Run project test suite
