@@ -9,7 +9,7 @@ SHELL := /bin/bash
 PYTHON_BIN = python
 PWD = $(shell pwd)
 GOPATH_DIR = $(PWD)/gopath
-SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
+SKYCOIN_DIR = gopath/src/github.com/skycoin/libskycoin
 SKYBUILD_DIR = $(SKYCOIN_DIR)/build
 BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
 LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
@@ -21,7 +21,6 @@ INCLUDE_DIR = $(SKYCOIN_DIR)/include
 FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
 
 LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
-SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
@@ -61,8 +60,7 @@ build-swig: ## Generate Python C module from SWIG interfaces
 	rm -f ./skycoin/skycoin.py
 	rm -f swig/pyskycoin_wrap.c
 	rm -f swig/include/swig.h
-	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
-	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
+	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -I$(SKYCOIN_DIR)/include -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
 	$(PYTHON_BIN) setup.py develop
