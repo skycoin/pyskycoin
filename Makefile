@@ -40,7 +40,7 @@ configure: ## Configure build environment
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
-	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc-static
+	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
 	ls $(BUILDLIBC_DIR)
 	rm -f swig/include/libskycoin.h
 	mkdir -p swig/include
