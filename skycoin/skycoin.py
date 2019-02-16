@@ -1417,10 +1417,6 @@ def SKY_base58_String2Hex(p0):
     return _skycoin.SKY_base58_String2Hex(p0)
 SKY_base58_String2Hex = _skycoin.SKY_base58_String2Hex
 
-def SKY_base58_Hex2Base58(p0):
-    return _skycoin.SKY_base58_Hex2Base58(p0)
-SKY_base58_Hex2Base58 = _skycoin.SKY_base58_Hex2Base58
-
 def SKY_webrpc_NewClient(p0):
     return _skycoin.SKY_webrpc_NewClient(p0)
 SKY_webrpc_NewClient = _skycoin.SKY_webrpc_NewClient

@@ -16265,43 +16265,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_SKY_base58_Hex2Base58(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  GoSlice arg1 ;
-  GoString_ *arg2 = (GoString_ *) 0 ;
-  GoString temp2 ;
-  PyObject * obj0 = 0 ;
-  GoUint32 result;
-  
-  {
-    temp2.p = NULL;
-    temp2.n = 0;
-    arg2 = (GoString_ *)&temp2;
-  }
-  if (!PyArg_ParseTuple(args,(char *)"O:SKY_base58_Hex2Base58",&obj0)) SWIG_fail;
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( obj0, &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_base58_Hex2Base58', expecting string");
-    }
-    (&arg1)->data = buffer;
-    (&arg1)->len = size - 1;
-    (&arg1)->cap = size;
-  }
-  result = (GoUint32)SKY_base58_Hex2Base58(arg1,arg2);
-  resultobj = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_FromCharPtrAndSize( arg2->p, arg2->n  ));
-    free( (void*)arg2->p );
-  }
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_SKY_webrpc_NewClient(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   GoString arg1 ;
@@ -27966,7 +27929,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SKY_api_NewCreatedTransactionOutput", _wrap_SKY_api_NewCreatedTransactionOutput, METH_VARARGS, NULL},
 	 { (char *)"SKY_api_NewCreatedTransactionInput", _wrap_SKY_api_NewCreatedTransactionInput, METH_VARARGS, NULL},
 	 { (char *)"SKY_base58_String2Hex", _wrap_SKY_base58_String2Hex, METH_VARARGS, NULL},
-	 { (char *)"SKY_base58_Hex2Base58", _wrap_SKY_base58_Hex2Base58, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_NewClient", _wrap_SKY_webrpc_NewClient, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_CSRF", _wrap_SKY_webrpc_Client_CSRF, METH_VARARGS, NULL},
 	 { (char *)"SKY_webrpc_Client_InjectTransaction", _wrap_SKY_webrpc_Client_InjectTransaction, METH_VARARGS, NULL},
