@@ -2,10 +2,10 @@
 
 ## Simple Tags
 
--	[`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
--	[`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
+- [`develop` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
+- [`dind` (*docker/images/dev/Dockerfile*)](https://github.com/simelo/pyskycoin/blob/develop/docker/images/dev/Dockerfile)
 
-# Pyskycoin CLI/DIND development image
+## Pyskycoin CLI/DIND development image
 
 This image (CLI) has the necessary tools to build, test, edit, lint and version the Pyskycoin
 source code. It comes with some versions of Python (2.7, 3.4, 3.5 and 3.6) and with Vim editor installed, along with some plugins
@@ -14,9 +14,9 @@ to ease go development and version control with git.
 Besides it is possible to use Docker in Docker (DIND) Pyskycoin development image,
 it is based on `skycoin/skycoindev-cli:dind` and provides all tools included in Pyskycoin CLI image.
 
-# How to use this image
+## How to use this image
 
-## Initialize your development environment.
+### Initialize your development environment.
 
 ```sh
 $ mkdir src
@@ -30,12 +30,12 @@ This downloads the pyskycoin source to src/pyskycoin and changes the owner
 to your user. This is necessary, because all processes inside the container run
 as root and the files created by it are therefore owned by root.
 
-## Running commands inside the container
+### Running commands inside the container
 
 You can run commands by just passing them to the image. Everything is run
 in a container and deleted when finished.
 
-### Running tests
+#### Running tests
 
 ```sh
 $ docker run --rm \
@@ -43,7 +43,7 @@ $ docker run --rm \
     sh -c "cd pyskycoin; make test"
 ```
 
-### Editing code
+#### Editing code
 
 ```sh
 $ docker run --rm \
@@ -51,15 +51,17 @@ $ docker run --rm \
     vim
 ```
 
-## How to use Docker in Docker image
+### How to use Docker in Docker image
 
-### Start a daemon instance
+#### Start a daemon instance
 
 ```sh
-$ docker run --privileged --name some-name -d skycoin/skycoindev-python:dind
+$ docker run --privileged \
+    --name some-name \
+    -d skycoin/skycoindev-python:dind
 ```
 
-### Where to store data
+#### Where to store data
 
 Create a data directory on the host system (outside the container) and mount this to a directory visible from inside the container.
 
@@ -74,7 +76,7 @@ $ docker run --privileged --name some-name \
     -d skycoin/skycoindev-python:dind
 ```
 
-# Build your own images
+## Build your own images
 
 The build process relies on the following parameters
 
@@ -116,4 +118,3 @@ and `master` branch on every push made after merging. The same process
 is triggered for all feature branches matching the pattern
 `/^([^_]+)_t([0-9]+)_.*docker.*/`. The tag generated for such images
 will be of the form `feature-{\1}-{\2}`.
-
