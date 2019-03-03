@@ -8,6 +8,7 @@ matrix:
     env:
     - TOXENV=py27
     - PYTHON=2.7
+    - ARCH=arm
   - os: linux
     language: python
     python: 3.4
@@ -84,6 +85,7 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
+- "bash -ex .travis-ci.sh"
 # Test PySkycoin
 - make test-ci
 after_failure:
