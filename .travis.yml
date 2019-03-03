@@ -1,3 +1,4 @@
+sudo: required
 services:
 - docker
 matrix:
@@ -63,9 +64,9 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
-- docker pull balenalib/armv7hf-ubuntu-golang:latest-xenial-build
-- docker run --name skydev -it  -v ${GOPATH}/:/go balenalib/armv7hf-ubuntu-golang:latest-xenial-build  /bin/bash
-- docker exec -it skydev /bin/bash
+- sudo docker pull balenalib/armv7hf-ubuntu-golang:latest-xenial-build
+- sudo docker run --name skydev -it  -v ./:/go balenalib/armv7hf-ubuntu-golang:latest-xenial-build  /bin/bash
+- sudo docker exec -it skydev /bin/bash
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -87,7 +88,6 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
-- "bash -ex .travis-ci.sh"
 # Test PySkycoin
 - make test-ci
 after_failure:
