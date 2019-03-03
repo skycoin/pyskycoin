@@ -1,48 +1,66 @@
-# Creates an image for skycoin development with Python tools installed
-ARG IMAGE_FROM=balenalib/armv7hf-ubuntu-golang:latest-xenial-build
-FROM $IMAGE_FROM
+FROM arm32v7/ubuntu:trusty
+LABEL io.balena.architecture="armv7hf"
 
-ARG BDATE
-ARG SCOMMIT
-ARG PIP_PACKAGES="setuptools wheel"
+LABEL io.balena.qemu.version="3.0.0+resin-arm"
+COPY qemu-arm-static /usr/bin 
 
-# Image labels (see ./hooks/build for ARGS)
-LABEL "org.label-schema.name"="skycoindev-python" \
-      "org.label-schema.description"="Docker image with go, node, python and dev tools for Skycoin developers" \
-      "org.label-schema.vendor"="Skycoin project" \
-      "org.label-schema.url"="skycoin.net" \
-      "org.label-schema.version"="0.24.4" \
-      "org.label-schema.build-date"=$BDATE \
-      "org.label-schema.vcs-url"="https://github.com/skycoin/pyskycoin.git" \
-      "org.label-schema.vcs-ref"=$SCOMMIT \
-      "org.label-schema.usage"="https://github.com/skycoin/pyskycoin/blob/"$SCOMMIT"/docker/images/dev/README.md" \
-      "org.label-schema.schema-version"="1.0" \
-      "org.label-schema.docker.cmd"="mkdir src; docker run --rm -v ${PWD}/src:/usr/local/src skycoin/skycoindev-python:develop git clone https://github.com/simelo/pyskycoin.git"
+RUN apt-get update && apt-get install -y --no-install-recommends \
+	sudo \
+	ca-certificates \
+	findutils \
+	gnupg \
+	dirmngr \
+	inetutils-ping \
+	netbase \
+	curl \
+	udev \
+	$( \
+	if apt-cache show 'iproute' 2>/dev/null | grep -q '^Version:'; then \
+	echo 'iproute'; \
+	else \
+	echo 'iproute2'; \
+	fi \
+	) \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& echo '#!/bin/sh\n\
+	set -e\n\
+	set -u\n\
+	export DEBIAN_FRONTEND=noninteractive\n\
+	n=0\n\
+	max=2\n\
+	until [ $n -gt $max ]; do\n\
+	set +e\n\
+	(\n\
+	apt-get update -qq &&\n\
+	apt-get install -y --no-install-recommends "$@"\n\
+	)\n\
+	CODE=$?\n\
+	set -e\n\
+	if [ $CODE -eq 0 ]; then\n\
+	break\n\
+	fi\n\
+	if [ $n -eq $max ]; then\n\
+	exit $CODE\n\
+	fi\n\
+	echo "apt failed, retrying"\n\
+	n=$(($n + 1))\n\
+	done\n\
+	rm -r /var/lib/apt/lists/*' > /usr/sbin/install_packages \
+	&& chmod 0755 "/usr/sbin/install_packages"
 
-# Install Python 2.7/3.5 runtime and development tools
-RUN set -ex \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-		python2.7-dev \
-		python3.5 \
-		python3.5-dev \
-		python-dev \
-		python3-dev \
-		ca-certificates \
-		libexpat1 \
-		libffi6 \
-		libgdbm3 \
-		libreadline7 \
-		libsqlite3-0 \
-		libssl1.1 \
-		netbase \
-		wget \
-		python-pip \
-		python3-pip \
-    && pip install --upgrade pip \
-    && pip3 install --upgrade pip
+RUN curl -SLO "http://resin-packages.s3.amazonaws.com/resin-xbuild/v1.0.0/resin-xbuild1.0.0.tar.gz" \
+	&& echo "1eb099bc3176ed078aa93bd5852dbab9219738d16434c87fc9af499368423437  resin-xbuild1.0.0.tar.gz" | sha256sum -c - \
+	&& tar -xzf "resin-xbuild1.0.0.tar.gz" \
+	&& rm "resin-xbuild1.0.0.tar.gz" \
+	&& chmod +x resin-xbuild \
+	&& mv resin-xbuild /usr/bin \
+	&& ln -s resin-xbuild /usr/bin/cross-build-start \
+	&& ln -s resin-xbuild /usr/bin/cross-build-end
 
+ENV LC_ALL C.UTF-8
+ENV UDEV off
 
-WORKDIR $GOPATH/src/github.com/skycoin
+RUN mkdir -p /usr/share/man/man1
 
-VOLUME $GOPATH/src/
+COPY entry.sh /usr/bin/entry.sh
+ENTRYPOINT ["/usr/bin/entry.sh"]
