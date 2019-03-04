@@ -5,16 +5,18 @@ matrix:
   include:
   - os: linux
     dist: xenial
-    language: python
+    language: 
+      - python
+      - go
     python: 2.7
     env:
     - TOXENV=py27
     - PYTHON=2.7
     - ARCH=armv7hf
 before_install:
-- cd ./.travis && docker build -t skydev/test .  && cd ${TRAVIS_BUILD_DIR}
+# - cd ./.travis && docker build -t skydev/test .  && cd ${TRAVIS_BUILD_DIR}
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- docker run skydev/test -v ${GOPATH}/:/go /bin/bash -c "cd /go/src/github.com/skycoin/pyskycoin; make test"
+- docker run balenalib/armv7hf-ubuntu-golang:run -v ${GOPATH}/:/go /bin/sh -c "cd /go/src/github.com/pyskycoin && make test"
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
