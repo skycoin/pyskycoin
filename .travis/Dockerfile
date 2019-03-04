@@ -1,4 +1,4 @@
-FROM balenalib/armv7hf-ubuntu-golang
+FROM balenalib/armv7hf-ubuntu-golang:run
 
 RUN [ "cross-build-start" ]
 

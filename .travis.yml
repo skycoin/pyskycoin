@@ -14,7 +14,7 @@ matrix:
 before_install:
 - cd ./.travis && docker build -t skydev/test .  && cd ${TRAVIS_BUILD_DIR}
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- docker run skydev/test -v ${GOPATH}/:/go /bin/sh -c "cd /go/src/github.com/skycoin/pyskycoin; make test"
+- docker run skydev/test -v ${GOPATH}/:/go /bin/bash -c "cd /go/src/github.com/skycoin/pyskycoin; make test"
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
