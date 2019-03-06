@@ -1,4 +1,4 @@
-FROM resin/armv7hf-ubuntu-golang
+FROM arm32v7/golang
 
 RUN [ "cross-build-start" ]
 
