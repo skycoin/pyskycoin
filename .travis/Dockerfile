@@ -1,4 +1,4 @@
-FROM arm32v7/golang:1.11.5-stretch
+FROM balenalib/armv7hf-ubuntu-golang:run
 
 # RUN [ "cross-build-start" ]
 
