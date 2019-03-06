@@ -1,6 +1,6 @@
 FROM balenalib/armv7hf-ubuntu-golang:run
 
-# RUN [ "cross-build-start" ]
+RUN [ "cross-build-start" ]
 
 RUN uname -a
 # RUN apt-get update  
@@ -10,7 +10,7 @@ RUN uname -a
 # RUN cd $GOPATH/src/github.com/skycoin && git clone --recursive --depth=50 https://github.com/simelo/pyskycoin.git --branch=stdevHan_102_matrix_arm32
 # RUN cd $GOPATH/src/github.com/skycoin/pyskycoin && make test
 
-# RUN [ "cross-build-end" ]  
+RUN [ "cross-build-end" ]  
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
