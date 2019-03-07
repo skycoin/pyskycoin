@@ -10,7 +10,3 @@ RUN mkdir -p $GOPATH/src && mkdir -p $GOPATH/src/github.com && mkdir -p $GOPATH/
 RUN go get -v github.com/gz-c/gox
 
 RUN [ "cross-build-end" ]  
-
-WORKDIR $GOPATH/src/github.com/skycoin
-
-VOLUME $GOPATH/src/
