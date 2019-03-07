@@ -1,4 +1,4 @@
-FROM balenalib/${ARCH}-ubuntu-golang:run
+FROM balenalib/$ARCH-ubuntu-golang:run
 
 RUN [ "cross-build-start" ]
 
