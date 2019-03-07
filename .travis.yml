@@ -17,7 +17,7 @@ before_install:
 - cd ./.travis && docker build -t "skydev-test" .  && cd ${TRAVIS_BUILD_DIR}
 - docker ps -a
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- docker run --name skydev -it  -v $GOPATH:/go skydev-test  /bin/bash
+- docker run --name skydev -r -it  -v $GOPATH:/go skydev-test  /bin/bash
 - docker ps -a
 - docker exec -it skydev /bin/bash
 # - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
