@@ -62,7 +62,7 @@ build-swig: ## Generate Python C module from SWIG interfaces
 	rm -f swig/pyskycoin_wrap.c
 	rm -f swig/include/swig.h
 	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
-	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
+	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
 	$(PYTHON_BIN) setup.py develop
