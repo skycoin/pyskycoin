@@ -18,6 +18,7 @@ matrix:
     - PYTHON=3.4
     - ARCH=armv7hf
 before_install:
+# Checking arm32
 - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo apt-get update
@@ -25,21 +26,22 @@ before_install:
 - cd ./.travis && docker build -t "skydev-test" .  && cd ${TRAVIS_BUILD_DIR}
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - docker run -v $GOPATH/:/go skydev-test /bin/bash -c "[ "cross-build-start" ] && cd /go/src/github.com/skycoin/pyskycoin && make test"
-# - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
-  # export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
-  # fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
-  # eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
-  # fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
-# - echo "PATH=$PATH"
+# Checking amd64
+- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+  export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
+  fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+  eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+  fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
+- echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.11)"
 before_script:
