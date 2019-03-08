@@ -1,6 +1,6 @@
 FROM balenalib/armv7hf-ubuntu-golang
 
-RUN [ "cross-build-start" ]
+# RUN [ "cross-build-start" ]
 
 RUN uname -a
 RUN apt-get update  
@@ -9,4 +9,4 @@ RUN pip install --upgrade pip setuptools tox-travis
 RUN mkdir -p $GOPATH/src && mkdir -p $GOPATH/src/github.com && mkdir -p $GOPATH/src/github.com/skycoin
 RUN go get -v github.com/gz-c/gox
 
-RUN [ "cross-build-end" ]  
+# RUN [ "cross-build-end" ]  
