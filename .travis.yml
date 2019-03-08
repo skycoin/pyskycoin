@@ -65,7 +65,7 @@ before_install:
 - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 - cd ./.travis && docker build -t "skydev-test" .  && cd ${TRAVIS_BUILD_DIR}
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-- docker run -v $GOPATH/:/go skydev-test /bin/bash -c "[ "cross-build-start" ] && cd /go/src/github.com/skycoin/pyskycoin && make test"
+- docker run -v $GOPATH/:/go skydev-test /bin/sh -c "[ "cross-build-start" ] && cd /go/src/github.com/skycoin/pyskycoin && make test && [ "cross-build-end" ]"
 # Checking amd64
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
