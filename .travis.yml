@@ -66,8 +66,8 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install_docker.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve && sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve && sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve ; fi
 # Checking arm32
-- docker version
-- docker build .travis -t skydev-test
+- sudo docker version
+- sudo docker build .travis -t skydev-test
 # Checking amd64
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -91,7 +91,7 @@ before_script:
 script:
 # Test PySkycoin
 - make test-ci
-- docker run --rm -v $GOPATH/src/:/go/src skydev-test /bin/sh -c "cd pyskycoin; make test"
+- sudo docker run --rm -v $GOPATH/src/:/go/src skydev-test /bin/sh -c "cd pyskycoin; make test"
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
