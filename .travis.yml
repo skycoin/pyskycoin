@@ -61,7 +61,7 @@ matrix:
 before_install:
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 # Install docker
-- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-docker.sh ; fi
+- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install_docker.sh ; fi
 # Checking arm32
 - docker version
 - docker build .travis -t skydev-test
