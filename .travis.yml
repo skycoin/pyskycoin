@@ -65,8 +65,9 @@ before_install:
 - sudo apt-get update
 - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 # Checking arm32
-- docker build .travis -t skydev-test
-- docker run --rm -v $GOPATH/src:/go/src skydev-test sh -c "[ "cross-build-start" ]; pwd"
+# - docker build .travis -t skydev-test
+# - docker run --rm -v $GOPATH/src:/go/src skydev-test sh -c "[ "cross-build-start" ]; pwd"
+- docker version
 # Checking amd64
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
