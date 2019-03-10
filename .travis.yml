@@ -55,11 +55,11 @@ matrix:
   #   env:
   #   - PYTHON=3.6.5
   #   - TOXENV=py36
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=3.7.1
-    - TOXENV=py37
+  # - os: osx
+    # languague: generic
+    # env:
+    # - PYTHON=3.7.1
+    # - TOXENV=py37
 before_install:
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 # Install docker
@@ -90,7 +90,6 @@ before_script:
 script:
 # Test PySkycoin
 - make test-ci
-- sudo docker run --rm -v $GOPATH/src/:/go/src skydev-test /bin/sh -c "cd pyskycoin; make test"
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:

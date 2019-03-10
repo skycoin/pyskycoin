@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get install apt-utils python python-pip curl swig git make -y  
 RUN pip install --upgrade pip setuptools tox-travis
 RUN go get -v github.com/gz-c/gox
+COPY ../pyskycoin $GOPATH/src/github.com/skycoin/pyskycoin
 
 RUN [ "cross-build-end" ]  
 
