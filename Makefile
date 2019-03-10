@@ -38,10 +38,6 @@ configure: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
-generate-swagger:
-    GOPATH="$(GOPATH_DIR)" make -C $(LIB_SKYCOIN_DIR) swagger2
-     rm -rf CSHARP_CLIENT_DIR
-    @openapi-generator generate -g py --additional-properties=prependFormOrBodyParameters=true -o $(PYTHON_CLIENT_DIR)/python-swagger-client -i $(SWAGGER_SPEC_DIR)/skycoin.openapi.v2.yml
 
 generate-python-Client: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
