@@ -84,6 +84,7 @@ before_install:
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.11)"
+- go get -v github.com/gz-c/gox
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
