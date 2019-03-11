@@ -1,4 +1,3 @@
-sudo: required
 matrix:
   include:
   - os: linux
@@ -29,6 +28,9 @@ matrix:
     language: python
     dist: xenial
     python: 3.7
+    sudo: true
+    services:
+      - docker
     env:
     - TOXENV=py37
     - PYTHON=3.7
@@ -59,9 +61,6 @@ matrix:
     - TOXENV=py37
 before_install:
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
-# Install docker if Linux
-- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install_docker.sh ; fi
-# Checking amd64
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
@@ -78,13 +77,10 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
-- eval "$(gimme 1.11)"
-- go get -v github.com/gz-c/gox
+- eval "$(gimme 1.10)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
-# Test in arm32
-- sudo docker build  . -t skydev-test
 # Test PySkycoin
 - make test-ci
 after_failure:
