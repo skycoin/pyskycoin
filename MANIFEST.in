@@ -27,4 +27,5 @@ exclude .github
 exclude .travis
 recursive-exclude .github *
 recursive-exclude .travis *
+exclude Dockerfile
 
