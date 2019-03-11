@@ -6,6 +6,7 @@ RUN [ "cross-build-start" ]
 
 RUN go get github.com/gz-c/gox
 RUN go get -t ./...
+ENV CGO_ENABLED=1
 
 # Install Python 2.7/3.5 runtime and development tools
 RUN set -ex \
