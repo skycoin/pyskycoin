@@ -85,7 +85,7 @@ before_script:
 script:
 # Test PySkycoin
 - make test-ci
-- docker build  . -t skydev-test
+- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then docker build  . -t skydev-test ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
