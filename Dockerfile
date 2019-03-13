@@ -8,26 +8,9 @@ RUN [ "cross-build-start" ]
 RUN go get github.com/gz-c/gox
 ENV CGO_ENABLED=1
 
-# Install Python 2.7/3.5 runtime and development tools
-RUN set -ex \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-    python2.7-dev \
-    python3.6 \
-    python3.6-dev \
-    python-dev \
-    python3-dev \
-    ca-certificates \
-    libexpat1 \
-    libffi6 \
-    libgdbm3 \
-    libreadline7 \
-    libsqlite3-0 \
-    libssl1.1 \
-    netbase \
-    wget \
-    python-pip \
-    python3-pip
+# Install Python 2/3 runtime and development tools
+RUN apt update
+RUN apt install python3 python python3-pip python-pip -y
 
 # Install packages in PIP_PACKAGES
 RUN pip install --upgrade $PIP_PACKAGES \
