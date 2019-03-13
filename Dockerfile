@@ -1,6 +1,7 @@
 FROM balenalib/armv7hf-debian-golang
 
 ADD . $GOPATH/src/github.com/skycoin/pyskycoin/
+ARG PIP_PACKAGES="setuptools wheel"
 
 RUN [ "cross-build-start" ]
 
