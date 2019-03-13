@@ -27,6 +27,8 @@ HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
 PYTHON_CLIENT_DIR = skyapi
 
+NEW_HOST = 'http://pepe.cojones'
+
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
 else ifeq ($(shell uname -s),Darwin)
@@ -37,6 +39,9 @@ configure: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
+
+update-host: ## Update Host
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) ./change_host.py -n $(NEW_HOST))
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
