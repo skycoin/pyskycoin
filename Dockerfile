@@ -1,4 +1,4 @@
-FROM balenalib/armv7hf-ubuntu-golang
+FROM balenalib/armv7hf-debian-golang
 
 ADD . $GOPATH/src/github.com/skycoin/pyskycoin/
 
