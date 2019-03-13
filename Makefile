@@ -40,7 +40,7 @@ configure: ## Configure build environment
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
 
-update-host: ## Update Host
+update-host: ## Update Host for wrapper for Skycoin Api
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) ./change_host.py -n $(NEW_HOST))
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
