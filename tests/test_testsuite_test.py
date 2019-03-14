@@ -5,14 +5,14 @@ import os
 import re
 
 # testdataDir           = "./testdata/"
-testdataDir           = "./gopath/src/github.com/skycoin/skycoin/src/cipher/testsuite/testdata/"
+testdataDir = "gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/src/cipher/testsuite/testdata/"
 manyAddressesFilename = "many-addresses.golden"
-inputHashesFilename   = "input-hashes.golden"
-seedFileRegex         = "seed-\d+.golden"
+inputHashesFilename = "input-hashes.golden"
+seedFileRegex = "seed-\d+.golden"
 
 
 def test_TestManyAddresses():
-    f = open(testdataDir+manyAddressesFilename,'r')
+    f = open(testdataDir + manyAddressesFilename, 'r')
     fn = f.read()
     f_JSON = json.loads(fn)
     dataJSON = test_testsuite.SeedTestData()
@@ -23,18 +23,19 @@ def test_TestManyAddresses():
     err = test_testsuite.ValidateSeedData(data, None)
     assert err == skycoin.SKY_OK
 
+
 def test_TestSeedSignatures():
-    f = open(testdataDir+inputHashesFilename,'r')
+    f = open(testdataDir + inputHashesFilename, 'r')
     fn = f.read()
     f_JSON = json.loads(fn)
     inputDataJSON = test_testsuite.InputTestData()
     inputDataJSON.Hashes = f_JSON["hashes"]
     err, inputData = test_testsuite.InputTestDataFromJSON(inputDataJSON)
-    assert err == skycoin.SKY_OK 
+    assert err == skycoin.SKY_OK
     err, seedFiles = traverseFiles()
     assert err == skycoin.SKY_OK
     for dir_f in seedFiles:
-        f = open(testdataDir+dir_f,'r')
+        f = open(testdataDir + dir_f, 'r')
         fn = f.read()
         f_JSON = json.loads(fn)
         dataJSON = test_testsuite.SeedTestData()

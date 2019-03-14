@@ -63,7 +63,7 @@ matrix:
     - PYTHON=3.7.1
     - TOXENV=py37
 before_install:
-- cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
+- cd gopath/src/github.com/skycoin/libskycoin && git remote add simelo https://github.com/simelo/pyskycoin && git fetch simelo stdevHan_t2_support_arch && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
