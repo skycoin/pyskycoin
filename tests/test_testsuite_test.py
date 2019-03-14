@@ -11,7 +11,7 @@ inputHashesFilename = "input-hashes.golden"
 seedFileRegex = "seed-\d+.golden"
 
 
-def test_TestManyAddresses():
+def TestManyAddresses():
     f = open(testdataDir + manyAddressesFilename, 'r')
     fn = f.read()
     f_JSON = json.loads(fn)
@@ -24,7 +24,7 @@ def test_TestManyAddresses():
     assert err == skycoin.SKY_OK
 
 
-def test_TestSeedSignatures():
+def TestSeedSignatures():
     f = open(testdataDir + inputHashesFilename, 'r')
     fn = f.read()
     f_JSON = json.loads(fn)

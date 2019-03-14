@@ -4,7 +4,6 @@
 	#define SWIG_FILE_WITH_INIT
 	#include "libskycoin.h"
 	#include "swig.h"
-	// #include "base64.h"
 %}
 
 //Apply strictly to python
