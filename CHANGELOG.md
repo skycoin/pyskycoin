@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Add `skyapi`, a wrapper for Skycoin api in version 0.25.1
-- Add `make update-host` target to change host for wrapper for Skycoin Api
 
 ### Fixed 
 

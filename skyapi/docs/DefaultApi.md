@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# skyapi.DefaultApi
 
 All URIs are relative to *http://127.0.0.1:6420*
 
@@ -66,12 +66,12 @@ Returns the total number of unique address that have coins.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # Returns the total number of unique address that have coins.
@@ -110,12 +110,12 @@ Returns the historical, spent outputs associated with an address
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 address = 'address_example' # str | address to filter by
 
 try:
@@ -155,12 +155,12 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 addrs = 'addrs_example' # str | command separated list of addresses
 
 try:
@@ -203,18 +203,18 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 addrs = 'addrs_example' # str | command separated list of addresses
 
 try:
@@ -257,12 +257,12 @@ Returns a block by hash or seq. Note: only one of hash or seq is allowed
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 hash = 'hash_example' # str |  (optional)
 seq = 56 # int |  (optional)
 
@@ -304,12 +304,12 @@ Returns the blockchain metadata.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # Returns the blockchain metadata.
@@ -346,12 +346,12 @@ Returns the blockchain sync progress.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # Returns the blockchain sync progress.
@@ -390,12 +390,12 @@ or an explicit list of sequences. If using start and end, the block sequences in
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 start = 56 # int |  (optional)
 end = 56 # int |  (optional)
 seqs = [56] # list[int] |  (optional)
@@ -444,18 +444,18 @@ or an explicit list of sequences. If using start and end, the block sequences in
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 start = 56 # int |  (optional)
 end = 56 # int |  (optional)
 seqs = [56] # list[int] |  (optional)
@@ -502,12 +502,12 @@ coinSupplyHandler returns coin distribution supply stats
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     api_instance.coin_supply()
@@ -542,12 +542,12 @@ Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
@@ -584,12 +584,12 @@ defaultConnectionsHandler returns the list of default hardcoded bootstrap addres
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
@@ -628,12 +628,12 @@ Returns all transactions (confirmed and unconfirmed) for an address
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 address = 'address_example' # str | tags to filter by (optional)
 
 try:
@@ -673,12 +673,12 @@ Returns node health data.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     # Returns node health data.
@@ -717,12 +717,12 @@ Returns the most recent N blocks on the blockchain
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 num = 56 # int | 
 
 try:
@@ -762,12 +762,12 @@ This endpoint returns a specific connection.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 addr = 'addr_example' # str | Address port
 
 try:
@@ -810,18 +810,18 @@ This endpoint returns all outgoings connections.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 states = 'states_example' # str | Connection status. (optional)
 direction = 'direction_example' # str | Direction of the connection. (optional)
 
@@ -868,18 +868,18 @@ This endpoint disconnects a connection by ID or address
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Address id.
 
 try:
@@ -920,12 +920,12 @@ This endpoint returns all connections found through peer exchange
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     api_response = api_instance.network_connections_exchange()
@@ -963,18 +963,18 @@ trustConnectionsHandler returns all trusted connections.\\n They are not necessa
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 
 try:
     # trustConnectionsHandler returns all trusted connections.\\n They are not necessarily connected to. In the default configuration, these will be a subset of the default hardcoded bootstrap addresses.
@@ -1011,12 +1011,12 @@ If neither addrs nor hashes are specificed, return all unspent outputs. If only 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 address = ['address_example'] # list[str] |  (optional)
 hash = ['hash_example'] # list[str] |  (optional)
 
@@ -1061,18 +1061,18 @@ If neither addrs nor hashes are specificed, return all unspent outputs. If only 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 address = 'address_example' # str |  (optional)
 hash = 'hash_example' # str |  (optional)
 
@@ -1117,12 +1117,12 @@ Returns pending (unconfirmed) transactions without verbose
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     api_response = api_instance.pending_txs()
@@ -1162,18 +1162,18 @@ Broadcasts all unconfirmed transactions from the unconfirmed transaction pool
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 
 try:
     api_instance.resend_unconfirmed_txns()
@@ -1208,12 +1208,12 @@ Returns the top skycoin holders.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 include_distribution = True # bool | include distribution addresses or not, default value false (optional)
 n = 'n_example' # str | include distribution addresses or not, default value false (optional)
 
@@ -1258,12 +1258,12 @@ Returns a transaction identified by its txid hash with just id
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 txid = 'txid_example' # str | transaction hash
 encoded = True # bool | return as a raw encoded transaction. (optional)
 
@@ -1307,18 +1307,18 @@ Broadcast a hex-encoded, serialized transaction to the network.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 rawtx = 'rawtx_example' # str | hex-encoded serialized transaction string.
 
 try:
@@ -1359,12 +1359,12 @@ Returns the hex-encoded byte serialization of a transaction. The transaction may
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 txid = 'txid_example' # str | Transaction id hash (optional)
 
 try:
@@ -1409,18 +1409,18 @@ Decode and verify an encoded transaction
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 
 try:
     api_response = api_instance.transaction_verify()
@@ -1456,12 +1456,12 @@ Returns transactions that match the filters.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 addrs = 'addrs_example' # str | command separated list of addresses (optional)
 confirmed = 'confirmed_example' # str | Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all] (optional)
 
@@ -1506,18 +1506,18 @@ Returns transactions that match the filters.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 addrs = 'addrs_example' # str | command separated list of addresses (optional)
 confirmed = 'confirmed_example' # str | Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all] (optional)
 
@@ -1560,12 +1560,12 @@ Returns an unspent output by ID.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 uxid = 'uxid_example' # str | uxid to filter by (optional)
 
 try:
@@ -1608,18 +1608,18 @@ Verifies a Skycoin address.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 address = 'address_example' # str | Address id.
 
 try:
@@ -1662,12 +1662,12 @@ versionHandler returns the application version info
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     api_instance.version()
@@ -1702,12 +1702,12 @@ Returns a wallet by id.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 id = 'id_example' # str | tags to filter by
 
 try:
@@ -1748,12 +1748,12 @@ Returns the wallet's balance, both confirmed and predicted.  The predicted balan
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 id = 'id_example' # str | tags to filter by
 
 try:
@@ -1798,18 +1798,18 @@ Loads wallet from seed, will scan ahead N address and load addresses till the la
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 seed = 'seed_example' # str | Wallet seed.
 label = 'label_example' # str | Wallet label.
 scan = 56 # int | The number of addresses to scan ahead for balances. (optional)
@@ -1859,18 +1859,18 @@ Decrypts wallet.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet id.
 password = 'password_example' # str | Wallet password.
 
@@ -1915,18 +1915,18 @@ Encrypt wallet.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet id.
 password = 'password_example' # str | Wallet password.
 
@@ -1971,12 +1971,12 @@ Returns the wallet directory path
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 addr = 'addr_example' # str | Address port
 
 try:
@@ -2020,18 +2020,18 @@ Generates new addresses
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet Id
 num = 'num_example' # str | The number you want to generate (optional)
 password = 'password_example' # str | Wallet Password (optional)
@@ -2077,12 +2077,12 @@ Returns the wallet directory path
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 entropy = 'entropy_example' # str | Entropy bitSize. (optional)
 
 try:
@@ -2124,18 +2124,18 @@ Recovers an encrypted wallet by providing the seed. The first address will be ge
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet id.
 seed = 'seed_example' # str | Wallet seed.
 password = 'password_example' # str | Wallet password. (optional)
@@ -2182,18 +2182,18 @@ This endpoint only works for encrypted wallets. If the wallet is unencrypted, Th
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet Id.
 password = 'password_example' # str | Wallet password.
 
@@ -2238,18 +2238,18 @@ Verifies a wallet seed.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 seed = 'seed_example' # str | Seed to be verified. (optional)
 
 try:
@@ -2294,18 +2294,18 @@ Creates and broadcasts a transaction sending money from one of our wallets to de
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet id
 dst = 'dst_example' # str | Recipient address
 coins = 'coins_example' # str | Number of coins to spend, in droplets. 1 coin equals 1e6 droplets.
@@ -2355,19 +2355,19 @@ Creates a signed transaction
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
-inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
+inline_object = skyapi.InlineObject() # InlineObject |  (optional)
 
 try:
     api_response = api_instance.wallet_transaction(inline_object=inline_object)
@@ -2408,12 +2408,12 @@ Returns returns all unconfirmed transactions for all addresses in a given wallet
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 id = 'id_example' # str | Wallet id.
 
 try:
@@ -2455,18 +2455,18 @@ Unloads wallet from the wallet service.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet Id.
 
 try:
@@ -2508,18 +2508,18 @@ Update the wallet.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: csrfAuth
-configuration = openapi_client.Configuration()
+configuration = skyapi.Configuration()
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
 id = 'id_example' # str | Wallet Id.
 label = 'label_example' # str | The label the wallet will be updated to.
 
@@ -2563,12 +2563,12 @@ Returns all loaded wallets
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import skyapi
+from skyapi.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi()
+api_instance = skyapi.DefaultApi()
 
 try:
     api_response = api_instance.wallets()
