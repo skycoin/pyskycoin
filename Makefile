@@ -27,8 +27,6 @@ HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
 PYTHON_CLIENT_DIR = skyapi
 
-NEW_HOST = 'http://pepe.cojones'
-
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
 else ifeq ($(shell uname -s),Darwin)
