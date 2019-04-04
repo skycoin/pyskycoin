@@ -31,3 +31,5 @@ mkdir swig_build && \
   cd ../../ && \
   sudo rm -rf swig_build
 
+sudo apt-get install pylint python-autopep8
+sudo apt-get install yamllint

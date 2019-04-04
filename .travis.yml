@@ -81,6 +81,10 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
+# Format code to PEP8
+- make format
+# Linter code to pylint
+- make lint
 # Test PySkycoin
 - make test-ci
 after_failure:
