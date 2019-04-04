@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 .PHONY: configure build-libc build-swig develop build-libc-swig build 
-.PHONY: test test-ci help
+.PHONY: test test-ci help format lint
 
 # Compilation output
 .ONESHELL:
@@ -104,5 +104,10 @@ dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 check-dist: dist ## Perform self-tests upon distributions archives
 	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
 
+format: ## Format code that autopep8
+	autopep8 --in-place --aggressive ./tests/*.py
+
+lint: ## Linter to pylint
+	pylint -E tests/*.py
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
