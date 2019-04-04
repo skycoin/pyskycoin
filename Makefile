@@ -106,7 +106,7 @@ check-dist: dist ## Perform self-tests upon distributions archives
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
 
 format: ## Format code that autopep8
-	autopep8 --in-place --aggressive ./tests/*.py
+	autopep8 --in-place --aggressive --aggressive --aggressive --aggressive ./tests/*.py
 
 lint: ## Linter to pylint
 	pylint -E tests/*.py
