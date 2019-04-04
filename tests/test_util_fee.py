@@ -15,21 +15,43 @@ class verifyTxFeeTestCase:
 
 burnFactor2verifyTxFeeTestCase = []
 
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(0, 0, skycoin.SKY_ErrTxnNoFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(1, 0, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(1, 1, skycoin.SKY_ErrTxnNoFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(2, 0, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(2, 1, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(2, 2, skycoin.SKY_ErrTxnNoFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(3, 0, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(3, 1, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(3, 2, skycoin.SKY_ErrTxnInsufficientFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(3, 3, skycoin.SKY_ErrTxnNoFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(4, 0, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(4, 1, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(4, 2, skycoin.SKY_OK))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(4, 3, skycoin.SKY_ErrTxnInsufficientFee))
-burnFactor2verifyTxFeeTestCase.append(verifyTxFeeTestCase(4, 4, skycoin.SKY_ErrTxnNoFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        0, 0, skycoin.SKY_ErrTxnNoFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(1, 0, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        1, 1, skycoin.SKY_ErrTxnNoFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(2, 0, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(2, 1, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        2, 2, skycoin.SKY_ErrTxnNoFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(3, 0, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(3, 1, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        3, 2, skycoin.SKY_ErrTxnInsufficientFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        3, 3, skycoin.SKY_ErrTxnNoFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(4, 0, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(4, 1, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(4, 2, skycoin.SKY_OK))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        4, 3, skycoin.SKY_ErrTxnInsufficientFee))
+burnFactor2verifyTxFeeTestCase.append(
+    verifyTxFeeTestCase(
+        4, 4, skycoin.SKY_ErrTxnNoFee))
 
 
 def test_TestVerifyTransactionFee():
@@ -39,7 +61,7 @@ def test_TestVerifyTransactionFee():
     assert err == skycoin.SKY_OK
     assert 0 == hours
 
-    #  A txn with no outputs hours and no coinhours burn fee is valid   
+    #  A txn with no outputs hours and no coinhours burn fee is valid
     err = skycoin.SKY_fee_VerifyTransactionFee(emptyTxn, 0, 2)
     assert err == skycoin.SKY_ErrTxnNoFee
 
@@ -49,12 +71,12 @@ def test_TestVerifyTransactionFee():
 
     txn = utils.makeEmptyTransaction()
     addr = utils.makeAddress()
-    err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr , 0, int(1e6))
+    err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, int(1e6))
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr , 0, int(3e6))
+    err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, int(3e6))
     assert err == skycoin.SKY_OK
 
-    err , hours = skycoin.SKY_coin_Transaction_OutputHours(txn)
+    err, hours = skycoin.SKY_coin_Transaction_OutputHours(txn)
     assert err == skycoin.SKY_OK
     assert hours == int(4e6)
 
@@ -76,11 +98,13 @@ def test_TestVerifyTransactionFee():
     assert err == skycoin.SKY_OK
 
     # fee + hours overflows
-    err = skycoin.SKY_fee_VerifyTransactionFee(txn, utils.MaxUint64 - int(3e6), 2)
+    err = skycoin.SKY_fee_VerifyTransactionFee(
+        txn, utils.MaxUint64 - int(3e6), 2)
     assert err == skycoin.SKY_ERROR
 
     # txn has overflowing output hours
-    err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, int(utils.MaxUint64 - 1e6 - 3e6 + 1))
+    err = skycoin.SKY_coin_Transaction_PushOutput(
+        txn, addr, 0, int(utils.MaxUint64 - 1e6 - 3e6 + 1))
     assert err == skycoin.SKY_OK
     err = skycoin.SKY_fee_VerifyTransactionFee(txn, 10, 2)
     assert err == skycoin.SKY_ERROR
@@ -89,9 +113,11 @@ def test_TestVerifyTransactionFee():
 
     for tc in cases:
         txn = utils.makeEmptyTransaction()
-        err = skycoin.SKY_coin_Transaction_PushOutput(txn, addr, 0, tc.outputHours)
+        err = skycoin.SKY_coin_Transaction_PushOutput(
+            txn, addr, 0, tc.outputHours)
         assert tc.inputHours >= tc.outputHours
-        err = skycoin.SKY_fee_VerifyTransactionFee(txn, int(tc.inputHours - tc.outputHours), 2)
+        err = skycoin.SKY_fee_VerifyTransactionFee(
+            txn, int(tc.inputHours - tc.outputHours), 2)
         assert tc.err == err
 
 
@@ -124,10 +150,10 @@ def test_TestRequiredFee():
     cases = burnFactor2RequiredFeeTestCases
 
     for tc in cases:
-        err , fee = skycoin.SKY_fee_RequiredFee(tc.hours, 2)
+        err, fee = skycoin.SKY_fee_RequiredFee(tc.hours, 2)
         assert err == skycoin.SKY_OK
         assert tc.fee == fee
-        err , remainingHours = skycoin.SKY_fee_RemainingHours(tc.hours, 2)
+        err, remainingHours = skycoin.SKY_fee_RemainingHours(tc.hours, 2)
         assert err == skycoin.SKY_OK
         assert ((tc.hours - fee) == remainingHours)
 
@@ -222,9 +248,9 @@ def test_TestTransactionFee():
         for h in tc.out:
             err = skycoin.SKY_coin_Transaction_PushOutput(tx, addr, 0, h)
             assert err == skycoin.SKY_OK
-        
+
         inUxs = utils.makeUxArray(len(tc.ins))
-        for i  in range(len(tc.ins)):
+        for i in range(len(tc.ins)):
             b = tc.ins[i]
             inUxs[i].Head.Time = b.time
             inUxs[i].Body.Coins = int(b.coins)
