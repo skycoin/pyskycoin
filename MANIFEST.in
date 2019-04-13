@@ -26,9 +26,7 @@ recursive-exclude . *.orig
 exclude .github
 exclude .travis
 exclude .pytest_cache
-recursive-exclude lib *.py
-recursive-exclude lib *.sh
-recursive-exclude lib *.txt
+recursive-exclude lib *
 recursive-exclude .github *
 recursive-exclude .travis *
 recursive-exclude .pytest_cache *
