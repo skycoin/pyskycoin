@@ -12,8 +12,6 @@ include gopath/src/github.com/skycoin/skycoin/Makefile
 recursive-exclude . *.a
 include skycoin.py
 
-recursive-include lib *
-
 recursive-include . *.s
 recursive-include . *.go
 recursive-include . *.i
@@ -28,9 +26,10 @@ recursive-exclude . *.orig
 exclude .github
 exclude .travis
 exclude .pytest_cache
-prune lib
+recursive-exclude lib *.py
+recursive-exclude lib *.sh
+recursive-exclude lib *.txt
 recursive-exclude .github *
 recursive-exclude .travis *
-recursive-exclude lib *
 recursive-exclude .pytest_cache *
 
