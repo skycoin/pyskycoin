@@ -6,7 +6,7 @@
 .ONESHELL:
 SHELL := /bin/bash
 
-PYTHON_BIN   ?= python
+PYTHON_BIN   ?= python$(PYTHON)
 MKFILE_PATH   = $(abspath $(lastword $(MAKEFILE_LIST)))
 REPO_ROOT     = $(dir $(MKFILE_PATH))
 GOPATH_DIR    = gopath
