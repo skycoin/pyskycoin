@@ -6,7 +6,7 @@
 .ONESHELL:
 SHELL := /bin/bash
 
-PYTHON   ?= python
+PYTHON_BIN   ?= python
 MKFILE_PATH   = $(abspath $(lastword $(MAKEFILE_LIST)))
 REPO_ROOT     = $(dir $(MKFILE_PATH))
 GOPATH_DIR    = gopath
@@ -68,30 +68,30 @@ build-swig: ## Generate Python C module from SWIG interfaces
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
-	$(PYTHON) setup.py develop
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py develop)
+	$(PYTHON_BIN) setup.py develop
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py develop)
 
 build-libc-swig: build-libc build-swig
 
 build: build-libc-swig ## Build PySkycoin Python package
-	$(PYTHON) setup.py build
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py build)
+	$(PYTHON_BIN) setup.py build
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py build)
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
 	(cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
-	$(PYTHON) setup.py test
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py test)
+	$(PYTHON_BIN) setup.py test
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py test)
 
 sdist: ## Create source distribution archive
-	$(PYTHON) setup.py sdist --formats=gztar
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py sdist --formats=gztar)
+	$(PYTHON_BIN) setup.py sdist --formats=gztar
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py sdist --formats=gztar)
 
 bdist_wheel: ## Create architecture-specific binary wheel distribution archive
-	$(PYTHON) setup.py bdist_wheel
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py bdist_wheel)
+	$(PYTHON_BIN) setup.py bdist_wheel
+	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py bdist_wheel)
 
 # FIXME: After libskycoin 32-bits binaries add bdist_manylinux_i686
 bdist_manylinux: bdist_manylinux_amd64 ## Create multilinux binary wheel distribution archives
