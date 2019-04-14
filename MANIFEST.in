@@ -25,10 +25,10 @@ recursive-include gopath/src/github.com/skycoin/skycoin/include *
 recursive-exclude . *.orig
 exclude .github
 exclude .travis
-exclude skyapi
+exclude lib/skyapi
 exclude .pytest_cache 
 recursive-exclude .github *
 recursive-exclude .travis *
-recursive-exclude skyapi *
+recursive-exclude lib/skyapi *
 recursive-exclude .pytest_cache *
 
