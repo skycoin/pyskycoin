@@ -11,7 +11,7 @@ brew install gimme;
 
 # Install Python
 pyenv install ${PYTHON}
-pyenv install 2.7.14
+pyenv install ${PYTHON} 2.7.14
 pyenv global ${PYTHON} 2.7.14
 
 # Prepare and initialize pyenv environment
