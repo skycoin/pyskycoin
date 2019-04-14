@@ -8,7 +8,7 @@ import re
 testdataDir = "gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/src/cipher/testsuite/testdata/"
 manyAddressesFilename = "many-addresses.golden"
 inputHashesFilename = "input-hashes.golden"
-seedFileRegex = "seed-\d+.golden"
+seedFileRegex = r"seed-\d+.golden"
 
 
 def test_TestManyAddresses():

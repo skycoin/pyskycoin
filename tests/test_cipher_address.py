@@ -1,7 +1,7 @@
 import skycoin
 
-
-def test_TestDecodeBase58Address():
+# TODO: Elimination of a function in develop, waiting for the release
+def TestDecodeBase58Address():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
