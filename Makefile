@@ -35,6 +35,8 @@ configure: ## Configure build environment
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
+	rm -rf lib/skywallet-deamon-spec.yml
+	(cd lib && wget https://github.com/skycoin/hardware-wallet-daemon/blob/master/swagger.yml && mv swagger.yml skywallet-deamon-spec.yml)
 
 $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
