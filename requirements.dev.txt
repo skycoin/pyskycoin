@@ -4,4 +4,6 @@ pytest-runner
 tox
 tox-pyenv
 wheel
-
+autopep8
+pylint
+yamllint

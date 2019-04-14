@@ -16,7 +16,7 @@ curl -sL -o "$HOME/bin/gimme" https://raw.githubusercontent.com/travis-ci/gimme/
 chmod +x "$HOME/bin/gimme"
 
 # Install Python libraries
-$PIP install --upgrade pip setuptools tox-travis
+$PIP install --upgrade pip setuptools tox-travis 
 $PIP install -r "$REPO_ROOT/requirements.dev.txt"
 
 # Compile SWIG
@@ -30,6 +30,3 @@ mkdir swig_build && \
   sudo make install && \
   cd ../../ && \
   sudo rm -rf swig_build
-
-sudo apt-get install pylint python-autopep8
-sudo apt-get install yamllint
