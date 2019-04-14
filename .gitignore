@@ -40,3 +40,4 @@ tests/mytest.py
 skycoin/skycoin.py
 swig/pyskycoin_wrap.c
 .directory
+venv
