@@ -31,8 +31,10 @@ PYTHON_CLIENT_DIR = skyapi
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
+	PYTHON_BIN = python$(PYTHON)
 else ifeq ($(shell uname -s),Darwin)
 	TEMP_DIR = $TMPDIR
+	PYTHON_BIN = python
 endif
 
 configure: ## Configure build environment
