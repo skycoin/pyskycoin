@@ -8,7 +8,7 @@ matrix:
     python: 2.7
     env:
     - TOXENV=py27
-    - PYTHON=2.7
+    - PYTHON=2.7.14
   - os: linux
     language: python
     python: 3.4
@@ -40,7 +40,7 @@ matrix:
   - os: osx
     languague: generic
     env:
-    - PYTHON=2.7
+    - PYTHON=2.7.16
     - TOXENV=py27
   - os: osx
     languague: generic

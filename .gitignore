@@ -42,3 +42,4 @@ swig/pyskycoin_wrap.c
 .directory
 core*
 qemu_*
+venv
