@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Add `skyapi`, a wrapper for Skycoin api in version 0.25.1
+- Add `skyapi`, a wrapper for Skycoin node REST API at version 0.25.1
 
 ### Fixed 
 
-- Fix #86 - Python API wrapper for the Skycoin node API
+### Changed
+
+### Removed
+
+### Known issues
 
 ## PySkycoin 0.25.0 - 2019/01/01
 
