@@ -27,7 +27,7 @@ SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 HEADER_FILES = $(shell find $(INCLUDE_DIR) -type f -name "*.h")
 
-PYTHON_CLIENT_DIR = skyapi
+PYTHON_CLIENT_DIR = lib/skyapi
 
 ifeq ($(shell uname -s),Linux)
 	TEMP_DIR = tmp
