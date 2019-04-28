@@ -87,7 +87,6 @@ install:
 - eval "$(gimme 1.10)"
 before_script:
   - go get github.com/gz-c/gox
-  - go get -t ./...
   # Install PyPA Docker images for building multilinux wheels
 script:
 # Test PySkycoin
