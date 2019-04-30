@@ -20,7 +20,7 @@ recursive-include gopath/src/github.com/skycoin/libskycoin/include *.h
 
 recursive-include docker *
 recursive-include swig/include *
-recursive-include gopath/src/github.com/skycoin/libskycoin/include *
+recursive-include gopath/src/github.com/skycoin/libskycoin *
 
 recursive-exclude . *.orig
 exclude .github
@@ -31,4 +31,3 @@ recursive-exclude .github *
 recursive-exclude .travis *
 recursive-exclude lib/skyapi *
 recursive-exclude .pytest_cache *
-
