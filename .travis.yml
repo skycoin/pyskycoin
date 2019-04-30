@@ -86,6 +86,8 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
+# Compile lib
+- make build && make develop
 # Format code to PEP8
 - make format
 # Linter code to pylint
