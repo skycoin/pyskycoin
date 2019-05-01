@@ -1,8 +1,7 @@
 import skycoin
 
-# TODO: Elimination of a function in develop, waiting for the release
-
-# def TestDecodeBase58Address():
+# Missing SKY_base58_Hex2Base58
+# def test_TestDecodeBase58Address():
 #     public_key = skycoin.cipher_PubKey()
 #     secret_key = skycoin.cipher_SecKey()
 #     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
@@ -16,11 +15,11 @@ import skycoin
 #     err = skycoin.SKY_cipher_DecodeBase58Address(b'"cascs"', address_2)
 #     assert err == skycoin.SKY_ERROR
 #     _, byte = skycoin.SKY_cipher_Address_Bytes(address)
-# #    _, h = skycoin.SKY_base58_Hex2Base58(byte[:int(len(byte) / 2)])
-# #    err = skycoin.SKY_cipher_DecodeBase58Address(h, address_2)
+#     _, h = skycoin.SKY_base58_Hex2Base58(byte[:int(len(byte) / 2)])
+#     err = skycoin.SKY_cipher_DecodeBase58Address(h, address_2)
 #     assert err == skycoin.SKY_ErrAddressInvalidLength
-# #    _, h = skycoin.SKY_base58_Hex2Base58(byte)
-# #    err = skycoin.SKY_cipher_DecodeBase58Address(h, address_2)
+#     _, h = skycoin.SKY_base58_Hex2Base58(byte)
+#     err = skycoin.SKY_cipher_DecodeBase58Address(h, address_2)
 #     assert err == skycoin.SKY_OK
 #     assert address == address_2
 #     _, addres_str = skycoin.SKY_cipher_Address_String(address)
