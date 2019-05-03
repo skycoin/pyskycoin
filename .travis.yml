@@ -78,7 +78,6 @@ before_install:
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.10)"
-- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
@@ -93,7 +92,7 @@ before_deploy:
 - echo "Generating distribution archives before deploy"
 - make sdist
 - make bdist_wheel
-- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
 - ls dist
 deploy:
 - provider: releases
