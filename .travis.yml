@@ -78,6 +78,7 @@ before_install:
 - echo "PATH=$PATH"
 install:
 - eval "$(gimme 1.10)"
+- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
