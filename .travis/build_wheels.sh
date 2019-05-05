@@ -8,7 +8,7 @@ PIP=/opt/python/cp27-cp27m/bin/pip source /io/.travis/install-linux.sh
 eval "$(gimme 1.10)"
 
 # Install golang
-wget https://storage.googleapis.com/golang/go1.11.3.linux-amd64.tar.gz
+curl -sL -o https://storage.googleapis.com/golang/go1.11.3.linux-amd64.tar.gz
 sudo tar -zxvf go1.11.3.linux-amd64.tar.gz -C /usr/local
 echo 'export GOROOT=/usr/local/go' | sudo tee -a /etc/profile
 echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
