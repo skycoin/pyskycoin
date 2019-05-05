@@ -65,33 +65,33 @@ build-swig: ## Generate Python C module from SWIG interfaces
 	rm -f $(LIBSWIG_PYSKYCOIN)/swig/pyskycoin_wrap.c
 	rm -f $(LIBSWIG_PYSKYCOIN)/swig/include/swig.h
 	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h $(LIBSWIG_PYSKYCOIN)/swig/include/
-	swig -python -Ilib/swig/swig/include -I$(INCLUDE_DIR) -outdir $(LIBSWIG_PYSKYCOIN)/skycoin/ -o $(LIBSWIG_PYSKYCOIN)/swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
+	swig -python -Ilib/swig/swig/include -I$(shell pwd)/gopath/src/github.com/skycoin/skycoin/include -outdir $(LIBSWIG_PYSKYCOIN)/skycoin/ -o $(LIBSWIG_PYSKYCOIN)/swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py develop) \
+	$(PYTHON) $(PYTHON_CLIENT_DIR)/setup.py develop \
 	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py develop)
 
 build-libc-swig: build-libc build-swig
 
 build: build-libc-swig ## Build PySkycoin Python package
-	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py build)
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py build
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py build)
 
 test-ci: ## Run tests on (Travis) CI build
-#    (cd $(LIBSWIG_PYSKYCOIN) && tox)
+	(cd $(PYTHON_CLIENT_DIR) && tox)
 	(cd $(PYTHON_CLIENT_DIR) && tox)
 
 
 test: build-libc build-swig develop ## Run project test suite
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py test) \
+	$(PYTHON) $(PYTHON_CLIENT_DIR)/setup.py test \
 	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py test)
 
 sdist: ## Create source distribution archive
-	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py sdist --formats=gztar) \
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py sdist --formats=gztar \
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py sdist --formats=gztar)
 
 bdist_wheel: ## Create architecture-specific binary wheel distribution archive
-	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py bdist_wheel)/
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py bdist_wheel \
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py bdist_wheel)
 
 # FIXME: After libskycoin 32-bits binaries add bdist_manylinux_i686

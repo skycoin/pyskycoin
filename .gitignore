@@ -20,7 +20,7 @@ lib/swig/eggs
 eggs
 lib/swig/wheelhouse/
 wheelhouse/
-
+*fuse*
 *~
 
 #Copy of libskycoin.h in pyskycoin
