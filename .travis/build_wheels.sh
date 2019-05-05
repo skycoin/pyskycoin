@@ -1,12 +1,21 @@
 #!/bin/bash
 set -e -x
 
-export CGO_ENABLE=1
 # Install system packages required by our library
 yum install -y sudo pcre pcre-devel
 mkdir -p "$HOME/bin"
 PIP=/opt/python/cp27-cp27m/bin/pip source /io/.travis/install-linux.sh
 eval "$(gimme 1.10)"
+
+# Install golang
+wget https://storage.googleapis.com/golang/go1.11.3.linux-amd64.tar.gz
+sudo tar -zxvf go1.11.3.linux-amd64.tar.gz -C /usr/local
+echo 'export GOROOT=/usr/local/go' | sudo tee -a /etc/profile
+echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee -a /etc/profile
+echo 'export CGO_ENABLE=1' | sudo tee -a /etc/profile
+source /etc/profile
+go version
+go env
 
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
