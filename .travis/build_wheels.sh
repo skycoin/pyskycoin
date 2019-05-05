@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e -x
 
+export CGO_ENABLE=1
 # Install system packages required by our library
 yum install -y sudo pcre pcre-devel
 mkdir -p "$HOME/bin"
