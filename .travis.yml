@@ -84,8 +84,9 @@ before_install:
 install:
 - eval "$(gimme 1.10)"
 before_script:
+# Install PyPA Docker images for building multilinux wheels
 - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
-  # Install PyPA Docker images for building multilinux wheels
+- $(PIP) install twine
 script:
 # Test PySkycoin
 - make test-ci
