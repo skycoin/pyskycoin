@@ -86,7 +86,7 @@ install:
 before_script:
 # Install PyPA Docker images for building multilinux wheels
 - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
-- $(PIP) install twine
+- python -m pip install twine
 script:
 # Test PySkycoin
 - make test-ci
