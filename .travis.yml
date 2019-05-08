@@ -85,15 +85,14 @@ install:
 - eval "$(gimme 1.10)"
 before_script:
 # Install PyPA Docker images for building multilinux wheels
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
+- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
 - python -m pip install twine
-- echo $PYPITEST_USER
-# - twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --repository-url https://test.pypi.org/legacy/ dist/*
+- twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --repository-url https://test.pypi.org/legacy/ dist/*
 script:
 # Test PySkycoin
 # - make test-ci
-  # - pip install --index-url https://test.pypi.org/simple/ pyskycoin
-  # - pytest test/*
+  - pip install --index-url https://test.pypi.org/simple/ pyskycoin
+  - pytest test/*
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
