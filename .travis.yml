@@ -92,7 +92,7 @@ script:
 # Test PySkycoin
   - if [ $TRAVIS_OS_NAME == "osx" ]; then make test-ci ; fi
   - if [ $TRAVIS_OS_NAME == "linux" ]; then pip install --index-url https://test.pypi.org/simple/ pyskycoin ; fi
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then pytest test/* ; fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then pytest tests/* ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
