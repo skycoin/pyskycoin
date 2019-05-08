@@ -12,12 +12,12 @@ matrix:
     env:
     - TOXENV=py34
     - PYTHON=3.4
-  # - os: linux
-  #   language: python
-  #   python: 3.5
-  #   env:
-  #   - TOXENV=py35
-  #   - PYTHON=3.5
+  - os: linux
+    language: python
+    python: 3.5
+    env:
+    - TOXENV=py35
+    - PYTHON=3.5
   - os: linux
     language: python
     python: 3.6
@@ -92,7 +92,7 @@ script:
 # Test PySkycoin
   - if [ $TRAVIS_OS_NAME == "osx" ]; then make test-ci ; fi
   - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin ; fi
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pytest tests/* ; fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m tox ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
