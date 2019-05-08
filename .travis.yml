@@ -87,6 +87,7 @@ before_script:
 # Install PyPA Docker images for building multilinux wheels
 - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
 - python -m pip install twine
+- twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 script:
 # Test PySkycoin
 - make test-ci
