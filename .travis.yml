@@ -3,6 +3,10 @@ services:
 env:
   global:
     - CGO_ENABLED: 1
+
+go:
+  - "1.11.x"
+
 matrix:
   include:
   - os: linux
