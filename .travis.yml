@@ -134,7 +134,7 @@ jobs:
           repo: skycoin/pyskycoin
           condition: $TRAVIS_OS_NAME = "osx"
     - stage: skyapi
-      before-deploy: "cd skyapi/"
+      before-deploy: "cd lib/skyapi/"
       deploy:
       - provider: pypi
         distributions: sdist bdist_wheel
