@@ -100,14 +100,16 @@ bdist_manylinux: bdist_manylinux_amd64 ## Create multilinux binary wheel distrib
 
 bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_x86_64
-	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels_64.sh
 	ls wheelhouse/
+	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
 
 bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_i686
-	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels_86.sh
 	ls wheelhouse/
+	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
 
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives

@@ -15,59 +15,64 @@ matrix:
     env:
     - TOXENV=py27
     - PYTHON=2.7
-  - os: linux
-    language: python
-    python: 3.4
-    env:
-    - TOXENV=py34
-    - PYTHON=3.4
-  - os: linux
-    language: python
-    python: 3.5
-    env:
-    - TOXENV=py35
-    - PYTHON=3.5
-  - os: linux
-    language: python
-    python: 3.6
-    env:
-    - TOXENV=py36
-    - PYTHON=3.6
-  - os: linux
-    language: python
-    dist: xenial
-    python: 3.7
-    sudo: true
-    services:
-      - docker
-    env:
-    - TOXENV=py37
-    - PYTHON=3.7
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=2.7.16
-    - TOXENV=py27
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=3.4.8
-    - TOXENV=py34
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=3.5.5
-    - TOXENV=py35
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=3.6.5
-    - TOXENV=py36
-  - os: osx
-    languague: generic
-    env:
-    - PYTHON=3.7.1
-    - TOXENV=py37
+  # - os: linux
+  #   language: python
+  #   python: 3.4
+  #   env:
+  #   - TOXENV=py34
+  #   - PYTHON=3.4
+  # - os: linux
+  #   language: python
+  #   python: 3.5
+  #   env:
+  #   - TOXENV=py35
+  #   - PYTHON=3.5
+  # - os: linux
+  #   language: python
+  #   python: 3.6
+  #   env:
+  #   - TOXENV=py36
+  #   - PYTHON=3.6
+  # - os: linux
+  #   language: python
+  #   dist: xenial
+  #   python: 3.7
+  #   sudo: true
+  #   services:
+  #     - docker
+  #   env:
+  #   - TOXENV=py37
+  #   - PYTHON=3.7
+  # - os: osx
+  #   languague: generic
+  #   env:
+  #   - PYTHON=2.7.16
+  #   - TOXENV=py27
+  # - os: osx
+  #   languague: generic
+  #   env:
+  #   - PYTHON=3.4.8
+  #   - TOXENV=py34
+  # - os: osx
+  #   languague: generic
+  #   env:
+  #   - PYTHON=3.5.5
+  #   - TOXENV=py35
+  # - os: osx
+  #   languague: generic
+  #   env:
+  #   - PYTHON=3.6.5
+  #   - TOXENV=py36
+  # - os: osx
+  #   languague: generic
+  #   env:
+  #   - PYTHON=3.7.1
+  #   - TOXENV=py37
+
+env:
+  global:
+    - CGO_ENABLED: 1
+
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -87,12 +92,16 @@ before_install:
 install:
 - eval "$(gimme 1.10)"
 before_script:
-  - go get github.com/gz-c/gox
-  # Install PyPA Docker images for building multilinux wheels
+# Install PyPA Docker images for building multilinux wheels
+- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
+- if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install twine ; fi
+- if [ $TRAVIS_OS_NAME == "linux" ]; then python -m twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --skip-existing --repository-url https://test.pypi.org/legacy/ dist/* ; fi
 script:
 # Test PySkycoin
-- make test-ci
-- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then docker build  . -t skydev-test ; fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then make test-ci ; fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin ; fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m tox ; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then docker build  . -t skydev-test ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
@@ -102,7 +111,7 @@ before_deploy:
 - echo "Generating distribution archives before deploy"
 - make sdist
 - make bdist_wheel
-- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
 - ls dist
 deploy:
 - provider: releases

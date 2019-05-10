@@ -1,22 +1,21 @@
 FROM balenalib/armv7hf-ubuntu-golang
 
 ADD . $GOPATH/src/github.com/skycoin/pyskycoin/
-ARG PIP_PACKAGES="setuptools wheel"
+ARG PIP_PACKAGES="setuptools wheel tox pytest"
 
 RUN [ "cross-build-start" ]
 
-RUN go get github.com/gz-c/gox
-ENV CGO_ENABLED=1
-
 # Install Python 2/3 runtime and development tools
 RUN apt update
-RUN apt install python3 python python3-pip python-pip swig -y
+RUN apt install python3 python python3-pip python-pip -y
 
 # Install packages in PIP_PACKAGES
 RUN pip install --upgrade $PIP_PACKAGES \
     && pip3 install --upgrade $PIP_PACKAGES 
 
-RUN cd $GOPATH/src/github.com/skycoin/pyskycoin && make test
+RUN python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin
+
+RUN cd $GOPATH/src/github.com/skycoin/pyskycoin && python -m tox
 
 RUN [ "cross-build-end" ]  
 
