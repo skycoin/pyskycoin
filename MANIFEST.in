@@ -26,9 +26,11 @@ recursive-exclude . *.orig
 exclude .github
 exclude .travis
 exclude lib/skyapi
+exclude lib/skyhwd
 exclude .pytest_cache 
 recursive-exclude .github *
 recursive-exclude .travis *
 recursive-exclude lib/skyapi *
+recursive-exclude lib/skyhwd *
 recursive-exclude .pytest_cache *
 
