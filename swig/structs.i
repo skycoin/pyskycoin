@@ -1,4 +1,4 @@
-
+// clang-format off
 %include "api.client.go.h"
 
 %include "cipher.hash.go.h"
