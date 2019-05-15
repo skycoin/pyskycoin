@@ -4,7 +4,7 @@ FROM $IMAGE_FROM
 
 ARG BDATE
 ARG SCOMMIT
-ARG PIP_PACKAGES="setuptools wheel"
+ARG PIP_PACKAGES="setuptools wheel certifi>=14.05.14 six>=1.10 python_dateutil>=2.5.3 urllib3>=1.15.1 coverage>=4.0.3 nose>=1.3.7 pluggy>=0.3.1 py>=1.4.31 randomize>=0.13"
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
