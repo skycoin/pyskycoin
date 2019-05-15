@@ -161,6 +161,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-contact@skycoin.com
+contact@skycoin.net
 
 
