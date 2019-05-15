@@ -1,12 +1,12 @@
-# Apiv1exploreraddressOutputs
+# ApiV1WalletTransactionWallet
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hours** | **int** |  | [optional] 
-**dst** | **str** |  | [optional] 
-**coins** | **str** |  | [optional] 
-**uxid** | **str** |  | [optional] 
+**unspents** | **list[str]** |  | [optional] 
+**addresses** | **list[str]** |  | [optional] 
+**password** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

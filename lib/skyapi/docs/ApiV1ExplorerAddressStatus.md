@@ -1,4 +1,4 @@
-# Apiv1exploreraddressStatus
+# ApiV1ExplorerAddressStatus
 
 ## Properties
 Name | Type | Description | Notes
