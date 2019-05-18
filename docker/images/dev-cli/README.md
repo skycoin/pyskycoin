@@ -51,6 +51,31 @@ $ docker run --rm \
     vim
 ```
 
+### Switch python environment
+
+Inside docker image is installed `pyenv` and `pyenv-virtualenv`, with one goal in mind:
+- Add a ready-to-use virtualenv in Docker dev image with stable version of pyskycoin package pre-installed from PyPI 
+
+The virtualenv installed are:
+- pysky27
+- pysky34
+- pysky35
+- pysky37
+
+If you want to access to one specific virtualenv you just need run the next command:
+``bash
+pyenv activate pysky<version>
+``
+where version represent python version you need.
+Once activated, you may deactivate it with:
+``bash
+pyenv deactivate
+``
+
+For more details with `pyenv`, visit [pyenv doc](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#command-reference)
+
+All of then contains `pyskycoin` package installed.
+
 ## How to use Docker in Docker image
 
 ### Start a daemon instance
