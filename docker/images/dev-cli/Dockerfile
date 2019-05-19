@@ -4,7 +4,7 @@ FROM $IMAGE_FROM
 
 ARG BDATE
 ARG SCOMMIT
-ARG PIP_PACKAGES="setuptools wheel"
+ARG PIP_PACKAGES="pip setuptools wheel"
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
@@ -23,11 +23,6 @@ LABEL "org.label-schema.name"="skycoindev-python" \
 RUN set -ex \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-		python2.7-dev \
-		python3.5 \
-		python3.5-dev \
-		python-dev \
-		python3-dev \
 		ca-certificates \
 		libexpat1 \
 		libffi6 \
@@ -37,11 +32,9 @@ RUN set -ex \
 		libssl1.1 \
 		netbase \
 		wget \
-		python-pip \
-		python3-pip \
 		make \
 		build-essential \
-		libssl-dev \
+		libssl1.0-dev \
 		zlib1g-dev \
 		libbz2-dev \
         libreadline-dev \
@@ -55,28 +48,34 @@ RUN set -ex \
         tk-dev \
         libffi-dev \
         liblzma-dev \
-        python-openssl \
         git \
-    && git clone https://github.com/pyenv/pyenv.git ~/.pyenv \
-    && echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
+        && git clone git://github.com/yyuu/pyenv.git ~/.pyenv \
+        && rm -rf ~/.pyenv/plugins/pyenv-virtualenv \
+        && git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+
+ENV HOME  /root
+ENV PYENV_ROOT $HOME/.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+
+RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc \
     && echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc \
     && bash \
-    && git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv \
+    && git clone https://github.com/pyenv/pyenv-virtualenv.git $PYENV_ROOT/plugins/pyenv-virtualenv \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
-    && bash \
+    && bash -c "eval "$(pyenv virtualenv-init -)"" \
     && pyenv install 2.7.10 \
-#    && pyenv install 3.4.9 \
-#    && pyenv install 3.6.7 \
-#    && pyenv install 3.7.1 \
+    && pyenv install 3.4.9 \
+    && pyenv install 3.6.7 \
+    && pyenv install 3.7.1 \
     && pyenv virtualenv 2.7.10 pysky27 \
-#    && pyenv virtualenv 3.4.9 pysky34 \
-#    && pyenv virtualenv 3.6.7 pysky36 \
-#    && pyenv virtualenv 3.7.1 pysky37 \
-    && pyenv activate pysky27 && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && pyenv deactivate
-#    && pyenv activate pysky34 && pip install --upgrade $PIP_PACKAGES && pip install  pyskycoin && pyenv deactivate \
-#    && pyenv activate pysky36 && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && pyenv deactivate \
-#    && pyenv activate pysky37 && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin
+    && pyenv virtualenv 3.4.9 pysky34 \
+    && pyenv virtualenv 3.6.7 pysky36 \
+    && pyenv virtualenv 3.7.1 pysky37 \
+    && source $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && source $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && source $PYENV_ROOT/versions/pysky36/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && source $PYENV_ROOT/versions/pysky37/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
