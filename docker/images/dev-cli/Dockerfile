@@ -59,9 +59,8 @@ ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc \
-    && echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc \
+    && echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc \
     && bash \
-    && git clone https://github.com/pyenv/pyenv-virtualenv.git $PYENV_ROOT/plugins/pyenv-virtualenv \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
     && bash -c "eval "$(pyenv virtualenv-init -)"" \
     && pyenv install 2.7.10 \
@@ -72,10 +71,10 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && pyenv virtualenv 3.4.9 pysky34 \
     && pyenv virtualenv 3.6.7 pysky36 \
     && pyenv virtualenv 3.7.1 pysky37 \
-    && source $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
-    && source $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
-    && source $PYENV_ROOT/versions/pysky36/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
-    && source $PYENV_ROOT/versions/pysky37/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate
+    && . $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && . $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && . $PYENV_ROOT/versions/pysky36/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && . $PYENV_ROOT/versions/pysky37/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
