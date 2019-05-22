@@ -10,6 +10,7 @@ PYTHON_BIN   ?= python$(PYTHON)
 MKFILE_PATH   = $(abspath $(lastword $(MAKEFILE_LIST)))
 REPO_ROOT     = $(dir $(MKFILE_PATH))
 GOPATH_DIR    = gopath
+GOPATH 		  = "$(REPO_ROOT)/$(GOPATH_DIR)"
 SKYLIBC_DIR  ?= $(GOPATH_DIR)/src/github.com/skycoin/libskycoin
 SKYCOIN_DIR  ?= $(SKYLIBC_DIR)/vendor/github.com/skycoin/skycoin
 SKYBUILD_DIR  = $(SKYLIBC_DIR)/build
@@ -42,15 +43,15 @@ configure: ## Configure build environment
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
 
-$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
-	rm -f $(BUILDLIBC_DIR)/libskycoin.a
-	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
-	ls $(BUILDLIBC_DIR)
-	rm -f swig/include/libskycoin.h
-	mkdir -p swig/include
-	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
-build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a ## Build libskycoin C client library
+build-libc: configure ## Build libskycoin C client library
+	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) clean-libc
+	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
+	rm -f swig/include/libskycoin.h
+	rm -f swig/include/swig.h
+	mkdir -p swig/include
+	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
+	cp -fv $(SKYLIBC_DIR)/include/swig.h swig/include/swig.h
 
 build-swig: ## Generate Python C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
@@ -66,7 +67,6 @@ build-swig: ## Generate Python C module from SWIG interfaces
 	}
 	rm -f ./skycoin/skycoin.py
 	rm -f swig/pyskycoin_wrap.c
-	rm -f swig/include/swig.h
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
@@ -81,7 +81,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	(cd $(PYTHON_CLIENT_DIR) && tox)
+	# (cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
@@ -114,6 +114,10 @@ dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 
 check-dist: dist ## Perform self-tests upon distributions archives
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
+
+clean: #Clean all
+	make -C $(SKYLIBC_DIR) clean-libc
+	python -m pip uninstall pyskycoin
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
