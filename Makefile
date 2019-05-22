@@ -10,7 +10,6 @@ PYTHON_BIN   ?= python$(PYTHON)
 MKFILE_PATH   = $(abspath $(lastword $(MAKEFILE_LIST)))
 REPO_ROOT     = $(dir $(MKFILE_PATH))
 GOPATH_DIR    = gopath
-GOPATH 		  = "$(REPO_ROOT)/$(GOPATH_DIR)"
 SKYLIBC_DIR  ?= $(GOPATH_DIR)/src/github.com/skycoin/libskycoin
 SKYCOIN_DIR  ?= $(SKYLIBC_DIR)/vendor/github.com/skycoin/skycoin
 SKYBUILD_DIR  = $(SKYLIBC_DIR)/build
@@ -51,13 +50,11 @@ build-libc: configure ## Build libskycoin C client library
 	rm -f swig/include/swig.h
 	mkdir -p swig/include
 	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
-	cp -fv $(SKYLIBC_DIR)/include/swig.h swig/include/swig.h
 
 build-swig: ## Generate Python C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
-	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	{ \
 		if [[ "$$(uname -s)" == "Darwin" ]]; then \
 			sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
@@ -65,8 +62,8 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -f ./skycoin/skycoin.py
-	rm -f swig/pyskycoin_wrap.c
+	rm -fv ./skycoin/skycoin.py
+	rm -fv swig/pyskycoin_wrap.c
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
