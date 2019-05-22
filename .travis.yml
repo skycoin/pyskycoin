@@ -81,7 +81,7 @@ before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
 # Test PySkycoin
-- make test
+- make test-ci
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
