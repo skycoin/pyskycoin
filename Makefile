@@ -49,6 +49,7 @@ build-libc: configure ## Build libskycoin C client library
 	rm -f swig/include/libskycoin.h
 	rm -f swig/include/swig.h
 	mkdir -p swig/include
+	cp $(SKYLIBC_DIR)/include/swig.h swig/include/
 	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
 
 build-swig: ## Generate Python C module from SWIG interfaces

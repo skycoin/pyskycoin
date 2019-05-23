@@ -59,7 +59,7 @@ class skycoin_build_ext(build_ext, object):
             make_path = os.path.realpath(os.path.join(sources_path, ".."))
 
             make_process = subprocess.Popen(
-                "make build-libc-swig",
+                "make build-libc",
                 cwd=make_path,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
@@ -108,6 +108,7 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
     ],
     keywords="skycoin crypto coin currency blockchain",  # Optional
     py_modules=["skycoin"],
