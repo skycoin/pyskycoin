@@ -65,14 +65,17 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && bash -c "eval "$(pyenv virtualenv-init -)"" \
     && pyenv install 2.7.10 \
     && pyenv install 3.4.9 \
+    && pyenv install 3.5.7 \
     && pyenv install 3.6.7 \
     && pyenv install 3.7.1 \
     && pyenv virtualenv 2.7.10 pysky27 \
     && pyenv virtualenv 3.4.9 pysky34 \
+    && pyenv virtualenv 3.5.7 pysky35 \
     && pyenv virtualenv 3.6.7 pysky36 \
     && pyenv virtualenv 3.7.1 pysky37 \
     && . $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
+    && . $PYENV_ROOT/versions/pysky35/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky36/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky37/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate
 
