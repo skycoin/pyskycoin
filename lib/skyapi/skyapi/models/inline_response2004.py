@@ -36,7 +36,7 @@ class InlineResponse2004(object):
         'is_valid': 'bool',
         'checked': 'str',
         'received': 'str',
-        'transaction': 'Apiv1pendingTxsTransaction'
+        'transaction': 'ApiV1PendingTxsTransaction'
     }
 
     attribute_map = {
@@ -158,7 +158,7 @@ class InlineResponse2004(object):
 
 
         :return: The transaction of this InlineResponse2004.  # noqa: E501
-        :rtype: Apiv1pendingTxsTransaction
+        :rtype: ApiV1PendingTxsTransaction
         """
         return self._transaction
 
@@ -168,7 +168,7 @@ class InlineResponse2004(object):
 
 
         :param transaction: The transaction of this InlineResponse2004.  # noqa: E501
-        :type: Apiv1pendingTxsTransaction
+        :type: ApiV1PendingTxsTransaction
         """
 
         self._transaction = transaction
