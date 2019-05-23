@@ -76,7 +76,7 @@ class skycoin_build_ext(build_ext, object):
             super(skycoin_build_ext, self).build_extension(ext)
 
 
-skypath = path.join(*("gopath/src/github.com/skycoin/libskycoin".split("/")))
+skypath = path.join(*("gopath/src/github.com/skycoin/skycoin".split("/")))
 lib_path = path.join(skypath, "build", "libskycoin")
 library_file = path.join(lib_path, "libskycoin.a")
 extra_link_args = []
@@ -90,7 +90,7 @@ setup(
     description="Skycoin Python Library",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/simelo/pyskycoin",
+    url="https://github.com/skycoin/pyskycoin",
     author="Ratmil Torres",  # Optional
     author_email="skycoin@simelo.tech",
     setup_requires=["pytest-runner"],
@@ -108,6 +108,7 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
     ],
     keywords="skycoin crypto coin currency blockchain",  # Optional
     py_modules=["skycoin"],

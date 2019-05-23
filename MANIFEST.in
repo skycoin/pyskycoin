@@ -8,7 +8,7 @@ include requirements.txt
 include requirements.dev.txt
 
 include Makefile
-include gopath/src/github.com/skycoin/libskycoin/Makefile
+include gopath/src/github.com/skycoin/skycoin/Makefile
 recursive-exclude *.a
 include skycoin.py
 
@@ -16,18 +16,14 @@ recursive-include . *.s
 recursive-include . *.go
 recursive-include . *.i
 recursive-include swig/include *.h
-recursive-include gopath/src/github.com/skycoin/libskycoin/include *.h
+recursive-include gopath/src/github.com/skycoin/skycoin/include *.h
 
 recursive-include docker *
 recursive-include swig/include *
-recursive-include gopath/src/github.com/skycoin/libskycoin *
+recursive-include gopath/src/github.com/skycoin/skycoin/include *
 
 recursive-exclude . *.orig
 exclude .github
 exclude .travis
-exclude lib/skyapi
-exclude .pytest_cache 
 recursive-exclude .github *
 recursive-exclude .travis *
-recursive-exclude lib/skyapi *
-recursive-exclude .pytest_cache *
