@@ -93,7 +93,7 @@ script:
 # Linter code to pylint
 - make lint
 # Test PySkycoin
-- make test
+- make test-ci
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
