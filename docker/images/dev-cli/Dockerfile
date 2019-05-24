@@ -78,7 +78,6 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && pyenv virtualenv 3.5.7 pysky35 \
     && pyenv virtualenv 3.6.7 pysky36 \
     && pyenv virtualenv 3.7.1 pysky37 \
-<<<<<<< HEAD
     && . $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky35/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
