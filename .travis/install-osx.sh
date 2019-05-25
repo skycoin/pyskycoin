@@ -7,6 +7,7 @@ brew update;
 brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
 brew install swig@3.04;
+brew link --overwrite swig@3.04;
 brew install gimme;
 
 # Install Python
