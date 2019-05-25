@@ -27,11 +27,10 @@ global-exclude .github
 global-exclude .travis
 global-exclude *.py[co]
 global-exclude *.orig
-prune lib/skyapi
+prune lib
 prune pytest_cache
 prune .github
 prune .tox
 prune .travis
-prune lib/skyapi
 prune .pytest_cache 
 
