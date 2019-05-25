@@ -6,6 +6,7 @@ def _print2stderr(msg):
 
 try:
     from .skycoin import *
+    from skycoin import *
 except (AttributeError, ImportError) as _err :
     init_error = _err
 

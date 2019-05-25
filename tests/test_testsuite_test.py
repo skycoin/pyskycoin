@@ -5,7 +5,7 @@ import os
 import re
 
 # testdataDir           = "./testdata/"
-testdataDir           = "./gopath/src/github.com/skycoin/skycoin/src/cipher/testsuite/testdata/"
+testdataDir           = "gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/src/cipher/testsuite/testdata/"
 manyAddressesFilename = "many-addresses.golden"
 inputHashesFilename   = "input-hashes.golden"
 seedFileRegex         = "seed-\d+.golden"
