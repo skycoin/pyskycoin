@@ -13,7 +13,7 @@ def test_TestAddUint64():
 class math_test:
     a = 0
     b = 0
-    err = skycoin.SKY_OK
+    err = 0
 
 
 def test_TestUint64ToInt64():

@@ -120,7 +120,7 @@ def test_TestNewGenesisBlock():
 
 class testcase:
     index = 0
-    failure = skycoin.SKY_OK
+    failure = 0
 
 
 def test_TestCreateUnspent():

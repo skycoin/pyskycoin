@@ -6,7 +6,7 @@ import ctypes
 class StrTmp():
     a = 0
     b = ctypes.c_uint32(0)
-    err = skycoin.SKY_OK
+    err = 0
 
     def __init__(self, a, b, err=skycoin.SKY_OK):
         self.a = a
