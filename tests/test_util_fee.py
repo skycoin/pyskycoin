@@ -7,7 +7,7 @@ class verifyTxFeeTestCase:
     outputHours = 0
     err = 0
 
-    def __init__(self, _inputHours, _outputHours, _err=skycoin.SKY_OK):
+    def __init__(self, _inputHours, _outputHours, _err=0):
         self.inputHours = _inputHours
         self.outputHours = _outputHours
         self.err = _err

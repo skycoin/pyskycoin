@@ -8,7 +8,7 @@ class StrTmp():
     b = ctypes.c_uint32(0)
     err = 0
 
-    def __init__(self, a, b, err=skycoin.SKY_OK):
+    def __init__(self, a, b, err=0):
         self.a = a
         self.b = b
         self.err = err
