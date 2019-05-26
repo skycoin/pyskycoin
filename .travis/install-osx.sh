@@ -9,7 +9,7 @@ brew install pyenv-virtualenv
 brew install swig@3.04 || brew link --force swig@3.04;
 echo 'export PATH="/usr/local/opt/swig@3.04/bin:$PATH"' >> ~/.bash_profile;
 ls -oa /usr/local/opt/swig@3.04/bin;
-bash
+source ~/.bash_profile;
 brew install gimme;
 
 # Install Python
