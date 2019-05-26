@@ -94,18 +94,10 @@ before_script:
 - rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/gopkg.in
 - cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/golang.org gopath/src/github.com/skycoin/libskycoin/vendor/
 - cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/gopkg.in gopath/src/github.com/skycoin/libskycoin/vendor/
-# Install PyPA Docker images for building multilinux wheels
-- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
-- if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_i686 ; fi
-- if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install twine ; fi
-- if [ $TRAVIS_OS_NAME == "linux" ]; then python -m twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --skip-existing --repository-url https://test.pypi.org/legacy/ dist/* ; fi
 
 script:
 # Test PySkycoin
-  - if [ $TRAVIS_OS_NAME == "osx" ]; then make test-ci ; fi
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin ; fi
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m tox ; fi
-  - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then docker build  . -t skydev-test ; fi
+  - make test-ci
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
