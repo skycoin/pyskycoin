@@ -44,7 +44,6 @@ configure: ## Configure build environment
 
 
 build-libc: configure ## Build libskycoin C client library
-	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) clean-libc
 	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
 	rm -f swig/include/libskycoin.h
 	rm -f swig/include/swig.h
@@ -114,7 +113,6 @@ check-dist: dist ## Perform self-tests upon distributions archives
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
 
 clean: #Clean all
-	make -C $(SKYLIBC_DIR) clean-libc
 	python -m pip uninstall pyskycoin
 	python3 -m pip uninstall pyskycoin
 	rm -rfv tests/__pycache__
