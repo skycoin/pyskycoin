@@ -79,7 +79,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	(cd $(PYTHON_CLIENT_DIR) && tox)
+	# (cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
@@ -116,6 +116,11 @@ check-dist: dist ## Perform self-tests upon distributions archives
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
 	python -m pip uninstall pyskycoin
+	python3 -m pip uninstall pyskycoin
+	rm -rfv tests/__pycache__
+	rm -rfv skycoin/__pycache__
+	rm -rfv skycoin/*.pyc
+	rm -rfv tests/*.pyc
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

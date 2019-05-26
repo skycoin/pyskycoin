@@ -1,5 +1,5 @@
 # Include all README
-recursive-include . *.md
+global-include *.md
 
 # Include the license file
 include LICENSE.txt
@@ -9,27 +9,29 @@ include requirements.dev.txt
 
 include Makefile
 include gopath/src/github.com/skycoin/libskycoin/Makefile
-recursive-exclude . *.a
+global-exclude *.a
 include skycoin.py
 
-recursive-include . *.s
-recursive-include . *.go
-recursive-include . *.i
-recursive-include swig/include *.h
-recursive-include gopath/src/github.com/skycoin/libskycoin/include *.h
+global-include *.s
+global-include *.go
+global-include *.i
+graft swig/include
+graft gopath/src/github.com/skycoin/libskycoin/include
 
-recursive-include docker *
-recursive-include swig/include *
-recursive-include gopath/src/github.com/skycoin/libskycoin/include *
+graft docker
+graft swig/include *
+graft gopath/src/github.com/skycoin/libskycoin/include
 
-recursive-exclude . *.orig
-exclude .github
-exclude .travis
-exclude lib/skyapi
-exclude .pytest_cache 
-recursive-exclude .github *
-recursive-exclude .travis *
-recursive-exclude lib/skyapi *
-recursive-exclude .pytest_cache *
+global-exclude __pycache__
+global-exclude .github
+global-exclude .travis
+global-exclude *.py[co]
+global-exclude *.orig
+prune lib
+prune pytest_cache
+prune .github
+prune .tox
+prune .travis
+prune .pytest_cache 
 
 recursive-exclude .tox *

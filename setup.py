@@ -90,7 +90,7 @@ setup(
     description="Skycoin Python Library",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/simelo/pyskycoin",
+    url="https://github.com/skycoin/pyskycoin",
     author="Ratmil Torres",  # Optional
     author_email="skycoin@simelo.tech",
     setup_requires=["pytest-runner"],
