@@ -8,7 +8,7 @@ brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
 echo 'Creating swig@3.0.12 formula';
 cd "$(brew --repository)/Library/Taps/homebrew/homebrew-core";
-git show fbeb566014a1d320df972aef965daf042db7db36:Formula/swig.rb | grep -v 'fails_with' > Formula/swig@3.0.12.rb;
+git show 42d31bba7772fb01f9ba442d9ee98b33a6e7a055:Formula/swig.rb | grep -v 'fails_with' > Formula/swig@3.0.12.rb;
 echo 'Installing swig@3.0.12 (3.0.12)';
 brew install swig@3.0.12 || brew link --overwrite swig@3.0.12;
 brew install gimme;
