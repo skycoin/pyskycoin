@@ -6,7 +6,11 @@ set -ev
 brew update;
 brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
-brew install swig;
+echo 'Creating swig@3.0.12 formula';
+cd "$(brew --repository)/Library/Taps/homebrew/homebrew-core";
+git show fbeb566014a1d320df972aef965daf042db7db36:Formula/swig.rb | grep -v 'fails_with' > Formula/swig@3.0.12.rb;
+echo 'Installing swig@3.0.12 (3.0.12)';
+brew install swig@3.0.12 || brew link --overwrite swig@3.0.12;
 brew install gimme;
 
 # Install Python
