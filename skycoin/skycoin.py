@@ -861,17 +861,13 @@ def SKY_cli_Config_FullDBPath(p0):
     return _skycoin.SKY_cli_Config_FullDBPath(p0)
 SKY_cli_Config_FullDBPath = _skycoin.SKY_cli_Config_FullDBPath
 
-def SKY_cli_NewApp(p0):
-    return _skycoin.SKY_cli_NewApp(p0)
-SKY_cli_NewApp = _skycoin.SKY_cli_NewApp
+def SKY_cli_NewCLI(p0):
+    return _skycoin.SKY_cli_NewCLI(p0)
+SKY_cli_NewCLI = _skycoin.SKY_cli_NewCLI
 
-def SKY_cli_RPCClientFromContext(p0):
-    return _skycoin.SKY_cli_RPCClientFromContext(p0)
-SKY_cli_RPCClientFromContext = _skycoin.SKY_cli_RPCClientFromContext
-
-def SKY_cli_ConfigFromContext(p0):
-    return _skycoin.SKY_cli_ConfigFromContext(p0)
-SKY_cli_ConfigFromContext = _skycoin.SKY_cli_ConfigFromContext
+def SKY_cli_NewPasswordReader(p0):
+    return _skycoin.SKY_cli_NewPasswordReader(p0)
+SKY_cli_NewPasswordReader = _skycoin.SKY_cli_NewPasswordReader
 
 def SKY_cli_PasswordFromBytes_Password():
     return _skycoin.SKY_cli_PasswordFromBytes_Password()
@@ -1065,6 +1061,14 @@ def SKY_apputil_PrintProgramStatus():
     return _skycoin.SKY_apputil_PrintProgramStatus()
 SKY_apputil_PrintProgramStatus = _skycoin.SKY_apputil_PrintProgramStatus
 
+def SKY_params_DropletPrecisionToDivisor(p0):
+    return _skycoin.SKY_params_DropletPrecisionToDivisor(p0)
+SKY_params_DropletPrecisionToDivisor = _skycoin.SKY_params_DropletPrecisionToDivisor
+
+def SKY_params_DropletPrecisionCheck(p0, p1):
+    return _skycoin.SKY_params_DropletPrecisionCheck(p0, p1)
+SKY_params_DropletPrecisionCheck = _skycoin.SKY_params_DropletPrecisionCheck
+
 def SKY_cipher_DecodeBase58Address(p0, p1):
     return _skycoin.SKY_cipher_DecodeBase58Address(p0, p1)
 SKY_cipher_DecodeBase58Address = _skycoin.SKY_cipher_DecodeBase58Address
@@ -1196,6 +1200,34 @@ SKY_coin_GetBlockBody = _skycoin.SKY_coin_GetBlockBody
 def SKY_coin_NewEmptyBlock(p0):
     return _skycoin.SKY_coin_NewEmptyBlock(p0)
 SKY_coin_NewEmptyBlock = _skycoin.SKY_coin_NewEmptyBlock
+
+def SKY_coin_Block_GetBlockHeader(p0, p1):
+    return _skycoin.SKY_coin_Block_GetBlockHeader(p0, p1)
+SKY_coin_Block_GetBlockHeader = _skycoin.SKY_coin_Block_GetBlockHeader
+
+def SKY_coin_GetBlockHeaderObject(p0, p1):
+    return _skycoin.SKY_coin_GetBlockHeaderObject(p0, p1)
+SKY_coin_GetBlockHeaderObject = _skycoin.SKY_coin_GetBlockHeaderObject
+
+def SKY_coin_BlockHeader_Time(p0):
+    return _skycoin.SKY_coin_BlockHeader_Time(p0)
+SKY_coin_BlockHeader_Time = _skycoin.SKY_coin_BlockHeader_Time
+
+def SKY_coin_BlockHeader_BkSeq(p0):
+    return _skycoin.SKY_coin_BlockHeader_BkSeq(p0)
+SKY_coin_BlockHeader_BkSeq = _skycoin.SKY_coin_BlockHeader_BkSeq
+
+def SKY_coin_BlockHeader_UxHash(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_UxHash(p0, p1)
+SKY_coin_BlockHeader_UxHash = _skycoin.SKY_coin_BlockHeader_UxHash
+
+def SKY_coin_BlockHeader_Fee(p0):
+    return _skycoin.SKY_coin_BlockHeader_Fee(p0)
+SKY_coin_BlockHeader_Fee = _skycoin.SKY_coin_BlockHeader_Fee
+
+def SKY_coin_BlockBody_Transactions(p0):
+    return _skycoin.SKY_coin_BlockBody_Transactions(p0)
+SKY_coin_BlockBody_Transactions = _skycoin.SKY_coin_BlockBody_Transactions
 
 def SKY_wallet_Entry_Verify(p0):
     return _skycoin.SKY_wallet_Entry_Verify(p0)
@@ -1685,45 +1717,17 @@ def SKY_file_DetermineResourcePath(p0, p1, p2):
     return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
 SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
 
-def SKY_base58_String2Hex(p0):
-    return _skycoin.SKY_base58_String2Hex(p0)
-SKY_base58_String2Hex = _skycoin.SKY_base58_String2Hex
-
-def SKY_base58_Base58_ToInt(p0):
-    return _skycoin.SKY_base58_Base58_ToInt(p0)
-SKY_base58_Base58_ToInt = _skycoin.SKY_base58_Base58_ToInt
-
-def SKY_base58_Base58_ToHex(p0):
-    return _skycoin.SKY_base58_Base58_ToHex(p0)
-SKY_base58_Base58_ToHex = _skycoin.SKY_base58_Base58_ToHex
-
-def SKY_base58_Base58_Base582Int(p0):
-    return _skycoin.SKY_base58_Base58_Base582Int(p0)
-SKY_base58_Base58_Base582Int = _skycoin.SKY_base58_Base58_Base582Int
-
-def SKY_base58_Base582Hex(p0):
-    return _skycoin.SKY_base58_Base582Hex(p0)
-SKY_base58_Base582Hex = _skycoin.SKY_base58_Base582Hex
-
-def SKY_base58_Base58_BitHex(p0):
-    return _skycoin.SKY_base58_Base58_BitHex(p0)
-SKY_base58_Base58_BitHex = _skycoin.SKY_base58_Base58_BitHex
-
-def SKY_base58_Int2Base58(p0):
-    return _skycoin.SKY_base58_Int2Base58(p0)
-SKY_base58_Int2Base58 = _skycoin.SKY_base58_Int2Base58
-
 def SKY_base58_Hex2Base58(p0):
     return _skycoin.SKY_base58_Hex2Base58(p0)
 SKY_base58_Hex2Base58 = _skycoin.SKY_base58_Hex2Base58
 
-def SKY_base58_Hex2Base58String(p0):
-    return _skycoin.SKY_base58_Hex2Base58String(p0)
-SKY_base58_Hex2Base58String = _skycoin.SKY_base58_Hex2Base58String
+def SKY_base58_Encode(p0):
+    return _skycoin.SKY_base58_Encode(p0)
+SKY_base58_Encode = _skycoin.SKY_base58_Encode
 
-def SKY_base58_Hex2Base58Str(p0):
-    return _skycoin.SKY_base58_Hex2Base58Str(p0)
-SKY_base58_Hex2Base58Str = _skycoin.SKY_base58_Hex2Base58Str
+def SKY_base58_Decode(p0):
+    return _skycoin.SKY_base58_Decode(p0)
+SKY_base58_Decode = _skycoin.SKY_base58_Decode
 
 def SKY_api_NewClient(p0):
     return _skycoin.SKY_api_NewClient(p0)
@@ -2005,9 +2009,9 @@ def SKY_wallet_ChooseSpendsMaximizeUxOuts(p0, p1, p2):
     return _skycoin.SKY_wallet_ChooseSpendsMaximizeUxOuts(p0, p1, p2)
 SKY_wallet_ChooseSpendsMaximizeUxOuts = _skycoin.SKY_wallet_ChooseSpendsMaximizeUxOuts
 
-def SKY_cli_App_Run(p0, p1):
-    return _skycoin.SKY_cli_App_Run(p0, p1)
-SKY_cli_App_Run = _skycoin.SKY_cli_App_Run
+def SKY_cli_CLI_Run(p0):
+    return _skycoin.SKY_cli_CLI_Run(p0)
+SKY_cli_CLI_Run = _skycoin.SKY_cli_CLI_Run
 
 def SKY_cli_Config_GetCoin(p0):
     return _skycoin.SKY_cli_Config_GetCoin(p0)
@@ -2016,10 +2020,6 @@ SKY_cli_Config_GetCoin = _skycoin.SKY_cli_Config_GetCoin
 def SKY_cli_Config_GetRPCAddress(p0):
     return _skycoin.SKY_cli_Config_GetRPCAddress(p0)
 SKY_cli_Config_GetRPCAddress = _skycoin.SKY_cli_Config_GetRPCAddress
-
-def SKY_cli_RPCClientFromApp(p0):
-    return _skycoin.SKY_cli_RPCClientFromApp(p0)
-SKY_cli_RPCClientFromApp = _skycoin.SKY_cli_RPCClientFromApp
 
 def SKY_cli_Getenv(p0):
     return _skycoin.SKY_cli_Getenv(p0)
@@ -2694,6 +2694,28 @@ class httphelper__Address(_object):
     __del__ = lambda self: None
 httphelper__Address_swigregister = _skycoin.httphelper__Address_swigregister
 httphelper__Address_swigregister(httphelper__Address)
+
+class httphelper__SHA256(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, httphelper__SHA256, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, httphelper__SHA256, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["_unnamed"] = _skycoin.httphelper__SHA256__unnamed_set
+    __swig_getmethods__["_unnamed"] = _skycoin.httphelper__SHA256__unnamed_get
+    if _newclass:
+        _unnamed = _swig_property(_skycoin.httphelper__SHA256__unnamed_get, _skycoin.httphelper__SHA256__unnamed_set)
+
+    def __init__(self):
+        this = _skycoin.new_httphelper__SHA256()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_httphelper__SHA256
+    __del__ = lambda self: None
+httphelper__SHA256_swigregister = _skycoin.httphelper__SHA256_swigregister
+httphelper__SHA256_swigregister(httphelper__SHA256)
 
 class wallet__Balance(_object):
     __swig_setmethods__ = {}

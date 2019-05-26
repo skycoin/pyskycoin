@@ -7,7 +7,6 @@
 SHELL := /bin/bash
 
 PYTHON_BIN   ?= python$(PYTHON)
-PWD 		  = $(shell pwd)
 MKFILE_PATH   = $(abspath $(lastword $(MAKEFILE_LIST)))
 REPO_ROOT     = $(dir $(MKFILE_PATH))
 GOPATH_DIR    = gopath
@@ -43,21 +42,20 @@ configure: ## Configure build environment
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
 
-$(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
-	rm -f $(BUILDLIBC_DIR)/libskycoin.a
-	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
-	ls $(BUILDLIBC_DIR)
-	rm -f swig/include/libskycoin.h
-	mkdir -p swig/include
-	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
 
-build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a ## Build libskycoin C client library
+build-libc: configure ## Build libskycoin C client library
+	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) clean-libc
+	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
+	rm -f swig/include/libskycoin.h
+	rm -f swig/include/swig.h
+	mkdir -p swig/include
+	cp $(SKYLIBC_DIR)/include/swig.h swig/include/
+	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
 
 build-swig: ## Generate Python C module from SWIG interfaces
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
-	#sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i
 	{ \
 		if [[ "$$(uname -s)" == "Darwin" ]]; then \
 			sed -i '.kbk' 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
@@ -65,9 +63,8 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -f ./skycoin/skycoin.py
-	rm -f swig/pyskycoin_wrap.c
-	rm -f swig/include/swig.h
+	rm -fv ./skycoin/skycoin.py
+	rm -fv swig/pyskycoin_wrap.c
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
@@ -82,7 +79,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	(cd $(PYTHON_CLIENT_DIR) && tox)
+	# (cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
@@ -101,14 +98,14 @@ bdist_manylinux: bdist_manylinux_amd64 ## Create multilinux binary wheel distrib
 
 bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_x86_64
-	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh amd64
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
 
 bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_i686
-	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh 386
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
@@ -116,7 +113,16 @@ bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution arc
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 
 check-dist: dist ## Perform self-tests upon distributions archives
-	docker run --rm -t -v $(PWD):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
+
+clean: #Clean all
+	make -C $(SKYLIBC_DIR) clean-libc
+	python -m pip uninstall pyskycoin
+	python3 -m pip uninstall pyskycoin
+	rm -rfv tests/__pycache__
+	rm -rfv skycoin/__pycache__
+	rm -rfv skycoin/*.pyc
+	rm -rfv tests/*.pyc
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

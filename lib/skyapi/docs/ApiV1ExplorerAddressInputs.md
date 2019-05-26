@@ -1,4 +1,4 @@
-# Apiv1exploreraddressInputs
+# ApiV1ExplorerAddressInputs
 
 ## Properties
 Name | Type | Description | Notes

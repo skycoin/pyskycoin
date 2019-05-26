@@ -32,15 +32,15 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'outputs': 'list[Apiv1exploreraddressOutputs]',
+        'outputs': 'list[ApiV1ExplorerAddressOutputs]',
         'inner_hash': 'str',
-        'inputs': 'list[Apiv1exploreraddressInputs]',
+        'inputs': 'list[ApiV1ExplorerAddressInputs]',
         'fee': 'int',
         'sigs': 'list[str]',
         'length': 'int',
         'txid': 'str',
         'type': 'int',
-        'status': 'Apiv1exploreraddressStatus',
+        'status': 'ApiV1ExplorerAddressStatus',
         'timestamp': 'int'
     }
 
@@ -99,7 +99,7 @@ class InlineResponse2002(object):
 
 
         :return: The outputs of this InlineResponse2002.  # noqa: E501
-        :rtype: list[Apiv1exploreraddressOutputs]
+        :rtype: list[ApiV1ExplorerAddressOutputs]
         """
         return self._outputs
 
@@ -109,7 +109,7 @@ class InlineResponse2002(object):
 
 
         :param outputs: The outputs of this InlineResponse2002.  # noqa: E501
-        :type: list[Apiv1exploreraddressOutputs]
+        :type: list[ApiV1ExplorerAddressOutputs]
         """
 
         self._outputs = outputs
@@ -141,7 +141,7 @@ class InlineResponse2002(object):
 
 
         :return: The inputs of this InlineResponse2002.  # noqa: E501
-        :rtype: list[Apiv1exploreraddressInputs]
+        :rtype: list[ApiV1ExplorerAddressInputs]
         """
         return self._inputs
 
@@ -151,7 +151,7 @@ class InlineResponse2002(object):
 
 
         :param inputs: The inputs of this InlineResponse2002.  # noqa: E501
-        :type: list[Apiv1exploreraddressInputs]
+        :type: list[ApiV1ExplorerAddressInputs]
         """
 
         self._inputs = inputs
@@ -267,7 +267,7 @@ class InlineResponse2002(object):
 
 
         :return: The status of this InlineResponse2002.  # noqa: E501
-        :rtype: Apiv1exploreraddressStatus
+        :rtype: ApiV1ExplorerAddressStatus
         """
         return self._status
 
@@ -277,7 +277,7 @@ class InlineResponse2002(object):
 
 
         :param status: The status of this InlineResponse2002.  # noqa: E501
-        :type: Apiv1exploreraddressStatus
+        :type: ApiV1ExplorerAddressStatus
         """
 
         self._status = status
