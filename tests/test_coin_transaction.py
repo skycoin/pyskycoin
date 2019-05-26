@@ -484,7 +484,7 @@ class cases():
     name = ""
     inUxs = []
     outUxs = []
-    err = skycoin.SKY_OK
+    err = 0
     headTime = 0
 
 def test_TestVerifyTransactionCoinsSpending():
