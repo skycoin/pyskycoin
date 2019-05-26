@@ -7,9 +7,7 @@ brew update;
 brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
 brew install swig@3.04 || brew link --force swig@3.04;
-export PATH="/usr/local/opt/swig@3.04/bin:$PATH";
-ls -oa /usr/local/opt/swig@3.04/bin;
-echo $PATH;
+PATH="/usr/local/opt/swig@3.04/bin:$PATH";
 brew install gimme;
 
 # Install Python

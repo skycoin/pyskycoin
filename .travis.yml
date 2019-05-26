@@ -39,6 +39,7 @@ matrix:
     env:
     - PYTHON=2.7.16
     - TOXENV=py27
+    - PATH="/usr/local/opt/swig@3.04/bin:$PATH"
   # - os: osx
   #   languague: generic
   #   env:
