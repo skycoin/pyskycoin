@@ -83,7 +83,11 @@ install:
 - eval "$(gimme 1.10)"
 - go get github.com/gz-c/gox
 before_script:
-  # Install PyPA Docker images for building multilinux wheels
+  # Removing the symbolic link and copying the real one 
+- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/golang.org
+- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/gopkg.in
+- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/golang.org gopath/src/github.com/skycoin/libskycoin/vendor/
+- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/gopkg.in gopath/src/github.com/skycoin/libskycoin/vendor/
 script:
 # Compile lib
 - make build && make develop

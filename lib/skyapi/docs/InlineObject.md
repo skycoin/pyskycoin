@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **change_address** | **str** |  | [optional] 
-**hours_selection** | [**Apiv1wallettransactionHoursSelection**](Apiv1wallettransactionHoursSelection.md) |  | [optional] 
+**hours_selection** | [**ApiV1WalletTransactionHoursSelection**](ApiV1WalletTransactionHoursSelection.md) |  | [optional] 
 **ignore_unconfirmed** | **bool** |  | [optional] 
-**to** | [**list[Apiv1wallettransactionTo]**](Apiv1wallettransactionTo.md) |  | [optional] 
-**wallet** | [**Apiv1wallettransactionWallet**](Apiv1wallettransactionWallet.md) |  | [optional] 
+**to** | [**list[ApiV1WalletTransactionTo]**](ApiV1WalletTransactionTo.md) |  | [optional] 
+**wallet** | [**ApiV1WalletTransactionWallet**](ApiV1WalletTransactionWallet.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

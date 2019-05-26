@@ -5,9 +5,9 @@ import tests.utils as utils
 class verifyTxFeeTestCase:
     inputHours = 0
     outputHours = 0
-    err = skycoin.SKY_OK
+    err = 0
 
-    def __init__(self, _inputHours, _outputHours, _err=skycoin.SKY_OK):
+    def __init__(self, _inputHours, _outputHours, _err=0):
         self.inputHours = _inputHours
         self.outputHours = _outputHours
         self.err = _err
