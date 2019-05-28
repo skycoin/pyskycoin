@@ -1,4 +1,8 @@
-FROM quay.io/pypa/manylinux1_x86_64
+ARG ARCH
+
+FROM quay.io/pypa/manylinux1_${ARCH}
+
+ARG GO_ARCH
 
 ADD . /io
 
@@ -8,10 +12,10 @@ RUN mkdir -p "$HOME/bin"
 RUN PIP=/opt/python/cp27-cp27m/bin/pip source /io/.travis/install-linux.sh
 RUN eval "$(gimme 1.10)"
 
-RUN curl -sL -o "go1.11.3.linux-amd64.tar.gz" https://storage.googleapis.com/golang/go1.11.3.linux-amd64.tar.gz
-RUN sudo tar -zxf go1.11.3.linux-amd64.tar.gz -C /usr/local
+RUN curl -sL -o "go1.11.3.linux-${GO_ARCH}.tar.gz" https://storage.googleapis.com/golang/go1.11.3.linux-${GO_ARCH}.tar.gz
+RUN sudo tar -zxf go1.11.3.linux-${GO_ARCH}.tar.gz -C /usr/local
 ENV GOROOT=/usr/local/go
-ENV PATH=$PATH:/usr/local/go/bin
+ENV PATH="${PATH}:/usr/local/go/bin"
 ENV CGO_ENABLE=1
 
 RUN go version
@@ -27,5 +31,9 @@ RUN for whl in wheelhouse/*.whl; do \
     done
 
 RUN ls /io/wheelhouse
-
 RUN mkdir -p /io/dist
+RUN cp -v /io/wheelhouse/* /io/dist
+RUN python -m pip install twine
+RUN python -m twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+
+WORKDIR /io
