@@ -18,7 +18,7 @@ global-include *.i
 graft swig/include
 graft gopath/src/github.com/skycoin/libskycoin/include
 
-graft docker
+prune docker
 graft swig/include *
 graft gopath/src/github.com/skycoin/libskycoin/include
 
