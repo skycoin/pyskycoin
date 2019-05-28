@@ -4,9 +4,6 @@ jobs:
     docker:
       - image: docker:18.06.0-ce-git
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
-    environment:
-      QEMU_PLATFORM: orangepi-plus2
-
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
@@ -19,9 +16,6 @@ jobs:
     docker:
       - image: docker:18.06.0-ce-git
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
-    environment:
-      QEMU_PLATFORM: raspberrypi3
-
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
