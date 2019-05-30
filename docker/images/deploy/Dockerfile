@@ -49,7 +49,7 @@ RUN sh /io/.circleci/circle_wheels.sh
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
-RUN python -m pip install twine
-RUN python -m twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+RUN $PIP install twine
+RUN /opt/python/cp27-cp27m/bin/twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
 
 WORKDIR /io
