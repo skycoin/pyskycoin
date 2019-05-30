@@ -40,9 +40,9 @@ ENV CGO_ENABLE=1
 RUN go version
 RUN go env
 RUN go get github.com/gz-c/gox
-RUN make build-libc
-RUN make build-swig 
-RUN make develop
+RUN make -C /io build-libc
+RUN make -C /io build-swig 
+RUN make -C /io develop
 RUN sh /io/.circleci/circle_wheels.sh
 
 RUN ls /io/wheelhouse
