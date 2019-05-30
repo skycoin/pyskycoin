@@ -1,4 +1,6 @@
-FROM balenalib/armv7hf-debian-golang
+ARG ARCH_OS
+# FROM balenalib/armv7hf-debian-golang
+FROM balenalib/${ARCH_OS}-debian-golang
 
 ADD . $GOPATH/src/github.com/skycoin/pyskycoin/
 ARG PIP_PACKAGES="setuptools wheel tox pytest"
