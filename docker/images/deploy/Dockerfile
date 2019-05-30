@@ -7,7 +7,7 @@ ARG GO_ARCH
 ADD . /io
 
 RUN ls /io
-RUN yum install -y sudo pcre pcre-devel curl gcc devtools
+RUN yum install -y sudo pcre pcre-devel curl
 RUN mkdir -p "$HOME/bin"
 ENV PIP "/opt/python/cp27-cp27m/bin/pip"
 ENV REPO_ROOT "/io/"
@@ -39,6 +39,7 @@ ENV CGO_ENABLE=1
 
 RUN go version
 RUN go env
+RUN go get github.com/gz-c/gox
 RUN sh /io/.circleci/circle_wheels.sh
 
 RUN ls /io/wheelhouse
