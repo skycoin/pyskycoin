@@ -39,7 +39,7 @@ ENV CGO_ENABLE=1
 
 RUN go version
 RUN go env
-RUN sh /io/.circle/circle_wheels.sh
+RUN sh /io/.circleci/circle_wheels.sh
 
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
