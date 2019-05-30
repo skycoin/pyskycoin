@@ -44,7 +44,6 @@ RUN cd /io && git submodule update --init --recursive
 RUN make -C /io/gopath/src/github.com/skycoin/libskycoin dep
 RUN make -C /io build-libc
 RUN make -C /io build-swig 
-RUN make -C /io develop
 RUN sh /io/.circleci/circle_wheels.sh
 
 RUN ls /io/wheelhouse
