@@ -13,7 +13,8 @@ RUN apt install python3 python python3-pip python-pip -y
 RUN pip install --upgrade $PIP_PACKAGES \
     && pip3 install --upgrade $PIP_PACKAGES 
 
-RUN python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin
+RUN pip install -i https://test.pypi.org/simple/ pyskycoin
+RUN pip3 install -i https://test.pypi.org/simple/ pyskycoin
 
 RUN cd $GOPATH/src/github.com/skycoin/pyskycoin && python -m tox
 
