@@ -39,15 +39,7 @@ ENV CGO_ENABLE=1
 
 RUN go version
 RUN go env
-
-RUN for PYBIN in /opt/python/*/bin; do \
-        "${PYBIN}/pip" install -r /io/requirements.dev.txt \
-        "${PYBIN}/pip" wheel /io/ -w wheelhouse/ \
-    done
-
-RUN for whl in wheelhouse/*.whl; do \
-        auditwheel repair "$whl" -w /io/wheelhouse/ \
-    done
+RUN sh /io/.circle/circle_wheels.sh
 
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
