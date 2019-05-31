@@ -14,6 +14,6 @@ RUN ${PIP} install -r "${REPO_ROOT}/requirements.dev.txt"
 RUN ${PIP} install -r "${REPO_ROOT}/lib/skyapi/requirements.txt"
 RUN ${PIP} install -r "${REPO_ROOT}/lib/skyapi/test-requirements.txt"
 
-RUN ${PIP} -i https://test.pypi.org/simple/ pyskycoin
+RUN ${PIP} install -i https://test.pypi.org/simple/ pyskycoin
 
 RUN cd ${REPO_ROOT} && python3 -m pytest tests/*.py
