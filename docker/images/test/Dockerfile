@@ -26,4 +26,4 @@ RUN ${PIP} install -r "${REPO_ROOT}/lib/skyapi/test-requirements.txt"
 
 RUN pip install -i https://test.pypi.org/simple/ pyskycoin
 
-RUN cd ${REPO_ROOT} && python -m tox
+RUN cd ${REPO_ROOT} && pytest tests/*.py
