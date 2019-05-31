@@ -7,7 +7,7 @@ ENV TOXENV=py27
 ENV PIP='python -m pip'
 #Install package
 RUN apt-get update
-RUN apt-get install make cmake python-pip python3-dev python-dev python-setuptools curl gcc -y
+RUN apt-get install make cmake python-pip python3-dev python-dev python-setuptools libpcre3-dev curl gcc -y
 RUN mkdir swig_build && \
   cd swig_build && \
   curl -sL -o "swig-3.0.12.tar.gz" http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && \
