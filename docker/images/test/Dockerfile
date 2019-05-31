@@ -3,8 +3,7 @@ FROM ${IMAGE}
 
 ENV REPO_ROOT=$GOPATH/src/github.com/skycoin/pyskycoin/
 ADD . ${REPO_ROOT}
-ENV TOXENV=py27
-ENV PIP='python -m pip'
+ENV PIP='python3 -m pip'
 #Install package
 RUN apt-get update
 RUN apt-get install make cmake python-pip python3-dev python-dev python-setuptools libpcre3-dev curl gcc -y
@@ -15,6 +14,6 @@ RUN ${PIP} install -r "${REPO_ROOT}/requirements.dev.txt"
 RUN ${PIP} install -r "${REPO_ROOT}/lib/skyapi/requirements.txt"
 RUN ${PIP} install -r "${REPO_ROOT}/lib/skyapi/test-requirements.txt"
 
-RUN pip install -i https://test.pypi.org/simple/ pyskycoin
+RUN ${PIP} -i https://test.pypi.org/simple/ pyskycoin
 
-RUN cd ${REPO_ROOT} && python setup.py test
+RUN cd ${REPO_ROOT} && python3 -m pytest tests/*.py
