@@ -1,5 +1,5 @@
 ARG ARCH_OS
-FROM balenalib/${ARCH_OS}-ubuntu-golang
+FROM balenalib/${ARCH_OS}-debian-golang
 
 ENV REPO_ROOT=$GOPATH/src/github.com/skycoin/pyskycoin/
 ADD . ${REPO_ROOT}
