@@ -8,8 +8,8 @@ ARG PIP_PACKAGES="setuptools wheel tox pytest"
 RUN [ "cross-build-start" ]
 
 # Install Python 2/3 runtime and development tools
-RUN apt update
-RUN apt install python3 python python3-pip python-pip -y
+RUN apt-get update
+RUN apt-get install python3 python python3-pip python-pip -y
 
 # Install packages in PIP_PACKAGES
 RUN pip install --upgrade $PIP_PACKAGES \
