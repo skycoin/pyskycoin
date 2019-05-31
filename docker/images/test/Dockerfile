@@ -6,7 +6,7 @@ ADD . ${REPO_ROOT}
 ENV PIP='python3 -m pip'
 #Install package
 RUN apt-get update
-RUN apt-get install make cmake python-pip python3-dev python-dev python-setuptools libpcre3-dev curl gcc -y
+RUN apt-get install make cmake python3-dev python3-pip python3-setuptools libpcre3-dev curl gcc -y
 
 # Install packages in PIP_PACKAGES
 RUN ${PIP} install --upgrade tox pip setuptools
