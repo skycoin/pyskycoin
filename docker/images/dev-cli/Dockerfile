@@ -5,6 +5,7 @@ FROM $IMAGE_FROM
 ARG BDATE
 ARG SCOMMIT
 ARG PIP_PACKAGES="pip setuptools wheel"
+ARG PYTHON_INSTALLERS="2.7.10 3.4.9 3.5.7 3.6.7 3.7.1"
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
@@ -68,16 +69,17 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && git submodule update --init --recursive \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
     && bash -c "eval "$(pyenv virtualenv-init -)"" \
-    && pyenv install 2.7.10 \
-    && pyenv install 3.4.9 \
-    && pyenv install 3.5.7 \
-    && pyenv install 3.6.7 \
-    && pyenv install 3.7.1 \
-    && pyenv virtualenv 2.7.10 pysky27 \
-    && pyenv virtualenv 3.4.9 pysky34 \
-    && pyenv virtualenv 3.5.7 pysky35 \
-    && pyenv virtualenv 3.6.7 pysky36 \
-    && pyenv virtualenv 3.7.1 pysky37 \
+	&& for installer in $PYTHON_INSTALLERS; do pyenv install $installer; pyenv virtualenv $installer pysky($installer); done \
+    #&& pyenv install 2.7.10 \
+    #&& pyenv install 3.4.9 \
+    #&& pyenv install 3.5.7 \
+    #&& pyenv install 3.6.7 \
+    #&& pyenv install 3.7.1 \
+    #&& pyenv virtualenv 2.7.10 pysky27 \
+    #&& pyenv virtualenv 3.4.9 pysky34 \
+    #&& pyenv virtualenv 3.5.7 pysky35 \
+    #&& pyenv virtualenv 3.6.7 pysky36 \
+    #&& pyenv virtualenv 3.7.1 pysky37 \
     && . $PYENV_ROOT/versions/pysky27/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky34/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
     && . $PYENV_ROOT/versions/pysky35/bin/activate && pip install --upgrade $PIP_PACKAGES && pip install pyskycoin && deactivate \
