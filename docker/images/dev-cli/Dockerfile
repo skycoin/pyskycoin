@@ -69,7 +69,7 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc \
     && git submodule update --init --recursive \
     && echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc \
     && bash -c "eval "$(pyenv virtualenv-init -)"" \
-	&& for installer in $PYTHON_INSTALLERS; do pyenv install $installer; pyenv virtualenv $installer pysky($installer); done \
+	&& for installer in $(echo $PYTHON_INSTALLERS | tr " " "\n"); do pyenv install $installer; pyenv virtualenv $installer pysky$installer; done \
     #&& pyenv install 2.7.10 \
     #&& pyenv install 3.4.9 \
     #&& pyenv install 3.5.7 \
