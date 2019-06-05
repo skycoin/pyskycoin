@@ -5,7 +5,7 @@ FROM $IMAGE_FROM
 ARG BDATE
 ARG SCOMMIT
 ARG PIP_PACKAGES="pip setuptools wheel"
-ARG PYTHON_INSTALLERS="2.7.10 3.4.9 3.5.7 3.6.7 3.7.1"
+ARG PYTHON_INSTALLERS="2.7.10 3.4.9 3.5.7 3.6.7 3.7.1 jython-2.7.1 pypy2.7-7.1.0 pypy3.5-7.0.0 pypy3.6-7.1.1 activepython-2.7.14 activepython-3.5.4 activepython-3.6.0 stackless-2.7.10 stackless-2.7.10 stackless-3.4.7 stackless-3.5.4 ironpython-2.7.7"
 
 # Image labels (see ./hooks/build for ARGS)
 LABEL "org.label-schema.name"="skycoindev-python" \
