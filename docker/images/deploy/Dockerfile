@@ -13,7 +13,8 @@ ENV PIP "/opt/python/cp27-cp27m/bin/pip"
 ENV REPO_ROOT "/io/"
 RUN curl -sL -o "$HOME/bin/gimme" https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 RUN chmod +x "$HOME/bin/gimme"
-RUN eval "$(gimme 1.10)"
+ENV PATH="${PATH}:$HOME/bin/gimme"
+RUN eval "$(gimme 1.11)"
 
 RUN $PIP install --upgrade pip setuptools tox-travis
 RUN $PIP install -r "$REPO_ROOT/requirements.dev.txt"
