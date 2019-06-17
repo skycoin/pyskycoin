@@ -35,7 +35,6 @@ matrix:
   #   - TOXENV=py37
   #   - PYTHON=3.7
   - os: osx
-    osx_image: xcode8.3
     language: python
     env:
     - PYTHON=2.7
