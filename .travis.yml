@@ -37,7 +37,7 @@ matrix:
   - os: osx
     language: go
     env:
-    - PYTHON=2.7
+    - PYTHON=2.7.16
     - TOXENV=py27
   # - os: osx
   #   languague: generic
