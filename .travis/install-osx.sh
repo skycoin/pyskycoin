@@ -3,7 +3,7 @@
 set -ev
 
 # Install some dependencies
-brew update;
+# brew update;
 brew outdated pyenv || brew upgrade pyenv;
 brew install pyenv-virtualenv
 brew install swig;
