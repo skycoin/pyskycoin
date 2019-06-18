@@ -34,12 +34,12 @@ matrix:
   #   env:
   #   - TOXENV=py37
   #   - PYTHON=3.7
-  - os: osx
-    language: go
-    python: 2.7.16
-    env:
+  # - os: osx
+    # language: go
+    # python: 2.7.16
+    # env:
     # - PYTHON=2.7.16
-    - TOXENV=py27
+    # - TOXENV=py27
   - os: osx
     language: go
     python: 3.4.8
