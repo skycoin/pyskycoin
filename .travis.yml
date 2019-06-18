@@ -59,6 +59,7 @@ matrix:
     env:
     - PYTHON=3.7.1
     - TOXENV=py37
+
 before_install:
 - python --version
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
@@ -77,9 +78,9 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
+
 install:
-# 
-# - eval "$(gimme 1.10)"
+- eval "$(gimme 1.11)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
