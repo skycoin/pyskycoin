@@ -40,7 +40,9 @@ matrix:
     # - PYTHON=2.7.16
     # - TOXENV=py27
   - os: osx
-    language: generic
+    language: 
+      - go
+      - python
     env:
     - PYTHON=3.4.8
     - TOXENV=py34
@@ -70,12 +72,12 @@ before_install:
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
-  # eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
-  # fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+  eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+  fi
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
 # 
