@@ -15,8 +15,7 @@ brew install swig || brew link --overwrite swig;
 
 # Install Python
 pyenv install ${PYTHON}
-pyenv install 2.7.14
-pyenv global ${PYTHON} 2.7.14
+pyenv global ${PYTHON}
 
 # Prepare and initialize pyenv environment
 eval "$(pyenv init -)";
