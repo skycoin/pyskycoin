@@ -37,7 +37,9 @@ echo 'Installing python';
 
 if [[ "$TOXENV" == 'py34' ]]; then
     wget https://raw.githubusercontent.com/Homebrew/homebrew-core/bd43f59bd50bb49242259f327cb6ac7a8dd59478/Formula/python3.rb
+    rm -fv Formula/python.rb
     cat python3.rb | grep -v 'fails_with' > Formula/python.rb
+    brew unlink python
     brew install python || brew link --overwrite python
 fi
 
