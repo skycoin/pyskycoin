@@ -40,11 +40,12 @@ matrix:
     env:
     # - PYTHON=2.7.16
     - TOXENV=py27
-  # - os: osx
-  #   languague: generic
-  #   env:
-  #   - PYTHON=3.4.8
-  #   - TOXENV=py34
+  - os: osx
+    languague: python
+    python: 3.4.8
+    env:
+    # - PYTHON=3.4.8
+    - TOXENV=py34
   # - os: osx
   #   languague: generic
   #   env:
