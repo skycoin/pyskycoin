@@ -79,7 +79,8 @@ before_install:
 # - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
 install:
-- eval "$(gimme 1.10)"
+# 
+# - eval "$(gimme 1.10)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
