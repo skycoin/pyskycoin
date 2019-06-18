@@ -34,19 +34,19 @@ brew install swig || brew link --overwrite swig;
 
 if [[ "$TOXENV" == 'py34' ]]; then
     brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/bd43f59bd50bb49242259f327cb6ac7a8dd59478/Formula/python3.rb
-    brew link --overwrite python
 fi
 
 if [[ "$TOXENV" == 'py35' ]]; then
     brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/ec545d45d4512ace3570782283df4ecda6bb0044/Formula/python3.rb
-    brew link --overwrite python
 fi
 
 if [[ "$TOXENV" == 'py36' ]]; then
     brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
-    brew link --overwrite python
 fi
 
+if [[ "$TOXENV" == 'py37' ]]; then
+    brew install python
+fi
 
 python -m pip install --upgrade pip setuptools wheel tox tox-pyenv pytest pytest-runner
 
