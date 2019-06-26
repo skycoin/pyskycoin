@@ -7,7 +7,7 @@ ARG GO_ARCH
 ADD . /io
 
 RUN ls /io
-RUN yum install -y sudo pcre pcre-devel curl git
+RUN yum install -y sudo pcre pcre-devel curl git --skip-broken
 RUN mkdir -p "$HOME/bin"
 ENV PIP "/opt/python/cp27-cp27m/bin/pip"
 ENV REPO_ROOT "/io/"
