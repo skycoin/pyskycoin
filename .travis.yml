@@ -88,15 +88,15 @@ after_failure:
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
-before_deploy:
-- echo "Generating distribution archives before deploy"
-- make sdist
-- make bdist_wheel
-- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
-- ls dist
 jobs:
   include:
     - stage: pyskycoin
+      before_deploy:
+      - echo "Generating distribution archives before deploy"
+      - make sdist
+      - make bdist_wheel
+      - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+      - ls dist
       deploy:
       - provider: releases
         api_key:
@@ -134,7 +134,13 @@ jobs:
           repo: skycoin/pyskycoin
           condition: $TRAVIS_OS_NAME = "osx"
     - stage: skyapi
-      before-deploy: "cd lib/skyapi/"
+      before_deploy:
+      - echo "Generating distribution archives before deploy"
+      - make sdist
+      - make bdist_wheel
+      - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+      - ls dist
+      - cd lib/skyapi/
       deploy:
       - provider: pypi
         distributions: sdist bdist_wheel
