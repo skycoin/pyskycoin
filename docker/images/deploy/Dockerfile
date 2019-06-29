@@ -43,6 +43,7 @@ RUN go env
 RUN go get github.com/gz-c/gox
 RUN cd /io && git submodule update --init --recursive 
 RUN make -C /io/gopath/src/github.com/skycoin/libskycoin dep
+RUN cd /io/gopath/src/github.com/skycoin/libskycoin && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t88_swig_multiple_return && git checkout -f stdevHan_t88_swig_multiple_return
 RUN make -C /io build-libc
 RUN make -C /io build-swig 
 RUN sh /io/.circleci/circle_wheels.sh
