@@ -14,12 +14,10 @@ class StrTmp():
         self.err = err
 
 
-
-
 def test_Test64BitIntToUint32():
     cases = []
     cases.append(StrTmp((1 << 32), 0, skycoin.SKY_ErrIntOverflowsUint32))
-    cases.append(StrTmp((1 << 32 - 1), (1 << 32 - 1)))
+    cases.append(StrTmp((1 << 32 - 2), (1 << 32 - 2)))
     for tc in cases:
         err, x = skycoin.SKY_coin_IntToUint32(tc.a)
         if err != skycoin.SKY_OK:
