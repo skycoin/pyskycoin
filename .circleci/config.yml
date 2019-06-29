@@ -8,6 +8,7 @@ jobs:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - run: cd $GOPATH/src/github.com/skycoin/pyskycoin/gopath/src/github.com/skycoin/libskycoin && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t88_swig_multiple_return && git checkout -f stdevHan_t88_swig_multiple_return
+      - run: cd $GOPATH/src/github.com/skycoin/pyskycoin
       - setup_remote_docker:
           version: 18.06.0-ce
       - run: docker build  --build-arg GO_ARCH=amd64 --build-arg ARCH=x86_64 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
@@ -21,6 +22,7 @@ jobs:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - run: cd $GOPATH/src/github.com/skycoin/pyskycoin/gopath/src/github.com/skycoin/libskycoin && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t88_swig_multiple_return && git checkout -f stdevHan_t88_swig_multiple_return
+      - run: cd $GOPATH/src/github.com/skycoin/pyskycoin
       - setup_remote_docker:
           version: 18.06.0-ce
       - run: docker build  --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
@@ -34,6 +36,7 @@ jobs:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - run: cd $GOPATH/src/github.com/skycoin/pyskycoin/gopath/src/github.com/skycoin/libskycoin && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t88_swig_multiple_return && git checkout -f stdevHan_t88_swig_multiple_return
+      - run: cd $GOPATH/src/github.com/skycoin/pyskycoin
       - setup_remote_docker:
           version: 18.06.0-ce
       - run: docker build  --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
