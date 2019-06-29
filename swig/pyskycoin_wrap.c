@@ -3002,7 +3002,7 @@ SWIG_Python_NonDynamicSetAttr(PyObject *obj, PyObject *name, PyObject *value) {
 #define SWIGTYPE_p_a_33__unsigned_char swig_types[17]
 #define SWIGTYPE_p_a_4__unsigned_char swig_types[18]
 #define SWIGTYPE_p_a_65__unsigned_char swig_types[19]
-#define SWIGTYPE_p_a_sizeof_void_____64_8_1__1__char swig_types[20]
+#define SWIGTYPE_p_a_sizeof_void_____32_8_1__1__char swig_types[20]
 #define SWIGTYPE_p_api__NetworkConnectionsFilter swig_types[21]
 #define SWIGTYPE_p_api__RichlistParams swig_types[22]
 #define SWIGTYPE_p_char swig_types[23]
@@ -9266,7 +9266,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetInputsCount(PyObject *SWIGUNU
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -9368,7 +9368,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetOutputsCount(PyObject *SWIGUN
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -9468,7 +9468,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transaction_GetSignaturesCount(PyObject *SWI
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -10292,7 +10292,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_Transactions_Length(PyObject *SWIGUNUSEDPARM
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -10635,7 +10635,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_SortableTransactions_Len(PyObject *SWIGUNUSE
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -16697,7 +16697,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_UxArray_Len(PyObject *SWIGUNUSEDPARM(self), 
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -17677,7 +17677,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_GetOutputLength(PyObject *SWIG
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg3)));
   } else {
     int new_flags = SWIG_IsNewObj(res3) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg3), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -17705,7 +17705,7 @@ SWIGINTERN PyObject *_wrap_SKY_coin_AddressUxOuts_Length(PyObject *SWIGUNUSEDPAR
     resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_From_int((*arg2)));
   } else {
     int new_flags = SWIG_IsNewObj(res2) ? (SWIG_POINTER_OWN |  0 ) :  0 ;
-    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_long_long, new_flags));
+    resultobj = SWIG_Python_AppendOutput(resultobj, SWIG_NewPointerObj((void*)(arg2), SWIGTYPE_p_int, new_flags));
   }
   return resultobj;
 fail:
@@ -30197,7 +30197,7 @@ static swig_type_info _swigt__p_a_32__unsigned_char = {"_p_a_32__unsigned_char",
 static swig_type_info _swigt__p_a_33__unsigned_char = {"_p_a_33__unsigned_char", "unsigned char (*)[33]|cipher__PubKey *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_4__unsigned_char = {"_p_a_4__unsigned_char", "cipher__Checksum *|unsigned char (*)[4]", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_a_65__unsigned_char = {"_p_a_65__unsigned_char", "unsigned char (*)[65]|cipher__Sig *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_a_sizeof_void_____64_8_1__1__char = {"_p_a_sizeof_void_____64_8_1__1__char", "char (*)[sizeof(void *)==64/8?1:-1]|_check_for_64_bit_pointer_matching_GoInt *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_a_sizeof_void_____32_8_1__1__char = {"_p_a_sizeof_void_____32_8_1__1__char", "char (*)[sizeof(void *)==32/8?1:-1]|_check_for_32_bit_pointer_matching_GoInt *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_api__NetworkConnectionsFilter = {"_p_api__NetworkConnectionsFilter", "api__NetworkConnectionsFilter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_api__RichlistParams = {"_p_api__RichlistParams", "api__RichlistParams *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
@@ -30230,8 +30230,8 @@ static swig_type_info _swigt__p_f_long_long_p_unsigned_long_long_p_void__unsigne
 static swig_type_info _swigt__p_float = {"_p_float", "float *|GoFloat32_ *|GoFloat32 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_httphelper__Address = {"_p_httphelper__Address", "httphelper__Address *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_httphelper__SHA256 = {"_p_httphelper__SHA256", "httphelper__SHA256 *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_int = {"_p_int", "int *|GoInt32 *|GoInt32_ *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_long_long = {"_p_long_long", "GoInt_ *|GoStringMap_ *|GoInt64 *|long long *|GoInt64_ *|GoInt *|SignedBlock__Handle *|CreateTransactionParams__Handle *|ReadableOutputSet_Handle *|CreateTransactionRequest__Handle *|BalanceResult_Handle *|Wallet__Handle *|Options__Handle *|PasswordReader__Handle *|CLI__Handle *|Config__Handle *|SortableTransactionResult_Handle *|Transactions__Handle *|Transaction__Handle *|AddressUxOuts_Handle *|WalletResponse__Handle *|Block__Handle *|BlockBody__Handle *|BlockHeader__Handle *|CreateTransactionResponse__Handle *|CreatedTransaction__Handle *|ReadableUnspentOutputsSummary_Handle *|SpendResult_Handle *|Strings__Handle *|Wallets__Handle *|Client__Handle *|ReadableWallet__Handle *|ReadableEntry__Handle *|TransactionResult_Handle *|StatusResult_Handle *|WebRpcClient__Handle *|CreatedTransactionInput__Handle *|CreatedTransactionOutput__Handle *|WalletReadableNotes_Handle *|OutputsResult_Handle *|BuildInfo_Handle *|Hash_Handle *|Number_Handle *|Signature_Handle *|UnspentOutputsSummary_Handle *|Handle *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_int = {"_p_int", "int *|GoInt32 *|GoInt *|GoInt_ *|GoInt32_ *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_long_long = {"_p_long_long", "GoStringMap_ *|GoInt64 *|long long *|GoInt64_ *|SignedBlock__Handle *|CreateTransactionParams__Handle *|WalletResponse__Handle *|BalanceResult_Handle *|Wallet__Handle *|Options__Handle *|PasswordReader__Handle *|CLI__Handle *|Config__Handle *|SortableTransactionResult_Handle *|Transactions__Handle *|Transaction__Handle *|AddressUxOuts_Handle *|Block__Handle *|BlockBody__Handle *|BlockHeader__Handle *|CreateTransactionResponse__Handle *|CreatedTransaction__Handle *|CreatedTransactionOutput__Handle *|CreatedTransactionInput__Handle *|ReadableOutputSet_Handle *|CreateTransactionRequest__Handle *|ReadableUnspentOutputsSummary_Handle *|SpendResult_Handle *|Strings__Handle *|Wallets__Handle *|Client__Handle *|ReadableWallet__Handle *|ReadableEntry__Handle *|TransactionResult_Handle *|StatusResult_Handle *|WebRpcClient__Handle *|WalletReadableNotes_Handle *|OutputsResult_Handle *|BuildInfo_Handle *|Hash_Handle *|Number_Handle *|Signature_Handle *|UnspentOutputsSummary_Handle *|Handle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_GoSlice_ = {"_p_p_GoSlice_", "coin__UxArray **|GoSlice_ **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_coin__Block = {"_p_p_coin__Block", "coin__Block **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_coin__BlockHeader = {"_p_p_coin__BlockHeader", "coin__BlockHeader **", 0, 0, (void*)0, 0};
@@ -30243,8 +30243,8 @@ static swig_type_info _swigt__p_short = {"_p_short", "GoInt16_ *|GoInt16 *|short
 static swig_type_info _swigt__p_signed_char = {"_p_signed_char", "signed char *|GoInt8 *|GoInt8_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uintptr_t = {"_p_uintptr_t", "uintptr_t *|GoUintptr_ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *|GoUint8 *|GoUint8_ *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "BOOL *|error *|GoUint32 *|unsigned int *|GoUint32_ *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "httphelper__Coins *|GoUint64 *|GoUint *|unsigned long long *|GoUint_ *|GoUint64_ *|httphelper__Hours *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "BOOL *|error *|GoUint32 *|unsigned int *|GoUint *|GoUint_ *|GoUint32_ *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "httphelper__Coins *|GoUint64 *|unsigned long long *|GoUint64_ *|httphelper__Hours *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "GoUint16_ *|GoUint16 *|unsigned short *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_void = {"_p_void", "void *|GoMap_", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_wallet__Balance = {"_p_wallet__Balance", "wallet__Balance *", 0, 0, (void*)0, 0};
@@ -30275,7 +30275,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_a_33__unsigned_char,
   &_swigt__p_a_4__unsigned_char,
   &_swigt__p_a_65__unsigned_char,
-  &_swigt__p_a_sizeof_void_____64_8_1__1__char,
+  &_swigt__p_a_sizeof_void_____32_8_1__1__char,
   &_swigt__p_api__NetworkConnectionsFilter,
   &_swigt__p_api__RichlistParams,
   &_swigt__p_char,
@@ -30353,7 +30353,7 @@ static swig_cast_info _swigc__p_a_32__unsigned_char[] = {  {&_swigt__p_a_32__uns
 static swig_cast_info _swigc__p_a_33__unsigned_char[] = {  {&_swigt__p_a_33__unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_a_4__unsigned_char[] = {  {&_swigt__p_a_4__unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_a_65__unsigned_char[] = {  {&_swigt__p_a_65__unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_a_sizeof_void_____64_8_1__1__char[] = {  {&_swigt__p_a_sizeof_void_____64_8_1__1__char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_a_sizeof_void_____32_8_1__1__char[] = {  {&_swigt__p_a_sizeof_void_____32_8_1__1__char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_api__NetworkConnectionsFilter[] = {  {&_swigt__p_api__NetworkConnectionsFilter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_api__RichlistParams[] = {  {&_swigt__p_api__RichlistParams, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -30431,7 +30431,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_a_33__unsigned_char,
   _swigc__p_a_4__unsigned_char,
   _swigc__p_a_65__unsigned_char,
-  _swigc__p_a_sizeof_void_____64_8_1__1__char,
+  _swigc__p_a_sizeof_void_____32_8_1__1__char,
   _swigc__p_api__NetworkConnectionsFilter,
   _swigc__p_api__RichlistParams,
   _swigc__p_char,
