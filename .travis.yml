@@ -35,31 +35,33 @@ matrix:
     - TOXENV=py37
     - PYTHON=3.7
   - os: osx
-    languague: generic
+    language: go
     env:
-    - PYTHON=2.7
+    - PYTHON=2.7.16
     - TOXENV=py27
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.4.8
     - TOXENV=py34
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.5.5
     - TOXENV=py35
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.6.5
     - TOXENV=py36
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.7.1
     - TOXENV=py37
+
 before_install:
+- python --version
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -76,8 +78,9 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
 - echo "PATH=$PATH"
+
 install:
-- eval "$(gimme 1.10)"
+- eval "$(gimme 1.11)"
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
