@@ -123,6 +123,9 @@ clean: #Clean all
 	rm -rfv skycoin/__pycache__
 	rm -rfv skycoin/*.pyc
 	rm -rfv tests/*.pyc
+	rm -rfv tests/utils/*.pyc
+	rm -rfv tests/utils/__pycache__
+	rm -rfv *.so
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
