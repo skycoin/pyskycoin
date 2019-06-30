@@ -233,4 +233,9 @@ RUN pip install --upgrade $PIP_PACKAGES \
 
 WORKDIR $GOPATH/src/github.com/skycoin
 
+COPY ./skyapi/requirements.txt .
+
+RUN pip install -r requirements.txt \
+    && pip3 install -r requirements.txt
+
 VOLUME $GOPATH/src/

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## PySkycoin 0.25.1 - 2019/03/14
+
+### Added
+
+- Add `skyapi`, a wrapper for Skycoin api in version 0.25.1
+
+### Fixed 
+
+- Fix #86 - Python API wrapper for the Skycoin node API
+
 ## PySkycoin 0.25.0 - 2019/01/01
 
 ### Added
