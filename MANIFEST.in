@@ -35,4 +35,6 @@ prune .travis
 prune .pytest_cache 
 prune .circleci
 global-exclude Dockerfile
+global-exclude Dockerfile-armv7
+global-exclude pyskycoin_wrap.c
 
