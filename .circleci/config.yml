@@ -55,6 +55,7 @@ workflows:
     jobs:
       - manylinux64
       - manylinux32
+      - manylinuxarmv7
       - publish-github-release_32
 
 # # Install PyPA Docker images for building multilinux wheels
