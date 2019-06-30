@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-debian-python
+FROM balenalib/armv7hf-debian-python
 
 ENV REPO_ROOT=$GOPATH/src/github.com/skycoin/pyskycoin/
 ADD . ${REPO_ROOT}
