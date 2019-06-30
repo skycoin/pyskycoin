@@ -34,7 +34,7 @@ jobs:
       - setup_remote_docker:
           version: 18.06.0-ce
       - run: docker build  --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
-      - run: docker build  --build-arg IMAGE=armv7/armhf-debian --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/test/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
+      - run: docker build  --build-arg --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/test/Dockerfile-armv7  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
 
 
   publish-github-release_32:
