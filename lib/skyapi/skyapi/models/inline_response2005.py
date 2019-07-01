@@ -32,8 +32,8 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'entries': 'list[Apiv1walletsEntries]',
-        'meta': 'Apiv1walletsMeta'
+        'entries': 'list[ApiV1WalletsEntries]',
+        'meta': 'ApiV1WalletsMeta'
     }
 
     attribute_map = {
@@ -59,7 +59,7 @@ class InlineResponse2005(object):
 
 
         :return: The entries of this InlineResponse2005.  # noqa: E501
-        :rtype: list[Apiv1walletsEntries]
+        :rtype: list[ApiV1WalletsEntries]
         """
         return self._entries
 
@@ -69,7 +69,7 @@ class InlineResponse2005(object):
 
 
         :param entries: The entries of this InlineResponse2005.  # noqa: E501
-        :type: list[Apiv1walletsEntries]
+        :type: list[ApiV1WalletsEntries]
         """
 
         self._entries = entries
@@ -80,7 +80,7 @@ class InlineResponse2005(object):
 
 
         :return: The meta of this InlineResponse2005.  # noqa: E501
-        :rtype: Apiv1walletsMeta
+        :rtype: ApiV1WalletsMeta
         """
         return self._meta
 
@@ -90,7 +90,7 @@ class InlineResponse2005(object):
 
 
         :param meta: The meta of this InlineResponse2005.  # noqa: E501
-        :type: Apiv1walletsMeta
+        :type: ApiV1WalletsMeta
         """
 
         self._meta = meta

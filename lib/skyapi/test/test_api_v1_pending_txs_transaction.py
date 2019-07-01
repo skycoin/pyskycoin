@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import skyapi
-from skyapi.models.apiv1pending_txs_transaction import Apiv1pendingTxsTransaction  # noqa: E501
+from skyapi.models.api_v1_pending_txs_transaction import ApiV1PendingTxsTransaction  # noqa: E501
 from skyapi.rest import ApiException
 
 
-class TestApiv1pendingTxsTransaction(unittest.TestCase):
-    """Apiv1pendingTxsTransaction unit test stubs"""
+class TestApiV1PendingTxsTransaction(unittest.TestCase):
+    """ApiV1PendingTxsTransaction unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestApiv1pendingTxsTransaction(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApiv1pendingTxsTransaction(self):
-        """Test Apiv1pendingTxsTransaction"""
+    def testApiV1PendingTxsTransaction(self):
+        """Test ApiV1PendingTxsTransaction"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = skyapi.models.apiv1pending_txs_transaction.Apiv1pendingTxsTransaction()  # noqa: E501
+        # model = skyapi.models.api_v1_pending_txs_transaction.ApiV1PendingTxsTransaction()  # noqa: E501
         pass
 
 
