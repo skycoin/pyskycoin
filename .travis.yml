@@ -135,12 +135,11 @@ jobs:
           condition: $TRAVIS_OS_NAME = "osx"
     - stage: skyapi
       before_deploy:
+      - cd lib/skyapi/
       - echo "Generating distribution archives before deploy"
       - make sdist
       - make bdist_wheel
-      - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
       - ls dist
-      - cd lib/skyapi/
       deploy:
       - provider: pypi
         distributions: sdist bdist_wheel
