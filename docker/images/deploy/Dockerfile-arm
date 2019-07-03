@@ -1,6 +1,7 @@
 
 FROM balenalib/armv7hf-debian-python
 
+RUN [ "cross-build-start" ]
 RUN mkdir -p /io
 
 ADD . /io
@@ -274,5 +275,7 @@ RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN pip install twine
 RUN twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+
+RUN [ "cross-build-end" ]
 
 WORKDIR /io
