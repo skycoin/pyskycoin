@@ -216,9 +216,9 @@ RUN set -ex \
 
 # Python 2.7
 RUN pip install --upgrade  setuptools tox-travis  \
-  && pip install "/io/requirements.dev.txt" \
-  && pip install "/io/lib/skyapi/requirements.txt" \
-  && pip install "/io/lib/skyapi/test-requirements.txt" 
+  && pip install -r "/io/requirements.dev.txt" \
+  && pip install -r "/io/lib/skyapi/requirements.txt" \
+  && pip install -r "/io/lib/skyapi/test-requirements.txt" 
 
 # # Python 3.4
 # RUN python3.4 -m pip install --upgrade  setuptools tox-travis auditwheel \
@@ -228,9 +228,9 @@ RUN pip install --upgrade  setuptools tox-travis  \
 
 # Python 3.5
 RUN pip3 install --upgrade  setuptools tox-travis  \
-  && pip3 install "/io/requirements.dev.txt" \
-  && pip3 install "/io/lib/skyapi/requirements.txt" \
-  && pip3 install "/io/lib/skyapi/test-requirements.txt" 
+  && pip3 install -r "/io/requirements.dev.txt" \
+  && pip3 install -r "/io/lib/skyapi/requirements.txt" \
+  && pip3 install -r "/io/lib/skyapi/test-requirements.txt" 
 
 # # Python 3.6
 # RUN python3.6 -m pip install --upgrade  setuptools tox-travis auditwheel \
