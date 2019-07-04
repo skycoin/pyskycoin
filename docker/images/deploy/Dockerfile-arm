@@ -25,7 +25,9 @@ RUN set -ex \
   netbase \
   wget \
   python-pip \
-  python3-pip
+  python3-pip \
+  python-setuptools \
+  python3-setuptools 
 
 # # Install Python 3.7
 # # runtime dependencies
