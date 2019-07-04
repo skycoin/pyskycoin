@@ -1,5 +1,5 @@
 
-FROM balenalib/armv7hf-ubuntu-golang
+FROM balenalib/armv7hf-debian-golang
 
 RUN [ "cross-build-start" ]
 RUN mkdir -p /io
