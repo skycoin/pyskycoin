@@ -25,7 +25,7 @@ jobs:
       - run: docker build  --build-arg IMAGE=i386/debian --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/test/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
   
   manylinuxarmv7:
-    machine:
+    docker:
       - image: docker:18.06.0-ce-git
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
