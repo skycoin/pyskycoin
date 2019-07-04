@@ -23,6 +23,7 @@ RUN set -ex \
   netbase \
   wget \
   curl \
+  libpcre3-dev \
   python-pip \
   python3-pip \
   python-setuptools \
