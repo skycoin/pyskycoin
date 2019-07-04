@@ -36,7 +36,6 @@ jobs:
       - run: docker build  --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile-arm  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
       - run: docker build  --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/test/Dockerfile-armv7  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
 
-
   publish-github-release_32:
     docker:
       - image: docker:18.06.0-ce-git
