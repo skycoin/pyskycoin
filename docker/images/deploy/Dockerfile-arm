@@ -27,7 +27,9 @@ RUN set -ex \
   python-pip \
   python3-pip \
   python-setuptools \
-  python3-setuptools 
+  python3-setuptools \
+  python3-venv \
+  python-venv
 
 # # Install Python 3.7
 # # runtime dependencies
