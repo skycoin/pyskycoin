@@ -217,7 +217,7 @@ RUN set -ex \
 # Install packages in PIP_PACKAGES
 
 # Python 2.7
-RUN pip install --upgrade  setuptools tox-travis  \
+RUN pip install --upgrade  setuptools tox-travis wheel \
   && pip install -r "/io/requirements.dev.txt" \
   && pip install -r "/io/lib/skyapi/requirements.txt" \
   && pip install -r "/io/lib/skyapi/test-requirements.txt" 
@@ -229,7 +229,7 @@ RUN pip install --upgrade  setuptools tox-travis  \
 #   && python3.4 -m pip install "/io/lib/skyapi/test-requirements.txt" 
 
 # Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis  \
+RUN pip3 install --upgrade  setuptools tox-travis wheel  \
   && pip3 install -r "/io/requirements.dev.txt" \
   && pip3 install -r "/io/lib/skyapi/requirements.txt" \
   && pip3 install -r "/io/lib/skyapi/test-requirements.txt" 
