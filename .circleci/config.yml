@@ -52,17 +52,7 @@ workflows:
   version: 2
   arm_test:
     jobs:
-      # - manylinux64
-      # - manylinux32
+      - manylinux64
+      - manylinux32
       - manylinuxarmv7
       # - publish-github-release_32
-
-# # Install PyPA Docker images for building multilinux wheels
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_i686 ; fi
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install twine ; fi
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --skip-existing --repository-url https://test.pypi.org/legacy/ dist/* ; fi
-
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m pip install --index-url https://test.pypi.org/simple/ pyskycoin ; fi
-# - if [ $TRAVIS_OS_NAME == "linux" ]; then python -m tox ; fi
-# - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then docker build  . -t skydev-test ; fi
