@@ -25,6 +25,33 @@ SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
 SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
 HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
 
+.DEFAULT_GOAL := help
+.PHONY: configure build-libc build-swig develop build-libc-swig build
+.PHONY: test test-ci help
+
+# Compilation output
+.ONESHELL:
+SHELL := /bin/bash
+
+PYTHON = python
+PWD = $(shell pwd)
+GOPATH_DIR = $(PWD)/gopath
+SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
+SKYBUILD_DIR = $(SKYCOIN_DIR)/build
+BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
+LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
+LIBSWIG_DIR = swig
+BUILD_DIR = build
+DIST_DIR = dist
+BIN_DIR = $(SKYCOIN_DIR)/bin
+INCLUDE_DIR = $(SKYCOIN_DIR)/include
+FULL_PATH_LIB = $(PWD)/$(BUILDLIBC_DIR)
+
+LIB_FILES = $(shell find $(SKYCOIN_DIR)/lib/cgo -type f -name "*.go")
+SRC_FILES = $(shell find $(SKYCOIN_DIR)/src -type f -name "*.go")
+SWIG_FILES = $(shell find $(LIBSWIG_DIR) -type f -name "*.i")
+HEADER_FILES = $(shell find $(SKYCOIN_DIR)/include -type f -name "*.h")
+
 PYTHON_CLIENT_DIR = lib/skyapi
 
 ifeq ($(shell uname -s),Linux)
@@ -78,7 +105,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: ## Run tests on (Travis) CI build
 	tox
-	(cd $(PYTHON_CLIENT_DIR) && tox)
+	(cd lib/skyhwd && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON) setup.py test

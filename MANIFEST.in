@@ -26,9 +26,12 @@ recursive-exclude . *.orig
 exclude .github
 exclude .travis
 exclude lib/skyapi
+exclude lib/skyhwd
 exclude .pytest_cache 
+exclude lib/skywallet-deamon.yml
 recursive-exclude .github *
 recursive-exclude .travis *
 recursive-exclude lib/skyapi *
+recursive-exclude lib/skyhwd *
 recursive-exclude .pytest_cache *
 
