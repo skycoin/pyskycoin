@@ -1,30 +1,39 @@
 # general things to ignore
+lib/swig/build/
 build/
+lib/swig/dist/
 dist/
 *.egg-info/
 *.egg
 *.eggs
 *.py[cod]
+lib/swig/__pycache__/
 __pycache__/
+lib/swig/.pytest_cache
 .pytest_cache
 *.so
 *.o
 *.orig
+lib/swig/Pyskycoin-*
 Pyskycoin-*
+lib/swig/eggs
 eggs
+lib/swig/wheelhouse/
 wheelhouse/
-
+*fuse*
 *~
 
 #Copy of libskycoin.h in pyskycoin
-swig/include/libskycoin.h
+lib/swig/swig/include/libskycoin.h
 
 #Just for testing outside tox
-tests/mytest.py
+lib/swig/tests/mytest.py
 
 # due to using tox and pytest
 .tox
+lib/swig/.tox
 .cache
+lib/swig/.cache
 
 # Temp files
 *.swp

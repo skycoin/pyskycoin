@@ -13,7 +13,8 @@ SKYCOIN_DIR = gopath/src/github.com/skycoin/skycoin
 SKYBUILD_DIR = $(SKYCOIN_DIR)/build
 BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
 LIBC_DIR = $(SKYCOIN_DIR)/lib/cgo
-LIBSWIG_DIR = swig
+LIBSWIG_DIR = lib/swig/swig
+LIBSWIG_PYSKYCOIN = lib/swig
 BUILD_DIR = build
 DIST_DIR = dist
 BIN_DIR = $(SKYCOIN_DIR)/bin
@@ -42,9 +43,9 @@ $(BUILDLIBC_DIR)/libskycoin.a: $(LIB_FILES) $(SRC_FILES) $(HEADER_FILES)
 	rm -f $(BUILDLIBC_DIR)/libskycoin.a
 	GOPATH="$(GOPATH_DIR)" make -C $(SKYCOIN_DIR) build-libc-static
 	ls $(BUILDLIBC_DIR)
-	rm -f swig/include/libskycoin.h
-	mkdir -p swig/include
-	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > swig/include/libskycoin.h
+	rm -f $(LIBSWIG_PYSKYCOIN)/swig/include/libskycoin.h
+	mkdir -p $(LIBSWIG_PYSKYCOIN)/swig/include
+	grep -v _Complex $(INCLUDE_DIR)/libskycoin.h > $(LIBSWIG_PYSKYCOIN)/swig/include/libskycoin.h
 
 build-libc: configure $(BUILDLIBC_DIR)/libskycoin.a ## Build libskycoin C client library
 
@@ -60,36 +61,37 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -f ./skycoin/skycoin.py
-	rm -f swig/pyskycoin_wrap.c
-	rm -f swig/include/swig.h
-	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h swig/include/
-	swig -python -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
+	rm -f $(LIBSWIG_PYSKYCOIN)/skycoin/skycoin.py
+	rm -f $(LIBSWIG_PYSKYCOIN)/swig/pyskycoin_wrap.c
+	rm -f $(LIBSWIG_PYSKYCOIN)/swig/include/swig.h
+	cp -v gopath/src/github.com/skycoin/skycoin/include/swig.h $(LIBSWIG_PYSKYCOIN)/swig/include/
+	swig -python -Ilib/swig/swig/include -I$(shell pwd)/gopath/src/github.com/skycoin/skycoin/include -outdir $(LIBSWIG_PYSKYCOIN)/skycoin/ -o $(LIBSWIG_PYSKYCOIN)/swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
-	$(PYTHON) setup.py develop
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py develop)
+	$(PYTHON) $(PYTHON_CLIENT_DIR)/setup.py develop \
+	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py develop)
 
 build-libc-swig: build-libc build-swig
 
 build: build-libc-swig ## Build PySkycoin Python package
-	$(PYTHON) setup.py build
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py build
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py build)
 
 test-ci: ## Run tests on (Travis) CI build
-	tox
+	(cd $(PYTHON_CLIENT_DIR) && tox)
 	(cd $(PYTHON_CLIENT_DIR) && tox)
 
+
 test: build-libc build-swig develop ## Run project test suite
-	$(PYTHON) setup.py test
-	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py test)
+	$(PYTHON) $(PYTHON_CLIENT_DIR)/setup.py test \
+	(cd $(LIBSWIG_PYSKYCOIN) && $(PYTHON) setup.py test)
 
 sdist: ## Create source distribution archive
-	$(PYTHON) setup.py sdist --formats=gztar
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py sdist --formats=gztar \
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py sdist --formats=gztar)
 
 bdist_wheel: ## Create architecture-specific binary wheel distribution archive
-	$(PYTHON) setup.py bdist_wheel
+	$(PYTHON) $(LIBSWIG_PYSKYCOIN)/setup.py bdist_wheel \
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON) setup.py bdist_wheel)
 
 # FIXME: After libskycoin 32-bits binaries add bdist_manylinux_i686
