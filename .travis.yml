@@ -82,6 +82,7 @@ before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
 #Deploy to Pypi
+- cd ${TRAVIS_BUILD_DIR}
 - ./.travis/deploy-with-twine.sh
 # Test PySkycoin
 - make test-ci
