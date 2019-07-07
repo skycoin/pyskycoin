@@ -66,7 +66,6 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
   export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
   fi
-- ./.travis/install-twine.sh
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
