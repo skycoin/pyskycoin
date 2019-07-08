@@ -119,6 +119,8 @@ clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
 	python -m pip uninstall pyskycoin
 	python3 -m pip uninstall pyskycoin
+	python -m pip uninstall skyapi
+	python3 -m pip uninstall skyapi
 	rm -rfv tests/__pycache__
 	rm -rfv skycoin/__pycache__
 	rm -rfv skycoin/*.pyc
@@ -126,6 +128,7 @@ clean: #Clean all
 	rm -rfv tests/utils/*.pyc
 	rm -rfv tests/utils/__pycache__
 	rm -rfv *.so
+	rm -rfv qemu_python_*
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
