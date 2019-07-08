@@ -33,4 +33,5 @@ prune .github
 prune .tox
 prune .travis
 prune .pytest_cache 
+prune lib/skyapi
 
