@@ -20,3 +20,8 @@ case $TRAVIS_BRANCH in
 	*)
 		echo "Not a release branch";;
 esac
+
+# #Upload to PyPi
+# echo "Upload to PyPi"
+# twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --repository-url https://upload.pypi.org/legacy/ dist/*
+# twine upload -u $PYPITEST_USER -p $PYPITEST_PWD --repository-url https://upload.pypi.org/legacy/ lib/skyapi/dist/*
