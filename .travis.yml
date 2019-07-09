@@ -6,24 +6,28 @@ matrix:
     env:
     - TOXENV=py27
     - PYTHON=2.7
+    - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.4
     env:
     - TOXENV=py34
     - PYTHON=3.4
+    - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.5
     env:
     - TOXENV=py35
     - PYTHON=3.5
+    - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.6
     env:
     - TOXENV=py36
     - PYTHON=3.6
+    - ONLY_SKYAPI=false
   - os: linux
     language: python
     dist: xenial
@@ -34,31 +38,107 @@ matrix:
     env:
     - TOXENV=py37
     - PYTHON=3.7
+    - ONLY_SKYAPI=false
   - os: osx
     languague: generic
     env:
     - PYTHON=2.7.16
     - TOXENV=py27
+    - ONLY_SKYAPI=false
   - os: osx
     languague: generic
     env:
     - PYTHON=3.4.8
     - TOXENV=py34
+    - ONLY_SKYAPI=false
   - os: osx
     languague: generic
     env:
     - PYTHON=3.5.5
     - TOXENV=py35
+    - ONLY_SKYAPI=false
   - os: osx
     languague: generic
     env:
     - PYTHON=3.6.5
     - TOXENV=py36
+    - ONLY_SKYAPI=false
   - os: osx
     languague: generic
     env:
     - PYTHON=3.7.1
     - TOXENV=py37
+    - ONLY_SKYAPI=false
+  - os: linux
+    language: python
+    python: 2.7
+    env:
+    - TOXENV=py27
+    - PYTHON=2.7
+    - ONLY_SKYAPI=true
+  - os: linux
+    language: python
+    python: 3.4
+    env:
+    - TOXENV=py34
+    - PYTHON=3.4
+    - ONLY_SKYAPI=true
+  - os: linux
+    language: python
+    python: 3.5
+    env:
+    - TOXENV=py35
+    - PYTHON=3.5
+    - ONLY_SKYAPI=true
+  - os: linux
+    language: python
+    python: 3.6
+    env:
+    - TOXENV=py36
+    - PYTHON=3.6
+    - ONLY_SKYAPI=true
+  - os: linux
+    language: python
+    dist: xenial
+    python: 3.7
+    sudo: true
+    services:
+      - docker
+    env:
+    - TOXENV=py37
+    - PYTHON=3.7
+    - ONLY_SKYAPI=true
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=2.7.16
+    - TOXENV=py27
+    - ONLY_SKYAPI=true
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.4.8
+    - TOXENV=py34
+    - ONLY_SKYAPI=true
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.5.5
+    - TOXENV=py35
+    - ONLY_SKYAPI=true
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.6.5
+    - TOXENV=py36
+    - ONLY_SKYAPI=true
+  - os: osx
+    languague: generic
+    env:
+    - PYTHON=3.7.1
+    - TOXENV=py37
+    - ONLY_SKYAPI=true
+
 before_install:
 - cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
@@ -81,10 +161,8 @@ install:
 before_script:
   # Install PyPA Docker images for building multilinux wheels
 script:
-#Deploy to Pypi
-- cd ${TRAVIS_BUILD_DIR}
-- ./.travis/deploy.sh
 # Test PySkycoin
+- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
 - make test-ci
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
