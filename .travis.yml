@@ -1,3 +1,9 @@
+services:
+  - docker
+env:
+  global:
+    - CGO_ENABLED: 1
+
 matrix:
   include:
   - os: linux
@@ -140,7 +146,6 @@ matrix:
     - ONLY_SKYAPI=true
 
 before_install:
-- cd gopath/src/github.com/skycoin/skycoin && git checkout v0.25.0 && cd ${TRAVIS_BUILD_DIR}
 - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
 - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
@@ -159,9 +164,15 @@ before_install:
 install:
 - eval "$(gimme 1.10)"
 before_script:
-  # Install PyPA Docker images for building multilinux wheels
+# Removing the symbolic link and copying the real one 
+- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/golang.org
+- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/gopkg.in
+- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/golang.org gopath/src/github.com/skycoin/libskycoin/vendor/
+- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/gopkg.in gopath/src/github.com/skycoin/libskycoin/vendor/
+
 script:
 # Test PySkycoin
+  - make build-libc-swig
 - if [[ "$ONLY_SKYAPI" == "false" ]]; then make test-ci ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
