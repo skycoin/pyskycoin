@@ -1,67 +1,70 @@
 matrix:
   include:
-    - os: linux
-      language: python
-      python: 2.7
-      env:
-        - TOXENV=py27
-        - PYTHON=2.7
-    - os: linux
-      language: python
-      python: 3.4
-      env:
-        - TOXENV=py34
-        - PYTHON=3.4
-    - os: linux
-      language: python
-      python: 3.5
-      env:
-        - TOXENV=py35
-        - PYTHON=3.5
-    - os: linux
-      language: python
-      python: 3.6
-      env:
-        - TOXENV=py36
-        - PYTHON=3.6
-    - os: linux
-      language: python
-      dist: xenial
-      python: 3.7
-      sudo: true
-      services:
-        - docker
-      env:
-        - TOXENV=py37
-        - PYTHON=3.7
-    - os: osx
-      language: go
-      env:
-        - PYTHON=2.7.16
-        - TOXENV=py27
-    - os: osx
-      language: go
-      env:
-        - PYTHON=3.4.8
-        - TOXENV=py34
-    - os: osx
-      language: go
-      env:
-        - PYTHON=3.5.5
-        - TOXENV=py35
-    - os: osx
-      language: go
-      env:
-        - PYTHON=3.6.5
-        - TOXENV=py36
-    - os: osx
-      language: go
-      env:
-        - PYTHON=3.7.1
-        - TOXENV=py37
+  - os: linux
+    language: python
+    python: 2.7
+    env:
+      - TOXENV=py27
+      - PYTHON=2.7
+  - os: linux
+    language: python
+    python: 3.4
+    env:
+      - TOXENV=py34
+      - PYTHON=3.4
+  - os: linux
+    language: python
+    python: 3.5
+    env:
+      - TOXENV=py35
+      - PYTHON=3.5
+  - os: linux
+    language: python
+    python: 3.6
+    env:
+      - TOXENV=py36
+      - PYTHON=3.6
+  - os: linux
+    language: python
+    dist: xenial
+    python: 3.7
+    sudo: true
+    services:
+      - docker
+    env:
+      - TOXENV=py37
+      - PYTHON=3.7
+  - os: osx
+    language: go
+    env:
+      - PYTHON=2.7.16
+      - TOXENV=py27
+  - os: osx
+    language: go
+    env:
+      - PYTHON=3.4.8
+      - TOXENV=py34
+  - os: osx
+    language: go
+    env:
+      - PYTHON=3.5.5
+      - TOXENV=py35
+  - os: osx
+    language: go
+    env:
+      - PYTHON=3.6.5
+      - TOXENV=py36
+  - os: osx
+    language: go
+    env:
+      - PYTHON=3.7.1
+      - TOXENV=py37
+
+env:
+  global:
+    - CGO_ENABLED: 1
 
 before_install:
-  - python --version
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
@@ -76,15 +79,10 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
+  - echo "PATH=$PATH"
 
 install:
-  - eval "$(gimme 1.11)"
-before_script:
-  # Removing the symbolic link and copying the real one 
-- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/golang.org
-- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/gopkg.in
-- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/golang.org gopath/src/github.com/skycoin/libskycoin/vendor/
-- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/gopkg.in gopath/src/github.com/skycoin/libskycoin/vendor/
+  - eval "$(gimme 1.11)"  
 script:
 # Test PySkycoin
   - make test-ci
@@ -97,7 +95,7 @@ before_deploy:
   - echo "Generating distribution archives before deploy"
   - make sdist
   - make bdist_wheel
-  - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
   - ls dist
 deploy:
   - provider: releases
@@ -135,4 +133,3 @@ deploy:
       tags: true
       repo: skycoin/pyskycoin
       condition: $TRAVIS_OS_NAME = "osx"
-  # TODO: Upload manylinux wheels to PyPI
