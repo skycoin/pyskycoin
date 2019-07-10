@@ -15,8 +15,7 @@ brew install gimme;
 
 # Install Python
 pyenv install ${PYTHON}
-pyenv install 2.7.14
-pyenv global ${PYTHON} 2.7.14
+pyenv global ${PYTHON}
 
 # Prepare and initialize pyenv environment
 eval "$(pyenv init -)";
@@ -30,4 +29,3 @@ export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH} )"
 export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"
 
 eval "python${PYCMD_VERSION} -m pip install --upgrade pip setuptools wheel tox tox-pyenv pytest pytest-runner"
-

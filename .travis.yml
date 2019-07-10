@@ -46,31 +46,31 @@ matrix:
     - PYTHON=3.7
     - ONLY_SKYAPI=false
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=2.7.16
     - TOXENV=py27
     - ONLY_SKYAPI=false
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.4.8
     - TOXENV=py34
     - ONLY_SKYAPI=false
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.5.5
     - TOXENV=py35
     - ONLY_SKYAPI=false
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.6.5
     - TOXENV=py36
     - ONLY_SKYAPI=false
   - os: osx
-    languague: generic
+    language: go
     env:
     - PYTHON=3.7.1
     - TOXENV=py37
@@ -146,46 +146,39 @@ matrix:
     - ONLY_SKYAPI=true
 
 before_install:
-- if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
-  export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
-  fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
-  eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
-  fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
-- if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
-- echo "PATH=$PATH"
-install:
-- eval "$(gimme 1.10)"
-before_script:
-# Removing the symbolic link and copying the real one 
-- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/golang.org
-- rm -rf gopath/src/github.com/skycoin/libskycoin/vendor/gopkg.in
-- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/golang.org gopath/src/github.com/skycoin/libskycoin/vendor/
-- cp -rf gopath/src/github.com/skycoin/libskycoin/vendor/github.com/skycoin/skycoin/vendor/gopkg.in gopath/src/github.com/skycoin/libskycoin/vendor/
+  - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+    export PYCMD_VERSION="$(echo ${PYTHON} | cut -d . -f 1,2)" ;
+    fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_PATH="$(pyenv which python${PYCMD_VERSION})"; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PYCMD_DIRPATH="$( dirname ${PYCMD_PATH})" ; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then export PATH="${PYCMD_DIRPATH}:/Users/travis/.pyenv/shims:${PATH}"; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
+    eval "alias python${PYCMD_VERSION}=$(pyenv which python${PYCMD_VERSION})" && eval "alias python2.7=$(pyenv which python2.7)";
+    fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv versions ; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then pyenv which python${PYCMD_VERSION} ; fi
+  - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then eval "python${PYCMD_VERSION} --version"; fi
+  - echo "PATH=$PATH"
 
+install:
+  - eval "$(gimme 1.11)"  
 script:
 # Test PySkycoin
-- make build-libc-swig
 - if [[ "$ONLY_SKYAPI" == "false" ]]; then make test-ci ; fi
 after_failure:
-- cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
+  - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
 before_deploy:
-- echo "Generating distribution archives before deploy"
-- make sdist
-- make bdist_wheel
-- if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
-- if [[ "$ONLY_SKYAPI" == "true" ]]; then cd lib/skyapi ; fi
-- ls dist
+  - echo "Generating distribution archives before deploy"
+  - make sdist
+  - make bdist_wheel
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
+  - if [[ "$ONLY_SKYAPI" == "true" ]]; then cd lib/skyapi ; fi
+  - ls dist
 deploy:
 - provider: releases
   api_key:

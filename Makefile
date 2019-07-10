@@ -63,8 +63,9 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -fv ./skycoin/skycoin.py
-	rm -fv swig/pyskycoin_wrap.c
+	rm -f ./skycoin/skycoin.py
+	rm -f swig/pyskycoin_wrap.c
+	rm -f swig/include/swig.h
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
@@ -79,7 +80,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	# (cd $(PYTHON_CLIENT_DIR) && tox)
+	(cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
