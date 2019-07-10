@@ -172,7 +172,7 @@ before_script:
 
 script:
 # Test PySkycoin
-  - make build-libc-swig
+- make build-libc-swig
 - if [[ "$ONLY_SKYAPI" == "false" ]]; then make test-ci ; fi
 after_failure:
 - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
@@ -233,9 +233,6 @@ deploy:
   password:
     secure: Lek+1bI8jaYADO5b4oLTirI3xqdYktV/ihyGCraK+Glp/U6FwwlF3ttRpvdT9/YyVRgWEt/jePQxH+COW3WbKh54MZWCMlMKmWc4JTs6zHliAWXecAQSvPDWHjzO0F1iz839MRBfQdBUMh1g7BFi4nC886DS7ts7+p2XXGsWwtI+quOwvZ6bS0M6nMTecG8OtpYCkOAoGZI6JEoDXyIygPR5+TIWXO2QFt7KT+fsircOvDHzdA2YY/oexwUWwLLf7J0qnRm2AEx0dDjpFTCaOr6+VxdjD7F8qDoXePzVEvW7AG6k0Emx3Vuj9JiTgga8qX3ExHSXoomNhiJoOM30UbH00mdT5Fz+6HqYqFieijX/Li2fExqXXp6Za4VHMrwImrXoYQw4350F8b6QzF7E4WouBBysBZIkBEswp69783uU1lGcbU0wnyj8SN6rYIPO03MG1e5HO+Dd9avMtCMdGj3qsNlmfK0v3fAGjrYsStMQtrfOUZGTahrHPh7P3VPB4qmsJ7eNo+lFtLN0I2+ehoqMd3UH+qggdFdLQFGVMe0SWCUV9Aoyxo9vVqbnPzclsmWL44M6YRDIgOtochNiDINbdx/EA/L517GrpSDjZwvhrJkoCE7Wr9m5YcC+x8qQXCpQ4dcYAJ4C+okASAIwtjOai5dQB7TfHJfN5XzSLUI=
   on:
-    # branches:
-    #   only:
-    #   - /^release-.*$/
     all_branches: true
     tags: true
     repo: skycoin/pyskycoin
@@ -249,11 +246,11 @@ deploy:
   password:
     secure: Lek+1bI8jaYADO5b4oLTirI3xqdYktV/ihyGCraK+Glp/U6FwwlF3ttRpvdT9/YyVRgWEt/jePQxH+COW3WbKh54MZWCMlMKmWc4JTs6zHliAWXecAQSvPDWHjzO0F1iz839MRBfQdBUMh1g7BFi4nC886DS7ts7+p2XXGsWwtI+quOwvZ6bS0M6nMTecG8OtpYCkOAoGZI6JEoDXyIygPR5+TIWXO2QFt7KT+fsircOvDHzdA2YY/oexwUWwLLf7J0qnRm2AEx0dDjpFTCaOr6+VxdjD7F8qDoXePzVEvW7AG6k0Emx3Vuj9JiTgga8qX3ExHSXoomNhiJoOM30UbH00mdT5Fz+6HqYqFieijX/Li2fExqXXp6Za4VHMrwImrXoYQw4350F8b6QzF7E4WouBBysBZIkBEswp69783uU1lGcbU0wnyj8SN6rYIPO03MG1e5HO+Dd9avMtCMdGj3qsNlmfK0v3fAGjrYsStMQtrfOUZGTahrHPh7P3VPB4qmsJ7eNo+lFtLN0I2+ehoqMd3UH+qggdFdLQFGVMe0SWCUV9Aoyxo9vVqbnPzclsmWL44M6YRDIgOtochNiDINbdx/EA/L517GrpSDjZwvhrJkoCE7Wr9m5YcC+x8qQXCpQ4dcYAJ4C+okASAIwtjOai5dQB7TfHJfN5XzSLUI=
   on:
-    # branches:
-    #   only:
-    #   - /^release-.*$/
     all_branches: true
     tags: true
     repo: skycoin/pyskycoin
     condition: $TRAVIS_OS_NAME = "osx" && $ONLY_SKYAPI = "true"
+# branches:
+    #   only:
+    #   - /^release-.*$/
 # TODO: Upload manylinux wheels to PyPI
