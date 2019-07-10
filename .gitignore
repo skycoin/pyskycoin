@@ -37,5 +37,8 @@ tests/mytest.py
 # SWIG
 *.kbk
 
+skycoin/skycoin.py
+swig/pyskycoin_wrap.c
+
 #VENV
 venv
