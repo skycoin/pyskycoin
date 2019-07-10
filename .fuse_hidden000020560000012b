@@ -24,10 +24,7 @@ A Python extension generated with SWIG to access Skycoin API from Python.
   - [Releases](#releases)
     - [Update the version](#update-the-version)
     - [Pre-release testing](#pre-release-testing)
-    - [Release signing](#release-signing)
-    - [Alternative signing keys](#alternative-signing-keys)
     - [Creating release builds](#creating-release-builds)
-    - [Creating release builds to manylinux](#creating-release-builds-to-manylinux)
  - [Python wrapper for Skycoin Api](#python-wrapper-for-skycoin-api)
 <!-- /MarkdownTOC -->
 
@@ -126,7 +123,7 @@ This is how it is used in Python:
 ```python
 #Generates random seed
 err, data = skycoin.SKY_cipher_RandByte(32)
-assert err == skycoin.SKY_OK
+assert err == error["SKY_OK"]
 pubkey = skycoin.cipher_PubKey()
 seckey = skycoin.cipher_SecKey()
 err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(data, pubkey, seckey)
@@ -162,7 +159,7 @@ for seckey in seckeys:
 	pubkey = skycoin.cipher_PubKey()
 	skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
 	err = skycoin.SKY_cipher_PubKey_Verify(pubkey)
-	assert err == skycoin.SKY_OK
+	assert err == error["SKY_OK"]
 ```
 
 ### Memory Management
@@ -245,42 +242,6 @@ make check
 make integration-test
 ```
 
-#### Release signing
-
-Releases are signed with this PGP key:
-
-`0x5801631BD27C7874`
-
-The fingerprint for this key is:
-
-```
-pub   ed25519 2017-09-01 [SC] [expires: 2023-03-18]
-      10A7 22B7 6F2F FE7B D238  0222 5801 631B D27C 7874
-uid                      GZ-C SKYCOIN <token@protonmail.com>
-sub   cv25519 2017-09-01 [E] [expires: 2023-03-18]
-```
-
-Keybase.io account: https://keybase.io/gzc 
-
-##### Alternative signing keys:
-
-Keybase.io account: https://keybase.io/olemis
-
-The fingerprint for this key is:
-
-```
-pub   rsa4096 2019-01-17 [SC] [expires: 2024-01-16]
-uid           Olemis Lang <olemis@simelo.tech>
-sub   rsa4096 2019-01-17 [E] [expires: 2024-01-16]
-```
-
-Follow the [Tor Project's instructions for verifying signatures](https://www.torproject.org/docs/verifying-signatures.html.en).
-
-Releases and their signatures can be found on the [releases page](https://github.com/skycoin/pyskycoin/releases).
-
-Instructions for generating a PGP key, publishing it, signing the tags and binaries:
-https://gist.github.com/gz-c/de3f9c43343b2f1a27c640fe529b067c
-
 #### Creating release builds
 
 Release builds should be created from git tags . After [updating release version](#update-the-version) it is necessary to follow these steps
@@ -291,30 +252,6 @@ python3 setup.py sdist bdist_wheel
 python3 -m pip install --user --upgrade twine
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
-
-#### Creating release builds to manylinux
-
-Release builds should be created from git tags . After [updating release version](#update-the-version) it is necessary to follow these steps
-
-For `64bits` builds:
-
-```sh
-cd /path/to/pyskycoin
-make bdist_manylinux
-python3 -m pip install --user --upgrade twine
-twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-```
-
-In case `32bits` builds:
-
-```sh
-cd /path/to/pyskycoin
-make bdist_manylinux_i686
-python3 -m pip install --user --upgrade twine
-twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-```
-
-This is done automatically in `travis-ci` and` circle-ci`, and even if there is an option to do it manually, this process should be automatic.
 
 #### Python wrapper for Skycoin Api
 

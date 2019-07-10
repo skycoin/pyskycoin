@@ -25,7 +25,6 @@ A Python extension generated with SWIG to access Skycoin API from Python.
     - [Update the version](#update-the-version)
     - [Pre-release testing](#pre-release-testing)
     - [Release signing](#release-signing)
-    - [Alternative signing keys](#alternative-signing-keys)
     - [Creating release builds](#creating-release-builds)
     - [Creating release builds to manylinux](#creating-release-builds-to-manylinux)
  - [Python wrapper for Skycoin Api](#python-wrapper-for-skycoin-api)

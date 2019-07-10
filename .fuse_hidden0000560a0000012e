@@ -24,8 +24,6 @@ A Python extension generated with SWIG to access Skycoin API from Python.
   - [Releases](#releases)
     - [Update the version](#update-the-version)
     - [Pre-release testing](#pre-release-testing)
-    - [Release signing](#release-signing)
-    - [Alternative signing keys](#alternative-signing-keys)
     - [Creating release builds](#creating-release-builds)
     - [Creating release builds to manylinux](#creating-release-builds-to-manylinux)
  - [Python wrapper for Skycoin Api](#python-wrapper-for-skycoin-api)
@@ -296,16 +294,13 @@ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 Release builds should be created from git tags . After [updating release version](#update-the-version) it is necessary to follow these steps
 
-For `64bits` builds:
-
 ```sh
 cd /path/to/pyskycoin
 make bdist_manylinux
 python3 -m pip install --user --upgrade twine
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
-
-In case `32bits` builds:
+this is in case you want it to `64bits` but if you want it to `32bits` it would be like this:
 
 ```sh
 cd /path/to/pyskycoin
@@ -313,8 +308,6 @@ make bdist_manylinux_i686
 python3 -m pip install --user --upgrade twine
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
-
-This is done automatically in `travis-ci` and` circle-ci`, and even if there is an option to do it manually, this process should be automatic.
 
 #### Python wrapper for Skycoin Api
 
