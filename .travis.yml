@@ -244,6 +244,6 @@ deploy:
     repo: skycoin/pyskycoin
     condition: $TRAVIS_OS_NAME = "osx" && $ONLY_SKYAPI = "true"
 # branches:
-    #   only:
-    #   - /^release-.*$/
+#   only:
+#   - /^release-.*$/
 # TODO: Upload manylinux wheels to PyPI
