@@ -12,6 +12,7 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+from codecs import open
 from os import path
 
 NAME = "skyapi"
