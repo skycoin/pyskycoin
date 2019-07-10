@@ -33,10 +33,10 @@ class InlineObject(object):
     """
     openapi_types = {
         'change_address': 'str',
-        'hours_selection': 'Apiv1wallettransactionHoursSelection',
+        'hours_selection': 'ApiV1WalletTransactionHoursSelection',
         'ignore_unconfirmed': 'bool',
-        'to': 'list[Apiv1wallettransactionTo]',
-        'wallet': 'Apiv1wallettransactionWallet'
+        'to': 'list[ApiV1WalletTransactionTo]',
+        'wallet': 'ApiV1WalletTransactionWallet'
     }
 
     attribute_map = {
@@ -95,7 +95,7 @@ class InlineObject(object):
 
 
         :return: The hours_selection of this InlineObject.  # noqa: E501
-        :rtype: Apiv1wallettransactionHoursSelection
+        :rtype: ApiV1WalletTransactionHoursSelection
         """
         return self._hours_selection
 
@@ -105,7 +105,7 @@ class InlineObject(object):
 
 
         :param hours_selection: The hours_selection of this InlineObject.  # noqa: E501
-        :type: Apiv1wallettransactionHoursSelection
+        :type: ApiV1WalletTransactionHoursSelection
         """
 
         self._hours_selection = hours_selection
@@ -137,7 +137,7 @@ class InlineObject(object):
 
 
         :return: The to of this InlineObject.  # noqa: E501
-        :rtype: list[Apiv1wallettransactionTo]
+        :rtype: list[ApiV1WalletTransactionTo]
         """
         return self._to
 
@@ -147,7 +147,7 @@ class InlineObject(object):
 
 
         :param to: The to of this InlineObject.  # noqa: E501
-        :type: list[Apiv1wallettransactionTo]
+        :type: list[ApiV1WalletTransactionTo]
         """
 
         self._to = to
@@ -158,7 +158,7 @@ class InlineObject(object):
 
 
         :return: The wallet of this InlineObject.  # noqa: E501
-        :rtype: Apiv1wallettransactionWallet
+        :rtype: ApiV1WalletTransactionWallet
         """
         return self._wallet
 
@@ -168,7 +168,7 @@ class InlineObject(object):
 
 
         :param wallet: The wallet of this InlineObject.  # noqa: E501
-        :type: Apiv1wallettransactionWallet
+        :type: ApiV1WalletTransactionWallet
         """
 
         self._wallet = wallet

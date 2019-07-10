@@ -63,6 +63,7 @@ Method | HTTP request | Description
 Returns the total number of unique address that have coins.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -107,6 +108,7 @@ No authorization required
 Returns the historical, spent outputs associated with an address
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -152,6 +154,7 @@ No authorization required
 Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -199,16 +202,15 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -254,6 +256,7 @@ Name | Type | Description  | Notes
 Returns a block by hash or seq. Note: only one of hash or seq is allowed
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -301,6 +304,7 @@ No authorization required
 Returns the blockchain metadata.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -343,6 +347,7 @@ No authorization required
 Returns the blockchain sync progress.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -387,6 +392,7 @@ blocksHandler returns blocks between a start and end point,
 or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end. Without verbose.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -440,16 +446,15 @@ or an explicit list of sequences. If using start and end, the block sequences in
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -492,13 +497,14 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **coin_supply**
-> coin_supply()
+> object coin_supply()
 
 
 
 coinSupplyHandler returns coin distribution supply stats
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -510,7 +516,8 @@ from pprint import pprint
 api_instance = skyapi.DefaultApi()
 
 try:
-    api_instance.coin_supply()
+    api_response = api_instance.coin_supply()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->coin_supply: %s\n" % e)
 ```
@@ -520,7 +527,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -539,6 +546,7 @@ No authorization required
 Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -581,6 +589,7 @@ No authorization required
 defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -625,6 +634,7 @@ No authorization required
 Returns all transactions (confirmed and unconfirmed) for an address
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -670,6 +680,7 @@ No authorization required
 Returns node health data.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -714,6 +725,7 @@ No authorization required
 Returns the most recent N blocks on the blockchain
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -759,6 +771,7 @@ No authorization required
 This endpoint returns a specific connection.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -806,16 +819,15 @@ This endpoint returns all outgoings connections.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -864,16 +876,15 @@ This endpoint disconnects a connection by ID or address
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -917,6 +928,7 @@ void (empty response body)
 This endpoint returns all connections found through peer exchange
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -959,16 +971,15 @@ trustConnectionsHandler returns all trusted connections.\\n They are not necessa
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1008,6 +1019,7 @@ This endpoint does not need any parameter.
 If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1057,16 +1069,15 @@ If neither addrs nor hashes are specificed, return all unspent outputs. If only 
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1114,6 +1125,7 @@ Name | Type | Description  | Notes
 Returns pending (unconfirmed) transactions without verbose
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1158,16 +1170,15 @@ Broadcasts all unconfirmed transactions from the unconfirmed transaction pool
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1205,6 +1216,7 @@ void (empty response body)
 Returns the top skycoin holders.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1252,9 +1264,10 @@ No authorization required
 
 
 
-Returns a transaction identified by its txid hash with just id
+Returns a transaction identi`fied by its txid hash with just id
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1303,16 +1316,15 @@ Broadcast a hex-encoded, serialized transaction to the network.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1356,6 +1368,7 @@ Name | Type | Description  | Notes
 Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1405,16 +1418,15 @@ Decode and verify an encoded transaction
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1453,6 +1465,7 @@ This endpoint does not need any parameter.
 Returns transactions that match the filters.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1502,16 +1515,15 @@ Returns transactions that match the filters.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1557,6 +1569,7 @@ Name | Type | Description  | Notes
 Returns an unspent output by ID.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1604,16 +1617,15 @@ Verifies a Skycoin address.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1652,13 +1664,14 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **version**
-> version()
+> object version()
 
 
 
 versionHandler returns the application version info
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1670,7 +1683,8 @@ from pprint import pprint
 api_instance = skyapi.DefaultApi()
 
 try:
-    api_instance.version()
+    api_response = api_instance.version()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->version: %s\n" % e)
 ```
@@ -1680,7 +1694,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -1699,6 +1713,7 @@ No authorization required
 Returns a wallet by id.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1745,6 +1760,7 @@ No authorization required
 Returns the wallet's balance, both confirmed and predicted.  The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -1794,16 +1810,15 @@ Loads wallet from seed, will scan ahead N address and load addresses till the la
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1855,16 +1870,15 @@ Decrypts wallet.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1911,16 +1925,15 @@ Encrypt wallet.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -1968,6 +1981,7 @@ Name | Type | Description  | Notes
 Returns the wallet directory path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -2016,16 +2030,15 @@ Generates new addresses
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2074,6 +2087,7 @@ Name | Type | Description  | Notes
 Returns the wallet directory path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -2120,16 +2134,15 @@ Recovers an encrypted wallet by providing the seed. The first address will be ge
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2178,16 +2191,15 @@ This endpoint only works for encrypted wallets. If the wallet is unencrypted, Th
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2234,16 +2246,15 @@ Verifies a wallet seed.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2290,16 +2301,15 @@ Creates and broadcasts a transaction sending money from one of our wallets to de
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2343,7 +2353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **wallet_transaction**
-> object wallet_transaction(inline_object=inline_object)
+> object wallet_transaction(body)
 
 
 
@@ -2351,26 +2361,25 @@ Creates a signed transaction
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = skyapi.DefaultApi(skyapi.ApiClient(configuration))
-inline_object = skyapi.InlineObject() # InlineObject |  (optional)
+body = skyapi.InlineObject() # InlineObject | 
 
 try:
-    api_response = api_instance.wallet_transaction(inline_object=inline_object)
+    api_response = api_instance.wallet_transaction(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->wallet_transaction: %s\n" % e)
@@ -2380,7 +2389,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**InlineObject**](InlineObject.md)|  | [optional] 
+ **body** | [**InlineObject**](InlineObject.md)|  | 
 
 ### Return type
 
@@ -2405,6 +2414,7 @@ Name | Type | Description  | Notes
 Returns returns all unconfirmed transactions for all addresses in a given wallet verbose
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -2451,16 +2461,15 @@ Unloads wallet from the wallet service.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2504,16 +2513,15 @@ Update the wallet.
 
 ### Example
 
-* Api Key Authentication (csrfAuth): 
+* Api Key Authentication (csrfAuth):
 ```python
 from __future__ import print_function
 import time
 import skyapi
 from skyapi.rest import ApiException
 from pprint import pprint
-
-# Configure API key authorization: csrfAuth
 configuration = skyapi.Configuration()
+# Configure API key authorization: csrfAuth
 configuration.api_key['X-CSRF-TOKEN'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
@@ -2560,6 +2568,7 @@ void (empty response body)
 Returns all loaded wallets
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time

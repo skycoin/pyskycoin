@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import skyapi
-from skyapi.models.apiv1exploreraddress_status import Apiv1exploreraddressStatus  # noqa: E501
+from skyapi.models.api_v1_explorer_address_outputs import ApiV1ExplorerAddressOutputs  # noqa: E501
 from skyapi.rest import ApiException
 
 
-class TestApiv1exploreraddressStatus(unittest.TestCase):
-    """Apiv1exploreraddressStatus unit test stubs"""
+class TestApiV1ExplorerAddressOutputs(unittest.TestCase):
+    """ApiV1ExplorerAddressOutputs unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestApiv1exploreraddressStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApiv1exploreraddressStatus(self):
-        """Test Apiv1exploreraddressStatus"""
+    def testApiV1ExplorerAddressOutputs(self):
+        """Test ApiV1ExplorerAddressOutputs"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = skyapi.models.apiv1exploreraddress_status.Apiv1exploreraddressStatus()  # noqa: E501
+        # model = skyapi.models.api_v1_explorer_address_outputs.ApiV1ExplorerAddressOutputs()  # noqa: E501
         pass
 
 

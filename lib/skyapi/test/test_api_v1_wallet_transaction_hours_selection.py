@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import skyapi
-from skyapi.models.apiv1wallettransaction_hours_selection import Apiv1wallettransactionHoursSelection  # noqa: E501
+from skyapi.models.api_v1_wallet_transaction_hours_selection import ApiV1WalletTransactionHoursSelection  # noqa: E501
 from skyapi.rest import ApiException
 
 
-class TestApiv1wallettransactionHoursSelection(unittest.TestCase):
-    """Apiv1wallettransactionHoursSelection unit test stubs"""
+class TestApiV1WalletTransactionHoursSelection(unittest.TestCase):
+    """ApiV1WalletTransactionHoursSelection unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestApiv1wallettransactionHoursSelection(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testApiv1wallettransactionHoursSelection(self):
-        """Test Apiv1wallettransactionHoursSelection"""
+    def testApiV1WalletTransactionHoursSelection(self):
+        """Test ApiV1WalletTransactionHoursSelection"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = skyapi.models.apiv1wallettransaction_hours_selection.Apiv1wallettransactionHoursSelection()  # noqa: E501
+        # model = skyapi.models.api_v1_wallet_transaction_hours_selection.ApiV1WalletTransactionHoursSelection()  # noqa: E501
         pass
 
 

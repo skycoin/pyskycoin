@@ -10,12 +10,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 - Add `skyapi`, a wrapper for Skycoin node REST API at version 0.25.1
+- Export functions in Skycoin 0.25.1 core API's
+- `skyapi` client for Skycoin node REST API
+- Support for building ARM 32 / 64 bits architectures.
 
 ### Fixed 
 
-### Changed
+- Virtual envs now work for every Python version of interest
 
 ### Removed
+
+- Delete function `SKY_base58_String2Hex`
 
 ### Known issues
 
