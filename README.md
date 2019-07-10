@@ -25,6 +25,7 @@ A Python extension generated with SWIG to access Skycoin API from Python.
     - [Update the version](#update-the-version)
     - [Pre-release testing](#pre-release-testing)
     - [Creating release builds](#creating-release-builds)
+    - [Creating release builds to manylinux](#creating-release-builds-to-manylinux)
  - [Python wrapper for Skycoin Api](#python-wrapper-for-skycoin-api)
 <!-- /MarkdownTOC -->
 
@@ -123,7 +124,7 @@ This is how it is used in Python:
 ```python
 #Generates random seed
 err, data = skycoin.SKY_cipher_RandByte(32)
-assert err == error["SKY_OK"]
+assert err == skycoin.SKY_OK
 pubkey = skycoin.cipher_PubKey()
 seckey = skycoin.cipher_SecKey()
 err = skycoin.SKY_cipher_GenerateDeterministicKeyPair(data, pubkey, seckey)
@@ -159,7 +160,7 @@ for seckey in seckeys:
 	pubkey = skycoin.cipher_PubKey()
 	skycoin.SKY_cipher_PubKeyFromSecKey(seckey, pubkey)
 	err = skycoin.SKY_cipher_PubKey_Verify(pubkey)
-	assert err == error["SKY_OK"]
+	assert err == skycoin.SKY_OK
 ```
 
 ### Memory Management
@@ -285,6 +286,25 @@ Release builds should be created from git tags . After [updating release version
 ```sh
 cd /path/to/pyskycoin
 python3 setup.py sdist bdist_wheel
+python3 -m pip install --user --upgrade twine
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+#### Creating release builds to manylinux
+
+Release builds should be created from git tags . After [updating release version](#update-the-version) it is necessary to follow these steps
+
+```sh
+cd /path/to/pyskycoin
+make bdist_manylinux
+python3 -m pip install --user --upgrade twine
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+this is in case you want it to `64bits` but if you want it to `32bits` it would be like this:
+
+```sh
+cd /path/to/pyskycoin
+make bdist_manylinux_i686
 python3 -m pip install --user --upgrade twine
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
