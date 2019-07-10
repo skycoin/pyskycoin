@@ -273,7 +273,7 @@ sub   rsa4096 2019-01-17 [E] [expires: 2024-01-16]
 
 Follow the [Tor Project's instructions for verifying signatures](https://www.torproject.org/docs/verifying-signatures.html.en).
 
-Releases and their signatures can be found on the [releases page](https://github.com/skycoin/pyskycoin/releases).
+Releases and their signatures can be found on the [releases page](https://github.com/skycoin/skycoin/releases).
 
 Instructions for generating a PGP key, publishing it, signing the tags and binaries:
 https://gist.github.com/gz-c/de3f9c43343b2f1a27c640fe529b067c
