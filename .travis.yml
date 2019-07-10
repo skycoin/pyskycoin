@@ -10,30 +10,30 @@ matrix:
     language: python
     python: 2.7
     env:
-    - TOXENV=py27
-    - PYTHON=2.7
-    - ONLY_SKYAPI=false
+      - TOXENV=py27
+      - PYTHON=2.7
+      - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.4
     env:
-    - TOXENV=py34
-    - PYTHON=3.4
-    - ONLY_SKYAPI=false
+      - TOXENV=py34
+      - PYTHON=3.4
+      - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.5
     env:
-    - TOXENV=py35
-    - PYTHON=3.5
-    - ONLY_SKYAPI=false
+      - TOXENV=py35
+      - PYTHON=3.5
+      - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 3.6
     env:
-    - TOXENV=py36
-    - PYTHON=3.6
-    - ONLY_SKYAPI=false
+      - TOXENV=py36
+      - PYTHON=3.6
+      - ONLY_SKYAPI=false
   - os: linux
     language: python
     dist: xenial
@@ -42,67 +42,67 @@ matrix:
     services:
       - docker
     env:
-    - TOXENV=py37
-    - PYTHON=3.7
-    - ONLY_SKYAPI=false
+      - TOXENV=py37
+      - PYTHON=3.7
+      - ONLY_SKYAPI=false
   - os: osx
     language: go
     env:
-    - PYTHON=2.7.16
-    - TOXENV=py27
-    - ONLY_SKYAPI=false
+      - PYTHON=2.7.16
+      - TOXENV=py27
+      - ONLY_SKYAPI=false
   - os: osx
     language: go
     env:
-    - PYTHON=3.4.8
-    - TOXENV=py34
-    - ONLY_SKYAPI=false
+      - PYTHON=3.4.8
+      - TOXENV=py34
+      - ONLY_SKYAPI=false
   - os: osx
     language: go
     env:
-    - PYTHON=3.5.5
-    - TOXENV=py35
-    - ONLY_SKYAPI=false
+      - PYTHON=3.5.5
+      - TOXENV=py35
+      - ONLY_SKYAPI=false
   - os: osx
     language: go
     env:
-    - PYTHON=3.6.5
-    - TOXENV=py36
-    - ONLY_SKYAPI=false
+      - PYTHON=3.6.5
+      - TOXENV=py36
+      - ONLY_SKYAPI=false
   - os: osx
     language: go
     env:
-    - PYTHON=3.7.1
-    - TOXENV=py37
-    - ONLY_SKYAPI=false
+      - PYTHON=3.7.1
+      - TOXENV=py37
+      - ONLY_SKYAPI=false
   - os: linux
     language: python
     python: 2.7
     env:
-    - TOXENV=py27
-    - PYTHON=2.7
-    - ONLY_SKYAPI=true
+      - TOXENV=py27
+      - PYTHON=2.7
+      - ONLY_SKYAPI=true
   - os: linux
     language: python
     python: 3.4
     env:
-    - TOXENV=py34
-    - PYTHON=3.4
-    - ONLY_SKYAPI=true
+      - TOXENV=py34
+      - PYTHON=3.4
+      - ONLY_SKYAPI=true
   - os: linux
     language: python
     python: 3.5
     env:
-    - TOXENV=py35
-    - PYTHON=3.5
-    - ONLY_SKYAPI=true
+      - TOXENV=py35
+      - PYTHON=3.5
+      - ONLY_SKYAPI=true
   - os: linux
     language: python
     python: 3.6
     env:
-    - TOXENV=py36
-    - PYTHON=3.6
-    - ONLY_SKYAPI=true
+      - TOXENV=py36
+      - PYTHON=3.6
+      - ONLY_SKYAPI=true
   - os: linux
     language: python
     dist: xenial
@@ -111,39 +111,39 @@ matrix:
     services:
       - docker
     env:
-    - TOXENV=py37
-    - PYTHON=3.7
-    - ONLY_SKYAPI=true
+      - TOXENV=py37
+      - PYTHON=3.7
+      - ONLY_SKYAPI=true
   - os: osx
-    languague: go
+    language: go
     env:
-    - PYTHON=2.7.16
-    - TOXENV=py27
-    - ONLY_SKYAPI=true
+      - PYTHON=2.7.16
+      - TOXENV=py27
+      - ONLY_SKYAPI=true
   - os: osx
-    languague: go
+    language: go
     env:
-    - PYTHON=3.4.8
-    - TOXENV=py34
-    - ONLY_SKYAPI=true
+      - PYTHON=3.4.8
+      - TOXENV=py34
+      - ONLY_SKYAPI=true
   - os: osx
-    languague: go
+    language: go
     env:
-    - PYTHON=3.5.5
-    - TOXENV=py35
-    - ONLY_SKYAPI=true
+      - PYTHON=3.5.5
+      - TOXENV=py35
+      - ONLY_SKYAPI=true
   - os: osx
-    languague: go
+    language: go
     env:
-    - PYTHON=3.6.5
-    - TOXENV=py36
-    - ONLY_SKYAPI=true
+      - PYTHON=3.6.5
+      - TOXENV=py36
+      - ONLY_SKYAPI=true
   - os: osx
-    languague: go
+    language: go
     env:
-    - PYTHON=3.7.1
-    - TOXENV=py37
-    - ONLY_SKYAPI=true
+      - PYTHON=3.7.1
+      - TOXENV=py37
+      - ONLY_SKYAPI=true
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
@@ -166,7 +166,8 @@ install:
   - eval "$(gimme 1.11)"  
 script:
 # Test PySkycoin
-  - if [[ "$ONLY_SKYAPI" == 'false' ]]; then make test-ci ; fi
+#  - if [[ "$ONLY_SKYAPI" == 'false' ]]; then make test-ci ; fi
+  - make test-ci
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
