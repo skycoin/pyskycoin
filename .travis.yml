@@ -184,7 +184,7 @@ before_deploy:
 - make sdist
 - make bdist_wheel
 - if [ $TRAVIS_OS_NAME == "linux" && $TOXENV == "py37" ]; then make bdist_manylinux_amd64 ; fi
-- if [[ "$ONLY_SKYAPI" == "false" ]]; then cd lib/skyapi ; fi
+- if [[ "$ONLY_SKYAPI" == "true" ]]; then cd lib/skyapi ; fi
 - ls dist
 deploy:
 - provider: releases
