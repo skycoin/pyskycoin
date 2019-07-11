@@ -91,6 +91,7 @@ install:
   - eval "$(gimme 1.11)"  
 script:
 # Test PySkycoin
+  - bash ./.travis/skyapi_deploy.sh
   - make test-ci
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
@@ -141,12 +142,10 @@ deploy:
       condition: $TRAVIS_OS_NAME = "osx"
   - provider: script
     script: bash .travis/skyapi_deploy.sh
-  - provider: script
-    script: bash .travis/skyapi_deploy.sh
-# on:
-#   branches:
-#     only:
-#     - /^release-.*$/
-#   tags: true
-#   repo: skycoin/pyskycoin
+    on:
+      branches:
+        only:
+        - /^release-.*$/
+      tags: true
+      repo: skycoin/pyskycoin
 # TODO: Upload manylinux wheels to PyPI
