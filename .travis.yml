@@ -1,8 +1,5 @@
 services:
   - docker
-env:
-  global:
-    - CGO_ENABLED: 1
 
 matrix:
   include:
@@ -68,7 +65,7 @@ matrix:
 
 env:
   global:
-    - CGO_ENABLED: 1
+    -CGO_ENABLED: 1
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
@@ -90,7 +87,13 @@ before_install:
 install:
   - eval "$(gimme 1.11)"  
 script:
-# Test PySkycoin
+  # Compile lib
+  - make build && make develop
+  # Format code to PEP8
+  - make format
+  # Linter code to pylint
+  - make lint
+  # Test PySkycoin
   - make test-ci
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
