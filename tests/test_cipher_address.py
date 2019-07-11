@@ -1,6 +1,5 @@
 import skycoin
 
-
 def test_TestDecodeBase58Address():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()

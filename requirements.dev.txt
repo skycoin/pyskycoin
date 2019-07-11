@@ -12,3 +12,5 @@ wheel
 autopep8
 pylint
 yamllint
+urllib3
+

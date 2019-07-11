@@ -46,14 +46,12 @@ def test_TestNewBlock():
     pBlock.Head.Time = 100
     pBlock.Head.BkSeq = 98
     uxHash = utils.RandSHA256()
-    err, _ = skycoin.SKY_coin_NewBlock(
-        block, 133, uxHash, txns, utils.badFeeCalculator)
-    assert err == skycoin.SKY_ERROR
+    err, _ = skycoin.SKY_coin_NewBlock(block, 133, uxHash, txns, utils.badFeeCalculator)
+    assert err != skycoin.SKY_OK
     err, txns1 = skycoin.SKY_coin_Create_Transactions()
     assert err == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_NewBlock(
-        block, 133, uxHash, txns1, utils.feeCalc)
-    assert err == skycoin.SKY_ERROR
+    err, _ = skycoin.SKY_coin_NewBlock(block, 133, uxHash, txns1, utils.feeCalc)
+    assert err != skycoin.SKY_OK
     fee = int(121)
     currentTime = int(133)
     err, b = skycoin.SKY_coin_NewBlock(

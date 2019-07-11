@@ -63,8 +63,9 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -fv ./skycoin/skycoin.py
-	rm -fv swig/pyskycoin_wrap.c
+	rm -f ./skycoin/skycoin.py
+	rm -f swig/pyskycoin_wrap.c
+	rm -f swig/include/swig.h
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
 
 develop: ## Install PySkycoin for development
@@ -79,7 +80,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	# (cd $(PYTHON_CLIENT_DIR) && tox)
+	(cd $(PYTHON_CLIENT_DIR) && tox)
 
 test: build-libc build-swig develop ## Run project test suite
 	$(PYTHON_BIN) setup.py test
@@ -100,12 +101,14 @@ bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution ar
 	docker pull quay.io/pypa/manylinux1_x86_64
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
 	ls wheelhouse/
+	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
 
 bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_i686
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
 	ls wheelhouse/
+	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
 
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
@@ -124,10 +127,16 @@ clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
 	python -m pip uninstall pyskycoin
 	python3 -m pip uninstall pyskycoin
+	python -m pip uninstall skyapi
+	python3 -m pip uninstall skyapi
 	rm -rfv tests/__pycache__
 	rm -rfv skycoin/__pycache__
 	rm -rfv skycoin/*.pyc
 	rm -rfv tests/*.pyc
+	rm -rfv tests/utils/*.pyc
+	rm -rfv tests/utils/__pycache__
+	rm -rfv *.so
+	rm -rfv qemu_python_*
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
