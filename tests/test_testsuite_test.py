@@ -30,7 +30,7 @@
 #     inputDataJSON = test_testsuite.InputTestData()
 #     inputDataJSON.Hashes = f_JSON["hashes"]
 #     err, inputData = test_testsuite.InputTestDataFromJSON(inputDataJSON)
-#     assert err == skycoin.SKY_OK 
+#     assert err == skycoin.SKY_OK
 #     err, seedFiles = traverseFiles()
 #     assert err == skycoin.SKY_OK
 #     for dir_f in seedFiles:

@@ -26,7 +26,8 @@ def makeNewBlock(uxHash):
     assert err == skycoin.SKY_OK
     err = skycoin.SKY_coin_BlockBody_Hash(body, bodyhash)
     assert err == skycoin.SKY_OK
-    return skycoin.SKY_coin_NewBlock(block, int(100 + 200), uxHash, transactions, utils.feeCalc)
+    return skycoin.SKY_coin_NewBlock(block, int(
+        100 + 200), uxHash, transactions, utils.feeCalc)
 
 
 def addTransactionToBlock(b):
@@ -53,7 +54,8 @@ def test_TestNewBlock():
     assert err != skycoin.SKY_OK
     fee = int(121)
     currentTime = int(133)
-    err, b = skycoin.SKY_coin_NewBlock(block, currentTime, uxHash, txns, utils.fix121FeeCalculator)
+    err, b = skycoin.SKY_coin_NewBlock(
+        block, currentTime, uxHash, txns, utils.fix121FeeCalculator)
     assert err == skycoin.SKY_OK
     err, pBlock = skycoin.SKY_coin_GetBlockObject(b)
     assert err == skycoin.SKY_OK
@@ -101,9 +103,9 @@ def test_TestNewGenesisBlock():
     genCoins = int(1000 * 1000 * 1000)
     genCoinHours = int(1000 * 1000)
 
-    err , pubkey, seckey, address = utils.makeKeysAndAddress()
+    err, pubkey, seckey, address = utils.makeKeysAndAddress()
     assert err == skycoin.SKY_OK
-    err , block = skycoin.SKY_coin_NewGenesisBlock(address, genCoins, genTime)
+    err, block = skycoin.SKY_coin_NewGenesisBlock(address, genCoins, genTime)
     assert err == skycoin.SKY_OK
     err, pBlock = skycoin.SKY_coin_GetBlockObject(block)
     assert err == skycoin.SKY_OK
@@ -128,7 +130,8 @@ def test_TestCreateUnspent():
     assert err == skycoin.SKY_OK
     hash1 = skycoin.cipher_SHA256()
     handle = utils.makeEmptyTransaction()
-    err = skycoin.SKY_coin_Transaction_PushOutput(handle, address, 11000000, 255)
+    err = skycoin.SKY_coin_Transaction_PushOutput(
+        handle, address, 11000000, 255)
     assert err == skycoin.SKY_OK
     bh = skycoin.coin__BlockHeader()
     bh.Time = 0
@@ -144,7 +147,7 @@ def test_TestCreateUnspent():
     tests_count = len(t)
     for i in range(tests_count):
         err = skycoin.SKY_coin_CreateUnspent(bh, handle, t[i].index, ux)
-        if t[i].failure == skycoin.SKY_ERROR :
+        if t[i].failure == skycoin.SKY_ERROR:
             pass
         assert bh.Time == ux.Head.Time
         assert bh.BkSeq == ux.Head.BkSeq
@@ -155,13 +158,13 @@ def test_TestCreateUnspents():
     assert err == skycoin.SKY_OK
     hash1 = skycoin.cipher_SHA256()
     txn = utils.makeEmptyTransaction()
-    err = skycoin.SKY_coin_Transaction_PushOutput(txn, address, int(11e6), int(255))
+    err = skycoin.SKY_coin_Transaction_PushOutput(
+        txn, address, int(11e6), int(255))
     assert err == skycoin.SKY_OK
     bh = skycoin.coin__BlockHeader()
     bh.Time = 0
     bh.BkSeq = 1
-    err , uxouts = skycoin.SKY_coin_CreateUnspents(bh, txn)
+    err, uxouts = skycoin.SKY_coin_CreateUnspents(bh, txn)
     assert err == skycoin.SKY_OK
     assert err == skycoin.SKY_OK
     assert len(uxouts) == 1
-
