@@ -2,6 +2,7 @@ ARG IMAGE
 FROM ${IMAGE}
 
 ADD . /io
+RUN ls -oa /io
 ENV PIP='python3 -m pip'
 #Install package
 RUN apt-get update
