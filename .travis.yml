@@ -91,6 +91,9 @@ install:
   - eval "$(gimme 1.11)"  
 script:
 # Test PySkycoin
+  - make sdist
+  - make bdist_wheel
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
   - bash ./.travis/skyapi_deploy.sh
   - make test-ci
 after_failure:
