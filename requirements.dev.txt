@@ -9,4 +9,5 @@ pytest-runner
 tox
 tox-pyenv
 wheel
+urllib3
 

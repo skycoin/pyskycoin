@@ -1105,12 +1105,12 @@ def SKY_file_DetermineResourcePath(p0, p1, p2):
     return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
 SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
 
-def SKY_cli_CheckWalletBalance(p0, p1, p2):
-    return _skycoin.SKY_cli_CheckWalletBalance(p0, p1, p2)
+def SKY_cli_CheckWalletBalance(p0, p1):
+    return _skycoin.SKY_cli_CheckWalletBalance(p0, p1)
 SKY_cli_CheckWalletBalance = _skycoin.SKY_cli_CheckWalletBalance
 
-def SKY_cli_GetBalanceOfAddresses(p0, p1, p2):
-    return _skycoin.SKY_cli_GetBalanceOfAddresses(p0, p1, p2)
+def SKY_cli_GetBalanceOfAddresses(p0, p1):
+    return _skycoin.SKY_cli_GetBalanceOfAddresses(p0, p1)
 SKY_cli_GetBalanceOfAddresses = _skycoin.SKY_cli_GetBalanceOfAddresses
 
 def SKY_api_NewWalletResponse(p0):
@@ -1221,8 +1221,8 @@ def SKY_coin_NewEmptyBlock(p0):
     return _skycoin.SKY_coin_NewEmptyBlock(p0)
 SKY_coin_NewEmptyBlock = _skycoin.SKY_coin_NewEmptyBlock
 
-def SKY_coin_Block_GetBlockHeader(p0, p1):
-    return _skycoin.SKY_coin_Block_GetBlockHeader(p0, p1)
+def SKY_coin_Block_GetBlockHeader(p0):
+    return _skycoin.SKY_coin_Block_GetBlockHeader(p0)
 SKY_coin_Block_GetBlockHeader = _skycoin.SKY_coin_Block_GetBlockHeader
 
 def SKY_coin_GetBlockHeaderObject(p0, p1):
@@ -1277,12 +1277,12 @@ def SKY_webrpc_Client_InjectTransaction(p0, p1):
     return _skycoin.SKY_webrpc_Client_InjectTransaction(p0, p1)
 SKY_webrpc_Client_InjectTransaction = _skycoin.SKY_webrpc_Client_InjectTransaction
 
-def SKY_webrpc_Client_GetStatus(p0, p1):
-    return _skycoin.SKY_webrpc_Client_GetStatus(p0, p1)
+def SKY_webrpc_Client_GetStatus(p0):
+    return _skycoin.SKY_webrpc_Client_GetStatus(p0)
 SKY_webrpc_Client_GetStatus = _skycoin.SKY_webrpc_Client_GetStatus
 
-def SKY_webrpc_Client_GetTransactionByID(p0, p1, p2):
-    return _skycoin.SKY_webrpc_Client_GetTransactionByID(p0, p1, p2)
+def SKY_webrpc_Client_GetTransactionByID(p0, p1):
+    return _skycoin.SKY_webrpc_Client_GetTransactionByID(p0, p1)
 SKY_webrpc_Client_GetTransactionByID = _skycoin.SKY_webrpc_Client_GetTransactionByID
 
 def SKY_webrpc_Client_GetAddressUxOuts(p0, p1):
@@ -1553,12 +1553,12 @@ def SKY_handle_copy(p0):
     return _skycoin.SKY_handle_copy(p0)
 SKY_handle_copy = _skycoin.SKY_handle_copy
 
-def SKY_cli_GetWalletOutputsFromFile(p0, p1, p2):
-    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1, p2)
+def SKY_cli_GetWalletOutputsFromFile(p0, p1):
+    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1)
 SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
 
-def SKY_cli_GetWalletOutputs(p0, p2):
-    return _skycoin.SKY_cli_GetWalletOutputs(p0, p2)
+def SKY_cli_GetWalletOutputs(p0):
+    return _skycoin.SKY_cli_GetWalletOutputs(p0)
 SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
 
 def SKY_iputil_LocalhostIP():
@@ -1689,8 +1689,8 @@ def SKY_api_Client_WalletBalance(p0, p1, p2):
     return _skycoin.SKY_api_Client_WalletBalance(p0, p1, p2)
 SKY_api_Client_WalletBalance = _skycoin.SKY_api_Client_WalletBalance
 
-def SKY_api_Client_Spend(p0, p1, p2, p3, p4, p5):
-    return _skycoin.SKY_api_Client_Spend(p0, p1, p2, p3, p4, p5)
+def SKY_api_Client_Spend(p0, p1, p2, p3, p4):
+    return _skycoin.SKY_api_Client_Spend(p0, p1, p2, p3, p4)
 SKY_api_Client_Spend = _skycoin.SKY_api_Client_Spend
 
 def SKY_api_Client_CreateTransaction(p0):
@@ -1961,8 +1961,8 @@ def SKY_coin_SortTransactions(p0, p1):
     return _skycoin.SKY_coin_SortTransactions(p0, p1)
 SKY_coin_SortTransactions = _skycoin.SKY_coin_SortTransactions
 
-def SKY_coin_NewSortableTransactions(p0, p1, p2):
-    return _skycoin.SKY_coin_NewSortableTransactions(p0, p1, p2)
+def SKY_coin_NewSortableTransactions(p0, p1):
+    return _skycoin.SKY_coin_NewSortableTransactions(p0, p1)
 SKY_coin_NewSortableTransactions = _skycoin.SKY_coin_NewSortableTransactions
 
 def SKY_coin_SortableTransactions_Sort(p0):
@@ -3064,6 +3064,244 @@ SKY_ErrVerifySignatureInvalidInputsNils = _skycoin.SKY_ErrVerifySignatureInvalid
 SKY_ErrVerifySignatureInvalidSigLength = _skycoin.SKY_ErrVerifySignatureInvalidSigLength
 SKY_ErrVerifySignatureInvalidPubkeysLength = _skycoin.SKY_ErrVerifySignatureInvalidPubkeysLength
 SKY_ErrInvalidDecimals = _skycoin.SKY_ErrInvalidDecimals
+class GoComplex64_(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoComplex64_, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoComplex64_, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["real"] = _skycoin.GoComplex64__real_set
+    __swig_getmethods__["real"] = _skycoin.GoComplex64__real_get
+    if _newclass:
+        real = _swig_property(_skycoin.GoComplex64__real_get, _skycoin.GoComplex64__real_set)
+    __swig_setmethods__["imaginary"] = _skycoin.GoComplex64__imaginary_set
+    __swig_getmethods__["imaginary"] = _skycoin.GoComplex64__imaginary_get
+    if _newclass:
+        imaginary = _swig_property(_skycoin.GoComplex64__imaginary_get, _skycoin.GoComplex64__imaginary_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoComplex64_()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoComplex64_
+    __del__ = lambda self: None
+GoComplex64__swigregister = _skycoin.GoComplex64__swigregister
+GoComplex64__swigregister(GoComplex64_)
+
+class GoComplex128_(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoComplex128_, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoComplex128_, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["real"] = _skycoin.GoComplex128__real_set
+    __swig_getmethods__["real"] = _skycoin.GoComplex128__real_get
+    if _newclass:
+        real = _swig_property(_skycoin.GoComplex128__real_get, _skycoin.GoComplex128__real_set)
+    __swig_setmethods__["imaginary"] = _skycoin.GoComplex128__imaginary_set
+    __swig_getmethods__["imaginary"] = _skycoin.GoComplex128__imaginary_get
+    if _newclass:
+        imaginary = _swig_property(_skycoin.GoComplex128__imaginary_get, _skycoin.GoComplex128__imaginary_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoComplex128_()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoComplex128_
+    __del__ = lambda self: None
+GoComplex128__swigregister = _skycoin.GoComplex128__swigregister
+GoComplex128__swigregister(GoComplex128_)
+
+class GoString_(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoString_, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoString_, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["p"] = _skycoin.GoString__p_set
+    __swig_getmethods__["p"] = _skycoin.GoString__p_get
+    if _newclass:
+        p = _swig_property(_skycoin.GoString__p_get, _skycoin.GoString__p_set)
+    __swig_setmethods__["n"] = _skycoin.GoString__n_set
+    __swig_getmethods__["n"] = _skycoin.GoString__n_get
+    if _newclass:
+        n = _swig_property(_skycoin.GoString__n_get, _skycoin.GoString__n_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoString_()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoString_
+    __del__ = lambda self: None
+GoString__swigregister = _skycoin.GoString__swigregister
+GoString__swigregister(GoString_)
+
+class GoInterface_(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoInterface_, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoInterface_, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["t"] = _skycoin.GoInterface__t_set
+    __swig_getmethods__["t"] = _skycoin.GoInterface__t_get
+    if _newclass:
+        t = _swig_property(_skycoin.GoInterface__t_get, _skycoin.GoInterface__t_set)
+    __swig_setmethods__["v"] = _skycoin.GoInterface__v_set
+    __swig_getmethods__["v"] = _skycoin.GoInterface__v_get
+    if _newclass:
+        v = _swig_property(_skycoin.GoInterface__v_get, _skycoin.GoInterface__v_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoInterface_()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoInterface_
+    __del__ = lambda self: None
+GoInterface__swigregister = _skycoin.GoInterface__swigregister
+GoInterface__swigregister(GoInterface_)
+
+class GoSlice_(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GoSlice_, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GoSlice_, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.GoSlice__data_set
+    __swig_getmethods__["data"] = _skycoin.GoSlice__data_get
+    if _newclass:
+        data = _swig_property(_skycoin.GoSlice__data_get, _skycoin.GoSlice__data_set)
+    __swig_setmethods__["len"] = _skycoin.GoSlice__len_set
+    __swig_getmethods__["len"] = _skycoin.GoSlice__len_get
+    if _newclass:
+        len = _swig_property(_skycoin.GoSlice__len_get, _skycoin.GoSlice__len_set)
+    __swig_setmethods__["cap"] = _skycoin.GoSlice__cap_set
+    __swig_getmethods__["cap"] = _skycoin.GoSlice__cap_get
+    if _newclass:
+        cap = _swig_property(_skycoin.GoSlice__cap_get, _skycoin.GoSlice__cap_set)
+
+    def __init__(self):
+        this = _skycoin.new_GoSlice_()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_GoSlice_
+    __del__ = lambda self: None
+GoSlice__swigregister = _skycoin.GoSlice__swigregister
+GoSlice__swigregister(GoSlice_)
+
+class Number(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Number, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Number, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["neg"] = _skycoin.Number_neg_set
+    __swig_getmethods__["neg"] = _skycoin.Number_neg_get
+    if _newclass:
+        neg = _swig_property(_skycoin.Number_neg_get, _skycoin.Number_neg_set)
+    __swig_setmethods__["nat"] = _skycoin.Number_nat_set
+    __swig_getmethods__["nat"] = _skycoin.Number_nat_get
+    if _newclass:
+        nat = _swig_property(_skycoin.Number_nat_get, _skycoin.Number_nat_set)
+
+    def __init__(self):
+        this = _skycoin.new_Number()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_Number
+    __del__ = lambda self: None
+Number_swigregister = _skycoin.Number_swigregister
+Number_swigregister(Number)
+
+class Signature(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Signature, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Signature, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["R"] = _skycoin.Signature_R_set
+    __swig_getmethods__["R"] = _skycoin.Signature_R_get
+    if _newclass:
+        R = _swig_property(_skycoin.Signature_R_get, _skycoin.Signature_R_set)
+    __swig_setmethods__["S"] = _skycoin.Signature_S_set
+    __swig_getmethods__["S"] = _skycoin.Signature_S_get
+    if _newclass:
+        S = _swig_property(_skycoin.Signature_S_get, _skycoin.Signature_S_set)
+
+    def __init__(self):
+        this = _skycoin.new_Signature()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_Signature
+    __del__ = lambda self: None
+Signature_swigregister = _skycoin.Signature_swigregister
+Signature_swigregister(Signature)
+
+class Wallet(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Wallet, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Wallet, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["Meta"] = _skycoin.Wallet_Meta_set
+    __swig_getmethods__["Meta"] = _skycoin.Wallet_Meta_get
+    if _newclass:
+        Meta = _swig_property(_skycoin.Wallet_Meta_get, _skycoin.Wallet_Meta_set)
+    __swig_setmethods__["Entries"] = _skycoin.Wallet_Entries_set
+    __swig_getmethods__["Entries"] = _skycoin.Wallet_Entries_get
+    if _newclass:
+        Entries = _swig_property(_skycoin.Wallet_Entries_get, _skycoin.Wallet_Entries_set)
+
+    def __init__(self):
+        this = _skycoin.new_Wallet()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_Wallet
+    __del__ = lambda self: None
+Wallet_swigregister = _skycoin.Wallet_swigregister
+Wallet_swigregister(Wallet)
+
+class FeeCalculator(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, FeeCalculator, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, FeeCalculator, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["callback"] = _skycoin.FeeCalculator_callback_set
+    __swig_getmethods__["callback"] = _skycoin.FeeCalculator_callback_get
+    if _newclass:
+        callback = _swig_property(_skycoin.FeeCalculator_callback_get, _skycoin.FeeCalculator_callback_set)
+    __swig_setmethods__["context"] = _skycoin.FeeCalculator_context_set
+    __swig_getmethods__["context"] = _skycoin.FeeCalculator_context_get
+    if _newclass:
+        context = _swig_property(_skycoin.FeeCalculator_context_get, _skycoin.FeeCalculator_context_set)
+
+    def __init__(self):
+        this = _skycoin.new_FeeCalculator()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_FeeCalculator
+    __del__ = lambda self: None
+FeeCalculator_swigregister = _skycoin.FeeCalculator_swigregister
+FeeCalculator_swigregister(FeeCalculator)
+
 # This file is compatible with both classic and new-style classes.
 
 

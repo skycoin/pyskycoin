@@ -18,7 +18,7 @@ global-include *.i
 graft swig/include
 graft gopath/src/github.com/skycoin/libskycoin/include
 
-graft docker
+prune docker
 graft swig/include *
 graft gopath/src/github.com/skycoin/libskycoin/include
 
@@ -33,5 +33,9 @@ prune .github
 prune .tox
 prune .travis
 prune .pytest_cache 
+prune .circleci
+global-exclude Dockerfile
+global-exclude Dockerfile-armv7
+global-exclude pyskycoin_wrap.c
 prune lib/skyapi
 

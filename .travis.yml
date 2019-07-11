@@ -1,3 +1,9 @@
+services:
+  - docker
+env:
+  global:
+    - CGO_ENABLED: 1
+
 matrix:
   include:
   - os: linux

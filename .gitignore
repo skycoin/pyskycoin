@@ -39,6 +39,7 @@ tests/mytest.py
 
 skycoin/skycoin.py
 swig/pyskycoin_wrap.c
-
-#VENV
+.directory
+core*
+qemu_*
 venv

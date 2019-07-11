@@ -94,7 +94,7 @@ setup(
     author="Ratmil Torres",  # Optional
     author_email="skycoin@simelo.tech",
     setup_requires=["pytest-runner"],
-    tests_require=["pytest"],
+    tests_require=["pytest", "urllib3", "certifi"],
     classifiers=[
         #   3 - Alpha
         #   4 - Beta
