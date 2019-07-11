@@ -137,6 +137,15 @@ clean: #Clean all
 	rm -rfv tests/utils/__pycache__
 	rm -rfv *.so
 	rm -rfv qemu_python_*
+	rm -rfv lib/skyapi/skyapi/__pycache__
+	rm -rfv lib/skyapi/skyapi/*.pyc
+	rm -rfv lib/skyapi/skyapi/models/*.pyc
+	rm -rfv lib/skyapi/skyapi/models/__pycache__
+	rm -rfv lib/skyapi/skyapi/api/*.pyc
+	rm -rfv lib/skyapi/skyapi/api/__pycache__
+	rm -rfv lib/skyapi/test/__pycache__
+	rm -rfv lib/skyapi/test/*.pyc
+	
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
