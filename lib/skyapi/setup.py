@@ -31,7 +31,8 @@ setup(
     author_email="contact@skycoin.net",
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "Skycoin REST API."],
-    install_requires=REQUIRES,
+    setup_requires=["pytest-runner"],
+    tests_require=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
