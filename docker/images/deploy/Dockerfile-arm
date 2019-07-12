@@ -228,7 +228,7 @@ RUN pip install --upgrade  setuptools tox-travis wheel
 #   && python3.4 -m pip install "/io/lib/skyapi/test-requirements.txt" 
 
 # Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis wheel
+RUN pip3 install --upgrade  setuptools tox-travis wheel auditwheel
 
 # # Python 3.6
 # RUN python3.6 -m pip install --upgrade  setuptools tox-travis auditwheel \
