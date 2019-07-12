@@ -9,5 +9,5 @@ if [[ "$URL_DEPLOY" ]]; then
 else
 
  $TWINE_PATH upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing  /io/dist/*
-
-if
+ 
+fi
