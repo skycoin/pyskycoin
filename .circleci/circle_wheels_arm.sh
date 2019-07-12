@@ -8,10 +8,10 @@
   # python3.7 -m pip wheel /io/ -w wheelhouse/
 
 # # Bundle external shared libraries into the wheels
-# for whl in wheelhouse/*.whl; do
-#   python -m auditwheel repair "$whl" -w /io/wheelhouse/
+for whl in wheelhouse/*.whl; do
+  python -m auditwheel repair "$whl" -w /io/wheelhouse/
 #   # python3.4 -m auditwheel repair "$whl" -w /io/wheelhouse/
-#   python3 -m auditwheel repair "$whl" -w /io/wheelhouse/
+  python3 -m auditwheel repair "$whl" -w /io/wheelhouse/
 #   # python3.6 -m auditwheel repair "$whl" -w /io/wheelhouse/
 #   # python3.7 -m auditwheel repair "$whl" -w /io/wheelhouse/
-# done
+done
