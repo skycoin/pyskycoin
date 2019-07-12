@@ -19,9 +19,6 @@ ENV PATH="${PATH}:$HOME/bin/gimme"
 RUN eval "$(gimme 1.11)"
 
 RUN $PIP install --upgrade pip setuptools tox-travis
-RUN $PIP install -r "$REPO_ROOT/requirements.dev.txt"
-RUN $PIP install -r "$REPO_ROOT/lib/skyapi/requirements.txt"
-RUN $PIP install -r "$REPO_ROOT/lib/skyapi/test-requirements.txt"
 
 RUN mkdir swig_build && \
   cd swig_build && \
@@ -55,6 +52,6 @@ RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN $PIP install twine
 ENV TWINE_PATH=/opt/python/cp27-cp27m/bin/twine
-RUN sh /io/.circleci/upload_pypi.sh
+RUN bash /io/.circleci/upload_pypi.sh
 
 WORKDIR /io

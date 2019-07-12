@@ -219,10 +219,7 @@ RUN set -ex \
 # Install packages in PIP_PACKAGES
 
 # Python 2.7
-RUN pip install --upgrade  setuptools tox-travis wheel \
-  && pip install -r "/io/requirements.dev.txt" \
-  && pip install -r "/io/lib/skyapi/requirements.txt" \
-  && pip install -r "/io/lib/skyapi/test-requirements.txt" 
+RUN pip install --upgrade  setuptools tox-travis wheel 
 
 # # Python 3.4
 # RUN python3.4 -m pip install --upgrade  setuptools tox-travis auditwheel \
@@ -231,10 +228,7 @@ RUN pip install --upgrade  setuptools tox-travis wheel \
 #   && python3.4 -m pip install "/io/lib/skyapi/test-requirements.txt" 
 
 # Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis wheel  \
-  && pip3 install -r "/io/requirements.dev.txt" \
-  && pip3 install -r "/io/lib/skyapi/requirements.txt" \
-  && pip3 install -r "/io/lib/skyapi/test-requirements.txt" 
+RUN pip3 install --upgrade  setuptools tox-travis wheel
 
 # # Python 3.6
 # RUN python3.6 -m pip install --upgrade  setuptools tox-travis auditwheel \
@@ -276,7 +270,7 @@ RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN pip install twine
 ENV TWINE_PATH=twine
-RUN sh /io/.circleci/upload_pypi.sh
+RUN bash /io/.circleci/upload_pypi.sh
 
 RUN [ "cross-build-end" ]
 
