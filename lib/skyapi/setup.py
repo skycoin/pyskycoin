@@ -12,6 +12,8 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+from codecs import open
+from os import path
 
 NAME = "skyapi"
 VERSION = "0.25.1.dev02"
@@ -24,6 +26,12 @@ VERSION = "0.25.1.dev02"
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
+script_dirname = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(script_dirname, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -35,7 +43,6 @@ setup(
     tests_require=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    Skycoin is a next-generation cryptocurrency.  # noqa: E501
-    """
+    long_description=long_description,
+    long_description_content_type="text/markdown"
 )
