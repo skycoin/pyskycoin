@@ -34,8 +34,8 @@ RUN mkdir swig_build && \
   cd ../../ && \
   rm -rf swig_build
 
-RUN curl -sL -o "go1.11.3.linux-${GO_ARCH}.tar.gz" https://storage.googleapis.com/golang/go1.11.12.linux-${GO_ARCH}.tar.gz
-RUN tar -zxf go1.11.3.linux-${GO_ARCH}.tar.gz -C /usr/local
+RUN curl -sL -o "go1.11.12.linux-${GO_ARCH}.tar.gz" https://storage.googleapis.com/golang/go1.11.12.linux-${GO_ARCH}.tar.gz
+RUN tar -zxf go1.11.12.linux-${GO_ARCH}.tar.gz -C /usr/local
 ENV GOROOT=/usr/local/go
 ENV PATH="${PATH}:/usr/local/go/bin"
 ENV CGO_ENABLE=1
@@ -53,6 +53,7 @@ RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN $PIP install twine
-RUN /opt/python/cp27-cp27m/bin/twine upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing --repository-url ${URL_DEPLOY} /io/dist/*
+ENV TWINE_PATH=/opt/python/cp27-cp27m/bin/twine
+RUN sh /io/.circleci/upload_pypi.sh
 
 WORKDIR /io

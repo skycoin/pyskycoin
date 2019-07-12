@@ -275,7 +275,8 @@ RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN pip install twine
-RUN twine upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing --repository-url ${URL_DEPLOY} /io/dist/*
+ENV TWINE_PATH=twine
+RUN sh /io/.circleci/upload_pypi.sh
 
 RUN [ "cross-build-end" ]
 
