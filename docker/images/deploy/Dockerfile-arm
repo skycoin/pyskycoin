@@ -270,7 +270,6 @@ RUN make -C /io/gopath/src/github.com/skycoin/libskycoin dep
 RUN make -C /io build-libc
 RUN make -C /io build-swig 
 RUN sh /io/.circleci/circle_wheels_arm.sh
-
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
