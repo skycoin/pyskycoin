@@ -1,9 +1,11 @@
-
-FROM balenalib/armv7hf-debian-golang
-
+ARG ARCH
+FROM balenalib/${ARCH}-debian-golang
+ARG URL_DEPLOY
+ARG PYPI_USER
+ARG PYPI_PASSWD
 RUN [ "cross-build-start" ]
-RUN mkdir -p /io
 
+RUN mkdir -p /io
 ADD . /io
 
 # Install Python 2.7/3.5 runtime and development tools
@@ -273,7 +275,7 @@ RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN pip install twine
-RUN twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+RUN twine upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing --repository-url ${URL_DEPLOY} /io/dist/*
 
 RUN [ "cross-build-end" ]
 

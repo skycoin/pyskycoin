@@ -3,7 +3,9 @@ ARG ARCH
 FROM quay.io/pypa/manylinux1_${ARCH}
 
 ARG GO_ARCH
-
+ARG URL_DEPLOY
+ARG PYPI_USER
+ARG PYPI_PASSWD
 ADD . /io
 
 RUN ls /io
@@ -32,7 +34,7 @@ RUN mkdir swig_build && \
   cd ../../ && \
   rm -rf swig_build
 
-RUN curl -sL -o "go1.11.3.linux-${GO_ARCH}.tar.gz" https://storage.googleapis.com/golang/go1.11.3.linux-${GO_ARCH}.tar.gz
+RUN curl -sL -o "go1.11.3.linux-${GO_ARCH}.tar.gz" https://storage.googleapis.com/golang/go1.11.12.linux-${GO_ARCH}.tar.gz
 RUN tar -zxf go1.11.3.linux-${GO_ARCH}.tar.gz -C /usr/local
 ENV GOROOT=/usr/local/go
 ENV PATH="${PATH}:/usr/local/go/bin"
@@ -51,6 +53,6 @@ RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN $PIP install twine
-RUN /opt/python/cp27-cp27m/bin/twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+RUN /opt/python/cp27-cp27m/bin/twine upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing --repository-url ${URL_DEPLOY} /io/dist/*
 
 WORKDIR /io
