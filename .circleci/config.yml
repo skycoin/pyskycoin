@@ -2,7 +2,7 @@ version: 2
 jobs:
   manylinux64:
     docker:
-      - image:  circleci/buildpack-deps:bionic
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
@@ -15,7 +15,7 @@ jobs:
 
   manylinux32:
     docker:
-      - image:  circleci/buildpack-deps:bionic
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
@@ -28,7 +28,7 @@ jobs:
   
   manylinuxarmv7:
     docker:
-      - image:  circleci/buildpack-deps:bionic
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
@@ -40,7 +40,7 @@ jobs:
 
   manylinuxaarch64:
     docker:
-      - image:  circleci/buildpack-deps:bionic
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
@@ -52,7 +52,7 @@ jobs:
 
   deploy_arm:
     docker:
-      - image:  circleci/buildpack-deps:bionic
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
