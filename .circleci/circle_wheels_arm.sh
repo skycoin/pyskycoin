@@ -6,5 +6,3 @@
   pip3 wheel /io/ -w /io/wheelhouse/
   # python3.6 -m pip wheel /io/ -w wheelhouse/
   # python3.7 -m pip wheel /io/ -w wheelhouse/
-
-done
