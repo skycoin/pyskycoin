@@ -7,10 +7,10 @@ for PYBIN in /opt/python/*/bin; do
   "${PYBIN}/pip" wheel /io/lib/skyapi/ -w /io/wheelhouse/
 done
 
-rm -rfv /io/wheelhouse/*linux_i686.whl
-rm -rfv /io/wheelhouse/*linux_x86_64.whl
-
 # Bundle external shared libraries into the wheels
 for whl in /io/wheelhouse/*.whl; do
   auditwheel repair "$whl" -w /io/wheelhouse/
 done
+
+rm -rfv /io/wheelhouse/*linux_i686.whl
+rm -rfv /io/wheelhouse/*linux_x86_64.whl

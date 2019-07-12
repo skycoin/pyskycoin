@@ -11,7 +11,7 @@ ADD . /io
 RUN ls /io
 RUN yum install -y sudo pcre pcre-devel curl git --skip-broken
 RUN mkdir -p "$HOME/bin"
-ENV PIP "/opt/python/cp27-cp27m/bin/pip"
+ENV PIP "/opt/python/cp37-cp37m/bin/pip"
 ENV REPO_ROOT "/io/"
 RUN curl -sL -o "$HOME/bin/gimme" https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 RUN chmod +x "$HOME/bin/gimme"
@@ -51,7 +51,7 @@ RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN $PIP install twine
-ENV TWINE_PATH=/opt/python/cp27-cp27m/bin/twine
+ENV TWINE_PATH=/opt/python/cp37-cp37m/bin/twine
 RUN bash /io/.circleci/upload_pypi.sh
 
 WORKDIR /io
