@@ -9,5 +9,7 @@ if [[ "$URL_DEPLOY" ]]; then
 else
 
  $TWINE_PATH upload -u ${PYPI_USER} -p ${PYPI_PASSWD} --skip-existing  /io/dist/*
- 
+ go get github.com/tcnksm/ghr
+ ghr -t ${GITHUB_OAUTH_TOKEN} -u ${PROJECT_USERNAME} -r ${PROJECT_REPONAME} -c ${SHA1} ${VERSION} /io/dist/
+
 fi
