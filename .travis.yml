@@ -1,12 +1,5 @@
 services:
   - docker
-env:
-  global:
-    - CGO_ENABLED: 1
-    - PYPI_USER: 
-      secure: qPng5d9MuWToDdnABpvUvKspQJ2xj+evgBQOMxpCpXKkrp3EcJtT7VA4bi3k3RlShiKMw71+gqqpGFOO8QshRRf0qldDSzwYefUxe0/dqwuKcb77tY4yUZJtYi3MX/jmWUW0kLSedNGXv42ye4TbFxnd0yCCNVrffbIclcIapzqAECB2a61btcrLTWqaqsO5BYitEQ9VfRtv20Kx4wSjxECNGr354kYV95d74g6zF0OzxMcxha2VB4MYKQ308gX1ISF11ZuaW35ZRa81dT8/fWa9j7/xhpXVBZ6craCBtAFc3q5AcQL0FlYmhM1XFgDanhv3Uxw75mhjapyMedQFpmRT+2ej4v+Le9Etf8rxeebZRJBch0o/zw8ZRUltKSeN8comWSCwaS1NQVauhb9D0cQ7R+0ULkLkBw3E4Os+9wLWNPppw4p7v4m5SpCcD5AVeBuUFd4F9y4LNfjWGrEMfyGjcSyZqZts0xoZ3L6ta05n1vr84ah8DpQRHrMl6PeuH0dfbYRxnGEhBJcEfXZ2RmqC6EBdV1OBnWh91bUpltnwv/kG+aIhtgp/ZSQY1DukglJ2QDrXZZ0HI7TjXwYTJeScPuxsbPcluepfFrxU0K3dib8JyeJEQOfN1ioE6ln9TDGcDgTuYvBbA3ndjtqJZeWiUS7siyO9d7aE2kPZOSI=
-    - PYPI_PWD:
-      secure: Lek+1bI8jaYADO5b4oLTirI3xqdYktV/ihyGCraK+Glp/U6FwwlF3ttRpvdT9/YyVRgWEt/jePQxH+COW3WbKh54MZWCMlMKmWc4JTs6zHliAWXecAQSvPDWHjzO0F1iz839MRBfQdBUMh1g7BFi4nC886DS7ts7+p2XXGsWwtI+quOwvZ6bS0M6nMTecG8OtpYCkOAoGZI6JEoDXyIygPR5+TIWXO2QFt7KT+fsircOvDHzdA2YY/oexwUWwLLf7J0qnRm2AEx0dDjpFTCaOr6+VxdjD7F8qDoXePzVEvW7AG6k0Emx3Vuj9JiTgga8qX3ExHSXoomNhiJoOM30UbH00mdT5Fz+6HqYqFieijX/Li2fExqXXp6Za4VHMrwImrXoYQw4350F8b6QzF7E4WouBBysBZIkBEswp69783uU1lGcbU0wnyj8SN6rYIPO03MG1e5HO+Dd9avMtCMdGj3qsNlmfK0v3fAGjrYsStMQtrfOUZGTahrHPh7P3VPB4qmsJ7eNo+lFtLN0I2+ehoqMd3UH+qggdFdLQFGVMe0SWCUV9Aoyxo9vVqbnPzclsmWL44M6YRDIgOtochNiDINbdx/EA/L517GrpSDjZwvhrJkoCE7Wr9m5YcC+x8qQXCpQ4dcYAJ4C+okASAIwtjOai5dQB7TfHJfN5XzSLUI=
 
 matrix:
   include:
@@ -70,6 +63,10 @@ matrix:
       - PYTHON=3.7.1
       - TOXENV=py37
 
+env:
+  global:
+    -CGO_ENABLED: 1
+
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
@@ -90,11 +87,13 @@ before_install:
 install:
   - eval "$(gimme 1.11)"  
 script:
-# Test PySkycoin
-  - make sdist
-  - make bdist_wheel
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then make bdist_manylinux_amd64 ; fi
-  - bash ./.travis/skyapi_deploy.sh
+  # Compile lib
+  - make build && make develop
+  # Format code to PEP8
+  - make format
+  # Linter code to pylint
+  - make lint
+  # Test PySkycoin
   - make test-ci
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
