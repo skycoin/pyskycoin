@@ -2,5 +2,6 @@
 echo "Installing twine"
 python -m pip install twine
 
-echo "Upload to testPyPI"
-twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ lib/skyapi/dist/*
+#Upload to PyPi
+echo "Upload to PyPI"
+twine upload -u $PYPI_USER -p $PYPI_PASSWD --repository-url https://upload.pypi.org/legacy/ lib/skyapi/dist/*

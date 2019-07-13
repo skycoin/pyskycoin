@@ -145,9 +145,8 @@ deploy:
   - provider: script
     script: bash .travis/skyapi_deploy.sh
     on:
-      branches:
-        only:
-        - /^release-.*$/
+      all_branches: true
       tags: true
       repo: skycoin/pyskycoin
+      condition: $TRAVIS_BRANCH =~ "^release-.*$"
 # TODO: Upload manylinux wheels to PyPI
