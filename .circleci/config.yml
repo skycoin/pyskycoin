@@ -67,5 +67,5 @@ workflows:
       - manylinux64
       - manylinux32
       - manylinuxarmv7
-      - manylinuxaarch64
+      # - manylinuxaarch64 TODO: Not working deploy to test.pypi.org
       - deploy_all
