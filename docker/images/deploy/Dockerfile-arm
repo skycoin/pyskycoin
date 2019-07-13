@@ -49,7 +49,7 @@ RUN pip install --upgrade  setuptools tox-travis wheel
 RUN pip3 install --upgrade  setuptools tox-travis wheel
 
 
-RUN set -ex mkdir swig_build && \
+RUN set -ex && mkdir swig_build && \
   cd swig_build && \
   curl -sL -o "swig-3.0.12.tar.gz" http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && \
   tar -zxfv swig-3.0.12.tar.gz && \
