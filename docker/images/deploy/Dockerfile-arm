@@ -37,7 +37,7 @@ RUN set -ex \
 RUN pip install --upgrade  setuptools tox-travis wheel 
 
 # Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis wheel auditwheel
+RUN pip3 install --upgrade  setuptools tox-travis wheel
 
 
 RUN mkdir swig_build && \
