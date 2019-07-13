@@ -29,7 +29,9 @@ RUN set -ex \
   python-setuptools \
   python3-setuptools \
   python-wheel \
-  python3-wheel
+  python3-wheel \
+  make \
+  cmake
 
 # Install packages in PIP_PACKAGES
 
