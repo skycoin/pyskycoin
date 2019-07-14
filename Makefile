@@ -38,12 +38,14 @@ else ifeq ($(shell uname -s),Darwin)
 endif
 
 configure: ## Configure build environment
+	echo "Configure build environment"
 	mkdir -p $(BUILD_DIR)/usr/tmp $(BUILD_DIR)/usr/lib $(BUILD_DIR)/usr/include
 	mkdir -p $(BUILDLIBC_DIR) $(BIN_DIR) $(INCLUDE_DIR)
 	mkdir -p $(DIST_DIR)
 
 
 build-libc: configure ## Build libskycoin C client library
+	echo "Build libskycoin C client library"
 	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) clean-libc
 	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
 	rm -f swig/include/libskycoin.h
@@ -53,6 +55,7 @@ build-libc: configure ## Build libskycoin C client library
 	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > swig/include/libskycoin.h
 
 build-swig: ## Generate Python C module from SWIG interfaces
+	echo "Generate Python C module from SWIG interfaces"
 	#Generate structs.i from skytypes.gen.h
 	rm -f $(LIBSWIG_DIR)/structs.i
 	cp $(INCLUDE_DIR)/skytypes.gen.h $(LIBSWIG_DIR)/structs.i
@@ -63,7 +66,7 @@ build-swig: ## Generate Python C module from SWIG interfaces
 			sed -i 's/#/%/g' $(LIBSWIG_DIR)/structs.i ;\
 		fi \
 	}
-	rm -f ./skycoin/skycoin.py
+	rm -fv skycoin/skycoin.py
 	rm -f swig/pyskycoin_wrap.c
 	rm -f swig/include/swig.h
 	swig -python -w501,505,401,302,509,451 -Iswig/include -I$(INCLUDE_DIR) -outdir ./skycoin/ -o swig/pyskycoin_wrap.c $(LIBSWIG_DIR)/pyskycoin.i
@@ -82,9 +85,14 @@ test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
 	(cd $(PYTHON_CLIENT_DIR) && tox)
 
-test: build-libc build-swig develop ## Run project test suite
-	$(PYTHON_BIN) setup.py test
+test-skyapi: build-libc build-swig develop ## Run project test suite by skyapi
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py test)
+
+test-libsky: build-libc build-swig develop ## Run project test suite by pyskycoin
+	echo "Run project test suite by pyskycoin"
+	$(PYTHON_BIN) setup.py test
+
+test: test-skyapi test-libsky ## Run project test suite
 
 sdist: ## Create source distribution archive
 	$(PYTHON_BIN) setup.py sdist --formats=gztar
