@@ -95,6 +95,7 @@ script:
   - make lint
   # Test PySkycoin
   - make test-ci
+  - bash ./.travis/skyapi_deploy.sh
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
 notifications:
