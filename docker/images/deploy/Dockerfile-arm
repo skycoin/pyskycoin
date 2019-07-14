@@ -16,7 +16,6 @@ RUN set -ex \
   ca-certificates \
   libexpat1 \
   libffi6 \
-  libgdbm3 \
   libreadline7 \
   libsqlite3-0 \
   libssl1.1 \
