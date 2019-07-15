@@ -8,10 +8,10 @@ def test_TestBitcoinAddressFromBytes():
     err = skycoin.SKY_cipher_BitcoinAddressFromSecKey(s, a)
     assert err == skycoin.SKY_OK
     # Valid pubkey+address
-    err = skycoin.SKY_cipher_BitcoinAddress_Verify(a,p)
+    err = skycoin.SKY_cipher_BitcoinAddress_Verify(a, p)
     assert err == skycoin.SKY_OK
     s = skycoin.cipher_SecKey()
-    err = skycoin.SKY_cipher_BitcoinAddressFromSecKey(s,a)
+    err = skycoin.SKY_cipher_BitcoinAddressFromSecKey(s, a)
     assert err == skycoin.SKY_ErrPubKeyFromNullSecKey
 
 
