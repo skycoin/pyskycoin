@@ -38,7 +38,7 @@ setup(
     description="Skycoin REST API.",
     author_email="contact@skycoin.net",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Skycoin REST API."],
+    keywords="skycoin crypto coin currency blockchain REST API",
     setup_requires=["pytest-runner"],
     tests_require=REQUIRES,
     install_requires=REQUIRES,
