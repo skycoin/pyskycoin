@@ -12,19 +12,20 @@ def makeTestTransactions():
 
 
 def makeNewBlock(uxHash):
-    bodyhash = skycoin.cipher_SHA256()
     transactions = makeTestTransactions()
     err, block = skycoin.SKY_coin_NewEmptyBlock(transactions)
     assert err == skycoin.SKY_OK
-    err, pBlock = skycoin.SKY_coin_GetBlockObject(block)
+    err, pBlockHeader = skycoin.SKY_coin_Block_GetBlockHeader(block)
     assert err == skycoin.SKY_OK
-    pBlock.Head.Version = 0x02
-    pBlock.Head.Time = 100
-    pBlock.Head.BkSeq = 0
-    pBlock.Head.Fee = 10
+    err = skycoin.SKY_coin_BlockHeader_SetTime(pBlockHeader, 100)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetBkSeq(pBlockHeader, 0)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetVersion(pBlockHeader, 0x02)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetFee(pBlockHeader, 10)
+    assert err == skycoin.SKY_OK
     err, body = skycoin.SKY_coin_GetBlockBody(block)
-    assert err == skycoin.SKY_OK
-    err = skycoin.SKY_coin_BlockBody_Hash(body, bodyhash)
     assert err == skycoin.SKY_OK
     return skycoin.SKY_coin_NewBlock(block, int(100 + 200), uxHash, transactions, utils.feeCalc)
 

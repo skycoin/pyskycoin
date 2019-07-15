@@ -5,10 +5,15 @@ Million = 1000000
 MaxUint16 = 0xFFFF
 
 
-def makeAddress():
+def makecipher_PubKeyAndcipher_SecKey():
     p = skycoin.cipher_PubKey()
     s = skycoin.cipher_SecKey()
-    assert skycoin.SKY_cipher_GenerateKeyPair(p, s) == skycoin.SKY_OK
+    err = skycoin.SKY_cipher_GenerateKeyPair(p, s)
+    return p, s
+
+
+def makeAddress():
+    p, s = makecipher_PubKeyAndcipher_SecKey()
     a = skycoin.cipher__Address()
     assert skycoin.SKY_cipher_AddressFromPubKey(p, a) == skycoin.SKY_OK
     return a
@@ -182,9 +187,3 @@ def makeKeysAndAddress():
     err = skycoin.SKY_cipher_AddressFromPubKey(ppubkey, paddress)
     assert err == skycoin.SKY_OK
     return err, ppubkey, pseckey, paddress
-
-def makecipher_PubKeyAndcipher_SecKey():
-    p = skycoin.cipher_PubKey()
-    s = skycoin.cipher_SecKey()
-    err = skycoin.SKY_cipher_GenerateKeyPair(p, s)
-    return p,s
