@@ -16,7 +16,7 @@ from codecs import open
 from os import path
 
 NAME = "skyapi"
-VERSION = "0.25.1.dev03"
+VERSION = "0.25.1.dev07"
 # To install the library, run the following
 #
 # python setup.py install
@@ -41,6 +41,7 @@ setup(
     keywords=["OpenAPI", "OpenAPI-Generator", "Skycoin REST API."],
     setup_requires=["pytest-runner"],
     tests_require=REQUIRES,
+    install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description=long_description,
