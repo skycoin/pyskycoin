@@ -142,3 +142,11 @@ deploy:
       tags: true
       repo: skycoin/pyskycoin
       condition: $TRAVIS_OS_NAME = "osx"
+  - provider: script
+    script: bash .travis/skyapi_deploy.sh
+    on:
+      all_branches: true
+      tags: true
+      repo: skycoin/pyskycoin
+      condition: $TRAVIS_BRANCH =~ "^release-.*$"
+# TODO: Upload manylinux wheels to PyPI
