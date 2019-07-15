@@ -44,8 +44,8 @@ def test_TestTransactionVerify():
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_Transaction_GetInputAt(
         handle, 0, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    r = skycoin.SKY_coin_Transaction_PushInput(handle, h)
+    assert r == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_ResetSignatures(
         handle, 0) == skycoin.SKY_OK
     secKeys = []
@@ -129,7 +129,7 @@ def test_TestTransactionVerifyInput():
     handle, tx = utils.makeTransactionFromUxOut(ux, s)
     seckeys = []
     seckeys.append(ux)
-    assert skycoin.SKY_coin_Transaction_VerifyInput(
+    assert skycoin.SKY_coin_VerifyInputSignatures(
         handle, seckeys) == skycoin.SKY_OK
 
 
@@ -138,7 +138,7 @@ def test_TestTransactionPushInput():
     ux = utils.makeUxOut()
     sha = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == skycoin.SKY_OK
-    _, r = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
+    r = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
     assert r == 0
     _, count = skycoin.SKY_coin_Transaction_GetInputsCount(handle)
     assert count == 1
@@ -147,9 +147,8 @@ def test_TestTransactionPushInput():
     assert sha == sha1
     skycoin.SKY_coin_Transaction_ResetInputs(handle, 0)
     for _ in range(utils.MaxUint16):
-        err, _ = skycoin.SKY_coin_Transaction_PushInput(
+        skycoin.SKY_coin_Transaction_PushInput(
             handle, skycoin.cipher_SHA256())
-        assert err == skycoin.SKY_OK
     ux = utils.makeUxOut()
     assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == skycoin.SKY_OK
 
@@ -198,12 +197,10 @@ def test_TestTransactionSignInputs():
     ux, s = utils.makeUxOutWithSecret()
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_UxOut_Hash(ux, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    skycoin.SKY_coin_Transaction_PushInput(handle, h)
     ux2, s2 = utils.makeUxOutWithSecret()
     assert skycoin.SKY_coin_UxOut_Hash(ux2, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    skycoin.SKY_coin_Transaction_PushInput(handle, h)
     assert skycoin.SKY_coin_Transaction_PushOutput(
         handle, utils.makeAddress(), 40, 80) == skycoin.SKY_OK
     err, count = skycoin.SKY_coin_Transaction_GetSignaturesCount(handle)

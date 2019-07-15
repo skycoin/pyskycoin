@@ -126,10 +126,8 @@ check-dist: dist ## Perform self-tests upon distributions archives
 
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
-	python -m pip uninstall pyskycoin
-	python3 -m pip uninstall pyskycoin
-	python -m pip uninstall skyapi
-	python3 -m pip uninstall skyapi
+	$(PYTHON_BIN) -m pip uninstall pyskycoin
+	$(PYTHON_BIN) -m pip uninstall skyapi
 	rm -rfv tests/__pycache__
 	rm -rfv skycoin/__pycache__
 	rm -rfv skycoin/*.pyc

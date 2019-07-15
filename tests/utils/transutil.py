@@ -20,8 +20,7 @@ def makeTransactionFromUxOut(ux, s):
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_cipher_SecKey_Verify(s) == skycoin.SKY_OK
     assert skycoin.SKY_coin_UxOut_Hash(ux, h) == skycoin.SKY_OK
-    err, r = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    r = skycoin.SKY_coin_Transaction_PushInput(handle, h)
     assert skycoin.SKY_coin_Transaction_PushOutput(
         handle, makeAddress(), int(1e6), int(50)) == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_PushOutput(
