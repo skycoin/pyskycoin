@@ -9,7 +9,7 @@ ADD . /io
 # Install Python 2.7/3.5 runtime and development tools
 RUN set -ex \
   && apt update \
-  && apt install -y --allow \
+  && apt install -y \
   python3 \
   python3-dev \
   python-dev \
