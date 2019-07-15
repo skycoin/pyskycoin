@@ -31,7 +31,8 @@ RUN set -ex \
   python-wheel \
   python3-wheel \
   make \
-  cmake
+  cmake \
+  swig
 
 # Install packages in PIP_PACKAGES
 
@@ -46,17 +47,6 @@ RUN pip3 install --upgrade  setuptools tox-travis wheel  \
   && pip3 install -r "/io/requirements.dev.txt" \
   && pip3 install -r "/io/lib/skyapi/requirements.txt" \
   && pip3 install -r "/io/lib/skyapi/test-requirements.txt" 
-
-RUN set -ex && mkdir swig_build && \
-  cd swig_build && \
-  curl -sL -o "swig-3.0.12.tar.gz" http://prdownloads.sourceforge.net/swig/swig-3.0.12.tar.gz && \
-  tar -zxf swig-3.0.12.tar.gz && \
-  cd swig-3.0.12 && \
-  ./configure --prefix=/usr && \
-  make && \
-  make install && \
-  cd ../../ && \
-  rm -rf swig_build
 
 ENV CGO_ENABLE=1
 
