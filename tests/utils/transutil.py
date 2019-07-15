@@ -182,3 +182,9 @@ def makeKeysAndAddress():
     err = skycoin.SKY_cipher_AddressFromPubKey(ppubkey, paddress)
     assert err == skycoin.SKY_OK
     return err, ppubkey, pseckey, paddress
+
+def makecipher_PubKeyAndcipher_SecKey():
+    p = skycoin.cipher_PubKey()
+    s = skycoin.cipher_SecKey()
+    err = skycoin.SKY_cipher_GenerateKeyPair(p, s)
+    return p,s
