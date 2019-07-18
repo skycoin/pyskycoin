@@ -65,6 +65,7 @@ RUN sh /io/.circleci/circle_wheels_arm.sh
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
+RUN cp -v /io/lib/skyapi/wheelhouse/* /io/dist
 RUN pip install twine
 ENV TWINE_PATH=twine
 RUN bash /io/.circleci/upload_pypi.sh

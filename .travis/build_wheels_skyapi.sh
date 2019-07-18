@@ -24,7 +24,7 @@ for PYBIN in /opt/python/*/bin; do
 done
 
 # Bundle external shared libraries into the wheels
-for whl in wheelhouse/*.whl; do
+for whl in /io/lib/skyapi/wheelhouse/*.whl; do
   auditwheel repair "$whl" -w /io/lib/skyapi/wheelhouse/
 done
 
