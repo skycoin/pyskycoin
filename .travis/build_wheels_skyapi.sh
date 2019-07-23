@@ -20,11 +20,11 @@ go env
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
   "${PYBIN}/pip" install -r /io/lib/skyapi/requirements.txt
-  "${PYBIN}/pip" wheel /io/lib/skyapi/ -w /io/lib/skyapi/wheelhouse/
+  "${PYBIN}/pip" wheel /io/lib/skyapi/ -w wheelhouse/
 done
 
 # Bundle external shared libraries into the wheels
-for whl in /io/lib/skyapi/wheelhouse/*.whl; do
-  auditwheel repair "$whl" -w /io/lib/skyapi/wheelhouse/
+for whl in wheelhouse/*.whl; do
+  auditwheel repair "$whl" -w /io/wheelhouse/
 done
 
