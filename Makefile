@@ -102,11 +102,9 @@ bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution ar
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels.sh
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
-	cp -v wheelhouse/* $(DIST_DIR)
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels_skyapi.sh
-	mkdir -p $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
-	cp -v $(PYTHON_CLIENT_DIR)/wheelhouse/* $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
-	ls $(PYTHON_CLIENT_DIR)/wheelhouse/
+	cp -v wheelhouse/* $(DIST_DIR)
+	ls $(DIST_DIR)
 
 
 bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
@@ -114,11 +112,9 @@ bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution arc
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels.sh
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
-	cp -v wheelhouse/* $(DIST_DIR)
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels_skyapi.sh
-	mkdir -p $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
-	cp -v $(PYTHON_CLIENT_DIR)/wheelhouse/* $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
-	ls $(PYTHON_CLIENT_DIR)/wheelhouse/
+	cp -v wheelhouse/* $(DIST_DIR)
+	ls $(DIST_DIR)
 
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 
