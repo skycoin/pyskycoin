@@ -18,6 +18,8 @@ chmod +x "$HOME/bin/gimme"
 # Install Python libraries
 $PIP install --upgrade pip setuptools tox-travis
 $PIP install -r "$REPO_ROOT/requirements.dev.txt"
+$PIP install -r "$REPO_ROOT/lib/skyapi/requirements.txt"
+$PIP install -r "$REPO_ROOT/lib/skyapi/test-requirements.txt"
 
 # Compile SWIG
 mkdir swig_build && \
