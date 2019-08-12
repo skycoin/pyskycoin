@@ -1,4 +1,6 @@
 import skycoin
+
+
 def test_TestBitcoinAddressFromBytes():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
@@ -10,31 +12,36 @@ def test_TestBitcoinAddressFromBytes():
     err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, address_2)
     assert err == skycoin.SKY_OK
     assert address_2 == address
-    ## Invalid number of bytes
+    # Invalid number of bytes
     __ = skycoin.cipher__BitcoinAddress()
-    err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte[:len(byte) - 2], __)
+    err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(
+        byte[:len(byte) - 2], __)
     assert err == skycoin.SKY_ErrAddressInvalidLength
-    ## Invalid checksum
+    # Invalid checksum
     byte_array = bytearray(byte)
     byte_array[-1] = 1
     byte_new = bytes(byte_array)
     err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte_new, __)
     assert err == skycoin.SKY_ErrAddressInvalidChecksum
-    ## Invalid Version
+    # Invalid Version
     address.Version = 2
     byte = skycoin.skycoin.SKY_cipher_BitcoinAddress_Bytes(address)
     err = skycoin.skycoin.SKY_cipher_BitcoinAddressFromBytes(byte, __)
     assert err == skycoin.SKY_ErrAddressInvalidVersion
+
 
 def test_TestBitcoinWIPRoundTrio():
     public_key = skycoin.cipher_PubKey()
     secret_key_1 = skycoin.cipher_SecKey()
     secret_key_2 = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key_1)
-    wip_1 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(secret_key_1)
-    err = skycoin.skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(wip_1, secret_key_2)
+    wip_1 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
+        secret_key_1)
+    err = skycoin.skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(
+        wip_1, secret_key_2)
     assert err == skycoin.SKY_OK
-    wip_2 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(secret_key_2)
+    wip_2 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
+        secret_key_2)
     _, secret_key_1_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_1)
     _, secret_key_2_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_2)
     assert secret_key_1_hex == secret_key_2_hex
@@ -63,14 +70,14 @@ def test_TestBitcoinWIF():
     for p in range(len(wips)):
         secret_key = skycoin.cipher_SecKey()
         public_key = skycoin.cipher_PubKey()
-        err = skycoin.skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(wips[p], secret_key)
+        err = skycoin.skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(
+            wips[p], secret_key)
         assert err == skycoin.SKY_OK
         skycoin.SKY_cipher_PubKeyFromSecKey(secret_key, public_key)
         _, public_key_hex = skycoin.SKY_cipher_PubKey_Hex(public_key)
         assert public_key_hex == publics[p]
         bitcoin_addr = skycoin.cipher__BitcoinAddress()
         skycoin.SKY_cipher_BitcoinAddressFromPubKey(public_key, bitcoin_addr)
-        bitcoin_addr_str = skycoin.skycoin.SKY_cipher_BitcoinAddress_String(bitcoin_addr)
+        bitcoin_addr_str = skycoin.skycoin.SKY_cipher_BitcoinAddress_String(
+            bitcoin_addr)
         assert bitcoin_addr_str == address[p]
-
-
