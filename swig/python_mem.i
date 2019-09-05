@@ -114,16 +114,6 @@
 	}
 }
 
-%rename(SKY_coin_Transaction_VerifyInput) wrap_SKY_coin_Transaction_VerifyInput;
-%inline{
-	GoUint32 wrap_SKY_coin_Transaction_VerifyInput(Transaction__Handle handle, coin_UxOutArray* __uxIn){
-		GoSlice_ data;
-		data.data = __uxIn->data;
-		data.len = __uxIn->count;
-		data.cap = __uxIn->count;
-		return SKY_coin_Transaction_VerifyInput(handle, &data);
-	}
-}
 
 %rename(SKY_coin_UxArray_HasDupes) wrap_SKY_coin_UxArray_HasDupes;
 %inline{
@@ -367,3 +357,13 @@
 	}
 }
 
+%rename(SKY_coin_VerifyInputSignatures) wrap_SKY_coin_VerifyInputSignatures;
+%inline{
+	GoUint32 wrap_SKY_coin_VerifyInputSignatures(Transaction__Handle handle, coin_UxOutArray* __uxIn){
+		GoSlice_ data;
+		data.data = __uxIn->data;
+		data.len = __uxIn->count;
+		data.cap = __uxIn->count;
+		return SKY_coin_VerifyInputSignatures(handle, &data);
+	}
+}
