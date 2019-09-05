@@ -5,9 +5,9 @@ import tests.utils as utils
 class tmpstruct:
     s = "",
     n = 0,
-    e = skycoin.SKY_OK
+    e = 0
 
-    def __init__(self, _s, _n, _e=skycoin.SKY_OK):
+    def __init__(self, _s, _n, _e=0):
         self.e = _e
         self.s = _s
         self.n = _n

@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## PySkycoin 0.25.1 - 2019/03/14
+
+### Added
+
+- Add `skyapi`, a wrapper for Skycoin node REST API at version 0.25.1
+- Export functions in Skycoin 0.25.1 core API's
+- `skyapi` client for Skycoin node REST API
+- Support for building ARM 32 / 64 bits architectures.
+
+### Fixed 
+
+- Virtual envs now work for every Python version of interest
+
+### Removed
+
+- Delete function `SKY_base58_String2Hex`
+
+### Known issues
+
 ## PySkycoin 0.25.0 - 2019/01/01
 
 ### Added
