@@ -12,24 +12,46 @@
 # IMAGE_NAME: the name and tag of the Docker repository being built.
 #             (This variable is a combination of DOCKER_REPO:CACHE_TAG.)
 # PIP_PACKAGES: pip packages to install inside docker image.
+# VS_EXTENSIONS: Visual Studio Code extensions to add on docker image,
+#                only if base image is not CLI purpose.
 
 echo "Build hook running"
 
-pwd
+cd ../../../
 
 # Build :develop tag
 docker build --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --build-arg SCOMMIT=$SOURCE_COMMIT \
-             --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner" \
+             --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
              -f $DOCKERFILE_PATH \
              -t "$IMAGE_NAME" .
 
-# Build :dind tag
-if [ "$CACHE_TAG" -eq "develop" ]; then
-  docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
+# Build :dind, :vscode and :vscode-dind tag
+# Only build if docker tag is develop
+if [ "$CACHE_TAG" == "develop" ]; then
+    docker build --build-arg IMAGE_FROM="skycoin/skycoindev-cli:dind" \
                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
                --build-arg SCOMMIT=$SOURCE_COMMIT \
-               --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner" \
+               --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
                -f $DOCKERFILE_PATH \
                -t "$DOCKER_REPO:dind" .
+
+    # Move to vscode folder to avoid file errors with vscode docker image
+    cd gopath/src/github.com/skycoin/skycoin/docker/images/dev-vscode/
+
+    docker build --build-arg IMAGE_FROM="$IMAGE_NAME" \
+                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+                --build-arg SCOMMIT=$SOURCE_COMMIT \
+                --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
+                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces VisualStudioExptTeam.vscodeintellicode" \
+                -f Dockerfile \
+                -t "$DOCKER_REPO:vscode" .
+
+    docker build --build-arg IMAGE_FROM="$DOCKER_REPO:dind" \
+                --build-arg BDATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+                --build-arg SCOMMIT=$SOURCE_COMMIT \
+                --build-arg PIP_PACKAGES="setuptools wheel tox tox-pyenv tox-travis pytest pytest-runner virtualenv pylint flake8" \
+                --build-arg VS_EXTENSIONS="ms-python.python njpwerner.autodocstring shardulm94.trailing-spaces VisualStudioExptTeam.vscodeintellicode" \
+                -f Dockerfile \
+                -t "$DOCKER_REPO:vscode-dind" .
 fi
