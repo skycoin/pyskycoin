@@ -27,7 +27,8 @@ def makeNewBlock(uxHash):
     assert err == skycoin.SKY_OK
     err, body = skycoin.SKY_coin_GetBlockBody(block)
     assert err == skycoin.SKY_OK
-    return skycoin.SKY_coin_NewBlock(block, int(100 + 200), uxHash, transactions, utils.feeCalc)
+    return skycoin.SKY_coin_NewBlock(block, int(
+        100 + 200), uxHash, transactions, utils.feeCalc)
 
 
 def addTransactionToBlock(b):

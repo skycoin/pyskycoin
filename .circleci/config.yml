@@ -2,49 +2,64 @@ version: 2
 jobs:
   manylinux64:
     docker:
-      - image: docker:18.06.0-ce-git
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - setup_remote_docker:
           version: 18.06.0-ce
-      - run: docker build  --build-arg GO_ARCH=amd64 --build-arg ARCH=x86_64 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
+          docker_layer_caching: true
+      - run: docker build  --build-arg URL_DEPLOY=https://test.pypi.org/legacy/ --build-arg PYPI_USER=pyskycoin  --build-arg PYPI_PASSWD="prerelease_0.X" --build-arg GO_ARCH=amd64 --build-arg ARCH=x86_64 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
 
   manylinux32:
     docker:
-      - image: docker:18.06.0-ce-git
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - setup_remote_docker:
           version: 18.06.0-ce
-      - run: docker build  --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
+          docker_layer_caching: true
+      - run: docker build  --build-arg URL_DEPLOY=https://test.pypi.org/legacy/ --build-arg PYPI_USER=pyskycoin  --build-arg PYPI_PASSWD="prerelease_0.X" --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
   
   manylinuxarmv7:
     docker:
-      - image: docker:18.06.0-ce-git
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - setup_remote_docker:
           version: 18.06.0-ce
-      - run: docker build  --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile-arm  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
+          docker_layer_caching: true
+      - run: docker build  --build-arg URL_DEPLOY=https://test.pypi.org/legacy/ --build-arg PYPI_USER=pyskycoin  --build-arg PYPI_PASSWD="prerelease_0.X" --build-arg ARCH=armv7hf --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile-arm  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
 
-  deploy:
+  manylinuxaarch64:
     docker:
-      - image: docker:18.06.0-ce-git
+      - image: circleci/golang:1.12
     working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
     steps:
       - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
       - checkout
       - setup_remote_docker:
           version: 18.06.0-ce
-      - run: if [[ $CIRCLE_TAG ]]; then   docker build  --build-arg SHA1=$CIRCLE_SHA1 --build-arg GITHUB_OAUTH_TOKEN --build-arg PROJECT_USERNAME=$CIRCLE_PROJECT_USERNAME --build-arg PROJECT_REPONAME=$CIRCLE_PROJECT_REPONAME --build-arg QEMU_PLATFORM=raspberrypi3 --build-arg VERSION  --file $GOPATH/src/github.com/skycoin/libskycoin/docker/images/circle/Dockerfile  $GOPATH/src/github.com/skycoin/libskycoin -t skydev-deploy ; fi
-          
+          docker_layer_caching: true
+      - run: docker build  --build-arg URL_DEPLOY=https://test.pypi.org/legacy/ --build-arg PYPI_USER=pyskycoin  --build-arg PYPI_PASSWD="prerelease_0.X" --build-arg ARCH=aarch64 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile-arm  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
 
+  deploy_all:
+    docker:
+      - image: circleci/golang:1.12
+    working_directory: $GOPATH/src/github.com/skycoin/pyskycoin
+    steps:
+      - run: mkdir -p $GOPATH/src/github.com/ $GOPATH/src/github.com/skycoin
+      - checkout
+      - setup_remote_docker:
+          version: 18.06.0-ce
+          docker_layer_caching: true
+      - run: cd $GOPATH/src/github.com/skycoin/pyskycoin/.circleci && bash deploy.sh
+          
 workflows:
   version: 2
   arm_test:
@@ -52,12 +67,5 @@ workflows:
       - manylinux64
       - manylinux32
       - manylinuxarmv7
-      - hold: 
-          type: approval 
-          requires:
-           - manylinux64
-           - manylinux32
-           - manylinuxarmv7
-      - deploy:
-          requires:
-            - hold
+      # - manylinuxaarch64 TODO: Not working deploy to test.pypi.org
+      - deploy_all

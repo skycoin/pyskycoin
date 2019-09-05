@@ -3,13 +3,22 @@ ARG ARCH
 FROM quay.io/pypa/manylinux1_${ARCH}
 
 ARG GO_ARCH
+ARG URL_DEPLOY
+ARG PYPI_USER
+ARG PYPI_PASSWD
+
+ARG GITHUB_OAUTH_TOKEN
+ARG PROJECT_USERNAME
+ARG PROJECT_REPONAME
+ARG SHA1
+ARG VERSION
 
 ADD . /io
 
 RUN ls /io
 RUN yum install -y sudo pcre pcre-devel curl git --skip-broken
 RUN mkdir -p "$HOME/bin"
-ENV PIP "/opt/python/cp27-cp27m/bin/pip"
+ENV PIP "/opt/python/cp37-cp37m/bin/pip"
 ENV REPO_ROOT "/io/"
 RUN curl -sL -o "$HOME/bin/gimme" https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 RUN chmod +x "$HOME/bin/gimme"
@@ -17,9 +26,6 @@ ENV PATH="${PATH}:$HOME/bin/gimme"
 RUN eval "$(gimme 1.11)"
 
 RUN $PIP install --upgrade pip setuptools tox-travis
-RUN $PIP install -r "$REPO_ROOT/requirements.dev.txt"
-RUN $PIP install -r "$REPO_ROOT/lib/skyapi/requirements.txt"
-RUN $PIP install -r "$REPO_ROOT/lib/skyapi/test-requirements.txt"
 
 RUN mkdir swig_build && \
   cd swig_build && \
@@ -44,13 +50,15 @@ RUN go get github.com/gz-c/gox
 RUN cd /io && git submodule update --init --recursive 
 RUN make -C /io/gopath/src/github.com/skycoin/libskycoin dep
 RUN make -C /io build-libc
-RUN make -C /io build-swig 
+RUN make -C /io build-swig
+RUN mkdir -p /io/wheelhouse
 RUN sh /io/.circleci/circle_wheels.sh
 
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN $PIP install twine
-RUN /opt/python/cp27-cp27m/bin/twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
+ENV TWINE_PATH=/opt/python/cp37-cp37m/bin/twine
+RUN bash /io/.circleci/upload_pypi.sh
 
 WORKDIR /io

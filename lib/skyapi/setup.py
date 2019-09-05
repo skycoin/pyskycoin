@@ -12,9 +12,11 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+from codecs import open
+from os import path
 
 NAME = "skyapi"
-VERSION = "0.0.1"
+VERSION = "0.26.0.dev1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -24,17 +26,24 @@ VERSION = "0.0.1"
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
+script_dirname = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(script_dirname, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name=NAME,
     version=VERSION,
     description="Skycoin REST API.",
     author_email="contact@skycoin.net",
     url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "Skycoin REST API."],
+    keywords="skycoin crypto coin currency blockchain REST API",
+    setup_requires=["pytest-runner"],
+    tests_require=REQUIRES,
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    Skycoin is a next-generation cryptocurrency.  # noqa: E501
-    """
+    long_description=long_description,
+    long_description_content_type="text/markdown"
 )
