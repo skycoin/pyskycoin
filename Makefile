@@ -111,6 +111,11 @@ bdist_manylinux_amd64: ## Create 64 bits multilinux binary wheel distribution ar
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_x86_64 /io/.travis/build_wheels_skyapi.sh
+	mkdir -p $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
+	cp -v $(PYTHON_CLIENT_DIR)/wheelhouse/* $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
+	ls $(PYTHON_CLIENT_DIR)/wheelhouse/
+
 
 bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution archives
 	docker pull quay.io/pypa/manylinux1_i686
@@ -118,12 +123,23 @@ bdist_manylinux_i686: ## Create 32 bits multilinux binary wheel distribution arc
 	ls wheelhouse/
 	mkdir -p $(DIST_DIR)
 	cp -v wheelhouse/* $(DIST_DIR)
+	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/build_wheels_skyapi.sh
+	mkdir -p $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
+	cp -v $(PYTHON_CLIENT_DIR)/wheelhouse/* $(PYTHON_CLIENT_DIR)/$(DIST_DIR)
+	ls $(PYTHON_CLIENT_DIR)/wheelhouse/
 
 dist: sdist bdist_wheel bdist_manylinux_amd64 ## Create distribution archives
 
 check-dist: dist ## Perform self-tests upon distributions archives
 	docker run --rm -t -v $(REPO_ROOT):/io quay.io/pypa/manylinux1_i686 linux32 /io/.travis/check_wheels.sh
 
+format: ## Format code that autopep8
+	autopep8 --in-place --aggressive --aggressive --aggressive --aggressive ./tests/*.py
+
+lint: ## Linter to pylint
+	pylint -E tests/*.py
+	# yamllint -d relaxed .travis.yml
+	
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
 	$(PYTHON_BIN) -m pip uninstall pyskycoin
@@ -136,6 +152,15 @@ clean: #Clean all
 	rm -rfv tests/utils/__pycache__
 	rm -rfv *.so
 	rm -rfv qemu_python_*
+	rm -rfv lib/skyapi/skyapi/__pycache__
+	rm -rfv lib/skyapi/skyapi/*.pyc
+	rm -rfv lib/skyapi/skyapi/models/*.pyc
+	rm -rfv lib/skyapi/skyapi/models/__pycache__
+	rm -rfv lib/skyapi/skyapi/api/*.pyc
+	rm -rfv lib/skyapi/skyapi/api/__pycache__
+	rm -rfv lib/skyapi/test/__pycache__
+	rm -rfv lib/skyapi/test/*.pyc
+	
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

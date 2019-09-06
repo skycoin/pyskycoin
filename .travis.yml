@@ -1,8 +1,5 @@
 services:
   - docker
-env:
-  global:
-    - CGO_ENABLED: 1
 
 matrix:
   include:
@@ -68,7 +65,7 @@ matrix:
 
 env:
   global:
-    - CGO_ENABLED: 1
+    -CGO_ENABLED: 1
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
@@ -90,7 +87,13 @@ before_install:
 install:
   - eval "$(gimme 1.11)"  
 script:
-# Test PySkycoin
+  # Compile lib
+  - make build && make develop
+  # Format code to PEP8
+  - make format
+  # Linter code to pylint
+  - make lint
+  # Test PySkycoin
   - make test-ci
 after_failure:
   - cat ./.tox/${TOXENV}/log/${TOXENV}-*.log
@@ -139,3 +142,11 @@ deploy:
       tags: true
       repo: skycoin/pyskycoin
       condition: $TRAVIS_OS_NAME = "osx"
+  - provider: script
+    script: bash .travis/skyapi_deploy.sh
+    on:
+      all_branches: true
+      tags: true
+      repo: skycoin/pyskycoin
+      condition: $TRAVIS_BRANCH =~ "^release-.*$"
+# TODO: Upload manylinux wheels to PyPI
