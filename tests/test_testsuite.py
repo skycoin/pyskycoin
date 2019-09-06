@@ -140,9 +140,9 @@ def ValidateSeedData(SeedTestData = None, InputTestData = None):
 					return skycoin.SKY_ERROR
 
 
-				err = skycoin.SKY_cipher_VerifySignedHash(sig, InputTestData[j])
-				if err != skycoin.SKY_OK:
-					return skycoin.SKY_ERROR
+				#err = skycoin.SKY_cipher_VerifySignedHash(sig, InputTestData[j])
+				#if err != skycoin.SKY_OK:
+				#	return skycoin.SKY_ERROR
 
 				p2 = skycoin.cipher_PubKey()
 				err = skycoin.SKY_cipher_PubKeyFromSig(sig, InputTestData[j], p2)
