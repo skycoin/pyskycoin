@@ -16,7 +16,7 @@ from codecs import open
 from os import path
 
 NAME = "skyapi"
-VERSION = "0.25.1.post5"
+VERSION = "0.0.1"
 # To install the library, run the following
 #
 # python setup.py install

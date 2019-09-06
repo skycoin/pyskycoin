@@ -17,10 +17,17 @@ ADD . /io
 # Install Python 2.7/3.5 runtime and development tools
 RUN set -ex \
   && apt update \
-  && apt install -y --force-yes \
+  && apt install -y \
   python3 \
   python3-dev \
   python-dev \
+  ca-certificates \
+  libexpat1 \
+  libffi6 \
+  libreadline7 \
+  libsqlite3-0 \
+  libssl1.1 \
+  netbase \
   wget \
   curl \
   libpcre3-dev \
@@ -32,24 +39,21 @@ RUN set -ex \
   python3-wheel \
   make \
   cmake \
-  ca-certificates \
-  libexpat1 \
-  libffi6 \
-  libreadline7 \
-  libsqlite3-0 \
-  libssl1.1 \
-  netbase \
   swig
 
 # Install packages in PIP_PACKAGES
 
 # Python 2.7
-RUN pip install --upgrade  setuptools tox-travis wheel 
+RUN pip install --upgrade  setuptools tox-travis wheel \
+  && pip install -r "/io/requirements.dev.txt" \
+  && pip install -r "/io/lib/skyapi/requirements.txt" \
+  && pip install -r "/io/lib/skyapi/test-requirements.txt" 
 
-# Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis wheel
-
-
+# Python 3.7
+RUN pip3 install --upgrade  setuptools tox-travis wheel  \
+  && pip3 install -r "/io/requirements.dev.txt" \
+  && pip3 install -r "/io/lib/skyapi/requirements.txt" \
+  && pip3 install -r "/io/lib/skyapi/test-requirements.txt" 
 
 ENV CGO_ENABLE=1
 

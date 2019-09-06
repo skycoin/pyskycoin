@@ -1,6 +1,6 @@
 # PySkycoin
 
-[![Build Status](https://travis-ci.org/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.org/skycoin/pyskycoin)
+[![Build Status](https://travis-ci.com/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.com/skycoin/pyskycoin)
 
 Python extension for Skycoin API.
 A Python extension generated with SWIG to access Skycoin API from Python.
