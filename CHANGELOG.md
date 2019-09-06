@@ -5,7 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## PySkycoin [Unreleased]
+## PySkycoin 0.26.0 - 2019/09/06
+
+### Added
+
+- Updated `skyapi`, a wrapper for Skycoin node REST API at version 0.26.0
+- Export functions in Skycoin 0.26.0 core API's
+
+### Fixed
+
+### Removed
+
+### Known issues
 
 ## PySkycoin 0.25.1 - 2019/06/15
 
