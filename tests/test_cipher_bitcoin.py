@@ -15,7 +15,6 @@ def test_TestBitcoinAddressFromBytes():
     assert err == skycoin.SKY_ErrPubKeyFromNullSecKey
 
 
-
 def test_TestBitcoinWIPRoundTrio():
     public_key = skycoin.cipher_PubKey()
     secret_key_1 = skycoin.cipher_SecKey()
