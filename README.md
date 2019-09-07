@@ -165,6 +165,16 @@ for seckey in seckeys:
 	assert err == skycoin.SKY_OK
 ```
 
+## Example of how to verify address
+
+```python
+def addressIsValid(addr):
+    addres = skycoin.cipher__Address()
+    err = skycoin.SKY_cipher_DecodeBase58Address(addr, addres)
+    return err != skycoin.SKY_OK
+```
+
+
 ### Memory Management
 
 Memory management is transparent to the user. Any object allocated inside the library is left to be managed by Python garbage collector.
