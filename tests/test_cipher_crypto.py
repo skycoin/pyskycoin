@@ -1,4 +1,5 @@
 import skycoin
+import tests.utils as utils
 
 
 def test_TestNewPubKey():
@@ -40,7 +41,7 @@ def test_TestPubKeyVerify():
         public_key = skycoin.cipher_PubKey()
         _, data = skycoin.SKY_cipher_RandByte(33)
         skycoin.SKY_cipher_NewPubKey(data, public_key)
-        if skycoin.SKY_cipher_PubKey_Verify(public_key) is not None:
+        if skycoin.SKY_cipher_PubKey_Verify(public_key) != None:
             failed = True
             break
     assert failed is True
@@ -126,7 +127,7 @@ def test_TestSecKeyVerify():
     # Empty secret key should not be valid
     secret_key = skycoin.cipher_SecKey()
     public_key = skycoin.cipher_PubKey()
-    assert skycoin.SKY_cipher_SecKey_Verify(secret_key) is not None
+    assert skycoin.SKY_cipher_SecKey_Verify(secret_key) != None
     # Generated sec key should be valid
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
     assert skycoin.SKY_cipher_PubKey_Verify(public_key) == skycoin.SKY_OK
@@ -280,11 +281,47 @@ def test_TestSecKeyHashTest():
 
 
 def test_TestGenerateDeterministicKeyPairsUsesAllBytes():
-    # Tests that if a seed >128 bits is used, the generator does not ignore
-    # bits > 128
+    # Tests that if a seed >128 bits is used, the generator does not ignore bits > 128
     seed = b"property diet little foster provide disagree witness mountain alley weekend kitten general"
     secret_keys = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, 3)[
         1:]
     secret_keys_2 = skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(seed[:16], 3)[
         1:]
     assert secret_keys != secret_keys_2
+
+
+def test_TestPubKeyFromHex():
+    p1 = skycoin.cipher_PubKey()
+    # Invalid hex
+    err = skycoin.SKY_cipher_PubKeyFromHex(b"", p1)
+    assert err == skycoin.SKY_ErrInvalidLengthPubKey
+    err = skycoin.SKY_cipher_PubKeyFromHex(b"cascs", p1)
+    assert err == skycoin.SKY_ErrInvalidPubKey
+
+
+def test_TestPubKeyHex():
+    p, sk = utils.makecipher_PubKeyAndcipher_SecKey()
+    err, s3 = skycoin.SKY_cipher_PubKey_Hex(p)
+    assert err == skycoin.SKY_OK
+    p2 = skycoin.cipher_PubKey()
+    err = skycoin.SKY_cipher_PubKeyFromHex(s3, p2)
+    assert err == skycoin.SKY_OK
+    assert p == p2
+    err, s4 = skycoin.SKY_cipher_PubKey_Hex(p2)
+    assert err == skycoin.SKY_OK
+    assert s3 == s4
+
+
+def test_TestSecKeyFromHex():
+    sk = skycoin.cipher_SecKey()
+    # Invalid hex
+    err = skycoin.SKY_cipher_SecKeyFromHex(b"", sk)
+    assert err == skycoin.SKY_ErrInvalidLengthSecKey
+    err = skycoin.SKY_cipher_SecKeyFromHex(b"cascs", sk)
+    assert err == skycoin.SKY_ErrInvalidSecKey
+    # INvalid hex length
+    err, b = skycoin.SKY_cipher_RandByte(32)
+    p = skycoin.cipher_SecKey()
+    err = skycoin.SKY_cipher_NewSecKey(b, p)
+    assert err == skycoin.SKY_OK
+

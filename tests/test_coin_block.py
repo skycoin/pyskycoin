@@ -12,22 +12,22 @@ def makeTestTransactions():
 
 
 def makeNewBlock(uxHash):
-    bodyhash = skycoin.cipher_SHA256()
     transactions = makeTestTransactions()
     err, block = skycoin.SKY_coin_NewEmptyBlock(transactions)
     assert err == skycoin.SKY_OK
-    err, pBlock = skycoin.SKY_coin_GetBlockObject(block)
+    err, pBlockHeader = skycoin.SKY_coin_Block_GetBlockHeader(block)
     assert err == skycoin.SKY_OK
-    pBlock.Head.Version = 0x02
-    pBlock.Head.Time = 100
-    pBlock.Head.BkSeq = 0
-    pBlock.Head.Fee = 10
+    err = skycoin.SKY_coin_BlockHeader_SetTime(pBlockHeader, 100)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetBkSeq(pBlockHeader, 0)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetVersion(pBlockHeader, 0x02)
+    assert err == skycoin.SKY_OK
+    err = skycoin.SKY_coin_BlockHeader_SetFee(pBlockHeader, 10)
+    assert err == skycoin.SKY_OK
     err, body = skycoin.SKY_coin_GetBlockBody(block)
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_coin_BlockBody_Hash(body, bodyhash)
-    assert err == skycoin.SKY_OK
-    return skycoin.SKY_coin_NewBlock(block, int(
-        100 + 200), uxHash, transactions, utils.feeCalc)
+    return skycoin.SKY_coin_NewBlock(block, int(100 + 200), uxHash, transactions, utils.feeCalc)
 
 
 def addTransactionToBlock(b):
@@ -46,11 +46,13 @@ def test_TestNewBlock():
     pBlock.Head.Time = 100
     pBlock.Head.BkSeq = 98
     uxHash = utils.RandSHA256()
-    err, _ = skycoin.SKY_coin_NewBlock(block, 133, uxHash, txns, utils.badFeeCalculator)
+    err, _ = skycoin.SKY_coin_NewBlock(
+        block, 133, uxHash, txns, utils.badFeeCalculator)
     assert err != skycoin.SKY_OK
     err, txns1 = skycoin.SKY_coin_Create_Transactions()
     assert err == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_NewBlock(block, 133, uxHash, txns1, utils.feeCalc)
+    err, _ = skycoin.SKY_coin_NewBlock(
+        block, 133, uxHash, txns1, utils.feeCalc)
     assert err != skycoin.SKY_OK
     fee = int(121)
     currentTime = int(133)
@@ -71,7 +73,8 @@ def test_TestBlockHashHeader():
     hash2 = skycoin.cipher_SHA256()
     err = skycoin.SKY_coin_Block_HashHeader(block, hash1)
     assert err == skycoin.SKY_OK
-    err = skycoin.SKY_coin_BlockHeader_Hash(pBlock.Head, hash2)
+    err, blockheader = skycoin.SKY_coin_Block_GetBlockHeader(block)
+    err = skycoin.SKY_coin_BlockHeader_Hash(blockheader, hash2)
     assert err == skycoin.SKY_OK
     assert hash1.toStr() == hash2.toStr()
     hash2 = skycoin.cipher_SHA256()
