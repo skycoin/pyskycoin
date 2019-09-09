@@ -1,4 +1,4 @@
-__version__ = "0.26.0.dev2"
+__version__ = "0.26.0"
 init_error = None
 
 def _print2stderr(msg):
