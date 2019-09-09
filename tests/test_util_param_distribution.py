@@ -6,7 +6,7 @@ def test_TestDistributionAddressArrays():
     addrs = skycoin.SKY_params_GetDistributionAddresses()
     assert len(addrs) == 100
     #  At the time of this writing, there should be 25 addresses in the
-    #  unlocked pool and 75 in the locked pool.
+	#  unlocked pool and 75 in the locked pool.
     unlocked = skycoin.SKY_params_GetUnlockedDistributionAddresses()
     assert len(unlocked) == 25
     locked = skycoin.SKY_params_GetLockedDistributionAddresses()
@@ -18,7 +18,7 @@ def test_TestDistributionAddressArrays():
                 break
             jStr = addrs[i + 1]
             assert iStr != jStr
-
+    
     for i in range(len(unlocked)):
         iStr = unlocked[i]
         for j in range(i + 1):

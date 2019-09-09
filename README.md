@@ -1,6 +1,6 @@
 # PySkycoin
 
-[![Build Status](https://travis-ci.org/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.org/skycoin/pyskycoin)
+[![Build Status](https://travis-ci.com/skycoin/pyskycoin.svg?branch=develop)](https://travis-ci.com/skycoin/pyskycoin)
 
 Python extension for Skycoin API.
 A Python extension generated with SWIG to access Skycoin API from Python.
@@ -164,6 +164,16 @@ for seckey in seckeys:
 	err = skycoin.SKY_cipher_PubKey_Verify(pubkey)
 	assert err == skycoin.SKY_OK
 ```
+
+## Example of how to verify address
+
+```python
+def addressIsValid(addr):
+    addres = skycoin.cipher__Address()
+    err = skycoin.SKY_cipher_DecodeBase58Address(addr, addres)
+    return err != skycoin.SKY_OK
+```
+
 
 ### Memory Management
 

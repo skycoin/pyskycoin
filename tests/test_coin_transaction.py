@@ -44,8 +44,8 @@ def test_TestTransactionVerify():
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_Transaction_GetInputAt(
         handle, 0, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    r = skycoin.SKY_coin_Transaction_PushInput(handle, h)
+    assert r == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_ResetSignatures(
         handle, 0) == skycoin.SKY_OK
     secKeys = []
@@ -89,8 +89,7 @@ def test_TestTransactionVerify():
         handle, pOutput.Address, pOutput.Coins, pOutput.Hours) == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_UpdateHeader(handle) == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_Verify(handle) == skycoin.SKY_ERROR
-    # Output coins are not multiples of 1e6 (valid, decimal restriction is not
-    # enforced here)
+    # Output coins are not multiples of 1e6 (valid, decimal restriction is not enforced here)
     handle, _ = utils.makeTransaction()
     assert skycoin.SKY_coin_Transaction_GetOutputAt(
         handle, 0, pOutput) == skycoin.SKY_OK
@@ -124,14 +123,13 @@ def test_TestTransactionVerify():
     assert skycoin.SKY_coin_Transaction_UpdateHeader(handle) == skycoin.SKY_OK
     assert skycoin.SKY_coin_Transaction_Verify(handle) == skycoin.SKY_OK
 
-
 def test_TestTransactionVerifyInput():
     # Valid
     ux, s = utils.makeUxOutWithSecret()
     handle, tx = utils.makeTransactionFromUxOut(ux, s)
     seckeys = []
     seckeys.append(ux)
-    assert skycoin.SKY_coin_Transaction_VerifyInput(
+    assert skycoin.SKY_coin_VerifyInputSignatures(
         handle, seckeys) == skycoin.SKY_OK
 
 
@@ -140,7 +138,7 @@ def test_TestTransactionPushInput():
     ux = utils.makeUxOut()
     sha = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == skycoin.SKY_OK
-    _, r = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
+    r = skycoin.SKY_coin_Transaction_PushInput(handle, sha)
     assert r == 0
     _, count = skycoin.SKY_coin_Transaction_GetInputsCount(handle)
     assert count == 1
@@ -149,9 +147,8 @@ def test_TestTransactionPushInput():
     assert sha == sha1
     skycoin.SKY_coin_Transaction_ResetInputs(handle, 0)
     for _ in range(utils.MaxUint16):
-        err, _ = skycoin.SKY_coin_Transaction_PushInput(
+        skycoin.SKY_coin_Transaction_PushInput(
             handle, skycoin.cipher_SHA256())
-        assert err == skycoin.SKY_OK
     ux = utils.makeUxOut()
     assert skycoin.SKY_coin_UxOut_Hash(ux, sha) == skycoin.SKY_OK
 
@@ -192,8 +189,7 @@ def test_TestTransactionSignInputs():
     handle = utils.makeEmptyTransaction()
     # Panics if txns already signed
     sig = skycoin.cipher_Sig()
-    assert skycoin.SKY_coin_Transaction_PushSignature(
-        handle, sig) == skycoin.SKY_OK
+    assert skycoin.SKY_coin_Transaction_PushSignature(handle, sig) == skycoin.SKY_OK
     secKeys = []
     secKeys.append(skycoin.cipher_SecKey())
     # Panics if not enough keys
@@ -201,12 +197,10 @@ def test_TestTransactionSignInputs():
     ux, s = utils.makeUxOutWithSecret()
     h = skycoin.cipher_SHA256()
     assert skycoin.SKY_coin_UxOut_Hash(ux, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    skycoin.SKY_coin_Transaction_PushInput(handle, h)
     ux2, s2 = utils.makeUxOutWithSecret()
     assert skycoin.SKY_coin_UxOut_Hash(ux2, h) == skycoin.SKY_OK
-    err, _ = skycoin.SKY_coin_Transaction_PushInput(handle, h)
-    assert err == skycoin.SKY_OK
+    skycoin.SKY_coin_Transaction_PushInput(handle, h)
     assert skycoin.SKY_coin_Transaction_PushOutput(
         handle, utils.makeAddress(), 40, 80) == skycoin.SKY_OK
     err, count = skycoin.SKY_coin_Transaction_GetSignaturesCount(handle)
@@ -250,7 +244,6 @@ def test_TestTransactionSignInputs():
     assert skycoin.SKY_coin_Transaction_GetSignatureAt(
         handle, 1, txsig1) == skycoin.SKY_OK
 
-
 def test_TestTransactionHash():
     handle, _ = utils.makeTransaction()
     h = skycoin.cipher_SHA256()
@@ -260,7 +253,6 @@ def test_TestTransactionHash():
     assert skycoin.SKY_coin_Transaction_HashInner(
         handle, h2) == skycoin.SKY_OK
     assert h != h2
-
 
 def test_TestTransactionUpdateHeader():
     handle, tx = utils.makeTransaction()
@@ -276,7 +268,6 @@ def test_TestTransactionUpdateHeader():
     assert h1 != skycoin.cipher_SHA256()
     assert h1 == h
     assert h1 == h2
-
 
 def test_TestTransactionHashInner():
     handle, tx = utils.makeTransaction()
@@ -335,7 +326,6 @@ def test_TestTransactionHashInner():
         handle2, sha2) == skycoin.SKY_OK
     assert sha1 == sha2
 
-
 def test_TestTransactionSerialization():
     handle, tx = utils.makeTransaction()
     err, b = skycoin.SKY_coin_Transaction_Serialize(handle)
@@ -345,7 +335,6 @@ def test_TestTransactionSerialization():
     err, tx2 = skycoin.SKY_coin_GetTransactionObject(handle2)
     assert err == skycoin.SKY_OK
     assert tx == tx2
-
 
 def test_TestTransactionOutputHours():
     handle = utils.makeEmptyTransaction()
@@ -362,11 +351,9 @@ def test_TestTransactionOutputHours():
     assert hours == 800
 
     assert skycoin.SKY_coin_Transaction_PushOutput(
-        handle, utils.makeAddress(), int(1e6), int(
-            utils.MaxUint64 - 700)) == skycoin.SKY_OK
+        handle, utils.makeAddress(), int(1e6), int(utils.MaxUint64 - 700)) == skycoin.SKY_OK
     err, _ = skycoin.SKY_coin_Transaction_OutputHours(handle)
     assert err == skycoin.SKY_ERROR
-
 
 def test_TestTransactionsSize():
     handle = utils.makeTransactions(10)
@@ -383,7 +370,6 @@ def test_TestTransactionsSize():
     assert err == skycoin.SKY_OK
     assert sizetx == size
 
-
 def test_TestTransactionsHashes():
     handle = utils.makeTransactions(4)
     err, hashes = skycoin.SKY_coin_Transactions_Hashes(handle)
@@ -397,7 +383,6 @@ def test_TestTransactionsHashes():
         assert skycoin.SKY_coin_Transaction_Hash(tx, h) == skycoin.SKY_OK
         assert h == hashes[i]
         i += 1
-
 
 def test_TestTransactionsTruncateBytesTo():
     handles = utils.makeTransactions(10)
@@ -488,11 +473,9 @@ def test_TestTransactionsTruncateBytesTo():
     assert err == skycoin.SKY_OK
     assert count == trunc
 
-
 class ux():
     coins = 0
     hours = 0
-
 
 class cases():
     name = ""
@@ -500,7 +483,6 @@ class cases():
     outUxs = []
     err = 0
     headTime = 0
-
 
 def test_TestVerifyTransactionCoinsSpending():
     case = []
@@ -604,7 +586,6 @@ def test_TestVerifyTransactionCoinsSpending():
             uxOut.append(puxOut)
         assert skycoin.SKY_coin_VerifyTransactionCoinsSpending(
             uxIn, uxOut) == tc.err
-
 
 def test_TestVerifyTransactionHoursSpending():
     case = []
@@ -764,14 +745,11 @@ def test_TestVerifyTransactionHoursSpending():
         assert skycoin.SKY_coin_VerifyTransactionHoursSpending(
             tc.headTime, uxIn, uxOut) == tc.err
 
-
 def calc(transactions):
     return skycoin.SKY_OK, 1
 
-
 def overflowCalc(transaction):
     return skycoin.SKY_ERROR, utils.MaxUint64
-
 
 def test_TestTransactionsFees():
     txns = utils.makeTransactions(0)

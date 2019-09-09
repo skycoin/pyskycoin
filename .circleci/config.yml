@@ -23,7 +23,7 @@ jobs:
           version: 18.06.0-ce
           docker_layer_caching: true
       - run: docker build  --build-arg URL_DEPLOY=https://test.pypi.org/legacy/ --build-arg PYPI_USER=pyskycoin  --build-arg PYPI_PASSWD="prerelease_0.X" --build-arg GO_ARCH=386 --build-arg ARCH=i686 --file $GOPATH/src/github.com/skycoin/pyskycoin/docker/images/deploy/Dockerfile  $GOPATH/src/github.com/skycoin/pyskycoin -t skydev-test
-  
+
   manylinuxarmv7:
     docker:
       - image: circleci/golang:1.12
@@ -59,7 +59,7 @@ jobs:
           version: 18.06.0-ce
           docker_layer_caching: true
       - run: cd $GOPATH/src/github.com/skycoin/pyskycoin/.circleci && bash deploy.sh
-          
+
 workflows:
   version: 2
   arm_test:

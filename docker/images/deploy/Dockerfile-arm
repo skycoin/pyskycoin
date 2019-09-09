@@ -1,26 +1,14 @@
-ARG ARCH
-FROM balenalib/${ARCH}-debian-golang
-ARG URL_DEPLOY
-ARG PYPI_USER
-ARG PYPI_PASSWD
 
-ARG GITHUB_OAUTH_TOKEN
-ARG PROJECT_USERNAME
-ARG PROJECT_REPONAME
-ARG SHA1
-ARG VERSION
+FROM balenalib/armv7hf-debian-golang
+
 RUN [ "cross-build-start" ]
-
 RUN mkdir -p /io
+
 ADD . /io
 
 # Install Python 2.7/3.5 runtime and development tools
 RUN set -ex \
   && apt update \
-  && apt install -y --force-yes \
-  python3 \
-  python3-dev \
-  python-dev \
   wget \
   curl \
   libpcre3-dev \
@@ -28,29 +16,16 @@ RUN set -ex \
   python3-pip \
   python-setuptools \
   python3-setuptools \
+  python3-venv \
   python-wheel \
   python3-wheel \
   make \
   cmake \
-  ca-certificates \
-  libexpat1 \
-  libffi6 \
-  libreadline7 \
-  libsqlite3-0 \
-  libssl1.1 \
-  netbase \
   swig
 
 # Install packages in PIP_PACKAGES
 
 # Python 2.7
-RUN pip install --upgrade  setuptools tox-travis wheel 
-
-# Python 3.5
-RUN pip3 install --upgrade  setuptools tox-travis wheel
-
-
-
 ENV CGO_ENABLE=1
 
 RUN go version
@@ -60,14 +35,13 @@ RUN cd /io && git submodule update --init --recursive
 RUN make -C /io/gopath/src/github.com/skycoin/libskycoin dep
 RUN make -C /io build-libc
 RUN make -C /io build-swig 
-RUN mkdir -p /io/wheelhouse
 RUN sh /io/.circleci/circle_wheels_arm.sh
+
 RUN ls /io/wheelhouse
 RUN mkdir -p /io/dist
 RUN cp -v /io/wheelhouse/* /io/dist
 RUN pip install twine
-ENV TWINE_PATH=twine
-RUN bash /io/.circleci/upload_pypi.sh
+RUN twine upload -u pyskycoin -p "prerelease_0.X" --skip-existing --repository-url https://test.pypi.org/legacy/ /io/dist/*
 
 RUN [ "cross-build-end" ]
 
