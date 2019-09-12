@@ -124,17 +124,9 @@ def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
     return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
 
-def SKY_params_GetDistributionAddresses():
-    return _skycoin.SKY_params_GetDistributionAddresses()
-SKY_params_GetDistributionAddresses = _skycoin.SKY_params_GetDistributionAddresses
-
-def SKY_params_GetUnlockedDistributionAddresses():
-    return _skycoin.SKY_params_GetUnlockedDistributionAddresses()
-SKY_params_GetUnlockedDistributionAddresses = _skycoin.SKY_params_GetUnlockedDistributionAddresses
-
-def SKY_params_GetLockedDistributionAddresses():
-    return _skycoin.SKY_params_GetLockedDistributionAddresses()
-SKY_params_GetLockedDistributionAddresses = _skycoin.SKY_params_GetLockedDistributionAddresses
+def SKY_params_Distribution_GetAddresses(p0):
+    return _skycoin.SKY_params_Distribution_GetAddresses(p0)
+SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -1557,6 +1549,10 @@ def SKY_Handle_Strings_SetAt(p0, p1):
     return _skycoin.SKY_Handle_Strings_SetAt(p0, p1)
 SKY_Handle_Strings_SetAt = _skycoin.SKY_Handle_Strings_SetAt
 
+def SKY_Handle_Strings_Get(p1):
+    return _skycoin.SKY_Handle_Strings_Get(p1)
+SKY_Handle_Strings_Get = _skycoin.SKY_Handle_Strings_Get
+
 def SKY_api_Handle_Client_GetWalletDir(p0):
     return _skycoin.SKY_api_Handle_Client_GetWalletDir(p0)
 SKY_api_Handle_Client_GetWalletDir = _skycoin.SKY_api_Handle_Client_GetWalletDir
@@ -2164,10 +2160,6 @@ SKY_params_Distribution_GetUnlockTimeInterval = _skycoin.SKY_params_Distribution
 def SKY_params_Distribution_SetUnlockTimeInterval(p0, p1):
     return _skycoin.SKY_params_Distribution_SetUnlockTimeInterval(p0, p1)
 SKY_params_Distribution_SetUnlockTimeInterval = _skycoin.SKY_params_Distribution_SetUnlockTimeInterval
-
-def SKY_params_Distribution_GetAddresses(p0):
-    return _skycoin.SKY_params_Distribution_GetAddresses(p0)
-SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
 
 def SKY_params_Distribution_SetAddresses(p0):
     return _skycoin.SKY_params_Distribution_SetAddresses(p0)
