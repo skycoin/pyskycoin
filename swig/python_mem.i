@@ -336,26 +336,26 @@
 }
 
 
-%rename(SKY_params_GetDistributionAddresses) wrap_SKY_params_GetDistributionAddresses;
+%rename(SKY_params_Distribution_GetAddresses) wrap_SKY_params_Distribution_GetAddresses;
 %inline{
-	 void wrap_SKY_params_GetDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetDistributionAddresses(__return_strings);
+	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle p0, Strings__Handle* __return_strings){
+		 return SKY_params_Distribution_GetAddresses(p0,__return_strings);
 	}
 }
 
-%rename(SKY_params_GetUnlockedDistributionAddresses) wrap_SKY_params_GetUnlockedDistributionAddresses;
-%inline{
-	 void wrap_SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetUnlockedDistributionAddresses(__return_strings);
-	}
-}
+// %rename(SKY_params_GetUnlockedDistributionAddresses) wrap_SKY_params_GetUnlockedDistributionAddresses;
+// %inline{
+// 	 void wrap_SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* __return_strings){
+// 		SKY_params_GetUnlockedDistributionAddresses(__return_strings);
+// 	}
+// }
 
-%rename(SKY_params_GetLockedDistributionAddresses) wrap_SKY_params_GetLockedDistributionAddresses;
-%inline{
-	 void wrap_SKY_params_GetLockedDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetLockedDistributionAddresses(__return_strings);
-	}
-}
+// %rename(SKY_params_GetLockedDistributionAddresses) wrap_SKY_params_GetLockedDistributionAddresses;
+// %inline{
+// 	 void wrap_SKY_params_GetLockedDistributionAddresses(coin__UxArray* __return_strings){
+// 		SKY_params_GetLockedDistributionAddresses(__return_strings);
+// 	}
+// }
 
 %rename(SKY_coin_VerifyInputSignatures) wrap_SKY_coin_VerifyInputSignatures;
 %inline{

@@ -14,15 +14,19 @@
 	$1 = &temp;
 }
 
+
 /*GoStrings* as function return typemap*/
-%typemap(argout) (coin__UxArray* __return_strings) {
-	int itoken;
+%typemap(argout) (Strings__Handle* __return_strings) {
+    GoUint8 buffer[1024];
+    GoSlice strReturn = { buffer,0,1024 };
+	SKY_Handle_Strings_Get($1,&strReturn);
+    int itoken;
 	PyObject *list = PyList_New(0);
     GoString *iStr;
-   int ntokens = $1->len; 
+   int ntokens = strReturn.len; 
    PyObject *py_string_tmp; 
    int py_err; 
-   for (itoken = 0, iStr = (GoString *) $1->data; itoken< ntokens; ++itoken, ++iStr) {
+   for (itoken = 0, iStr = (GoString *) &strReturn.data; itoken< ntokens; ++itoken, ++iStr) {
        if (iStr == NULL) break; 
 
        /* convert C string to Python string */ 
@@ -33,7 +37,7 @@
        PyList_Append(list, py_string_tmp);
        if (py_err == -1) return NULL; 
    } 
-	if( $1->data != NULL)
-		free( (void*)$1->data );
+	if( strReturn.data != NULL)
+		free( (void*)strReturn.data );
 	%append_output( list );
 }
