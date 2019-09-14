@@ -26,6 +26,11 @@
 	$1 = &temp;
 }
 
+/*GoStrings* parameter to return as a list */
+%typemap(in, numinputs=0) (Strings__Handle* __return_strings) {
+	$1 = 0;
+}
+
 /*GoStrings* as function return typemap*/
 %typemap(argout) (GoSlice* __return_strings) {
 	int itoken;
