@@ -3,7 +3,7 @@ import tests.utils as utils
 
 
 def test_TestDistributionAddressArrays():
-    # skycoin.SKY_params_Distribution_GetMainNetDistribution()
+    skycoin.SKY_params_Distribution_GetMainNetDistribution()
 
     # assert 45 == skycoin.SKY_params_Distribution_GetAddresses(dist)
     # assert err == skycoin.SKY_OK

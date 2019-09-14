@@ -69,7 +69,7 @@ env:
     - PATH_SUBMODULE: "gopath/src/github.com/skycoin/libskycoin"
 
 before_install:
-  - (cd $PATH_SUBMODULE && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t105_update_submodule_0.27.0 && git checkout stdevHan_t105_update_submodule_0.27.0)
+  - bash ./.travis/change_submodule.sh
   - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then bash ./.travis/install-osx.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == 'osx' ]]; then
