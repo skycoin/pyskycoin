@@ -138,7 +138,7 @@ format: ## Format code that autopep8
 
 lint: ## Linter to pylint
 	pylint -E tests/*.py
-	# yamllint -d relaxed .travis.yml
+	yamllint -d relaxed .travis.yml
 	
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
