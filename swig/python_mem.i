@@ -338,8 +338,9 @@
 
 %rename(SKY_params_Distribution_GetAddresses) wrap_SKY_params_Distribution_GetAddresses;
 %inline{
-	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle p0, Strings__Handle* __return_strings){
-		 return SKY_params_Distribution_GetAddresses(p0,__return_strings);
+	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle _d, GoSlice* __return_strings){
+		 
+		 return SKY_params_Distribution_GetAddresses(_d,__return_strings);
 	}
 }
 
