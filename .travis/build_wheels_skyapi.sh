@@ -17,14 +17,16 @@ source /etc/profile
 go version
 go env
 
+mkdir -p /io/lib/skyapi/wheelhouse
+
 # Compile wheels
 for PYBIN in /opt/python/*/bin; do
   "${PYBIN}/pip" install -r /io/lib/skyapi/requirements.txt
-  "${PYBIN}/pip" wheel /io/lib/skyapi/ -w wheelhouse/
+  "${PYBIN}/pip" wheel /io/lib/skyapi/ -w /io/lib/skyapi/wheelhouse/
 done
 
 # Bundle external shared libraries into the wheels
-for whl in wheelhouse/*.whl; do
-  auditwheel repair "$whl" -w /io/wheelhouse/
+for whl in /io/lib/skyapi/wheelhouse/*.whl; do
+  auditwheel repair "$whl" -w /io/lib/skyapi/wheelhouse/
 done
 
