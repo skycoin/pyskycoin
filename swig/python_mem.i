@@ -6,6 +6,15 @@
   $1 = PyInt_Check($input) ? 1 : 0;
 }
 
+%typecheck(SWIG_TYPECHECK_INTEGER) Distribution__Handle {
+  $1 = PyInt_Check($input) ? 1 : 0;
+}
+
+
+%typecheck(SWIG_TYPECHECK_INTEGER) Strings__Handle {
+  $1 = PyInt_Check($input) ? 1 : 0;
+}
+
 %typecheck(SWIG_TYPECHECK_INTEGER) AddressUxOuts_Handle {
   $1 = PyInt_Check($input) ? 1 : 0;
 }
@@ -336,13 +345,13 @@
 }
 
 
-%rename(SKY_params_Distribution_GetAddresses) wrap_SKY_params_Distribution_GetAddresses;
-%inline{
-	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle _d, Strings__Handle* __return_strings){
+// %rename(SKY_params_Distribution_GetAddresses) wrap_SKY_params_Distribution_GetAddresses;
+// %inline{
+// 	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle _d, Strings__Handle* __return_strings){
 		 
-		 return SKY_params_Distribution_GetAddresses(_d,__return_strings);
-	}
-}
+// 		 return SKY_params_Distribution_GetAddresses(_d,__return_strings);
+// 	}
+// }
 
 // %rename(SKY_params_GetUnlockedDistributionAddresses) wrap_SKY_params_GetUnlockedDistributionAddresses;
 // %inline{
