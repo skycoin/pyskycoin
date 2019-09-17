@@ -3,15 +3,16 @@ import tests.utils as utils
 
 
 def test_TestDistributionAddressArrays():
-    skycoin.SKY_params_Distribution_GetMainNetDistribution()
+    err, dist = skycoin.SKY_params_Distribution_GetMainNetDistribution()
+    assert err == skycoin.SKY_OK
+    err, handle_addr = skycoin.SKY_params_Distribution_GetAddresses(dist)
+    assert err == skycoin.SKY_OK
+    err, length_addr = skycoin.SKY_Handle_Strings_GetCount(handle_addr)
+    assert err == skycoin.SKY_OK
 
-    # assert 45 == skycoin.SKY_params_Distribution_GetAddresses(dist)
-    # assert err == skycoin.SKY_OK
-    # assert 45 == len(addrs)
-
-    # assert err == 100
-    # #  At the time of this writing, there should be 25 addresses in the
-    # #  unlocked pool and 75 in the locked pool.
+    assert length_addr == 100
+    #  At the time of this writing, there should be 25 addresses in the
+    #  unlocked pool and 75 in the locked pool.
     # unlocked = skycoin.SKY_params_GetUnlockedDistributionAddresses()
     # assert len(unlocked) == 25
     # locked = skycoin.SKY_params_GetLockedDistributionAddresses()
