@@ -681,22 +681,6 @@ def SKY_Handle_Connections_GetCount(p0):
     return _skycoin.SKY_Handle_Connections_GetCount(p0)
 SKY_Handle_Connections_GetCount = _skycoin.SKY_Handle_Connections_GetCount
 
-def SKY_Handle_Strings_GetCount(p0):
-    return _skycoin.SKY_Handle_Strings_GetCount(p0)
-SKY_Handle_Strings_GetCount = _skycoin.SKY_Handle_Strings_GetCount
-
-def SKY_Handle_Strings_Sort(p0):
-    return _skycoin.SKY_Handle_Strings_Sort(p0)
-SKY_Handle_Strings_Sort = _skycoin.SKY_Handle_Strings_Sort
-
-def SKY_Handle_Strings_GetAt(p0, p1):
-    return _skycoin.SKY_Handle_Strings_GetAt(p0, p1)
-SKY_Handle_Strings_GetAt = _skycoin.SKY_Handle_Strings_GetAt
-
-def SKY_Handle_Strings_SetAt(p0, p1):
-    return _skycoin.SKY_Handle_Strings_SetAt(p0, p1)
-SKY_Handle_Strings_SetAt = _skycoin.SKY_Handle_Strings_SetAt
-
 def SKY_api_Handle_Client_GetWalletDir(p0):
     return _skycoin.SKY_api_Handle_Client_GetWalletDir(p0)
 SKY_api_Handle_Client_GetWalletDir = _skycoin.SKY_api_Handle_Client_GetWalletDir
@@ -1509,8 +1493,8 @@ def SKY_cli_FormatAddressesAsJoinedArray(p0):
     return _skycoin.SKY_cli_FormatAddressesAsJoinedArray(p0)
 SKY_cli_FormatAddressesAsJoinedArray = _skycoin.SKY_cli_FormatAddressesAsJoinedArray
 
-def SKY_cli_AddressesToStrings(p0):
-    return _skycoin.SKY_cli_AddressesToStrings(p0)
+def SKY_cli_AddressesToStrings(p0, p1):
+    return _skycoin.SKY_cli_AddressesToStrings(p0, p1)
 SKY_cli_AddressesToStrings = _skycoin.SKY_cli_AddressesToStrings
 
 def SKY_handle_close(p0):
@@ -1789,8 +1773,8 @@ def SKY_api_Client_Wallets(p0):
     return _skycoin.SKY_api_Client_Wallets(p0)
 SKY_api_Client_Wallets = _skycoin.SKY_api_Client_Wallets
 
-def SKY_api_Client_NewWalletAddress(p0, p1, p2, p3):
-    return _skycoin.SKY_api_Client_NewWalletAddress(p0, p1, p2, p3)
+def SKY_api_Client_NewWalletAddress(p0, p1, p2, p3, p4):
+    return _skycoin.SKY_api_Client_NewWalletAddress(p0, p1, p2, p3, p4)
 SKY_api_Client_NewWalletAddress = _skycoin.SKY_api_Client_NewWalletAddress
 
 def SKY_api_Client_WalletBalance(p0, p1, p2):
@@ -2153,12 +2137,12 @@ def SKY_params_Distribution_SetUnlockTimeInterval(p0, p1):
     return _skycoin.SKY_params_Distribution_SetUnlockTimeInterval(p0, p1)
 SKY_params_Distribution_SetUnlockTimeInterval = _skycoin.SKY_params_Distribution_SetUnlockTimeInterval
 
-def SKY_params_Distribution_GetAddresses(p0):
-    return _skycoin.SKY_params_Distribution_GetAddresses(p0)
+def SKY_params_Distribution_GetAddresses(*args):
+    return _skycoin.SKY_params_Distribution_GetAddresses(*args)
 SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
 
-def SKY_params_Distribution_SetAddresses(p0):
-    return _skycoin.SKY_params_Distribution_SetAddresses(p0)
+def SKY_params_Distribution_SetAddresses(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetAddresses(p0, p1)
 SKY_params_Distribution_SetAddresses = _skycoin.SKY_params_Distribution_SetAddresses
 
 def SKY_params_Distribution_Validate(p0):
@@ -2169,12 +2153,12 @@ def SKY_params_Distribution_AddressInitialBalance(p0):
     return _skycoin.SKY_params_Distribution_AddressInitialBalance(p0)
 SKY_params_Distribution_AddressInitialBalance = _skycoin.SKY_params_Distribution_AddressInitialBalance
 
-def SKY_params_Distribution_UnlockedAddresses(p0):
-    return _skycoin.SKY_params_Distribution_UnlockedAddresses(p0)
+def SKY_params_Distribution_UnlockedAddresses(*args):
+    return _skycoin.SKY_params_Distribution_UnlockedAddresses(*args)
 SKY_params_Distribution_UnlockedAddresses = _skycoin.SKY_params_Distribution_UnlockedAddresses
 
-def SKY_params_Distribution_LockedAddresses(p0):
-    return _skycoin.SKY_params_Distribution_LockedAddresses(p0)
+def SKY_params_Distribution_LockedAddresses(*args):
+    return _skycoin.SKY_params_Distribution_LockedAddresses(*args)
 SKY_params_Distribution_LockedAddresses = _skycoin.SKY_params_Distribution_LockedAddresses
 
 def SKY_params_Distribution_AddressesDecoded(p0):
@@ -2894,36 +2878,6 @@ class coin__UxHead(_object):
 coin__UxHead_swigregister = _skycoin.coin__UxHead_swigregister
 coin__UxHead_swigregister(coin__UxHead)
 
-class coin__UxArray(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, coin__UxArray, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, coin__UxArray, name)
-    __repr__ = _swig_repr
-    __swig_setmethods__["data"] = _skycoin.coin__UxArray_data_set
-    __swig_getmethods__["data"] = _skycoin.coin__UxArray_data_get
-    if _newclass:
-        data = _swig_property(_skycoin.coin__UxArray_data_get, _skycoin.coin__UxArray_data_set)
-    __swig_setmethods__["len"] = _skycoin.coin__UxArray_len_set
-    __swig_getmethods__["len"] = _skycoin.coin__UxArray_len_get
-    if _newclass:
-        len = _swig_property(_skycoin.coin__UxArray_len_get, _skycoin.coin__UxArray_len_set)
-    __swig_setmethods__["cap"] = _skycoin.coin__UxArray_cap_set
-    __swig_getmethods__["cap"] = _skycoin.coin__UxArray_cap_get
-    if _newclass:
-        cap = _swig_property(_skycoin.coin__UxArray_cap_get, _skycoin.coin__UxArray_cap_set)
-
-    def __init__(self):
-        this = _skycoin.new_coin__UxArray()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _skycoin.delete_coin__UxArray
-    __del__ = lambda self: None
-coin__UxArray_swigregister = _skycoin.coin__UxArray_swigregister
-coin__UxArray_swigregister(coin__UxArray)
-
 class coin__UxBody(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, coin__UxBody, name, value)
@@ -2992,6 +2946,36 @@ class coin__UxOut(_object):
     __del__ = lambda self: None
 coin__UxOut_swigregister = _skycoin.coin__UxOut_swigregister
 coin__UxOut_swigregister(coin__UxOut)
+
+class coin__UxArray(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, coin__UxArray, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, coin__UxArray, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["data"] = _skycoin.coin__UxArray_data_set
+    __swig_getmethods__["data"] = _skycoin.coin__UxArray_data_get
+    if _newclass:
+        data = _swig_property(_skycoin.coin__UxArray_data_get, _skycoin.coin__UxArray_data_set)
+    __swig_setmethods__["len"] = _skycoin.coin__UxArray_len_set
+    __swig_getmethods__["len"] = _skycoin.coin__UxArray_len_get
+    if _newclass:
+        len = _swig_property(_skycoin.coin__UxArray_len_get, _skycoin.coin__UxArray_len_set)
+    __swig_setmethods__["cap"] = _skycoin.coin__UxArray_cap_set
+    __swig_getmethods__["cap"] = _skycoin.coin__UxArray_cap_get
+    if _newclass:
+        cap = _swig_property(_skycoin.coin__UxArray_cap_get, _skycoin.coin__UxArray_cap_set)
+
+    def __init__(self):
+        this = _skycoin.new_coin__UxArray()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _skycoin.delete_coin__UxArray
+    __del__ = lambda self: None
+coin__UxArray_swigregister = _skycoin.coin__UxArray_swigregister
+coin__UxArray_swigregister(coin__UxArray)
 
 class httphelper__Address(_object):
     __swig_setmethods__ = {}
