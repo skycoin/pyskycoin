@@ -973,8 +973,8 @@ def SKY_apputil_PrintProgramStatus():
     return _skycoin.SKY_apputil_PrintProgramStatus()
 SKY_apputil_PrintProgramStatus = _skycoin.SKY_apputil_PrintProgramStatus
 
-def SKY_cipher_RandByte(p0, p1):
-    return _skycoin.SKY_cipher_RandByte(p0, p1)
+def SKY_cipher_RandByte(p0):
+    return _skycoin.SKY_cipher_RandByte(p0)
 SKY_cipher_RandByte = _skycoin.SKY_cipher_RandByte
 
 def SKY_cipher_NewPubKey(p0, p1):

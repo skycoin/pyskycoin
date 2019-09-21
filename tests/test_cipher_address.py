@@ -163,31 +163,31 @@ def test_TestBitcoinAddress3():
     assert bitcoin_srt == bitcoin_addr_str
 
 
-# def test_TestAddressBulk():
-#     for _ in range(1024):
-#         public_key = skycoin.cipher_PubKey()
-#         secret_key = skycoin.cipher_SecKey()
-#         addres_1 = skycoin.cipher__Address()
-#         address_2 = skycoin.cipher__Address()
-#         _, data = skycoin.SKY_cipher_RandByte(32)
-#         skycoin.SKY_cipher_GenerateDeterministicKeyPair(
-#             data, public_key, secret_key)
-#         skycoin.SKY_cipher_AddressFromPubKey(public_key, addres_1)
-#         err = skycoin.SKY_cipher_Address_Verify(addres_1, public_key)
-#         assert err == skycoin.SKY_OK
-#         _, addres_str = skycoin.SKY_cipher_Address_String(addres_1)
-#         err = skycoin.SKY_cipher_DecodeBase58Address(addres_str, address_2)
-#         assert err == skycoin.SKY_OK
-#         assert addres_1 == address_2
+def test_TestAddressBulk():
+    for _ in range(1024):
+        public_key = skycoin.cipher_PubKey()
+        secret_key = skycoin.cipher_SecKey()
+        addres_1 = skycoin.cipher__Address()
+        address_2 = skycoin.cipher__Address()
+        _, data = skycoin.SKY_cipher_RandByte(32)
+        skycoin.SKY_cipher_GenerateDeterministicKeyPair(
+            data, public_key, secret_key)
+        skycoin.SKY_cipher_AddressFromPubKey(public_key, addres_1)
+        err = skycoin.SKY_cipher_Address_Verify(addres_1, public_key)
+        assert err == skycoin.SKY_OK
+        _, addres_str = skycoin.SKY_cipher_Address_String(addres_1)
+        err = skycoin.SKY_cipher_DecodeBase58Address(addres_str, address_2)
+        assert err == skycoin.SKY_OK
+        assert addres_1 == address_2
 
 
-# def test_TestAddressNull():
-#     address = skycoin.cipher__Address()
-#     _error, isNull = skycoin.SKY_cipher_Address_Null(address)
-#     assert _error == skycoin.SKY_OK
-#     assert isNull == 1
-#     public_key = skycoin.cipher_PubKey()
-#     secret_key = skycoin.cipher_SecKey()
-#     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
-#     skycoin.SKY_cipher_AddressFromPubKey(public_key, address)
-#     assert address is not None
+def test_TestAddressNull():
+    address = skycoin.cipher__Address()
+    _error, isNull = skycoin.SKY_cipher_Address_Null(address)
+    assert _error == skycoin.SKY_OK
+    assert isNull == 1
+    public_key = skycoin.cipher_PubKey()
+    secret_key = skycoin.cipher_SecKey()
+    skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key)
+    skycoin.SKY_cipher_AddressFromPubKey(public_key, address)
+    assert address is not None
