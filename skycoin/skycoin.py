@@ -1345,8 +1345,8 @@ def SKY_cipher_Address_Null(p0):
     return _skycoin.SKY_cipher_Address_Null(p0)
 SKY_cipher_Address_Null = _skycoin.SKY_cipher_Address_Null
 
-def SKY_cipher_Address_Bytes(p0, p1):
-    return _skycoin.SKY_cipher_Address_Bytes(p0, p1)
+def SKY_cipher_Address_Bytes(p0):
+    return _skycoin.SKY_cipher_Address_Bytes(p0)
 SKY_cipher_Address_Bytes = _skycoin.SKY_cipher_Address_Bytes
 
 def SKY_cipher_Address_Verify(p0, p1):
@@ -1689,12 +1689,12 @@ def SKY_base58_Encode(p0):
     return _skycoin.SKY_base58_Encode(p0)
 SKY_base58_Encode = _skycoin.SKY_base58_Encode
 
-def SKY_base58_Decode(p0, p1):
-    return _skycoin.SKY_base58_Decode(p0, p1)
+def SKY_base58_Decode(p0):
+    return _skycoin.SKY_base58_Decode(p0)
 SKY_base58_Decode = _skycoin.SKY_base58_Decode
 
-def SKY_base58_String2Hex(p0, p1):
-    return _skycoin.SKY_base58_String2Hex(p0, p1)
+def SKY_base58_String2Hex(p0):
+    return _skycoin.SKY_base58_String2Hex(p0)
 SKY_base58_String2Hex = _skycoin.SKY_base58_String2Hex
 
 def SKY_base58_Hex2String(p0):
