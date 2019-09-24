@@ -1033,8 +1033,8 @@ def SKY_cipher_SecKey_Hex(p0):
     return _skycoin.SKY_cipher_SecKey_Hex(p0)
 SKY_cipher_SecKey_Hex = _skycoin.SKY_cipher_SecKey_Hex
 
-def SKY_cipher_ECDH(p0, p1, p2):
-    return _skycoin.SKY_cipher_ECDH(p0, p1, p2)
+def SKY_cipher_ECDH(p0, p1):
+    return _skycoin.SKY_cipher_ECDH(p0, p1)
 SKY_cipher_ECDH = _skycoin.SKY_cipher_ECDH
 
 def SKY_cipher_NewSig(p0, p1):
@@ -1077,8 +1077,8 @@ def SKY_cipher_GenerateDeterministicKeyPairs(*args):
     return _skycoin.SKY_cipher_GenerateDeterministicKeyPairs(*args)
 SKY_cipher_GenerateDeterministicKeyPairs = _skycoin.SKY_cipher_GenerateDeterministicKeyPairs
 
-def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1, p2):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1, p2)
+def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1)
 SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed
 
 def SKY_cipher_CheckSecKey(p0):
