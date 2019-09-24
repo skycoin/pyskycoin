@@ -1,37 +1,36 @@
-# import skycoin
-# import tests.utils as utils
+import skycoin
+import tests.utils as utils
 
 
-# def test_TestNewPubKey():
-#     public_key = skycoin.cipher_PubKey()
-#     _, data = skycoin.SKY_cipher_RandByte(31)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
-#     _, data = skycoin.SKY_cipher_RandByte(32)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
-#     _, data = skycoin.SKY_cipher_RandByte(34)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
-#     _, data = skycoin.SKY_cipher_RandByte(0)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
-#     _, data = skycoin.SKY_cipher_RandByte(100)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
-#     _, data = skycoin.SKY_cipher_RandByte(33)
-#     assert skycoin.SKY_cipher_NewPubKey(
-#         data, public_key) == skycoin.SKY_ErrInvalidPubKey
-
-#     pubkey = skycoin.cipher_PubKey()
-#     seckey = skycoin.cipher_SecKey()
-#     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
-#     assert err == skycoin.SKY_OK
-#     ptemp = pubkey.toStr()
-#     pubkey2 = skycoin.cipher_PubKey()
-#     err = skycoin.SKY_cipher_NewPubKey(ptemp, pubkey2)
-#     assert err == skycoin.SKY_OK
-#     assert pubkey == pubkey2
+def test_TestNewPubKey():
+    public_key = skycoin.cipher_PubKey()
+    _, data = skycoin.SKY_cipher_RandByte(31)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
+    _, data = skycoin.SKY_cipher_RandByte(32)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
+    _, data = skycoin.SKY_cipher_RandByte(34)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
+    _, data = skycoin.SKY_cipher_RandByte(0)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
+    _, data = skycoin.SKY_cipher_RandByte(100)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidLengthPubKey
+    _, data = skycoin.SKY_cipher_RandByte(33)
+    assert skycoin.SKY_cipher_NewPubKey(
+        data, public_key) == skycoin.SKY_ErrInvalidPubKey
+    pubkey = skycoin.cipher_PubKey()
+    seckey = skycoin.cipher_SecKey()
+    err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
+    assert err == skycoin.SKY_OK
+    ptemp = pubkey.toStr()
+    pubkey2 = skycoin.cipher_PubKey()
+    err = skycoin.SKY_cipher_NewPubKey(ptemp, pubkey2)
+    assert err == skycoin.SKY_OK
+    assert pubkey == pubkey2
 
 
 # def test_TestPubKeyVerify():
@@ -228,7 +227,7 @@
 #     assert public_key == public_key_2
 #     sig_2 = skycoin.cipher_Sig()
 #     assert skycoin.SKY_cipher_PubKeyFromSig(
-#         sig_2, sha_sum, public_key_2) == skycoin.SKY_ErrInvalidSigPubKeyRecovery
+# sig_2, sha_sum, public_key_2) == skycoin.SKY_ErrInvalidSigPubKeyRecovery
 
 
 # def test_TestGenerateKeyPair():
@@ -324,4 +323,3 @@
 #     p = skycoin.cipher_SecKey()
 #     err = skycoin.SKY_cipher_NewSecKey(b, p)
 #     assert err == skycoin.SKY_OK
-

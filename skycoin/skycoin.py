@@ -123,6 +123,18 @@ destroy_cipher_PubKeys = _skycoin.destroy_cipher_PubKeys
 def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
     return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
+
+def SKY_params_Distribution_GetAddresses(_d):
+    return _skycoin.SKY_params_Distribution_GetAddresses(_d)
+SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
+
+def SKY_params_Distribution_UnlockedAddresses(_d):
+    return _skycoin.SKY_params_Distribution_UnlockedAddresses(_d)
+SKY_params_Distribution_UnlockedAddresses = _skycoin.SKY_params_Distribution_UnlockedAddresses
+
+def SKY_params_Distribution_LockedAddresses(_d):
+    return _skycoin.SKY_params_Distribution_LockedAddresses(_d)
+SKY_params_Distribution_LockedAddresses = _skycoin.SKY_params_Distribution_LockedAddresses
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -889,8 +901,8 @@ def SKY_cipher_BitcoinAddress_Null(p0):
     return _skycoin.SKY_cipher_BitcoinAddress_Null(p0)
 SKY_cipher_BitcoinAddress_Null = _skycoin.SKY_cipher_BitcoinAddress_Null
 
-def SKY_cipher_BitcoinAddress_Bytes(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddress_Bytes(p0, p1)
+def SKY_cipher_BitcoinAddress_Bytes(p0):
+    return _skycoin.SKY_cipher_BitcoinAddress_Bytes(p0)
 SKY_cipher_BitcoinAddress_Bytes = _skycoin.SKY_cipher_BitcoinAddress_Bytes
 
 def SKY_cipher_BitcoinAddress_Verify(p0, p1):
@@ -2137,10 +2149,6 @@ def SKY_params_Distribution_SetUnlockTimeInterval(p0, p1):
     return _skycoin.SKY_params_Distribution_SetUnlockTimeInterval(p0, p1)
 SKY_params_Distribution_SetUnlockTimeInterval = _skycoin.SKY_params_Distribution_SetUnlockTimeInterval
 
-def SKY_params_Distribution_GetAddresses(*args):
-    return _skycoin.SKY_params_Distribution_GetAddresses(*args)
-SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
-
 def SKY_params_Distribution_SetAddresses(p0, p1):
     return _skycoin.SKY_params_Distribution_SetAddresses(p0, p1)
 SKY_params_Distribution_SetAddresses = _skycoin.SKY_params_Distribution_SetAddresses
@@ -2152,14 +2160,6 @@ SKY_params_Distribution_Validate = _skycoin.SKY_params_Distribution_Validate
 def SKY_params_Distribution_AddressInitialBalance(p0):
     return _skycoin.SKY_params_Distribution_AddressInitialBalance(p0)
 SKY_params_Distribution_AddressInitialBalance = _skycoin.SKY_params_Distribution_AddressInitialBalance
-
-def SKY_params_Distribution_UnlockedAddresses(*args):
-    return _skycoin.SKY_params_Distribution_UnlockedAddresses(*args)
-SKY_params_Distribution_UnlockedAddresses = _skycoin.SKY_params_Distribution_UnlockedAddresses
-
-def SKY_params_Distribution_LockedAddresses(*args):
-    return _skycoin.SKY_params_Distribution_LockedAddresses(*args)
-SKY_params_Distribution_LockedAddresses = _skycoin.SKY_params_Distribution_LockedAddresses
 
 def SKY_params_Distribution_AddressesDecoded(p0):
     return _skycoin.SKY_params_Distribution_AddressesDecoded(p0)

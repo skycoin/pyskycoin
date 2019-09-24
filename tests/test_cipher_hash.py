@@ -195,7 +195,7 @@
 #     h = skycoin.cipher_SHA256()
 #     for _ in range(5):
 #         hashlist.append(h)
-    
+
 #     for i in range(5):
 #         err, data = skycoin.SKY_cipher_RandByte(128)
 #         assert err == skycoin.SKY_OK
@@ -203,7 +203,6 @@
 #         assert err == skycoin.SKY_OK
 
 #     # assert skycoin.SKY_cipher_Merkle(hashlist,h) == 45
-
 
 
 # # err, data = skycoin.SKY_cipher_RandByte(128)
@@ -255,6 +254,6 @@
 
 # # def merkle(h0):
 # #     lh = base64.standard_b64decode(len(h0))
-# #     np = 
+# #     np =
 
 # # def nextPowerOfTwo():

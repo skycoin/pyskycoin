@@ -26,7 +26,7 @@
 #             _Data = [chr(x) for x in Data]
 #             D = ""
 #             for x in _Data:
-#                 D += x 
+#                 D += x
 #             Data = D
 #         else:
 #             ml = ord(ml_[0])
@@ -46,7 +46,7 @@
 #     crypto.R = 8
 #     crypto.P = 1
 #     crypto.KeyLen = 32
-#     crypto.N = 1 << 19    
+#     crypto.N = 1 << 19
 #     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(crypto, encrypto, password)
 #     assert err == skycoin.SKY_OK and decrypted == define["PLAINTEXT"]
 #     # Wrong Password
@@ -55,4 +55,3 @@
 #     # Missing Password
 #     err, decrypted = skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(crypto, encrypto, b"")
 #     assert err == skycoin.SKY_ERROR
-

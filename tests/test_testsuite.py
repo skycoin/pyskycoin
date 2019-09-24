@@ -38,26 +38,26 @@
 # 	address = skycoin.cipher__Address()
 # 	err = skycoin.SKY_cipher_DecodeBase58Address(KeysTestDataJSON["address"].encode(), address)
 # 	if err != skycoin.SKY_OK:
-# 		return skycoin.SKY_ERROR, None 
+# 		return skycoin.SKY_ERROR, None
 # 	err, hex_str = skycoin.SKY_base58_String2Hex(KeysTestDataJSON["secret"].encode())
-# 	assert err == skycoin.SKY_OK 
+# 	assert err == skycoin.SKY_OK
 # 	secret_key = skycoin.cipher_SecKey()
 # 	err = skycoin.SKY_cipher_NewSecKey(hex_str, secret_key)
 # 	assert err == skycoin.SKY_OK
 
 # 	err , secret_key_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key)
 # 	if err != skycoin.SKY_OK:
-# 		return skycoin.SKY_ERROR, None 
-	
+# 		return skycoin.SKY_ERROR, None
+
 # 	err, hex_str = skycoin.SKY_base58_String2Hex(KeysTestDataJSON["public"].encode())
-# 	assert err == skycoin.SKY_OK 
+# 	assert err == skycoin.SKY_OK
 # 	public_key = skycoin.cipher_PubKey()
 # 	err = skycoin.SKY_cipher_NewPubKey(hex_str, public_key)
 # 	assert err == skycoin.SKY_OK
-	
+
 # 	err , public_key_hex = skycoin.SKY_cipher_PubKey_Hex(public_key)
 # 	if err != skycoin.SKY_OK:
-# 		return skycoin.SKY_ERROR, None 
+# 		return skycoin.SKY_ERROR, None
 
 # 	r = KeysTestData()
 # 	r.Address = address
@@ -126,13 +126,13 @@
 # 		if not(addr1 == addr2):
 # 			return skycoin.SKY_ErrAddressInvalidChecksum
 
-# 		if InputTestData == None and SeedTestData.Keys[i].Signatures != 0: 
+# 		if InputTestData == None and SeedTestData.Keys[i].Signatures != 0:
 # 			return skycoin.SKY_ERROR
 
 # 		if InputTestData != None:
 # 			if len(SeedTestData.Keys[i].Signatures) != len(InputTestData):
 # 				return skycoin.SKY_ERROR
-			
+
 # 			for j in range(len(InputTestData)):
 # 				sig = SeedTestData.Keys[i].Signatures[j]
 # 				sig_null = skycoin.cipher_Sig()
@@ -157,4 +157,3 @@
 # 				if sig2 == sig_null:
 # 					return skycoin.SKY_ERROR
 # 	return skycoin.SKY_OK
-
