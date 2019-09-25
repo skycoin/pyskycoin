@@ -1101,8 +1101,8 @@ def SKY_cipher_Sig_Null(p0):
     return _skycoin.SKY_cipher_Sig_Null(p0)
 SKY_cipher_Sig_Null = _skycoin.SKY_cipher_Sig_Null
 
-def SKY_secp256k1_PubkeyFromSeckey(p0, p1):
-    return _skycoin.SKY_secp256k1_PubkeyFromSeckey(p0, p1)
+def SKY_secp256k1_PubkeyFromSeckey(p0):
+    return _skycoin.SKY_secp256k1_PubkeyFromSeckey(p0)
 SKY_secp256k1_PubkeyFromSeckey = _skycoin.SKY_secp256k1_PubkeyFromSeckey
 
 def SKY_secp256k1_VerifyPubkey(p0):
@@ -1113,8 +1113,8 @@ def SKY_secp256k1_VerifySecKey(p0):
     return _skycoin.SKY_secp256k1_VerifySecKey(p0)
 SKY_secp256k1_VerifySecKey = _skycoin.SKY_secp256k1_VerifySecKey
 
-def SKY_secp256k1_ECDH(p0, p1, p2):
-    return _skycoin.SKY_secp256k1_ECDH(p0, p1, p2)
+def SKY_secp256k1_ECDH(p0, p1):
+    return _skycoin.SKY_secp256k1_ECDH(p0, p1)
 SKY_secp256k1_ECDH = _skycoin.SKY_secp256k1_ECDH
 
 def SKY_file_InitDataDir(p0):
