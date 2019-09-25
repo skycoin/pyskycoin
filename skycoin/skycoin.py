@@ -1485,12 +1485,12 @@ def SKY_wallet_NewReadableEntry(p0, p1, p2):
     return _skycoin.SKY_wallet_NewReadableEntry(p0, p1, p2)
 SKY_wallet_NewReadableEntry = _skycoin.SKY_wallet_NewReadableEntry
 
-def SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2, p3):
-    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2, p3)
+def SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2):
+    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2)
 SKY_encrypt_ScryptChacha20poly1305_Encrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt
 
-def SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2, p3):
-    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2, p3)
+def SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2):
+    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2)
 SKY_encrypt_ScryptChacha20poly1305_Decrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt
 
 def SKY_cli_GenerateAddressesInFile(p0, p1, p2):
