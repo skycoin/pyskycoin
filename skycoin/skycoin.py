@@ -1237,8 +1237,8 @@ def SKY_coin_BlockHeader_Hash(p0, p1):
     return _skycoin.SKY_coin_BlockHeader_Hash(p0, p1)
 SKY_coin_BlockHeader_Hash = _skycoin.SKY_coin_BlockHeader_Hash
 
-def SKY_coin_BlockHeader_Bytes(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_Bytes(p0, p1)
+def SKY_coin_BlockHeader_Bytes(p0):
+    return _skycoin.SKY_coin_BlockHeader_Bytes(p0)
 SKY_coin_BlockHeader_Bytes = _skycoin.SKY_coin_BlockHeader_Bytes
 
 def SKY_coin_BlockBody_Hash(p0, p1):
