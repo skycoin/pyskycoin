@@ -123,18 +123,6 @@ destroy_cipher_PubKeys = _skycoin.destroy_cipher_PubKeys
 def wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n):
     return _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(seed, n)
 wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed
-
-def SKY_params_Distribution_GetAddresses(_d):
-    return _skycoin.SKY_params_Distribution_GetAddresses(_d)
-SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
-
-def SKY_params_Distribution_UnlockedAddresses(_d):
-    return _skycoin.SKY_params_Distribution_UnlockedAddresses(_d)
-SKY_params_Distribution_UnlockedAddresses = _skycoin.SKY_params_Distribution_UnlockedAddresses
-
-def SKY_params_Distribution_LockedAddresses(_d):
-    return _skycoin.SKY_params_Distribution_LockedAddresses(_d)
-SKY_params_Distribution_LockedAddresses = _skycoin.SKY_params_Distribution_LockedAddresses
 class cipher_PubKey(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, cipher_PubKey, name, value)
@@ -641,521 +629,25 @@ GoSlice_swigregister = _skycoin.GoSlice_swigregister
 GoSlice_swigregister(GoSlice)
 
 
-def SKY_fee_VerifyTransactionFee(p0, p1, p2):
-    return _skycoin.SKY_fee_VerifyTransactionFee(p0, p1, p2)
-SKY_fee_VerifyTransactionFee = _skycoin.SKY_fee_VerifyTransactionFee
-
-def SKY_fee_VerifyTransactionFeeForHours(p0, p1, p2):
-    return _skycoin.SKY_fee_VerifyTransactionFeeForHours(p0, p1, p2)
-SKY_fee_VerifyTransactionFeeForHours = _skycoin.SKY_fee_VerifyTransactionFeeForHours
-
-def SKY_fee_RequiredFee(p0, p1):
-    return _skycoin.SKY_fee_RequiredFee(p0, p1)
-SKY_fee_RequiredFee = _skycoin.SKY_fee_RequiredFee
-
-def SKY_fee_RemainingHours(p0, p1):
-    return _skycoin.SKY_fee_RemainingHours(p0, p1)
-SKY_fee_RemainingHours = _skycoin.SKY_fee_RemainingHours
-
-def SKY_fee_TransactionFee(*args):
-    return _skycoin.SKY_fee_TransactionFee(*args)
-SKY_fee_TransactionFee = _skycoin.SKY_fee_TransactionFee
-
-def SKY_JsonEncode_Handle(p0):
-    return _skycoin.SKY_JsonEncode_Handle(p0)
-SKY_JsonEncode_Handle = _skycoin.SKY_JsonEncode_Handle
-
-def SKY_Handle_Progress_GetCurrent(p0):
-    return _skycoin.SKY_Handle_Progress_GetCurrent(p0)
-SKY_Handle_Progress_GetCurrent = _skycoin.SKY_Handle_Progress_GetCurrent
-
-def SKY_Handle_Block_GetHeadSeq(p0):
-    return _skycoin.SKY_Handle_Block_GetHeadSeq(p0)
-SKY_Handle_Block_GetHeadSeq = _skycoin.SKY_Handle_Block_GetHeadSeq
-
-def SKY_Handle_Block_GetHeadHash(p0):
-    return _skycoin.SKY_Handle_Block_GetHeadHash(p0)
-SKY_Handle_Block_GetHeadHash = _skycoin.SKY_Handle_Block_GetHeadHash
-
-def SKY_Handle_Block_GetPreviousBlockHash(p0):
-    return _skycoin.SKY_Handle_Block_GetPreviousBlockHash(p0)
-SKY_Handle_Block_GetPreviousBlockHash = _skycoin.SKY_Handle_Block_GetPreviousBlockHash
-
-def SKY_Handle_Blocks_GetAt(p0, p1):
-    return _skycoin.SKY_Handle_Blocks_GetAt(p0, p1)
-SKY_Handle_Blocks_GetAt = _skycoin.SKY_Handle_Blocks_GetAt
-
-def SKY_Handle_Blocks_GetCount(p0):
-    return _skycoin.SKY_Handle_Blocks_GetCount(p0)
-SKY_Handle_Blocks_GetCount = _skycoin.SKY_Handle_Blocks_GetCount
-
-def SKY_Handle_Connections_GetCount(p0):
-    return _skycoin.SKY_Handle_Connections_GetCount(p0)
-SKY_Handle_Connections_GetCount = _skycoin.SKY_Handle_Connections_GetCount
-
-def SKY_api_Handle_Client_GetWalletDir(p0):
-    return _skycoin.SKY_api_Handle_Client_GetWalletDir(p0)
-SKY_api_Handle_Client_GetWalletDir = _skycoin.SKY_api_Handle_Client_GetWalletDir
-
-def SKY_api_Handle_Client_GetWalletFileName(p0):
-    return _skycoin.SKY_api_Handle_Client_GetWalletFileName(p0)
-SKY_api_Handle_Client_GetWalletFileName = _skycoin.SKY_api_Handle_Client_GetWalletFileName
-
-def SKY_api_Handle_Client_GetWalletLabel(p0):
-    return _skycoin.SKY_api_Handle_Client_GetWalletLabel(p0)
-SKY_api_Handle_Client_GetWalletLabel = _skycoin.SKY_api_Handle_Client_GetWalletLabel
-
-def SKY_api_Handle_Client_GetWalletFullPath(p0, p1):
-    return _skycoin.SKY_api_Handle_Client_GetWalletFullPath(p0, p1)
-SKY_api_Handle_Client_GetWalletFullPath = _skycoin.SKY_api_Handle_Client_GetWalletFullPath
-
-def SKY_api_Handle_Client_GetWalletResponseEntriesCount(p0):
-    return _skycoin.SKY_api_Handle_Client_GetWalletResponseEntriesCount(p0)
-SKY_api_Handle_Client_GetWalletResponseEntriesCount = _skycoin.SKY_api_Handle_Client_GetWalletResponseEntriesCount
-
-def SKY_api_Handle_WalletResponseGetEntry(p0, p1):
-    return _skycoin.SKY_api_Handle_WalletResponseGetEntry(p0, p1)
-SKY_api_Handle_WalletResponseGetEntry = _skycoin.SKY_api_Handle_WalletResponseGetEntry
-
-def SKY_api_Handle_WalletResponseIsEncrypted(p0):
-    return _skycoin.SKY_api_Handle_WalletResponseIsEncrypted(p0)
-SKY_api_Handle_WalletResponseIsEncrypted = _skycoin.SKY_api_Handle_WalletResponseIsEncrypted
-
-def SKY_api_Handle_WalletsResponseGetCount(p0):
-    return _skycoin.SKY_api_Handle_WalletsResponseGetCount(p0)
-SKY_api_Handle_WalletsResponseGetCount = _skycoin.SKY_api_Handle_WalletsResponseGetCount
-
-def SKY_api_Handle_WalletsResponseGetAt(p0, p1):
-    return _skycoin.SKY_api_Handle_WalletsResponseGetAt(p0, p1)
-SKY_api_Handle_WalletsResponseGetAt = _skycoin.SKY_api_Handle_WalletsResponseGetAt
-
-def SKY_api_Handle_GetWalletFolderAddress(p0):
-    return _skycoin.SKY_api_Handle_GetWalletFolderAddress(p0)
-SKY_api_Handle_GetWalletFolderAddress = _skycoin.SKY_api_Handle_GetWalletFolderAddress
-
-def SKY_api_Handle_GetWalletSeed(p0):
-    return _skycoin.SKY_api_Handle_GetWalletSeed(p0)
-SKY_api_Handle_GetWalletSeed = _skycoin.SKY_api_Handle_GetWalletSeed
-
-def SKY_api_Handle_GetWalletLastSeed(p0):
-    return _skycoin.SKY_api_Handle_GetWalletLastSeed(p0)
-SKY_api_Handle_GetWalletLastSeed = _skycoin.SKY_api_Handle_GetWalletLastSeed
-
-def SKY_api_Handle_GetBuildInfoData(p0):
-    return _skycoin.SKY_api_Handle_GetBuildInfoData(p0)
-SKY_api_Handle_GetBuildInfoData = _skycoin.SKY_api_Handle_GetBuildInfoData
-
-def SKY_httphelper_Address_UnmarshalJSON(p0, p1):
-    return _skycoin.SKY_httphelper_Address_UnmarshalJSON(p0, p1)
-SKY_httphelper_Address_UnmarshalJSON = _skycoin.SKY_httphelper_Address_UnmarshalJSON
-
-def SKY_httphelper_Address_MarshalJSON(p0, p1):
-    return _skycoin.SKY_httphelper_Address_MarshalJSON(p0, p1)
-SKY_httphelper_Address_MarshalJSON = _skycoin.SKY_httphelper_Address_MarshalJSON
-
-def SKY_httphelper_Coins_UnmarshalJSON(p1):
-    return _skycoin.SKY_httphelper_Coins_UnmarshalJSON(p1)
-SKY_httphelper_Coins_UnmarshalJSON = _skycoin.SKY_httphelper_Coins_UnmarshalJSON
-
-def SKY_httphelper_Coins_MarshalJSON(p1):
-    return _skycoin.SKY_httphelper_Coins_MarshalJSON(p1)
-SKY_httphelper_Coins_MarshalJSON = _skycoin.SKY_httphelper_Coins_MarshalJSON
-
-def SKY_httphelper_Coins_Value():
-    return _skycoin.SKY_httphelper_Coins_Value()
-SKY_httphelper_Coins_Value = _skycoin.SKY_httphelper_Coins_Value
-
-def SKY_httphelper_Hours_UnmarshalJSON(p1):
-    return _skycoin.SKY_httphelper_Hours_UnmarshalJSON(p1)
-SKY_httphelper_Hours_UnmarshalJSON = _skycoin.SKY_httphelper_Hours_UnmarshalJSON
-
-def SKY_httphelper_Hours_MarshalJSON(p1):
-    return _skycoin.SKY_httphelper_Hours_MarshalJSON(p1)
-SKY_httphelper_Hours_MarshalJSON = _skycoin.SKY_httphelper_Hours_MarshalJSON
-
-def SKY_httphelper_Hours_Value():
-    return _skycoin.SKY_httphelper_Hours_Value()
-SKY_httphelper_Hours_Value = _skycoin.SKY_httphelper_Hours_Value
-
-def SKY_util_AddUint64(p0, p1):
-    return _skycoin.SKY_util_AddUint64(p0, p1)
-SKY_util_AddUint64 = _skycoin.SKY_util_AddUint64
-
-def SKY_util_Uint64ToInt64(p0):
-    return _skycoin.SKY_util_Uint64ToInt64(p0)
-SKY_util_Uint64ToInt64 = _skycoin.SKY_util_Uint64ToInt64
-
-def SKY_util_Int64ToUint64(p0):
-    return _skycoin.SKY_util_Int64ToUint64(p0)
-SKY_util_Int64ToUint64 = _skycoin.SKY_util_Int64ToUint64
-
-def SKY_util_IntToUint32(p0):
-    return _skycoin.SKY_util_IntToUint32(p0)
-SKY_util_IntToUint32 = _skycoin.SKY_util_IntToUint32
-
-def SKY_cli_AddPrivateKey(p0, p1):
-    return _skycoin.SKY_cli_AddPrivateKey(p0, p1)
-SKY_cli_AddPrivateKey = _skycoin.SKY_cli_AddPrivateKey
-
-def SKY_cli_AddPrivateKeyToFile(p0, p1, p2):
-    return _skycoin.SKY_cli_AddPrivateKeyToFile(p0, p1, p2)
-SKY_cli_AddPrivateKeyToFile = _skycoin.SKY_cli_AddPrivateKeyToFile
-
-def SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6):
-    return _skycoin.SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6)
-SKY_wallet_CreateOptionsHandle = _skycoin.SKY_wallet_CreateOptionsHandle
-
-def SKY_wallet_Entry_Verify(p0):
-    return _skycoin.SKY_wallet_Entry_Verify(p0)
-SKY_wallet_Entry_Verify = _skycoin.SKY_wallet_Entry_Verify
-
-def SKY_wallet_Entry_VerifyPublic(p0):
-    return _skycoin.SKY_wallet_Entry_VerifyPublic(p0)
-SKY_wallet_Entry_VerifyPublic = _skycoin.SKY_wallet_Entry_VerifyPublic
-
-def SKY_logging_EnableColors():
-    return _skycoin.SKY_logging_EnableColors()
-SKY_logging_EnableColors = _skycoin.SKY_logging_EnableColors
-
-def SKY_logging_DisableColors():
-    return _skycoin.SKY_logging_DisableColors()
-SKY_logging_DisableColors = _skycoin.SKY_logging_DisableColors
-
-def SKY_logging_Disable():
-    return _skycoin.SKY_logging_Disable()
-SKY_logging_Disable = _skycoin.SKY_logging_Disable
-
-def SKY_cli_CLI_Run(p0):
-    return _skycoin.SKY_cli_CLI_Run(p0)
-SKY_cli_CLI_Run = _skycoin.SKY_cli_CLI_Run
-
-def SKY_cli_Config_GetCoin(p0):
-    return _skycoin.SKY_cli_Config_GetCoin(p0)
-SKY_cli_Config_GetCoin = _skycoin.SKY_cli_Config_GetCoin
-
-def SKY_cli_Config_GetRPCAddress(p0):
-    return _skycoin.SKY_cli_Config_GetRPCAddress(p0)
-SKY_cli_Config_GetRPCAddress = _skycoin.SKY_cli_Config_GetRPCAddress
-
-def SKY_cli_Getenv(p0):
-    return _skycoin.SKY_cli_Getenv(p0)
-SKY_cli_Getenv = _skycoin.SKY_cli_Getenv
-
-def SKY_cli_Setenv(p0, p1):
-    return _skycoin.SKY_cli_Setenv(p0, p1)
-SKY_cli_Setenv = _skycoin.SKY_cli_Setenv
-
-def SKY_wallet_NewBalance(p0, p1, p2):
-    return _skycoin.SKY_wallet_NewBalance(p0, p1, p2)
-SKY_wallet_NewBalance = _skycoin.SKY_wallet_NewBalance
-
-def SKY_wallet_NewBalanceFromUxOut(p0, p1, p2):
-    return _skycoin.SKY_wallet_NewBalanceFromUxOut(p0, p1, p2)
-SKY_wallet_NewBalanceFromUxOut = _skycoin.SKY_wallet_NewBalanceFromUxOut
-
-def SKY_wallet_Balance_Add(p0, p1, p2):
-    return _skycoin.SKY_wallet_Balance_Add(p0, p1, p2)
-SKY_wallet_Balance_Add = _skycoin.SKY_wallet_Balance_Add
-
-def SKY_wallet_Balance_Sub(p0, p1, p2):
-    return _skycoin.SKY_wallet_Balance_Sub(p0, p1, p2)
-SKY_wallet_Balance_Sub = _skycoin.SKY_wallet_Balance_Sub
-
-def SKY_wallet_Balance_Equals(p0, p1):
-    return _skycoin.SKY_wallet_Balance_Equals(p0, p1)
-SKY_wallet_Balance_Equals = _skycoin.SKY_wallet_Balance_Equals
-
-def SKY_wallet_Balance_IsZero(p0):
-    return _skycoin.SKY_wallet_Balance_IsZero(p0)
-SKY_wallet_Balance_IsZero = _skycoin.SKY_wallet_Balance_IsZero
-
-def SKY_certutil_NewTLSCertPair(p0, p1, p2, p3, p4):
-    return _skycoin.SKY_certutil_NewTLSCertPair(p0, p1, p2, p3, p4)
-SKY_certutil_NewTLSCertPair = _skycoin.SKY_certutil_NewTLSCertPair
-
-def SKY_cipher_DecodeBase58BitcoinAddress(p0, p1):
-    return _skycoin.SKY_cipher_DecodeBase58BitcoinAddress(p0, p1)
-SKY_cipher_DecodeBase58BitcoinAddress = _skycoin.SKY_cipher_DecodeBase58BitcoinAddress
-
-def SKY_cipher_BitcoinAddressFromPubKey(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddressFromPubKey(p0, p1)
-SKY_cipher_BitcoinAddressFromPubKey = _skycoin.SKY_cipher_BitcoinAddressFromPubKey
-
-def SKY_cipher_BitcoinAddressFromSecKey(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddressFromSecKey(p0, p1)
-SKY_cipher_BitcoinAddressFromSecKey = _skycoin.SKY_cipher_BitcoinAddressFromSecKey
-
-def SKY_cipher_BitcoinWalletImportFormatFromSeckey(p0):
-    return _skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(p0)
-SKY_cipher_BitcoinWalletImportFormatFromSeckey = _skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey
-
-def SKY_cipher_BitcoinAddressFromBytes(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddressFromBytes(p0, p1)
-SKY_cipher_BitcoinAddressFromBytes = _skycoin.SKY_cipher_BitcoinAddressFromBytes
-
-def SKY_cipher_SecKeyFromBitcoinWalletImportFormat(p0, p1):
-    return _skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(p0, p1)
-SKY_cipher_SecKeyFromBitcoinWalletImportFormat = _skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat
-
-def SKY_cipher_BitcoinAddress_Null(p0):
-    return _skycoin.SKY_cipher_BitcoinAddress_Null(p0)
-SKY_cipher_BitcoinAddress_Null = _skycoin.SKY_cipher_BitcoinAddress_Null
-
-def SKY_cipher_BitcoinAddress_Bytes(p0):
-    return _skycoin.SKY_cipher_BitcoinAddress_Bytes(p0)
-SKY_cipher_BitcoinAddress_Bytes = _skycoin.SKY_cipher_BitcoinAddress_Bytes
-
-def SKY_cipher_BitcoinAddress_Verify(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddress_Verify(p0, p1)
-SKY_cipher_BitcoinAddress_Verify = _skycoin.SKY_cipher_BitcoinAddress_Verify
-
-def SKY_cipher_BitcoinAddress_String(p0):
-    return _skycoin.SKY_cipher_BitcoinAddress_String(p0)
-SKY_cipher_BitcoinAddress_String = _skycoin.SKY_cipher_BitcoinAddress_String
-
-def SKY_cipher_BitcoinAddress_Checksum(p0, p1):
-    return _skycoin.SKY_cipher_BitcoinAddress_Checksum(p0, p1)
-SKY_cipher_BitcoinAddress_Checksum = _skycoin.SKY_cipher_BitcoinAddress_Checksum
-
-def SKY_transaction_ChooseSpendsMaximizeUxOuts(p0, p1, p2):
-    return _skycoin.SKY_transaction_ChooseSpendsMaximizeUxOuts(p0, p1, p2)
-SKY_transaction_ChooseSpendsMaximizeUxOuts = _skycoin.SKY_transaction_ChooseSpendsMaximizeUxOuts
-
-def SKY_transaction_ChooseSpendsMinimizeUxOuts(p0, p1, p2):
-    return _skycoin.SKY_transaction_ChooseSpendsMinimizeUxOuts(p0, p1, p2)
-SKY_transaction_ChooseSpendsMinimizeUxOuts = _skycoin.SKY_transaction_ChooseSpendsMinimizeUxOuts
-
-def SKY_transaction_NewUxBalance(p0, p1, p2):
-    return _skycoin.SKY_transaction_NewUxBalance(p0, p1, p2)
-SKY_transaction_NewUxBalance = _skycoin.SKY_transaction_NewUxBalance
-
-def SKY_transaction_NewUxBalances(p0):
-    return _skycoin.SKY_transaction_NewUxBalances(p0)
-SKY_transaction_NewUxBalances = _skycoin.SKY_transaction_NewUxBalances
-
-def SKY_cli_MakeAlphanumericSeed():
-    return _skycoin.SKY_cli_MakeAlphanumericSeed()
-SKY_cli_MakeAlphanumericSeed = _skycoin.SKY_cli_MakeAlphanumericSeed
-
-def SKY_testutil_MakeAddress(p0):
-    return _skycoin.SKY_testutil_MakeAddress(p0)
-SKY_testutil_MakeAddress = _skycoin.SKY_testutil_MakeAddress
-
-def SKY_testutil_MakePubKey(p0):
-    return _skycoin.SKY_testutil_MakePubKey(p0)
-SKY_testutil_MakePubKey = _skycoin.SKY_testutil_MakePubKey
-
-def SKY_testutil_RandXPub():
-    return _skycoin.SKY_testutil_RandXPub()
-SKY_testutil_RandXPub = _skycoin.SKY_testutil_RandXPub
-
-def SKY_cli_LoadConfig():
-    return _skycoin.SKY_cli_LoadConfig()
-SKY_cli_LoadConfig = _skycoin.SKY_cli_LoadConfig
-
-def SKY_cli_Config_FullDBPath(p0):
-    return _skycoin.SKY_cli_Config_FullDBPath(p0)
-SKY_cli_Config_FullDBPath = _skycoin.SKY_cli_Config_FullDBPath
-
-def SKY_cli_NewCLI(p0):
-    return _skycoin.SKY_cli_NewCLI(p0)
-SKY_cli_NewCLI = _skycoin.SKY_cli_NewCLI
-
-def SKY_cli_NewPasswordReader(p0):
-    return _skycoin.SKY_cli_NewPasswordReader(p0)
-SKY_cli_NewPasswordReader = _skycoin.SKY_cli_NewPasswordReader
-
-def SKY_cli_PasswordFromBytes_Password(p0, p1):
-    return _skycoin.SKY_cli_PasswordFromBytes_Password(p0, p1)
-SKY_cli_PasswordFromBytes_Password = _skycoin.SKY_cli_PasswordFromBytes_Password
-
-def SKY_cli_PasswordFromTerm_Password(p0):
-    return _skycoin.SKY_cli_PasswordFromTerm_Password(p0)
-SKY_cli_PasswordFromTerm_Password = _skycoin.SKY_cli_PasswordFromTerm_Password
-
-def SKY_apputil_CatchInterruptPanic():
-    return _skycoin.SKY_apputil_CatchInterruptPanic()
-SKY_apputil_CatchInterruptPanic = _skycoin.SKY_apputil_CatchInterruptPanic
-
-def SKY_apputil_CatchDebug():
-    return _skycoin.SKY_apputil_CatchDebug()
-SKY_apputil_CatchDebug = _skycoin.SKY_apputil_CatchDebug
-
-def SKY_apputil_PrintProgramStatus():
-    return _skycoin.SKY_apputil_PrintProgramStatus()
-SKY_apputil_PrintProgramStatus = _skycoin.SKY_apputil_PrintProgramStatus
-
-def SKY_cipher_RandByte(p0):
-    return _skycoin.SKY_cipher_RandByte(p0)
-SKY_cipher_RandByte = _skycoin.SKY_cipher_RandByte
-
-def SKY_cipher_NewPubKey(p0, p1):
-    return _skycoin.SKY_cipher_NewPubKey(p0, p1)
-SKY_cipher_NewPubKey = _skycoin.SKY_cipher_NewPubKey
-
-def SKY_cipher_PubKeyFromHex(p0, p1):
-    return _skycoin.SKY_cipher_PubKeyFromHex(p0, p1)
-SKY_cipher_PubKeyFromHex = _skycoin.SKY_cipher_PubKeyFromHex
-
-def SKY_cipher_PubKeyFromSecKey(p0, p1):
-    return _skycoin.SKY_cipher_PubKeyFromSecKey(p0, p1)
-SKY_cipher_PubKeyFromSecKey = _skycoin.SKY_cipher_PubKeyFromSecKey
-
-def SKY_cipher_PubKeyFromSig(p0, p1, p2):
-    return _skycoin.SKY_cipher_PubKeyFromSig(p0, p1, p2)
-SKY_cipher_PubKeyFromSig = _skycoin.SKY_cipher_PubKeyFromSig
-
-def SKY_cipher_PubKey_Verify(p0):
-    return _skycoin.SKY_cipher_PubKey_Verify(p0)
-SKY_cipher_PubKey_Verify = _skycoin.SKY_cipher_PubKey_Verify
-
-def SKY_cipher_PubKey_Hex(p0):
-    return _skycoin.SKY_cipher_PubKey_Hex(p0)
-SKY_cipher_PubKey_Hex = _skycoin.SKY_cipher_PubKey_Hex
-
-def SKY_cipher_PubKeyRipemd160(p0, p1):
-    return _skycoin.SKY_cipher_PubKeyRipemd160(p0, p1)
-SKY_cipher_PubKeyRipemd160 = _skycoin.SKY_cipher_PubKeyRipemd160
-
-def SKY_cipher_NewSecKey(p0, p1):
-    return _skycoin.SKY_cipher_NewSecKey(p0, p1)
-SKY_cipher_NewSecKey = _skycoin.SKY_cipher_NewSecKey
-
-def SKY_cipher_SecKeyFromHex(p0, p1):
-    return _skycoin.SKY_cipher_SecKeyFromHex(p0, p1)
-SKY_cipher_SecKeyFromHex = _skycoin.SKY_cipher_SecKeyFromHex
-
-def SKY_cipher_SecKey_Verify(p0):
-    return _skycoin.SKY_cipher_SecKey_Verify(p0)
-SKY_cipher_SecKey_Verify = _skycoin.SKY_cipher_SecKey_Verify
-
-def SKY_cipher_SecKey_Hex(p0):
-    return _skycoin.SKY_cipher_SecKey_Hex(p0)
-SKY_cipher_SecKey_Hex = _skycoin.SKY_cipher_SecKey_Hex
-
-def SKY_cipher_ECDH(p0, p1):
-    return _skycoin.SKY_cipher_ECDH(p0, p1)
-SKY_cipher_ECDH = _skycoin.SKY_cipher_ECDH
-
-def SKY_cipher_NewSig(p0, p1):
-    return _skycoin.SKY_cipher_NewSig(p0, p1)
-SKY_cipher_NewSig = _skycoin.SKY_cipher_NewSig
-
-def SKY_cipher_SigFromHex(p0, p1):
-    return _skycoin.SKY_cipher_SigFromHex(p0, p1)
-SKY_cipher_SigFromHex = _skycoin.SKY_cipher_SigFromHex
-
-def SKY_cipher_Sig_Hex(p0):
-    return _skycoin.SKY_cipher_Sig_Hex(p0)
-SKY_cipher_Sig_Hex = _skycoin.SKY_cipher_Sig_Hex
-
-def SKY_cipher_SignHash(p0, p1, p2):
-    return _skycoin.SKY_cipher_SignHash(p0, p1, p2)
-SKY_cipher_SignHash = _skycoin.SKY_cipher_SignHash
-
-def SKY_cipher_VerifyAddressSignedHash(p0, p1, p2):
-    return _skycoin.SKY_cipher_VerifyAddressSignedHash(p0, p1, p2)
-SKY_cipher_VerifyAddressSignedHash = _skycoin.SKY_cipher_VerifyAddressSignedHash
-
-def SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2):
-    return _skycoin.SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2)
-SKY_cipher_VerifyPubKeySignedHash = _skycoin.SKY_cipher_VerifyPubKeySignedHash
-
-def SKY_cipher_GenerateKeyPair(p0, p1):
-    return _skycoin.SKY_cipher_GenerateKeyPair(p0, p1)
-SKY_cipher_GenerateKeyPair = _skycoin.SKY_cipher_GenerateKeyPair
-
-def SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2)
-SKY_cipher_GenerateDeterministicKeyPair = _skycoin.SKY_cipher_GenerateDeterministicKeyPair
-
-def SKY_cipher_DeterministicKeyPairIterator(p0, p2, p3):
-    return _skycoin.SKY_cipher_DeterministicKeyPairIterator(p0, p2, p3)
-SKY_cipher_DeterministicKeyPairIterator = _skycoin.SKY_cipher_DeterministicKeyPairIterator
-
-def SKY_cipher_GenerateDeterministicKeyPairs(*args):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairs(*args)
-SKY_cipher_GenerateDeterministicKeyPairs = _skycoin.SKY_cipher_GenerateDeterministicKeyPairs
-
-def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1):
-    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1)
-SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed
-
-def SKY_cipher_CheckSecKey(p0):
-    return _skycoin.SKY_cipher_CheckSecKey(p0)
-SKY_cipher_CheckSecKey = _skycoin.SKY_cipher_CheckSecKey
-
-def SKY_cipher_CheckSecKeyHash(p0, p1):
-    return _skycoin.SKY_cipher_CheckSecKeyHash(p0, p1)
-SKY_cipher_CheckSecKeyHash = _skycoin.SKY_cipher_CheckSecKeyHash
-
-def SKY_cipher_Sig_String(p0):
-    return _skycoin.SKY_cipher_Sig_String(p0)
-SKY_cipher_Sig_String = _skycoin.SKY_cipher_Sig_String
-
-def SKY_cipher_VerifySignatureRecoverPubKey(p0, p1):
-    return _skycoin.SKY_cipher_VerifySignatureRecoverPubKey(p0, p1)
-SKY_cipher_VerifySignatureRecoverPubKey = _skycoin.SKY_cipher_VerifySignatureRecoverPubKey
-
-def SKY_cipher_Sig_Null(p0):
-    return _skycoin.SKY_cipher_Sig_Null(p0)
-SKY_cipher_Sig_Null = _skycoin.SKY_cipher_Sig_Null
-
-def SKY_secp256k1_PubkeyFromSeckey(p0):
-    return _skycoin.SKY_secp256k1_PubkeyFromSeckey(p0)
-SKY_secp256k1_PubkeyFromSeckey = _skycoin.SKY_secp256k1_PubkeyFromSeckey
-
-def SKY_secp256k1_VerifyPubkey(p0):
-    return _skycoin.SKY_secp256k1_VerifyPubkey(p0)
-SKY_secp256k1_VerifyPubkey = _skycoin.SKY_secp256k1_VerifyPubkey
-
-def SKY_secp256k1_VerifySecKey(p0):
-    return _skycoin.SKY_secp256k1_VerifySecKey(p0)
-SKY_secp256k1_VerifySecKey = _skycoin.SKY_secp256k1_VerifySecKey
-
-def SKY_secp256k1_ECDH(p0, p1):
-    return _skycoin.SKY_secp256k1_ECDH(p0, p1)
-SKY_secp256k1_ECDH = _skycoin.SKY_secp256k1_ECDH
-
-def SKY_file_InitDataDir(p0):
-    return _skycoin.SKY_file_InitDataDir(p0)
-SKY_file_InitDataDir = _skycoin.SKY_file_InitDataDir
-
-def SKY_file_UserHome():
-    return _skycoin.SKY_file_UserHome()
-SKY_file_UserHome = _skycoin.SKY_file_UserHome
-
-def SKY_file_ResolveResourceDirectory(p0):
-    return _skycoin.SKY_file_ResolveResourceDirectory(p0)
-SKY_file_ResolveResourceDirectory = _skycoin.SKY_file_ResolveResourceDirectory
-
-def SKY_file_DetermineResourcePath(p0, p1, p2):
-    return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
-SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
-
-def SKY_bip39_NewDefaultMnemomic():
-    return _skycoin.SKY_bip39_NewDefaultMnemomic()
-SKY_bip39_NewDefaultMnemomic = _skycoin.SKY_bip39_NewDefaultMnemomic
-
-def SKY_bip39_NewEntropy(p0, p1):
-    return _skycoin.SKY_bip39_NewEntropy(p0, p1)
-SKY_bip39_NewEntropy = _skycoin.SKY_bip39_NewEntropy
-
-def SKY_bip39_NewMnemonic(p0):
-    return _skycoin.SKY_bip39_NewMnemonic(p0)
-SKY_bip39_NewMnemonic = _skycoin.SKY_bip39_NewMnemonic
-
-def SKY_bip39_ValidateMnemonic(p0):
-    return _skycoin.SKY_bip39_ValidateMnemonic(p0)
-SKY_bip39_ValidateMnemonic = _skycoin.SKY_bip39_ValidateMnemonic
-
-def SKY_bip39_NewSeed(p0, p1, p2):
-    return _skycoin.SKY_bip39_NewSeed(p0, p1, p2)
-SKY_bip39_NewSeed = _skycoin.SKY_bip39_NewSeed
-
-def SKY_cli_GetBalanceOfAddresses(p0, p1):
-    return _skycoin.SKY_cli_GetBalanceOfAddresses(p0, p1)
-SKY_cli_GetBalanceOfAddresses = _skycoin.SKY_cli_GetBalanceOfAddresses
+def SKY_iputil_LocalhostIP():
+    return _skycoin.SKY_iputil_LocalhostIP()
+SKY_iputil_LocalhostIP = _skycoin.SKY_iputil_LocalhostIP
+
+def SKY_iputil_IsLocalhost(p0):
+    return _skycoin.SKY_iputil_IsLocalhost(p0)
+SKY_iputil_IsLocalhost = _skycoin.SKY_iputil_IsLocalhost
+
+def SKY_iputil_SplitAddr(p0):
+    return _skycoin.SKY_iputil_SplitAddr(p0)
+SKY_iputil_SplitAddr = _skycoin.SKY_iputil_SplitAddr
+
+def SKY_cli_GetWalletOutputsFromFile(p0, p1):
+    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1)
+SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
+
+def SKY_cli_GetWalletOutputs(p0):
+    return _skycoin.SKY_cli_GetWalletOutputs(p0)
+SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
 
 def SKY_bip44_NewCoin(p0, p1):
     return _skycoin.SKY_bip44_NewCoin(p0, p1)
@@ -1181,286 +673,6 @@ def SKY_bip44_Account_GetPrivateKey(p0):
     return _skycoin.SKY_bip44_Account_GetPrivateKey(p0)
 SKY_bip44_Account_GetPrivateKey = _skycoin.SKY_bip44_Account_GetPrivateKey
 
-def SKY_api_NewWalletResponse(p0):
-    return _skycoin.SKY_api_NewWalletResponse(p0)
-SKY_api_NewWalletResponse = _skycoin.SKY_api_NewWalletResponse
-
-def SKY_map_Get(p1):
-    return _skycoin.SKY_map_Get(p1)
-SKY_map_Get = _skycoin.SKY_map_Get
-
-def SKY_map_HasKey(p1):
-    return _skycoin.SKY_map_HasKey(p1)
-SKY_map_HasKey = _skycoin.SKY_map_HasKey
-
-def SKY_map_Close():
-    return _skycoin.SKY_map_Close()
-SKY_map_Close = _skycoin.SKY_map_Close
-
-def SKY_coin_NewBlock(p0, p1, p2, p3, p4):
-    return _skycoin.SKY_coin_NewBlock(p0, p1, p2, p3, p4)
-SKY_coin_NewBlock = _skycoin.SKY_coin_NewBlock
-
-def SKY_coin_SignedBlock_VerifySignature(p0, p1):
-    return _skycoin.SKY_coin_SignedBlock_VerifySignature(p0, p1)
-SKY_coin_SignedBlock_VerifySignature = _skycoin.SKY_coin_SignedBlock_VerifySignature
-
-def SKY_coin_NewGenesisBlock(p0, p1, p2):
-    return _skycoin.SKY_coin_NewGenesisBlock(p0, p1, p2)
-SKY_coin_NewGenesisBlock = _skycoin.SKY_coin_NewGenesisBlock
-
-def SKY_coin_Block_HashHeader(p0, p1):
-    return _skycoin.SKY_coin_Block_HashHeader(p0, p1)
-SKY_coin_Block_HashHeader = _skycoin.SKY_coin_Block_HashHeader
-
-def SKY_coin_Block_Time(p0):
-    return _skycoin.SKY_coin_Block_Time(p0)
-SKY_coin_Block_Time = _skycoin.SKY_coin_Block_Time
-
-def SKY_coin_Block_Seq(p0):
-    return _skycoin.SKY_coin_Block_Seq(p0)
-SKY_coin_Block_Seq = _skycoin.SKY_coin_Block_Seq
-
-def SKY_coin_Block_HashBody(p0, p1):
-    return _skycoin.SKY_coin_Block_HashBody(p0, p1)
-SKY_coin_Block_HashBody = _skycoin.SKY_coin_Block_HashBody
-
-def SKY_coin_Block_Size(p0):
-    return _skycoin.SKY_coin_Block_Size(p0)
-SKY_coin_Block_Size = _skycoin.SKY_coin_Block_Size
-
-def SKY_coin_NewBlockHeader(p0, p1, p2, p3, p4, p5):
-    return _skycoin.SKY_coin_NewBlockHeader(p0, p1, p2, p3, p4, p5)
-SKY_coin_NewBlockHeader = _skycoin.SKY_coin_NewBlockHeader
-
-def SKY_coin_BlockHeader_Hash(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_Hash(p0, p1)
-SKY_coin_BlockHeader_Hash = _skycoin.SKY_coin_BlockHeader_Hash
-
-def SKY_coin_BlockHeader_Bytes(p0):
-    return _skycoin.SKY_coin_BlockHeader_Bytes(p0)
-SKY_coin_BlockHeader_Bytes = _skycoin.SKY_coin_BlockHeader_Bytes
-
-def SKY_coin_BlockBody_Hash(p0, p1):
-    return _skycoin.SKY_coin_BlockBody_Hash(p0, p1)
-SKY_coin_BlockBody_Hash = _skycoin.SKY_coin_BlockBody_Hash
-
-def SKY_coin_BlockBody_Size():
-    return _skycoin.SKY_coin_BlockBody_Size()
-SKY_coin_BlockBody_Size = _skycoin.SKY_coin_BlockBody_Size
-
-def SKY_coin_BlockBody_Bytes(p0, p1):
-    return _skycoin.SKY_coin_BlockBody_Bytes(p0, p1)
-SKY_coin_BlockBody_Bytes = _skycoin.SKY_coin_BlockBody_Bytes
-
-def SKY_coin_CreateUnspents(*args):
-    return _skycoin.SKY_coin_CreateUnspents(*args)
-SKY_coin_CreateUnspents = _skycoin.SKY_coin_CreateUnspents
-
-def SKY_coin_CreateUnspent(p0, p1, p2, p3):
-    return _skycoin.SKY_coin_CreateUnspent(p0, p1, p2, p3)
-SKY_coin_CreateUnspent = _skycoin.SKY_coin_CreateUnspent
-
-def SKY_coin_GetBlockObject(p0):
-    return _skycoin.SKY_coin_GetBlockObject(p0)
-SKY_coin_GetBlockObject = _skycoin.SKY_coin_GetBlockObject
-
-def SKY_coin_GetBlockBody(p0):
-    return _skycoin.SKY_coin_GetBlockBody(p0)
-SKY_coin_GetBlockBody = _skycoin.SKY_coin_GetBlockBody
-
-def SKY_coin_NewEmptyBlock(p0):
-    return _skycoin.SKY_coin_NewEmptyBlock(p0)
-SKY_coin_NewEmptyBlock = _skycoin.SKY_coin_NewEmptyBlock
-
-def SKY_coin_Block_GetBlockHeader(p0):
-    return _skycoin.SKY_coin_Block_GetBlockHeader(p0)
-SKY_coin_Block_GetBlockHeader = _skycoin.SKY_coin_Block_GetBlockHeader
-
-def SKY_coin_GetBlockHeaderObject(p0, p1):
-    return _skycoin.SKY_coin_GetBlockHeaderObject(p0, p1)
-SKY_coin_GetBlockHeaderObject = _skycoin.SKY_coin_GetBlockHeaderObject
-
-def SKY_coin_BlockHeader_Time(p0):
-    return _skycoin.SKY_coin_BlockHeader_Time(p0)
-SKY_coin_BlockHeader_Time = _skycoin.SKY_coin_BlockHeader_Time
-
-def SKY_coin_BlockHeader_BkSeq(p0):
-    return _skycoin.SKY_coin_BlockHeader_BkSeq(p0)
-SKY_coin_BlockHeader_BkSeq = _skycoin.SKY_coin_BlockHeader_BkSeq
-
-def SKY_coin_BlockHeader_UxHash(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_UxHash(p0, p1)
-SKY_coin_BlockHeader_UxHash = _skycoin.SKY_coin_BlockHeader_UxHash
-
-def SKY_coin_BlockHeader_Fee(p0):
-    return _skycoin.SKY_coin_BlockHeader_Fee(p0)
-SKY_coin_BlockHeader_Fee = _skycoin.SKY_coin_BlockHeader_Fee
-
-def SKY_coin_BlockBody_Transactions(p0):
-    return _skycoin.SKY_coin_BlockBody_Transactions(p0)
-SKY_coin_BlockBody_Transactions = _skycoin.SKY_coin_BlockBody_Transactions
-
-def SKY_coin_BlockHeader_SetTime(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_SetTime(p0, p1)
-SKY_coin_BlockHeader_SetTime = _skycoin.SKY_coin_BlockHeader_SetTime
-
-def SKY_coin_BlockHeader_SetBkSeq(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_SetBkSeq(p0, p1)
-SKY_coin_BlockHeader_SetBkSeq = _skycoin.SKY_coin_BlockHeader_SetBkSeq
-
-def SKY_coin_BlockHeader_SetFee(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_SetFee(p0, p1)
-SKY_coin_BlockHeader_SetFee = _skycoin.SKY_coin_BlockHeader_SetFee
-
-def SKY_coin_BlockHeader_SetVersion(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_SetVersion(p0, p1)
-SKY_coin_BlockHeader_SetVersion = _skycoin.SKY_coin_BlockHeader_SetVersion
-
-def SKY_coin_BlockHeader_Version(p0):
-    return _skycoin.SKY_coin_BlockHeader_Version(p0)
-SKY_coin_BlockHeader_Version = _skycoin.SKY_coin_BlockHeader_Version
-
-def SKY_coin_BlockHeader_PrevHash(p0, p1):
-    return _skycoin.SKY_coin_BlockHeader_PrevHash(p0, p1)
-SKY_coin_BlockHeader_PrevHash = _skycoin.SKY_coin_BlockHeader_PrevHash
-
-def SKY_droplet_FromString(p0):
-    return _skycoin.SKY_droplet_FromString(p0)
-SKY_droplet_FromString = _skycoin.SKY_droplet_FromString
-
-def SKY_droplet_ToString(p0):
-    return _skycoin.SKY_droplet_ToString(p0)
-SKY_droplet_ToString = _skycoin.SKY_droplet_ToString
-
-def SKY_wallet_CryptoTypeFromString(p0, p1):
-    return _skycoin.SKY_wallet_CryptoTypeFromString(p0, p1)
-SKY_wallet_CryptoTypeFromString = _skycoin.SKY_wallet_CryptoTypeFromString
-
-def SKY_cipher_DecodeBase58Address(p0, p1):
-    return _skycoin.SKY_cipher_DecodeBase58Address(p0, p1)
-SKY_cipher_DecodeBase58Address = _skycoin.SKY_cipher_DecodeBase58Address
-
-def SKY_cipher_AddressFromBytes(p0, p1):
-    return _skycoin.SKY_cipher_AddressFromBytes(p0, p1)
-SKY_cipher_AddressFromBytes = _skycoin.SKY_cipher_AddressFromBytes
-
-def SKY_cipher_AddressFromPubKey(p0, p1):
-    return _skycoin.SKY_cipher_AddressFromPubKey(p0, p1)
-SKY_cipher_AddressFromPubKey = _skycoin.SKY_cipher_AddressFromPubKey
-
-def SKY_cipher_AddressFromSecKey(p0, p1):
-    return _skycoin.SKY_cipher_AddressFromSecKey(p0, p1)
-SKY_cipher_AddressFromSecKey = _skycoin.SKY_cipher_AddressFromSecKey
-
-def SKY_cipher_Address_Null(p0):
-    return _skycoin.SKY_cipher_Address_Null(p0)
-SKY_cipher_Address_Null = _skycoin.SKY_cipher_Address_Null
-
-def SKY_cipher_Address_Bytes(p0):
-    return _skycoin.SKY_cipher_Address_Bytes(p0)
-SKY_cipher_Address_Bytes = _skycoin.SKY_cipher_Address_Bytes
-
-def SKY_cipher_Address_Verify(p0, p1):
-    return _skycoin.SKY_cipher_Address_Verify(p0, p1)
-SKY_cipher_Address_Verify = _skycoin.SKY_cipher_Address_Verify
-
-def SKY_cipher_Address_String(p0):
-    return _skycoin.SKY_cipher_Address_String(p0)
-SKY_cipher_Address_String = _skycoin.SKY_cipher_Address_String
-
-def SKY_cipher_Address_Checksum(p0, p1):
-    return _skycoin.SKY_cipher_Address_Checksum(p0, p1)
-SKY_cipher_Address_Checksum = _skycoin.SKY_cipher_Address_Checksum
-
-def SKY_cipher_Ripemd160_Set(p0, p1):
-    return _skycoin.SKY_cipher_Ripemd160_Set(p0, p1)
-SKY_cipher_Ripemd160_Set = _skycoin.SKY_cipher_Ripemd160_Set
-
-def SKY_cipher_HashRipemd160(p0, p1):
-    return _skycoin.SKY_cipher_HashRipemd160(p0, p1)
-SKY_cipher_HashRipemd160 = _skycoin.SKY_cipher_HashRipemd160
-
-def SKY_cipher_SHA256_Set(p0, p1):
-    return _skycoin.SKY_cipher_SHA256_Set(p0, p1)
-SKY_cipher_SHA256_Set = _skycoin.SKY_cipher_SHA256_Set
-
-def SKY_cipher_SHA256_Hex(p0):
-    return _skycoin.SKY_cipher_SHA256_Hex(p0)
-SKY_cipher_SHA256_Hex = _skycoin.SKY_cipher_SHA256_Hex
-
-def SKY_cipher_SHA256_Xor(p0, p1, p2):
-    return _skycoin.SKY_cipher_SHA256_Xor(p0, p1, p2)
-SKY_cipher_SHA256_Xor = _skycoin.SKY_cipher_SHA256_Xor
-
-def SKY_cipher_SumSHA256(p0, p1):
-    return _skycoin.SKY_cipher_SumSHA256(p0, p1)
-SKY_cipher_SumSHA256 = _skycoin.SKY_cipher_SumSHA256
-
-def SKY_cipher_SHA256FromHex(p0, p1):
-    return _skycoin.SKY_cipher_SHA256FromHex(p0, p1)
-SKY_cipher_SHA256FromHex = _skycoin.SKY_cipher_SHA256FromHex
-
-def SKY_cipher_DoubleSHA256(p0, p1):
-    return _skycoin.SKY_cipher_DoubleSHA256(p0, p1)
-SKY_cipher_DoubleSHA256 = _skycoin.SKY_cipher_DoubleSHA256
-
-def SKY_cipher_AddSHA256(p0, p1, p2):
-    return _skycoin.SKY_cipher_AddSHA256(p0, p1, p2)
-SKY_cipher_AddSHA256 = _skycoin.SKY_cipher_AddSHA256
-
-def SKY_cipher_Merkle(p0, p1):
-    return _skycoin.SKY_cipher_Merkle(p0, p1)
-SKY_cipher_Merkle = _skycoin.SKY_cipher_Merkle
-
-def SKY_cipher_SHA256_Null(p0):
-    return _skycoin.SKY_cipher_SHA256_Null(p0)
-SKY_cipher_SHA256_Null = _skycoin.SKY_cipher_SHA256_Null
-
-def SKY_wallet_NewError(p0):
-    return _skycoin.SKY_wallet_NewError(p0)
-SKY_wallet_NewError = _skycoin.SKY_wallet_NewError
-
-def SKY_wallet_NewWallet(p0, p1):
-    return _skycoin.SKY_wallet_NewWallet(p0, p1)
-SKY_wallet_NewWallet = _skycoin.SKY_wallet_NewWallet
-
-def SKY_wallet_Lock(p0, p1, p2):
-    return _skycoin.SKY_wallet_Lock(p0, p1, p2)
-SKY_wallet_Lock = _skycoin.SKY_wallet_Lock
-
-def SKY_wallet_Unlock(p0, p1):
-    return _skycoin.SKY_wallet_Unlock(p0, p1)
-SKY_wallet_Unlock = _skycoin.SKY_wallet_Unlock
-
-def SKY_wallet_Load(p0):
-    return _skycoin.SKY_wallet_Load(p0)
-SKY_wallet_Load = _skycoin.SKY_wallet_Load
-
-def SKY_wallet_Wallet_Save(p0, p1):
-    return _skycoin.SKY_wallet_Wallet_Save(p0, p1)
-SKY_wallet_Wallet_Save = _skycoin.SKY_wallet_Wallet_Save
-
-def SKY_wallet_MetaWallet_IsEncrypted(p0):
-    return _skycoin.SKY_wallet_MetaWallet_IsEncrypted(p0)
-SKY_wallet_MetaWallet_IsEncrypted = _skycoin.SKY_wallet_MetaWallet_IsEncrypted
-
-def SKY_wallet_MetaWallet_Label(p0):
-    return _skycoin.SKY_wallet_MetaWallet_Label(p0)
-SKY_wallet_MetaWallet_Label = _skycoin.SKY_wallet_MetaWallet_Label
-
-def SKY_wallet_MetaWallet_Filename(p0):
-    return _skycoin.SKY_wallet_MetaWallet_Filename(p0)
-SKY_wallet_MetaWallet_Filename = _skycoin.SKY_wallet_MetaWallet_Filename
-
-def SKY_wallet_MetaWallet_Version(p0):
-    return _skycoin.SKY_wallet_MetaWallet_Version(p0)
-SKY_wallet_MetaWallet_Version = _skycoin.SKY_wallet_MetaWallet_Version
-
-def SKY_wallet_MetaWallet_Type(p0):
-    return _skycoin.SKY_wallet_MetaWallet_Type(p0)
-SKY_wallet_MetaWallet_Type = _skycoin.SKY_wallet_MetaWallet_Type
-
 def SKY_api_NewCreateTransactionResponse(p0, p1):
     return _skycoin.SKY_api_NewCreateTransactionResponse(p0, p1)
 SKY_api_NewCreateTransactionResponse = _skycoin.SKY_api_NewCreateTransactionResponse
@@ -1485,213 +697,221 @@ def SKY_wallet_NewReadableEntry(p0, p1, p2):
     return _skycoin.SKY_wallet_NewReadableEntry(p0, p1, p2)
 SKY_wallet_NewReadableEntry = _skycoin.SKY_wallet_NewReadableEntry
 
-def SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2):
-    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2)
-SKY_encrypt_ScryptChacha20poly1305_Encrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt
+def SKY_coin_Create_Transaction():
+    return _skycoin.SKY_coin_Create_Transaction()
+SKY_coin_Create_Transaction = _skycoin.SKY_coin_Create_Transaction
 
-def SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2):
-    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2)
-SKY_encrypt_ScryptChacha20poly1305_Decrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt
+def SKY_coin_Transaction_Copy(p0):
+    return _skycoin.SKY_coin_Transaction_Copy(p0)
+SKY_coin_Transaction_Copy = _skycoin.SKY_coin_Transaction_Copy
 
-def SKY_cli_GenerateAddressesInFile(p0, p1, p2):
-    return _skycoin.SKY_cli_GenerateAddressesInFile(p0, p1, p2)
-SKY_cli_GenerateAddressesInFile = _skycoin.SKY_cli_GenerateAddressesInFile
+def SKY_coin_Transaction_ResetInputs(p0, p1):
+    return _skycoin.SKY_coin_Transaction_ResetInputs(p0, p1)
+SKY_coin_Transaction_ResetInputs = _skycoin.SKY_coin_Transaction_ResetInputs
 
-def SKY_cli_FormatAddressesAsJSON(p0):
-    return _skycoin.SKY_cli_FormatAddressesAsJSON(p0)
-SKY_cli_FormatAddressesAsJSON = _skycoin.SKY_cli_FormatAddressesAsJSON
+def SKY_coin_Transaction_GetInputsCount(p0):
+    return _skycoin.SKY_coin_Transaction_GetInputsCount(p0)
+SKY_coin_Transaction_GetInputsCount = _skycoin.SKY_coin_Transaction_GetInputsCount
 
-def SKY_cli_FormatAddressesAsJoinedArray(p0):
-    return _skycoin.SKY_cli_FormatAddressesAsJoinedArray(p0)
-SKY_cli_FormatAddressesAsJoinedArray = _skycoin.SKY_cli_FormatAddressesAsJoinedArray
+def SKY_coin_Transaction_GetInputAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_GetInputAt(p0, p1, p2)
+SKY_coin_Transaction_GetInputAt = _skycoin.SKY_coin_Transaction_GetInputAt
 
-def SKY_cli_AddressesToStrings(p0, p1):
-    return _skycoin.SKY_cli_AddressesToStrings(p0, p1)
-SKY_cli_AddressesToStrings = _skycoin.SKY_cli_AddressesToStrings
+def SKY_coin_Transaction_SetInputAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_SetInputAt(p0, p1, p2)
+SKY_coin_Transaction_SetInputAt = _skycoin.SKY_coin_Transaction_SetInputAt
 
-def SKY_handle_close(p0):
-    return _skycoin.SKY_handle_close(p0)
-SKY_handle_close = _skycoin.SKY_handle_close
+def SKY_coin_Transaction_GetOutputsCount(p0):
+    return _skycoin.SKY_coin_Transaction_GetOutputsCount(p0)
+SKY_coin_Transaction_GetOutputsCount = _skycoin.SKY_coin_Transaction_GetOutputsCount
 
-def SKY_handle_copy(p0):
-    return _skycoin.SKY_handle_copy(p0)
-SKY_handle_copy = _skycoin.SKY_handle_copy
+def SKY_coin_Transaction_GetOutputAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_GetOutputAt(p0, p1, p2)
+SKY_coin_Transaction_GetOutputAt = _skycoin.SKY_coin_Transaction_GetOutputAt
 
-def SKY_cli_GetWalletOutputsFromFile(p0, p1):
-    return _skycoin.SKY_cli_GetWalletOutputsFromFile(p0, p1)
-SKY_cli_GetWalletOutputsFromFile = _skycoin.SKY_cli_GetWalletOutputsFromFile
+def SKY_coin_Transaction_SetOutputAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_SetOutputAt(p0, p1, p2)
+SKY_coin_Transaction_SetOutputAt = _skycoin.SKY_coin_Transaction_SetOutputAt
 
-def SKY_cli_GetWalletOutputs(p0):
-    return _skycoin.SKY_cli_GetWalletOutputs(p0)
-SKY_cli_GetWalletOutputs = _skycoin.SKY_cli_GetWalletOutputs
+def SKY_coin_Transaction_GetSignaturesCount(p0):
+    return _skycoin.SKY_coin_Transaction_GetSignaturesCount(p0)
+SKY_coin_Transaction_GetSignaturesCount = _skycoin.SKY_coin_Transaction_GetSignaturesCount
 
-def SKY_bip32_NewMasterKey(p0):
-    return _skycoin.SKY_bip32_NewMasterKey(p0)
-SKY_bip32_NewMasterKey = _skycoin.SKY_bip32_NewMasterKey
+def SKY_coin_Transaction_GetSignatureAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_GetSignatureAt(p0, p1, p2)
+SKY_coin_Transaction_GetSignatureAt = _skycoin.SKY_coin_Transaction_GetSignatureAt
 
-def SKY_bip32_NewPrivateKeyFromPath(p0, p1):
-    return _skycoin.SKY_bip32_NewPrivateKeyFromPath(p0, p1)
-SKY_bip32_NewPrivateKeyFromPath = _skycoin.SKY_bip32_NewPrivateKeyFromPath
+def SKY_coin_Transaction_SetSignatureAt(p0, p1, p2):
+    return _skycoin.SKY_coin_Transaction_SetSignatureAt(p0, p1, p2)
+SKY_coin_Transaction_SetSignatureAt = _skycoin.SKY_coin_Transaction_SetSignatureAt
 
-def SKY_bip32_PrivateKey_DeriveSubpath(p0):
-    return _skycoin.SKY_bip32_PrivateKey_DeriveSubpath(p0)
-SKY_bip32_PrivateKey_DeriveSubpath = _skycoin.SKY_bip32_PrivateKey_DeriveSubpath
+def SKY_coin_Transaction_PushSignature(p0, p1):
+    return _skycoin.SKY_coin_Transaction_PushSignature(p0, p1)
+SKY_coin_Transaction_PushSignature = _skycoin.SKY_coin_Transaction_PushSignature
 
-def SKY_bip32_PrivateKey_Publickey(p0):
-    return _skycoin.SKY_bip32_PrivateKey_Publickey(p0)
-SKY_bip32_PrivateKey_Publickey = _skycoin.SKY_bip32_PrivateKey_Publickey
+def SKY_coin_Transaction_ResetOutputs(p0, p1):
+    return _skycoin.SKY_coin_Transaction_ResetOutputs(p0, p1)
+SKY_coin_Transaction_ResetOutputs = _skycoin.SKY_coin_Transaction_ResetOutputs
 
-def SKY_bip32_PrivateKey_Fingerprint(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_Fingerprint(p0, p1)
-SKY_bip32_PrivateKey_Fingerprint = _skycoin.SKY_bip32_PrivateKey_Fingerprint
+def SKY_coin_Transaction_ResetSignatures(p0, p1):
+    return _skycoin.SKY_coin_Transaction_ResetSignatures(p0, p1)
+SKY_coin_Transaction_ResetSignatures = _skycoin.SKY_coin_Transaction_ResetSignatures
 
-def SKY_bip32_PrivateKey_Identifier(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_Identifier(p0, p1)
-SKY_bip32_PrivateKey_Identifier = _skycoin.SKY_bip32_PrivateKey_Identifier
+def SKY_coin_Transaction_Verify(p0):
+    return _skycoin.SKY_coin_Transaction_Verify(p0)
+SKY_coin_Transaction_Verify = _skycoin.SKY_coin_Transaction_Verify
 
-def SKY_bip32_PublicKey_Fingerprint(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_Fingerprint(p0, p1)
-SKY_bip32_PublicKey_Fingerprint = _skycoin.SKY_bip32_PublicKey_Fingerprint
+def SKY_coin_Transaction_PushInput(p0, p1):
+    return _skycoin.SKY_coin_Transaction_PushInput(p0, p1)
+SKY_coin_Transaction_PushInput = _skycoin.SKY_coin_Transaction_PushInput
 
-def SKY_bip32_PublicKey_Identifier(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_Identifier(p0, p1)
-SKY_bip32_PublicKey_Identifier = _skycoin.SKY_bip32_PublicKey_Identifier
+def SKY_coin_TransactionOutput_UxID(p0, p1, p2):
+    return _skycoin.SKY_coin_TransactionOutput_UxID(p0, p1, p2)
+SKY_coin_TransactionOutput_UxID = _skycoin.SKY_coin_TransactionOutput_UxID
 
-def SKY_bip32_PrivateKey_NewPrivateChildKey(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(p0, p1)
-SKY_bip32_PrivateKey_NewPrivateChildKey = _skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey
+def SKY_coin_Transaction_PushOutput(p0, p1, p2, p3):
+    return _skycoin.SKY_coin_Transaction_PushOutput(p0, p1, p2, p3)
+SKY_coin_Transaction_PushOutput = _skycoin.SKY_coin_Transaction_PushOutput
 
-def SKY_bip32_PrivateKey_NewPublicChildKey(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_NewPublicChildKey(p0, p1)
-SKY_bip32_PrivateKey_NewPublicChildKey = _skycoin.SKY_bip32_PrivateKey_NewPublicChildKey
+def SKY_coin_Transaction_SignInputs(*args):
+    return _skycoin.SKY_coin_Transaction_SignInputs(*args)
+SKY_coin_Transaction_SignInputs = _skycoin.SKY_coin_Transaction_SignInputs
 
-def SKY_bip32_PublicKey_NewPublicChildKey(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_NewPublicChildKey(p0, p1)
-SKY_bip32_PublicKey_NewPublicChildKey = _skycoin.SKY_bip32_PublicKey_NewPublicChildKey
+def SKY_coin_Transaction_Size(p0):
+    return _skycoin.SKY_coin_Transaction_Size(p0)
+SKY_coin_Transaction_Size = _skycoin.SKY_coin_Transaction_Size
 
-def SKY_bip32_PrivateKey_Serialize(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_Serialize(p0, p1)
-SKY_bip32_PrivateKey_Serialize = _skycoin.SKY_bip32_PrivateKey_Serialize
+def SKY_coin_Transaction_Hash(p0, p1):
+    return _skycoin.SKY_coin_Transaction_Hash(p0, p1)
+SKY_coin_Transaction_Hash = _skycoin.SKY_coin_Transaction_Hash
 
-def SKY_bip32_PublicKey_Serialize(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_Serialize(p0, p1)
-SKY_bip32_PublicKey_Serialize = _skycoin.SKY_bip32_PublicKey_Serialize
+def SKY_coin_Transaction_SizeHash(p0, p2):
+    return _skycoin.SKY_coin_Transaction_SizeHash(p0, p2)
+SKY_coin_Transaction_SizeHash = _skycoin.SKY_coin_Transaction_SizeHash
 
-def SKY_bip32_PrivateKey_String(p0):
-    return _skycoin.SKY_bip32_PrivateKey_String(p0)
-SKY_bip32_PrivateKey_String = _skycoin.SKY_bip32_PrivateKey_String
+def SKY_coin_Transaction_UpdateHeader(p0):
+    return _skycoin.SKY_coin_Transaction_UpdateHeader(p0)
+SKY_coin_Transaction_UpdateHeader = _skycoin.SKY_coin_Transaction_UpdateHeader
 
-def SKY_bip32_PublicKey_String(p0):
-    return _skycoin.SKY_bip32_PublicKey_String(p0)
-SKY_bip32_PublicKey_String = _skycoin.SKY_bip32_PublicKey_String
+def SKY_coin_Transaction_HashInner(p0, p1):
+    return _skycoin.SKY_coin_Transaction_HashInner(p0, p1)
+SKY_coin_Transaction_HashInner = _skycoin.SKY_coin_Transaction_HashInner
 
-def SKY_bip32_DeserializeEncodedPrivateKey(p0):
-    return _skycoin.SKY_bip32_DeserializeEncodedPrivateKey(p0)
-SKY_bip32_DeserializeEncodedPrivateKey = _skycoin.SKY_bip32_DeserializeEncodedPrivateKey
+def SKY_coin_Transaction_Serialize(p0):
+    return _skycoin.SKY_coin_Transaction_Serialize(p0)
+SKY_coin_Transaction_Serialize = _skycoin.SKY_coin_Transaction_Serialize
 
-def SKY_bip32_DeserializePrivateKey(p0):
-    return _skycoin.SKY_bip32_DeserializePrivateKey(p0)
-SKY_bip32_DeserializePrivateKey = _skycoin.SKY_bip32_DeserializePrivateKey
+def SKY_coin_TransactionDeserialize(p0):
+    return _skycoin.SKY_coin_TransactionDeserialize(p0)
+SKY_coin_TransactionDeserialize = _skycoin.SKY_coin_TransactionDeserialize
 
-def SKY_bip32_DeserializeEncodedPublicKey(p0):
-    return _skycoin.SKY_bip32_DeserializeEncodedPublicKey(p0)
-SKY_bip32_DeserializeEncodedPublicKey = _skycoin.SKY_bip32_DeserializeEncodedPublicKey
+def SKY_coin_Transaction_OutputHours(p0):
+    return _skycoin.SKY_coin_Transaction_OutputHours(p0)
+SKY_coin_Transaction_OutputHours = _skycoin.SKY_coin_Transaction_OutputHours
 
-def SKY_bip32_DeserializePublicKey(p0):
-    return _skycoin.SKY_bip32_DeserializePublicKey(p0)
-SKY_bip32_DeserializePublicKey = _skycoin.SKY_bip32_DeserializePublicKey
+def SKY_coin_Create_Transactions():
+    return _skycoin.SKY_coin_Create_Transactions()
+SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
 
-def SKY_bip32_PrivateKey_GetKey(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_GetKey(p0, p1)
-SKY_bip32_PrivateKey_GetKey = _skycoin.SKY_bip32_PrivateKey_GetKey
+def SKY_coin_Transactions_Length(p0):
+    return _skycoin.SKY_coin_Transactions_Length(p0)
+SKY_coin_Transactions_Length = _skycoin.SKY_coin_Transactions_Length
 
-def SKY_bip32_PublicKey_GetKey(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_GetKey(p0, p1)
-SKY_bip32_PublicKey_GetKey = _skycoin.SKY_bip32_PublicKey_GetKey
+def SKY_coin_Transactions_Add(p0, p1):
+    return _skycoin.SKY_coin_Transactions_Add(p0, p1)
+SKY_coin_Transactions_Add = _skycoin.SKY_coin_Transactions_Add
 
-def SKY_bip32_PrivateKey_GetDepth(p0):
-    return _skycoin.SKY_bip32_PrivateKey_GetDepth(p0)
-SKY_bip32_PrivateKey_GetDepth = _skycoin.SKY_bip32_PrivateKey_GetDepth
+def SKY_coin_Transactions_Fees(p0, p1):
+    return _skycoin.SKY_coin_Transactions_Fees(p0, p1)
+SKY_coin_Transactions_Fees = _skycoin.SKY_coin_Transactions_Fees
 
-def SKY_bip32_PublicKey_GetDepth(p0):
-    return _skycoin.SKY_bip32_PublicKey_GetDepth(p0)
-SKY_bip32_PublicKey_GetDepth = _skycoin.SKY_bip32_PublicKey_GetDepth
+def SKY_coin_Transactions_GetAt(p0, p1):
+    return _skycoin.SKY_coin_Transactions_GetAt(p0, p1)
+SKY_coin_Transactions_GetAt = _skycoin.SKY_coin_Transactions_GetAt
 
-def SKY_bip32_PrivateKey_ChildNumber(p0):
-    return _skycoin.SKY_bip32_PrivateKey_ChildNumber(p0)
-SKY_bip32_PrivateKey_ChildNumber = _skycoin.SKY_bip32_PrivateKey_ChildNumber
+def SKY_coin_Transactions_Hashes(*args):
+    return _skycoin.SKY_coin_Transactions_Hashes(*args)
+SKY_coin_Transactions_Hashes = _skycoin.SKY_coin_Transactions_Hashes
 
-def SKY_bip32_PublicKey_ChildNumber(p0):
-    return _skycoin.SKY_bip32_PublicKey_ChildNumber(p0)
-SKY_bip32_PublicKey_ChildNumber = _skycoin.SKY_bip32_PublicKey_ChildNumber
+def SKY_coin_Transactions_Size(p0):
+    return _skycoin.SKY_coin_Transactions_Size(p0)
+SKY_coin_Transactions_Size = _skycoin.SKY_coin_Transactions_Size
 
-def SKY_bip32_PrivateKey_GetChainCode(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_GetChainCode(p0, p1)
-SKY_bip32_PrivateKey_GetChainCode = _skycoin.SKY_bip32_PrivateKey_GetChainCode
+def SKY_coin_Transactions_TruncateBytesTo(p0, p1):
+    return _skycoin.SKY_coin_Transactions_TruncateBytesTo(p0, p1)
+SKY_coin_Transactions_TruncateBytesTo = _skycoin.SKY_coin_Transactions_TruncateBytesTo
 
-def SKY_bip32_PublicKey_GetChainCode(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_GetChainCode(p0, p1)
-SKY_bip32_PublicKey_GetChainCode = _skycoin.SKY_bip32_PublicKey_GetChainCode
+def SKY_coin_SortTransactions(p0, p1):
+    return _skycoin.SKY_coin_SortTransactions(p0, p1)
+SKY_coin_SortTransactions = _skycoin.SKY_coin_SortTransactions
 
-def SKY_bip32_PrivateKey_GetVersion(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_GetVersion(p0, p1)
-SKY_bip32_PrivateKey_GetVersion = _skycoin.SKY_bip32_PrivateKey_GetVersion
+def SKY_coin_NewSortableTransactions(p0, p1):
+    return _skycoin.SKY_coin_NewSortableTransactions(p0, p1)
+SKY_coin_NewSortableTransactions = _skycoin.SKY_coin_NewSortableTransactions
 
-def SKY_bip32_PublicKey_GetVersion(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_GetVersion(p0, p1)
-SKY_bip32_PublicKey_GetVersion = _skycoin.SKY_bip32_PublicKey_GetVersion
+def SKY_coin_SortableTransactions_Sort(p0):
+    return _skycoin.SKY_coin_SortableTransactions_Sort(p0)
+SKY_coin_SortableTransactions_Sort = _skycoin.SKY_coin_SortableTransactions_Sort
 
-def SKY_bip32_PrivateKey_GetParentFingerprint(p0, p1):
-    return _skycoin.SKY_bip32_PrivateKey_GetParentFingerprint(p0, p1)
-SKY_bip32_PrivateKey_GetParentFingerprint = _skycoin.SKY_bip32_PrivateKey_GetParentFingerprint
+def SKY_coin_SortableTransactions_Len(p0):
+    return _skycoin.SKY_coin_SortableTransactions_Len(p0)
+SKY_coin_SortableTransactions_Len = _skycoin.SKY_coin_SortableTransactions_Len
 
-def SKY_bip32_PublicKey_GetParentFingerprint(p0, p1):
-    return _skycoin.SKY_bip32_PublicKey_GetParentFingerprint(p0, p1)
-SKY_bip32_PublicKey_GetParentFingerprint = _skycoin.SKY_bip32_PublicKey_GetParentFingerprint
+def SKY_coin_SortableTransactions_Less(p0, p1, p2):
+    return _skycoin.SKY_coin_SortableTransactions_Less(p0, p1, p2)
+SKY_coin_SortableTransactions_Less = _skycoin.SKY_coin_SortableTransactions_Less
 
-def SKY_iputil_LocalhostIP():
-    return _skycoin.SKY_iputil_LocalhostIP()
-SKY_iputil_LocalhostIP = _skycoin.SKY_iputil_LocalhostIP
+def SKY_coin_SortableTransactions_Swap(p0, p1, p2):
+    return _skycoin.SKY_coin_SortableTransactions_Swap(p0, p1, p2)
+SKY_coin_SortableTransactions_Swap = _skycoin.SKY_coin_SortableTransactions_Swap
 
-def SKY_iputil_IsLocalhost(p0):
-    return _skycoin.SKY_iputil_IsLocalhost(p0)
-SKY_iputil_IsLocalhost = _skycoin.SKY_iputil_IsLocalhost
+def SKY_coin_VerifyTransactionCoinsSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending(*args)
+SKY_coin_VerifyTransactionCoinsSpending = _skycoin.SKY_coin_VerifyTransactionCoinsSpending
 
-def SKY_iputil_SplitAddr(p0):
-    return _skycoin.SKY_iputil_SplitAddr(p0)
-SKY_iputil_SplitAddr = _skycoin.SKY_iputil_SplitAddr
+def SKY_coin_VerifyTransactionHoursSpending(*args):
+    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(*args)
+SKY_coin_VerifyTransactionHoursSpending = _skycoin.SKY_coin_VerifyTransactionHoursSpending
 
-def SKY_wallet_CollectionWallet_AddEntry(p0, p1):
-    return _skycoin.SKY_wallet_CollectionWallet_AddEntry(p0, p1)
-SKY_wallet_CollectionWallet_AddEntry = _skycoin.SKY_wallet_CollectionWallet_AddEntry
+def SKY_coin_VerifyInputSignatures(*args):
+    return _skycoin.SKY_coin_VerifyInputSignatures(*args)
+SKY_coin_VerifyInputSignatures = _skycoin.SKY_coin_VerifyInputSignatures
 
-def SKY_wallet_CollectionWallet_GetEntry(p0, p1, p2):
-    return _skycoin.SKY_wallet_CollectionWallet_GetEntry(p0, p1, p2)
-SKY_wallet_CollectionWallet_GetEntry = _skycoin.SKY_wallet_CollectionWallet_GetEntry
+def SKY_coin_Transaction_GetLength(p0):
+    return _skycoin.SKY_coin_Transaction_GetLength(p0)
+SKY_coin_Transaction_GetLength = _skycoin.SKY_coin_Transaction_GetLength
 
-def SKY_wallet_CollectionWallet_GetAddresses(p0):
-    return _skycoin.SKY_wallet_CollectionWallet_GetAddresses(p0)
-SKY_wallet_CollectionWallet_GetAddresses = _skycoin.SKY_wallet_CollectionWallet_GetAddresses
+def SKY_coin_Transaction_GetType(p0):
+    return _skycoin.SKY_coin_Transaction_GetType(p0)
+SKY_coin_Transaction_GetType = _skycoin.SKY_coin_Transaction_GetType
 
-def SKY_wallet_CollectionWallet_GenerateAddresses(p0, p1):
-    return _skycoin.SKY_wallet_CollectionWallet_GenerateAddresses(p0, p1)
-SKY_wallet_CollectionWallet_GenerateAddresses = _skycoin.SKY_wallet_CollectionWallet_GenerateAddresses
+def SKY_coin_Transaction_GetInnerHash(p0, p1):
+    return _skycoin.SKY_coin_Transaction_GetInnerHash(p0, p1)
+SKY_coin_Transaction_GetInnerHash = _skycoin.SKY_coin_Transaction_GetInnerHash
 
-def SKY_wallet_CollectionWallet_Validate(p0):
-    return _skycoin.SKY_wallet_CollectionWallet_Validate(p0)
-SKY_wallet_CollectionWallet_Validate = _skycoin.SKY_wallet_CollectionWallet_Validate
+def SKY_coin_Transaction_GetSigs(p0):
+    return _skycoin.SKY_coin_Transaction_GetSigs(p0)
+SKY_coin_Transaction_GetSigs = _skycoin.SKY_coin_Transaction_GetSigs
 
-def SKY_cli_NewTransaction(p0, p1, p2):
-    return _skycoin.SKY_cli_NewTransaction(p0, p1, p2)
-SKY_cli_NewTransaction = _skycoin.SKY_cli_NewTransaction
+def SKY_coin_Transaction_GetIn(p0):
+    return _skycoin.SKY_coin_Transaction_GetIn(p0)
+SKY_coin_Transaction_GetIn = _skycoin.SKY_coin_Transaction_GetIn
 
-def SKY_transaction_DistributeCoinHoursProportional(p0, p1, p2):
-    return _skycoin.SKY_transaction_DistributeCoinHoursProportional(p0, p1, p2)
-SKY_transaction_DistributeCoinHoursProportional = _skycoin.SKY_transaction_DistributeCoinHoursProportional
+def SKY_coin_Transaction_GetOut(p0):
+    return _skycoin.SKY_coin_Transaction_GetOut(p0)
+SKY_coin_Transaction_GetOut = _skycoin.SKY_coin_Transaction_GetOut
 
-def SKY_transaction_DistributeSpendHours(p0, p1, p2, p4):
-    return _skycoin.SKY_transaction_DistributeSpendHours(p0, p1, p2, p4)
-SKY_transaction_DistributeSpendHours = _skycoin.SKY_transaction_DistributeSpendHours
+def SKY_coin_Transaction_SetInnerHash(p1):
+    return _skycoin.SKY_coin_Transaction_SetInnerHash(p1)
+SKY_coin_Transaction_SetInnerHash = _skycoin.SKY_coin_Transaction_SetInnerHash
+
+def SKY_coin_DeserializeTransactionHex(p0):
+    return _skycoin.SKY_coin_DeserializeTransactionHex(p0)
+SKY_coin_DeserializeTransactionHex = _skycoin.SKY_coin_DeserializeTransactionHex
+
+def SKY_coin_GetTransactionObject(p0):
+    return _skycoin.SKY_coin_GetTransactionObject(p0)
+SKY_coin_GetTransactionObject = _skycoin.SKY_coin_GetTransactionObject
 
 def SKY_base58_Hex2Base58(p0):
     return _skycoin.SKY_base58_Hex2Base58(p0)
@@ -1712,6 +932,26 @@ SKY_base58_String2Hex = _skycoin.SKY_base58_String2Hex
 def SKY_base58_Hex2String(p0):
     return _skycoin.SKY_base58_Hex2String(p0)
 SKY_base58_Hex2String = _skycoin.SKY_base58_Hex2String
+
+def SKY_cli_CLI_Run(p0):
+    return _skycoin.SKY_cli_CLI_Run(p0)
+SKY_cli_CLI_Run = _skycoin.SKY_cli_CLI_Run
+
+def SKY_cli_Config_GetCoin(p0):
+    return _skycoin.SKY_cli_Config_GetCoin(p0)
+SKY_cli_Config_GetCoin = _skycoin.SKY_cli_Config_GetCoin
+
+def SKY_cli_Config_GetRPCAddress(p0):
+    return _skycoin.SKY_cli_Config_GetRPCAddress(p0)
+SKY_cli_Config_GetRPCAddress = _skycoin.SKY_cli_Config_GetRPCAddress
+
+def SKY_cli_Getenv(p0):
+    return _skycoin.SKY_cli_Getenv(p0)
+SKY_cli_Getenv = _skycoin.SKY_cli_Getenv
+
+def SKY_cli_Setenv(p0, p1):
+    return _skycoin.SKY_cli_Setenv(p0, p1)
+SKY_cli_Setenv = _skycoin.SKY_cli_Setenv
 
 def SKY_api_NewClient(p0):
     return _skycoin.SKY_api_NewClient(p0)
@@ -1905,281 +1145,657 @@ def SKY_api_Client_RecoverWallet(p0, p1):
     return _skycoin.SKY_api_Client_RecoverWallet(p0, p1)
 SKY_api_Client_RecoverWallet = _skycoin.SKY_api_Client_RecoverWallet
 
-def SKY_coin_Create_Transaction():
-    return _skycoin.SKY_coin_Create_Transaction()
-SKY_coin_Create_Transaction = _skycoin.SKY_coin_Create_Transaction
-
-def SKY_coin_Transaction_Copy(p0):
-    return _skycoin.SKY_coin_Transaction_Copy(p0)
-SKY_coin_Transaction_Copy = _skycoin.SKY_coin_Transaction_Copy
-
-def SKY_coin_Transaction_ResetInputs(p0, p1):
-    return _skycoin.SKY_coin_Transaction_ResetInputs(p0, p1)
-SKY_coin_Transaction_ResetInputs = _skycoin.SKY_coin_Transaction_ResetInputs
-
-def SKY_coin_Transaction_GetInputsCount(p0):
-    return _skycoin.SKY_coin_Transaction_GetInputsCount(p0)
-SKY_coin_Transaction_GetInputsCount = _skycoin.SKY_coin_Transaction_GetInputsCount
-
-def SKY_coin_Transaction_GetInputAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_GetInputAt(p0, p1, p2)
-SKY_coin_Transaction_GetInputAt = _skycoin.SKY_coin_Transaction_GetInputAt
-
-def SKY_coin_Transaction_SetInputAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_SetInputAt(p0, p1, p2)
-SKY_coin_Transaction_SetInputAt = _skycoin.SKY_coin_Transaction_SetInputAt
-
-def SKY_coin_Transaction_GetOutputsCount(p0):
-    return _skycoin.SKY_coin_Transaction_GetOutputsCount(p0)
-SKY_coin_Transaction_GetOutputsCount = _skycoin.SKY_coin_Transaction_GetOutputsCount
-
-def SKY_coin_Transaction_GetOutputAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_GetOutputAt(p0, p1, p2)
-SKY_coin_Transaction_GetOutputAt = _skycoin.SKY_coin_Transaction_GetOutputAt
-
-def SKY_coin_Transaction_SetOutputAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_SetOutputAt(p0, p1, p2)
-SKY_coin_Transaction_SetOutputAt = _skycoin.SKY_coin_Transaction_SetOutputAt
-
-def SKY_coin_Transaction_GetSignaturesCount(p0):
-    return _skycoin.SKY_coin_Transaction_GetSignaturesCount(p0)
-SKY_coin_Transaction_GetSignaturesCount = _skycoin.SKY_coin_Transaction_GetSignaturesCount
-
-def SKY_coin_Transaction_GetSignatureAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_GetSignatureAt(p0, p1, p2)
-SKY_coin_Transaction_GetSignatureAt = _skycoin.SKY_coin_Transaction_GetSignatureAt
-
-def SKY_coin_Transaction_SetSignatureAt(p0, p1, p2):
-    return _skycoin.SKY_coin_Transaction_SetSignatureAt(p0, p1, p2)
-SKY_coin_Transaction_SetSignatureAt = _skycoin.SKY_coin_Transaction_SetSignatureAt
-
-def SKY_coin_Transaction_PushSignature(p0, p1):
-    return _skycoin.SKY_coin_Transaction_PushSignature(p0, p1)
-SKY_coin_Transaction_PushSignature = _skycoin.SKY_coin_Transaction_PushSignature
-
-def SKY_coin_Transaction_ResetOutputs(p0, p1):
-    return _skycoin.SKY_coin_Transaction_ResetOutputs(p0, p1)
-SKY_coin_Transaction_ResetOutputs = _skycoin.SKY_coin_Transaction_ResetOutputs
-
-def SKY_coin_Transaction_ResetSignatures(p0, p1):
-    return _skycoin.SKY_coin_Transaction_ResetSignatures(p0, p1)
-SKY_coin_Transaction_ResetSignatures = _skycoin.SKY_coin_Transaction_ResetSignatures
-
-def SKY_coin_Transaction_Verify(p0):
-    return _skycoin.SKY_coin_Transaction_Verify(p0)
-SKY_coin_Transaction_Verify = _skycoin.SKY_coin_Transaction_Verify
-
-def SKY_coin_Transaction_PushInput(p0, p1):
-    return _skycoin.SKY_coin_Transaction_PushInput(p0, p1)
-SKY_coin_Transaction_PushInput = _skycoin.SKY_coin_Transaction_PushInput
-
-def SKY_coin_TransactionOutput_UxID(p0, p1, p2):
-    return _skycoin.SKY_coin_TransactionOutput_UxID(p0, p1, p2)
-SKY_coin_TransactionOutput_UxID = _skycoin.SKY_coin_TransactionOutput_UxID
-
-def SKY_coin_Transaction_PushOutput(p0, p1, p2, p3):
-    return _skycoin.SKY_coin_Transaction_PushOutput(p0, p1, p2, p3)
-SKY_coin_Transaction_PushOutput = _skycoin.SKY_coin_Transaction_PushOutput
-
-def SKY_coin_Transaction_SignInputs(*args):
-    return _skycoin.SKY_coin_Transaction_SignInputs(*args)
-SKY_coin_Transaction_SignInputs = _skycoin.SKY_coin_Transaction_SignInputs
-
-def SKY_coin_Transaction_Size(p0):
-    return _skycoin.SKY_coin_Transaction_Size(p0)
-SKY_coin_Transaction_Size = _skycoin.SKY_coin_Transaction_Size
-
-def SKY_coin_Transaction_Hash(p0, p1):
-    return _skycoin.SKY_coin_Transaction_Hash(p0, p1)
-SKY_coin_Transaction_Hash = _skycoin.SKY_coin_Transaction_Hash
-
-def SKY_coin_Transaction_SizeHash(p0, p2):
-    return _skycoin.SKY_coin_Transaction_SizeHash(p0, p2)
-SKY_coin_Transaction_SizeHash = _skycoin.SKY_coin_Transaction_SizeHash
-
-def SKY_coin_Transaction_UpdateHeader(p0):
-    return _skycoin.SKY_coin_Transaction_UpdateHeader(p0)
-SKY_coin_Transaction_UpdateHeader = _skycoin.SKY_coin_Transaction_UpdateHeader
-
-def SKY_coin_Transaction_HashInner(p0, p1):
-    return _skycoin.SKY_coin_Transaction_HashInner(p0, p1)
-SKY_coin_Transaction_HashInner = _skycoin.SKY_coin_Transaction_HashInner
-
-def SKY_coin_Transaction_Serialize(p0, p1):
-    return _skycoin.SKY_coin_Transaction_Serialize(p0, p1)
-SKY_coin_Transaction_Serialize = _skycoin.SKY_coin_Transaction_Serialize
-
-def SKY_coin_TransactionDeserialize(p0):
-    return _skycoin.SKY_coin_TransactionDeserialize(p0)
-SKY_coin_TransactionDeserialize = _skycoin.SKY_coin_TransactionDeserialize
-
-def SKY_coin_Transaction_OutputHours(p0):
-    return _skycoin.SKY_coin_Transaction_OutputHours(p0)
-SKY_coin_Transaction_OutputHours = _skycoin.SKY_coin_Transaction_OutputHours
-
-def SKY_coin_Create_Transactions():
-    return _skycoin.SKY_coin_Create_Transactions()
-SKY_coin_Create_Transactions = _skycoin.SKY_coin_Create_Transactions
-
-def SKY_coin_Transactions_Length(p0):
-    return _skycoin.SKY_coin_Transactions_Length(p0)
-SKY_coin_Transactions_Length = _skycoin.SKY_coin_Transactions_Length
-
-def SKY_coin_Transactions_Add(p0, p1):
-    return _skycoin.SKY_coin_Transactions_Add(p0, p1)
-SKY_coin_Transactions_Add = _skycoin.SKY_coin_Transactions_Add
-
-def SKY_coin_Transactions_Fees(p0, p1):
-    return _skycoin.SKY_coin_Transactions_Fees(p0, p1)
-SKY_coin_Transactions_Fees = _skycoin.SKY_coin_Transactions_Fees
-
-def SKY_coin_Transactions_GetAt(p0, p1):
-    return _skycoin.SKY_coin_Transactions_GetAt(p0, p1)
-SKY_coin_Transactions_GetAt = _skycoin.SKY_coin_Transactions_GetAt
-
-def SKY_coin_Transactions_Hashes(*args):
-    return _skycoin.SKY_coin_Transactions_Hashes(*args)
-SKY_coin_Transactions_Hashes = _skycoin.SKY_coin_Transactions_Hashes
-
-def SKY_coin_Transactions_Size(p0):
-    return _skycoin.SKY_coin_Transactions_Size(p0)
-SKY_coin_Transactions_Size = _skycoin.SKY_coin_Transactions_Size
-
-def SKY_coin_Transactions_TruncateBytesTo(p0, p1):
-    return _skycoin.SKY_coin_Transactions_TruncateBytesTo(p0, p1)
-SKY_coin_Transactions_TruncateBytesTo = _skycoin.SKY_coin_Transactions_TruncateBytesTo
-
-def SKY_coin_SortTransactions(p0, p1):
-    return _skycoin.SKY_coin_SortTransactions(p0, p1)
-SKY_coin_SortTransactions = _skycoin.SKY_coin_SortTransactions
-
-def SKY_coin_NewSortableTransactions(p0, p1):
-    return _skycoin.SKY_coin_NewSortableTransactions(p0, p1)
-SKY_coin_NewSortableTransactions = _skycoin.SKY_coin_NewSortableTransactions
-
-def SKY_coin_SortableTransactions_Sort(p0):
-    return _skycoin.SKY_coin_SortableTransactions_Sort(p0)
-SKY_coin_SortableTransactions_Sort = _skycoin.SKY_coin_SortableTransactions_Sort
-
-def SKY_coin_SortableTransactions_Len(p0):
-    return _skycoin.SKY_coin_SortableTransactions_Len(p0)
-SKY_coin_SortableTransactions_Len = _skycoin.SKY_coin_SortableTransactions_Len
-
-def SKY_coin_SortableTransactions_Less(p0, p1, p2):
-    return _skycoin.SKY_coin_SortableTransactions_Less(p0, p1, p2)
-SKY_coin_SortableTransactions_Less = _skycoin.SKY_coin_SortableTransactions_Less
-
-def SKY_coin_SortableTransactions_Swap(p0, p1, p2):
-    return _skycoin.SKY_coin_SortableTransactions_Swap(p0, p1, p2)
-SKY_coin_SortableTransactions_Swap = _skycoin.SKY_coin_SortableTransactions_Swap
-
-def SKY_coin_VerifyTransactionCoinsSpending(*args):
-    return _skycoin.SKY_coin_VerifyTransactionCoinsSpending(*args)
-SKY_coin_VerifyTransactionCoinsSpending = _skycoin.SKY_coin_VerifyTransactionCoinsSpending
-
-def SKY_coin_VerifyTransactionHoursSpending(*args):
-    return _skycoin.SKY_coin_VerifyTransactionHoursSpending(*args)
-SKY_coin_VerifyTransactionHoursSpending = _skycoin.SKY_coin_VerifyTransactionHoursSpending
-
-def SKY_coin_VerifyInputSignatures(*args):
-    return _skycoin.SKY_coin_VerifyInputSignatures(*args)
-SKY_coin_VerifyInputSignatures = _skycoin.SKY_coin_VerifyInputSignatures
-
-def SKY_coin_Transaction_GetLength(p0):
-    return _skycoin.SKY_coin_Transaction_GetLength(p0)
-SKY_coin_Transaction_GetLength = _skycoin.SKY_coin_Transaction_GetLength
-
-def SKY_coin_Transaction_GetType(p0):
-    return _skycoin.SKY_coin_Transaction_GetType(p0)
-SKY_coin_Transaction_GetType = _skycoin.SKY_coin_Transaction_GetType
-
-def SKY_coin_Transaction_GetInnerHash(p0, p1):
-    return _skycoin.SKY_coin_Transaction_GetInnerHash(p0, p1)
-SKY_coin_Transaction_GetInnerHash = _skycoin.SKY_coin_Transaction_GetInnerHash
-
-def SKY_coin_Transaction_GetSigs(p0):
-    return _skycoin.SKY_coin_Transaction_GetSigs(p0)
-SKY_coin_Transaction_GetSigs = _skycoin.SKY_coin_Transaction_GetSigs
-
-def SKY_coin_Transaction_GetIn(p0):
-    return _skycoin.SKY_coin_Transaction_GetIn(p0)
-SKY_coin_Transaction_GetIn = _skycoin.SKY_coin_Transaction_GetIn
-
-def SKY_coin_Transaction_GetOut(p0):
-    return _skycoin.SKY_coin_Transaction_GetOut(p0)
-SKY_coin_Transaction_GetOut = _skycoin.SKY_coin_Transaction_GetOut
-
-def SKY_coin_Transaction_SetInnerHash(p1):
-    return _skycoin.SKY_coin_Transaction_SetInnerHash(p1)
-SKY_coin_Transaction_SetInnerHash = _skycoin.SKY_coin_Transaction_SetInnerHash
-
-def SKY_coin_DeserializeTransactionHex(p0):
-    return _skycoin.SKY_coin_DeserializeTransactionHex(p0)
-SKY_coin_DeserializeTransactionHex = _skycoin.SKY_coin_DeserializeTransactionHex
-
-def SKY_params_Distribution_GetMaxCoinSupply(p0):
-    return _skycoin.SKY_params_Distribution_GetMaxCoinSupply(p0)
-SKY_params_Distribution_GetMaxCoinSupply = _skycoin.SKY_params_Distribution_GetMaxCoinSupply
-
-def SKY_params_Distribution_SetMaxCoinSupply(p0, p1):
-    return _skycoin.SKY_params_Distribution_SetMaxCoinSupply(p0, p1)
-SKY_params_Distribution_SetMaxCoinSupply = _skycoin.SKY_params_Distribution_SetMaxCoinSupply
-
-def SKY_params_Distribution_GetInitialUnlockedCount(p0):
-    return _skycoin.SKY_params_Distribution_GetInitialUnlockedCount(p0)
-SKY_params_Distribution_GetInitialUnlockedCount = _skycoin.SKY_params_Distribution_GetInitialUnlockedCount
-
-def SKY_params_Distribution_SetInitialUnlockedCount(p0, p1):
-    return _skycoin.SKY_params_Distribution_SetInitialUnlockedCount(p0, p1)
-SKY_params_Distribution_SetInitialUnlockedCount = _skycoin.SKY_params_Distribution_SetInitialUnlockedCount
-
-def SKY_params_Distribution_GetUnlockAddressRate(p0):
-    return _skycoin.SKY_params_Distribution_GetUnlockAddressRate(p0)
-SKY_params_Distribution_GetUnlockAddressRate = _skycoin.SKY_params_Distribution_GetUnlockAddressRate
-
-def SKY_params_Distribution_SetUnlockAddressRate(p0, p1):
-    return _skycoin.SKY_params_Distribution_SetUnlockAddressRate(p0, p1)
-SKY_params_Distribution_SetUnlockAddressRate = _skycoin.SKY_params_Distribution_SetUnlockAddressRate
-
-def SKY_params_Distribution_GetUnlockTimeInterval(p0):
-    return _skycoin.SKY_params_Distribution_GetUnlockTimeInterval(p0)
-SKY_params_Distribution_GetUnlockTimeInterval = _skycoin.SKY_params_Distribution_GetUnlockTimeInterval
-
-def SKY_params_Distribution_SetUnlockTimeInterval(p0, p1):
-    return _skycoin.SKY_params_Distribution_SetUnlockTimeInterval(p0, p1)
-SKY_params_Distribution_SetUnlockTimeInterval = _skycoin.SKY_params_Distribution_SetUnlockTimeInterval
-
-def SKY_params_Distribution_SetAddresses(p0, p1):
-    return _skycoin.SKY_params_Distribution_SetAddresses(p0, p1)
-SKY_params_Distribution_SetAddresses = _skycoin.SKY_params_Distribution_SetAddresses
-
-def SKY_params_Distribution_Validate(p0):
-    return _skycoin.SKY_params_Distribution_Validate(p0)
-SKY_params_Distribution_Validate = _skycoin.SKY_params_Distribution_Validate
-
-def SKY_params_Distribution_AddressInitialBalance(p0):
-    return _skycoin.SKY_params_Distribution_AddressInitialBalance(p0)
-SKY_params_Distribution_AddressInitialBalance = _skycoin.SKY_params_Distribution_AddressInitialBalance
-
-def SKY_params_Distribution_AddressesDecoded(p0):
-    return _skycoin.SKY_params_Distribution_AddressesDecoded(p0)
-SKY_params_Distribution_AddressesDecoded = _skycoin.SKY_params_Distribution_AddressesDecoded
-
-def SKY_params_Distribution_UnlockedAddressesDecoded(p0):
-    return _skycoin.SKY_params_Distribution_UnlockedAddressesDecoded(p0)
-SKY_params_Distribution_UnlockedAddressesDecoded = _skycoin.SKY_params_Distribution_UnlockedAddressesDecoded
-
-def SKY_params_Distribution_LockedAddressesDecoded(p0):
-    return _skycoin.SKY_params_Distribution_LockedAddressesDecoded(p0)
-SKY_params_Distribution_LockedAddressesDecoded = _skycoin.SKY_params_Distribution_LockedAddressesDecoded
-
-def SKY_params_Distribution_GetMainNetDistribution():
-    return _skycoin.SKY_params_Distribution_GetMainNetDistribution()
-SKY_params_Distribution_GetMainNetDistribution = _skycoin.SKY_params_Distribution_GetMainNetDistribution
-
-def SKY_params_NewDistribution():
-    return _skycoin.SKY_params_NewDistribution()
-SKY_params_NewDistribution = _skycoin.SKY_params_NewDistribution
+def SKY_wallet_NewError(p0):
+    return _skycoin.SKY_wallet_NewError(p0)
+SKY_wallet_NewError = _skycoin.SKY_wallet_NewError
+
+def SKY_wallet_NewWallet(p0, p1):
+    return _skycoin.SKY_wallet_NewWallet(p0, p1)
+SKY_wallet_NewWallet = _skycoin.SKY_wallet_NewWallet
+
+def SKY_wallet_Lock(p0, p1, p2):
+    return _skycoin.SKY_wallet_Lock(p0, p1, p2)
+SKY_wallet_Lock = _skycoin.SKY_wallet_Lock
+
+def SKY_wallet_Unlock(p0, p1):
+    return _skycoin.SKY_wallet_Unlock(p0, p1)
+SKY_wallet_Unlock = _skycoin.SKY_wallet_Unlock
+
+def SKY_wallet_Load(p0):
+    return _skycoin.SKY_wallet_Load(p0)
+SKY_wallet_Load = _skycoin.SKY_wallet_Load
+
+def SKY_wallet_Wallet_Save(p0, p1):
+    return _skycoin.SKY_wallet_Wallet_Save(p0, p1)
+SKY_wallet_Wallet_Save = _skycoin.SKY_wallet_Wallet_Save
+
+def SKY_bip32_NewMasterKey(p0):
+    return _skycoin.SKY_bip32_NewMasterKey(p0)
+SKY_bip32_NewMasterKey = _skycoin.SKY_bip32_NewMasterKey
+
+def SKY_bip32_NewPrivateKeyFromPath(p0, p1):
+    return _skycoin.SKY_bip32_NewPrivateKeyFromPath(p0, p1)
+SKY_bip32_NewPrivateKeyFromPath = _skycoin.SKY_bip32_NewPrivateKeyFromPath
+
+def SKY_bip32_PrivateKey_DeriveSubpath(p0):
+    return _skycoin.SKY_bip32_PrivateKey_DeriveSubpath(p0)
+SKY_bip32_PrivateKey_DeriveSubpath = _skycoin.SKY_bip32_PrivateKey_DeriveSubpath
+
+def SKY_bip32_PrivateKey_Publickey(p0):
+    return _skycoin.SKY_bip32_PrivateKey_Publickey(p0)
+SKY_bip32_PrivateKey_Publickey = _skycoin.SKY_bip32_PrivateKey_Publickey
+
+def SKY_bip32_PrivateKey_Fingerprint(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_Fingerprint(p0, p1)
+SKY_bip32_PrivateKey_Fingerprint = _skycoin.SKY_bip32_PrivateKey_Fingerprint
+
+def SKY_bip32_PrivateKey_Identifier(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_Identifier(p0, p1)
+SKY_bip32_PrivateKey_Identifier = _skycoin.SKY_bip32_PrivateKey_Identifier
+
+def SKY_bip32_PublicKey_Fingerprint(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_Fingerprint(p0, p1)
+SKY_bip32_PublicKey_Fingerprint = _skycoin.SKY_bip32_PublicKey_Fingerprint
+
+def SKY_bip32_PublicKey_Identifier(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_Identifier(p0, p1)
+SKY_bip32_PublicKey_Identifier = _skycoin.SKY_bip32_PublicKey_Identifier
+
+def SKY_bip32_PrivateKey_NewPrivateChildKey(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(p0, p1)
+SKY_bip32_PrivateKey_NewPrivateChildKey = _skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey
+
+def SKY_bip32_PrivateKey_NewPublicChildKey(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_NewPublicChildKey(p0, p1)
+SKY_bip32_PrivateKey_NewPublicChildKey = _skycoin.SKY_bip32_PrivateKey_NewPublicChildKey
+
+def SKY_bip32_PublicKey_NewPublicChildKey(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_NewPublicChildKey(p0, p1)
+SKY_bip32_PublicKey_NewPublicChildKey = _skycoin.SKY_bip32_PublicKey_NewPublicChildKey
+
+def SKY_bip32_PrivateKey_Serialize(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_Serialize(p0, p1)
+SKY_bip32_PrivateKey_Serialize = _skycoin.SKY_bip32_PrivateKey_Serialize
+
+def SKY_bip32_PublicKey_Serialize(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_Serialize(p0, p1)
+SKY_bip32_PublicKey_Serialize = _skycoin.SKY_bip32_PublicKey_Serialize
+
+def SKY_bip32_PrivateKey_String(p0):
+    return _skycoin.SKY_bip32_PrivateKey_String(p0)
+SKY_bip32_PrivateKey_String = _skycoin.SKY_bip32_PrivateKey_String
+
+def SKY_bip32_PublicKey_String(p0):
+    return _skycoin.SKY_bip32_PublicKey_String(p0)
+SKY_bip32_PublicKey_String = _skycoin.SKY_bip32_PublicKey_String
+
+def SKY_bip32_DeserializeEncodedPrivateKey(p0):
+    return _skycoin.SKY_bip32_DeserializeEncodedPrivateKey(p0)
+SKY_bip32_DeserializeEncodedPrivateKey = _skycoin.SKY_bip32_DeserializeEncodedPrivateKey
+
+def SKY_bip32_DeserializePrivateKey(p0):
+    return _skycoin.SKY_bip32_DeserializePrivateKey(p0)
+SKY_bip32_DeserializePrivateKey = _skycoin.SKY_bip32_DeserializePrivateKey
+
+def SKY_bip32_DeserializeEncodedPublicKey(p0):
+    return _skycoin.SKY_bip32_DeserializeEncodedPublicKey(p0)
+SKY_bip32_DeserializeEncodedPublicKey = _skycoin.SKY_bip32_DeserializeEncodedPublicKey
+
+def SKY_bip32_DeserializePublicKey(p0):
+    return _skycoin.SKY_bip32_DeserializePublicKey(p0)
+SKY_bip32_DeserializePublicKey = _skycoin.SKY_bip32_DeserializePublicKey
+
+def SKY_bip32_PrivateKey_GetKey(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_GetKey(p0, p1)
+SKY_bip32_PrivateKey_GetKey = _skycoin.SKY_bip32_PrivateKey_GetKey
+
+def SKY_bip32_PublicKey_GetKey(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_GetKey(p0, p1)
+SKY_bip32_PublicKey_GetKey = _skycoin.SKY_bip32_PublicKey_GetKey
+
+def SKY_bip32_PrivateKey_GetDepth(p0):
+    return _skycoin.SKY_bip32_PrivateKey_GetDepth(p0)
+SKY_bip32_PrivateKey_GetDepth = _skycoin.SKY_bip32_PrivateKey_GetDepth
+
+def SKY_bip32_PublicKey_GetDepth(p0):
+    return _skycoin.SKY_bip32_PublicKey_GetDepth(p0)
+SKY_bip32_PublicKey_GetDepth = _skycoin.SKY_bip32_PublicKey_GetDepth
+
+def SKY_bip32_PrivateKey_ChildNumber(p0):
+    return _skycoin.SKY_bip32_PrivateKey_ChildNumber(p0)
+SKY_bip32_PrivateKey_ChildNumber = _skycoin.SKY_bip32_PrivateKey_ChildNumber
+
+def SKY_bip32_PublicKey_ChildNumber(p0):
+    return _skycoin.SKY_bip32_PublicKey_ChildNumber(p0)
+SKY_bip32_PublicKey_ChildNumber = _skycoin.SKY_bip32_PublicKey_ChildNumber
+
+def SKY_bip32_PrivateKey_GetChainCode(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_GetChainCode(p0, p1)
+SKY_bip32_PrivateKey_GetChainCode = _skycoin.SKY_bip32_PrivateKey_GetChainCode
+
+def SKY_bip32_PublicKey_GetChainCode(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_GetChainCode(p0, p1)
+SKY_bip32_PublicKey_GetChainCode = _skycoin.SKY_bip32_PublicKey_GetChainCode
+
+def SKY_bip32_PrivateKey_GetVersion(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_GetVersion(p0, p1)
+SKY_bip32_PrivateKey_GetVersion = _skycoin.SKY_bip32_PrivateKey_GetVersion
+
+def SKY_bip32_PublicKey_GetVersion(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_GetVersion(p0, p1)
+SKY_bip32_PublicKey_GetVersion = _skycoin.SKY_bip32_PublicKey_GetVersion
+
+def SKY_bip32_PrivateKey_GetParentFingerprint(p0, p1):
+    return _skycoin.SKY_bip32_PrivateKey_GetParentFingerprint(p0, p1)
+SKY_bip32_PrivateKey_GetParentFingerprint = _skycoin.SKY_bip32_PrivateKey_GetParentFingerprint
+
+def SKY_bip32_PublicKey_GetParentFingerprint(p0, p1):
+    return _skycoin.SKY_bip32_PublicKey_GetParentFingerprint(p0, p1)
+SKY_bip32_PublicKey_GetParentFingerprint = _skycoin.SKY_bip32_PublicKey_GetParentFingerprint
+
+def SKY_cipher_Ripemd160_Set(p0, p1):
+    return _skycoin.SKY_cipher_Ripemd160_Set(p0, p1)
+SKY_cipher_Ripemd160_Set = _skycoin.SKY_cipher_Ripemd160_Set
+
+def SKY_cipher_HashRipemd160(p0, p1):
+    return _skycoin.SKY_cipher_HashRipemd160(p0, p1)
+SKY_cipher_HashRipemd160 = _skycoin.SKY_cipher_HashRipemd160
+
+def SKY_cipher_SHA256_Set(p0, p1):
+    return _skycoin.SKY_cipher_SHA256_Set(p0, p1)
+SKY_cipher_SHA256_Set = _skycoin.SKY_cipher_SHA256_Set
+
+def SKY_cipher_SHA256_Hex(p0):
+    return _skycoin.SKY_cipher_SHA256_Hex(p0)
+SKY_cipher_SHA256_Hex = _skycoin.SKY_cipher_SHA256_Hex
+
+def SKY_cipher_SHA256_Xor(p0, p1, p2):
+    return _skycoin.SKY_cipher_SHA256_Xor(p0, p1, p2)
+SKY_cipher_SHA256_Xor = _skycoin.SKY_cipher_SHA256_Xor
+
+def SKY_cipher_SumSHA256(p0, p1):
+    return _skycoin.SKY_cipher_SumSHA256(p0, p1)
+SKY_cipher_SumSHA256 = _skycoin.SKY_cipher_SumSHA256
+
+def SKY_cipher_SHA256FromHex(p0, p1):
+    return _skycoin.SKY_cipher_SHA256FromHex(p0, p1)
+SKY_cipher_SHA256FromHex = _skycoin.SKY_cipher_SHA256FromHex
+
+def SKY_cipher_DoubleSHA256(p0, p1):
+    return _skycoin.SKY_cipher_DoubleSHA256(p0, p1)
+SKY_cipher_DoubleSHA256 = _skycoin.SKY_cipher_DoubleSHA256
+
+def SKY_cipher_AddSHA256(p0, p1, p2):
+    return _skycoin.SKY_cipher_AddSHA256(p0, p1, p2)
+SKY_cipher_AddSHA256 = _skycoin.SKY_cipher_AddSHA256
+
+def SKY_cipher_Merkle(p0, p1):
+    return _skycoin.SKY_cipher_Merkle(p0, p1)
+SKY_cipher_Merkle = _skycoin.SKY_cipher_Merkle
+
+def SKY_cipher_SHA256_Null(p0):
+    return _skycoin.SKY_cipher_SHA256_Null(p0)
+SKY_cipher_SHA256_Null = _skycoin.SKY_cipher_SHA256_Null
+
+def SKY_cli_NewTransaction(p0, p1, p2):
+    return _skycoin.SKY_cli_NewTransaction(p0, p1, p2)
+SKY_cli_NewTransaction = _skycoin.SKY_cli_NewTransaction
+
+def SKY_handle_close(p0):
+    return _skycoin.SKY_handle_close(p0)
+SKY_handle_close = _skycoin.SKY_handle_close
+
+def SKY_handle_copy(p0):
+    return _skycoin.SKY_handle_copy(p0)
+SKY_handle_copy = _skycoin.SKY_handle_copy
+
+def SKY_cipher_DecodeBase58Address(p0, p1):
+    return _skycoin.SKY_cipher_DecodeBase58Address(p0, p1)
+SKY_cipher_DecodeBase58Address = _skycoin.SKY_cipher_DecodeBase58Address
+
+def SKY_cipher_AddressFromBytes(p0, p1):
+    return _skycoin.SKY_cipher_AddressFromBytes(p0, p1)
+SKY_cipher_AddressFromBytes = _skycoin.SKY_cipher_AddressFromBytes
+
+def SKY_cipher_AddressFromPubKey(p0, p1):
+    return _skycoin.SKY_cipher_AddressFromPubKey(p0, p1)
+SKY_cipher_AddressFromPubKey = _skycoin.SKY_cipher_AddressFromPubKey
+
+def SKY_cipher_AddressFromSecKey(p0, p1):
+    return _skycoin.SKY_cipher_AddressFromSecKey(p0, p1)
+SKY_cipher_AddressFromSecKey = _skycoin.SKY_cipher_AddressFromSecKey
+
+def SKY_cipher_Address_Null(p0):
+    return _skycoin.SKY_cipher_Address_Null(p0)
+SKY_cipher_Address_Null = _skycoin.SKY_cipher_Address_Null
+
+def SKY_cipher_Address_Bytes(p0):
+    return _skycoin.SKY_cipher_Address_Bytes(p0)
+SKY_cipher_Address_Bytes = _skycoin.SKY_cipher_Address_Bytes
+
+def SKY_cipher_Address_Verify(p0, p1):
+    return _skycoin.SKY_cipher_Address_Verify(p0, p1)
+SKY_cipher_Address_Verify = _skycoin.SKY_cipher_Address_Verify
+
+def SKY_cipher_Address_String(p0):
+    return _skycoin.SKY_cipher_Address_String(p0)
+SKY_cipher_Address_String = _skycoin.SKY_cipher_Address_String
+
+def SKY_cipher_Address_Checksum(p0, p1):
+    return _skycoin.SKY_cipher_Address_Checksum(p0, p1)
+SKY_cipher_Address_Checksum = _skycoin.SKY_cipher_Address_Checksum
+
+def SKY_cipher_DecodeBase58BitcoinAddress(p0, p1):
+    return _skycoin.SKY_cipher_DecodeBase58BitcoinAddress(p0, p1)
+SKY_cipher_DecodeBase58BitcoinAddress = _skycoin.SKY_cipher_DecodeBase58BitcoinAddress
+
+def SKY_cipher_BitcoinAddressFromPubKey(p0, p1):
+    return _skycoin.SKY_cipher_BitcoinAddressFromPubKey(p0, p1)
+SKY_cipher_BitcoinAddressFromPubKey = _skycoin.SKY_cipher_BitcoinAddressFromPubKey
+
+def SKY_cipher_BitcoinAddressFromSecKey(p0, p1):
+    return _skycoin.SKY_cipher_BitcoinAddressFromSecKey(p0, p1)
+SKY_cipher_BitcoinAddressFromSecKey = _skycoin.SKY_cipher_BitcoinAddressFromSecKey
+
+def SKY_cipher_BitcoinWalletImportFormatFromSeckey(p0):
+    return _skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(p0)
+SKY_cipher_BitcoinWalletImportFormatFromSeckey = _skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey
+
+def SKY_cipher_BitcoinAddressFromBytes(p0, p1):
+    return _skycoin.SKY_cipher_BitcoinAddressFromBytes(p0, p1)
+SKY_cipher_BitcoinAddressFromBytes = _skycoin.SKY_cipher_BitcoinAddressFromBytes
+
+def SKY_cipher_SecKeyFromBitcoinWalletImportFormat(p0, p1):
+    return _skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(p0, p1)
+SKY_cipher_SecKeyFromBitcoinWalletImportFormat = _skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat
+
+def SKY_cipher_BitcoinAddress_Null(p0):
+    return _skycoin.SKY_cipher_BitcoinAddress_Null(p0)
+SKY_cipher_BitcoinAddress_Null = _skycoin.SKY_cipher_BitcoinAddress_Null
+
+def SKY_cipher_BitcoinAddress_Bytes(p0):
+    return _skycoin.SKY_cipher_BitcoinAddress_Bytes(p0)
+SKY_cipher_BitcoinAddress_Bytes = _skycoin.SKY_cipher_BitcoinAddress_Bytes
+
+def SKY_cipher_BitcoinAddress_Verify(p0, p1):
+    return _skycoin.SKY_cipher_BitcoinAddress_Verify(p0, p1)
+SKY_cipher_BitcoinAddress_Verify = _skycoin.SKY_cipher_BitcoinAddress_Verify
+
+def SKY_cipher_BitcoinAddress_String(p0):
+    return _skycoin.SKY_cipher_BitcoinAddress_String(p0)
+SKY_cipher_BitcoinAddress_String = _skycoin.SKY_cipher_BitcoinAddress_String
+
+def SKY_cipher_BitcoinAddress_Checksum(p0, p1):
+    return _skycoin.SKY_cipher_BitcoinAddress_Checksum(p0, p1)
+SKY_cipher_BitcoinAddress_Checksum = _skycoin.SKY_cipher_BitcoinAddress_Checksum
+
+def SKY_bip39_NewDefaultMnemomic():
+    return _skycoin.SKY_bip39_NewDefaultMnemomic()
+SKY_bip39_NewDefaultMnemomic = _skycoin.SKY_bip39_NewDefaultMnemomic
+
+def SKY_bip39_NewEntropy(p0, p1):
+    return _skycoin.SKY_bip39_NewEntropy(p0, p1)
+SKY_bip39_NewEntropy = _skycoin.SKY_bip39_NewEntropy
+
+def SKY_bip39_NewMnemonic(p0):
+    return _skycoin.SKY_bip39_NewMnemonic(p0)
+SKY_bip39_NewMnemonic = _skycoin.SKY_bip39_NewMnemonic
+
+def SKY_bip39_ValidateMnemonic(p0):
+    return _skycoin.SKY_bip39_ValidateMnemonic(p0)
+SKY_bip39_ValidateMnemonic = _skycoin.SKY_bip39_ValidateMnemonic
+
+def SKY_bip39_NewSeed(p0, p1, p2):
+    return _skycoin.SKY_bip39_NewSeed(p0, p1, p2)
+SKY_bip39_NewSeed = _skycoin.SKY_bip39_NewSeed
+
+def SKY_cli_MakeAlphanumericSeed():
+    return _skycoin.SKY_cli_MakeAlphanumericSeed()
+SKY_cli_MakeAlphanumericSeed = _skycoin.SKY_cli_MakeAlphanumericSeed
+
+def SKY_cli_GetBalanceOfAddresses(p0, p1):
+    return _skycoin.SKY_cli_GetBalanceOfAddresses(p0, p1)
+SKY_cli_GetBalanceOfAddresses = _skycoin.SKY_cli_GetBalanceOfAddresses
+
+def SKY_params_DropletPrecisionToDivisor(p0):
+    return _skycoin.SKY_params_DropletPrecisionToDivisor(p0)
+SKY_params_DropletPrecisionToDivisor = _skycoin.SKY_params_DropletPrecisionToDivisor
+
+def SKY_params_DropletPrecisionCheck(p0, p1):
+    return _skycoin.SKY_params_DropletPrecisionCheck(p0, p1)
+SKY_params_DropletPrecisionCheck = _skycoin.SKY_params_DropletPrecisionCheck
+
+def SKY_map_Get(p1):
+    return _skycoin.SKY_map_Get(p1)
+SKY_map_Get = _skycoin.SKY_map_Get
+
+def SKY_map_HasKey(p1):
+    return _skycoin.SKY_map_HasKey(p1)
+SKY_map_HasKey = _skycoin.SKY_map_HasKey
+
+def SKY_map_Close():
+    return _skycoin.SKY_map_Close()
+SKY_map_Close = _skycoin.SKY_map_Close
+
+def SKY_wallet_Entry_Verify(p0):
+    return _skycoin.SKY_wallet_Entry_Verify(p0)
+SKY_wallet_Entry_Verify = _skycoin.SKY_wallet_Entry_Verify
+
+def SKY_wallet_Entry_VerifyPublic(p0):
+    return _skycoin.SKY_wallet_Entry_VerifyPublic(p0)
+SKY_wallet_Entry_VerifyPublic = _skycoin.SKY_wallet_Entry_VerifyPublic
+
+def SKY_cli_GenerateAddressesInFile(p0, p1, p2):
+    return _skycoin.SKY_cli_GenerateAddressesInFile(p0, p1, p2)
+SKY_cli_GenerateAddressesInFile = _skycoin.SKY_cli_GenerateAddressesInFile
+
+def SKY_cli_FormatAddressesAsJSON(p0):
+    return _skycoin.SKY_cli_FormatAddressesAsJSON(p0)
+SKY_cli_FormatAddressesAsJSON = _skycoin.SKY_cli_FormatAddressesAsJSON
+
+def SKY_cli_FormatAddressesAsJoinedArray(p0):
+    return _skycoin.SKY_cli_FormatAddressesAsJoinedArray(p0)
+SKY_cli_FormatAddressesAsJoinedArray = _skycoin.SKY_cli_FormatAddressesAsJoinedArray
+
+def SKY_cli_AddressesToStrings(p0, p1):
+    return _skycoin.SKY_cli_AddressesToStrings(p0, p1)
+SKY_cli_AddressesToStrings = _skycoin.SKY_cli_AddressesToStrings
+
+def SKY_JsonEncode_Handle(p0):
+    return _skycoin.SKY_JsonEncode_Handle(p0)
+SKY_JsonEncode_Handle = _skycoin.SKY_JsonEncode_Handle
+
+def SKY_Handle_Progress_GetCurrent(p0):
+    return _skycoin.SKY_Handle_Progress_GetCurrent(p0)
+SKY_Handle_Progress_GetCurrent = _skycoin.SKY_Handle_Progress_GetCurrent
+
+def SKY_Handle_Block_GetHeadSeq(p0):
+    return _skycoin.SKY_Handle_Block_GetHeadSeq(p0)
+SKY_Handle_Block_GetHeadSeq = _skycoin.SKY_Handle_Block_GetHeadSeq
+
+def SKY_Handle_Block_GetHeadHash(p0):
+    return _skycoin.SKY_Handle_Block_GetHeadHash(p0)
+SKY_Handle_Block_GetHeadHash = _skycoin.SKY_Handle_Block_GetHeadHash
+
+def SKY_Handle_Block_GetPreviousBlockHash(p0):
+    return _skycoin.SKY_Handle_Block_GetPreviousBlockHash(p0)
+SKY_Handle_Block_GetPreviousBlockHash = _skycoin.SKY_Handle_Block_GetPreviousBlockHash
+
+def SKY_Handle_Blocks_GetAt(p0, p1):
+    return _skycoin.SKY_Handle_Blocks_GetAt(p0, p1)
+SKY_Handle_Blocks_GetAt = _skycoin.SKY_Handle_Blocks_GetAt
+
+def SKY_Handle_Blocks_GetCount(p0):
+    return _skycoin.SKY_Handle_Blocks_GetCount(p0)
+SKY_Handle_Blocks_GetCount = _skycoin.SKY_Handle_Blocks_GetCount
+
+def SKY_Handle_Connections_GetCount(p0):
+    return _skycoin.SKY_Handle_Connections_GetCount(p0)
+SKY_Handle_Connections_GetCount = _skycoin.SKY_Handle_Connections_GetCount
+
+def SKY_api_Handle_Client_GetWalletDir(p0):
+    return _skycoin.SKY_api_Handle_Client_GetWalletDir(p0)
+SKY_api_Handle_Client_GetWalletDir = _skycoin.SKY_api_Handle_Client_GetWalletDir
+
+def SKY_api_Handle_Client_GetWalletFileName(p0):
+    return _skycoin.SKY_api_Handle_Client_GetWalletFileName(p0)
+SKY_api_Handle_Client_GetWalletFileName = _skycoin.SKY_api_Handle_Client_GetWalletFileName
+
+def SKY_api_Handle_Client_GetWalletLabel(p0):
+    return _skycoin.SKY_api_Handle_Client_GetWalletLabel(p0)
+SKY_api_Handle_Client_GetWalletLabel = _skycoin.SKY_api_Handle_Client_GetWalletLabel
+
+def SKY_api_Handle_Client_GetWalletFullPath(p0, p1):
+    return _skycoin.SKY_api_Handle_Client_GetWalletFullPath(p0, p1)
+SKY_api_Handle_Client_GetWalletFullPath = _skycoin.SKY_api_Handle_Client_GetWalletFullPath
+
+def SKY_api_Handle_Client_GetWalletResponseEntriesCount(p0):
+    return _skycoin.SKY_api_Handle_Client_GetWalletResponseEntriesCount(p0)
+SKY_api_Handle_Client_GetWalletResponseEntriesCount = _skycoin.SKY_api_Handle_Client_GetWalletResponseEntriesCount
+
+def SKY_api_Handle_WalletResponseGetEntry(p0, p1):
+    return _skycoin.SKY_api_Handle_WalletResponseGetEntry(p0, p1)
+SKY_api_Handle_WalletResponseGetEntry = _skycoin.SKY_api_Handle_WalletResponseGetEntry
+
+def SKY_api_Handle_WalletResponseIsEncrypted(p0):
+    return _skycoin.SKY_api_Handle_WalletResponseIsEncrypted(p0)
+SKY_api_Handle_WalletResponseIsEncrypted = _skycoin.SKY_api_Handle_WalletResponseIsEncrypted
+
+def SKY_api_Handle_WalletsResponseGetCount(p0):
+    return _skycoin.SKY_api_Handle_WalletsResponseGetCount(p0)
+SKY_api_Handle_WalletsResponseGetCount = _skycoin.SKY_api_Handle_WalletsResponseGetCount
+
+def SKY_api_Handle_WalletsResponseGetAt(p0, p1):
+    return _skycoin.SKY_api_Handle_WalletsResponseGetAt(p0, p1)
+SKY_api_Handle_WalletsResponseGetAt = _skycoin.SKY_api_Handle_WalletsResponseGetAt
+
+def SKY_api_Handle_GetWalletFolderAddress(p0):
+    return _skycoin.SKY_api_Handle_GetWalletFolderAddress(p0)
+SKY_api_Handle_GetWalletFolderAddress = _skycoin.SKY_api_Handle_GetWalletFolderAddress
+
+def SKY_api_Handle_GetWalletSeed(p0):
+    return _skycoin.SKY_api_Handle_GetWalletSeed(p0)
+SKY_api_Handle_GetWalletSeed = _skycoin.SKY_api_Handle_GetWalletSeed
+
+def SKY_api_Handle_GetWalletLastSeed(p0):
+    return _skycoin.SKY_api_Handle_GetWalletLastSeed(p0)
+SKY_api_Handle_GetWalletLastSeed = _skycoin.SKY_api_Handle_GetWalletLastSeed
+
+def SKY_api_Handle_GetBuildInfoData(p0):
+    return _skycoin.SKY_api_Handle_GetBuildInfoData(p0)
+SKY_api_Handle_GetBuildInfoData = _skycoin.SKY_api_Handle_GetBuildInfoData
+
+def SKY_secp256k1_PubkeyFromSeckey(p0):
+    return _skycoin.SKY_secp256k1_PubkeyFromSeckey(p0)
+SKY_secp256k1_PubkeyFromSeckey = _skycoin.SKY_secp256k1_PubkeyFromSeckey
+
+def SKY_secp256k1_VerifyPubkey(p0):
+    return _skycoin.SKY_secp256k1_VerifyPubkey(p0)
+SKY_secp256k1_VerifyPubkey = _skycoin.SKY_secp256k1_VerifyPubkey
+
+def SKY_secp256k1_VerifySecKey(p0):
+    return _skycoin.SKY_secp256k1_VerifySecKey(p0)
+SKY_secp256k1_VerifySecKey = _skycoin.SKY_secp256k1_VerifySecKey
+
+def SKY_secp256k1_ECDH(p0, p1):
+    return _skycoin.SKY_secp256k1_ECDH(p0, p1)
+SKY_secp256k1_ECDH = _skycoin.SKY_secp256k1_ECDH
+
+def SKY_wallet_CryptoTypeFromString(p0, p1):
+    return _skycoin.SKY_wallet_CryptoTypeFromString(p0, p1)
+SKY_wallet_CryptoTypeFromString = _skycoin.SKY_wallet_CryptoTypeFromString
+
+def SKY_cipher_RandByte(p0):
+    return _skycoin.SKY_cipher_RandByte(p0)
+SKY_cipher_RandByte = _skycoin.SKY_cipher_RandByte
+
+def SKY_cipher_NewPubKey(p0, p1):
+    return _skycoin.SKY_cipher_NewPubKey(p0, p1)
+SKY_cipher_NewPubKey = _skycoin.SKY_cipher_NewPubKey
+
+def SKY_cipher_PubKeyFromHex(p0, p1):
+    return _skycoin.SKY_cipher_PubKeyFromHex(p0, p1)
+SKY_cipher_PubKeyFromHex = _skycoin.SKY_cipher_PubKeyFromHex
+
+def SKY_cipher_PubKeyFromSecKey(p0, p1):
+    return _skycoin.SKY_cipher_PubKeyFromSecKey(p0, p1)
+SKY_cipher_PubKeyFromSecKey = _skycoin.SKY_cipher_PubKeyFromSecKey
+
+def SKY_cipher_PubKeyFromSig(p0, p1, p2):
+    return _skycoin.SKY_cipher_PubKeyFromSig(p0, p1, p2)
+SKY_cipher_PubKeyFromSig = _skycoin.SKY_cipher_PubKeyFromSig
+
+def SKY_cipher_PubKey_Verify(p0):
+    return _skycoin.SKY_cipher_PubKey_Verify(p0)
+SKY_cipher_PubKey_Verify = _skycoin.SKY_cipher_PubKey_Verify
+
+def SKY_cipher_PubKey_Hex(p0):
+    return _skycoin.SKY_cipher_PubKey_Hex(p0)
+SKY_cipher_PubKey_Hex = _skycoin.SKY_cipher_PubKey_Hex
+
+def SKY_cipher_PubKeyRipemd160(p0, p1):
+    return _skycoin.SKY_cipher_PubKeyRipemd160(p0, p1)
+SKY_cipher_PubKeyRipemd160 = _skycoin.SKY_cipher_PubKeyRipemd160
+
+def SKY_cipher_NewSecKey(p0, p1):
+    return _skycoin.SKY_cipher_NewSecKey(p0, p1)
+SKY_cipher_NewSecKey = _skycoin.SKY_cipher_NewSecKey
+
+def SKY_cipher_SecKeyFromHex(p0, p1):
+    return _skycoin.SKY_cipher_SecKeyFromHex(p0, p1)
+SKY_cipher_SecKeyFromHex = _skycoin.SKY_cipher_SecKeyFromHex
+
+def SKY_cipher_SecKey_Verify(p0):
+    return _skycoin.SKY_cipher_SecKey_Verify(p0)
+SKY_cipher_SecKey_Verify = _skycoin.SKY_cipher_SecKey_Verify
+
+def SKY_cipher_SecKey_Hex(p0):
+    return _skycoin.SKY_cipher_SecKey_Hex(p0)
+SKY_cipher_SecKey_Hex = _skycoin.SKY_cipher_SecKey_Hex
+
+def SKY_cipher_ECDH(p0, p1):
+    return _skycoin.SKY_cipher_ECDH(p0, p1)
+SKY_cipher_ECDH = _skycoin.SKY_cipher_ECDH
+
+def SKY_cipher_NewSig(p0, p1):
+    return _skycoin.SKY_cipher_NewSig(p0, p1)
+SKY_cipher_NewSig = _skycoin.SKY_cipher_NewSig
+
+def SKY_cipher_SigFromHex(p0, p1):
+    return _skycoin.SKY_cipher_SigFromHex(p0, p1)
+SKY_cipher_SigFromHex = _skycoin.SKY_cipher_SigFromHex
+
+def SKY_cipher_Sig_Hex(p0):
+    return _skycoin.SKY_cipher_Sig_Hex(p0)
+SKY_cipher_Sig_Hex = _skycoin.SKY_cipher_Sig_Hex
+
+def SKY_cipher_SignHash(p0, p1, p2):
+    return _skycoin.SKY_cipher_SignHash(p0, p1, p2)
+SKY_cipher_SignHash = _skycoin.SKY_cipher_SignHash
+
+def SKY_cipher_VerifyAddressSignedHash(p0, p1, p2):
+    return _skycoin.SKY_cipher_VerifyAddressSignedHash(p0, p1, p2)
+SKY_cipher_VerifyAddressSignedHash = _skycoin.SKY_cipher_VerifyAddressSignedHash
+
+def SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2):
+    return _skycoin.SKY_cipher_VerifyPubKeySignedHash(p0, p1, p2)
+SKY_cipher_VerifyPubKeySignedHash = _skycoin.SKY_cipher_VerifyPubKeySignedHash
+
+def SKY_cipher_GenerateKeyPair(p0, p1):
+    return _skycoin.SKY_cipher_GenerateKeyPair(p0, p1)
+SKY_cipher_GenerateKeyPair = _skycoin.SKY_cipher_GenerateKeyPair
+
+def SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPair(p0, p1, p2)
+SKY_cipher_GenerateDeterministicKeyPair = _skycoin.SKY_cipher_GenerateDeterministicKeyPair
+
+def SKY_cipher_DeterministicKeyPairIterator(p0, p2, p3):
+    return _skycoin.SKY_cipher_DeterministicKeyPairIterator(p0, p2, p3)
+SKY_cipher_DeterministicKeyPairIterator = _skycoin.SKY_cipher_DeterministicKeyPairIterator
+
+def SKY_cipher_GenerateDeterministicKeyPairs(*args):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairs(*args)
+SKY_cipher_GenerateDeterministicKeyPairs = _skycoin.SKY_cipher_GenerateDeterministicKeyPairs
+
+def SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1):
+    return _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed(p0, p1)
+SKY_cipher_GenerateDeterministicKeyPairsSeed = _skycoin.SKY_cipher_GenerateDeterministicKeyPairsSeed
+
+def SKY_cipher_CheckSecKey(p0):
+    return _skycoin.SKY_cipher_CheckSecKey(p0)
+SKY_cipher_CheckSecKey = _skycoin.SKY_cipher_CheckSecKey
+
+def SKY_cipher_CheckSecKeyHash(p0, p1):
+    return _skycoin.SKY_cipher_CheckSecKeyHash(p0, p1)
+SKY_cipher_CheckSecKeyHash = _skycoin.SKY_cipher_CheckSecKeyHash
+
+def SKY_cipher_Sig_String(p0):
+    return _skycoin.SKY_cipher_Sig_String(p0)
+SKY_cipher_Sig_String = _skycoin.SKY_cipher_Sig_String
+
+def SKY_cipher_VerifySignatureRecoverPubKey(p0, p1):
+    return _skycoin.SKY_cipher_VerifySignatureRecoverPubKey(p0, p1)
+SKY_cipher_VerifySignatureRecoverPubKey = _skycoin.SKY_cipher_VerifySignatureRecoverPubKey
+
+def SKY_cipher_Sig_Null(p0):
+    return _skycoin.SKY_cipher_Sig_Null(p0)
+SKY_cipher_Sig_Null = _skycoin.SKY_cipher_Sig_Null
+
+def SKY_wallet_MetaWallet_IsEncrypted(p0):
+    return _skycoin.SKY_wallet_MetaWallet_IsEncrypted(p0)
+SKY_wallet_MetaWallet_IsEncrypted = _skycoin.SKY_wallet_MetaWallet_IsEncrypted
+
+def SKY_wallet_MetaWallet_Label(p0):
+    return _skycoin.SKY_wallet_MetaWallet_Label(p0)
+SKY_wallet_MetaWallet_Label = _skycoin.SKY_wallet_MetaWallet_Label
+
+def SKY_wallet_MetaWallet_Filename(p0):
+    return _skycoin.SKY_wallet_MetaWallet_Filename(p0)
+SKY_wallet_MetaWallet_Filename = _skycoin.SKY_wallet_MetaWallet_Filename
+
+def SKY_wallet_MetaWallet_Version(p0):
+    return _skycoin.SKY_wallet_MetaWallet_Version(p0)
+SKY_wallet_MetaWallet_Version = _skycoin.SKY_wallet_MetaWallet_Version
+
+def SKY_wallet_MetaWallet_Type(p0):
+    return _skycoin.SKY_wallet_MetaWallet_Type(p0)
+SKY_wallet_MetaWallet_Type = _skycoin.SKY_wallet_MetaWallet_Type
+
+def SKY_apputil_CatchInterruptPanic():
+    return _skycoin.SKY_apputil_CatchInterruptPanic()
+SKY_apputil_CatchInterruptPanic = _skycoin.SKY_apputil_CatchInterruptPanic
+
+def SKY_apputil_CatchDebug():
+    return _skycoin.SKY_apputil_CatchDebug()
+SKY_apputil_CatchDebug = _skycoin.SKY_apputil_CatchDebug
+
+def SKY_apputil_PrintProgramStatus():
+    return _skycoin.SKY_apputil_PrintProgramStatus()
+SKY_apputil_PrintProgramStatus = _skycoin.SKY_apputil_PrintProgramStatus
+
+def SKY_cli_LoadConfig():
+    return _skycoin.SKY_cli_LoadConfig()
+SKY_cli_LoadConfig = _skycoin.SKY_cli_LoadConfig
+
+def SKY_cli_Config_FullDBPath(p0):
+    return _skycoin.SKY_cli_Config_FullDBPath(p0)
+SKY_cli_Config_FullDBPath = _skycoin.SKY_cli_Config_FullDBPath
+
+def SKY_cli_NewCLI(p0):
+    return _skycoin.SKY_cli_NewCLI(p0)
+SKY_cli_NewCLI = _skycoin.SKY_cli_NewCLI
+
+def SKY_cli_NewPasswordReader(p0):
+    return _skycoin.SKY_cli_NewPasswordReader(p0)
+SKY_cli_NewPasswordReader = _skycoin.SKY_cli_NewPasswordReader
+
+def SKY_cli_PasswordFromBytes_Password(p0, p1):
+    return _skycoin.SKY_cli_PasswordFromBytes_Password(p0, p1)
+SKY_cli_PasswordFromBytes_Password = _skycoin.SKY_cli_PasswordFromBytes_Password
+
+def SKY_cli_PasswordFromTerm_Password(p0):
+    return _skycoin.SKY_cli_PasswordFromTerm_Password(p0)
+SKY_cli_PasswordFromTerm_Password = _skycoin.SKY_cli_PasswordFromTerm_Password
+
+def SKY_util_AddUint64(p0, p1):
+    return _skycoin.SKY_util_AddUint64(p0, p1)
+SKY_util_AddUint64 = _skycoin.SKY_util_AddUint64
+
+def SKY_util_Uint64ToInt64(p0):
+    return _skycoin.SKY_util_Uint64ToInt64(p0)
+SKY_util_Uint64ToInt64 = _skycoin.SKY_util_Uint64ToInt64
+
+def SKY_util_Int64ToUint64(p0):
+    return _skycoin.SKY_util_Int64ToUint64(p0)
+SKY_util_Int64ToUint64 = _skycoin.SKY_util_Int64ToUint64
+
+def SKY_util_IntToUint32(p0):
+    return _skycoin.SKY_util_IntToUint32(p0)
+SKY_util_IntToUint32 = _skycoin.SKY_util_IntToUint32
+
+def SKY_certutil_NewTLSCertPair(p0, p1, p2, p3, p4):
+    return _skycoin.SKY_certutil_NewTLSCertPair(p0, p1, p2, p3, p4)
+SKY_certutil_NewTLSCertPair = _skycoin.SKY_certutil_NewTLSCertPair
 
 def SKY_bip32_PathNode_Hardened(p0):
     return _skycoin.SKY_bip32_PathNode_Hardened(p0)
@@ -2293,13 +1909,401 @@ def SKY_coin_AddressUxOuts_Set(*args):
     return _skycoin.SKY_coin_AddressUxOuts_Set(*args)
 SKY_coin_AddressUxOuts_Set = _skycoin.SKY_coin_AddressUxOuts_Set
 
-def SKY_params_DropletPrecisionToDivisor(p0):
-    return _skycoin.SKY_params_DropletPrecisionToDivisor(p0)
-SKY_params_DropletPrecisionToDivisor = _skycoin.SKY_params_DropletPrecisionToDivisor
+def SKY_transaction_ChooseSpendsMaximizeUxOuts(p0, p1, p2):
+    return _skycoin.SKY_transaction_ChooseSpendsMaximizeUxOuts(p0, p1, p2)
+SKY_transaction_ChooseSpendsMaximizeUxOuts = _skycoin.SKY_transaction_ChooseSpendsMaximizeUxOuts
 
-def SKY_params_DropletPrecisionCheck(p0, p1):
-    return _skycoin.SKY_params_DropletPrecisionCheck(p0, p1)
-SKY_params_DropletPrecisionCheck = _skycoin.SKY_params_DropletPrecisionCheck
+def SKY_transaction_ChooseSpendsMinimizeUxOuts(p0, p1, p2):
+    return _skycoin.SKY_transaction_ChooseSpendsMinimizeUxOuts(p0, p1, p2)
+SKY_transaction_ChooseSpendsMinimizeUxOuts = _skycoin.SKY_transaction_ChooseSpendsMinimizeUxOuts
+
+def SKY_transaction_NewUxBalance(p0, p1, p2):
+    return _skycoin.SKY_transaction_NewUxBalance(p0, p1, p2)
+SKY_transaction_NewUxBalance = _skycoin.SKY_transaction_NewUxBalance
+
+def SKY_transaction_NewUxBalances(p0):
+    return _skycoin.SKY_transaction_NewUxBalances(p0)
+SKY_transaction_NewUxBalances = _skycoin.SKY_transaction_NewUxBalances
+
+def SKY_file_InitDataDir(p0):
+    return _skycoin.SKY_file_InitDataDir(p0)
+SKY_file_InitDataDir = _skycoin.SKY_file_InitDataDir
+
+def SKY_file_UserHome():
+    return _skycoin.SKY_file_UserHome()
+SKY_file_UserHome = _skycoin.SKY_file_UserHome
+
+def SKY_file_ResolveResourceDirectory(p0):
+    return _skycoin.SKY_file_ResolveResourceDirectory(p0)
+SKY_file_ResolveResourceDirectory = _skycoin.SKY_file_ResolveResourceDirectory
+
+def SKY_file_DetermineResourcePath(p0, p1, p2):
+    return _skycoin.SKY_file_DetermineResourcePath(p0, p1, p2)
+SKY_file_DetermineResourcePath = _skycoin.SKY_file_DetermineResourcePath
+
+def SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6):
+    return _skycoin.SKY_wallet_CreateOptionsHandle(p0, p1, p2, p3, p4, p5, p6)
+SKY_wallet_CreateOptionsHandle = _skycoin.SKY_wallet_CreateOptionsHandle
+
+def SKY_wallet_NewBalance(p0, p1, p2):
+    return _skycoin.SKY_wallet_NewBalance(p0, p1, p2)
+SKY_wallet_NewBalance = _skycoin.SKY_wallet_NewBalance
+
+def SKY_wallet_NewBalanceFromUxOut(p0, p1, p2):
+    return _skycoin.SKY_wallet_NewBalanceFromUxOut(p0, p1, p2)
+SKY_wallet_NewBalanceFromUxOut = _skycoin.SKY_wallet_NewBalanceFromUxOut
+
+def SKY_wallet_Balance_Add(p0, p1, p2):
+    return _skycoin.SKY_wallet_Balance_Add(p0, p1, p2)
+SKY_wallet_Balance_Add = _skycoin.SKY_wallet_Balance_Add
+
+def SKY_wallet_Balance_Sub(p0, p1, p2):
+    return _skycoin.SKY_wallet_Balance_Sub(p0, p1, p2)
+SKY_wallet_Balance_Sub = _skycoin.SKY_wallet_Balance_Sub
+
+def SKY_wallet_Balance_Equals(p0, p1):
+    return _skycoin.SKY_wallet_Balance_Equals(p0, p1)
+SKY_wallet_Balance_Equals = _skycoin.SKY_wallet_Balance_Equals
+
+def SKY_wallet_Balance_IsZero(p0):
+    return _skycoin.SKY_wallet_Balance_IsZero(p0)
+SKY_wallet_Balance_IsZero = _skycoin.SKY_wallet_Balance_IsZero
+
+def SKY_logging_EnableColors():
+    return _skycoin.SKY_logging_EnableColors()
+SKY_logging_EnableColors = _skycoin.SKY_logging_EnableColors
+
+def SKY_logging_DisableColors():
+    return _skycoin.SKY_logging_DisableColors()
+SKY_logging_DisableColors = _skycoin.SKY_logging_DisableColors
+
+def SKY_logging_Disable():
+    return _skycoin.SKY_logging_Disable()
+SKY_logging_Disable = _skycoin.SKY_logging_Disable
+
+def SKY_coin_NewBlock(p0, p1, p2, p3, p4):
+    return _skycoin.SKY_coin_NewBlock(p0, p1, p2, p3, p4)
+SKY_coin_NewBlock = _skycoin.SKY_coin_NewBlock
+
+def SKY_coin_SignedBlock_VerifySignature(p0, p1):
+    return _skycoin.SKY_coin_SignedBlock_VerifySignature(p0, p1)
+SKY_coin_SignedBlock_VerifySignature = _skycoin.SKY_coin_SignedBlock_VerifySignature
+
+def SKY_coin_NewGenesisBlock(p0, p1, p2):
+    return _skycoin.SKY_coin_NewGenesisBlock(p0, p1, p2)
+SKY_coin_NewGenesisBlock = _skycoin.SKY_coin_NewGenesisBlock
+
+def SKY_coin_Block_HashHeader(p0, p1):
+    return _skycoin.SKY_coin_Block_HashHeader(p0, p1)
+SKY_coin_Block_HashHeader = _skycoin.SKY_coin_Block_HashHeader
+
+def SKY_coin_Block_Time(p0):
+    return _skycoin.SKY_coin_Block_Time(p0)
+SKY_coin_Block_Time = _skycoin.SKY_coin_Block_Time
+
+def SKY_coin_Block_Seq(p0):
+    return _skycoin.SKY_coin_Block_Seq(p0)
+SKY_coin_Block_Seq = _skycoin.SKY_coin_Block_Seq
+
+def SKY_coin_Block_HashBody(p0, p1):
+    return _skycoin.SKY_coin_Block_HashBody(p0, p1)
+SKY_coin_Block_HashBody = _skycoin.SKY_coin_Block_HashBody
+
+def SKY_coin_Block_Size(p0):
+    return _skycoin.SKY_coin_Block_Size(p0)
+SKY_coin_Block_Size = _skycoin.SKY_coin_Block_Size
+
+def SKY_coin_NewBlockHeader(p0, p1, p2, p3, p4, p5):
+    return _skycoin.SKY_coin_NewBlockHeader(p0, p1, p2, p3, p4, p5)
+SKY_coin_NewBlockHeader = _skycoin.SKY_coin_NewBlockHeader
+
+def SKY_coin_BlockHeader_Hash(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_Hash(p0, p1)
+SKY_coin_BlockHeader_Hash = _skycoin.SKY_coin_BlockHeader_Hash
+
+def SKY_coin_BlockHeader_Bytes(p0):
+    return _skycoin.SKY_coin_BlockHeader_Bytes(p0)
+SKY_coin_BlockHeader_Bytes = _skycoin.SKY_coin_BlockHeader_Bytes
+
+def SKY_coin_BlockBody_Hash(p0, p1):
+    return _skycoin.SKY_coin_BlockBody_Hash(p0, p1)
+SKY_coin_BlockBody_Hash = _skycoin.SKY_coin_BlockBody_Hash
+
+def SKY_coin_BlockBody_Size():
+    return _skycoin.SKY_coin_BlockBody_Size()
+SKY_coin_BlockBody_Size = _skycoin.SKY_coin_BlockBody_Size
+
+def SKY_coin_BlockBody_Bytes(p0):
+    return _skycoin.SKY_coin_BlockBody_Bytes(p0)
+SKY_coin_BlockBody_Bytes = _skycoin.SKY_coin_BlockBody_Bytes
+
+def SKY_coin_CreateUnspents(*args):
+    return _skycoin.SKY_coin_CreateUnspents(*args)
+SKY_coin_CreateUnspents = _skycoin.SKY_coin_CreateUnspents
+
+def SKY_coin_CreateUnspent(p0, p1, p2, p3):
+    return _skycoin.SKY_coin_CreateUnspent(p0, p1, p2, p3)
+SKY_coin_CreateUnspent = _skycoin.SKY_coin_CreateUnspent
+
+def SKY_coin_GetBlockObject(p0):
+    return _skycoin.SKY_coin_GetBlockObject(p0)
+SKY_coin_GetBlockObject = _skycoin.SKY_coin_GetBlockObject
+
+def SKY_coin_GetBlockBody(p0):
+    return _skycoin.SKY_coin_GetBlockBody(p0)
+SKY_coin_GetBlockBody = _skycoin.SKY_coin_GetBlockBody
+
+def SKY_coin_NewEmptyBlock(p0):
+    return _skycoin.SKY_coin_NewEmptyBlock(p0)
+SKY_coin_NewEmptyBlock = _skycoin.SKY_coin_NewEmptyBlock
+
+def SKY_coin_Block_GetBlockHeader(p0):
+    return _skycoin.SKY_coin_Block_GetBlockHeader(p0)
+SKY_coin_Block_GetBlockHeader = _skycoin.SKY_coin_Block_GetBlockHeader
+
+def SKY_coin_GetBlockHeaderObject(p0, p1):
+    return _skycoin.SKY_coin_GetBlockHeaderObject(p0, p1)
+SKY_coin_GetBlockHeaderObject = _skycoin.SKY_coin_GetBlockHeaderObject
+
+def SKY_coin_BlockHeader_Time(p0):
+    return _skycoin.SKY_coin_BlockHeader_Time(p0)
+SKY_coin_BlockHeader_Time = _skycoin.SKY_coin_BlockHeader_Time
+
+def SKY_coin_BlockHeader_BkSeq(p0):
+    return _skycoin.SKY_coin_BlockHeader_BkSeq(p0)
+SKY_coin_BlockHeader_BkSeq = _skycoin.SKY_coin_BlockHeader_BkSeq
+
+def SKY_coin_BlockHeader_UxHash(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_UxHash(p0, p1)
+SKY_coin_BlockHeader_UxHash = _skycoin.SKY_coin_BlockHeader_UxHash
+
+def SKY_coin_BlockHeader_Fee(p0):
+    return _skycoin.SKY_coin_BlockHeader_Fee(p0)
+SKY_coin_BlockHeader_Fee = _skycoin.SKY_coin_BlockHeader_Fee
+
+def SKY_coin_BlockBody_Transactions(p0):
+    return _skycoin.SKY_coin_BlockBody_Transactions(p0)
+SKY_coin_BlockBody_Transactions = _skycoin.SKY_coin_BlockBody_Transactions
+
+def SKY_coin_BlockHeader_SetTime(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_SetTime(p0, p1)
+SKY_coin_BlockHeader_SetTime = _skycoin.SKY_coin_BlockHeader_SetTime
+
+def SKY_coin_BlockHeader_SetBkSeq(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_SetBkSeq(p0, p1)
+SKY_coin_BlockHeader_SetBkSeq = _skycoin.SKY_coin_BlockHeader_SetBkSeq
+
+def SKY_coin_BlockHeader_SetFee(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_SetFee(p0, p1)
+SKY_coin_BlockHeader_SetFee = _skycoin.SKY_coin_BlockHeader_SetFee
+
+def SKY_coin_BlockHeader_SetVersion(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_SetVersion(p0, p1)
+SKY_coin_BlockHeader_SetVersion = _skycoin.SKY_coin_BlockHeader_SetVersion
+
+def SKY_coin_BlockHeader_Version(p0):
+    return _skycoin.SKY_coin_BlockHeader_Version(p0)
+SKY_coin_BlockHeader_Version = _skycoin.SKY_coin_BlockHeader_Version
+
+def SKY_coin_BlockHeader_PrevHash(p0, p1):
+    return _skycoin.SKY_coin_BlockHeader_PrevHash(p0, p1)
+SKY_coin_BlockHeader_PrevHash = _skycoin.SKY_coin_BlockHeader_PrevHash
+
+def SKY_params_Distribution_GetMaxCoinSupply(p0):
+    return _skycoin.SKY_params_Distribution_GetMaxCoinSupply(p0)
+SKY_params_Distribution_GetMaxCoinSupply = _skycoin.SKY_params_Distribution_GetMaxCoinSupply
+
+def SKY_params_Distribution_SetMaxCoinSupply(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetMaxCoinSupply(p0, p1)
+SKY_params_Distribution_SetMaxCoinSupply = _skycoin.SKY_params_Distribution_SetMaxCoinSupply
+
+def SKY_params_Distribution_GetInitialUnlockedCount(p0):
+    return _skycoin.SKY_params_Distribution_GetInitialUnlockedCount(p0)
+SKY_params_Distribution_GetInitialUnlockedCount = _skycoin.SKY_params_Distribution_GetInitialUnlockedCount
+
+def SKY_params_Distribution_SetInitialUnlockedCount(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetInitialUnlockedCount(p0, p1)
+SKY_params_Distribution_SetInitialUnlockedCount = _skycoin.SKY_params_Distribution_SetInitialUnlockedCount
+
+def SKY_params_Distribution_GetUnlockAddressRate(p0):
+    return _skycoin.SKY_params_Distribution_GetUnlockAddressRate(p0)
+SKY_params_Distribution_GetUnlockAddressRate = _skycoin.SKY_params_Distribution_GetUnlockAddressRate
+
+def SKY_params_Distribution_SetUnlockAddressRate(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetUnlockAddressRate(p0, p1)
+SKY_params_Distribution_SetUnlockAddressRate = _skycoin.SKY_params_Distribution_SetUnlockAddressRate
+
+def SKY_params_Distribution_GetUnlockTimeInterval(p0):
+    return _skycoin.SKY_params_Distribution_GetUnlockTimeInterval(p0)
+SKY_params_Distribution_GetUnlockTimeInterval = _skycoin.SKY_params_Distribution_GetUnlockTimeInterval
+
+def SKY_params_Distribution_SetUnlockTimeInterval(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetUnlockTimeInterval(p0, p1)
+SKY_params_Distribution_SetUnlockTimeInterval = _skycoin.SKY_params_Distribution_SetUnlockTimeInterval
+
+def SKY_params_Distribution_GetAddresses(*args):
+    return _skycoin.SKY_params_Distribution_GetAddresses(*args)
+SKY_params_Distribution_GetAddresses = _skycoin.SKY_params_Distribution_GetAddresses
+
+def SKY_params_Distribution_SetAddresses(p0, p1):
+    return _skycoin.SKY_params_Distribution_SetAddresses(p0, p1)
+SKY_params_Distribution_SetAddresses = _skycoin.SKY_params_Distribution_SetAddresses
+
+def SKY_params_Distribution_Validate(p0):
+    return _skycoin.SKY_params_Distribution_Validate(p0)
+SKY_params_Distribution_Validate = _skycoin.SKY_params_Distribution_Validate
+
+def SKY_params_Distribution_AddressInitialBalance(p0):
+    return _skycoin.SKY_params_Distribution_AddressInitialBalance(p0)
+SKY_params_Distribution_AddressInitialBalance = _skycoin.SKY_params_Distribution_AddressInitialBalance
+
+def SKY_params_Distribution_UnlockedAddresses(*args):
+    return _skycoin.SKY_params_Distribution_UnlockedAddresses(*args)
+SKY_params_Distribution_UnlockedAddresses = _skycoin.SKY_params_Distribution_UnlockedAddresses
+
+def SKY_params_Distribution_LockedAddresses(*args):
+    return _skycoin.SKY_params_Distribution_LockedAddresses(*args)
+SKY_params_Distribution_LockedAddresses = _skycoin.SKY_params_Distribution_LockedAddresses
+
+def SKY_params_Distribution_AddressesDecoded(p0):
+    return _skycoin.SKY_params_Distribution_AddressesDecoded(p0)
+SKY_params_Distribution_AddressesDecoded = _skycoin.SKY_params_Distribution_AddressesDecoded
+
+def SKY_params_Distribution_UnlockedAddressesDecoded(p0):
+    return _skycoin.SKY_params_Distribution_UnlockedAddressesDecoded(p0)
+SKY_params_Distribution_UnlockedAddressesDecoded = _skycoin.SKY_params_Distribution_UnlockedAddressesDecoded
+
+def SKY_params_Distribution_LockedAddressesDecoded(p0):
+    return _skycoin.SKY_params_Distribution_LockedAddressesDecoded(p0)
+SKY_params_Distribution_LockedAddressesDecoded = _skycoin.SKY_params_Distribution_LockedAddressesDecoded
+
+def SKY_params_Distribution_GetMainNetDistribution():
+    return _skycoin.SKY_params_Distribution_GetMainNetDistribution()
+SKY_params_Distribution_GetMainNetDistribution = _skycoin.SKY_params_Distribution_GetMainNetDistribution
+
+def SKY_params_NewDistribution():
+    return _skycoin.SKY_params_NewDistribution()
+SKY_params_NewDistribution = _skycoin.SKY_params_NewDistribution
+
+def SKY_api_NewWalletResponse(p0):
+    return _skycoin.SKY_api_NewWalletResponse(p0)
+SKY_api_NewWalletResponse = _skycoin.SKY_api_NewWalletResponse
+
+def SKY_wallet_CollectionWallet_AddEntry(p0, p1):
+    return _skycoin.SKY_wallet_CollectionWallet_AddEntry(p0, p1)
+SKY_wallet_CollectionWallet_AddEntry = _skycoin.SKY_wallet_CollectionWallet_AddEntry
+
+def SKY_wallet_CollectionWallet_GetEntry(p0, p1, p2):
+    return _skycoin.SKY_wallet_CollectionWallet_GetEntry(p0, p1, p2)
+SKY_wallet_CollectionWallet_GetEntry = _skycoin.SKY_wallet_CollectionWallet_GetEntry
+
+def SKY_wallet_CollectionWallet_GetAddresses(p0):
+    return _skycoin.SKY_wallet_CollectionWallet_GetAddresses(p0)
+SKY_wallet_CollectionWallet_GetAddresses = _skycoin.SKY_wallet_CollectionWallet_GetAddresses
+
+def SKY_wallet_CollectionWallet_GenerateAddresses(p0, p1):
+    return _skycoin.SKY_wallet_CollectionWallet_GenerateAddresses(p0, p1)
+SKY_wallet_CollectionWallet_GenerateAddresses = _skycoin.SKY_wallet_CollectionWallet_GenerateAddresses
+
+def SKY_wallet_CollectionWallet_Validate(p0):
+    return _skycoin.SKY_wallet_CollectionWallet_Validate(p0)
+SKY_wallet_CollectionWallet_Validate = _skycoin.SKY_wallet_CollectionWallet_Validate
+
+def SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2):
+    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt(p0, p1, p2)
+SKY_encrypt_ScryptChacha20poly1305_Encrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Encrypt
+
+def SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2):
+    return _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt(p0, p1, p2)
+SKY_encrypt_ScryptChacha20poly1305_Decrypt = _skycoin.SKY_encrypt_ScryptChacha20poly1305_Decrypt
+
+def SKY_transaction_DistributeCoinHoursProportional(p0, p1, p2):
+    return _skycoin.SKY_transaction_DistributeCoinHoursProportional(p0, p1, p2)
+SKY_transaction_DistributeCoinHoursProportional = _skycoin.SKY_transaction_DistributeCoinHoursProportional
+
+def SKY_transaction_DistributeSpendHours(p0, p1, p2, p4):
+    return _skycoin.SKY_transaction_DistributeSpendHours(p0, p1, p2, p4)
+SKY_transaction_DistributeSpendHours = _skycoin.SKY_transaction_DistributeSpendHours
+
+def SKY_droplet_FromString(p0):
+    return _skycoin.SKY_droplet_FromString(p0)
+SKY_droplet_FromString = _skycoin.SKY_droplet_FromString
+
+def SKY_droplet_ToString(p0):
+    return _skycoin.SKY_droplet_ToString(p0)
+SKY_droplet_ToString = _skycoin.SKY_droplet_ToString
+
+def SKY_testutil_MakeAddress(p0):
+    return _skycoin.SKY_testutil_MakeAddress(p0)
+SKY_testutil_MakeAddress = _skycoin.SKY_testutil_MakeAddress
+
+def SKY_testutil_MakePubKey(p0):
+    return _skycoin.SKY_testutil_MakePubKey(p0)
+SKY_testutil_MakePubKey = _skycoin.SKY_testutil_MakePubKey
+
+def SKY_testutil_RandXPub():
+    return _skycoin.SKY_testutil_RandXPub()
+SKY_testutil_RandXPub = _skycoin.SKY_testutil_RandXPub
+
+def SKY_cli_AddPrivateKey(p0, p1):
+    return _skycoin.SKY_cli_AddPrivateKey(p0, p1)
+SKY_cli_AddPrivateKey = _skycoin.SKY_cli_AddPrivateKey
+
+def SKY_cli_AddPrivateKeyToFile(p0, p1, p2):
+    return _skycoin.SKY_cli_AddPrivateKeyToFile(p0, p1, p2)
+SKY_cli_AddPrivateKeyToFile = _skycoin.SKY_cli_AddPrivateKeyToFile
+
+def SKY_httphelper_Address_UnmarshalJSON(p0, p1):
+    return _skycoin.SKY_httphelper_Address_UnmarshalJSON(p0, p1)
+SKY_httphelper_Address_UnmarshalJSON = _skycoin.SKY_httphelper_Address_UnmarshalJSON
+
+def SKY_httphelper_Address_MarshalJSON(p0, p1):
+    return _skycoin.SKY_httphelper_Address_MarshalJSON(p0, p1)
+SKY_httphelper_Address_MarshalJSON = _skycoin.SKY_httphelper_Address_MarshalJSON
+
+def SKY_httphelper_Coins_UnmarshalJSON(p1):
+    return _skycoin.SKY_httphelper_Coins_UnmarshalJSON(p1)
+SKY_httphelper_Coins_UnmarshalJSON = _skycoin.SKY_httphelper_Coins_UnmarshalJSON
+
+def SKY_httphelper_Coins_MarshalJSON(p1):
+    return _skycoin.SKY_httphelper_Coins_MarshalJSON(p1)
+SKY_httphelper_Coins_MarshalJSON = _skycoin.SKY_httphelper_Coins_MarshalJSON
+
+def SKY_httphelper_Coins_Value():
+    return _skycoin.SKY_httphelper_Coins_Value()
+SKY_httphelper_Coins_Value = _skycoin.SKY_httphelper_Coins_Value
+
+def SKY_httphelper_Hours_UnmarshalJSON(p1):
+    return _skycoin.SKY_httphelper_Hours_UnmarshalJSON(p1)
+SKY_httphelper_Hours_UnmarshalJSON = _skycoin.SKY_httphelper_Hours_UnmarshalJSON
+
+def SKY_httphelper_Hours_MarshalJSON(p1):
+    return _skycoin.SKY_httphelper_Hours_MarshalJSON(p1)
+SKY_httphelper_Hours_MarshalJSON = _skycoin.SKY_httphelper_Hours_MarshalJSON
+
+def SKY_httphelper_Hours_Value():
+    return _skycoin.SKY_httphelper_Hours_Value()
+SKY_httphelper_Hours_Value = _skycoin.SKY_httphelper_Hours_Value
+
+def SKY_fee_VerifyTransactionFee(p0, p1, p2):
+    return _skycoin.SKY_fee_VerifyTransactionFee(p0, p1, p2)
+SKY_fee_VerifyTransactionFee = _skycoin.SKY_fee_VerifyTransactionFee
+
+def SKY_fee_VerifyTransactionFeeForHours(p0, p1, p2):
+    return _skycoin.SKY_fee_VerifyTransactionFeeForHours(p0, p1, p2)
+SKY_fee_VerifyTransactionFeeForHours = _skycoin.SKY_fee_VerifyTransactionFeeForHours
+
+def SKY_fee_RequiredFee(p0, p1):
+    return _skycoin.SKY_fee_RequiredFee(p0, p1)
+SKY_fee_RequiredFee = _skycoin.SKY_fee_RequiredFee
+
+def SKY_fee_RemainingHours(p0, p1):
+    return _skycoin.SKY_fee_RemainingHours(p0, p1)
+SKY_fee_RemainingHours = _skycoin.SKY_fee_RemainingHours
+
+def SKY_fee_TransactionFee(*args):
+    return _skycoin.SKY_fee_TransactionFee(*args)
+SKY_fee_TransactionFee = _skycoin.SKY_fee_TransactionFee
 class api__RichlistParams(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, api__RichlistParams, name, value)
