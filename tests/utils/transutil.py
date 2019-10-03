@@ -203,7 +203,8 @@ def isPrivateKeyEq(handle1, handle2):
     err, Depth2 = skycoin.SKY_bip32_PrivateKey_GetDepth(handle2)
     assert err == skycoin.SKY_OK
     if(Depth1 != Depth2):
-        print("Depth not equal \n")
+
+        print("Depth not equal ,", Depth1, "and ", Depth2, "\n")
         return 0
 
     err, ParentFingerprint1 = skycoin.SKY_bip32_PrivateKey_GetParentFingerprint(
