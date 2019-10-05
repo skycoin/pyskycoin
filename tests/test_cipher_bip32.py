@@ -129,9 +129,9 @@ def VectorKeyPairs(vector):
         vector.privKey)
     assert err == skycoin.SKY_OK
     assert utils.isPrivateKeyEq(privKey2, privKey3)
-
+    print(len(vector.children))
     for tck in vector.children:
-        print("Depth ", tck.depth)
+        print("## Depth ", tck.depth)
         err, privkey1 = skycoin.SKY_bip32_NewPrivateKeyFromPath(seed, tck.path)
         assert err == skycoin.SKY_OK
         # Get this private key's public key
@@ -296,6 +296,8 @@ def test_TestBip32TestVectors():
     vector2.chainCode = b"60499f801b896d83179a4374aeb7822aaeaceaa0db1f85ee3e904c4defbd9689"
     vector2.hexPubKey = b"03cbcaa9c98c877a26977d00825c956a238e8dddfbd322cce4f74b0b5bd6ace4a7"
     vector2.wifPrivKey = b"KyjXhyHF9wTphBkfpxjL8hkDXDUSbE3tKANT94kXSyh6vn6nKaoy"
+    vector2.children = []
+
     children = testChildKey()
     children.path = b"m/0"
     children.privKey = b"xprv9vHkqa6EV4sPZHYqZznhT2NPtPCjKuDKGY38FBWLvgaDx45zo9WQRUT3dKYnjwih2yJD9mkrocEZXo1ex8G81dwSM1fwqWpWkeS3v86pgKt"
@@ -322,10 +324,104 @@ def test_TestBip32TestVectors():
     children.depth = 2
     vector2.children.append(children)
 
+    children = testChildKey()
+    children.path = b"m/0/2147483647'/1"
+    children.privKey = b"xprv9zFnWC6h2cLgpmSA46vutJzBcfJ8yaJGg8cX1e5StJh45BBciYTRXSd25UEPVuesF9yog62tGAQtHjXajPPdbRCHuWS6T8XA2ECKADdw4Ef"
+    children.pubKey = b"xpub6DF8uhdarytz3FWdA8TvFSvvAh8dP3283MY7p2V4SeE2wyWmG5mg5EwVvmdMVCQcoNJxGoWaU9DCWh89LojfZ537wTfunKau47EL2dhHKon"
+    children.fingerprint = b"78412e3a"
+    children.identifier = b"78412e3a2296a40de124307b6485bd19833e2e34"
+    children.chainCode = b"f366f48f1ea9f2d1d3fe958c95ca84ea18e4c4ddb9366c336c927eb246fb38cb"
+    children.hexPubKey = b"03a7d1d856deb74c508e05031f9895dab54626251b3806e16b4bd12e781a7df5b9"
+    children.wifPrivKey = b"KzyzXnznxSv249b4KuNkBwowaN3akiNeEHy5FWoPCJpStZbEKXN2"
+    children.childNUmber = 1
+    children.depth = 3
+    vector2.children.append(children)
+
+    children = testChildKey()
+    children.path = b"m/0/2147483647'/1/2147483646'"
+    children.privKey = b"xprvA1RpRA33e1JQ7ifknakTFpgNXPmW2YvmhqLQYMmrj4xJXXWYpDPS3xz7iAxn8L39njGVyuoseXzU6rcxFLJ8HFsTjSyQbLYnMpCqE2VbFWc"
+    children.pubKey = b"xpub6ERApfZwUNrhLCkDtcHTcxd75RbzS1ed54G1LkBUHQVHQKqhMkhgbmJbZRkrgZw4koxb5JaHWkY4ALHY2grBGRjaDMzQLcgJvLJuZZvRcEL"
+    children.fingerprint = b"31a507b8"
+    children.identifier = b"31a507b815593dfc51ffc7245ae7e5aee304246e"
+    children.chainCode = b"637807030d55d01f9a0cb3a7839515d796bd07706386a6eddf06cc29a65a0e29"
+    children.hexPubKey = b"02d2b36900396c9282fa14628566582f206a5dd0bcc8d5e892611806cafb0301f0"
+    children.wifPrivKey = b"L5KhaMvPYRW1ZoFmRjUtxxPypQ94m6BcDrPhqArhggdaTbbAFJEF"
+    children.childNUmber = 2147483646 + FirstHardenedChild
+    children.depth = 4
+    vector2.children.append(children)
+
+    children = testChildKey()
+    children.path = b"m/0/2147483647'/1/2147483646'/2"
+    children.privKey = b"xprvA2nrNbFZABcdryreWet9Ea4LvTJcGsqrMzxHx98MMrotbir7yrKCEXw7nadnHM8Dq38EGfSh6dqA9QWTyefMLEcBYJUuekgW4BYPJcr9E7j"
+    children.pubKey = b"xpub6FnCn6nSzZAw5Tw7cgR9bi15UV96gLZhjDstkXXxvCLsUXBGXPdSnLFbdpq8p9HmGsApME5hQTZ3emM2rnY5agb9rXpVGyy3bdW6EEgAtqt"
+    children.fingerprint = b"26132fdb"
+    children.identifier = b"26132fdbe7bf89cbc64cf8dafa3f9f88b8666220"
+    children.chainCode = b"9452b549be8cea3ecb7a84bec10dcfd94afe4d129ebfd3b3cb58eedf394ed271"
+    children.hexPubKey = b"024d902e1a2fc7a8755ab5b694c575fce742c48d9ff192e63df5193e4c7afe1f9c"
+    children.wifPrivKey = b"L3WAYNAZPxx1fr7KCz7GN9nD5qMBnNiqEJNJMU1z9MMaannAt4aK"
+    children.childNUmber = 2
+    children.depth = 5
+    vector2.children.append(children)
+
     vector.append(vector2)
 
+    vector3 = testMasterKey()
+    vector3.seed = b"4b381541583be4423346c643850da4b320e46a87ae3d2a4e6da11eba819cd4acba45d239319ac14f863b8d5ab5a0d0c64d2e8a1e7d1457df2e5a3c51c73235be"
+    vector3.privKey = b"xprv9s21ZrQH143K25QhxbucbDDuQ4naNntJRi4KUfWT7xo4EKsHt2QJDu7KXp1A3u7Bi1j8ph3EGsZ9Xvz9dGuVrtHHs7pXeTzjuxBrCmmhgC6"
+    vector3.pubKey = b"xpub661MyMwAqRbcEZVB4dScxMAdx6d4nFc9nvyvH3v4gJL378CSRZiYmhRoP7mBy6gSPSCYk6SzXPTf3ND1cZAceL7SfJ1Z3GC8vBgp2epUt13"
+    vector3.fingerprint = b"41d63b50"
+    vector3.identifier = b"41d63b50d8dd5e730cdf4c79a56fc929a757c548"
+    vector3.chainCode = b"01d28a3e53cffa419ec122c968b3259e16b65076495494d97cae10bbfec3c36f"
+    vector3.hexPubKey = b"03683af1ba5743bdfc798cf814efeeab2735ec52d95eced528e692b8e34c4e5669"
+    vector3.wifPrivKey = b"KwFPqAq9SKx1sPg15Qk56mqkHwrfGPuywtLUxoWPkiTSBoxCs8am"
+    vector3.children = []
+
+    children = testChildKey()
+    children.path = b"m/0'"
+    children.privKey = b"xprv9uPDJpEQgRQfDcW7BkF7eTya6RPxXeJCqCJGHuCJ4GiRVLzkTXBAJMu2qaMWPrS7AANYqdq6vcBcBUdJCVVFceUvJFjaPdGZ2y9WACViL4L"
+    children.pubKey = b"xpub68NZiKmJWnxxS6aaHmn81bvJeTESw724CRDs6HbuccFQN9Ku14VQrADWgqbhhTHBaohPX4CjNLf9fq9MYo6oDaPPLPxSb7gwQN3ih19Zm4Y"
+    children.fingerprint = b"c61368bb"
+    children.identifier = b"c61368bb50e066acd95bd04a0b23d3837fb75698"
+    children.chainCode = b"e5fea12a97b927fc9dc3d2cb0d1ea1cf50aa5a1fdc1f933e8906bb38df3377bd"
+    children.hexPubKey = b"027c3591221e28939e45f8ea297d62c3640ebb09d7058b01d09c963d984a40ad49"
+    children.wifPrivKey = b"L3z3MSqZtDQ1FPHKi7oWf1nc9rMEGFtZUDCoFa7n4F695g5qZiSu"
+    children.childNUmber = FirstHardenedChild
+    children.depth = 1
+    vector3.children.append(children)
+
+    vector.append(vector3)
+
+    # Test case copied from:
+    # https://github.com/bitcoinjs/bip32/blob/master/test/fixtures/index.json
+
+    vector4 = testMasterKey()
+    vector4.seed = b"d13de7bd1e54422d1a3b3b699a27fb460de2849e7e66a005c647e8e4a54075cb"
+    vector4.privKey = b"xprv9s21ZrQH143K3zWpEJm5QtHFh93eNJrNbNqzqLN5XoE9MvC7gs5TmBFaL2PpaXpDc8FBYVe5EChc73ApjSQ5fWsXS7auHy1MmG6hdpywE1q"
+    vector4.pubKey = b"xpub661MyMwAqRbcGUbHLLJ5n2DzFAt8mmaDxbmbdimh68m8EiXGEQPiJya4BJat5yMzy4e68VSUoLGCu5uvzf8dUoGvwuJsLE6F1cibmWsxFNn"
+    vector4.fingerprint = b"1a87677b"
+    vector4.identifier = b"1a87677be6f73cc9655e8b4c5d2fd0aeeb1b23c7"
+    vector4.chainCode = b"c23ab32b36ddff49fae350a1bed8ec6b4d9fc252238dd789b7273ba4416054eb"
+    vector4.hexPubKey = b"0298ccc720d5dea817c7077605263bae52bca083cf8888fee77ff4c1b4797ee180"
+    vector4.wifPrivKey = b"KwDiCU5bs8xQwsRgxjhkcJcVuR7NE4Mei8X9uSAVviVTE7JmMoS6"
+    vector4.children = []
+
+    children = testChildKey()
+    children.path = b"m/44'/0'/0'/0/0'"
+    children.privKey = b"xprvA3cqPFaMpr7n1wRh6BPtYfwdYRoKCaPzgDdQnUmgMrz1WxWNEW3EmbBr9ieh9BJAsRGKFPLvotb4p4Aq79jddUVKPVJt7exVzLHcv777JVf"
+    children.pubKey = b"xpub6GcBnm7FfDg5ERWACCvtuotN6Tdoc37r3SZ1asBHvCWzPkqWn3MVKPWKzy6GsfmdMUGanR3D12dH1cp5tJauuubwc4FAJDn67SH2uUjwAT1"
+    children.fingerprint = b"e371d69b"
+    children.identifier = b"e371d69b5dae6eacee832a130ee9f55545275a09"
+    children.chainCode = b"ca27553aa89617e982e621637d6478f564b32738f8bbe2e48d0a58a8e0f6da40"
+    children.hexPubKey = b"027c3591221e28939e45f8ea297d62c3640ebb09d7058b01d09c963d984a40ad49"
+    children.wifPrivKey = b"L3z3MSqZtDQ1FPHKi7oWf1nc9rMEGFtZUDCoFa7n4F695g5qZiSu"
+    children.childNUmber = FirstHardenedChild
+    children.depth = 5
+    vector4.children.append(children)
+
+    vector.append(vector4)
+
     # Test running
-    i = 0
+    i = 1
     for v in vector:
         print("Vector ", i)
         VectorKeyPairs(v)
