@@ -562,3 +562,187 @@ def test_TestMaxChildDepthError():
         if i != 255:
             assert err == skycoin.SKY_OK
     assert reached == True
+
+
+def test_TestParentPublicChildDerivation():
+    # Generated using https://iancoleman.github.io/bip39/
+        # Root key:
+        # xprv9s21ZrQH143K2Cfj4mDZBcEecBmJmawReGwwoAou2zZzG45bM6cFPJSvobVTCB55L6Ld2y8RzC61CpvadeAnhws3CHsMFhNjozBKGNgucYm
+        # Derivation Path m/44'/60'/0'/0:
+        # xprv9zy5o7z1GMmYdaeQdmabWFhUf52Ytbpe3G5hduA4SghboqWe7aDGWseN8BJy1GU72wPjkCbBE1hvbXYqpCecAYdaivxjNnBoSNxwYD4wHpW
+        # xpub6DxSCdWu6jKqr4isjo7bsPeDD6s3J4YVQV1JSHZg12Eagdqnf7XX4fxqyW2sLhUoFWutL7tAELU2LiGZrEXtjVbvYptvTX5Eoa4Mamdjm9u
+
+    err, extendedMasterPublicBytes = skycoin.SKY_base58_Decode(
+        b"xpub6DxSCdWu6jKqr4isjo7bsPeDD6s3J4YVQV1JSHZg12Eagdqnf7XX4fxqyW2sLhUoFWutL7tAELU2LiGZrEXtjVbvYptvTX5Eoa4Mamdjm9u")
+    assert err == skycoin.SKY_OK
+
+    err, extendedMasterPublic = skycoin.SKY_bip32_DeserializePublicKey(
+        extendedMasterPublicBytes)
+    assert err == skycoin.SKY_OK
+
+    err, extendedMasterPrivateBytes = skycoin.SKY_base58_Decode(
+        b"xprv9zy5o7z1GMmYdaeQdmabWFhUf52Ytbpe3G5hduA4SghboqWe7aDGWseN8BJy1GU72wPjkCbBE1hvbXYqpCecAYdaivxjNnBoSNxwYD4wHpW")
+    assert err == skycoin.SKY_OK
+
+    err, extendedMasterPrivate = skycoin.SKY_bip32_DeserializePrivateKey(
+        extendedMasterPrivateBytes)
+    assert err == skycoin.SKY_OK
+
+    expectedChildren = []
+
+    childen = testChildKey()
+    childen.path = b"m/0"
+    childen.hexPubKey = b"0243187e1a2ba9ba824f5f81090650c8f4faa82b7baf93060d10b81f4b705afd46"
+    childen.wifPrivKey = b"KyNPkzzaQ9xa7d2iFacTBgjP4rM3SydTzUZW7uwDh6raePWRJkeM"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/1"
+    childen.hexPubKey = b"023790d11eb715c4320d8e31fba3a09b700051dc2cdbcce03f44b11c274d1e220b"
+    childen.wifPrivKey = b"KwVyk5XXaamsPPiGLHciv6AjhUV88CM7xTto7sRMCEy12GfwZzZQ"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/2"
+    childen.hexPubKey = b"0302c5749c3c75cea234878ae3f4d8f65b75d584bcd7ed0943b016d6f6b59a2bad"
+    childen.wifPrivKey = b"L1o7CpgTjkcBYmbeuNigVpypgJ9GKq87WNqz8QDjWMqdKVKFf826"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/3"
+    childen.hexPubKey = b"03f0440c94e5b14ea5b15875934597afff541bec287c6e65dc1102cafc07f69699"
+    childen.wifPrivKey = b"KzmYqf8WSUNzf2LhAWJjxv7pYX34XhFeLLxSoaSD8y9weJ4j6Z7q"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/4"
+    childen.hexPubKey = b"026419d0d8996707605508ac44c5871edc7fe206a79ef615b74f2eea09c5852e2b"
+    childen.wifPrivKey = b"KzezMKd7Yc4jwJd6ASji2DwXX8jB8XwNTggLoAJU78zPAfXhzRLD"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/5"
+    childen.hexPubKey = b"02f63c6f195eea98bdb163c4a094260dea71d264b21234bed4df3899236e6c2298"
+    childen.wifPrivKey = b"Kwxik5cHiQCZYy5g9gdfQmr7c3ivLDhFjpSF7McHKHeox6iu6MjL"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/6"
+    childen.hexPubKey = b"02d74709cd522081064858f393d009ead5a0ecd43ede3a1f57befcc942025cb5f9"
+    childen.wifPrivKey = b"KwGhZYHovZoczyfupFRgZcr2xz1nHTSKx79uZuWhuzDSU7L7LrxE"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/7"
+    childen.hexPubKey = b"03e54bb92630c943d38bbd8a4a2e65fca7605e672d30a0e545a7198cbb60729ceb"
+    childen.wifPrivKey = b"L4iGJ3JCfnMU1ia2bMQeF88hs6tkkS9QrmLbWPsj1ULHrUJid4KT"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/8"
+    childen.hexPubKey = b"027e9d5acd14d39c4938697fba388cd2e8f31fc1c5dc02fafb93a10a280de85199"
+    childen.wifPrivKey = b"L3xfynMTDMR8vs6G5VxxjoKLBQyihvtcBHF4KHY5wvFMwevLjZKU"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/9"
+    childen.hexPubKey = b"02a167a9f0d57468fb6abf2f3f7967e2cadf574314753a06a9ef29bc76c54638d2"
+    childen.wifPrivKey = b"KxiUV7CcdCuF3bLajqaP6qMFERQFvzsRj9aeCCf3TNWXioLwwJAm"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/100"
+    childen.hexPubKey = b"020db9ba00ddf68428e3f5bfe54252bbcd75b21e42f51bf3bfc4172bf0e5fa7905"
+    childen.wifPrivKey = b"L5ipKgExgKZYaxsQPEmyjrhoSepoxuSAxSWgK1GX5kaTUN3zGCU7"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/101"
+    childen.hexPubKey = b"0299e3790956570737d6164e6fcda5a3daa304065ca95ba46bc73d436b84f34d46"
+    childen.wifPrivKey = b"L1iUjHWpYSead5vYZycMdMzCZDFQzveG3S6NviAi5BvvGdnuQbi6"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/102"
+    childen.hexPubKey = b"0202e0732c4c5d2b1036af173640e01957998cfd4f9cdaefab6ffe76eb869e2c59"
+    childen.wifPrivKey = b"KybjnK4e985dgzxL5pgXTfq8YFagG8gB9HWAjLimagR4pdodCSNo"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/103"
+    childen.hexPubKey = b"03d050adbd996c0c5d737ff638402dfbb8c08e451fef10e6d62fb57887c1ac6cb2"
+    childen.wifPrivKey = b"Kx9bf5cyf29fp7uuMVnqn47692xRwXStVmnL75w9i1sLQDjbFHP5"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/104"
+    childen.hexPubKey = b"038d466399e2d68b4b16043ad4d88893b3b2f84fc443368729a973df1e66f4f530"
+    childen.wifPrivKey = b"L5myg7MNjKHcgVMS9ytmHgBftiWAi1awGpeC6p9dygsEQV9ZRvpz"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/105"
+    childen.hexPubKey = b"034811e2f0c8c50440c08c2c9799b99c911c036e877e8325386ff61723ae3ffdce"
+    childen.wifPrivKey = b"L1KHrLBPhaJnvysjKUYk5QwkyWDb6uHgDM8EmE4eKtfqyJ13a7HC"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/106"
+    childen.hexPubKey = b"026339fd5842921888e711a6ba9104a5f0c94cc0569855273cf5faefdfbcd3cc29"
+    childen.wifPrivKey = b"Kz4WPV43po7LRkatwHf9YGknGZRYfvo7TkvojinzxoFRXRYXyfDn"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/107"
+    childen.hexPubKey = b"02833705c1069fab2aa92c6b0dac27807290d72e9f52378d493ac44849ca003b22"
+    childen.wifPrivKey = b"L3PxeN4w336kTk1becdFsAnR8ihh8SeMYXRHEzSmRNQTjtmcUjr9"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/108"
+    childen.hexPubKey = b"032d2639bde1eb7bdf8444bd4f6cc26a9d1bdecd8ea15fac3b992c3da68d9d1df5"
+    childen.wifPrivKey = b"L2wf8FYiA888qrhDzHkFkZ3ZRBntysjtJa1QfcxE1eFiyDUZBRSi"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen.path = b"m/109"
+    childen.hexPubKey = b"02479c6d4a64b93a2f4343aa862c938fbc658c99219dd7bebb4830307cbd76c9e9"
+    childen.wifPrivKey = b"L5A5hcupWnYTNJTLTWDDfWyb3hnrJgdDgyN7c4PuF17bsY1tNjxS"
+    expectedChildren.append(childen)
+
+    childen = testChildKey()
+    childen
+
+    for child in expectedChildren:
+        print(child.path)
+        err, path = skycoin.SKY_bip32_ParsePath(child.path)
+        assert err == skycoin.SKY_OK
+        assert skycoin.SKY_bip32_Path_Count(path)[1] == 2
+        element_tmp = skycoin.bip32__PathNode()
+        err = skycoin.SKY_bip32_Path_GetElements(path, 1, element_tmp)
+        assert err == skycoin.SKY_OK
+        err, pubkey = skycoin.SKY_bip32_PublicKey_NewPublicChildKey(
+            extendedMasterPublic, element_tmp.ChildNumber)
+        assert err == skycoin.SKY_OK
+        err, pubkey_key = skycoin.SKY_bip32_PublicKey_GetKey(pubkey)
+        assert err == skycoin.SKY_OK
+        err, pubkey_hexpubkey = skycoin.SKY_base58_Hex2String(pubkey_key)
+        assert err == skycoin.SKY_OK
+        assert child.hexPubKey == pubkey_hexpubkey
+
+        err, pubkey2 = skycoin.SKY_bip32_PrivateKey_NewPublicChildKey(
+            extendedMasterPrivate, element_tmp.ChildNumber)
+        assert err == skycoin.SKY_OK
+        assert utils.isPublicKeyEq(pubkey, pubkey2) == 1
+
+        err, privkey = skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(
+            extendedMasterPrivate, element_tmp.ChildNumber)
+        assert err == skycoin.SKY_OK
+        expectedPrivKey = skycoin.cipher_SecKey()
+        err = skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(
+            child.wifPrivKey, expectedPrivKey)
+        assert err == skycoin.SKY_OK
+
+        err, pubkey3 = skycoin.SKY_bip32_PrivateKey_Publickey(privkey)
+        assert err == skycoin.SKY_OK
+        assert utils.isPublicKeyEq(pubkey, pubkey3) == 1
