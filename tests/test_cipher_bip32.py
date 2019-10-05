@@ -464,3 +464,35 @@ def test_TestDeserializePublicInvalidStrings():
 
         err, _ = skycoin.SKY_bip32_DeserializePublicKey(b)
         assert err == test.err
+
+
+def test_TestCantCreateHardenedPublicChild():
+    err, b = skycoin.SKY_cipher_RandByte(32)
+    assert err == skycoin.SKY_OK
+    err, key = skycoin.SKY_bip32_NewMasterKey(b)
+    assert err == skycoin.SKY_OK
+
+    # Test that it works for private keys
+    err, _ = skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(key,
+                                                             FirstHardenedChild - 1)
+    assert err == skycoin.SKY_OK
+    err, _ = skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(
+        key, FirstHardenedChild)
+    assert err == skycoin.SKY_OK
+    err, _ = skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(
+        key, FirstHardenedChild + 1)
+    assert err == skycoin.SKY_OK
+
+    # Test that it throws an error for public keys if hardened
+    err, pubkey = skycoin.SKY_bip32_PrivateKey_Publickey(key)
+    assert err == skycoin.SKY_OK
+
+    err, _ = skycoin.SKY_bip32_PublicKey_NewPublicChildKey(
+        pubkey, FirstHardenedChild - 1)
+    assert err == skycoin.SKY_OK
+    err, _ = skycoin.SKY_bip32_PublicKey_NewPublicChildKey(
+        pubkey, FirstHardenedChild)
+    assert err == skycoin.SKY_ErrHardenedChildPublicKey
+    err, _ = skycoin.SKY_bip32_PublicKey_NewPublicChildKey(
+        pubkey, FirstHardenedChild + 1)
+    assert err == skycoin.SKY_ErrHardenedChildPublicKey
