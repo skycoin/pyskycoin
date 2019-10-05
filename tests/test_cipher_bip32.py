@@ -496,3 +496,52 @@ def test_TestCantCreateHardenedPublicChild():
     err, _ = skycoin.SKY_bip32_PublicKey_NewPublicChildKey(
         pubkey, FirstHardenedChild + 1)
     assert err == skycoin.SKY_ErrHardenedChildPublicKey
+
+
+class case():
+    seed = b""
+    path = b""
+    key = b""
+    err = skycoin.SKY_OK
+
+
+def test_TestNewPrivateKeyFromPath():
+    cases = []
+    childen = case()
+    childen.seed = b"6162636465666768696A6B6C6D6E6F707172737475767778797A"
+    childen.path = b"m"
+    childen.key = b"xprv9s21ZrQH143K3GfuLFf1UxUB4GzmFav1hrzTG1bPorBTejryu4YfYVxZn6LNmwfvsi6uj1Wyv9vLDPsfKDuuqwEqYier1ZsbgWVd9NCieNv"
+    cases.append(childen)
+
+    childen = case()
+    childen.seed = b"6162636465666768696A6B6C6D6E6F707172737475767778797A"
+    childen.path = b"m/1'"
+    childen.key = b"xprv9uWf8oyvCHcAUg3kSjSroz67s7M3qJRWmNcdVwYGf91GFsaAatsVVp1bjH7z3WiWevqB7WK92B415oBwcahjoMvvb4mopPyqZUDeVW4168c"
+    cases.append(childen)
+
+    childen = case()
+    childen.path = b"6162636465666768696A6B6C6D6E6F707172737475767778797A"
+    childen.path = b"m/1'/foo"
+    childen.err = skycoin.SKY_ErrPathNodeNotNumber
+    cases.append(childen)
+
+    childen = case()
+    childen.seed = b"6162"
+    childen.path = b"m/1'"
+    childen.err = skycoin.SKY_ErrInvalidSeedLength
+    cases.append(childen)
+
+    for tc in cases:
+        print(tc.path)
+        err, seed = skycoin.SKY_base58_String2Hex(tc.seed)
+        assert err == skycoin.SKY_OK
+
+        err, k = skycoin.SKY_bip32_NewPrivateKeyFromPath(seed, tc.path)
+        if tc.err != skycoin.SKY_OK:
+            assert tc.err == err
+            return
+
+        assert err == skycoin.SKY_OK
+        err, kStr = skycoin.SKY_bip32_PrivateKey_String(k)
+        assert err == skycoin.SKY_OK
+        assert tc.key == kStr
