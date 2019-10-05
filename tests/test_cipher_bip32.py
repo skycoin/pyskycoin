@@ -381,7 +381,7 @@ def test_TestDeserializePrivateInvalidStrings():
     tests.append(childen)
 
     childen = testStruct()
-    childen.err = skycoin.SKY_bip32_ErrInvalidChecksum
+    childen.err = skycoin.SKY_ErrInvalidChildNumber
     childen.base58 = b"xprv9s21ZrQYdgnodnKW4Drm1Qg7poU6Gf2WUDsjPxvYiK7iLBMrsjbnF1wsZZQgmXNeMSG3s7jmHk1b3JrzhG5w8mwXGxqFxfrweico7k8DtxR"
     tests.append(childen)
 
@@ -401,8 +401,66 @@ def test_TestDeserializePrivateInvalidStrings():
     tests.append(childen)
 
     for test in tests:
+        print(test.base58)
         err, b = skycoin.SKY_base58_Decode(test.base58)
         assert err == skycoin.SKY_OK
 
         err, _ = skycoin.SKY_bip32_DeserializePrivateKey(b)
+        assert err == test.err
+
+
+def test_TestDeserializePublicInvalidStrings():
+    tests = []
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrSerializedKeyWrongSize
+    childen.base58 = b"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet888"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_bip32_ErrInvalidChecksum
+    childen.base58 = b"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W11GMcet8"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidPublicKeyVersion
+    childen.base58 = b"xprv9uHRZZhk6KAJC1avXpDAp4MDc3sQKNxDiPvvkX8Br5ngLNv1TxvUxt4cV1rGL5hj6KCesnDYUhd7oWgT11eZG7XnxHrnYeSvkzY7d2bhkJ7"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidFingerprint
+    childen.base58 = b"xpub67tVq9SuNQCfm2PXBqjGRAtNZ935kx2uHJaURePth4JBpMfEy6jum7Euj7FTpbs7fnjhfZcNEktCucWHcJf74dbKLKNSTZCQozdDVwvkJhs"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidChildNumber
+    childen.base58 = b"xpub661MyMwTWkfYZq6BEh3ywGVXFvNj5hhzmWMhFBHSqmub31B1LZ9wbJ3DEYXZ8bHXGqnHKfepTud5a2XxGdnnePzZa2m2DyzTnFGBUXtaf9M"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidPublicKey
+    childen.base58 = b"xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gYymDsxxRe3WWeZQ7TadaLSdKUffezzczTCpB8j3JP96UwE2n6w1"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidKeyVersion
+    childen.base58 = b"8FH81Rao5EgGmdScoN66TJAHsQP7phEMeyMTku9NBJd7hXgaj3HTvSNjqJjoqBpxdbuushwPEM5otvxXt2p9dcw33AqNKzZEPMqGHmz7Dpayi6Vb"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrInvalidKeyVersion
+    childen.base58 = b"1111111111111adADjFaSNPxwXqLjHLj4mBfYxuewDPbw9hEj1uaXCzMxRPXDFF3cUoezTFYom4sEmEVSQmENPPR315cFk9YUFVek73wE9"
+    tests.append(childen)
+
+    childen = testStruct()
+    childen.err = skycoin.SKY_ErrSerializedKeyWrongSize
+    childen.base58 = b"7JJikZQ2NUXjSAnAF2SjFYE3KXbnnVxzRBNddFE1DjbDEHVGEJzYC7zqSgPoauBJS3cWmZwsER94oYSFrW9vZ4Ch5FtGeifdzmtS3FGYDB1vxFZsYKgMc"
+    tests.append(childen)
+
+    for test in tests:
+        print(test.base58)
+        err, b = skycoin.SKY_base58_Decode(test.base58)
+        assert err == skycoin.SKY_OK
+
+        err, _ = skycoin.SKY_bip32_DeserializePublicKey(b)
         assert err == test.err
