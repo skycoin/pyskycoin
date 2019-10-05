@@ -22,7 +22,6 @@ def test_TestNewPubKey():
     _, data = skycoin.SKY_cipher_RandByte(33)
     assert skycoin.SKY_cipher_NewPubKey(
         data, public_key) == skycoin.SKY_ErrInvalidPubKey
-
     pubkey = skycoin.cipher_PubKey()
     seckey = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_GenerateKeyPair(pubkey, seckey)
@@ -324,4 +323,3 @@ def test_TestSecKeyFromHex():
     p = skycoin.cipher_SecKey()
     err = skycoin.SKY_cipher_NewSecKey(b, p)
     assert err == skycoin.SKY_OK
-

@@ -2,6 +2,7 @@ import skycoin
 import tests.utils
 import base64
 
+
 def freshSumRipemd160(b):
     rp160 = skycoin.cipher_Ripemd160()
     skycoin.SKY_cipher_HashRipemd160(b, rp160)
@@ -33,13 +34,17 @@ def test_TestHashRipemd160():
 def test_TestRipemd160Set():
     h = skycoin.cipher_Ripemd160()
     _, b = skycoin.SKY_cipher_RandByte(21)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
+    assert skycoin.SKY_cipher_Ripemd160_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(100)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
+    assert skycoin.SKY_cipher_Ripemd160_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(19)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
+    assert skycoin.SKY_cipher_Ripemd160_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(0)
-    assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
+    assert skycoin.SKY_cipher_Ripemd160_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthRipemd160
     _, b = skycoin.SKY_cipher_RandByte(20)
     assert skycoin.SKY_cipher_Ripemd160_Set(h, b) == skycoin.SKY_OK
     _, b1 = skycoin.SKY_cipher_RandByte(20)
@@ -50,13 +55,17 @@ def test_TestRipemd160Set():
 def test_TestSHA256Set():
     h = skycoin.cipher_SHA256()
     _, b = skycoin.SKY_cipher_RandByte(33)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
+    assert skycoin.SKY_cipher_SHA256_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(100)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
+    assert skycoin.SKY_cipher_SHA256_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(31)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
+    assert skycoin.SKY_cipher_SHA256_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(0)
-    assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_ErrInvalidLengthSHA256
+    assert skycoin.SKY_cipher_SHA256_Set(
+        h, b) == skycoin.SKY_ErrInvalidLengthSHA256
     _, b = skycoin.SKY_cipher_RandByte(32)
     assert skycoin.SKY_cipher_SHA256_Set(h, b) == skycoin.SKY_OK
     _, b = skycoin.SKY_cipher_RandByte(32)
@@ -190,71 +199,70 @@ def test_TestSHA256Null():
     _, isNull = skycoin.SKY_cipher_SHA256_Null(x)
     assert not isNull
 
-def test_TestMerkle():
-    hashlist = []
-    h = skycoin.cipher_SHA256()
-    for _ in range(5):
-        hashlist.append(h)
-    
-    for i in range(5):
-        err, data = skycoin.SKY_cipher_RandByte(128)
-        assert err == skycoin.SKY_OK
-        err = skycoin.SKY_cipher_SumSHA256(data, hashlist[i])
-        assert err == skycoin.SKY_OK
+# def test_TestMerkle():
+#     hashlist = []
+#     h = skycoin.cipher_SHA256()
+#     for _ in range(5):
+#         hashlist.append(h)
 
-    # assert skycoin.SKY_cipher_Merkle(hashlist,h) == 45
+#     for i in range(5):
+#         err, data = skycoin.SKY_cipher_RandByte(128)
+#         assert err == skycoin.SKY_OK
+#         err = skycoin.SKY_cipher_SumSHA256(data, hashlist[i])
+#         assert err == skycoin.SKY_OK
+
+#     # assert skycoin.SKY_cipher_Merkle(hashlist,h) == 45
 
 
+# # err, data = skycoin.SKY_cipher_RandByte(128)
+# # assert err == skycoin.SKY_OK
+# # h = skycoin.cipher_SHA256()
+# # err = skycoin.SKY_cipher_SumSHA256(data, h)
+# # assert err == skycoin.SKY_OK
+# # Single hash input returns hash
+# # a = [x for x in h]
+# # assert skycoin.SKY_cipher_Merkle(a,h) == 45
+# #  DoubleSHA256 double SHA256
+# # func DoubleSHA256(b []byte) SHA256 {
+# # 	h1 := SumSHA256(b)
+# # 	h2 := SumSHA256(h1[:])
+# # 	return h2
+# # }
 
-# err, data = skycoin.SKY_cipher_RandByte(128)
-# assert err == skycoin.SKY_OK
-# h = skycoin.cipher_SHA256()
-# err = skycoin.SKY_cipher_SumSHA256(data, h)
-# assert err == skycoin.SKY_OK
-# Single hash input returns hash
-# a = [x for x in h]
-# assert skycoin.SKY_cipher_Merkle(a,h) == 45
-#  DoubleSHA256 double SHA256
-# func DoubleSHA256(b []byte) SHA256 {
-# 	h1 := SumSHA256(b)
-# 	h2 := SumSHA256(h1[:])
-# 	return h2
-# }
+# # // AddSHA256 returns the SHA256 hash of to two concatenated hashes
+# # func AddSHA256(a SHA256, b SHA256) SHA256 {
+# # 	c := append(a[:], b[:]...)
+# # 	return SumSHA256(c)
+# # }
 
-# // AddSHA256 returns the SHA256 hash of to two concatenated hashes
-# func AddSHA256(a SHA256, b SHA256) SHA256 {
-# 	c := append(a[:], b[:]...)
-# 	return SumSHA256(c)
-# }
+# # // Returns the next highest power of 2 above n, if n is not already a
+# # // power of 2
+# # func nextPowerOfTwo(n uint64) uint64 {
+# # 	var k uint64 = 1
+# # 	for k < n {
+# # 		k *= 2
+# # 	}
+# # 	return k
+# # }
 
-# // Returns the next highest power of 2 above n, if n is not already a
-# // power of 2
-# func nextPowerOfTwo(n uint64) uint64 {
-# 	var k uint64 = 1
-# 	for k < n {
-# 		k *= 2
-# 	}
-# 	return k
-# }
+# # // Merkle computes the merkle root of a hash array
+# # // Array of hashes is padded with 0 hashes until next power of 2
+# # func Merkle(h0 []SHA256) SHA256 {
+# # 	lh := uint64(len(h0))
+# # 	np := nextPowerOfTwo(lh)
+# # 	h1 := append(h0, make([]SHA256, np-lh)...)
+# # 	for len(h1) != 1 {
+# # 		h2 := make([]SHA256, len(h1)/2)
+# # 		for i := 0; i < len(h2); i++ {
+# # 			h2[i] = AddSHA256(h1[2*i], h1[2*i+1])
+# # 		}
+# # 		h1 = h2
+# # 	}
+# # 	return h1[0]
+# # }
 
-# // Merkle computes the merkle root of a hash array
-# // Array of hashes is padded with 0 hashes until next power of 2
-# func Merkle(h0 []SHA256) SHA256 {
-# 	lh := uint64(len(h0))
-# 	np := nextPowerOfTwo(lh)
-# 	h1 := append(h0, make([]SHA256, np-lh)...)
-# 	for len(h1) != 1 {
-# 		h2 := make([]SHA256, len(h1)/2)
-# 		for i := 0; i < len(h2); i++ {
-# 			h2[i] = AddSHA256(h1[2*i], h1[2*i+1])
-# 		}
-# 		h1 = h2
-# 	}
-# 	return h1[0]
-# }
+# # def merkle(h0):
+# #     lh = base64.standard_b64decode(len(h0))
+# #     np =
 
-# def merkle(h0):
-#     lh = base64.standard_b64decode(len(h0))
-#     np = 
-
-# def nextPowerOfTwo():
+# # def nextPowerOfTwo():

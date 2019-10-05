@@ -1,0 +1,1 @@
+(cd $PATH_SUBMODULE && git remote add simelo https://github.com/simelo/libskycoin && git fetch simelo stdevHan_t105_update_submodule_0.27.0 && git checkout stdevHan_t105_update_submodule_0.27.0 && git submodule update --recursive )

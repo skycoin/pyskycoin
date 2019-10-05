@@ -20,12 +20,12 @@ def test_TestBitcoinWIPRoundTrio():
     secret_key_1 = skycoin.cipher_SecKey()
     secret_key_2 = skycoin.cipher_SecKey()
     skycoin.SKY_cipher_GenerateKeyPair(public_key, secret_key_1)
-    wip_1 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
+    wip_1 = skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
         secret_key_1)
-    err = skycoin.skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(
+    err = skycoin.SKY_cipher_SecKeyFromBitcoinWalletImportFormat(
         wip_1, secret_key_2)
     assert err == skycoin.SKY_OK
-    wip_2 = skycoin.skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
+    wip_2 = skycoin.SKY_cipher_BitcoinWalletImportFormatFromSeckey(
         secret_key_2)
     _, secret_key_1_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_1)
     _, secret_key_2_hex = skycoin.SKY_cipher_SecKey_Hex(secret_key_2)

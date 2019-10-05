@@ -379,7 +379,7 @@ def test_TestUxArraySwap():
     uxy = utils.make_UxOut()
     uxa[0] = uxx
     uxa[1] = uxy
-    err = skycoin.SKY_coin_UxArray_Swap(uxa, 0, 1) 
+    err = skycoin.SKY_coin_UxArray_Swap(uxa, 0, 1)
     assert err == skycoin.SKY_OK
     uxa[0] = uxy
     uxa[1] = uxx
@@ -565,7 +565,7 @@ def test_TestAddressUxOutsFlatten():
     assert len(flatArray) == 3
     for x in flatArray:
         assert x.Body.Address != emptyAddr
-    
+
     if flatArray[0].Body.Address == uxa[0].Body.Address:
         assert flatArray[0] == uxa[0]
         assert flatArray[0].Body.Address == uxa[0].Body.Address

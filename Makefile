@@ -83,7 +83,7 @@ build: build-libc-swig ## Build PySkycoin Python package
 
 test-ci: build-libc build-swig develop ## Run tests on (Travis) CI build
 	tox
-	(cd $(PYTHON_CLIENT_DIR) && tox)
+	# (cd $(PYTHON_CLIENT_DIR) && tox)
 
 test-skyapi: build-libc build-swig develop ## Run project test suite by skyapi
 	(cd $(PYTHON_CLIENT_DIR) && $(PYTHON_BIN) setup.py test)
@@ -138,12 +138,12 @@ format: ## Format code that autopep8
 
 lint: ## Linter to pylint
 	pylint -E tests/*.py
-	# yamllint -d relaxed .travis.yml
+	yamllint -d relaxed .travis.yml
 	
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
-	$(PYTHON_BIN) -m pip uninstall pyskycoin
-	$(PYTHON_BIN) -m pip uninstall skyapi
+	$(PYTHON_BIN) -m pip uninstall -y pyskycoin
+	$(PYTHON_BIN) -m pip uninstall -y skyapi
 	rm -rfv tests/__pycache__
 	rm -rfv skycoin/__pycache__
 	rm -rfv skycoin/*.pyc
@@ -160,6 +160,8 @@ clean: #Clean all
 	rm -rfv lib/skyapi/skyapi/api/__pycache__
 	rm -rfv lib/skyapi/test/__pycache__
 	rm -rfv lib/skyapi/test/*.pyc
+	rm -rfv swig/pyskycoin_wrap.c
+	rm -rfv skycoin/skycoin.py
 	
 
 help: ## List available commands

@@ -187,3 +187,112 @@ def makeKeysAndAddress():
     err = skycoin.SKY_cipher_AddressFromPubKey(ppubkey, paddress)
     assert err == skycoin.SKY_OK
     return err, ppubkey, pseckey, paddress
+
+
+def isPrivateKeyEq(handle1, handle2):
+    err, Version1 = skycoin.SKY_bip32_PrivateKey_GetVersion(handle1)
+    assert err == skycoin.SKY_OK
+    err, Version2 = skycoin.SKY_bip32_PrivateKey_GetVersion(handle2)
+    assert err == skycoin.SKY_OK
+    if(Version1 != Version2):
+        print("Version not equal\n")
+        return 0
+
+    err, Depth1 = skycoin.SKY_bip32_PrivateKey_GetDepth(handle1)
+    assert err == skycoin.SKY_OK
+    err, Depth2 = skycoin.SKY_bip32_PrivateKey_GetDepth(handle2)
+    assert err == skycoin.SKY_OK
+    if(Depth1 != Depth2):
+
+        print("Depth not equal ,", Depth1, "and ", Depth2, "\n")
+        return 0
+
+    err, ParentFingerprint1 = skycoin.SKY_bip32_PrivateKey_GetParentFingerprint(
+        handle1)
+    assert err == skycoin.SKY_OK
+    err, ParentFingerprint2 = skycoin.SKY_bip32_PrivateKey_GetParentFingerprint(
+        handle2)
+    assert err == skycoin.SKY_OK
+    if(ParentFingerprint1 != ParentFingerprint2):
+        print("ParentFingerprint not equal \n")
+        return 0
+
+    err, childNumber1 = skycoin.SKY_bip32_PrivateKey_ChildNumber(handle1)
+    assert err == skycoin.SKY_OK
+    err, childNumber2 = skycoin.SKY_bip32_PrivateKey_ChildNumber(handle2)
+    assert err == skycoin.SKY_OK
+    if(childNumber1 != childNumber2):
+        print("childNumber not equal\n")
+        return 0
+
+    err, ChainCode1 = skycoin.SKY_bip32_PrivateKey_GetChainCode(handle1)
+    assert err == skycoin.SKY_OK
+    err, ChainCode2 = skycoin.SKY_bip32_PrivateKey_GetChainCode(handle2)
+    assert err == skycoin.SKY_OK
+    if(ChainCode1 != ChainCode2):
+        print("ChainCode not equal\n")
+        return 0
+
+    err, Key1 = skycoin.SKY_bip32_PrivateKey_GetKey(handle1)
+    assert err == skycoin.SKY_OK
+    err, Key2 = skycoin.SKY_bip32_PrivateKey_GetKey(handle2)
+    assert err == skycoin.SKY_OK
+    if(Key1 != Key2):
+        print("Key not equal\n")
+        return 0
+
+    return 1
+
+
+def isPublicKeyEq(handle1, handle2):
+    err, Version1 = skycoin.SKY_bip32_PublicKey_GetVersion(handle1)
+    assert err == skycoin.SKY_OK
+    err, Version2 = skycoin.SKY_bip32_PublicKey_GetVersion(handle2)
+    assert err == skycoin.SKY_OK
+    if(Version1 != Version2):
+        print("Version not equal\n")
+        return 0
+
+    err, Depth1 = skycoin.SKY_bip32_PublicKey_GetDepth(handle1)
+    assert err == skycoin.SKY_OK
+    err, Depth2 = skycoin.SKY_bip32_PublicKey_GetDepth(handle2)
+    assert err == skycoin.SKY_OK
+    if(Depth1 != Depth2):
+        print("Depth not equal \n")
+        return 0
+
+    err, ParentFingerprint1 = skycoin.SKY_bip32_PublicKey_GetParentFingerprint(
+        handle1)
+    assert err == skycoin.SKY_OK
+    err, ParentFingerprint2 = skycoin.SKY_bip32_PublicKey_GetParentFingerprint(
+        handle2)
+    assert err == skycoin.SKY_OK
+    if(ParentFingerprint1 != ParentFingerprint2):
+        print("ParentFingerprint not equal \n")
+        return 0
+
+    err, childNumber1 = skycoin.SKY_bip32_PublicKey_ChildNumber(handle1)
+    assert err == skycoin.SKY_OK
+    err, childNumber2 = skycoin.SKY_bip32_PublicKey_ChildNumber(handle2)
+    assert err == skycoin.SKY_OK
+    if(childNumber1 != childNumber2):
+        print("childNumber not equal\n")
+        return 0
+
+    err, ChainCode1 = skycoin.SKY_bip32_PublicKey_GetChainCode(handle1)
+    assert err == skycoin.SKY_OK
+    err, ChainCode2 = skycoin.SKY_bip32_PublicKey_GetChainCode(handle2)
+    assert err == skycoin.SKY_OK
+    if(ChainCode1 != ChainCode2):
+        print("ChainCode not equal\n")
+        return 0
+
+    err, Key1 = skycoin.SKY_bip32_PublicKey_GetKey(handle1)
+    assert err == skycoin.SKY_OK
+    err, Key2 = skycoin.SKY_bip32_PublicKey_GetKey(handle2)
+    assert err == skycoin.SKY_OK
+    if(Key1 != Key2):
+        print("Key not equal\n")
+        return 0
+
+    return 1

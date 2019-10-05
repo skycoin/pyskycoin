@@ -1,5 +1,6 @@
 import skycoin
 
+
 def test_TestDecodeBase58Address():
     public_key = skycoin.cipher_PubKey()
     secret_key = skycoin.cipher_SecKey()
@@ -128,8 +129,8 @@ def test_TestAddressString():
 
 def test_TestBitcoinAddress2():
     secret_key = skycoin.cipher_SecKey()
-    err = skycoin.SKY_cipher_SecKeyFromHex(b'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
-                                           secret_key)
+    err = skycoin.SKY_cipher_SecKeyFromHex(
+        b'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd', secret_key)
     assert err == skycoin.SKY_OK
     public_key = skycoin.cipher_PubKey()
     skycoin.SKY_cipher_PubKeyFromSecKey(secret_key, public_key)
@@ -146,8 +147,8 @@ def test_TestBitcoinAddress2():
 
 def test_TestBitcoinAddress3():
     secret_key = skycoin.cipher_SecKey()
-    err = skycoin.SKY_cipher_SecKeyFromHex(b'47f7616ea6f9b923076625b4488115de1ef1187f760e65f89eb6f4f7ff04b012',
-                                           secret_key)
+    err = skycoin.SKY_cipher_SecKeyFromHex(
+        b'47f7616ea6f9b923076625b4488115de1ef1187f760e65f89eb6f4f7ff04b012', secret_key)
     assert err == skycoin.SKY_OK
     public_key = skycoin.cipher_PubKey()
     skycoin.SKY_cipher_PubKeyFromSecKey(secret_key, public_key)

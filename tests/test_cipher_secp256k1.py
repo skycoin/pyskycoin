@@ -26,7 +26,7 @@ def test_Test_Abnormal_Keys3():
         assert err == skycoin.SKY_OK
         err, p = skycoin.SKY_secp256k1_PubkeyFromSeckey(s)
         assert err == skycoin.SKY_OK
-        n = randint(0, len(_testSeckey)-1)
+        n = randint(0, len(_testSeckey) - 1)
         err, s2 = skycoin.SKY_base58_String2Hex(_testSeckey[n])
         assert err == skycoin.SKY_OK
         err, p2 = skycoin.SKY_secp256k1_PubkeyFromSeckey(s2)

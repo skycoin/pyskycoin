@@ -6,9 +6,15 @@
   $1 = PyInt_Check($input) ? 1 : 0;
 }
 
+%typecheck(SWIG_TYPECHECK_INTEGER) Distribution__Handle {
+  $1 = PyInt_Check($input) ? 1 : 0;
+}
+
 %typecheck(SWIG_TYPECHECK_INTEGER) AddressUxOuts_Handle {
   $1 = PyInt_Check($input) ? 1 : 0;
 }
+
+
 
 #if defined(SWIGPYTHON)
 	%include "python_seckeys.i"
@@ -336,24 +342,25 @@
 }
 
 
-%rename(SKY_params_GetDistributionAddresses) wrap_SKY_params_GetDistributionAddresses;
+%rename(SKY_params_Distribution_GetAddresses) wrap_SKY_params_Distribution_GetAddresses;
 %inline{
-	 void wrap_SKY_params_GetDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetDistributionAddresses(__return_strings);
+	 GoUint32 wrap_SKY_params_Distribution_GetAddresses(Distribution__Handle _d, GoSlice_* __return_strings){
+		 
+		 return SKY_params_Distribution_GetAddresses(_d,__return_strings);
 	}
 }
 
-%rename(SKY_params_GetUnlockedDistributionAddresses) wrap_SKY_params_GetUnlockedDistributionAddresses;
+%rename(SKY_params_Distribution_UnlockedAddresses) wrap_SKY_params_Distribution_UnlockedAddresses;
 %inline{
-	 void wrap_SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetUnlockedDistributionAddresses(__return_strings);
+	 GoUint32 wrap_SKY_params_Distribution_UnlockedAddresses(Distribution__Handle _d, GoSlice_* __return_strings){
+		return SKY_params_Distribution_UnlockedAddresses(_d,__return_strings);
 	}
 }
 
-%rename(SKY_params_GetLockedDistributionAddresses) wrap_SKY_params_GetLockedDistributionAddresses;
+%rename(SKY_params_Distribution_LockedAddresses) wrap_SKY_params_Distribution_LockedAddresses;
 %inline{
-	 void wrap_SKY_params_GetLockedDistributionAddresses(coin__UxArray* __return_strings){
-		SKY_params_GetLockedDistributionAddresses(__return_strings);
+	 GoUint32 wrap_SKY_params_Distribution_LockedAddresses(Distribution__Handle _d, GoSlice_* __return_strings){
+		return SKY_params_Distribution_LockedAddresses(_d,__return_strings);
 	}
 }
 
