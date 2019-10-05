@@ -37,6 +37,13 @@ def assertPrivateKeySerialization(key, expected):
     assert err == skycoin.SKY_OK
     err, serialized = skycoin.SKY_bip32_PrivateKey_Serialize(key)
     assert err == skycoin.SKY_OK
+    err, expectedStr = skycoin.SKY_base58_Encode(expectedBytes)
+    assert err == skycoin.SKY_OK
+    err, serializedStr = skycoin.SKY_base58_Encode(serialized)
+    assert err == skycoin.SKY_OK
+    assert expectedStr == expected
+    assert expectedStr == serializedStr
+    assert expectedBytes == serialized
     err, key2 = skycoin.SKY_bip32_DeserializePrivateKey(serialized)
     assert err == skycoin.SKY_OK
     assert utils.isPrivateKeyEq(key, key2) == 1
@@ -50,6 +57,7 @@ def assertPublicKeySerialization(key, expected):
     assert err == skycoin.SKY_OK
     err, serialized = skycoin.SKY_bip32_PublicKey_Serialize(key)
     assert err == skycoin.SKY_OK
+    assert expectedBytes == serialized
     err, key2 = skycoin.SKY_bip32_DeserializePublicKey(serialized)
     assert err == skycoin.SKY_OK
     assert utils.isPublicKeyEq(key, key2) == 1
@@ -63,31 +71,57 @@ def VectorKeyPairs(vector):
     err, seed = skycoin.SKY_base58_String2Hex(vector.seed)
     assert err == skycoin.SKY_OK
     # Generate a master private and public key
-    err, privkey = skycoin.SKY_bip32_NewMasterKey(seed)
+    err, privKey = skycoin.SKY_bip32_NewMasterKey(seed)
     assert err == skycoin.SKY_OK
-    err, pubkey = skycoin.SKY_bip32_PrivateKey_Publickey(privkey)
+    err, pubKey = skycoin.SKY_bip32_PrivateKey_Publickey(privKey)
     assert err == skycoin.SKY_OK
 
-    err, depthPrivKey = skycoin.SKY_bip32_PrivateKey_GetDepth(privkey)
+    err, depthPrivKey = skycoin.SKY_bip32_PrivateKey_GetDepth(privKey)
     assert err == skycoin.SKY_OK
-    err, depthPubKey = skycoin.SKY_bip32_PublicKey_GetDepth(pubkey)
+    err, depthPubKey = skycoin.SKY_bip32_PublicKey_GetDepth(pubKey)
     assert err == skycoin.SKY_OK
     assert 0 == depthPubKey
+    assert 0 == depthPrivKey
 
-    err, privchildNumber = skycoin.SKY_bip32_PrivateKey_ChildNumber(privkey)
+    err, privchildNumber = skycoin.SKY_bip32_PrivateKey_ChildNumber(privKey)
     assert err == skycoin.SKY_OK
-    err, pubchildNumber = skycoin.SKY_bip32_PublicKey_ChildNumber(pubkey)
+    err, pubchildNumber = skycoin.SKY_bip32_PublicKey_ChildNumber(pubKey)
     assert err == skycoin.SKY_OK
-    assert vector.childNUmber == privchildNumber
-    assert vector.childNUmber == pubchildNumber
-    assertPrivateKeySerialization(privkey, vector.privKey)
-    assertPublicKeySerialization(pubkey, vector.pubKey)
+    assert 0 == privchildNumber
+    assert 0 == pubchildNumber
+
+    err, privStr = skycoin.SKY_bip32_PrivateKey_String(privKey)
+    assert err == skycoin.SKY_OK
+    assert vector.privKey == privStr
+    err, pubStr = skycoin.SKY_bip32_PublicKey_String(pubKey)
+    assert err == skycoin.SKY_OK
+    assert pubStr == vector.pubKey
+
+    err, pub_key = skycoin.SKY_bip32_PublicKey_GetKey(pubKey)
+    assert err == skycoin.SKY_OK
+    err, pub_keyStr = skycoin.SKY_base58_Hex2String(pub_key)
+    assert err == skycoin.SKY_OK
+    assert vector.hexPubKey == pub_keyStr
+
+    err, priv_ChainCode = skycoin.SKY_bip32_PrivateKey_GetChainCode(privKey)
+    assert err == skycoin.SKY_OK
+    err, priv_ChainCodeStr = skycoin.SKY_base58_Hex2String(priv_ChainCode)
+    assert err == skycoin.SKY_OK
+    assert vector.chainCode == priv_ChainCodeStr
+    err, pub_ChainCode = skycoin.SKY_bip32_PublicKey_GetChainCode(pubKey)
+    assert err == skycoin.SKY_OK
+    err, priv_ChainCodeStr = skycoin.SKY_base58_Hex2String(priv_ChainCode)
+    assert err == skycoin.SKY_OK
+    assert vector.chainCode == priv_ChainCodeStr
+
+    assertPrivateKeySerialization(privKey, vector.privKey)
+    assertPublicKeySerialization(pubKey, vector.pubKey)
 
     err, b58pk = skycoin.SKY_base58_Decode(vector.privKey)
     assert err == skycoin.SKY_OK
     err, privKey2 = skycoin.SKY_bip32_DeserializePrivateKey(b58pk)
     assert err == skycoin.SKY_OK
-    assert utils.isPrivateKeyEq(privkey, privKey2) == 1
+    assert utils.isPrivateKeyEq(privKey, privKey2) == 1
 
     # Test that DeserializeEncodedPrivateKey
     # is equivalent to DeserializePrivateKey(base58.Decode(key))
@@ -166,8 +200,8 @@ def VectorKeyPairs(vector):
         assert tck.childNUmber == pubchildNumber
 
         # Serialize and deserialize both keys and ensure they're the same
-        assertPrivateKeySerialization(privkey, tck.privKey)
-        assertPublicKeySerialization(pubkey, tck.pubKey)
+        assertPrivateKeySerialization(privkey1, tck.privKey)
+        assertPublicKeySerialization(pubkey1, tck.pubKey)
 
 
 def test_TestBip32TestVectors():
