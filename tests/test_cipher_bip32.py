@@ -545,3 +545,20 @@ def test_TestNewPrivateKeyFromPath():
         err, kStr = skycoin.SKY_bip32_PrivateKey_String(k)
         assert err == skycoin.SKY_OK
         assert tc.key == kStr
+
+
+def test_TestMaxChildDepthError():
+    err, b = skycoin.SKY_cipher_RandByte(32)
+    assert err == skycoin.SKY_OK
+    err, key = skycoin.SKY_bip32_NewMasterKey(b)
+    assert err == skycoin.SKY_OK
+
+    reached = False
+    for i in range(256):
+        err, key = skycoin.SKY_bip32_PrivateKey_NewPrivateChildKey(key, 0)
+        if i == 255:
+            assert err == skycoin.SKY_ErrMaxDepthReached
+            reached = True
+        if i != 255:
+            assert err == skycoin.SKY_OK
+    assert reached == True
