@@ -27,3 +27,6 @@
 %include "wallet.notes.go.h"
 %include "wallet.wallet.go.h"
 
+%include "transaction.choose.go.h"
+%include "api.send.go.h"
+

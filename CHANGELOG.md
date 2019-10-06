@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## PySkycoin [Unreleased]
+- Add `skyapi`, a wrapper for Skycoin node REST API at version 0.27.0
+- Export functions in Skycoin 0.26.0 core API's
+- `skyapi` client for Skycoin node REST API
 
 ## PySkycoin 0.25.1 - 2019/06/15
 
